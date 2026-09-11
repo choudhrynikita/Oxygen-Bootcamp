@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="flowers">
+  <title>Flower studio handbook</title>
+  <topichead navtitle="Getting started">
+    <topicref href="topics/hello-concept.dita" keys="hello"/>
+  </topichead>
+  <topichead navtitle="Care">
+    <topicref href="topics/change-water.dita" keys="change-water"/>
+  </topichead>
+  <keydef keys="product">
+    <topicmeta>
+      <keywords>
+        <keyword>Aurora Vase</keyword>
+      </keywords>
+    </topicmeta>
+  </keydef>
+</map>
