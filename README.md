@@ -6,7 +6,7 @@ Oxygen is Syncro Soft. AEM Guides can launch Oxygen. There is no product called 
 
 **Live classroom is Vercel**, not GitHub Pages. Pages is a footnote for the old static shell.
 
-Production URL: pending first Vercel import of [`choudhrynikita/Oxygen-Bootcamp`](https://github.com/choudhrynikita/Oxygen-Bootcamp). CI on `main` is green — see [docs/VERCEL.md](docs/VERCEL.md).
+Production URL: [https://oxygen-bootcamp-nikita30.vercel.app](https://oxygen-bootcamp-nikita30.vercel.app). Dashboard: [vercel.com/nikita30/oxygen-bootcamp](https://vercel.com/nikita30/oxygen-bootcamp). CI on `main` is green — see [docs/VERCEL.md](docs/VERCEL.md).
 
 ## Run
 

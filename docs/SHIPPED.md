@@ -19,7 +19,7 @@ Specializations, DITA-OT plugin customizing, AEM as a developer (Sling, HTL, OSG
 
 ## Production URL
 
-Source: [github.com/choudhrynikita/Oxygen-Bootcamp](https://github.com/choudhrynikita/Oxygen-Bootcamp). CI on `main` is green. Vercel dashboard import (Next.js, repo root, `npm ci` / `npm run build`, Node 22) is documented in [VERCEL.md](./VERCEL.md). That `*.vercel.app` URL is the classroom; GitHub Pages is a footnote.
+Source: [github.com/choudhrynikita/Oxygen-Bootcamp](https://github.com/choudhrynikita/Oxygen-Bootcamp). CI on `main` is green. Live classroom: [https://oxygen-bootcamp-nikita30.vercel.app](https://oxygen-bootcamp-nikita30.vercel.app) ([dashboard](https://vercel.com/nikita30/oxygen-bootcamp)). GitHub Pages is a footnote.
 
 ## How the game awards work
 

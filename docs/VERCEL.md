@@ -2,7 +2,21 @@
 
 Vercel is the source of truth for the live classroom. GitHub Pages is a footnote.
 
-## Dashboard import (zero guesswork)
+## Live classroom
+
+- Production: [https://oxygen-bootcamp-nikita30.vercel.app](https://oxygen-bootcamp-nikita30.vercel.app)
+- Dashboard: [vercel.com/nikita30/oxygen-bootcamp](https://vercel.com/nikita30/oxygen-bootcamp)
+- GitHub: [choudhrynikita/Oxygen-Bootcamp](https://github.com/choudhrynikita/Oxygen-Bootcamp)
+
+No environment variables. Progress lives in the browser.
+
+If the classroom asks for a Vercel login, open **Project Settings → Deployment Protection** and turn **Vercel Authentication** off for Production. Learners should not need a Vercel account.
+
+## Dashboard import (already done)
+
+The repo is imported on the `nikita30` Vercel account as project `oxygen-bootcamp`. Git integration deploys `main`.
+
+If you ever re-import:
 
 1. Vercel → Add New → Project → Import Git Repository.
 2. Repository: `choudhrynikita/Oxygen-Bootcamp`.
@@ -14,8 +28,6 @@ Vercel is the source of truth for the live classroom. GitHub Pages is a footnote
 8. Node.js Version: **22**.
 9. Production Branch: `main`.
 10. Deploy.
-
-No environment variables are required for the first production deploy. Progress lives in the browser.
 
 ## Project file
 
@@ -31,13 +43,15 @@ No environment variables are required for the first production deploy. Progress 
 
 `next/image` allows `i.ytimg.com` and `img.youtube.com`.
 
+Lessons are `gray-matter` + `react-markdown`. Do not add `next-mdx-remote` — Vercel flagged 5.0.0 as vulnerable and failed the first Git deploy of `2637fb0` after a green 190-page Next.js build.
+
 ## Production URL
 
 GitHub: [choudhrynikita/Oxygen-Bootcamp](https://github.com/choudhrynikita/Oxygen-Bootcamp)
 
 CI on `main` is green: [actions/runs/34633848711](https://github.com/choudhrynikita/Oxygen-Bootcamp/actions/runs/34633848711) (`npm ci`, `content:audit`, `lint`, `test`, `build`). 90 day routes and 90 session routes prerender.
 
-Import the repo in the Vercel dashboard (the Vercel account that has GitHub access to `choudhrynikita`). The `*.vercel.app` URL replaces this paragraph on first successful Git integration deploy. No extra env vars.
+Classroom: [https://oxygen-bootcamp-nikita30.vercel.app](https://oxygen-bootcamp-nikita30.vercel.app)
 
 ## Build proof
 
