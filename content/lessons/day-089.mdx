@@ -1,0 +1,73 @@
+---
+day: 89
+week: 12
+title: Written scenario exam and error clinic
+objective: "Solve three scenarios (broken map, wrong CMS, failed transform) in writing."
+timeboxMinutes: 90
+skills: [review, maps, publish, aemSites]
+legacyLessonIds: [t4-complete, t5-publish, t7-aem]
+youtube:
+  - id: JkPeWea3Y3U
+    title: DITA Map Completeness Check
+    watchFor:
+      - Missing href
+  - id: zNmXfKWXwO8
+    title: Creating a Publishing Template to Customize WebHelp and PDF using CSS
+    watchFor:
+      - Failed transform reading
+sources:
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/overview", label: AEM Guides overview, dated: 2026-09 }
+lab:
+  id: lab-89
+  title: Three scenarios
+  pack: kitepump-broken-map
+  failWhen: Any first move is ‘reinstall Oxygen’ or ‘Quick Publish the map’.
+  expected: Three first moves. Broken map clinic copy clean.
+  steps:
+    - "Scenario A: completeness names a missing href. First move?"
+    - "Scenario B: a PM wants the landing page written as a DITA map. What do you say?"
+    - "Scenario C: PDF transform failed. First place you look?"
+    - Write three answers. Then repair the broken map copy if it is still broken.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the three first moves
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Broken copy clean
+    minutes: 25
+    done: Three answers. Completeness clean.
+  - id: c
+    block: C
+    title: The PM in scenario B
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [maps-manager, transformation, sites-console]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Three first moves. Broken map clinic copy clean. }
+quiz:
+  - q: "A failed PDF transform: first place you look is the Sites console. True?"
+    answer: 1
+    why: "Output oracle from the game rules, now as an exam."
+    options:
+      - "True"
+      - "False — the transformation log, first error"
+fieldNotePrompt: "What did you tell the PM?"
+tomorrowHook: Portfolio export and what is not taught.
+---
+
+## Exam
+
+First moves. Then repair. No reinstall folklore.

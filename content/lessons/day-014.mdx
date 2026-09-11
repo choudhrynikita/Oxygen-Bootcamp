@@ -1,0 +1,118 @@
+---
+day: 14
+week: 2
+title: "Boss — twelve topics, three types, one book"
+objective: "Ship a 12-topic flower map with concept, task, and reference in honest roles, completeness clean."
+timeboxMinutes: 110
+skills: [maps, ditaTopics, review]
+legacyLessonIds: [t3-topics, t3-maps]
+youtube:
+  - id: ozFZz6YZMCY
+    title: DITA Maps Manager View in Oxygen XML Editor 19
+    watchFor:
+      - Publishing actions live on the map
+      - Edit Properties
+  - id: JkPeWea3Y3U
+    title: DITA Map Completeness Check
+    watchFor:
+      - Missing href vs missing image
+sources:
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/eppo-first-dita-topic.html", label: First DITA topic (Oxygen), dated: 2026-09 }
+lab:
+  id: lab-14
+  title: "Flower studio handbook, twelve topics"
+  pack: flower-docs
+  failWhen: "Fewer than twelve topics in the map, or a task with no cmd, or completeness reports a miss, or a .md file is a topicref."
+  expected: Twelve valid topics. Mix of three types. Completeness clean. Census file matches the map.
+  steps:
+    - Open flowers.ditamap in Maps Manager. Set it as root map.
+    - Count topicrefs. You need twelve topics on disk and in the map. Create any missing ones as real concept/task/reference — not empty stubs.
+    - "Minimum mix: two tasks (change-water, recut-stems), two references (studio-hours, variety-card or care-table), the rest concepts. No topic type used as a dump."
+    - Every topic has a title and a shortdesc that is not the title.
+    - "At least one image with alt, at least one table with a header, at least one typed note."
+    - "Run Validate and Check for Completeness. Zero missing hrefs, images, or keys. product key still resolves to Aurora Vase."
+    - "Write oxygen-bootcamp-work/week2/topic-census.txt: twelve filenames plus type plus one-line job."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the three topic types and what the map forbids (orphan files as chapters)
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep twelve topics complete
+    minutes: 25
+    done: Census matches the map. Completeness clean. Three types in honest roles.
+  - id: c
+    block: C
+    title: "Break one href, read the row, fix it"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [output-oracle, glossary-lightning]
+toolCards: [maps-manager, outline]
+badgeId: completeness-clean
+boss: true
+checks:
+  - { id: lab, prompt: Twelve valid topics. Mix of three types. Completeness clean. Census file matches the map. }
+quiz:
+  - q: "You have twelve files on disk but completeness says 11 topicrefs. What is true?"
+    answer: 1
+    why: Maps Manager is the book. Project view is files. Completeness reads the map.
+    options:
+      - Disk is the book — completeness is wrong
+      - The book is the map — a file that is not referenced is not in the publication
+      - Root map unset always drops one topic
+  - q: "A concept titled Recut the stems contains an ol of actions. Boss verdict?"
+    answer: 1
+    why: Completeness does not score topic type. You do. A job with steps is a task.
+    options:
+      - Pass — ol is allowed in conbody
+      - Fail the honesty check — that job wants a task
+      - Pass if completeness is clean
+  - q: "You failed this boss. Does Day 15 stay locked?"
+    answer: 1
+    why: Boss badge waits. Curriculum week does not hostage you if Friday lab is done.
+    options:
+      - "Yes, forever"
+      - "No, if Friday (Day 13) lab is done the next week can unlock. The boss badge stays locked until you pass."
+      - "No, Daily Burst unlocks the week"
+  - q: "product key shows unresolved in one topic only. First place you look?"
+    answer: 0
+    why: Keys resolve from the root map for topics in that book. An orphan file has no keys.
+    options:
+      - Whether that topic is in the root map’s tree
+      - CSS PDF Chemistry
+      - AEM Sites console
+fieldNotePrompt: List the twelve filenames. Star the two you would defend in a review.
+tomorrowHook: "Week 3: topicref details, submaps, IDs, and moving files without silent breakage — kitepump joins flower-docs."
+---
+
+## Clinic, not a ceremony
+
+This is a week boss: mixed repair + scenario questions + a completeness read on a 12-topic book.
+
+Fail it and **Day 15 still unlocks if Day 13 lab is done**. The boss badge stays locked until you retry. Retry is unlimited.
+
+## What “twelve” means
+
+Twelve **topicrefs** to twelve **valid** topics. Not twelve files on the desktop. Not stubs with empty titles.
+
+Suggested tree:
+
+1. Getting started — hello-concept, what-a-cut-flower, vase-parts, studio-preview
+2. Care — change-water, recut-stems, condition-notes, vase-photo
+3. Lookup — studio-hours, variety-card, care-table
+4. One more concept you still owe (delivery-window or studio-rules)
+
+Adjust names if yours differ. Types must stay honest.
+
+## Figure
+
+Maps Manager tree with twelve children under three topicheads. Caption: *DITA Maps Manager > Validate and Check for Completeness.*

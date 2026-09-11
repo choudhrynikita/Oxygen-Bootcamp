@@ -1,0 +1,83 @@
+---
+day: 43
+week: 7
+title: Oxygen XML Web Author — the browser cousin
+objective: Tour Web Author enough to name three things it shares with desktop and three it does not.
+timeboxMinutes: 90
+skills: [oxygenUi, review]
+legacyLessonIds: []
+youtube:
+  - id: PiCWAIiKx78
+    title: Getting Started with Oxygen XML Editor
+    watchFor:
+      - Desktop chrome you will not see in a browser tab
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/videos.html", label: Oxygen official video catalog, dated: 2026-09 }
+lab:
+  id: lab-43
+  title: "Three shares, three gaps"
+  pack: kitepump-dita
+  failWhen: "You claim Web Author publishes WebHelp locally like desktop, or you call it AEM Guides."
+  expected: "Six factual lines. Web Author is Syncro Soft in a browser, not Guides."
+  steps:
+    - Read the official Web Author product page from the Source box. Do not scrape a manual into your notes.
+    - Open kitepump-dita on desktop so you have a baseline.
+    - "Write three shared things (Author canvas, validation, DITA toolbar actions — verify labels)."
+    - "Write three desktop-only things (Maps Manager power, Transformation scenarios, Schematron + frameworks, offline)."
+    - Save oxygen-bootcamp-work/week7/web-author-gap.txt.
+sessionQuests:
+  - id: a
+    block: A
+    title: "Name Web Author and what it is not (Guides, Sites)"
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the gap list honest
+    minutes: 25
+    done: "Six lines, no product mash-up."
+  - id: c
+    block: C
+    title: Catch the Guides vs Web Author mix-up
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [one-line-repair, menu-path-race]
+toolCards: [author-mode]
+badgeId: web-author-tour
+boss: false
+checks:
+  - { id: lab, prompt: "Six factual lines. Web Author is Syncro Soft in a browser, not Guides." }
+quiz:
+  - q: "Oxygen XML Web Author is the same product as AEM Guides. True?"
+    answer: 1
+    why: Web Author is Syncro Soft. Guides is Adobe. They can connect. They are not the same editor.
+    options:
+      - "True"
+      - "False"
+  - q: "Where do you still want desktop Oxygen?"
+    answer: 1
+    why: SMEs can comment in a browser. Specialists still need desktop for the book.
+    options:
+      - Typing a shortdesc
+      - "Map surgery, Schematron, offline frameworks"
+      - Reading a comment
+fieldNotePrompt: "Who on your team should never be forced onto desktop Oxygen?"
+tomorrowHook: "Tomorrow: what desktop still does better, with a file in your hand."
+---
+
+## Web Author
+
+Oxygen XML Web Author is Syncro Soft in a browser. Author mode still exists. Validation still exists. It is not AEM Guides and not Sites.
+
+Use it when a writer is away from the licensed desktop, or when IT wants a thinner client. Do not expect every add-on.
+
+## Figure
+
+Labeled mock: a browser tab with an Author canvas and a slimmer rail. Caption: *Not a screenshot. Verify the current Web Author layout in the official video catalog.*

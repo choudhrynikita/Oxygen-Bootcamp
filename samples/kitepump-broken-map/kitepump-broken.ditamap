@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="kitepump-broken">
+  <title>Kitepump (broken on purpose)</title>
+  <topicref href="topics/missing-file.dita"/>
+  <topicref href="../kitepump-dita/topics/what-is-kitepump.dita"/>
+</map>

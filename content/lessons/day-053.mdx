@@ -1,0 +1,70 @@
+---
+day: 53
+week: 8
+title: Troubleshooting invalid maps
+objective: "Use kitepump-broken-map, read completeness, and repair the missing href without guessing."
+timeboxMinutes: 90
+skills: [maps, xmlLiteracy]
+legacyLessonIds: [t6-xpath, t4-complete]
+youtube:
+  - id: JkPeWea3Y3U
+    title: DITA Map Completeness Check
+    watchFor:
+      - The missing href row
+      - What a missing id looks like vs a missing file
+sources:
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-53
+  title: Repair the broken book
+  pack: kitepump-broken-map
+  failWhen: "You edit the repo sample in place and leave it broken, or you ignore the first error and ‘clean up’ unrelated warnings."
+  expected: First error quoted. Clinic copy completeness clean.
+  steps:
+    - Copy samples/kitepump-broken-map to oxygen-bootcamp-work/week8/broken/.
+    - Open kitepump-broken.ditamap in Maps Manager. Run completeness. Write the first error exactly.
+    - The href topics/missing-file.dita does not exist. Either restore a stub file with a matching id or remove the topicref. Pick one and do it.
+    - "XPath toolbar: list every title in the open topic (//*[contains(name(),'title')] is plenty — you need three stolen queries, not XPath 3 fluency)."
+    - Completeness clean on the clinic copy.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the completeness row that names a missing file
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Clinic copy still validates as a book
+    minutes: 25
+    done: Completeness clean. First error quoted in the note.
+  - id: c
+    block: C
+    title: Explain the missing file in one sentence
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [maps-manager]
+badgeId: completeness-clean
+boss: false
+checks:
+  - { id: lab, prompt: First error quoted. Clinic copy completeness clean. }
+quiz:
+  - q: "The first completeness error is a missing href. You should start by restyling the PDF. True?"
+    answer: 1
+    why: Repair the book. Styles Basket is not this error.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: Quote the first completeness error you saw.
+tomorrowHook: Large maps and performance — what you will not do in Author.
+---
+
+## The broken pack is supposed to fail
+
+`samples/kitepump-broken-map/` points at a file that is not there. Completeness should yell. Copy it. Repair the copy. XPath is a lamp, not a career.

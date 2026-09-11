@@ -1,0 +1,97 @@
+---
+day: 32
+week: 5
+title: Change tracking and comments — one review channel
+objective: "Track Changes, edit a paragraph, comment, accept one change and reject another — without mixing Fusion and Guides review on the same file."
+timeboxMinutes: 90
+skills: [review, oxygenUi]
+legacyLessonIds: [t4-review]
+youtube:
+  - id: bnQwJZD58wY
+    title: WYSIWYG XML Editing
+    watchFor:
+      - Review extras if shown
+      - Comments in Author
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-author/", label: Oxygen XML Author User Guide, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+lab:
+  id: lab-32
+  title: "Accept one, reject one"
+  pack: kitepump-dita
+  failWhen: "Track Changes was off so the edit vanished into the source, or you accepted everything without reading, or you mixed a second review product into the file."
+  expected: "Review view shows the leftover comment (or a resolved thread you recorded). One accept, one reject. File valid."
+  steps:
+    - Open inflate-the-tire.dita. Turn on Track Changes (Review toolbar — verify the label).
+    - "Edit one cmd (insertion). Delete a word in context (deletion). Add a comment on the warning note: confirm pinch-hazard still belongs."
+    - "Open Review view. You should see insertion, deletion, comment."
+    - Accept the insertion. Reject the deletion. Leave the comment for a teammate — or resolve it if your version uses resolve. Write which you did.
+    - Turn Track Changes off before you ‘just tidy’ something else.
+    - Do not paste a Content Fusion comment thread into this file. Do not pretend AEM Guides review is the same panel.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Track Changes and Review view and what a second channel forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: "Accept one change, reject one, leave a comment"
+    minutes: 25
+    done: Review view matches the story. File valid. Track Changes off at the end.
+  - id: c
+    block: C
+    title: "Turn tracking off too early, lose a diff, undo from Review if you can"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [review, author-mode]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: "Review view shows the leftover comment (or a resolved thread you recorded). One accept, one reject. File valid." }
+quiz:
+  - q: "v1: Do not mix Content Fusion comments and AEM Guides review on the same file. Why?"
+    answer: 1
+    why: Both can store marks. The team will miss one set. Pick a channel per file.
+    options:
+      - The XML becomes not well-formed immediately
+      - Two review channels split the decision; accepts in one tool miss the other
+      - Oxygen cannot open files with comments
+  - q: "Track Changes is on and you tidy a conkeyref by typing the sentence. What did you do?"
+    answer: 1
+    why: Review the XML in Text if a change looks like ordinary typing on reused content.
+    options:
+      - A useful accept
+      - "You may have replaced a pointer with a copy, and the diff hides it as ‘edit’"
+      - Nothing — conkeyref is locked
+  - q: "Review View records insertions, deletions, and comments. Where is that view?"
+    answer: 1
+    why: "v1 lab: Track Changes, edit a paragraph, comment, accept."
+    options:
+      - AEM Sites console
+      - Oxygen’s Review view / panel (right rail or Window menu — verify the label)
+      - The Transformation view
+fieldNotePrompt: "Which review channel does this desk use for DITA, and which two will you refuse to mix?"
+tomorrowHook: "Tomorrow you touch Author CSS the allowed way — Hints, not a personal theme."
+---
+
+## Review View
+
+v1: *Review View records insertions, deletions, and comments. Do not mix Content Fusion comments and AEM Guides review on the same file.*
+
+**Track Changes** on. Edit. Comment. Accept or reject with intent. Then turn it off.
+
+## One channel
+
+Desktop Oxygen review is this panel. Content Fusion is a collaboration product. AEM Guides has its own review. One file, one channel.
+
+## Figure
+
+Review panel: insertion green, deletion red, comment card. Caption: *Review view, not the Transformation view, not Sites.*

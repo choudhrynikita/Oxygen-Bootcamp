@@ -1,0 +1,68 @@
+---
+day: 80
+week: 12
+title: Publish outputs from Guides
+objective: "Contrast Guides server publish (baseline, output) with a local Oxygen WebHelp draft."
+timeboxMinutes: 90
+skills: [aemGuides, publish]
+legacyLessonIds: [t5-publish]
+youtube:
+  - id: zNmXfKWXwO8
+    title: Creating a Publishing Template to Customize WebHelp and PDF using CSS
+    watchFor:
+      - Local WebHelp as a draft analog
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/overview", label: AEM Guides overview, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-80
+  title: Draft vs release
+  pack: guides-oxygen-handoff
+  failWhen: Quick Publish is listed as a DITA output.
+  expected: Draft vs release written. Sites kept out.
+  steps:
+    - "Write: local Oxygen PDF/WebHelp is a draft."
+    - "Write: Guides publish uses the server baseline as the release (verify wording in your shop)."
+    - "If you have Guides, note one output type you saw. If not, write ‘mock — AEM Guides documentation lists outputs; I did not invent a button’."
+    - Do not call Sites Quick Publish a DITA output.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name baseline as release and local as draft
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Sites stays out of the DITA output list
+    minutes: 25
+    done: Two sentences. No Quick Publish mash-up.
+  - id: c
+    block: C
+    title: Who clicks publish in Guides
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [menu-path-race, output-oracle]
+toolCards: [transformation, guides-web-editor]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Draft vs release written. Sites kept out. }
+quiz:
+  - q: "A local WebHelp from Oxygen is the release of record on a Guides shop. True?"
+    answer: 1
+    why: v1 T5 sentence. Keep it.
+    options:
+      - "True"
+      - False — the server baseline is the release; local is a draft
+fieldNotePrompt: "Who is allowed to publish DITA where you work, or ‘unknown’?"
+tomorrowHook: Guides lab — a full mental cycle.
+---
+
+## Draft vs release
+
+Oxygen can still build WebHelp on your laptop. That is a draft. Guides owns the release if that is the CCMS. Sites Quick Publish is a different family.

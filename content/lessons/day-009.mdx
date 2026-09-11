@@ -1,0 +1,109 @@
+---
+day: 9
+week: 2
+title: A task is steps with a result — not a story
+objective: "Write a three-step task with context, cmd on every step, and a result, and keep it valid."
+timeboxMinutes: 90
+skills: [ditaTopics, oxygenUi]
+legacyLessonIds: [t3-topics]
+youtube:
+  - id: t2cG3Xe1TXY
+    title: DITA Editing
+    watchFor:
+      - "Task body: context, steps, result"
+      - What happens if a step has no cmd
+  - id: LuAVmn1j7f0
+    title: Getting Started with DITA Using Oxygen XML Editor
+    watchFor:
+      - File New for a DITA task
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/eppo-first-dita-topic.html", label: First DITA topic (Oxygen), dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-9
+  title: Recut stems — three honest steps
+  pack: flower-docs
+  failWhen: "A step has no cmd, or the how-to lives as a numbered list inside a concept, or the task is not in the map."
+  expected: Valid task. Three cmds. Context and result present. Topicref under Care.
+  steps:
+    - "File > New > DITA Task. Title: Recut the stems. File: topics/recut-stems.dita."
+    - "Shortdesc: one sentence that states the outcome (stems can drink again)."
+    - "Add <context> with one paragraph: when to recut (after transport, or when the cut is crushed)."
+    - Add three steps. Each step has a <cmd>. Optional <info> under step 2 only (cut at an angle).
+    - Add <result> with one paragraph. Not a fourth step.
+    - "Validate. If a step is missing cmd, the file is invalid — read the message, repair it."
+    - "Append the task under Care on flowers.ditamap, next to change-water.dita."
+sessionQuests:
+  - id: a
+    block: A
+    title: "Name context, cmd, and result and what a step forbids"
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep recut-stems.dita valid with three cmds
+    minutes: 25
+    done: File validates. Three cmds. Context and result present. Map lists it.
+  - id: c
+    block: C
+    title: "Delete one cmd, read the schema message, restore it"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [output-oracle, glossary-lightning]
+toolCards: [author-mode, outline]
+badgeId: first-valid-task
+boss: false
+checks:
+  - { id: lab, prompt: Valid task. Three cmds. Context and result present. Topicref under Care. }
+quiz:
+  - q: "A step with only <info> and no <cmd> is valid. True?"
+    answer: 1
+    why: DITA task model requires cmd on a step. Info is extra. Missing cmd is a schema error.
+    options:
+      - "True"
+      - "False"
+  - q: "change-water.dita already exists. Why write recut-stems.dita instead of adding three steps to the concept from Day 8?"
+    answer: 1
+    why: Topic type is a contract. Two tasks in one map is normal. Mixing types in one file is the failure.
+    options:
+      - You cannot have two tasks in one map
+      - A guide that requires tasks will reject a fake procedure in a concept
+      - Concepts cannot live in the same map as tasks
+  - q: "Where does ‘stems can drink again’ belong?"
+    answer: 1
+    why: Result is the outcome. Cmd is the action. Navtitle is the book label.
+    options:
+      - Inside the last cmd
+      - "In <result>, after the steps"
+      - In the map’s navtitle
+fieldNotePrompt: Quote the validation message you saw when a step had no cmd — or write that you caused one on purpose.
+tomorrowHook: "Tomorrow you write a reference: a lookup table, not a story and not a procedure."
+---
+
+## Task = how to do it
+
+A **task** is a procedure. Title is the job. Shortdesc is the outcome in one line. `taskbody` usually holds:
+
+- **context** — when and with what
+- **steps** — each **step** has a **cmd** (the action)
+- **result** — what good looks like
+
+Do not write a novel in `cmd`. One imperative. Details go in `info`, `stepresult`, or a note.
+
+## The sample you already have
+
+`change-water.dita` is the model: three cmds, a product keyref, a result. Copy the shape, not the sentences. Write recut-stems as a second task.
+
+## Outline
+
+Open **Outline**. You should see `task` → `title` / `shortdesc` / `taskbody` → `context` / `steps` / `result`. If Outline shows a `p` where a `cmd` should be, you left Author and pasted a story.
+
+## Figure
+
+Task skeleton in Outline. Caption: *Window docks Outline on the right. Verify the label in your version.*

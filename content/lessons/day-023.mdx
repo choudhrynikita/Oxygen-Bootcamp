@@ -1,0 +1,101 @@
+---
+day: 23
+week: 4
+title: "conref is path plus id — practice, not a definition slide"
+objective: "Pull a warning note from a library topic into a task using conref, and break it on purpose to see the unresolved content."
+timeboxMinutes: 90
+skills: [reuse, ditaTopics]
+legacyLessonIds: [t5-reuse]
+youtube:
+  - id: K_fjZn285Wo
+    title: Working with DITA Reusable Components View
+    watchFor:
+      - Reusable Components view
+      - How a conref looks in Author vs Text
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-23
+  title: conref a warning into inflate-the-tire
+  pack: kitepump-dita
+  failWhen: "The warning sentence is duplicated in the task, or conref is missing, or the library topic is a TOC chapter you forgot to hide."
+  expected: One source sentence. Task shows it via conref. Text has no copy. Completeness/validation clean after repair.
+  steps:
+    - "Create topics/library/warnings.dita (concept or a warehouse topic). One <note id=\"pinch-hazard\" type=\"warning\">: pinch hazard at the lever. Keep that sentence only in this file."
+    - "Give the library topic a stable id. Append it to the map with toc=\"no\" or processing-role so it does not become a chapter (write which attribute you used)."
+    - "In inflate-the-tire.dita, insert a note and set conref to warnings.dita#warnings/pinch-hazard (adjust to your topic id). Use Reusable Components view if you have it."
+    - "Author should show the warning text. Text should show conref, not a copy of the sentence."
+    - Typo the conref path. Author shows unresolved. Record the message. Repair.
+    - Do not copy the warning sentence into the task as a backup paragraph.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name conref (path plus id) and what a copied warning forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the pinch warning in one file
+    minutes: 25
+    done: conref resolves. Task Text has no copy of the sentence. Library not a TOC chapter.
+  - id: c
+    block: C
+    title: "Typo the path, read unresolved, repair"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [one-line-repair, menu-path-race]
+toolCards: [author-mode, attributes]
+badgeId: first-conref
+boss: false
+checks:
+  - { id: lab, prompt: One source sentence. Task shows it via conref. Text has no copy. Completeness/validation clean after repair. }
+quiz:
+  - q: "conref uses a path plus id. What is the id pointing at?"
+    answer: 1
+    why: "v1: conref uses a path plus id. The id is on the note (or other element), not on the folder."
+    options:
+      - The filename without extension
+      - The element that holds the reusable chunk
+      - The map’s product key
+  - q: "You conref a whole task into another task. What should you suspect?"
+    answer: 1
+    why: Reuse small stable chunks such as warnings. A whole procedure is usually a topic you point at.
+    options:
+      - Normal — reuse as much as possible
+      - "You probably wanted a topicref, a key, or a smaller chunk"
+      - DITA forbids conref on tasks
+  - q: "Reusable Components view is empty. First place you look?"
+    answer: 0
+    why: "The view reads the map. No root map, no library."
+    options:
+      - Whether the root map is set and the library topic is in that map
+      - Schema Design
+      - AEM Assets
+fieldNotePrompt: "What would happen if you edited the warning in the task instead of in the library file?"
+tomorrowHook: Tomorrow you replace that path with conkeyref so the map owns the library too.
+---
+
+## conref
+
+v1: *conref uses a path plus id. conkeyref uses a key and is preferred. Reuse small stable chunks such as warnings.*
+
+Today you do the path-plus-id form so you can feel it break. The library topic holds the note. The task points at it.
+
+## Reusable Components
+
+**DITA Reusable Components** view lists candidates from the root map. Insert from there. Do not paste the sentence.
+
+## Hide the warehouse
+
+A library topic is not a chapter. `toc="no"` or a resource-only keydef keeps it out of the TOC. Write the attribute you used.
+
+## Figure
+
+Left: warnings.dita with id pinch-hazard. Right: task note with conref. Caption: *Author shows the text. Text shows the pointer.*

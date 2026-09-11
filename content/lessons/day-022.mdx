@@ -1,0 +1,99 @@
+---
+day: 22
+week: 4
+title: Keys are names — the map owns the path
+objective: Define a product-name key in the root map and keyref it twice so a rename in the map updates both topics.
+timeboxMinutes: 90
+skills: [reuse, maps]
+legacyLessonIds: [t5-keys]
+youtube:
+  - id: LuAVmn1j7f0
+    title: Getting Started with DITA Using Oxygen XML Editor
+    watchFor:
+      - Root map so keys resolve
+      - keyref in a topic
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+lab:
+  id: lab-22
+  title: "product-name key, two hits"
+  pack: kitepump-dita
+  failWhen: "The product string is hardcoded in both topics, or root map is unset when you mark the lab done, or only one topic uses the key."
+  expected: keydef on the map. Two keyrefs. Author shows HP-40a in both. Completeness clean with root map set.
+  steps:
+    - Open kitepump.ditamap as root map.
+    - "Add a keydef keys=\"product-name\" with keyword Kitepump HP-40 (or the name your pack already uses)."
+    - "In what-kitepump-is.dita and inflate-the-tire.dita, insert <keyword keyref=\"product-name\"/> in a sentence. Do not type the product string in those two places."
+    - Change the keydef keyword to Kitepump HP-40a. Both topics should show the new name in Author.
+    - Unset the root map. Confirm the key looks unresolved. Set the root map again.
+    - Run completeness. Unresolved keys are a row — fix any you caused.
+sessionQuests:
+  - id: a
+    block: A
+    title: "Name keydef, keyref, and what an unset root map forbids"
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep product-name resolving in two topics
+    minutes: 25
+    done: Two keyrefs. Map owns HP-40a. Completeness clean.
+  - id: c
+    block: C
+    title: "Unset the root map, watch the unresolved key, restore it"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [maps-manager, attributes]
+badgeId: key-not-path
+boss: false
+checks:
+  - { id: lab, prompt: keydef on the map. Two keyrefs. Author shows HP-40a in both. Completeness clean with root map set. }
+quiz:
+  - q: "Keys look broken in Author. First place you look?"
+    answer: 1
+    why: "v1: Always set the root map or keyrefs look broken. Keys are names defined in a map."
+    options:
+      - AEM Sites console
+      - Whether the root map is set
+      - The PDF Chemistry install
+  - q: "You keyref a topic as keyref=\"inflate\" instead of href. What must exist?"
+    answer: 0
+    why: "keyref looks up a key, not a filename. The map binds the name to a target."
+    options:
+      - A matching keys on a topicref or keydef in the root map
+      - A file named inflate.dita in the same folder
+      - An AEM Experience Fragment
+  - q: "Why prefer a key over href for the product name?"
+    answer: 1
+    why: A path-plus-string in every topic is copy. A key is one edit.
+    options:
+      - Keys are faster to parse
+      - The map owns the string; topics do not hard-code a name that will change
+      - href is illegal on keyword
+fieldNotePrompt: "What string in your pack should have been a key this week, and was not?"
+tomorrowHook: Tomorrow you conref a warning by path-plus-id — then you will feel why keys are kinder.
+---
+
+## Keys are names
+
+v1: *Keys are names defined in a map. Always set the root map or keyrefs look broken.*
+
+A **keydef** (or a topicref with `keys`) binds a name to a target or a string. A **keyref** uses the name. The path lives in one place.
+
+flower-docs already did this with `keyword keyref="product"` → Aurora Vase. Kitepump gets `product-name`.
+
+## Key, not path
+
+href is a path. Paths move. Keys stay. This badge is **key-not-path**: you stop typing folders into every topic.
+
+## Figure
+
+Map snippet: keydef product-name → keyword Kitepump HP-40a. Caption: *Root map owns the name. Topics keyref it.*

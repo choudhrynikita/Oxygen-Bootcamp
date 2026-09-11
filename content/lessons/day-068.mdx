@@ -1,0 +1,91 @@
+---
+day: 68
+week: 10
+title: "Annotations, versions, restore — author-level history"
+objective: "Log how an author annotates a page, creates a version, and restores — and write how this is not Git and not DITA Track Changes."
+timeboxMinutes: 90
+skills: [aemSites, review]
+legacyLessonIds: [t7-aem, t4-review]
+youtube:
+  - id: VcMI0zWIKdg
+    title: How to Build a Global Site in AEM Sites
+    watchFor:
+      - A live site that still needs review discipline
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/basic-handling", label: AEM Basic Handling, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/getting-started/first-steps", label: AEM 6.5 first steps for authors, dated: 2026-09 }
+lab:
+  id: lab-68
+  title: "Field log: annotate and restore"
+  pack: aem-author-field-log
+  failWhen: "The log says restore is Git revert, or annotations are DITA comments, or you mix three review channels on the landing page."
+  expected: Three verbs with official-ish names. Channel rule. Mock labeled.
+  steps:
+    - Read Experience League on annotations and page versions (authoring). Write oxygen-bootcamp-work/week10/field-log-68.txt with the menu names you saw (verify labels).
+    - "Three verbs: annotate (comment on the page), version (snapshot), restore (roll back the page)."
+    - "Write: this is not Git. This is not Oxygen Track Changes. This is not Guides review. Pick a channel for the page."
+    - "Kitepump: you would version before a campaign swap, not after a panic."
+    - "Labeled mock: timeline of versions. Caption: mock."
+sessionQuests:
+  - id: a
+    block: A
+    title: "Name annotate, version, restore as AEM page verbs"
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep Git and Track Changes out of the page channel
+    minutes: 25
+    done: Three verbs logged. Channel rule written. Mock labeled.
+  - id: c
+    block: C
+    title: "Add ‘publish after restore?’ as a question in the log"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [page-editor, review]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Three verbs with official-ish names. Channel rule. Mock labeled. }
+quiz:
+  - q: "You restored a page version. Did that unpublish automatically?"
+    answer: 1
+    why: Author vs publish still applies. Verify on your instance.
+    options:
+      - Always
+      - Not necessarily — restore is author-side; you may still need to publish
+      - Restore is publish
+  - q: "Annotations vs XF vs DITA comments. Why pick one for the landing page?"
+    answer: 1
+    why: "Same mix rule as Week 7, now on a page."
+    options:
+      - They merge
+      - Split channels hide the decision
+      - AEM forbids annotations if DITA exists
+  - q: "Version before a teaser swap. Why?"
+    answer: 1
+    why: Author-level insurance.
+    options:
+      - AEM requires versions hourly
+      - Restore needs a snapshot; panic has none
+      - Versions replace backups of Assets
+fieldNotePrompt: "When would you refuse to restore without talking to the last editor?"
+tomorrowHook: Tomorrow workflows at author level and the Week 10 boss — a Core Components desk you can name.
+---
+
+## History on the page
+
+**Annotations** are page comments. **Versions** are snapshots of the page. **Restore** rolls back the page on author.
+
+Not Git. Not Track Changes. Not Fusion. If the landing page is in AEM, review it in AEM.
+
+## Figure
+
+Labeled mock: version list with Restore. Caption: *Mock. Verify the Timewarp/versions label in your version.*

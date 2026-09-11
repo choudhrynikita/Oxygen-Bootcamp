@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="what-is-kitepump">
+  <title>What Kitepump is</title>
+  <shortdesc>A hand pump for inflating trainer kites on a beach.</shortdesc>
+  <conbody>
+    <p>The <keyword keyref="product"/> moves air. It is not a compressor and not a toy
+      balloon pump.</p>
+    <note type="warning" id="unplug-warning">Unplug the hose before you open the
+      valve body. Pressure will dump toward your face.</note>
+  </conbody>
+</concept>

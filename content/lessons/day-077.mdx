@@ -1,0 +1,69 @@
+---
+day: 77
+week: 12
+title: Checkout / check-in mental model
+objective: "Write the cycle: checkout, edit, check in — and what happens if you skip checkout."
+timeboxMinutes: 90
+skills: [aemGuides, review]
+legacyLessonIds: [t7-connector]
+youtube:
+  - id: JkPeWea3Y3U
+    title: DITA Map Completeness Check
+    watchFor:
+      - "A book still needs a lock — different product, same idea of not clobbering"
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/overview", label: AEM Guides overview, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/install-conf-guide/editor-configs/editor-cloud-settings/conf-edit-in-oxygen", label: Configure Edit in Oxygen, dated: 2026-09 }
+lab:
+  id: lab-77
+  title: Cycle card
+  pack: guides-oxygen-handoff
+  failWhen: You describe checkout as AEM Sites Quick Publish.
+  expected: Four sentences. Mock labeled if no instance.
+  steps:
+    - "Write: checkout locks the topic so a teammate cannot overwrite you."
+    - "Write: edit in Guides or, if enabled, Edit in Oxygen."
+    - "Write: check in returns the lock and versions the topic in Guides."
+    - "Write the failure: skip checkout, two writers, last save wins or a conflict you cannot explain."
+    - "If you have Guides, complete one real cycle. If not, label this mock and still write the cycle."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name checkout and what skipping it forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Cycle card is complete
+    minutes: 25
+    done: Four sentences. No Sites mash-up.
+  - id: c
+    block: C
+    title: "Two writers, one topic, no lock"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [glossary-lightning, authors-dare]
+toolCards: [guides-web-editor]
+badgeId: checkout-checkin
+boss: false
+checks:
+  - { id: lab, prompt: Four sentences. Mock labeled if no instance. }
+quiz:
+  - q: "Checkout in Guides is the same as Preview in the Page Editor. True?"
+    answer: 1
+    why: Checkout is a lock on a DITA object. Preview is a Sites mode.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "Have you ever overwritten someone by skipping a lock? What would you do now?"
+tomorrowHook: Edit in Oxygen as a configuration concept.
+---
+
+## Lock, edit, return
+
+You do not need a live Guides box to learn the mental model. You do need the words right.

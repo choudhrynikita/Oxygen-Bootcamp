@@ -1,0 +1,89 @@
+---
+day: 60
+week: 9
+title: Components vs pages — do not smash DITA types into Core Components
+objective: "Name page vs component, and refuse to call a Text component a concept topic."
+timeboxMinutes: 90
+skills: [aemSites, ditaTopics]
+legacyLessonIds: [t7-aem]
+youtube:
+  - id: 7-Lcw5PejhI
+    title: Go live faster with quick site creation in AEM
+    watchFor:
+      - A page made of components if shown
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction", label: Core Components introduction, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview", label: WKND author tutorial, dated: 2026-09 }
+lab:
+  id: lab-60
+  title: "Field log: page vs component"
+  pack: aem-author-field-log
+  failWhen: "The log calls Text a DITA concept, or XF a conref, or the mock is unlabeled."
+  expected: Page vs component vs topic vs conref distinguished. Mock labeled.
+  steps:
+    - "Write oxygen-bootcamp-work/week9/field-log-60.txt: A page is a tree of components on a template. A DITA topic is a typed XML document. A Text component is not a concept. A Teaser is not a shortdesc."
+    - "List four Core Components you will meet next week: Text, Image, Teaser, Title — awareness only today."
+    - "Draw a labeled mock: page skeleton with three component boxes. Caption: mock."
+    - "Write one sentence: Experience Fragments are reusable layout, not conref."
+sessionQuests:
+  - id: a
+    block: A
+    title: "Name page, component, topic, conref as four different objects"
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the smash-words out of the log
+    minutes: 25
+    done: Four-object rule written. Mock labeled.
+  - id: c
+    block: C
+    title: Delete any sentence that calls AEM a DITA map
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [menu-path-race, output-oracle]
+toolCards: [page-editor]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Page vs component vs topic vs conref distinguished. Mock labeled. }
+quiz:
+  - q: "A Text component on a landing page is where you should paste the inflate-the-tire task. True?"
+    answer: 1
+    why: Procedures belong in DITA tasks (Oxygen/Guides). Landing pages teaser the product; they do not become the handbook.
+    options:
+      - "True"
+      - "False"
+  - q: "Experience Fragment vs DITA conref. Shared idea, same implementation?"
+    answer: 1
+    why: v1 listed XF for reusable layout and conref for DITA. Do not smash.
+    options:
+      - Same XML
+      - "Shared idea (reuse), different system — XF is AEM layout; conref is DITA XML"
+      - XF is a keydef
+  - q: "Core Components introduction is in sources. Are you implementing a component today?"
+    answer: 1
+    why: Author week. Next week you use Text/Image/Teaser as an author.
+    options:
+      - Yes — HTL
+      - No — authors insert them; developers implement them
+      - Yes — Schematron
+fieldNotePrompt: "What would you put on the Kitepump landing page vs in inflate-the-tire.dita?"
+tomorrowHook: "Tomorrow Quick Publish, Unpublish, and Basic Handling — the first AEM ship action."
+---
+
+## Pages and components
+
+A **page** has a template and a paragraph system of **components**. Core Components (Text, Image, Title, Teaser, Container, …) are the usual author kit.
+
+A **DITA topic** is not a component. **conref** is not an Experience Fragment. **keyref** is not a content fragment variation — we will say that again in Week 11.
+
+## Figure
+
+Labeled mock: page with Title, Image, Text stacked. Caption: *Mock. Not Author mode.*

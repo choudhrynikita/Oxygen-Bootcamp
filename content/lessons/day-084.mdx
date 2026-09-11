@@ -1,0 +1,73 @@
+---
+day: 84
+week: 12
+title: Capstone — AEM page family
+objective: "Create or mock a small page family that tells the same Kitepump story: one parent, two children, Text/Image/Teaser, no DITA dumped into Text."
+timeboxMinutes: 110
+skills: [aemSites]
+legacyLessonIds: [t7-aem]
+youtube:
+  - id: 7-Lcw5PejhI
+    title: Go live faster with quick site creation in AEM
+    watchFor:
+      - Pages as a family
+  - id: idByz7WrhbQ
+    title: AEM from Headful to Headless (Adobe for Business)
+    watchFor:
+      - Components not topics
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/quick-start", label: AEM as a Cloud Service authoring quick start, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction", label: Core Components introduction, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview", label: WKND author tutorial, dated: 2026-09 }
+lab:
+  id: lab-84
+  title: Sites half of the capstone
+  pack: aem-author-field-log
+  failWhen: "You paste a DITA task into the Text component, or the family has one orphan page with no parent."
+  expected: Three pages (or mocks). Components used honestly. Payload written.
+  steps:
+    - "Parent page: Kitepump (title). Child: Beach use. Child: Where to buy (or mock names)."
+    - "Core Components: Title, Text, Image with teaching-point alt, Teaser linking parent to child."
+    - Quick Publish or mock the payload. Field log filled.
+    - No DITA XML pasted into Text.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the page family and what Text forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Family exists on instance or mock
+    minutes: 25
+    done: Three pages. Field log filled.
+  - id: c
+    block: C
+    title: How the Teaser points at the child
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [sites-console, page-editor]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Three pages (or mocks). Components used honestly. Payload written. }
+quiz:
+  - q: "Pasting the DITA task into Text keeps the capstone ‘one story’. True?"
+    answer: 1
+    why: "Same product, two models. Rewrite for the page. Link to the help if you must."
+    options:
+      - "True"
+      - False — that smashes families; tell the story in page language
+fieldNotePrompt: "What is the parent page title?"
+tomorrowHook: Same product story on both surfaces — a comparison sheet.
+---
+
+## Sites half
+
+Same product. Different model. Pages, not topicrefs.

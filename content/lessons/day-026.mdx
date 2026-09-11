@@ -1,0 +1,97 @@
+---
+day: 26
+week: 4
+title: A warning library you can defend
+objective: Hold three reusable notes in one library topic and conkeyref each into the right task — no unused chunks.
+timeboxMinutes: 90
+skills: [reuse, ditaTopics]
+legacyLessonIds: [t5-reuse]
+youtube:
+  - id: K_fjZn285Wo
+    title: Working with DITA Reusable Components View
+    watchFor:
+      - More than one reusable component in a view
+      - Insert without copying text
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-26
+  title: "Three warnings, three homes"
+  pack: kitepump-dita
+  failWhen: "A library note is unused, or a task copies the sentence, or a fourth speculative warning exists with no home."
+  expected: "Three notes, three conkeyrefs, three tasks. No unused chunks. Completeness clean."
+  steps:
+    - "In warnings.dita, keep pinch-hazard. Add note id=\"eye-protection\" type=\"caution\" and note id=\"burst-risk\" type=\"warning\"."
+    - conkeyref eye-protection into bleed-the-valve.dita. conkeyref burst-risk into a new task topics/read-the-gauge.dita (three cmds).
+    - pinch-hazard stays on inflate-the-tire.
+    - Every library note is used at least once. Do not add a fourth ‘just in case’.
+    - "Open Text on a task: you should see conkeyref, not the sentence."
+    - Completeness clean. Library still not a TOC chapter.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name three library ids and what an unused chunk forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep every warning used once
+    minutes: 25
+    done: Three conkeyrefs. Zero unused notes. Text shows pointers.
+  - id: c
+    block: C
+    title: Edit the library sentence and watch two tasks change
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [authors-dare, warmup-match]
+toolCards: [author-mode, maps-manager]
+badgeId: first-conref
+boss: false
+checks:
+  - { id: lab, prompt: "Three notes, three conkeyrefs, three tasks. No unused chunks. Completeness clean." }
+quiz:
+  - q: "Reuse small stable chunks such as warnings. Which chunk is a bad first conref?"
+    answer: 1
+    why: A chapter is a map. A product name is a keyref. Warnings are the conref-sized chunk.
+    options:
+      - A one-sentence pinch warning
+      - The entire Care chapter
+      - A product name keyword
+  - q: "A library note is never conkeyref’d. What is it?"
+    answer: 1
+    why: Unused reuse is inventory you will not maintain. Delete or use it.
+    options:
+      - A healthy warehouse
+      - Dead content that will rot and still look official in the library file
+      - A keydef
+  - q: "You need a slightly different warning in one task. First move?"
+    answer: 1
+    why: Do not edit a conref’d copy in place. You either share the sentence or you do not.
+    options:
+      - conref and then edit the pulled text in the task
+      - "Write a local note, or make a second library id if the variant is real"
+      - Put if/else in the conref path
+fieldNotePrompt: "Which warning would you refuse to reuse, and why is a local note better?"
+tomorrowHook: "Tomorrow you practice the opposite craft: when copy is better than reuse."
+---
+
+## A library is not a junk drawer
+
+Three notes. Three homes. If you cannot name the task that uses a chunk, delete the chunk.
+
+Stable means the sentence will still be true next quarter. “Hold the HP-40a upright” is a product fact — that may want a key inside the note, or a scoped library, not a single global sentence.
+
+## Do not edit the pull
+
+Author may let you type into a resolved conref. Don’t. Change the source, or break the reuse.
+
+## Figure
+
+warnings.dita: three ids. Three tasks pointing in. Caption: *Reusable Components view with three entries, all used.*

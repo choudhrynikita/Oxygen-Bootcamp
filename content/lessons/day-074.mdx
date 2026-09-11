@@ -1,0 +1,68 @@
+---
+day: 74
+week: 11
+title: Language copies — awareness
+objective: "Explain a language copy as a Sites mechanism, not a DITA ditaval, and write who owns translation on your team."
+timeboxMinutes: 75
+skills: [aemSites]
+legacyLessonIds: []
+youtube:
+  - id: VcMI0zWIKdg
+    title: How to Build a Global Site in AEM Sites
+    watchFor:
+      - MSM / language and translation as a workflow
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/universal-editor/authoring-methods", label: AEM authoring methods, dated: 2026-09 }
+lab:
+  id: lab-74
+  title: Language copy vs ditaval
+  pack: aem-author-field-log
+  failWhen: You run MSM on a live site as a lab stunt.
+  expected: Two distinctions + owner line. No production stunt.
+  steps:
+    - "Write: language copy / MSM (verify current name) copies a page tree for another language."
+    - "Write: ditaval filters a DITA book. It is not a language copy."
+    - "Write who owns translation: a team name or ‘unknown — awareness only’."
+    - Do not create a language copy on a production tree you do not own.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name language copy and what ditaval is not
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Owner line written
+    minutes: 25
+    done: No production copy created.
+  - id: c
+    block: C
+    title: Who would be angry if you copied live
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [one-line-repair, menu-path-race]
+toolCards: [sites-console]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Two distinctions + owner line. No production stunt. }
+quiz:
+  - q: "A ditaval is how AEM copies English pages into French. True?"
+    answer: 1
+    why: Ditaval is DITA filtering. Language copies are Sites.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "Who owns translation, or ‘unknown’?"
+tomorrowHook: Authoring methods clinic.
+---
+
+## Awareness only
+
+You can explain language copies. You do not perform them on someone else’s live tree for a badge.

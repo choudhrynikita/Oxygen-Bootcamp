@@ -1,0 +1,70 @@
+---
+day: 45
+week: 7
+title: Review workflow in Oxygen
+objective: "Track changes, comment, accept one, and refuse to mix Fusion comments with Guides review on the same file."
+timeboxMinutes: 90
+skills: [review, oxygenUi]
+legacyLessonIds: [t4-review]
+youtube:
+  - id: bnQwJZD58wY
+    title: WYSIWYG XML Editing
+    watchFor:
+      - Author canvas while Review is open
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+lab:
+  id: lab-45
+  title: "One tracked edit, one comment, one accept"
+  pack: kitepump-dita
+  failWhen: "You edited with Track Changes off and called it a review, or you mixed two review systems in the note."
+  expected: Review view shows the cycle. The one-line mixing rule is in the field note.
+  steps:
+    - Open prime-the-pump.dita. Turn on Track Changes (Review view — verify the label).
+    - Edit a cmd. Add a comment on the context paragraph.
+    - Accept the edit. Leave the comment or resolve it — write which you did.
+    - "Write one line: I will not mix Content Fusion comments and AEM Guides review on this file."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Review view and what mixing two systems forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Tracked edit still validates
+    minutes: 25
+    done: File valid. One accept. Mixing rule written.
+  - id: c
+    block: C
+    title: Explain the leftover comment in one sentence
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [output-oracle, glossary-lightning]
+toolCards: [review]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Review view shows the cycle. The one-line mixing rule is in the field note. }
+quiz:
+  - q: "You should run Content Fusion comments and AEM Guides review on the same topic at once. True?"
+    answer: 1
+    why: Two review systems on one file hide status. Pick the source of truth.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "Which review system does your team actually own?"
+tomorrowHook: Content Fusion as collaboration context — not a second CMS.
+---
+
+## Review view
+
+Insertions, deletions, comments. Accept/reject like a grown-up. Do not mix Content Fusion comments and AEM Guides review on the same file.
+
+Caption: *Review lives in a dockable view. Verify Review > Track Changes in your version.*

@@ -1,0 +1,100 @@
+---
+day: 12
+week: 2
+title: "Tables you can scan, images with alt text"
+objective: "Insert one CALS table and one image with alt text, and refuse an image that has no alt."
+timeboxMinutes: 90
+skills: [ditaTopics, oxygenUi]
+legacyLessonIds: [t3-insert]
+youtube:
+  - id: t2cG3Xe1TXY
+    title: DITA Editing
+    watchFor:
+      - Toolbar image insert
+      - Where alt text lives on the image
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-12
+  title: Care table plus one honest image
+  pack: flower-docs
+  failWhen: "The image has no alt, or href points at a file that does not exist, or the table has no header row."
+  expected: "Valid reference + concept. Table with header. Image file exists. Alt is a phrase, not the filename. Completeness clean."
+  steps:
+    - "Create topics/care-table.dita as a DITA Reference. Title: Care at a glance. Shortdesc: scan table for water and recut interval."
+    - "Insert a CALS table: Variety / Recut / Water change. Three data rows. Header is a header."
+    - Create a simple image (sketch is fine) named images/vase-outline.png under the pack. 200×200 is enough.
+    - "Create topics/vase-photo.dita as a concept. Title: Vase outline. Insert the image with the toolbar. Set alt: Outline of the Aurora Vase, front view."
+    - "Open Text. Confirm <image href=\"...\" alt=\"...\"/> (or alttext, depending on your DITA version — write which one you have)."
+    - Run completeness on flowers.ditamap after you append both topics. A missing image is a completeness row.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name image alt and CALS header and what a missing file forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the image href real and the alt a phrase
+    minutes: 25
+    done: Completeness clean. Alt is not the filename. Table has a header.
+  - id: c
+    block: C
+    title: "Break the href, read the completeness row, fix it"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [author-mode, attributes]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: "Valid reference + concept. Table with header. Image file exists. Alt is a phrase, not the filename. Completeness clean." }
+quiz:
+  - q: "Alt text is the filename without .png. When is that acceptable?"
+    answer: 1
+    why: Filename is for the filesystem. Alt is for a person who cannot see the image.
+    options:
+      - Always — screen readers prefer the file id
+      - Never as a habit — alt describes the picture
+      - Only in PDF
+  - q: "Completeness is clean but the image is a broken icon in Author. First place you look?"
+    answer: 0
+    why: href is resolved from the topic file. A path that works from the map folder can fail from topics/.
+    options:
+      - "Whether href is relative to the topic, not to the map"
+      - AEM Assets console
+      - Schema Design
+  - q: "CALS vs simpletable: you need column spans later. Which do you pick today?"
+    answer: 1
+    why: "v1: CALS is the default DITA table model. Paste HTML only if Smart Paste converted it."
+    options:
+      - simpletable — spans are easier
+      - CALS table — it is the default DITA model and supports more structure
+      - HTML table pasted from a browser
+fieldNotePrompt: Write the exact alt string you used and why a filename would have been a bad alt.
+tomorrowHook: "Tomorrow you compare Author (rendered) with Text (source), and you look at Markdown without mixing it into this map."
+---
+
+## Tables
+
+Use toolbar actions. **CALS** is the default DITA table model. Header row first. Keep cells short. A table is not a page layout.
+
+## Images
+
+Toolbar **Insert Image**. `href` is relative to the topic unless you use a key. **alt** (or `alttext` in some shells) is a phrase: what the picture shows.
+
+An empty alt is a decision (“decorative”). A missing alt is a defect. A filename as alt is laziness.
+
+## Completeness
+
+Valid XML can still miss the PNG. **Validate and Check for Completeness** on the map reports missing images. Run it after every insert.
+
+## Figure
+
+Topic folder next to `images/vase-outline.png`. Caption: *href from the topic, not from the repo root. Missing file = completeness row.*

@@ -1,0 +1,111 @@
+---
+day: 28
+week: 4
+title: Boss — reuse you can explain
+objective: "Show a product key, a conkeyref warning, a retired bad reuse, and completeness clean — and explain each pointer in one sentence."
+timeboxMinutes: 110
+skills: [reuse, maps, review]
+legacyLessonIds: [t5-reuse, t5-keys]
+youtube:
+  - id: K_fjZn285Wo
+    title: Working with DITA Reusable Components View
+    watchFor:
+      - Reusable Components view as a checklist
+  - id: JkPeWea3Y3U
+    title: DITA Map Completeness Check
+    watchFor:
+      - Unresolved key vs missing href
+sources:
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+lab:
+  id: lab-28
+  title: "Clinic: pointers, not copies"
+  pack: kitepump-dita
+  failWhen: "A warning sentence exists twice, or keys only work in one topic, or you cannot explain a pointer, or completeness is red."
+  expected: Clinic copy clean. Two keyrefs. At least one shared conkeyref. Three explanation sentences.
+  steps:
+    - Copy kitepump to oxygen-bootcamp-work/week4-clinic/.
+    - Prove product-name keyref in two topics. Change the keydef; both follow.
+    - Prove one conkeyref warning in two tasks. Change the library; both follow.
+    - "Break 1: unset root map. Record unresolved keys. Restore."
+    - "Break 2: typo conkeyref. Record unresolved content. Repair."
+    - "Break 3: put a path conref back next to a conkeyref on the same note. Delete the path form."
+    - "Write three sentences: what the key owns, what the conkeyref owns, what you refused to reuse."
+    - Completeness clean on the clinic copy.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name keyref vs conkeyref vs copy
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Clinic copy still resolves
+    minutes: 25
+    done: Keys and conkeyref proven. Three sentences written. Completeness clean.
+  - id: c
+    block: C
+    title: Explain each pointer in one sentence
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [one-line-repair, menu-path-race]
+toolCards: [maps-manager, attributes]
+badgeId: key-not-path
+boss: true
+checks:
+  - { id: lab, prompt: Clinic copy clean. Two keyrefs. At least one shared conkeyref. Three explanation sentences. }
+quiz:
+  - q: "Unresolved keyref in Author. First place you look?"
+    answer: 1
+    why: Keys live in the map. Root map plus keydef. Not a publish engine.
+    options:
+      - CSS PDF Chemistry
+      - Root map and the keydef
+      - AEM workflow payload
+  - q: "You failed this boss. Does Day 29 stay locked?"
+    answer: 1
+    why: Boss badge waits. Curriculum week does not hostage you if Friday lab is done.
+    options:
+      - "Yes, forever"
+      - "No, if Friday (Day 27) lab is done the next week can unlock. The boss badge stays locked until you pass."
+      - "No, Daily Burst unlocks the week"
+  - q: "conref path still works after you also added conkeyref. Ship both?"
+    answer: 1
+    why: Two pointers will diverge. The preferred form is conkeyref.
+    options:
+      - Yes — redundancy is safety
+      - No — pick the key form and delete the path
+      - Yes if they point at the same id
+  - q: "A teammate wants to conref the entire inflate task into a Sites page. Verdict?"
+    answer: 1
+    why: DITA reuse stays in DITA. AEM pages are components. Do not smash the two.
+    options:
+      - Do it — reuse everywhere
+      - Refuse — Sites is not a DITA map; this is the wrong surface
+      - Export the task as an Experience Fragment first
+fieldNotePrompt: "Write the three sentences: key, conkeyref, refused reuse."
+tomorrowHook: "Week 5: profiling, ditaval, change tracking, and Author tools you may actually touch."
+---
+
+## Clinic, not a glossary
+
+This is a week boss. You practice pointers. You do not recite definitions.
+
+Fail it and **Day 29 still unlocks if Day 27 lab is done**. The badge stays locked until you retry.
+
+## Proof
+
+1. Change the product key — two topics follow.
+2. Change the library warning — two tasks follow.
+3. A sentence you copied on purpose — because reuse would have lied.
+
+## Figure
+
+Reusable Components view plus Maps Manager keys. Caption: *If the view is empty, the root map is unset.*

@@ -1,0 +1,90 @@
+---
+day: 65
+week: 10
+title: Teaser — a card with a destination
+objective: "Log a Teaser’s title, description, image, and link, and refuse to paste a full task into the description."
+timeboxMinutes: 90
+skills: [aemSites]
+legacyLessonIds: [t7-aem]
+youtube:
+  - id: 7-Lcw5PejhI
+    title: Go live faster with quick site creation in AEM
+    watchFor:
+      - Cards / teasers on a generated site if shown
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction", label: Core Components introduction, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview", label: WKND author tutorial, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
+lab:
+  id: lab-65
+  title: "Field log: one Kitepump teaser"
+  pack: aem-author-field-log
+  failWhen: "Description contains three cmds, or the teaser has no destination, or the mock is unlabeled."
+  expected: "One teaser spec with title, one-sentence description, link, alt. Mock labeled."
+  steps:
+    - Read Teaser Core Component docs (skim).
+    - "Write oxygen-bootcamp-work/week10/field-log-65.txt for a teaser: title Inflate in three steps, description one sentence, link to a how-to page (or a future Guides URL — write ‘page that does not exist yet’ if needed). Image alt phrase."
+    - "Write: teaser description is not the task. The task stays in DITA."
+    - "If the teaser can inherit from the target page, note that. Do not invent fields you did not see."
+    - "Labeled mock: teaser card. Caption: mock."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Teaser fields and what a dumped task forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the description to one sentence
+    minutes: 25
+    done: Teaser spec complete. Mock labeled.
+  - id: c
+    block: C
+    title: Remove cmd-like verbs from the description
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [menu-path-race, output-oracle]
+toolCards: [page-editor]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: "One teaser spec with title, one-sentence description, link, alt. Mock labeled." }
+quiz:
+  - q: "A Teaser is a DITA shortdesc. True?"
+    answer: 1
+    why: "Similar job (lure + pointer), different system. Do not smash names."
+    options:
+      - "True"
+      - "False"
+  - q: "Teaser links to the DITA WebHelp on your laptop out/ folder. Verdict?"
+    answer: 1
+    why: Draft transforms are not the live site.
+    options:
+      - Fine for production
+      - "Refuse — production links to published URLs (Sites or Guides), not a laptop path"
+      - Fine if the path is absolute
+  - q: "Empty link on a teaser that looks clickable. Problem?"
+    answer: 1
+    why: Cards that do not go anywhere train people to ignore cards.
+    options:
+      - None
+      - A fake affordance — pick a page or do not use Teaser
+      - AEM fills it at publish
+fieldNotePrompt: "Where should the teaser’s link go in a real desk — a Sites how-to, or a Guides topic URL?"
+tomorrowHook: Tomorrow Container and responsive layout — you will not fight the template grid.
+---
+
+## Teaser
+
+A **Teaser** is a card: image, title, short text, link. It points. It does not contain the procedure.
+
+Kitepump landing can tease Care. The steps stay in the handbook.
+
+## Figure
+
+Labeled mock: three teaser cards in a row. Caption: *Mock. Destinations are pages, not out/index.html.*

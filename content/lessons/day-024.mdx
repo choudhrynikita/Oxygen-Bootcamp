@@ -1,0 +1,103 @@
+---
+day: 24
+week: 4
+title: conkeyref — the map owns the library too
+objective: Replace yesterday’s path conref with conkeyref so a folder move does not break the warning.
+timeboxMinutes: 90
+skills: [reuse, maps]
+legacyLessonIds: [t5-reuse, t5-keys]
+youtube:
+  - id: K_fjZn285Wo
+    title: Working with DITA Reusable Components View
+    watchFor:
+      - Reusable component inserted as a key
+      - conkeyref in Text mode
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+lab:
+  id: lab-24
+  title: "Same warning, now a key"
+  pack: kitepump-dita
+  failWhen: "The task still uses a path conref, or you copied the sentence, or the key is undefined on the map."
+  expected: "conkeyref in both tasks. Map holds keys=\"warnings-lib\". Move did not edit the tasks. Completeness clean."
+  steps:
+    - "On the library topicref, set keys=\"warnings-lib\"."
+    - "In inflate-the-tire.dita, change the note from conref=path to conkeyref=\"warnings-lib/pinch-hazard\". Remove the path conref."
+    - Move warnings.dita into topics/library/ if it is not already there. Update the topicref href only — the task should still resolve via the key.
+    - Unset root map; confirm unresolved; restore.
+    - "Add the same conkeyref to a second task (create topics/bleed-the-valve.dita if needed, three cmds plus the warning)."
+    - "Completeness clean. Two tasks, one library sentence."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name conkeyref and what a leftover path conref forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the warning on a key in two tasks
+    minutes: 25
+    done: Two conkeyrefs. Library moved. Tasks not edited for the move. Completeness clean.
+  - id: c
+    block: C
+    title: "Break the key name, read unresolved, repair"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [menu-path-race, output-oracle]
+toolCards: [maps-manager, attributes]
+badgeId: key-not-path
+boss: false
+checks:
+  - { id: lab, prompt: "conkeyref in both tasks. Map holds keys=\"warnings-lib\". Move did not edit the tasks. Completeness clean." }
+quiz:
+  - q: "conkeyref is preferred over conref. Why, in one operational reason?"
+    answer: 1
+    why: "v1: conkeyref uses a key and is preferred. Keys are retargetable. Paths are not."
+    options:
+      - It is newer XML
+      - The map can retarget the library without editing every task
+      - conref is deprecated in DITA 1.3
+  - q: "conkeyref=\"warnings-lib/pinch-hazard\". What is pinch-hazard?"
+    answer: 1
+    why: The key finds the topic. The id finds the element.
+    options:
+      - A filename
+      - An element id inside the key’s target topic
+      - A ditaval flag
+  - q: "You leave both conref and conkeyref on the same note. What should you do?"
+    answer: 1
+    why: Processors pick a precedence. You should not have to remember it under deadline.
+    options:
+      - Keep both as fallback
+      - Keep one. Two pointers is a fight when they disagree
+      - Convert the note to a keyword
+fieldNotePrompt: "If the library file moves again next month, which file do you expect to edit?"
+tomorrowHook: "Tomorrow you peek at key scopes — enough to not panic, not enough to design a CCMS."
+---
+
+## conkeyref
+
+Same chunk, better pointer. **conkeyref** is `key/id`. The map’s `keys="warnings-lib"` owns the file path.
+
+Move the library. Update one topicref. Tasks sleep through it.
+
+## Practice
+
+This week is practice. You now have:
+
+- a product **keyref**
+- a warning **conkeyref**
+- a leftover **conref** you retired
+
+If any sentence still exists twice, you are not done.
+
+## Figure
+
+Text mode: `<note conkeyref="warnings-lib/pinch-hazard"/>`. Caption: *No path. No copied sentence.*

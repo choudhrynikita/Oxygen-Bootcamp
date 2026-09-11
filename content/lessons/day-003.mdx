@@ -1,0 +1,100 @@
+---
+day: 3
+week: 1
+title: "New Document wizard, first DITA topic, save discipline"
+objective: "Create a Concept topic from the New wizard, save it with lowercase hyphens, and keep it inside a project folder — not on the desktop."
+timeboxMinutes: 90
+skills: [oxygenUi, ditaTopics]
+legacyLessonIds: [t1-newdoc, t1-xml]
+youtube:
+  - id: LuAVmn1j7f0
+    title: Getting Started with DITA Using Oxygen XML Editor
+    watchFor:
+      - File New for a DITA topic
+      - Where the map will later live
+  - id: Vglmv_lDg7Y
+    title: Interactive Tutorials in Oxygen
+    watchFor:
+      - Help > Install new add-ons for Live Tutorials
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/eppo-first-dita-topic.html", label: First DITA topic (Oxygen), dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+lab:
+  id: lab-3
+  title: "Hello concept, saved like a writer"
+  pack: flower-docs
+  failWhen: "The file is Hello Concept.dita on the desktop, or the topic is invalid because title is empty."
+  expected: hello-concept.dita validates. Path uses lowercase hyphens. Shortdesc is present.
+  steps:
+    - Create a folder oxygen-bootcamp-work/ if you skipped it.
+    - "In Oxygen: File > New. Choose a DITA Concept template so Author mode gets a toolbar."
+    - "Title: Hello concept. File name: hello-concept.dita (lowercase, hyphens)."
+    - "Save under oxygen-bootcamp-work/week1/, not the desktop."
+    - Add a shortdesc of one sentence. Add one paragraph in conbody.
+    - "Confirm tabs Text, Grid, Author all open the same file."
+    - "Optional: Help > Install new add-ons > Live Tutorials. Bookmark the User Guide."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name File > New and the template that attaches the DITA framework
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep hello-concept.dita valid in the project folder
+    minutes: 25
+    done: "File validates, is lowercase-hyphenated, and is not on the desktop."
+  - id: c
+    block: C
+    title: Explain well-formed vs valid in one sentence
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [menu-path-race, output-oracle]
+toolCards: [author-mode]
+badgeId: first-valid-task
+boss: false
+checks:
+  - { id: lab, prompt: hello-concept.dita validates. Path uses lowercase hyphens. Shortdesc is present. }
+quiz:
+  - q: "Well-formed means the file matches a DTD. True?"
+    answer: 1
+    why: Well-formed is syntax only (tags nest and match). Validity requires a schema or DTD.
+    options:
+      - "True"
+      - "False"
+  - q: "Why does File > New matter more than a blank XML file?"
+    answer: 1
+    why: "Without a framework, Author is a generic XML view. Templates give you the DITA toolbar and content completion."
+    options:
+      - It downloads AEM Guides
+      - The template attaches a framework so Author gets the DITA toolbar
+      - It publishes WebHelp
+fieldNotePrompt: "What will you do when a teammate emails Hello Concept FINAL(2).dita?"
+tomorrowHook: "Tomorrow you type in Author, paste from a browser, and read validation messages that actually matter."
+---
+
+## File > New
+
+**File > New.** Choose a DITA Topic or DocBook template so Author mode gets a toolbar. Save with lowercase hyphens. Confirm tabs Text, Grid, Author.
+
+A loose file on the desktop will haunt you when the map looks for `topics/hello-concept.dita` and finds nothing.
+
+## Well-formed vs valid
+
+**Well-formed** means tags nest and match (the blue check in Oxygen’s language). **Valid** also obeys a schema (the red check). Elements nest. Attributes hold `id` and props. Never leave a raw ampersand in text.
+
+Delete a closing tag in Text mode, watch the error, undo. That is the whole literacy.
+
+## Project vs loose files
+
+Use a project folder or Oxygen project. Relative paths in maps assume you are not wandering the desktop. Master Files (later week) can rewrite references on rename. This week: pick a folder and stay there.
+
+## Live Tutorials
+
+Install the official Live Tutorials add-on inside Oxygen (**Help > Install new add-ons**). In-product missions beat a second browser tab.

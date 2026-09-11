@@ -1,0 +1,101 @@
+---
+day: 18
+week: 3
+title: "xref — point at a topic, not at a URL you invented"
+objective: "Insert two xrefs: one to a topic, one to an element id, and prove a broken href shows up in completeness."
+timeboxMinutes: 90
+skills: [ditaTopics, maps]
+legacyLessonIds: [t3-insert]
+youtube:
+  - id: t2cG3Xe1TXY
+    title: DITA Editing
+    watchFor:
+      - Insert Cross Reference
+      - Target picker vs typing a URL
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+lab:
+  id: lab-18
+  title: "Two xrefs, one broken on purpose"
+  pack: kitepump-dita
+  failWhen: "An xref is a raw https link to a local file, or you leave the broken href in the map, or the element xref has no id target."
+  expected: "Two working xrefs (topic + element). Completeness was red, then clean. No invented URL."
+  steps:
+    - "In what-kitepump-is.dita, insert an xref to inflate-the-tire.dita using the toolbar (Insert Cross Reference). Do not type https://."
+    - "Insert a second xref to inflate-the-tire.dita#gauge-check (the step id from Day 17)."
+    - Validate both topics. Follow the xref in Author — it should jump.
+    - Break the topic xref href (typo the filename). Run completeness on the root map. Record the exact row.
+    - Repair the href. Completeness clean.
+    - "Write one sentence in the concept: xrefs are DITA pointers, not website URLs."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Insert Cross Reference and what an https href forbids in a local book
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep two xrefs resolvable
+    minutes: 25
+    done: Topic xref and element xref jump. Completeness clean after the break/repair.
+  - id: c
+    block: C
+    title: "Typo the href, read the completeness row, fix it"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [one-line-repair, menu-path-race]
+toolCards: [author-mode, maps-manager]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: "Two working xrefs (topic + element). Completeness was red, then clean. No invented URL." }
+quiz:
+  - q: "You paste https://example.com/inflate.html into an xref href for a DITA topic. What did you ship?"
+    answer: 1
+    why: "xref href in a DITA book should be a topic/element (or a key). A URL is a website, not a topic move."
+    options:
+      - A portable book link
+      - A web address that will not track the DITA file when it moves
+      - A keyref
+  - q: "The xref text is hardcoded ‘click here’. First repair?"
+    answer: 1
+    why: Click here fails accessibility and reuse. The target title travels with the link.
+    options:
+      - Leave it — screen readers prefer click here
+      - "Let the xref use the target title, or write a phrase that names the destination"
+      - Convert the xref to an image
+  - q: "Completeness reports the xref target missing, but the topic opens. What is likely?"
+    answer: 0
+    why: href is relative to the file that contains the xref unless you use a key.
+    options:
+      - The href path is wrong relative to the source topic
+      - Author mode cannot follow valid xrefs
+      - You need AEM Guides to resolve xrefs
+fieldNotePrompt: "Quote the completeness row you caused. What path would have been right on the first try?"
+tomorrowHook: Tomorrow you add related links the map can generate — and you refuse a handmade list that duplicates the map.
+---
+
+## xref
+
+An **xref** points at a DITA target: a topic, or a topic plus element id. Use the toolbar picker. Do not invent a website URL for a file that lives in the map.
+
+Keys (next week) are even better: the map owns the name, the path can move.
+
+## Link text
+
+Prefer empty xref text so the processor pulls the target title. If you write text, name the destination. Never “click here.”
+
+## Completeness
+
+A typo in href is a completeness row. Cause one. Read it. Fix it. That is the literacy.
+
+## Figure
+
+Insert Cross Reference dialog: tree of the root map. Caption: *Picker from the root map. Not a browser address bar.*

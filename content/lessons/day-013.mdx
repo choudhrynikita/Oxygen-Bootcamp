@@ -1,0 +1,100 @@
+---
+day: 13
+week: 2
+title: Preview vs source — and Markdown that stays in its lane
+objective: "Edit one sentence in Author and Text, preview a Markdown file, and write why that Markdown file is not a child of flowers.ditamap."
+timeboxMinutes: 90
+skills: [oxygenUi, ditaTopics]
+legacyLessonIds: [t3-markdown]
+youtube:
+  - id: fdAsWfU66bI
+    title: Oxygen Markdown Support
+    watchFor:
+      - Markdown preview pane
+      - What Oxygen will and will not treat as MDITA
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/videos.html", label: Oxygen official video catalog, dated: 2026-09 }
+lab:
+  id: lab-13
+  title: "Same sentence, two views — Markdown stays out of the map"
+  pack: flower-docs
+  failWhen: "The map references a .md file, or the DITA sentence is only in Author comments, or you mixed MDITA into flowers.ditamap."
+  expected: DITA sentence exists in Author and Text. Markdown file exists outside the map. Completeness clean.
+  steps:
+    - "Open topics/what-a-cut-flower.dita. In Author, add a sentence: Preview is Author CSS. Source is Text."
+    - Switch to Text. Find that sentence inside a <p>. Do not break a tag.
+    - Create oxygen-bootcamp-work/week2/preview-notes.md with three headings and a list (CommonMark).
+    - "Open the .md in Oxygen. Use the Markdown preview. Write one line in the file: this is not a DITA topic."
+    - "Do not append preview-notes.md to flowers.ditamap. If you try, completeness should complain — undo."
+    - Create topics/studio-preview.dita (concept) that states in one paragraph when Markdown is allowed on this desk (never in this map).
+    - Append studio-preview.dita only. Completeness clean.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Author vs Text vs Markdown preview and what the map forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the Markdown file out of flowers.ditamap
+    minutes: 25
+    done: Sentence in Author and Text. .md exists. Map completeness clean.
+  - id: c
+    block: C
+    title: "Try a topicref to the .md, read the failure, undo"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [menu-path-race, output-oracle]
+toolCards: [author-mode, text-mode]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: DITA sentence exists in Author and Text. Markdown file exists outside the map. Completeness clean. }
+quiz:
+  - q: "Oxygen previews CommonMark and can use MDITA. When do you mix Markdown and full DITA in one map?"
+    answer: 1
+    why: "v1: Do not mix Markdown and full DITA unless publishing is designed for both. The flower map is DITA 1.3 topics."
+    options:
+      - Whenever preview looks fine
+      - Only when publishing is designed for both — this flower map is not
+      - "Never in any product, ever"
+  - q: "Author looks pretty and Text shows a raw &. What is true?"
+    answer: 1
+    why: Source is XML. Author is a view. A raw ampersand is a well-formed error even if Author still paints.
+    options:
+      - Author is the source of truth — ignore Text
+      - The file is not well-formed; repair the ampersand
+      - Grid will fix it on save
+  - q: "You need a SME to draft in Markdown. First honest move?"
+    answer: 1
+    why: A map of DITA topics expects DITA. Conversion is a step. A rename is not conversion.
+    options:
+      - Append the .md to the DITA map
+      - Keep the .md beside the pack and convert to a DITA topic before the map owns it
+      - Rename .md to .dita and hope
+fieldNotePrompt: "When would you refuse a teammate’s .md as a topicref, and what would you ask for instead?"
+tomorrowHook: "Tomorrow is the Week 2 boss: a 12-topic flower map that still validates."
+---
+
+## Preview vs source
+
+**Author** is CSS visual writing. **Text** is the XML. **Grid** is rows. Preview is not a second document. If Author and Text disagree, Text wins — it is the file.
+
+Markdown preview is a third view for `.md` files. It is not Author mode for DITA.
+
+## Markdown and LwDITA
+
+v1: *Oxygen previews CommonMark and can use MDITA. Do not mix Markdown and full DITA unless publishing is designed for both.*
+
+This week’s pack is DITA topics and a DITA map. A SME draft in Markdown is a draft. Convert, then append.
+
+## Figure
+
+Split: left Author paragraph, right Text `<p>`. Below, a Markdown preview window with a caption: *Not a child of flowers.ditamap.*

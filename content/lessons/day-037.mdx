@@ -1,0 +1,96 @@
+---
+day: 37
+week: 6
+title: WebHelp Responsive — a draft you can click
+objective: "Publish kitepump.ditamap to WebHelp Responsive and open the output index.html, then match three TOC entries to topic titles."
+timeboxMinutes: 90
+skills: [publish, maps]
+legacyLessonIds: [t5-publish]
+youtube:
+  - id: zNmXfKWXwO8
+    title: Creating a Publishing Template to Customize WebHelp and PDF using CSS
+    watchFor:
+      - WebHelp output as a folder of HTML
+      - A publishing template vs the scenario
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/videos.html", label: Oxygen official video catalog, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+lab:
+  id: lab-37
+  title: "WebHelp draft, three TOC checks"
+  pack: kitepump-dita
+  failWhen: "You published a single topic and called it the book, or you cannot find index.html, or you committed the output into topics/."
+  expected: WebHelp folder exists. Three TOC lines mapped to files. Key resolved in HTML — or a first error line parked for Day 40.
+  steps:
+    - Apply the WebHelp Responsive scenario on kitepump.ditamap. Wait for the Transformation view.
+    - "If the status is SUCCESS, open out-webhelp/index.html in a browser (Oxygen may offer Open)."
+    - Write three TOC labels you see and the topic files they come from.
+    - "Confirm the product-name key resolved in HTML (Kitepump HP-40a, not the key string)."
+    - "If the expert step is missing, check whether novice.ditaval was attached. Write which it was."
+    - "If the status is FAILED, do not panic — Day 40 is the failed-log lab. Still paste the first error line into the field note and stop; do not thrash for an hour."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name WebHelp Responsive and the output entry file
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Open index.html and match three TOC entries
+    minutes: 25
+    done: Output exists. Three mappings written. Key checked.
+  - id: c
+    block: C
+    title: Find one TOC surprise (navtitle vs title) and write it
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [transformation, maps-manager]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: WebHelp folder exists. Three TOC lines mapped to files. Key resolved in HTML — or a first error line parked for Day 40. }
+quiz:
+  - q: "WebHelp Responsive output is a folder. What is the usual entry file?"
+    answer: 1
+    why: You open HTML. The map is source.
+    options:
+      - the .ditamap
+      - index.html (verify in your output)
+      - schema.xsd
+  - q: "The TOC is missing a topic that completeness includes. First place you look?"
+    answer: 0
+    why: Publish reads the map. toc=no hides a node. Completeness does not mean ‘visible in TOC’.
+    options:
+      - "toc=\"no\" on the topicref, or a submap not referenced"
+      - AEM page properties
+      - Author CSS Hints
+  - q: "Local WebHelp is the AEM Guides release. True?"
+    answer: 1
+    why: Local output is a draft. Guides/server baseline is the release when that is your CCMS.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "Which TOC label disagreed with the topic title, and was that navtitle on purpose?"
+tomorrowHook: "Tomorrow you run a PDF path (Publishing Engine or Chemistry) as a draft, not a brand."
+---
+
+## WebHelp Responsive
+
+This is the HTML draft of the book. Apply the scenario. Read **Transformation**. Open `index.html`.
+
+You are not designing a theme today. You are proving the map produces a site you can click.
+
+## Keys and filters
+
+HTML is the proof that keys resolved and that DITAVAL did or did not drop a step. If the product name is still `product-name`, the root map or the scenario’s map input is wrong.
+
+## Figure
+
+Browser with WebHelp TOC on the left. Caption: *Draft output. Not AEM Sites. Not Guides server publish.*

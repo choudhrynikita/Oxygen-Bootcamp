@@ -1,0 +1,18 @@
+[
+  { "id": "well-formed", "name": "Well-formed", "earn": "Repair a not-well-formed topic in Text mode and leave it valid.", "day": 4 },
+  { "id": "first-valid-task", "name": "First valid task", "earn": "Create a valid topic from File > New and save it with lowercase hyphens.", "day": 3 },
+  { "id": "map-is-a-book", "name": "Map is a book", "earn": "Append a child topic and keep completeness clean.", "day": 6 },
+  { "id": "completeness-clean", "name": "Completeness clean", "earn": "Pass the Week 1 clinic with a clean completeness report.", "day": 7 },
+  { "id": "first-conref", "name": "First conref", "earn": "Reuse a warning with conkeyref, not a copy-paste.", "day": 23 },
+  { "id": "key-not-path", "name": "Key, not path", "earn": "Define a product-name key and reference it twice.", "day": 24 },
+  { "id": "ditaval-explained", "name": "Ditaval explained", "earn": "Profile one step and filter it with a ditaval you can explain.", "day": 29 },
+  { "id": "transform-log-reader", "name": "Transform log reader", "earn": "Read a failed transform log and name the first real error.", "day": 40 },
+  { "id": "web-author-tour", "name": "Web Author tour", "earn": "Name three things desktop still does better than Web Author.", "day": 44 },
+  { "id": "aem-quick-publish", "name": "Quick Publish", "earn": "Walk a labeled mock of create page + Quick Publish without mixing it with DITA-OT.", "day": 62 },
+  { "id": "core-components-desk", "name": "Core Components desk", "earn": "Place Text, Image, and Teaser on a mock page and say what each is for.", "day": 65 },
+  { "id": "checkout-checkin", "name": "Checkout / check-in", "earn": "Write the mental model of checkout, Edit in Oxygen, check-in.", "day": 77 },
+  { "id": "guides-handoff", "name": "Guides handoff", "earn": "Decide who edits in Guides vs Oxygen for one topic.", "day": 82 },
+  { "id": "two-surfaces-one-story", "name": "Two surfaces, one story", "earn": "Capstone: one DITA publication and one AEM page family for the same product.", "day": 85 },
+  { "id": "portfolio-ready", "name": "Portfolio ready", "earn": "Export progress and a skills inventory on Day 90.", "day": 90 },
+  { "id": "legacy-classroom", "name": "Legacy classroom", "earn": "Imported v1 LMS ticks. Does not complete 90-day days.", "day": null }
+]

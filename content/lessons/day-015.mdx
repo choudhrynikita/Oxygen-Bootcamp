@@ -1,0 +1,97 @@
+---
+day: 15
+week: 3
+title: "topicref is a contract — href, keys, navtitle, linking"
+objective: "Edit one topicref’s properties (keys, navtitle, linking) without breaking completeness or inventing a second title in the topic."
+timeboxMinutes: 90
+skills: [maps, oxygenUi]
+legacyLessonIds: [t3-maps]
+youtube:
+  - id: ozFZz6YZMCY
+    title: DITA Maps Manager View in Oxygen XML Editor 19
+    watchFor:
+      - Edit Properties on a topicref
+      - navtitle vs the topic title
+sources:
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-15
+  title: "One topicref, four fields"
+  pack: flower-docs
+  failWhen: "You edited the topic title instead of navtitle, or keys are empty, or completeness reports a missing href."
+  expected: topicref has keys and a navtitle distinct from the file title. Completeness clean. Field note lists the four fields.
+  steps:
+    - Open flowers.ditamap in Maps Manager. Set it as root map.
+    - Right-click the Care task change-water.dita > Edit Properties (verify the label).
+    - "Set keys=\"change-water\" if missing. Set navtitle to Change vase water (different from the topic title Change the water)."
+    - Set linking to normal (or leave default). Write the four fields you saw in oxygen-bootcamp-work/week3/topicref-fields.txt.
+    - Do not duplicate the navtitle as a second <title> inside the topic.
+    - Run completeness. Open the topic — title in the file must still be Change the water.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Edit Properties and what a second title forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep navtitle on the topicref
+    minutes: 25
+    done: keys set. navtitle ≠ file title. Completeness clean.
+  - id: c
+    block: C
+    title: "Add a second title, read the error or the mess, undo"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [glossary-lightning, authors-dare]
+toolCards: [maps-manager, attributes]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: topicref has keys and a navtitle distinct from the file title. Completeness clean. Field note lists the four fields. }
+quiz:
+  - q: "navtitle on the topicref disagrees with <title> in the topic. What publishes in the TOC?"
+    answer: 1
+    why: navtitle is a map-side label. The topic still owns its title. Do not copy navtitle into a second title element.
+    options:
+      - Always the file title — navtitle is decoration
+      - The map can show navtitle in the TOC; the topic title still heads the page
+      - Oxygen rejects the map
+  - q: "linking=\"none\" on a topicref. What did you just forbid?"
+    answer: 1
+    why: linking controls generated links. The file still opens. Images are unrelated.
+    options:
+      - The topic cannot be opened in Author
+      - Generated related links to and from this topicref
+      - Images inside the topic
+  - q: "You type a second <title> in the topic so the TOC matches. First repair?"
+    answer: 1
+    why: One title in the topic. TOC labels belong on the map.
+    options:
+      - Leave it — two titles are a DITA feature
+      - Delete the extra title; put the TOC label on the topicref as navtitle
+      - Move the topic into AEM Sites
+fieldNotePrompt: "Which of the four topicref fields would you refuse to leave blank on a shared map, and why?"
+tomorrowHook: "Tomorrow you split a book: a submap the parent map owns, not a copy of the files."
+---
+
+## The map is the book
+
+A **topicref** is a pointer plus policy. **href** is the file. **keys** is the name the rest of the book uses. **navtitle** is a TOC label when you need one. **linking** and **toc** and **collection-type** change generated behavior.
+
+Right-click a node > **Edit Properties**. Do not hand-edit a 200-line map in Text until you can survive Properties.
+
+## Title vs navtitle
+
+The topic owns `<title>`. The map may own `navtitle`. If they match, skip navtitle. If the TOC needs a shorter label, set navtitle — do not add a second title in the file.
+
+## Figure
+
+Edit Properties dialog: href, keys, navtitle, linking. Caption: *Maps Manager > Edit Properties. Verify the menu path in your version.*

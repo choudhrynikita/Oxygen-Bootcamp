@@ -1,0 +1,68 @@
+---
+day: 48
+week: 7
+title: "Team flow — CCMS or Git, pick one"
+objective: Write the source of truth for kitepump this week and the failure mode if someone uses both by accident.
+timeboxMinutes: 90
+skills: [review, maps]
+legacyLessonIds: [t6-git]
+youtube:
+  - id: JkPeWea3Y3U
+    title: DITA Map Completeness Check
+    watchFor:
+      - Broken href after a casual rename
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
+lab:
+  id: lab-48
+  title: Source of truth card
+  pack: kitepump-dita
+  failWhen: You claim both Git and Guides are source of truth with no bridge.
+  expected: One source of truth. Completeness clean after rename. Failure mode written.
+  steps:
+    - "Write: source of truth = folder | Git | AEM Guides (pick one for this exercise)."
+    - "If Git: enable Master Files on the map in Oxygen (verify the label) and rename a topic. Confirm the topicref updates."
+    - "If folder: rename carefully and fix the topicref by hand. Run completeness."
+    - Write the failure mode of running Git and Guides on the same files without a bridge.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Master Files and what they forbid (orphan hrefs)
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Rename without silent breakage
+    minutes: 25
+    done: Completeness clean after rename.
+  - id: c
+    block: C
+    title: Explain the dual-source failure in one sentence
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [maps-manager]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: One source of truth. Completeness clean after rename. Failure mode written. }
+quiz:
+  - q: "Master Files in Oxygen exist to update references on rename. True?"
+    answer: 0
+    why: "That is the point. Without them, a rename is a silent completeness miss."
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "What is your team’s actual source of truth today?"
+tomorrowHook: "Week 7 clinic: a messy handoff."
+---
+
+## Pick one
+
+CCMS (Guides) or Git. Not both by accident. Master Files update references on rename. The Git Client add-on commits inside Oxygen. Still pick a source of truth.

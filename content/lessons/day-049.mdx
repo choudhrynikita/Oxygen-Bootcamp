@@ -1,0 +1,73 @@
+---
+day: 49
+week: 7
+title: Collaboration clinic
+objective: "Repair a messy handoff: mixed review comments, a missing map, and a dual-source claim."
+timeboxMinutes: 90
+skills: [review, maps]
+legacyLessonIds: []
+youtube:
+  - id: ozFZz6YZMCY
+    title: DITA Maps Manager View in Oxygen XML Editor 19
+    watchFor:
+      - Map as the unit of handoff
+  - id: JkPeWea3Y3U
+    title: DITA Map Completeness Check
+    watchFor:
+      - Missing href after a bad zip
+sources:
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
+lab:
+  id: lab-49
+  title: "Clinic: three handoff faults"
+  pack: kitepump-dita
+  failWhen: "The clinic copy still has no map, or the Fusion sentence still says CMS."
+  expected: Map present. Review clean enough to ship. Fusion sentence corrected.
+  steps:
+    - "Fault 1: a pack with topics and no map. Add the map. Completeness."
+    - "Fault 2: Track Changes left on with 12 leftover insertions. Accept or reject with intent. File validates."
+    - "Fault 3: a note that says ‘Fusion is our AEM CMS’. Rewrite it."
+    - "Timed: list the files you would send a SME in 60 seconds."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the three faults
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Clinic pack is a book again
+    minutes: 25
+    done: Map + valid topics + honest Fusion line.
+  - id: c
+    block: C
+    title: SME file list in one sentence
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [menu-path-race, output-oracle]
+toolCards: [review, maps-manager]
+badgeId: null
+boss: true
+checks:
+  - { id: lab, prompt: Map present. Review clean enough to ship. Fusion sentence corrected. }
+quiz:
+  - q: "Day 50 unlocks only if this boss is perfect. True?"
+    answer: 1
+    why: Same rule as Week 1. Boss badge stays locked until you pass.
+    options:
+      - "True"
+      - False — Friday lab can unlock the next week; the badge waits
+fieldNotePrompt: "Which fault would have wasted a real reviewer an hour?"
+tomorrowHook: "Hard Oxygen: subject scheme, flags you must not turn on at work, broken maps."
+---
+
+## Clinic
+
+Handoffs fail in boring ways: no map, leftover markup, wrong product names. Repair them. Next week still unlocks if Day 48 lab is done.

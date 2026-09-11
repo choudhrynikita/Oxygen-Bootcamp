@@ -1,0 +1,101 @@
+---
+day: 17
+week: 3
+title: IDs that stay when the title changes
+objective: "Set a stable topic id and one element id, and prove a title edit does not rename the id."
+timeboxMinutes: 90
+skills: [ditaTopics, xmlLiteracy]
+legacyLessonIds: [t3-topics]
+youtube:
+  - id: t2cG3Xe1TXY
+    title: DITA Editing
+    watchFor:
+      - id on the topic element
+      - id on a paragraph or step you might xref
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part1-base/introduction/dita-release-overview.html", label: DITA 1.3 overview (OASIS), dated: 2018-12 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-17
+  title: Stable ids on the inflate task
+  pack: kitepump-dita
+  failWhen: "The topic id is a sentence, or it changed when the title changed, or two topics share an id in the same map."
+  expected: inflate-the-tire id stable across a title edit. gauge-check on one step. id-rules.dita in the map.
+  steps:
+    - "Open topics/inflate-the-tire.dita. In Attributes or Text, set the task id to inflate-the-tire (lowercase, hyphens). Not the title string."
+    - "Put id=\"gauge-check\" on the step that mentions the gauge (or add that step)."
+    - Change the topic title to Inflate a tire with Kitepump. Save. Confirm id did not change.
+    - "Create topics/id-rules.dita (concept) with three rules: lowercase, hyphens, never the sentence title."
+    - Append id-rules.dita to the root or care map. Completeness clean.
+    - "If Oxygen auto-generated an id like unique_123, replace it with a stable one and write why in the field note."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name topic id vs title and what unique_123 forbids in a shared book
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep inflate-the-tire as the id after a title edit
+    minutes: 25
+    done: id stable. gauge-check present. id-rules.dita in the map.
+  - id: c
+    block: C
+    title: "Duplicate an id on purpose, try an xref, then restore"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [attributes, outline]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: inflate-the-tire id stable across a title edit. gauge-check on one step. id-rules.dita in the map. }
+quiz:
+  - q: "Oxygen filled id=\"unique_4\". You ship it. What hurts later?"
+    answer: 1
+    why: Auto ids are valid and opaque. Reviewers and reuse authors need a name they can type.
+    options:
+      - Nothing — unique is unique
+      - xrefs and conrefs that cannot be read by a human in review
+      - The file becomes not well-formed
+  - q: "Two topics in one map both have id=\"intro\". What fails?"
+    answer: 1
+    why: "Each file can be valid. The book cannot point at #intro alone. Prefer filename + id, or keys."
+    options:
+      - Well-formedness of each file
+      - "xrefs that only say #intro — the target is ambiguous in the book"
+      - Maps Manager refuses to open
+  - q: "You rename a title to match a product change. Should the topic id follow?"
+    answer: 1
+    why: Ids are addresses. Change them only when you are ready to fix every pointer.
+    options:
+      - Yes — ids track titles
+      - No — ids are addresses; titles are words
+      - Only if you also rename the file
+fieldNotePrompt: "What id would you refuse to generate automatically, and what would you type instead?"
+tomorrowHook: Tomorrow you xref a topic and an element without typing a web URL.
+---
+
+## IDs are addresses
+
+The topic element needs an **id**. Elements you will link to need an id too. Use lowercase hyphens. Match the filename when you can: `inflate-the-tire.dita` → `id="inflate-the-tire"`.
+
+Do not use the title sentence as an id. Titles change. Ids are addresses.
+
+## Scope
+
+An id must be unique **in the file**. Across a map, two topics named `intro` make `#intro` a coin toss. Prefer keys (next week) or `filename.dita#id`.
+
+## Auto ids
+
+Oxygen may insert `unique_*`. Valid. Opaque. Replace them on anything a teammate will xref.
+
+## Figure
+
+Attributes view: id=`inflate-the-tire` on the task. Caption: *Attributes panel on the topic element, not on the title text.*

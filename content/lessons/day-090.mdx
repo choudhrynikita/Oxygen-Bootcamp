@@ -1,0 +1,73 @@
+---
+day: 90
+week: 12
+title: "Portfolio export, skills inventory, what next"
+objective: "Export progress, list skills with evidence, and write three things this course does not teach."
+timeboxMinutes: 90
+skills: [review]
+legacyLessonIds: []
+youtube:
+  - id: PiCWAIiKx78
+    title: Getting Started with Oxygen XML Editor
+    watchFor:
+      - "How far you have come from first launch — evidence, not a slogan"
+sources:
+  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/overview", label: AEM Guides overview, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction", label: Core Components introduction, dated: 2026-09 }
+lab:
+  id: lab-90
+  title: Export + inventory
+  pack: guides-oxygen-handoff
+  failWhen: "You claim this course made you an AEM developer, or you skip the export."
+  expected: JSON export exists. Inventory has evidence. Three not-taught items.
+  steps:
+    - Settings > Export progress + game state. Keep the JSON.
+    - List each skill with one piece of evidence (day number + artifact).
+    - "Write what is not taught: specializations, DITA-OT customizing, AEM developer path (HTL, models). Listed, not taught."
+    - Write one next course you would actually take.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name three things not taught
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Export exists
+    minutes: 25
+    done: JSON saved. Inventory has day numbers.
+  - id: c
+    block: C
+    title: The skill with the weakest evidence
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [one-line-repair, menu-path-race]
+toolCards: []
+badgeId: portfolio-ready
+boss: false
+checks:
+  - { id: lab, prompt: JSON export exists. Inventory has evidence. Three not-taught items. }
+quiz:
+  - q: "This course taught you to customize DITA-OT plugins. True?"
+    answer: 1
+    why: Day 90 is honest about the edge of the map.
+    options:
+      - "True"
+      - "False — listed as next, not taught"
+fieldNotePrompt: "What will you learn next, in one line?"
+tomorrowHook: There is no Day 91 in this pack. Add Week 13 in docs when you need it.
+---
+
+## Done looks like this
+
+You can open a DITA map in Oxygen, reuse with keys and conrefs, publish WebHelp or PDF, then switch to AEM, create and edit pages, publish, run a workflow, author a Content Fragment, and explain when Guides + Oxygen beats in-AEM web editing.
+
+You are not a DITA-OT customizer. You are not an AEM developer. Those paths are listed, not taught.
+
+Export your progress. Keep the evidence.

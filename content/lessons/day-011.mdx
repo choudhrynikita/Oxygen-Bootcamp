@@ -1,0 +1,103 @@
+---
+day: 11
+week: 2
+title: "Lists and notes — pick the type, do not decorate"
+objective: "Insert a ul, an ol, and three note types (note, caution, warning) and explain why warning is not bold text."
+timeboxMinutes: 90
+skills: [ditaTopics, oxygenUi]
+legacyLessonIds: [t3-insert]
+youtube:
+  - id: bnQwJZD58wY
+    title: WYSIWYG XML Editing
+    watchFor:
+      - Toolbar insert for lists
+      - Note element vs italic paragraph
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-11
+  title: Condition notes that mean something
+  pack: flower-docs
+  failWhen: "A warning is only bold/italic with no <note>, or type is missing, or the file is invalid."
+  expected: "Valid concept. One ul, one ol, three notes with types note/caution/warning. Topicref under Care."
+  steps:
+    - "File > New > DITA Concept. Title: Condition the stems. File: topics/condition-notes.dita."
+    - "Shortdesc: what conditioning means in this studio (one sentence)."
+    - "In conbody: one unordered list of materials (bucket, clean water, shears)."
+    - "One ordered list of three conditioning moves (unwrap, recut, hydrate). This list is orientation, not a full task — keep it to three short items."
+    - "Insert three <note> elements. Set type (Attributes view): note, caution, warning."
+    - "warning: bleach mix is not a drink. caution: dull shears crush stems. note: time box is 30 minutes."
+    - Do not fake warning by bolding a paragraph. Validate. Append under Care.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name note types and what bold-as-warning forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep three typed notes in condition-notes.dita
+    minutes: 25
+    done: "Valid file. ul, ol, note/caution/warning. Map lists it."
+  - id: c
+    block: C
+    title: "Change a warning to a plain paragraph, then put the type back"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [authors-dare, warmup-match]
+toolCards: [author-mode, attributes]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: "Valid concept. One ul, one ol, three notes with types note/caution/warning. Topicref under Care." }
+quiz:
+  - q: "Why does a PDF still shout if you used <note type=\"warning\"> instead of bold?"
+    answer: 1
+    why: Type is data. CSS/PDF turn it into a label. Bold is paint. Filters and reuse cannot see paint.
+    options:
+      - It does not — you must also bold the text
+      - Publishing styles the note type; the element is the contract
+      - Warning notes only work in AEM Sites
+  - q: "An ordered list of fifteen actions lives in a concept. What should you suspect?"
+    answer: 1
+    why: ol is legal. A long how-to still wants a task. Legal is not the same as honest.
+    options:
+      - Nothing — ol is legal in conbody
+      - You probably needed a task with steps
+      - Ordered lists are illegal in DITA
+  - q: "Attributes view is blank when the caret is in a note. First place you look?"
+    answer: 0
+    why: Attributes belong to the element. Click the note tag in Outline if the caret is only in the text.
+    options:
+      - Whether the note element (not the text inside) is selected
+      - The PDF Chemistry install
+      - AEM workflow payload
+fieldNotePrompt: "When would you refuse a caution and escalate it to warning?"
+tomorrowHook: Tomorrow you insert a real table and an image with alt text a screen reader can use.
+---
+
+## Lists
+
+**ul** is a set. **ol** is a sequence that is not a task (short orientation). A procedure with a result is still a **task**. Do not hide a job in a list.
+
+Toolbar insert. If you type hyphens in a paragraph, you do not have a list — you have a paragraph with hyphens.
+
+## Notes
+
+`<note type="note|tip|fastpath|restriction|important|remember|attention|caution|notice|danger|warning">`.
+
+Pick **caution** for damage to the work. Pick **warning** for harm to a person. Do not decorate a paragraph and call it a warning.
+
+## Attributes
+
+**Attributes** view (right rail) holds `type` on the note. Click the element in **Outline** if the panel looks empty.
+
+## Figure
+
+Three notes stacked: note (i), caution (triangle), warning (stop). Caption: *Author CSS paints the type. The type attribute is the source of truth.*

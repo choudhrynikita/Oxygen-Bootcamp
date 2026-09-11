@@ -1,0 +1,105 @@
+---
+day: 2
+week: 1
+title: "Install Oxygen, then Author vs Text vs Grid"
+objective: "Install a trial of Oxygen XML Author, launch it, and edit one sentence in Author, Text, and Grid."
+timeboxMinutes: 90
+skills: [oxygenUi, xmlLiteracy]
+legacyLessonIds: [t1-install, t2-modes]
+youtube:
+  - id: PiCWAIiKx78
+    title: Getting Started with Oxygen XML Editor
+    watchFor:
+      - First launch layout
+      - Where Help > About lives
+  - id: bnQwJZD58wY
+    title: WYSIWYG XML Editing
+    watchFor:
+      - Author mode canvas
+      - How Enter opens content completion
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-author/", label: Oxygen XML Author User Guide, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/videos.html", label: Oxygen official video catalog, dated: 2026-09 }
+lab:
+  id: lab-2
+  title: "Same sentence, three modes"
+  pack: flower-docs
+  failWhen: "You only opened Author and never switched tabs, or you left a raw unescaped ampersand in the sentence."
+  expected: Version recorded. The new sentence exists in Author and Text. File still validates.
+  steps:
+    - Download the standalone kit from oxygenxml.com. Install it. Remember the folder — add-ons live under plugins/.
+    - Launch. Register a trial or license. Open Help > About. Write the version in oxygen-bootcamp-work/day-02-version.txt.
+    - File > Open samples/flower-docs/topics/hello-concept.dita.
+    - "In Author mode, add a sentence under the first paragraph: The desk copy is a sample, not a live catalog."
+    - Switch to Text. Find that sentence in XML. Do not break a tag.
+    - Switch to Grid. Confirm the same paragraph exists as a row. Switch back to Author.
+    - "If you cannot install today, complete the labeled mock in this lesson and record why in the version file. Still write the three-mode observation."
+sessionQuests:
+  - id: a
+    block: A
+    title: "Name Author, Text, and Grid and what each forbids"
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: File still validates after the extra sentence
+    minutes: 25
+    done: hello-concept.dita validates and the sentence is in both Author and Text.
+  - id: c
+    block: C
+    title: Find the ampersand if you used one
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [one-line-repair, menu-path-race]
+toolCards: [author-mode, text-mode]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Version recorded. The new sentence exists in Author and Text. File still validates. }
+quiz:
+  - q: "Which mode is CSS visual editing for daily DITA writing?"
+    answer: 1
+    why: Author mode renders XML with CSS. Grid is repetitive data. Schema Design is for XSD architects.
+    options:
+      - Grid
+      - Author
+      - Schema Design
+  - q: "You type & in Author for “Assets & workflow”. What must the XML contain?"
+    answer: 1
+    why: "A raw ampersand is not well-formed. Author should insert & for you. Check Text mode."
+    options:
+      - "A raw &"
+      - "&"
+      - A comment around the word and
+fieldNotePrompt: "When would you refuse to stay in Author and drop to Text?"
+tomorrowHook: Tomorrow you use File > New and save a topic with lowercase hyphens.
+---
+
+## Install
+
+Download the standalone kit from oxygenxml.com. Install and remember the folder. Add-ons live under `plugins/`. Launch and register a trial or license. Open the bundled sample project if the installer offers it. Turn on automatic validation.
+
+Write the version from **Help > About**. If your menu label differs, write “verify this label in your version” next to it and keep going.
+
+## Three writer modes
+
+- **Text** — surgery. You see tags. You can break well-formedness in one keystroke.
+- **Grid** — repetitive data. Rows and cells. Not a novel.
+- **Author** — CSS visual writing. Enter opens **content completion**, not “new paragraph at all costs.”
+- **Schema Design** — XSD architects. You will not live here this week.
+
+Author is not Word. The content model still wins. If a toolbar action is disabled, the parent element does not allow that child.
+
+## Figure
+
+Bottom tabs on the editor stack: Text · Grid · Author. Caption: *Menu path: the tabs under the editor, not Window > Perspective.*
+
+## Video
+
+WYSIWYG XML Editing shows Author as CSS, not as a fake word processor. Watch for content completion on Enter.

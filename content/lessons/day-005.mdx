@@ -1,0 +1,101 @@
+---
+day: 5
+week: 1
+title: "DITA Maps Manager, first map, append child topic"
+objective: "Open flowers.ditamap in Maps Manager, set it as root map, and append a child topic without breaking completeness."
+timeboxMinutes: 90
+skills: [maps, oxygenUi]
+legacyLessonIds: [t2-dita-ui, t3-maps]
+youtube:
+  - id: ozFZz6YZMCY
+    title: DITA Maps Manager View in Oxygen XML Editor 19
+    watchFor:
+      - Maps Manager tree vs the filesystem
+      - Append Child on a topicref
+      - Root map control on the toolbar
+  - id: LuAVmn1j7f0
+    title: Getting Started with DITA Using Oxygen XML Editor
+    watchFor:
+      - DITA perspective docks Maps Manager
+sources:
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-5
+  title: Append a child to the flower map
+  pack: flower-docs
+  failWhen: "The new topic exists on disk but is not in the map, or completeness reports a missing href."
+  expected: flowers.ditamap lists vase-parts.dita. Completeness is clean.
+  steps:
+    - "Switch to the DITA perspective so Maps Manager docks. If the DITA toolbar vanishes, the file is not recognized as DITA."
+    - Open samples/flower-docs/flowers.ditamap in Maps Manager (not only as a text file).
+    - "Set this map as the root map so keys resolve. Toolbar: the root map control — verify the label in your version."
+    - "Create a short concept topics/vase-parts.dita (title Vase parts, one shortdesc, one paragraph)."
+    - "In Maps Manager, right-click the Care topichead (or the node you want) > Append Child > Reference. Point at vase-parts.dita."
+    - "Run Validate and Check for Completeness from Maps Manager, not only the current file."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Maps Manager and what it forbids (treating the tree as the filesystem)
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the map complete after Append Child
+    minutes: 25
+    done: Completeness is clean and vase-parts.dita is a child topicref.
+  - id: c
+    block: C
+    title: "Break an href on purpose, read completeness, then fix it"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [glossary-lightning, authors-dare]
+toolCards: [maps-manager, outline]
+badgeId: map-is-a-book
+boss: false
+checks:
+  - { id: lab, prompt: flowers.ditamap lists vase-parts.dita. Completeness is clean. }
+quiz:
+  - q: "A map is the table of contents. Where should you run completeness?"
+    answer: 1
+    why: "Valid files can still make a broken book. Completeness reports missing targets, images, and keys on the map."
+    options:
+      - Only on the current topic
+      - From DITA Maps Manager on the map
+      - From Schema Design
+  - q: "Keys look broken in Author. First place you look?"
+    answer: 1
+    why: "Keys resolve from the root map. No root map, no keys."
+    options:
+      - AEM Sites console
+      - Whether the root map is set
+      - The PDF Chemistry install
+fieldNotePrompt: "What is the difference between the Maps Manager tree and the Project view file list?"
+tomorrowHook: Tomorrow you build the flower-docs mini publication as a real lab.
+---
+
+## DITA perspective
+
+Switch to the DITA perspective so **DITA Maps Manager** docks. If the DITA toolbar vanishes, the file is not recognized as DITA.
+
+## The map is the book
+
+A map is the table of contents. Set a **root map** so keys resolve. Run **Validate and Check for Completeness** from this view, not only the current file.
+
+Right-click a node > **Append Child** to add a topicref. **Edit Properties** on a topicref for keys, navtitle, linking.
+
+The tree is publication structure, not the filesystem. Project view is files. Maps Manager is the book.
+
+## flower-docs
+
+Open `samples/flower-docs/flowers.ditamap`. It already has a concept, a task, and a `product` key (Aurora Vase). You will add to this pack, not replace it.
+
+## Figure
+
+Left rail: Maps Manager tree. Caption: *Window docks Maps Manager on the left in the DITA perspective. Verify the menu path in your version.*

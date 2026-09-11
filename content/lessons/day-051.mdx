@@ -1,0 +1,68 @@
+---
+day: 51
+week: 8
+title: "Branch filtering — the idea, not the production switch"
+objective: Explain branch filtering as ‘this subtree uses a different ditaval’ and refuse to turn it on in a live map you do not own.
+timeboxMinutes: 90
+skills: [reuse, maps]
+legacyLessonIds: []
+youtube:
+  - id: CgBbPW3mJzw
+    title: Profiling and Reuse
+    watchFor:
+      - Ditaval at map level vs a mystery flag
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part1-base/introduction/dita-release-overview.html", label: DITA 1.3 overview (OASIS), dated: 2018-12 }
+lab:
+  id: lab-51
+  title: "Draw the subtree, do not throw the switch"
+  pack: kitepump-dita
+  failWhen: You push branch filtering to the only copy of the map.
+  expected: A sketch plus a restraint sentence. Copy remains publishable without the experiment.
+  steps:
+    - "Sketch on paper: Service topichead filtered novice, Product topichead unfiltered."
+    - Write how a ditavalval on a topicref (verify the element name in your DITA version) would differ from a transform-level ditaval.
+    - Do not add ditavalref to the shipping kitepump map unless you copied it first.
+    - "Record: I did not enable a DITA 1.3 feature I cannot support in review."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name branch filtering and what it forbids (surprise subtrees)
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the shipping map boring
+    minutes: 25
+    done: Sketch done. Shipping map untouched or copied.
+  - id: c
+    block: C
+    title: Explain ditavalref vs transform ditaval in one sentence
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [glossary-lightning, authors-dare]
+toolCards: [maps-manager]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: A sketch plus a restraint sentence. Copy remains publishable without the experiment. }
+quiz:
+  - q: "Branch filtering is required to print a PDF. True?"
+    answer: 1
+    why: "A transform-level ditaval is enough for this course. Branch filtering is an idea you must be able to explain, not a switch to flip at work."
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "When would you tell a lead ‘not this release’ about branch filtering?"
+tomorrowHook: "DITA 2.0 experimental flags — what exists, what you will not enable at work."
+---
+
+## Idea only
+
+A subtree can carry its own filter. That is powerful and easy to make undebuggable. This week you can draw it. You do not owe production a ditavalref.

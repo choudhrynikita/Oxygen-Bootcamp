@@ -1,0 +1,68 @@
+---
+day: 54
+week: 8
+title: "Performance with large maps, and Schematron as policy"
+objective: "Write three things that make Author crawl, and read one Schematron assert as compiled house style."
+timeboxMinutes: 90
+skills: [oxygenUi, review]
+legacyLessonIds: [t6-schematron]
+youtube:
+  - id: w4jtBsSIiyw
+    title: Schematron rules and Quick Fixes
+    watchFor:
+      - An assert message as policy
+      - Quick Fix as a structured rewrite
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+lab:
+  id: lab-54
+  title: Slow Author / Schematron policy card
+  pack: kitepump-dita
+  failWhen: You copy a 200-line Schematron from a forum as ‘the rule’.
+  expected: Three slowness causes. One assert in your words.
+  steps:
+    - "Write three slowness causes: huge unsplitting maps, Author CSS with full tags on a 400-topic book, validating the world on every keystroke without a scenario."
+    - "If you have a Schematron, open one rule and write what it forbids. If not, write a pretend assert: shortdesc must not start with ‘This topic’ — and say it is pretend."
+    - Do not paste a vendor Schematron file into git.
+sessionQuests:
+  - id: a
+    block: A
+    title: "Name Schematron as policy, not grammar"
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the policy card original
+    minutes: 25
+    done: Three slowness causes. One assert rewritten.
+  - id: c
+    block: C
+    title: When a Quick Fix is too clever
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [one-line-repair, menu-path-race]
+toolCards: [author-mode]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Three slowness causes. One assert in your words. }
+quiz:
+  - q: "Schematron encodes style-guide rules grammar cannot express. True?"
+    answer: 0
+    why: That is the point. Read one assert as compiled policy.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "What house rule would you encode first if you could only have one assert?"
+tomorrowHook: "Accessibility of the content you write — alt, titles, tables."
+---
+
+## Slow is usually self-inflicted
+
+Do not open a 2,000-topic map in Author with full tags and live validate-everything. Split. Use Maps Manager. Schematron is policy. Quick Fixes only when you can explain them.

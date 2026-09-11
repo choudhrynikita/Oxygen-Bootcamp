@@ -1,0 +1,107 @@
+import { readFileSync, readdirSync, existsSync, writeFileSync, mkdirSync } from "node:fs";
+import { join, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const lessonDir = join(root, "content/lessons");
+const banned = /\b(lorem ipsum|TODO|FIXME|placeholder video|TBD)\b/i;
+const ytId = /^[A-Za-z0-9_-]{11}$/;
+
+const errors = [];
+function fail(msg) {
+  errors.push(msg);
+}
+
+if (!existsSync(lessonDir)) fail("content/lessons missing");
+
+const files = existsSync(lessonDir)
+  ? readdirSync(lessonDir).filter((f) => /^day-\d{3}\.mdx$/.test(f))
+  : [];
+if (files.length !== 90) fail(`Need 90 day files, found ${files.length}`);
+
+const badgeFile = JSON.parse(readFileSync(join(root, "content/game/badges.json"), "utf8"));
+const badgeIds = new Set(badgeFile.map((b) => b.id));
+const cardFile = JSON.parse(readFileSync(join(root, "content/game/tool-cards.json"), "utf8"));
+const cardIds = new Set(cardFile.map((c) => c.id));
+const media = [];
+
+for (let n = 1; n <= 90; n++) {
+  const name = `day-${String(n).padStart(3, "0")}.mdx`;
+  const path = join(lessonDir, name);
+  if (!existsSync(path)) {
+    fail(`Missing ${name}`);
+    continue;
+  }
+  const raw = readFileSync(path, "utf8");
+  if (banned.test(raw)) fail(`${name} contains banned placeholder text`);
+  for (const field of ["objective:", "lab:", "sessionQuests:", "sources:", "dailyBurstPool:"]) {
+    if (!raw.includes(field)) fail(`${name} missing ${field}`);
+  }
+  const yts = [...raw.matchAll(/- id: ([A-Za-z0-9_-]{11})/g)].map((m) => m[1]);
+  for (const id of yts) {
+    if (!ytId.test(id)) fail(`${name} bad youtube id ${id}`);
+    media.push({ day: n, id });
+  }
+  const badge = raw.match(/badgeId: (.+)/);
+  if (badge && badge[1].trim() !== "null") {
+    const id = badge[1].trim().replace(/"/g, "");
+    if (!badgeIds.has(id)) fail(`${name} unknown badge ${id}`);
+  }
+  const tools = raw.match(/toolCards: \[(.*)\]/);
+  if (tools && tools[1].trim()) {
+    for (const t of tools[1].split(",").map((s) => s.trim()).filter(Boolean)) {
+      if (!cardIds.has(t)) fail(`${name} unknown tool card ${t}`);
+    }
+  }
+}
+
+const mapPath = join(root, "content/curriculum/legacy-map.json");
+if (!existsSync(mapPath)) fail("legacy-map.json missing");
+else {
+  const map = JSON.parse(readFileSync(mapPath, "utf8"));
+  const v1 = [
+    "t0-what",
+    "t0-curve",
+    "t1-install",
+    "t1-xml",
+    "t1-newdoc",
+    "t2-ui",
+    "t2-modes",
+    "t2-dita-ui",
+    "t3-topics",
+    "t3-maps",
+    "t3-insert",
+    "t3-markdown",
+    "t4-validate",
+    "t4-complete",
+    "t4-review",
+    "t5-reuse",
+    "t5-keys",
+    "t5-profile",
+    "t5-publish",
+    "t6-xpath",
+    "t6-schematron",
+    "t6-framework",
+    "t6-git",
+    "t6-ai",
+    "t7-aem",
+    "t7-guides",
+    "t7-connector",
+    "t7-capstone",
+  ];
+  for (const id of v1) {
+    if (!map[id]) fail(`legacy-map missing ${id}`);
+  }
+}
+
+mkdirSync(join(root, "content/media-manifest"), { recursive: true });
+writeFileSync(
+  join(root, "content/media-manifest/youtube.json"),
+  JSON.stringify({ generated: new Date().toISOString().slice(0, 10), items: media }, null, 2),
+);
+
+if (errors.length) {
+  console.error(errors.join("\n"));
+  process.exit(1);
+}
+console.log("content:audit ok — 90 days, no placeholders, badges and v1 ids resolve");

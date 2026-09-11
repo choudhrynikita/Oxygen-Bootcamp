@@ -1,0 +1,91 @@
+---
+day: 63
+week: 10
+title: "Title and Text — type on the page, not in a DITA body"
+objective: "Log how an author inserts Title and Text Core Components and what each dialog forbids (HTML soup, fake headings)."
+timeboxMinutes: 90
+skills: [aemSites]
+legacyLessonIds: [t7-aem]
+youtube:
+  - id: idByz7WrhbQ
+    title: AEM from Headful to Headless (Adobe for Business)
+    watchFor:
+      - Headful pages still use components
+      - Content as fields vs as page layout
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction", label: Core Components introduction, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview", label: WKND author tutorial, dated: 2026-09 }
+lab:
+  id: lab-63
+  title: "Field log: Title + Text"
+  pack: aem-author-field-log
+  failWhen: "You paste inflate-the-tire steps into Text, or you skip heading type, or the mock is unlabeled."
+  expected: Log names Title vs Text. Kitepump copy is marketing-short. Mock labeled.
+  steps:
+    - "Read Core Components intro + Title and Text component pages on Experience League (skim, do not paste)."
+    - "Write oxygen-bootcamp-work/week10/field-log-63.txt: Title component is a heading with a type (h1–h6) the template allows. Text is a rich-text body. Do not fake an h1 inside Text if Title exists."
+    - "Kitepump landing: one Title (Kitepump HP-40), one Text (two sentences, no pasted handbook steps)."
+    - Write what the Text dialog lets you bold/list — and that this is not DITA <cmd>.
+    - "Labeled mock: Title over Text. Caption: mock."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Title vs Text and what a fake h1 forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep Kitepump Text to two marketing sentences
+    minutes: 25
+    done: Log written. Mock labeled. No handbook paste.
+  - id: c
+    block: C
+    title: Delete a pasted step if you added one
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [page-editor]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Log names Title vs Text. Kitepump copy is marketing-short. Mock labeled. }
+quiz:
+  - q: "The template already has an h1 in the page Title component. You add another h1 in Text. What goes wrong?"
+    answer: 1
+    why: Responsive layout without fighting the template starts with headings.
+    options:
+      - Nothing — more h1s help SEO always
+      - You fight the template and confuse headings
+      - AEM deletes the page
+  - q: "Text component lists are DITA <ol> with cmd. True?"
+    answer: 1
+    why: HTML-ish rich text in a component. Not a task model.
+    options:
+      - "True"
+      - "False"
+  - q: "Where do the inflate steps still live?"
+    answer: 1
+    why: "Two surfaces, one story. Handbook stays DITA."
+    options:
+      - In the Text component
+      - In inflate-the-tire.dita
+      - In page properties
+fieldNotePrompt: "What heading type did the Title component offer in the docs/video?"
+tomorrowHook: "Tomorrow Image — alt text again, now in an AEM dialog, plus the Assets idea."
+---
+
+## Title and Text
+
+Core Components **Title** and **Text** are the daily desk. Title is a heading. Text is body copy for the **page**.
+
+Do not paste the DITA handbook into Text. Do not fight the template’s heading.
+
+## Figure
+
+Labeled mock: Title (h1) + Text. Caption: *Mock. Page Editor Edit state.*

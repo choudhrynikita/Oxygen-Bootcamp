@@ -1,0 +1,97 @@
+---
+day: 4
+week: 1
+title: "Author mode typing, smart paste, validation that matters"
+objective: "Type in Author, paste a formatted list from a browser, and repair the first real validation error — not a warning you do not understand."
+timeboxMinutes: 90
+skills: [oxygenUi, ditaTopics]
+legacyLessonIds: [t3-insert, t4-validate]
+youtube:
+  - id: bnQwJZD58wY
+    title: WYSIWYG XML Editing
+    watchFor:
+      - Smart paste result in Author
+      - Validation strip at the bottom
+  - id: t2cG3Xe1TXY
+    title: DITA Editing
+    watchFor:
+      - Toolbar insert vs typing tags by hand
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-4
+  title: "Paste, then make it valid"
+  pack: flower-docs
+  failWhen: "You ignored a red error, or you used a Quick Fix you cannot explain."
+  expected: File validates. You wrote the error message you saw and how you repaired it.
+  steps:
+    - Open hello-concept.dita (yours or samples/flower-docs/topics/hello-concept.dita).
+    - Copy a short formatted list from a browser article (three items is enough).
+    - Paste into conbody in Author. Oxygen Smart Paste should turn it into DITA lists.
+    - "Open Text. Inspect the tags. If you got <ul> from HTML leftover, you are not in a DITA framework — fix the file type."
+    - Insert an element the content model rejects (a step inside a concept). Read the validation message. Undo.
+    - "Leave one real, intentional error: a second title element if the model forbids it, or an unclosed tag in Text. Record the exact message. Repair it."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the validation strip and what a red error forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: File still validates after smart paste
+    minutes: 25
+    done: The topic validates. You recorded one error message you caused and repaired.
+  - id: c
+    block: C
+    title: Refuse a Quick Fix you cannot explain
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [output-oracle, glossary-lightning]
+toolCards: [author-mode, outline]
+badgeId: well-formed
+boss: false
+checks:
+  - { id: lab, prompt: File validates. You wrote the error message you saw and how you repaired it. }
+quiz:
+  - q: "A yellow light bulb Quick Fix appears on an error. When do you click it?"
+    answer: 1
+    why: "Quick Fixes are useful and also able to reshape structure. Read the message. If you cannot explain it, undo is cheaper than a mystery."
+    options:
+      - Always — it is official
+      - Only when you can explain what it will change
+      - Never in Author mode
+  - q: "Smart Paste from Word gave you nested lists that do not match your house style. First move?"
+    answer: 1
+    why: Paste is a start. Validate and inspect tags after every large paste.
+    options:
+      - Publish anyway
+      - "Inspect Text mode, then simplify the list in Author"
+      - Switch to Schema Design
+fieldNotePrompt: "What validation message did you actually see today? Quote it."
+tomorrowHook: Tomorrow you open DITA Maps Manager and append a child topic.
+---
+
+## Author typing
+
+Toolbar actions insert legal children. **Enter** is content completion. If you fight the model, the model wins.
+
+**Outline** on the right (or **Window** menu — verify the label) shows the element tree. Click a `p` there to jump.
+
+## Smart paste
+
+Smart Paste converts Word or HTML to DITA. It is not magic. Validate after every large paste. If the list is a mess, simplify it. Do not ship a paste artifact.
+
+## Messages that matter
+
+Well-formed is syntax. Validate is schema. A scenario can run DTD plus Schematron. Red errors block a clean transform. Warnings might be style. Read the first red error. Repair that. Do not “clean up” twenty warnings you do not own yet.
+
+## Figure
+
+Bottom panel: error list. Double-click jumps to the node. Caption: *Validation strip under the editor, not the Transformation view.*

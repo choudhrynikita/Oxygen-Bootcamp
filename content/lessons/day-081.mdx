@@ -1,0 +1,68 @@
+---
+day: 81
+week: 12
+title: Guides lab — one mental cycle
+objective: Write a checkout → Edit in Oxygen (or Guides editor) → check-in → request publish cycle for one topic.
+timeboxMinutes: 90
+skills: [aemGuides, oxygenUi]
+legacyLessonIds: [t7-connector]
+youtube:
+  - id: t2cG3Xe1TXY
+    title: DITA Editing
+    watchFor:
+      - The topic you would actually edit
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/getting-started", label: AEM Guides get started, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/install-conf-guide/editor-configs/editor-cloud-settings/conf-edit-in-oxygen", label: Configure Edit in Oxygen, dated: 2026-09 }
+lab:
+  id: lab-81
+  title: "Cycle on paper, or for real"
+  pack: guides-oxygen-handoff
+  failWhen: The cycle includes Sites Create Page as a step.
+  expected: A four-step cycle with no Sites page in it.
+  steps:
+    - Pick prime-the-pump.dita as the object.
+    - "Write the cycle with actual control names you verified, or ‘verify this label in your version’ plus the official article."
+    - "If you have Guides, do the cycle once. If not, label mock and still write it."
+    - Completeness on the local analog remains clean.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the four steps
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Cycle has no Sites page
+    minutes: 25
+    done: Four steps. Mock labeled if needed.
+  - id: c
+    block: C
+    title: Where the lock lives
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [output-oracle, glossary-lightning]
+toolCards: [guides-web-editor, author-mode]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: A four-step cycle with no Sites page in it. }
+quiz:
+  - q: "The Guides cycle includes Create Page in Sites. True?"
+    answer: 1
+    why: Different family.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "Which step would you forget under time pressure?"
+tomorrowHook: Handoff clinic.
+---
+
+## One object, one cycle
+
+Pick a task. Walk it. Do not wander into Sites.

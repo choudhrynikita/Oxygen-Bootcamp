@@ -1,0 +1,96 @@
+---
+day: 27
+week: 4
+title: When reuse is worse than copy
+objective: "Find one conkeyref that should be a local sentence, replace it, and write the rule you used."
+timeboxMinutes: 90
+skills: [reuse, review]
+legacyLessonIds: [t5-reuse]
+youtube:
+  - id: j7LMcO_euJU
+    title: DITA Support in oXygen Webinar (Part 1)
+    watchFor:
+      - A reuse example that stays small
+      - Any mention of over-reuse or maps getting hard
+sources:
+  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-27
+  title: Retire one bad reuse
+  pack: kitepump-dita
+  failWhen: "You retired nothing, or you deleted a still-shared warning without replacing it, or the rule file is slogans."
+  expected: One fewer library id or one converted local note. A three-bullet rule file. Pack still valid.
+  steps:
+    - "Audit the three library notes. Pick the weakest: too specific, too vague, or only used once with no future home."
+    - Replace that conkeyref with a local <note> in the task. Delete the library id if nothing else uses it.
+    - "Write oxygen-bootcamp-work/week4/reuse-worse.txt with three bullets: (1) what you retired, (2) why copy won, (3) what you would still reuse."
+    - "Do not retire the pinch-hazard if it is still used twice and still true — pick a real weak one, or create a bad reuse (a whole paragraph of marketing) and then retire it."
+    - Completeness and validation clean.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name one case where copy beats conkeyref
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Retire one weak reuse
+    minutes: 25
+    done: Pack valid. Rule file has three bullets. No orphan library id.
+  - id: c
+    block: C
+    title: Defend the reuse you kept in one sentence
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [author-mode, review]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: One fewer library id or one converted local note. A three-bullet rule file. Pack still valid. }
+quiz:
+  - q: "A sentence is reused in one topic and will never appear elsewhere. Keep the conkeyref?"
+    answer: 1
+    why: Single-use reuse is a pointer that helps no one. Copy (or just write it) is cheaper.
+    options:
+      - Yes — reuse is always cleaner
+      - No — you paid indirection for a single use
+      - Yes if the id is stable
+  - q: "Two products need opposite warnings. One library note tries to cover both with vague wording. First repair?"
+    answer: 1
+    why: A shared sentence that is half-false is a liability. Reuse is not a virtue if the fact splits.
+    options:
+      - Make the sentence vaguer
+      - "Two notes, or scopes, or local notes — do not share a sentence that is half-false"
+      - Hide the note with CSS
+  - q: "Marketing wants the warning to sound friendlier in one brochure map. Edit the library?"
+    answer: 1
+    why: Safety text is the worst place to get clever with reuse. Tone changes are often copy.
+    options:
+      - Yes — one source of truth
+      - "No — that is a different sentence; copy or a scoped variant, do not soften a safety note globally"
+      - "Yes, then ditaval it"
+fieldNotePrompt: "Complete: I will reuse _____ and I will copy _____ because _____."
+tomorrowHook: "Tomorrow is the Week 4 boss: keys, conkeyref, and a reuse you can explain."
+---
+
+## Reuse is a tool
+
+Reuse is not a score. A conkeyref that saves twenty identical warnings is craft. A conkeyref that saves one sentence is ceremony. A conkeyref that shares a half-false warning is a defect.
+
+## Rules you can say
+
+- Reuse **small**, **stable**, **true in every place it appears**.
+- Copy when the sentence will drift, or appears once, or is safety-critical and product-specific.
+- Never edit the pulled copy in the child.
+
+## Figure
+
+Two columns: Keep (pinch-hazard ×2) vs Retire (one-off marketing blurb). Caption: *Audit, not a glossary.*

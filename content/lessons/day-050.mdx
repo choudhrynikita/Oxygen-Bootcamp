@@ -1,0 +1,71 @@
+---
+day: 50
+week: 8
+title: "Subject scheme — awareness, not a taxonomy project"
+objective: Read a subject scheme as a controlled list of values and say when you must not invent @audience values.
+timeboxMinutes: 90
+skills: [reuse, ditaTopics]
+legacyLessonIds: []
+youtube:
+  - id: YRi9XPK6CcY
+    title: Advanced Profiling Using Conditional Processing Attribute Groups
+    watchFor:
+      - "Conditional attributes as a system, not decoration"
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part1-base/introduction/dita-release-overview.html", label: DITA 1.3 overview (OASIS), dated: 2018-12 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-50
+  title: Write the allowed audience values
+  pack: kitepump-dita
+  failWhen: You invent a 40-subject taxonomy or you skip the existing expert step.
+  expected: A short allowed-values list plus one rejected invention.
+  steps:
+    - Read the DITA 1.3 overview page on subject scheme (link in Source box). Quote at most two lines.
+    - List the audience values your kitepump map actually uses today (expert is already on a step).
+    - Write one invented value you will not add (e.g. ninja) and why a scheme would reject it.
+    - Do not build a full classification map this week.
+sessionQuests:
+  - id: a
+    block: A
+    title: "Name subject scheme as a constraint, not a mood"
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the value list short
+    minutes: 25
+    done: Existing values listed. One invention rejected.
+  - id: c
+    block: C
+    title: What breaks if every writer invents audience
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [output-oracle, glossary-lightning]
+toolCards: [attributes]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: A short allowed-values list plus one rejected invention. }
+quiz:
+  - q: "A subject scheme exists so writers type any string they like in @audience. True?"
+    answer: 1
+    why: It constrains values. Awareness this week. You are not the taxonomist.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "Who on your team owns allowed profiling values?"
+tomorrowHook: Branch filtering as an idea — not a production switch.
+---
+
+## Awareness
+
+Subject scheme binds profiling values so “expert” means one thing. You will not design the company taxonomy today. You will stop typing random audience strings.
+
+Official DITA 1.3 overview is in the Source box. Do not paste the spec.

@@ -1,0 +1,96 @@
+---
+day: 41
+week: 6
+title: Styles Basket awareness — not a designer course
+objective: Open the publishing template / Styles Basket UI far enough to name two things you may not customize this week.
+timeboxMinutes: 90
+skills: [publish, oxygenUi]
+legacyLessonIds: [t5-publish]
+youtube:
+  - id: zNmXfKWXwO8
+    title: Creating a Publishing Template to Customize WebHelp and PDF using CSS
+    watchFor:
+      - Publishing template editor / CSS customization overview
+      - What they change vs what a writer should not touch yet
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/videos.html", label: Oxygen official video catalog, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
+lab:
+  id: lab-41
+  title: "Look, name, close"
+  pack: kitepump-dita
+  failWhen: "You shipped a personal template as the map default, or you cannot name the control, or you restyled safety notes."
+  expected: "Awareness file with control name, two forbidden touches, and an owner. Default template unchanged."
+  steps:
+    - "From the WebHelp scenario, open the publishing template / CSS / Styles Basket control your version exposes (verify the label — it has moved across versions)."
+    - "Write oxygen-bootcamp-work/week6/styles-awareness.txt: (1) the control name you found, (2) two settings you must not change on a shared desk (example: deleting a CSS file, swapping fonts for a joke), (3) who on a real team would own a template change."
+    - Do not save a custom template as the new default for all maps.
+    - Do not restyle the pinch warning to look friendly.
+    - "Rerun WebHelp only if you changed nothing; if you changed something by accident, revert."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the publishing template control and what a personal fork forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the default template unchanged
+    minutes: 25
+    done: Awareness file written. No saved fork on the map.
+  - id: c
+    block: C
+    title: Revert if you saved by accident
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [glossary-lightning, authors-dare]
+toolCards: [transformation]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: "Awareness file with control name, two forbidden touches, and an owner. Default template unchanged." }
+quiz:
+  - q: "Why is this not a designer course?"
+    answer: 1
+    why: Awareness so you can talk to a lead. No homework to rebrand Kitepump.
+    options:
+      - Writers never publish
+      - A shared template is a product decision; a personal CSS fork splits the draft from the release
+      - WebHelp cannot be styled
+  - q: "You need a larger base font for a review PDF. First move?"
+    answer: 1
+    why: Do not fork by default. Parameters and named review scenarios exist on many desks.
+    options:
+      - Fork the template in place on the shared map
+      - Ask whether a scenario parameter or a review-only template already exists
+      - Paste Word into the map
+  - q: "Styles Basket (or equivalent) lives where?"
+    answer: 1
+    why: It is a publish-side tool. Not a topic attribute.
+    options:
+      - AEM Core Components
+      - Oxygen publishing template / WebHelp customization UI (verify the label)
+      - Maps Manager Edit Properties
+fieldNotePrompt: "Who would own a real template change on your future desk?"
+tomorrowHook: "Tomorrow is the Week 6 boss: scenarios, WebHelp, a PDF note, and a FAILED log you can read."
+---
+
+## Awareness only
+
+The official video shows **publishing templates** and CSS for WebHelp and PDF. Watch so the names are not foreign.
+
+You do not leave this day with a brand. You leave with a note: what the control is called, what you will not touch, who would.
+
+## Safety
+
+Do not restyle warnings to look like body text. Do not set a personal template as the team default.
+
+## Figure
+
+Labeled mock of a template editor: *mock, not your homework.* Caption: *Open, name, close.*

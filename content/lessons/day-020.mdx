@@ -1,0 +1,101 @@
+---
+day: 20
+week: 3
+title: "Name files, then move them without silent breakage"
+objective: "Rename one topic with Master Files or a careful map edit, and prove a desktop-style FINAL(2) name never enters the pack."
+timeboxMinutes: 90
+skills: [maps, oxygenUi]
+legacyLessonIds: [t3-maps]
+youtube:
+  - id: JkPeWea3Y3U
+    title: DITA Map Completeness Check
+    watchFor:
+      - Missing href after a move
+      - How many files the check visited
+sources:
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+lab:
+  id: lab-20
+  title: Rename without lying to the map
+  pack: kitepump-dita
+  failWhen: "The map still points at the old path, or completeness is clean while a leftover xref uses the old name, or the new file lives on the desktop."
+  expected: pump-parts.dita in its new folder. Map and xrefs updated. Completeness clean. Naming topic in the map.
+  steps:
+    - "Write the house rules in topics/file-naming.dita: lowercase, hyphens, no spaces, no FINAL, no (2), topic id matches basename when possible."
+    - Append that concept to the root map.
+    - "Rename parts-list.dita to pump-parts.dita. Update the topicref href. If your Oxygen project has Master Files enabled, use it and write that you did; if not, edit the map and search the pack for the old name."
+    - Run completeness. Then grep (Find in Files) for parts-list. Zero hits except the field note.
+    - Move pump-parts.dita into topics/ref/ (create the folder). Update href. Completeness clean.
+    - "Refuse a filename Pump Parts FINAL(2).dita — if a teammate sent one, save it under the house name instead."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name lowercase-hyphen rules and what an OS-only rename forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep hrefs true after rename and move
+    minutes: 25
+    done: New path in the map. Find in Files clean. Completeness clean.
+  - id: c
+    block: C
+    title: "Rename in the OS only, read completeness, then fix every pointer"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [glossary-lightning, authors-dare]
+toolCards: [maps-manager]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: pump-parts.dita in its new folder. Map and xrefs updated. Completeness clean. Naming topic in the map. }
+quiz:
+  - q: "You renamed a file in the OS file manager. Oxygen still opens the old tab. Completeness is red. First repair?"
+    answer: 1
+    why: The OS does not update DITA pointers. Completeness is telling the truth.
+    options:
+      - Ignore completeness — the tab is open
+      - "Update every href/key that pointed at the old path, then close the stale tab"
+      - Delete the map
+  - q: "Master Files can rewrite references on rename. When is that still not enough?"
+    answer: 1
+    why: Master Files updates project references. It does not search Slack. Find in Files after every rename.
+    options:
+      - Never — Master Files is magic
+      - "When a path lives in a comment, a SME email, or a file not in the project"
+      - When the file is a concept
+  - q: "Why refuse Hello Concept FINAL(2).dita?"
+    answer: 0
+    why: Oxygen can open it. Your map and your teammates cannot live with it.
+    options:
+      - "Spaces, capitals, and FINAL(2) break href discipline and collide on the next email"
+      - DITA forbids digits in filenames
+      - Oxygen cannot open files with parentheses
+fieldNotePrompt: "What leftover string would still say the old filename if you forgot Find in Files?"
+tomorrowHook: "Tomorrow is the Week 3 boss: a kitepump map you can break and repair without silent misses."
+---
+
+## File naming
+
+Lowercase. Hyphens. No spaces. No `FINAL`. No `(2)`. Basename matches topic id when you can. Maps live in `maps/`. Topics live in `topics/`. Images in `images/`.
+
+A teammate email named `Hello Concept FINAL(2).dita` gets saved under the house name. The email name never enters the pack.
+
+## Moving files
+
+Move, then **update hrefs**. Enable **Master Files** on the map if your project allows it so Oxygen rewrites references on rename. Then **Find in Files** for the old name anyway.
+
+## Silent breakage
+
+The failure mode is completeness green on the current file and red on the book — or worse, green because the topicref still points at a copy you forgot. Run completeness on the **root map**.
+
+## Figure
+
+Find in Files hits for `parts-list` going to zero. Caption: *Find in Files after rename. Completeness is necessary, not sufficient, if an xref was typed by hand.*

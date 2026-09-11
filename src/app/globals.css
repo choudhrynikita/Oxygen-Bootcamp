@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f6f1e8;
+  --color-card: #fffdf8;
+  --color-ink: #12202c;
+  --color-muted: #5b6b78;
+  --color-line: #e4d9c8;
+  --color-accent: #c4551b;
+  --color-accent-dark: #8e3510;
+  --color-accent-fg: #fffdf8;
+  --color-navy: #1c3d5a;
+  --color-teal: #1f6f6a;
+  --color-good: #2d6a4f;
+  --color-warn: #9a3412;
+  --color-track: #eadfce;
+  --color-sidebar: #142433;
+  --color-sidebar-fg: #e8eef3;
+  --color-sidebar-muted: #9fb0be;
+  --color-dark-bg: #0f1c28;
+  --color-dark-card: #1b2d3d;
+  --color-dark-ink: #e8eef3;
+  --color-dark-muted: #9fb0be;
+  --color-dark-line: #2b4256;
+  --color-pick: #fff4ea;
+  --color-good-bg: #d8f3e0;
+  --color-warn-bg: #fde2d4;
+  --color-lab: #eaf6f4;
+  --color-step: #fffaf2;
+  --color-nav-active: #1e3548;
+  --color-chrome: #d9e2ea;
+  --color-chrome-bar: #1b2d3d;
+  --color-chrome-menu: #22384a;
+  --color-chrome-rail: #eef3f7;
+  --color-chrome-fg: #dce6ee;
+  --color-chrome-muted: #c5d4e0;
+  --color-chrome-rule: #c5d0da;
+
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-soft: 0 10px 30px rgba(18, 32, 44, 0.08);
+}
+
+@layer base {
+  :root {
+    --bg: var(--color-paper);
+    --fg: var(--color-ink);
+    --surface: var(--color-card);
+    --subtle: var(--color-muted);
+    --border: var(--color-line);
+    --accent: var(--color-accent);
+    --accent-fg: var(--color-accent-fg);
+  }
+
+  [data-theme="dark"] {
+    color-scheme: dark;
+    --bg: var(--color-dark-bg);
+    --fg: var(--color-dark-ink);
+    --surface: var(--color-dark-card);
+    --subtle: var(--color-dark-muted);
+    --border: var(--color-dark-line);
+    --accent: #e07a3a;
+    --accent-fg: #0f1c28;
+    --color-paper: #0f1c28;
+    --color-card: #1b2d3d;
+    --color-ink: #e8eef3;
+    --color-muted: #9fb0be;
+    --color-line: #2b4256;
+    --color-accent: #e07a3a;
+    --color-accent-dark: #f0a070;
+    --color-accent-fg: #0f1c28;
+    --color-navy: #c5d8e8;
+    --color-teal: #6db3ae;
+    --color-track: #243646;
+    --color-lab: #1a3334;
+    --color-step: #243140;
+    --color-pick: #3a2a1c;
+    --color-good-bg: #1a3a2a;
+    --color-warn-bg: #3a2418;
+    --color-sidebar: #0c1822;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  [data-contrast="high"] {
+    --color-muted: #3a4a56;
+    --color-ink: #0a1218;
+    --color-line: #c9b89f;
+  }
+
+  html {
+    font-size: 16px;
+    --font-sans: var(--font-sans-loaded), "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-serif: var(--font-serif-loaded), "Source Serif 4", Georgia, "Times New Roman", serif;
+  }
+
+  html,
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-serif);
+    line-height: 1.65;
+    min-height: 100%;
+  }
+
+  body {
+    text-rendering: optimizeLegibility;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  a {
+    color: var(--color-accent-dark);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .xml-scroll {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,96 @@
+---
+day: 19
+week: 3
+title: Related links — generated beats handmade when the map already knows
+objective: "Let a collection-type or related-links list point at siblings, and delete a handmade list that duplicated the map."
+timeboxMinutes: 90
+skills: [maps, ditaTopics]
+legacyLessonIds: [t3-maps, t3-insert]
+youtube:
+  - id: ozFZz6YZMCY
+    title: DITA Maps Manager View in Oxygen XML Editor 19
+    watchFor:
+      - collection-type on a topicref
+      - How sibling links show after publish — or in Author preview
+sources:
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part1-base/introduction/dita-release-overview.html", label: DITA 1.3 overview (OASIS), dated: 2018-12 }
+lab:
+  id: lab-19
+  title: "Siblings, not a pasted See also"
+  pack: kitepump-dita
+  failWhen: "A bullet list of filenames sits in conbody as fake related links, or collection-type is set but the siblings are not in the same parent."
+  expected: Three topics under Care. collection-type set. No handmade See also of paths. Completeness clean.
+  steps:
+    - "On the Care mapref or the parent topicref, set collection-type=\"family\" (or sequence if you want ordered next/prev). Write which you picked."
+    - "In what-kitepump-is.dita, if you pasted a See also list of filenames, delete it."
+    - Add a related-links section only if you must point outside the family. One linkrel to inflate-the-tire is enough — or skip it if family covers it.
+    - Create topics/parts-list.dita (reference) and add it to Care so the family has three members.
+    - "Run completeness. In the field note, list how a reader should move from concept → task → reference without a handmade list."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name collection-type and what a handmade See also forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep Care as a family of three
+    minutes: 25
+    done: collection-type set. No path list in conbody. Completeness clean.
+  - id: c
+    block: C
+    title: "Paste a fake See also, then delete it"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [output-oracle, glossary-lightning]
+toolCards: [maps-manager, author-mode]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Three topics under Care. collection-type set. No handmade See also of paths. Completeness clean. }
+quiz:
+  - q: "A See also list in the concept hard-codes inflate-the-tire.dita. The file moves. What happens?"
+    answer: 1
+    why: A bullet of filenames is prose. related-links and collection-type are structure.
+    options:
+      - The list updates because it is DITA
+      - "The list lies — it is text, not a pointer the map owns"
+      - Completeness rewrites the list
+  - q: "collection-type=\"family\" on a topicref with one child. What did you get?"
+    answer: 1
+    why: Family links siblings. One child has no siblings. Add members or drop the attribute.
+    options:
+      - A full related-links group
+      - Almost nothing — family needs siblings
+      - A submap
+  - q: "You need a link to a topic in a different chapter. Best first tool?"
+    answer: 1
+    why: collection-type is local family. Cross-chapter wants xref/key or an explicit related link.
+    options:
+      - collection-type on this chapter
+      - "related-links or an xref (soon: a key)"
+      - Paste the other chapter’s map into this topic
+fieldNotePrompt: "When would you refuse collection-type and write an explicit related-links entry instead?"
+tomorrowHook: "Tomorrow you name files so a move is boring — lowercase, hyphens, no FINAL(2)."
+---
+
+## Related links
+
+The map already knows the family. **collection-type** (`family`, `sequence`, `choice`) tells processors to generate sibling or next/prev links.
+
+**related-links** in a topic is for a pointer the map cannot infer. Use it sparingly.
+
+## Handmade lists
+
+A bullet list of filenames is not a link. It will not move when the file moves. Completeness will not see it. Delete it.
+
+## Figure
+
+Care parent with three children and collection-type=family. Caption: *Edit Properties on the parent topicref, not on each child.*

@@ -1,0 +1,99 @@
+---
+day: 31
+week: 5
+title: Conditions you can explain — retire the rest
+objective: Audit every profiling attribute in the kitepump pack and delete or justify each value in a list.
+timeboxMinutes: 90
+skills: [reuse, review]
+legacyLessonIds: [t5-profile]
+youtube:
+  - id: YRi9XPK6CcY
+    title: Advanced Profiling Using Conditional Processing Attribute Groups
+    watchFor:
+      - Grouped conditions — awareness only
+      - A filter that would surprise you
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part1-base/introduction/dita-release-overview.html", label: DITA 1.3 overview (OASIS), dated: 2018-12 }
+  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+lab:
+  id: lab-31
+  title: Condition census
+  pack: kitepump-dita
+  failWhen: "A profiling value remains without a census line, or you deleted the expert step’s content while removing the attribute, or the census is empty because you skipped Find in Files."
+  expected: Census matches the pack. Every remaining condition has a meaning. Files valid.
+  steps:
+    - "Find in Files for audience=, platform=, product=, otherprops=, props=, rev= across kitepump."
+    - "Write oxygen-bootcamp-work/week5/condition-census.txt: each hit, the value, one-line meaning, keep or delete."
+    - Delete any value you cannot explain. Do not replace it with a different joke.
+    - Leave audience=expert and platform=print if they still match Day 29 meanings.
+    - "If you find grouped conditions from a paste, simplify to one attribute unless you can draw the group."
+    - Validate. Completeness clean.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the census and what an undefined value forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep only explained conditions
+    minutes: 25
+    done: Census complete. Leftover values gone. Pack valid.
+  - id: c
+    block: C
+    title: Find one surprise hit in Find in Files
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [authors-dare, warmup-match]
+toolCards: [attributes, outline]
+badgeId: ditaval-explained
+boss: false
+checks:
+  - { id: lab, prompt: Census matches the pack. Every remaining condition has a meaning. Files valid. }
+quiz:
+  - q: "Find in Files shows otherprops=\"legacy\". Nobody can define legacy. First move?"
+    answer: 1
+    why: Undefined conditions are unexploded filters. Define or delete.
+    options:
+      - Keep it for the next team
+      - "Remove it, or define it in the census and a ditaval — no third option"
+      - Set it on every topic for consistency
+  - q: "Advanced profiling attribute groups exist. You are a junior author. When do you start using them this week?"
+    answer: 1
+    why: Awareness from the video. Practice stays on simple audience/platform.
+    options:
+      - Today — more power
+      - "You do not, unless a lead hands you a drawn model"
+      - Only in AEM Guides
+  - q: "product profiling vs a product-name key. Which one changes the string in running text?"
+    answer: 1
+    why: Keys substitute. Profiling includes/excludes/flags. Do not mix the jobs.
+    options:
+      - Profiling — it rewrites text
+      - "The key — profiling shows or hides elements, it does not rename a keyword"
+      - Both do the same job
+fieldNotePrompt: "Which condition did you delete, and what bug would it have caused in a novice PDF?"
+tomorrowHook: Tomorrow you turn on Track Changes and leave a comment a reviewer can accept.
+---
+
+## Census
+
+Find in Files is the audit. A condition that is not in the census does not exist as policy — it exists as a bug.
+
+## Groups
+
+The advanced profiling video shows attribute groups. Watch for the idea. Do not design groups this week.
+
+## Keys vs conditions
+
+**keyref** changes the word. **Profiling** shows or hides the element. Different tools.
+
+## Figure
+
+Find in Files panel with audience= hits. Caption: *Search the pack, not only the open file.*

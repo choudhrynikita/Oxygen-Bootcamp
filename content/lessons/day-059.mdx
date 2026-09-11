@@ -1,0 +1,90 @@
+---
+day: 59
+week: 9
+title: "Edit vs Preview — neither is publish, neither is Oxygen Author"
+objective: Describe Edit (component chrome) vs Preview (visitor-like) and write what still requires the Sites console or a workflow.
+timeboxMinutes: 90
+skills: [aemSites]
+legacyLessonIds: [t7-aem]
+youtube:
+  - id: idByz7WrhbQ
+    title: AEM from Headful to Headless (Adobe for Business)
+    watchFor:
+      - Headful editing context
+      - Preview as a distinct mode if shown
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/basic-handling", label: AEM Basic Handling, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/universal-editor/authoring-methods", label: AEM authoring methods, dated: 2026-09 }
+lab:
+  id: lab-59
+  title: "Field log: Edit vs Preview"
+  pack: aem-author-field-log
+  failWhen: "The log says Preview publishes the page, or Page Editor is called Oxygen Author mode, or you skip the mock label."
+  expected: Edit vs Preview vs Publish as three verbs. Mock labeled. Naming rule present.
+  steps:
+    - "Write oxygen-bootcamp-work/week9/field-log-59.txt: Edit shows component handles. Preview hides them so you can read the page. Preview does not activate the page to publish."
+    - "Add: Oxygen Author mode is CSS for XML. Page Editor Edit mode is component chrome for AEM pages. Do not call Page Editor ‘Author mode’."
+    - List one thing you can only do in Edit (open a component dialog) and one thing Preview is for (read the layout).
+    - "Labeled mock: same page, two states, Edit | Preview. Caption: mock."
+sessionQuests:
+  - id: a
+    block: A
+    title: "Name Edit, Preview, and Publish as three verbs"
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep Page Editor from being called Author mode
+    minutes: 25
+    done: Log distinguishes three verbs. Mock labeled.
+  - id: c
+    block: C
+    title: Find one UI label that collided with Oxygen in your draft and fix it
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [one-line-repair, menu-path-race]
+toolCards: [page-editor]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Edit vs Preview vs Publish as three verbs. Mock labeled. Naming rule present. }
+quiz:
+  - q: "Preview in Page Editor pushes the page live. True?"
+    answer: 1
+    why: Preview is a view. Publish/Quick Publish is activation.
+    options:
+      - "True"
+      - "False"
+  - q: "Why not call Page Editor ‘Author mode’?"
+    answer: 1
+    why: Keep families distinct. Say Edit in Page Editor.
+    options:
+      - Adobe forbids the word author
+      - Author mode already names Oxygen’s CSS XML view — colliding names smash two products
+      - Page Editor has no editing
+  - q: "You need to change the page title in properties. Are you in Edit on the canvas?"
+    answer: 1
+    why: Properties vs components. Both exist.
+    options:
+      - Always — titles are components only
+      - Often Page Properties from console or editor menu — not the same as a Text component
+      - In Maps Manager
+fieldNotePrompt: "Which verb did you mix up before this lesson — Edit, Preview, or Publish?"
+tomorrowHook: Tomorrow components vs pages — a Text component is not a DITA concept.
+---
+
+## Edit vs Preview vs Publish
+
+**Edit** — component chrome, dialogs, insert. **Preview** — read the page without chrome. **Publish** — activate to the publish environment.
+
+Oxygen **Author** is a different product’s mode. Do not borrow the word.
+
+## Figure
+
+Labeled mock: toggle Edit | Preview in Page Editor. Caption: *Mock. Not a transform scenario.*

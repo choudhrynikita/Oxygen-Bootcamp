@@ -1,0 +1,69 @@
+---
+day: 52
+week: 8
+title: DITA 2.0 flags and optional AI — what not to turn on at work
+objective: "List what DITA 2.0 experimental support exists in your Oxygen, and write a hard no for production flags you cannot staff."
+timeboxMinutes: 90
+skills: [xmlLiteracy, review]
+legacyLessonIds: [t6-ai]
+youtube:
+  - id: N5cNgWfQAdQ
+    title: Customizing the DITA editing experience
+    watchFor:
+      - Frameworks are safer than mystery flags
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part1-base/introduction/dita-release-overview.html", label: DITA 1.3 overview (OASIS), dated: 2018-12 }
+  - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
+lab:
+  id: lab-52
+  title: The do-not-enable card
+  pack: kitepump-dita
+  failWhen: You enable an experimental flag on kitepump.ditamap and leave it on.
+  expected: "Version recorded. Do-not-enable sentence. AI output, if any, rewritten by you."
+  steps:
+    - Help > About. Write the Oxygen version.
+    - "Open Options and find DITA / experimental features (verify labels). Screenshot-less: write the names you see, or write ‘not present in this version’."
+    - "Write: I will not enable a DITA 2.0 experimental flag on a customer map."
+    - "If Oxygen AI Positron is licensed, draft a task then rewrite every cmd yourself. If not, write ‘not licensed — human still owns the cmd’."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name experimental flags as not-for-production
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Shipping map has no experimental flag
+    minutes: 25
+    done: Do-not-enable card written. Map unchanged.
+  - id: c
+    block: C
+    title: Who owns an AI-drafted step
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [authors-dare, warmup-match]
+toolCards: [author-mode]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: "Version recorded. Do-not-enable sentence. AI output, if any, rewritten by you." }
+quiz:
+  - q: "Positron (or any AI draft) owns the cmd elements if the XML validates. True?"
+    answer: 1
+    why: Optional. Confirm IT policy. Valid XML can still be the wrong procedure.
+    options:
+      - "True"
+      - False — a human and Schematron still own the result
+fieldNotePrompt: "What would you say if a lead asked you to ‘just turn on DITA 2.0’ this afternoon?"
+tomorrowHook: Troubleshooting invalid maps with the broken pack.
+---
+
+## Hard no
+
+Experimental DITA 2.0 flags exist so vendors can test. They are not a work instruction. AI Positron can draft XML. You still rewrite the cmd. Confirm IT policy.

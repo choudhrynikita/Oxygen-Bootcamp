@@ -1,0 +1,101 @@
+---
+day: 29
+week: 5
+title: Profiling attributes you can say out loud
+objective: "Mark one step audience=expert and one paragraph platform=print, and write what each value means on this desk."
+timeboxMinutes: 90
+skills: [reuse, ditaTopics]
+legacyLessonIds: [t5-profile]
+youtube:
+  - id: CgBbPW3mJzw
+    title: Profiling and Reuse
+    watchFor:
+      - Color of profiled text in Author
+      - Where audience and platform are set
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-29
+  title: "Two conditions, two meanings"
+  pack: kitepump-dita
+  failWhen: "A profiling value has no sentence definition, or you profiled the whole topic when you meant one step, or colors never turned on."
+  expected: "Two attributes, two written meanings. Colors visible. Files valid."
+  steps:
+    - "In inflate-the-tire.dita, set audience=\"expert\" on one step (the gauge nuance)."
+    - "In what-kitepump-is.dita, set platform=\"print\" on one paragraph you would drop from WebHelp."
+    - Turn on profiling colors in Author (Profiling / Conditional Text — verify the label). Expert and print should look different.
+    - "Write oxygen-bootcamp-work/week5/condition-meanings.txt: audience=expert means ____. platform=print means ____. Do not invent a third attribute today."
+    - "Do not set otherprops=\"maybe\" or a joke value."
+    - Validate. Completeness still clean.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name audience and platform and what a joke value forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep two explained conditions
+    minutes: 25
+    done: Two attributes. Meanings file written. Colors on. Files valid.
+  - id: c
+    block: C
+    title: "Profile a whole topic, then undo it down to one step"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [menu-path-race, output-oracle]
+toolCards: [attributes, author-mode]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: "Two attributes, two written meanings. Colors visible. Files valid." }
+quiz:
+  - q: "audience=\"expert\" on a step. Without a DITAVAL, what does a default WebHelp transform usually do?"
+    answer: 1
+    why: "Attributes mark content. DITAVAL includes, excludes, or flags. No DITAVAL, no filter."
+    options:
+      - Hide the step
+      - Include it — profiling attributes are data until a DITAVAL acts
+      - Fail the transform
+  - q: "You set otherprops=\"asdf\" so you can ‘filter later’. Verdict?"
+    answer: 1
+    why: Conditions you can explain. Joke values become production filters by accident.
+    options:
+      - Fine — values are freeform
+      - Refuse — a condition you cannot explain is a landmine
+      - Fine if the color is pretty
+  - q: "The whole task is audience=expert. What did you probably want?"
+    answer: 0
+    why: Hiding an entire procedure with one attribute is how novices lose a chapter. Prefer a dedicated topic or a honest map branch.
+    options:
+      - "A separate task, or one step profiled — not a hidden chapter with no map signal"
+      - platform=print on the map
+      - A conref of the task
+fieldNotePrompt: Say the two condition values in a sentence a new hire would survive.
+tomorrowHook: "Tomorrow a DITAVAL file includes, excludes, or flags those conditions on purpose."
+---
+
+## Profiling is data
+
+v1: *Condition attributes plus a DITAVAL file include, exclude, or flag content. Color profiled text in Author mode.*
+
+Today is the attributes. **audience**, **platform**, **product**, **rev**, **props**, **otherprops**. Pick two. Write what they mean **on this desk**.
+
+## Color
+
+Author can paint profiled text. Turn that on. If you cannot see the mark, you will forget it is there and ship an expert-only step to everyone.
+
+## Explain or do not use
+
+A condition you cannot explain will become a filter someone else trusts. Do not invent `otherprops="maybe"`.
+
+## Figure
+
+One step with a profiling color. Caption: *Attributes view on the step element. Profiling colors on in Author.*

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="kitepump">
+  <title>Kitepump field handbook</title>
+  <topichead navtitle="Product">
+    <topicref href="topics/what-is-kitepump.dita" keys="what"/>
+  </topichead>
+  <topichead navtitle="Service">
+    <topicref href="topics/prime-the-pump.dita" keys="prime"/>
+  </topichead>
+  <keydef keys="product">
+    <topicmeta>
+      <keywords>
+        <keyword>Kitepump KP-2</keyword>
+      </keywords>
+    </topicmeta>
+  </keydef>
+</map>

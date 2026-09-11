@@ -1,0 +1,110 @@
+---
+day: 6
+week: 1
+title: Lab — flower-docs mini publication
+objective: "Ship a tiny valid publication: map, concept, task, product key, completeness clean."
+timeboxMinutes: 110
+skills: [maps, ditaTopics, oxygenUi]
+legacyLessonIds: [t3-maps, t3-topics, t5-keys]
+youtube:
+  - id: ozFZz6YZMCY
+    title: DITA Maps Manager View in Oxygen XML Editor 19
+    watchFor:
+      - Publishing actions live on the map
+      - Edit Properties
+  - id: t2cG3Xe1TXY
+    title: DITA Editing
+    watchFor:
+      - Concept vs task in the same book
+sources:
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/eppo-first-dita-topic.html", label: First DITA topic (Oxygen), dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+lab:
+  id: lab-6
+  title: "Flower studio handbook, desk-ready"
+  pack: flower-docs
+  failWhen: "Completeness reports a missing topic, or the product key shows as unresolved, or studio-hours is a concept pretending to be a lookup table without a table."
+  expected: Map lists at least four topics. Completeness clean. product key resolves to Aurora Vase.
+  steps:
+    - Open samples/flower-docs/flowers.ditamap in Maps Manager. Set it as root map.
+    - Confirm topics/hello-concept.dita and topics/change-water.dita open from the map.
+    - "Confirm the product key resolves: Author should show Aurora Vase where keyref=\"product\" is used."
+    - Add topics/vase-parts.dita if missing from Day 5. Append it under Getting started or Care with a topicref.
+    - "Add a third topic topics/studio-hours.dita (reference: title Studio hours, one simple table with Day / Hours)."
+    - Give studio-hours a keys attribute on its topicref (studio-hours).
+    - "Validate and Check for Completeness. Zero missing hrefs, images, or keys."
+    - "Do not publish WebHelp yet. Valid beats pretty. Record a screenshot-less note: number of topics in the map."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the root map control and what it forbids (orphan keys)
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the map complete
+    minutes: 25
+    done: Completeness is clean. Four topics. product key resolves.
+  - id: c
+    block: C
+    title: "Break a topicref href, read the completeness row, fix it"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [authors-dare, warmup-match]
+toolCards: [maps-manager, attributes]
+badgeId: map-is-a-book
+boss: false
+checks:
+  - { id: lab, prompt: Map lists at least four topics. Completeness clean. product key resolves to Aurora Vase. }
+quiz:
+  - q: "change-water.dita is a task. Why not write those steps as a numbered list inside hello-concept.dita?"
+    answer: 1
+    why: Concept = what it is. Task = how to do it with steps. Do not fake a procedure as a numbered list inside a concept if your guide requires a task.
+    options:
+      - "You can, DITA does not care"
+      - A guide that requires tasks will reject a fake procedure in a concept
+      - Tasks cannot live in the same map as concepts
+  - q: "The product name is defined in the map as a key. Where does the writer put the visible word Aurora Vase in a topic?"
+    answer: 1
+    why: "flower-docs already uses keyword keyref=\"product\". The map’s keydef owns the name."
+    options:
+      - Hard-code it in every title
+      - Use keyref on keyword (or equivalent) so the map owns the name
+      - Put it in an AEM Experience Fragment
+fieldNotePrompt: "How many topics are in your map, and which one is the task?"
+tomorrowHook: "Tomorrow is the Week 1 clinic: errors you will hit again."
+---
+
+## This is the Week 1 publication
+
+You are not designing a brand. You are proving the pack opens in Oxygen.
+
+`samples/flower-docs/` is the lab bench. Keep it. Later weeks add kitepump-dita beside it. Do not replace flower-docs.
+
+Open `flowers.ditamap` in Maps Manager:
+
+- `hello-concept.dita` — concept
+- `change-water.dita` — task with three steps and a product keyref
+- `product` keydef — Aurora Vase
+
+You add vase parts and studio hours. Completeness must be clean.
+
+## Figure
+
+Map tree:
+
+1. Getting started → Hello concept, Vase parts
+2. Care → Change the water
+3. Studio hours (reference)
+
+Caption: *Maps Manager tree after Append Child. Not the filesystem.*
+
+## Do not publish yet
+
+Transformation scenarios are Week 6. Today: valid map, resolving keys, honest topic types.

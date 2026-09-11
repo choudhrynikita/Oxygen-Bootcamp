@@ -1,0 +1,105 @@
+---
+day: 8
+week: 2
+title: A concept is what it is — not how to do it
+objective: "Write a valid concept with title, shortdesc, and two paragraphs, and refuse to put steps in it."
+timeboxMinutes: 90
+skills: [ditaTopics, oxygenUi]
+legacyLessonIds: [t3-topics]
+youtube:
+  - id: t2cG3Xe1TXY
+    title: DITA Editing
+    watchFor:
+      - How the presenter opens a concept vs a task
+      - Where shortdesc sits under title
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/eppo-first-dita-topic.html", label: First DITA topic (Oxygen), dated: 2026-09 }
+  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+lab:
+  id: lab-8
+  title: "Cut-flower concept, no fake procedure"
+  pack: flower-docs
+  failWhen: "The concept contains <steps> or a numbered how-to list, or shortdesc is empty, or the file is not in the map."
+  expected: Valid concept. Distinct shortdesc. Zero steps. Topicref present. Completeness still clean.
+  steps:
+    - "File > New > DITA Concept. Title: What a cut flower is. File: topics/what-a-cut-flower.dita (lowercase hyphens)."
+    - "Shortdesc: one sentence that would make sense in a search hit. Not a repeat of the title."
+    - "In conbody, write two paragraphs: what a cut flower is, and what this handbook will not cover (growing from seed)."
+    - "Do not add a numbered list of actions. If you need actions, that is tomorrow’s task."
+    - Save under samples/flower-docs/topics/ or oxygen-bootcamp-work/week2/topics/. Validate the file.
+    - "In Maps Manager, Append Child the topic under Getting started on flowers.ditamap."
+sessionQuests:
+  - id: a
+    block: A
+    title: "Name concept, title, and shortdesc and what a concept forbids"
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep what-a-cut-flower.dita a definition
+    minutes: 25
+    done: File validates. Shortdesc is not the title. Zero steps. Map lists it.
+  - id: c
+    block: C
+    title: Catch a numbered how-to that wandered into conbody
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [menu-path-race, output-oracle]
+toolCards: [author-mode]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Valid concept. Distinct shortdesc. Zero steps. Topicref present. Completeness still clean. }
+quiz:
+  - q: "A florist wants a page that explains what ‘conditioned stems’ means. Which template?"
+    answer: 1
+    why: A concept holds what a thing is. A task holds steps. Maps list topics; they do not replace them.
+    options:
+      - DITA Task — anything with a term is a procedure
+      - DITA Concept — a term and its meaning
+      - DITA Map — definitions live only in maps
+  - q: "Your shortdesc copies the title word for word. What breaks first?"
+    answer: 1
+    why: Duplicate shortdesc is valid XML. It is useless in search hits and related-link teasers.
+    options:
+      - Well-formedness — duplicate text is invalid XML
+      - Search and link previews — readers see the same line twice
+      - The DITA-OT PDF plugin refuses to run
+  - q: "You need three actions to recut stems. Where do those actions go today?"
+    answer: 1
+    why: Concept = what it is. Task = how. Do not fake a procedure inside a concept.
+    options:
+      - A numbered list inside the concept — faster
+      - A new task topic — the concept stays a definition
+      - The map title
+fieldNotePrompt: "In one sentence, what did you refuse to put in this concept, and where will it live instead?"
+tomorrowHook: "Tomorrow you write a task with context, steps, and a result — not a numbered list in a concept."
+---
+
+## Concept = what it is
+
+A **concept** topic explains a thing. Title names it. **Shortdesc** is one sentence a search hit can show. `conbody` holds paragraphs, lists, and notes — not procedures.
+
+v1 said it in one line: *Concept = what it is. Task = how to do it with steps. Reference = lookup facts.* You will live in those three objects this week.
+
+## Shortdesc
+
+Write a sentence a tired florist could use without opening the topic. Do not paste the title. Do not write “This topic describes…” — say the fact.
+
+## What a concept forbids
+
+Do not fake a procedure as a numbered list inside a concept if your guide requires a task. If a sentence starts with an imperative (“Lift the stems…”), stop. That sentence belongs in a `cmd`.
+
+## Figure
+
+Author canvas: title block, shortdesc in italics under it, then paragraphs. Caption: *DITA Concept template. Verify the New wizard label in your version.*
+
+## flower-docs
+
+Keep `hello-concept.dita`. Add `what-a-cut-flower.dita` beside it. The weekly build is a 12-topic map. Today is topic five if you still have vase-parts and studio-hours from Week 1.

@@ -1,0 +1,16 @@
+LABELED MOCK — not a screenshot of Adobe UI.
+
+AEM Sites console (column view)
+--------------------------------
+Rail: Navigation | Assets | Sites | Tools | ...
+Current: Sites / wknd / language-masters / en
+
+Toolbar: Create  Edit  Properties  Quick Publish  Manage Publication
+
+Create menu (verify labels in your version):
+  Page
+  Site
+  Live Copy
+  ...
+
+This mock is for desk practice when you have no instance.

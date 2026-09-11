@@ -1,0 +1,95 @@
+---
+day: 39
+week: 6
+title: SUCCESS logs still deserve a read
+objective: "Open a SUCCESS transformation log, copy three lines (start, a warning if any, finish), and say what you would ignore."
+timeboxMinutes: 90
+skills: [publish, review]
+legacyLessonIds: [t5-publish]
+youtube:
+  - id: t2cG3Xe1TXY
+    title: DITA Editing
+    watchFor:
+      - Any mention of publishing output or logs if present
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
+lab:
+  id: lab-39
+  title: Three lines from a SUCCESS log
+  pack: kitepump-dita
+  failWhen: "The excerpt has no SUCCESS line, or you ignored a missing-file WARN, or you pasted the entire log."
+  expected: Three-line excerpt. Ignore/never-ignore sentence. Real WARNs fixed or explained.
+  steps:
+    - Rerun WebHelp or PDF so you have a fresh log in Transformation view.
+    - Open the log (the view usually has a log document or console — verify).
+    - "Copy into oxygen-bootcamp-work/week6/success-log-excerpt.txt: (1) the command or scenario name, (2) one WARN or INFO that is not fatal, (3) the BUILD SUCCESSFUL / SUCCESS line."
+    - "If there is a WARN about a missing image or unresolved key, that is not SUCCESS in spirit — go fix it. Do not document around a real miss."
+    - "Write one line: I will ignore ____ (example: deprecated parameter INFO) and I will never ignore ____ (FAILED, missing file, unresolved key)."
+    - Do not paste a 4000-line log into the field note.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Transformation log and what a missing-image WARN forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep a three-line SUCCESS excerpt honest
+    minutes: 25
+    done: Excerpt written. Real WARNs fixed or called out. Ignore rule written.
+  - id: c
+    block: C
+    title: "Open an old out/ folder on purpose, notice it, switch to the new path"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [menu-path-race, output-oracle]
+toolCards: [transformation]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Three-line excerpt. Ignore/never-ignore sentence. Real WARNs fixed or explained. }
+quiz:
+  - q: "BUILD SUCCESSFUL with a WARN: missing image. Ship it?"
+    answer: 1
+    why: The engine can succeed and still omit a figure. Completeness + log together.
+    options:
+      - Yes — SUCCESS means ship
+      - No — treat missing image as a defect; completeness should have caught it too
+      - Yes if the PDF has enough pages
+  - q: "Where is the first place you look when HTML is empty but the log says SUCCESS?"
+    answer: 0
+    why: Wrong folder is the classic ‘success but empty’ bug.
+    options:
+      - "The output folder path you configured (did you open an old out/?)"
+      - AEM workflow
+      - Schema Design
+  - q: "Why not paste the whole log into chat?"
+    answer: 1
+    why: "Junior-author hygiene. Excerpt, then drill."
+    options:
+      - Logs are secret
+      - "The useful lines are start, first error/warn, finish — the rest is noise until you need it"
+      - Oxygen forbids copy
+fieldNotePrompt: "What will you never ignore in a SUCCESS log?"
+tomorrowHook: "Tomorrow is required: you will cause a FAILED transform and read the first real error."
+---
+
+## The log is a document
+
+Transformation view is not a traffic light. Open the log. Read the first unexpected line.
+
+SUCCESS plus a missing image is a defect. SUCCESS plus an INFO about a default parameter is noise.
+
+## Excerpt
+
+Start. First interesting WARN. Finish. That is the note. The rest waits.
+
+## Figure
+
+Transformation view with a log tab. Caption: *Click the log. Do not screenshot only the green bar.*

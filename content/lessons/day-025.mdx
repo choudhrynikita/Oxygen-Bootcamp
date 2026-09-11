@@ -1,0 +1,97 @@
+---
+day: 25
+week: 4
+title: "Key scopes — beginner, one nested map"
+objective: Put the same key name on two submaps with different values and show which value a topic sees.
+timeboxMinutes: 90
+skills: [reuse, maps]
+legacyLessonIds: [t5-keys]
+youtube:
+  - id: qepRkQxhTXQ
+    title: DITA intro (Oxygen webinar)
+    watchFor:
+      - Maps defining keys
+      - Why two products cannot share one flat key space blindly
+sources:
+  - { href: "https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part1-base/introduction/dita-release-overview.html", label: DITA 1.3 overview (OASIS), dated: 2018-12 }
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+lab:
+  id: lab-25
+  title: "Two scopes, one key name"
+  pack: kitepump-dita
+  failWhen: "Both products show the same name because scopes were omitted, or you nested more than one extra keyscope ‘to see what happens’ and cannot explain it."
+  expected: Two scoped submaps. Two different product-name values. Scope note explains what each topic saw.
+  steps:
+    - "Create maps/hp40.ditamap and maps/hp20.ditamap as submaps. Each keydef keys=\"product-name\" to a different string (HP-40 vs HP-20)."
+    - "Set keyscope on each mapref from the root (e.g. keyscope=\"hp40\" and keyscope=\"hp20\"). Verify the attribute name in your DITA version."
+    - Put a small concept in each submap that keyrefs product-name. Open each with the root map set.
+    - "Write oxygen-bootcamp-work/week4/scope-note.txt: which value each topic shows, and what you saw if you opened a topic with the wrong root."
+    - Do not try to merge HP-20 into flower-docs. Do not design a six-level scope tree.
+    - Completeness on the root map.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name keyscope and what a flat collision forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep HP-40 and HP-20 as two values of one key name
+    minutes: 25
+    done: Two scopes. Two strings. Scope note written. Completeness clean.
+  - id: c
+    block: C
+    title: "Remove one keyscope, watch the collision, restore it"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [glossary-lightning, authors-dare]
+toolCards: [maps-manager, author-mode]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Two scoped submaps. Two different product-name values. Scope note explains what each topic saw. }
+quiz:
+  - q: "Without keyscope, two submaps both define product-name. What happens?"
+    answer: 1
+    why: "Flat key space: one name, one binding. Scopes keep the same name in two chapters."
+    options:
+      - DITA merges the strings
+      - One definition wins (usually first in the map); the other is a collision you may not notice in Author
+      - Oxygen deletes the second submap
+  - q: "You are a junior author. A lead asks you to add a third keyscope level this afternoon. First move?"
+    answer: 1
+    why: Beginner scopes are one nested map. A tree you cannot draw will ship the wrong product name.
+    options:
+      - Do it — more scopes are more reuse
+      - "Ask which value a topic is supposed to see, and refuse a tree you cannot draw"
+      - Put the key in AEM page properties
+  - q: "keyref=\"hp40.product-name\" (explicit scope). When do you type that?"
+    answer: 1
+    why: "Inside the scoped map, product-name is enough. Qualified names are for crossing scopes on purpose."
+    options:
+      - Always — implicit scope is illegal
+      - When you are outside the scope and still need that product’s value
+      - Never in DITA 1.3
+fieldNotePrompt: "Draw the two-scope tree in words. If you cannot, you nested too far."
+tomorrowHook: Tomorrow you build a small warning library and reuse it without turning the book into a puzzle.
+---
+
+## Key scopes, beginner
+
+A **keyscope** puts a name on a branch of the map. Inside that branch, `product-name` means this product. A sibling branch may reuse the same key name.
+
+This is not a CCMS design course. One extra level. Draw it. If you cannot draw it, do not ship it.
+
+## Collision
+
+Without scopes, two `keydef keys="product-name"` collide. One wins. Authors see the wrong pump.
+
+## Figure
+
+Root → mapref keyscope=hp40, mapref keyscope=hp20. Caption: *Same key name. Two bindings. Beginner shape only.*

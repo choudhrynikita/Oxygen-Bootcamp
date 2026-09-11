@@ -1,0 +1,69 @@
+---
+day: 78
+week: 12
+title: Edit in Oxygen — configuration as a concept
+objective: Point at the official Configure Edit in Oxygen article and write the PID/key as something an admin owns.
+timeboxMinutes: 90
+skills: [aemGuides, oxygenUi]
+legacyLessonIds: [t7-connector]
+youtube:
+  - id: N5cNgWfQAdQ
+    title: Customizing the DITA editing experience
+    watchFor:
+      - Desktop frameworks must match what the server expects
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/install-conf-guide/editor-configs/editor-cloud-settings/conf-edit-in-oxygen", label: Configure Edit in Oxygen, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/install-conf-guide/on-prem-ig/web-editor-configs/conf-edit-in-oxygen", label: Desktop tools / Edit in Oxygen (Guides), dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/overview", label: AEM Guides overview, dated: 2026-09 }
+lab:
+  id: lab-78
+  title: Admin owns the switch
+  pack: guides-oxygen-handoff
+  failWhen: You paste a made-up OSGi config as if you applied it.
+  expected: Article linked in your note. PID treated as an admin question. Parity sentence written.
+  steps:
+    - Open the Experience League article Configure Edit in Oxygen (Source box).
+    - "Write the idea: admin enables the connector. Authors do not guess a PID on production."
+    - "Copy the PID name from the v1 lesson as a question for an admin: com.adobe.fmdita.xmleditor.config.XmlEditorConfig / xmleditor.editinoxygen=true — then write ‘verify in the article for your cloud vs on-prem’."
+    - "Write: keep DITA version, catalogs, and Schematron identical on server and desktop."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the official article and what authors must not flip
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Parity sentence written
+    minutes: 25
+    done: Admin owns the switch. Catalogs must match.
+  - id: c
+    block: C
+    title: What breaks if Schematron differs desktop vs server
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [authors-dare, warmup-match]
+toolCards: [guides-web-editor, author-mode]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Article linked in your note. PID treated as an admin question. Parity sentence written. }
+quiz:
+  - q: "Authors should enable Edit in Oxygen by guessing OSGi keys on prod. True?"
+    answer: 1
+    why: "Admin work. You need the concept and the official article, not a cowboy config."
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "Who would you ask to enable Edit in Oxygen?"
+tomorrowHook: Maps and topics living on AEM.
+---
+
+## Concept, not a prod change
+
+The connector is real. Your lab is to understand it. Official article in the Source box. Verify labels and keys for cloud vs on-prem.

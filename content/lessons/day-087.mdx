@@ -1,0 +1,67 @@
+---
+day: 87
+week: 12
+title: Capstone delivery
+objective: Zip the DITA work folder (no out/ bloat) and export the AEM field log. List what a lead would open first.
+timeboxMinutes: 75
+skills: [review, publish]
+legacyLessonIds: [t7-capstone]
+youtube:
+  - id: ozFZz6YZMCY
+    title: DITA Maps Manager View in Oxygen XML Editor 19
+    watchFor:
+      - The map as the first file
+sources:
+  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
+lab:
+  id: lab-87
+  title: Delivery list
+  pack: guides-oxygen-handoff
+  failWhen: The zip includes binaries the CONTENT_BUDGET forbids.
+  expected: A short delivery list. First file named.
+  steps:
+    - "List: map path, topic list, ditaval if any, transform log snippet, field-log.md, two-surfaces.md."
+    - Do not zip node_modules or 5 GB of WebHelp skins.
+    - "Write the first file a lead should open (the map, then the comparison sheet)."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the first file
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Delivery list is small
+    minutes: 25
+    done: List written. No bloat.
+  - id: c
+    block: C
+    title: What you left out on purpose
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [glossary-lightning, authors-dare]
+toolCards: [maps-manager]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: A short delivery list. First file named. }
+quiz:
+  - q: "The lead should open the WebHelp skin CSS first. True?"
+    answer: 1
+    why: "The book, then the story across surfaces."
+    options:
+      - "True"
+      - "False — map, then the comparison sheet"
+fieldNotePrompt: "First file a lead opens?"
+tomorrowHook: Oral exam sheet.
+---
+
+## Hand it over
+
+Small zip. Honest list. No skins, no DAM dumps.

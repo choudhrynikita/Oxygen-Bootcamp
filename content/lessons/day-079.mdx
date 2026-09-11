@@ -1,0 +1,68 @@
+---
+day: 79
+week: 12
+title: Maps and topics living on AEM
+objective: "Explain that Guides stores DITA in the DAM, and a desktop path is a working copy after checkout."
+timeboxMinutes: 90
+skills: [aemGuides, maps]
+legacyLessonIds: []
+youtube:
+  - id: ozFZz6YZMCY
+    title: DITA Maps Manager View in Oxygen XML Editor 19
+    watchFor:
+      - "The map is still the book, wherever it lives"
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/overview", label: AEM Guides overview, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/getting-started", label: AEM Guides get started, dated: 2026-09 }
+lab:
+  id: lab-79
+  title: DAM vs working copy
+  pack: guides-oxygen-handoff
+  failWhen: You treat the Git repo as the AEM DAM.
+  expected: DAM vs working copy written. Local completeness still clean.
+  steps:
+    - "Write: in Guides, the map is an asset in the DAM, not a desktop-only file."
+    - "Write: Edit in Oxygen makes a working copy. Check in puts it back."
+    - Open kitepump.ditamap locally as the analog of that working copy. Completeness still applies.
+    - Do not upload the sample into a real DAM as a stunt.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name DAM storage vs working copy
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Local analog still complete
+    minutes: 25
+    done: kitepump completeness clean. No DAM stunt.
+  - id: c
+    block: C
+    title: "Two working copies, one check-in"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [one-line-repair, menu-path-race]
+toolCards: [guides-web-editor, maps-manager]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: DAM vs working copy written. Local completeness still clean. }
+quiz:
+  - q: "Once DITA lives in AEM, completeness in Oxygen no longer matters. True?"
+    answer: 1
+    why: The book can still miss hrefs. Completeness is still a map action.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "Where does your team’s map actually live today?"
+tomorrowHook: Publish outputs from Guides.
+---
+
+## The book still exists
+
+Storage moved. The map is still a map. Completeness did not retire.

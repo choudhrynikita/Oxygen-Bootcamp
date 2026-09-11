@@ -1,0 +1,109 @@
+---
+day: 42
+week: 6
+title: Boss — publish with a log you can read
+objective: "Produce WebHelp SUCCESS, a PDF engine note, and a quoted FAILED-then-fixed error on the clinic copy."
+timeboxMinutes: 110
+skills: [publish, review, maps]
+legacyLessonIds: [t5-publish]
+youtube:
+  - id: zNmXfKWXwO8
+    title: Creating a Publishing Template to Customize WebHelp and PDF using CSS
+    watchFor:
+      - Template vs scenario recap
+  - id: JkPeWea3Y3U
+    title: DITA Map Completeness Check
+    watchFor:
+      - Missing href as a publish failure
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
+lab:
+  id: lab-42
+  title: "Clinic: green, paper, red, green"
+  pack: kitepump-dita
+  failWhen: "No FAILED quote, or output lives in topics/, or you cannot name the PDF engine/message, or WebHelp never succeeded."
+  expected: WebHelp SUCCESS path. PDF engine note. failed-first-error.txt complete. Completeness clean.
+  steps:
+    - "On the week6-failed clinic copy (or a fresh copy), start from a known-good map."
+    - Run WebHelp to SUCCESS. Note the output folder.
+    - Run or record the PDF engine name (or missing-engine message).
+    - Break one href. Run WebHelp to FAILED. Quote the first real error. Repair. SUCCESS.
+    - Confirm output is still outside source. Confirm novice.ditaval behavior in HTML matches your explanation.
+    - "Timed completeness read, then a transform. Write both durations if you have them."
+    - Day 43 still unlocks if Day 41 lab is done. Badge waits on the quoted FAILED line.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name SUCCESS vs FAILED vs a missing-engine message
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Clinic copy publishes after a quoted failure
+    minutes: 25
+    done: WebHelp green. PDF noted. FAILED quoted and repaired.
+  - id: c
+    block: C
+    title: "Read the first [ERROR], not the stack tail"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [authors-dare, warmup-match]
+toolCards: [transformation, maps-manager]
+badgeId: transform-log-reader
+boss: true
+checks:
+  - { id: lab, prompt: WebHelp SUCCESS path. PDF engine note. failed-first-error.txt complete. Completeness clean. }
+quiz:
+  - q: "You failed this boss. Does Day 43 stay locked?"
+    answer: 1
+    why: Boss badge waits. Curriculum week does not hostage you if Friday lab is done.
+    options:
+      - "Yes, forever"
+      - "No, if Friday (Day 41) lab is done the next week can unlock. The boss badge stays locked until you pass."
+      - "No, Daily Burst unlocks the week"
+  - q: "Local WebHelp SUCCESS means the Guides server release is updated. True?"
+    answer: 1
+    why: Different surfaces. Desktop DITA-OT is a draft.
+    options:
+      - "True"
+      - "False"
+  - q: "The first log line is INFO Loading plugins. Is that the quote for transform-log-reader?"
+    answer: 1
+    why: "The badge is log reader, not log pasting."
+    options:
+      - Yes — any line
+      - No — quote the first real error that names the break
+      - Yes if it is red
+  - q: "A missing topicref target: completeness red, transform FAILED. Which do you run first next time?"
+    answer: 1
+    why: Completeness is cheaper and names missing files before DITA-OT boots.
+    options:
+      - Transform only — faster
+      - "Completeness on the map, then transform"
+      - PDF only
+fieldNotePrompt: Paste the FAILED cause and the SUCCESS confirmation as two lines.
+tomorrowHook: "Week 7: Oxygen XML Web Author, what desktop still does better, and handing files to a non-specialist."
+---
+
+## Clinic
+
+This is a week boss: WebHelp + PDF note + **required FAILED log**.
+
+Fail it and **Day 43 still unlocks if Day 41 lab is done**. **transform-log-reader** stays locked until the quote is real.
+
+## Proof
+
+1. HTML you can click.
+2. Engine name or missing-engine line.
+3. FAILED first error + repair + SUCCESS.
+
+## Figure
+
+Two Transformation results: red then green. Caption: *The red one is the badge evidence.*

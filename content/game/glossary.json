@@ -1,0 +1,14 @@
+[
+  { "term": "conref", "def": "Reuse by path plus id of an element", "decoys": ["A DITA map table of contents", "An AEM workflow payload"] },
+  { "term": "keyref", "def": "A name defined in a map, resolved from the root map", "decoys": ["A filesystem shortcut in Project view", "An AEM Sites component"] },
+  { "term": "conkeyref", "def": "Reuse that looks up a key instead of a path", "decoys": ["A comment in Review view", "A Core Component style system"] },
+  { "term": "ditaval", "def": "A filter file that includes, excludes, or flags profiled content", "decoys": ["A PDF engine", "A translation connector"] },
+  { "term": "checkout", "def": "Lock a topic in Guides so others cannot overwrite your edit", "decoys": ["Publish to the AEM dispatcher", "Reset the Oxygen layout"] },
+  { "term": "workflow payload", "def": "The pages or assets an AEM workflow is running on", "decoys": ["The DITA-OT log", "The Oxygen license key"] },
+  { "term": "well-formed", "def": "Tags nest and match; syntax only", "decoys": ["The file matches a schema", "The map completeness is clean"] },
+  { "term": "valid", "def": "The file obeys its schema or DTD", "decoys": ["The file has no comments", "The PDF built"] },
+  { "term": "root map", "def": "The map Oxygen uses to resolve keys", "decoys": ["The AEM home page", "The Git default branch"] },
+  { "term": "topicref", "def": "A pointer from a map to a topic", "decoys": ["A Content Fragment model", "A Schematron assert"] },
+  { "term": "Quick Publish", "def": "AEM action that replicates selected pages without a full workflow", "decoys": ["Oxygen WebHelp scenario", "Guides baseline"] },
+  { "term": "Maps Manager", "def": "Oxygen view for the publication tree, not the filesystem", "decoys": ["AEM Sites console", "Assets rail"] }
+]

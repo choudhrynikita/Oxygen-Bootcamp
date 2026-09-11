@@ -1,0 +1,1094 @@
+[
+  {
+    "day": 1,
+    "week": 1,
+    "title": "Structured authoring sits next to WYSIWYG",
+    "badgeId": null,
+    "legacy": [
+      "t0-what"
+    ],
+    "youtube": [
+      "PiCWAIiKx78"
+    ]
+  },
+  {
+    "day": 2,
+    "week": 1,
+    "title": "Install Oxygen, then Author vs Text vs Grid",
+    "badgeId": null,
+    "legacy": [
+      "t1-install",
+      "t2-modes"
+    ],
+    "youtube": [
+      "PiCWAIiKx78",
+      "bnQwJZD58wY"
+    ]
+  },
+  {
+    "day": 3,
+    "week": 1,
+    "title": "New Document wizard, first DITA topic, save discipline",
+    "badgeId": "first-valid-task",
+    "legacy": [
+      "t1-newdoc",
+      "t1-xml"
+    ],
+    "youtube": [
+      "LuAVmn1j7f0",
+      "Vglmv_lDg7Y"
+    ]
+  },
+  {
+    "day": 4,
+    "week": 1,
+    "title": "Author mode typing, smart paste, validation that matters",
+    "badgeId": "well-formed",
+    "legacy": [
+      "t3-insert",
+      "t4-validate"
+    ],
+    "youtube": [
+      "bnQwJZD58wY",
+      "t2cG3Xe1TXY"
+    ]
+  },
+  {
+    "day": 5,
+    "week": 1,
+    "title": "DITA Maps Manager, first map, append child topic",
+    "badgeId": "map-is-a-book",
+    "legacy": [
+      "t2-dita-ui",
+      "t3-maps"
+    ],
+    "youtube": [
+      "ozFZz6YZMCY",
+      "LuAVmn1j7f0"
+    ]
+  },
+  {
+    "day": 6,
+    "week": 1,
+    "title": "Lab — flower-docs mini publication",
+    "badgeId": "map-is-a-book",
+    "legacy": [
+      "t3-maps",
+      "t3-topics",
+      "t5-keys"
+    ],
+    "youtube": [
+      "ozFZz6YZMCY",
+      "t2cG3Xe1TXY"
+    ]
+  },
+  {
+    "day": 7,
+    "week": 1,
+    "title": "Review clinic — errors you will hit this week",
+    "badgeId": "completeness-clean",
+    "legacy": [
+      "t4-complete",
+      "t4-validate"
+    ],
+    "youtube": [
+      "JkPeWea3Y3U",
+      "Vglmv_lDg7Y"
+    ]
+  },
+  {
+    "day": 8,
+    "week": 2,
+    "title": "A concept is what it is — not how to do it",
+    "badgeId": null,
+    "legacy": [
+      "t3-topics"
+    ],
+    "youtube": [
+      "t2cG3Xe1TXY"
+    ]
+  },
+  {
+    "day": 9,
+    "week": 2,
+    "title": "A task is steps with a result — not a story",
+    "badgeId": "first-valid-task",
+    "legacy": [
+      "t3-topics"
+    ],
+    "youtube": [
+      "t2cG3Xe1TXY",
+      "LuAVmn1j7f0"
+    ]
+  },
+  {
+    "day": 10,
+    "week": 2,
+    "title": "A reference is lookup — not a lecture",
+    "badgeId": null,
+    "legacy": [
+      "t3-topics"
+    ],
+    "youtube": [
+      "qepRkQxhTXQ"
+    ]
+  },
+  {
+    "day": 11,
+    "week": 2,
+    "title": "Lists and notes — pick the type, do not decorate",
+    "badgeId": null,
+    "legacy": [
+      "t3-insert"
+    ],
+    "youtube": [
+      "bnQwJZD58wY"
+    ]
+  },
+  {
+    "day": 12,
+    "week": 2,
+    "title": "Tables you can scan, images with alt text",
+    "badgeId": null,
+    "legacy": [
+      "t3-insert"
+    ],
+    "youtube": [
+      "t2cG3Xe1TXY"
+    ]
+  },
+  {
+    "day": 13,
+    "week": 2,
+    "title": "Preview vs source — and Markdown that stays in its lane",
+    "badgeId": null,
+    "legacy": [
+      "t3-markdown"
+    ],
+    "youtube": [
+      "fdAsWfU66bI"
+    ]
+  },
+  {
+    "day": 14,
+    "week": 2,
+    "title": "Boss — twelve topics, three types, one book",
+    "badgeId": "completeness-clean",
+    "legacy": [
+      "t3-topics",
+      "t3-maps"
+    ],
+    "youtube": [
+      "ozFZz6YZMCY",
+      "JkPeWea3Y3U"
+    ]
+  },
+  {
+    "day": 15,
+    "week": 3,
+    "title": "topicref is a contract — href, keys, navtitle, linking",
+    "badgeId": null,
+    "legacy": [
+      "t3-maps"
+    ],
+    "youtube": [
+      "ozFZz6YZMCY"
+    ]
+  },
+  {
+    "day": 16,
+    "week": 3,
+    "title": "Submaps — a chapter is a map, not a folder",
+    "badgeId": "map-is-a-book",
+    "legacy": [
+      "t3-maps"
+    ],
+    "youtube": [
+      "ozFZz6YZMCY",
+      "LuAVmn1j7f0"
+    ]
+  },
+  {
+    "day": 17,
+    "week": 3,
+    "title": "IDs that stay when the title changes",
+    "badgeId": null,
+    "legacy": [
+      "t3-topics"
+    ],
+    "youtube": [
+      "t2cG3Xe1TXY"
+    ]
+  },
+  {
+    "day": 18,
+    "week": 3,
+    "title": "xref — point at a topic, not at a URL you invented",
+    "badgeId": null,
+    "legacy": [
+      "t3-insert"
+    ],
+    "youtube": [
+      "t2cG3Xe1TXY"
+    ]
+  },
+  {
+    "day": 19,
+    "week": 3,
+    "title": "Related links — generated beats handmade when the map already knows",
+    "badgeId": null,
+    "legacy": [
+      "t3-maps",
+      "t3-insert"
+    ],
+    "youtube": [
+      "ozFZz6YZMCY"
+    ]
+  },
+  {
+    "day": 20,
+    "week": 3,
+    "title": "Name files, then move them without silent breakage",
+    "badgeId": null,
+    "legacy": [
+      "t3-maps"
+    ],
+    "youtube": [
+      "JkPeWea3Y3U"
+    ]
+  },
+  {
+    "day": 21,
+    "week": 3,
+    "title": "Boss — map surgery without silent breakage",
+    "badgeId": "completeness-clean",
+    "legacy": [
+      "t4-complete",
+      "t3-maps"
+    ],
+    "youtube": [
+      "JkPeWea3Y3U",
+      "ozFZz6YZMCY"
+    ]
+  },
+  {
+    "day": 22,
+    "week": 4,
+    "title": "Keys are names — the map owns the path",
+    "badgeId": "key-not-path",
+    "legacy": [
+      "t5-keys"
+    ],
+    "youtube": [
+      "LuAVmn1j7f0"
+    ]
+  },
+  {
+    "day": 23,
+    "week": 4,
+    "title": "conref is path plus id — practice, not a definition slide",
+    "badgeId": "first-conref",
+    "legacy": [
+      "t5-reuse"
+    ],
+    "youtube": [
+      "K_fjZn285Wo"
+    ]
+  },
+  {
+    "day": 24,
+    "week": 4,
+    "title": "conkeyref — the map owns the library too",
+    "badgeId": "key-not-path",
+    "legacy": [
+      "t5-reuse",
+      "t5-keys"
+    ],
+    "youtube": [
+      "K_fjZn285Wo"
+    ]
+  },
+  {
+    "day": 25,
+    "week": 4,
+    "title": "Key scopes — beginner, one nested map",
+    "badgeId": null,
+    "legacy": [
+      "t5-keys"
+    ],
+    "youtube": [
+      "qepRkQxhTXQ"
+    ]
+  },
+  {
+    "day": 26,
+    "week": 4,
+    "title": "A warning library you can defend",
+    "badgeId": "first-conref",
+    "legacy": [
+      "t5-reuse"
+    ],
+    "youtube": [
+      "K_fjZn285Wo"
+    ]
+  },
+  {
+    "day": 27,
+    "week": 4,
+    "title": "When reuse is worse than copy",
+    "badgeId": null,
+    "legacy": [
+      "t5-reuse"
+    ],
+    "youtube": [
+      "j7LMcO_euJU"
+    ]
+  },
+  {
+    "day": 28,
+    "week": 4,
+    "title": "Boss — reuse you can explain",
+    "badgeId": "key-not-path",
+    "legacy": [
+      "t5-reuse",
+      "t5-keys"
+    ],
+    "youtube": [
+      "K_fjZn285Wo",
+      "JkPeWea3Y3U"
+    ]
+  },
+  {
+    "day": 29,
+    "week": 5,
+    "title": "Profiling attributes you can say out loud",
+    "badgeId": null,
+    "legacy": [
+      "t5-profile"
+    ],
+    "youtube": [
+      "CgBbPW3mJzw"
+    ]
+  },
+  {
+    "day": 30,
+    "week": 5,
+    "title": "DITAVAL — include, exclude, flag",
+    "badgeId": "ditaval-explained",
+    "legacy": [
+      "t5-profile"
+    ],
+    "youtube": [
+      "CgBbPW3mJzw",
+      "YRi9XPK6CcY"
+    ]
+  },
+  {
+    "day": 31,
+    "week": 5,
+    "title": "Conditions you can explain — retire the rest",
+    "badgeId": "ditaval-explained",
+    "legacy": [
+      "t5-profile"
+    ],
+    "youtube": [
+      "YRi9XPK6CcY"
+    ]
+  },
+  {
+    "day": 32,
+    "week": 5,
+    "title": "Change tracking and comments — one review channel",
+    "badgeId": null,
+    "legacy": [
+      "t4-review"
+    ],
+    "youtube": [
+      "bnQwJZD58wY"
+    ]
+  },
+  {
+    "day": 33,
+    "week": 5,
+    "title": "Author CSS you may touch — frameworks, Hints, content completion",
+    "badgeId": null,
+    "legacy": [
+      "t6-framework"
+    ],
+    "youtube": [
+      "N5cNgWfQAdQ"
+    ]
+  },
+  {
+    "day": 34,
+    "week": 5,
+    "title": "Find/Replace with care — scope, then a dry run",
+    "badgeId": null,
+    "legacy": [
+      "t4-validate"
+    ],
+    "youtube": [
+      "Vglmv_lDg7Y"
+    ]
+  },
+  {
+    "day": 35,
+    "week": 5,
+    "title": "Boss — Author tools you can defend",
+    "badgeId": "ditaval-explained",
+    "legacy": [
+      "t5-profile",
+      "t4-review"
+    ],
+    "youtube": [
+      "CgBbPW3mJzw",
+      "N5cNgWfQAdQ"
+    ]
+  },
+  {
+    "day": 36,
+    "week": 6,
+    "title": "Transformation scenarios — the map is what you publish",
+    "badgeId": null,
+    "legacy": [
+      "t5-publish"
+    ],
+    "youtube": [
+      "zNmXfKWXwO8"
+    ]
+  },
+  {
+    "day": 37,
+    "week": 6,
+    "title": "WebHelp Responsive — a draft you can click",
+    "badgeId": null,
+    "legacy": [
+      "t5-publish"
+    ],
+    "youtube": [
+      "zNmXfKWXwO8"
+    ]
+  },
+  {
+    "day": 38,
+    "week": 6,
+    "title": "PDF draft — Publishing Engine or Chemistry, not a brand course",
+    "badgeId": null,
+    "legacy": [
+      "t5-publish"
+    ],
+    "youtube": [
+      "zNmXfKWXwO8"
+    ]
+  },
+  {
+    "day": 39,
+    "week": 6,
+    "title": "SUCCESS logs still deserve a read",
+    "badgeId": null,
+    "legacy": [
+      "t5-publish"
+    ],
+    "youtube": [
+      "t2cG3Xe1TXY"
+    ]
+  },
+  {
+    "day": 40,
+    "week": 6,
+    "title": "FAILED transform — read the first real error",
+    "badgeId": "transform-log-reader",
+    "legacy": [
+      "t5-publish",
+      "t4-complete"
+    ],
+    "youtube": [
+      "JkPeWea3Y3U",
+      "zNmXfKWXwO8"
+    ]
+  },
+  {
+    "day": 41,
+    "week": 6,
+    "title": "Styles Basket awareness — not a designer course",
+    "badgeId": null,
+    "legacy": [
+      "t5-publish"
+    ],
+    "youtube": [
+      "zNmXfKWXwO8"
+    ]
+  },
+  {
+    "day": 42,
+    "week": 6,
+    "title": "Boss — publish with a log you can read",
+    "badgeId": "transform-log-reader",
+    "legacy": [
+      "t5-publish"
+    ],
+    "youtube": [
+      "zNmXfKWXwO8",
+      "JkPeWea3Y3U"
+    ]
+  },
+  {
+    "day": 43,
+    "week": 7,
+    "title": "Oxygen XML Web Author — the browser cousin",
+    "badgeId": "web-author-tour",
+    "legacy": [],
+    "youtube": [
+      "PiCWAIiKx78"
+    ]
+  },
+  {
+    "day": 44,
+    "week": 7,
+    "title": "What desktop still does better",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "ozFZz6YZMCY"
+    ]
+  },
+  {
+    "day": 45,
+    "week": 7,
+    "title": "Review workflow in Oxygen",
+    "badgeId": null,
+    "legacy": [
+      "t4-review"
+    ],
+    "youtube": [
+      "bnQwJZD58wY"
+    ]
+  },
+  {
+    "day": 46,
+    "week": 7,
+    "title": "Content Fusion as collaboration context",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "Vglmv_lDg7Y"
+    ]
+  },
+  {
+    "day": 47,
+    "week": 7,
+    "title": "Hand files to a reviewer who is not a specialist",
+    "badgeId": null,
+    "legacy": [
+      "t6-git"
+    ],
+    "youtube": [
+      "LuAVmn1j7f0"
+    ]
+  },
+  {
+    "day": 48,
+    "week": 7,
+    "title": "Team flow — CCMS or Git, pick one",
+    "badgeId": null,
+    "legacy": [
+      "t6-git"
+    ],
+    "youtube": [
+      "JkPeWea3Y3U"
+    ]
+  },
+  {
+    "day": 49,
+    "week": 7,
+    "title": "Collaboration clinic",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "ozFZz6YZMCY",
+      "JkPeWea3Y3U"
+    ]
+  },
+  {
+    "day": 50,
+    "week": 8,
+    "title": "Subject scheme — awareness, not a taxonomy project",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "YRi9XPK6CcY"
+    ]
+  },
+  {
+    "day": 51,
+    "week": 8,
+    "title": "Branch filtering — the idea, not the production switch",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "CgBbPW3mJzw"
+    ]
+  },
+  {
+    "day": 52,
+    "week": 8,
+    "title": "DITA 2.0 flags and optional AI — what not to turn on at work",
+    "badgeId": null,
+    "legacy": [
+      "t6-ai"
+    ],
+    "youtube": [
+      "N5cNgWfQAdQ"
+    ]
+  },
+  {
+    "day": 53,
+    "week": 8,
+    "title": "Troubleshooting invalid maps",
+    "badgeId": "completeness-clean",
+    "legacy": [
+      "t6-xpath",
+      "t4-complete"
+    ],
+    "youtube": [
+      "JkPeWea3Y3U"
+    ]
+  },
+  {
+    "day": 54,
+    "week": 8,
+    "title": "Performance with large maps, and Schematron as policy",
+    "badgeId": null,
+    "legacy": [
+      "t6-schematron"
+    ],
+    "youtube": [
+      "w4jtBsSIiyw"
+    ]
+  },
+  {
+    "day": 55,
+    "week": 8,
+    "title": "Accessibility of the DITA you write",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "bnQwJZD58wY",
+      "w4jtBsSIiyw"
+    ]
+  },
+  {
+    "day": 56,
+    "week": 9,
+    "title": "AEM author vs publish — you are not a developer this week",
+    "badgeId": null,
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "idByz7WrhbQ"
+    ]
+  },
+  {
+    "day": 57,
+    "week": 9,
+    "title": "Sites console — the tree is not a DITA map",
+    "badgeId": null,
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "7-Lcw5PejhI"
+    ]
+  },
+  {
+    "day": 58,
+    "week": 9,
+    "title": "Create page and page properties",
+    "badgeId": null,
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "7-Lcw5PejhI"
+    ]
+  },
+  {
+    "day": 59,
+    "week": 9,
+    "title": "Edit vs Preview — neither is publish, neither is Oxygen Author",
+    "badgeId": null,
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "idByz7WrhbQ"
+    ]
+  },
+  {
+    "day": 60,
+    "week": 9,
+    "title": "Components vs pages — do not smash DITA types into Core Components",
+    "badgeId": null,
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "7-Lcw5PejhI"
+    ]
+  },
+  {
+    "day": 61,
+    "week": 9,
+    "title": "Quick Publish, Unpublish, Basic Handling",
+    "badgeId": "aem-quick-publish",
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "7-Lcw5PejhI",
+      "VcMI0zWIKdg"
+    ]
+  },
+  {
+    "day": 62,
+    "week": 9,
+    "title": "Boss — AEM author literacy without smashing Oxygen",
+    "badgeId": "aem-quick-publish",
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "7-Lcw5PejhI",
+      "idByz7WrhbQ"
+    ]
+  },
+  {
+    "day": 63,
+    "week": 10,
+    "title": "Title and Text — type on the page, not in a DITA body",
+    "badgeId": null,
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "idByz7WrhbQ"
+    ]
+  },
+  {
+    "day": 64,
+    "week": 10,
+    "title": "Image component — alt in the dialog, asset from DAM",
+    "badgeId": null,
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "VcMI0zWIKdg"
+    ]
+  },
+  {
+    "day": 65,
+    "week": 10,
+    "title": "Teaser — a card with a destination",
+    "badgeId": null,
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "7-Lcw5PejhI"
+    ]
+  },
+  {
+    "day": 66,
+    "week": 10,
+    "title": "Container and responsive layout — do not fight the template",
+    "badgeId": null,
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "VcMI0zWIKdg"
+    ]
+  },
+  {
+    "day": 67,
+    "week": 10,
+    "title": "Experience Fragment awareness — reusable layout, not conref",
+    "badgeId": null,
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "idByz7WrhbQ"
+    ]
+  },
+  {
+    "day": 68,
+    "week": 10,
+    "title": "Annotations, versions, restore — author-level history",
+    "badgeId": null,
+    "legacy": [
+      "t7-aem",
+      "t4-review"
+    ],
+    "youtube": [
+      "VcMI0zWIKdg"
+    ]
+  },
+  {
+    "day": 69,
+    "week": 10,
+    "title": "Boss — Core Components desk and a workflow you can name",
+    "badgeId": "core-components-desk",
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "idByz7WrhbQ",
+      "VcMI0zWIKdg"
+    ]
+  },
+  {
+    "day": 70,
+    "week": 11,
+    "title": "Three AEM authoring methods — names first",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "VcMI0zWIKdg"
+    ]
+  },
+  {
+    "day": 71,
+    "week": 11,
+    "title": "When each authoring method is used",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "VcMI0zWIKdg",
+      "idByz7WrhbQ"
+    ]
+  },
+  {
+    "day": 72,
+    "week": 11,
+    "title": "Content Fragments for headless authors",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "idByz7WrhbQ"
+    ]
+  },
+  {
+    "day": 73,
+    "week": 11,
+    "title": "Assets — upload, move, basic metadata",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "7-Lcw5PejhI"
+    ]
+  },
+  {
+    "day": 74,
+    "week": 11,
+    "title": "Language copies — awareness",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "VcMI0zWIKdg"
+    ]
+  },
+  {
+    "day": 75,
+    "week": 11,
+    "title": "Authoring methods clinic",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "VcMI0zWIKdg",
+      "idByz7WrhbQ"
+    ]
+  },
+  {
+    "day": 76,
+    "week": 12,
+    "title": "Guides web editor vs desktop Oxygen",
+    "badgeId": null,
+    "legacy": [
+      "t7-guides"
+    ],
+    "youtube": [
+      "LuAVmn1j7f0"
+    ]
+  },
+  {
+    "day": 77,
+    "week": 12,
+    "title": "Checkout / check-in mental model",
+    "badgeId": "checkout-checkin",
+    "legacy": [
+      "t7-connector"
+    ],
+    "youtube": [
+      "JkPeWea3Y3U"
+    ]
+  },
+  {
+    "day": 78,
+    "week": 12,
+    "title": "Edit in Oxygen — configuration as a concept",
+    "badgeId": null,
+    "legacy": [
+      "t7-connector"
+    ],
+    "youtube": [
+      "N5cNgWfQAdQ"
+    ]
+  },
+  {
+    "day": 79,
+    "week": 12,
+    "title": "Maps and topics living on AEM",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "ozFZz6YZMCY"
+    ]
+  },
+  {
+    "day": 80,
+    "week": 12,
+    "title": "Publish outputs from Guides",
+    "badgeId": null,
+    "legacy": [
+      "t5-publish"
+    ],
+    "youtube": [
+      "zNmXfKWXwO8"
+    ]
+  },
+  {
+    "day": 81,
+    "week": 12,
+    "title": "Guides lab — one mental cycle",
+    "badgeId": null,
+    "legacy": [
+      "t7-connector"
+    ],
+    "youtube": [
+      "t2cG3Xe1TXY"
+    ]
+  },
+  {
+    "day": 82,
+    "week": 12,
+    "title": "Handoff clinic",
+    "badgeId": "guides-handoff",
+    "legacy": [
+      "t7-guides"
+    ],
+    "youtube": [
+      "idByz7WrhbQ",
+      "ozFZz6YZMCY"
+    ]
+  },
+  {
+    "day": 83,
+    "week": 12,
+    "title": "Capstone — DITA publication in Oxygen",
+    "badgeId": null,
+    "legacy": [
+      "t7-capstone"
+    ],
+    "youtube": [
+      "zNmXfKWXwO8",
+      "JkPeWea3Y3U"
+    ]
+  },
+  {
+    "day": 84,
+    "week": 12,
+    "title": "Capstone — AEM page family",
+    "badgeId": null,
+    "legacy": [
+      "t7-aem"
+    ],
+    "youtube": [
+      "7-Lcw5PejhI",
+      "idByz7WrhbQ"
+    ]
+  },
+  {
+    "day": 85,
+    "week": 12,
+    "title": "Two surfaces, one story",
+    "badgeId": "two-surfaces-one-story",
+    "legacy": [
+      "t7-capstone"
+    ],
+    "youtube": [
+      "idByz7WrhbQ",
+      "t2cG3Xe1TXY"
+    ]
+  },
+  {
+    "day": 86,
+    "week": 12,
+    "title": "Capstone review",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "JkPeWea3Y3U"
+    ]
+  },
+  {
+    "day": 87,
+    "week": 12,
+    "title": "Capstone delivery",
+    "badgeId": null,
+    "legacy": [
+      "t7-capstone"
+    ],
+    "youtube": [
+      "ozFZz6YZMCY"
+    ]
+  },
+  {
+    "day": 88,
+    "week": 12,
+    "title": "Oral exam sheet",
+    "badgeId": null,
+    "legacy": [],
+    "youtube": [
+      "PiCWAIiKx78",
+      "7-Lcw5PejhI"
+    ]
+  },
+  {
+    "day": 89,
+    "week": 12,
+    "title": "Written scenario exam and error clinic",
+    "badgeId": null,
+    "legacy": [
+      "t4-complete",
+      "t5-publish",
+      "t7-aem"
+    ],
+    "youtube": [
+      "JkPeWea3Y3U",
+      "zNmXfKWXwO8"
+    ]
+  },
+  {
+    "day": 90,
+    "week": 12,
+    "title": "Portfolio export, skills inventory, what next",
+    "badgeId": "portfolio-ready",
+    "legacy": [],
+    "youtube": [
+      "PiCWAIiKx78"
+    ]
+  }
+]

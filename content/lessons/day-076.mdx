@@ -1,0 +1,69 @@
+---
+day: 76
+week: 12
+title: Guides web editor vs desktop Oxygen
+objective: "Write who lives in Guides and who still opens Oxygen, without inventing a product named AEM Oxygen XML Editor."
+timeboxMinutes: 90
+skills: [aemGuides, oxygenUi]
+legacyLessonIds: [t7-guides]
+youtube:
+  - id: LuAVmn1j7f0
+    title: Getting Started with DITA Using Oxygen XML Editor
+    watchFor:
+      - Desktop Maps Manager as the thing Guides will not fully replace
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/overview", label: AEM Guides overview, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/getting-started", label: AEM Guides get started, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-76
+  title: Who lives where
+  pack: guides-oxygen-handoff
+  failWhen: You use the forbidden product name as if it were real.
+  expected: "Two homes, one forbidden name crossed out."
+  steps:
+    - Read samples/guides-oxygen-handoff/who-edits-where.md.
+    - "Write: SMEs and review cycles → Guides web editor."
+    - "Write: map surgery, Schematron, offline frameworks → Oxygen desktop."
+    - "Write the forbidden name: there is no AEM Oxygen XML Editor."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Guides vs Oxygen and the forbidden mash-up
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Handoff card matches the pack
+    minutes: 25
+    done: Two homes written. Forbidden name refused.
+  - id: c
+    block: C
+    title: A SME who was given desktop by mistake
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [output-oracle, glossary-lightning]
+toolCards: [guides-web-editor, maps-manager]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: "Two homes, one forbidden name crossed out." }
+quiz:
+  - q: "Guides is the browser DITA editor plus reviews, translation, baselines, and publishing. True?"
+    answer: 0
+    why: That is the v1 T7 sentence. SMEs should live there. Oxygen is for specialist work.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "Who on your team is a SME, and where should they edit?"
+tomorrowHook: Check-in / check-out mental model.
+---
+
+## Two editors, one repository story
+
+Guides is Adobe’s DITA CCMS in the browser. Oxygen is Syncro Soft on the desktop. Guides can launch Oxygen. They are not one product.

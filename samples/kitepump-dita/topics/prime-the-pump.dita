@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="prime-the-pump">
+  <title>Prime the pump</title>
+  <shortdesc>Get the first stroke of air into the kite bladder.</shortdesc>
+  <taskbody>
+    <context>
+      <p>Do this on sand, not on a boat deck, so the base can sit flat.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Stand the <keyword keyref="product"/> upright and lock the hose on the
+          kite valve.</cmd>
+      </step>
+      <step>
+        <cmd>Hold the base with one foot and take three full strokes.</cmd>
+      </step>
+      <step audience="expert">
+        <cmd>If the gauge is fitted, stop at the kite card pressure, not at the
+          red mark on the pump.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

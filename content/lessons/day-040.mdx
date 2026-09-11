@@ -1,0 +1,102 @@
+---
+day: 40
+week: 6
+title: FAILED transform — read the first real error
+objective: "Cause a FAILED transform on purpose, quote the first real error, repair it, and rerun to SUCCESS."
+timeboxMinutes: 110
+skills: [publish, review, xmlLiteracy]
+legacyLessonIds: [t5-publish, t4-complete]
+youtube:
+  - id: JkPeWea3Y3U
+    title: DITA Map Completeness Check
+    watchFor:
+      - Missing href rows you might also see in a log
+  - id: zNmXfKWXwO8
+    title: Creating a Publishing Template to Customize WebHelp and PDF using CSS
+    watchFor:
+      - A failed custom template is not today’s hunt unless the log names it
+sources:
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
+lab:
+  id: lab-40
+  title: "Break, read, repair, rerun"
+  pack: kitepump-dita
+  failWhen: "You never produced FAILED, or you quoted only ‘BUILD FAILED’ with no cause, or you left the copy broken, or you ‘fixed’ it by switching to a different map."
+  expected: failed-first-error.txt has FAILED cause + SUCCESS confirmation. Clinic copy publishes. Badge evidence is the quoted line.
+  steps:
+    - Copy kitepump to oxygen-bootcamp-work/week6-failed/ so you can vandalize a copy.
+    - "Break 1 (pick one): point a topicref at a missing file, or delete a closing tag in a topic the map includes, or attach a DITAVAL that references a nonsense property if you can do it cleanly."
+    - "Run WebHelp Responsive. Status must be FAILED (or SUCCESS with a hard error you can quote — if it still succeeds, break the map href until it fails)."
+    - Copy the first real error line (not a trailing Java stack if a human line exists above it) into oxygen-bootcamp-work/week6/failed-first-error.txt.
+    - Repair the copy. Rerun. SUCCESS. Quote the SUCCESS line under the error in the same file.
+    - "Write one sentence: the first place I looked was ____ (log, then the file it named)."
+sessionQuests:
+  - id: a
+    block: A
+    title: "Name the first [ERROR] line and what BUILD FAILED alone forbids as a quote"
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: FAILED then SUCCESS on the clinic copy
+    minutes: 25
+    done: Cause quoted. Repair proven. Rerun SUCCESS.
+  - id: c
+    block: C
+    title: Ignore the stack until you have the human error line
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [output-oracle, glossary-lightning]
+toolCards: [transformation, maps-manager]
+badgeId: transform-log-reader
+boss: false
+checks:
+  - { id: lab, prompt: failed-first-error.txt has FAILED cause + SUCCESS confirmation. Clinic copy publishes. Badge evidence is the quoted line. }
+quiz:
+  - q: "The log ends with a Java stack trace. Where is the first real error usually?"
+    answer: 1
+    why: "Read from the first [ERROR] that names a file or a plugin. The stack is the engine falling after that."
+    options:
+      - The last line of the stack
+      - "Higher — a [ERROR] or DITA-OT message that names a file"
+      - In AEM Sites
+  - q: "FAILED because a topic is not well-formed. Completeness was clean yesterday. What is true?"
+    answer: 1
+    why: Run both. A new Text-mode break is a new error.
+    options:
+      - Completeness includes well-formedness of every file always
+      - "Possible — you broke the file after, or completeness did not parse that file the same way"
+      - Then DITA-OT is wrong
+  - q: "You cannot get FAILED no matter what. What did you probably transform?"
+    answer: 1
+    why: Wrong input path is a classic miss. Check the scenario’s input map.
+    options:
+      - The map with the break
+      - A different scenario still pointing at the intact original pack
+      - Schema Design
+fieldNotePrompt: Paste the first real error line and the file it named.
+tomorrowHook: Tomorrow you glance at Styles Basket so you know it exists — you will not become a designer.
+---
+
+## Required failure
+
+This lab **must FAIL first**. A green bar you did not earn does not grant **transform-log-reader**.
+
+Cause a real break. Apply the scenario. Read the log from the top. Quote the first human error. Open that file. Repair. Rerun.
+
+## What you quote
+
+Good: `[ERROR] Failed to parse ... inflate-the-tire.dita: well-formedness error...`
+
+Bad: `BUILD FAILED` with no cause.
+
+## Figure
+
+Transformation view red, log scrolled to the first [ERROR]. Caption: *The stack below is not the quote unless nothing else exists.*

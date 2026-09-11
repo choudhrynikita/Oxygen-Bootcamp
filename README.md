@@ -1,46 +1,56 @@
 # Oxygen Bootcamp
 
-A customized learning management system for **Oxygen XML Editor** (and the AEM Guides “Edit in Oxygen” path). Built for freshers and intermediate technical writers.
+90-day authoring training for **Oxygen XML Author / Editor / Web Author** (Syncro Soft) and **AEM authoring** — Sites, Page Editor, Universal Editor, Document Authoring, Assets, Content Fragments, **AEM Guides**, and **Edit in Oxygen**.
 
-**Live classroom:** after GitHub Pages is enabled, open  
-`https://choudhrynikita.github.io/Oxygen-Bootcamp/`
+Oxygen is Syncro Soft. AEM Guides can launch Oxygen. There is no product called “AEM Oxygen XML Editor.”
 
-## What you get
+**Live classroom is Vercel**, not GitHub Pages. Pages is a footnote for the old static shell.
 
-- 8 tracks, 28 lessons, Easy → Intermediate → Advanced
-- Official Oxygen XML YouTube webinars and short demos embedded in lessons
-- Visual UI maps (annotated layouts of Author mode, Maps Manager, Project view)
-- Labs with sample DITA project (`samples/flower-docs`)
-- Quizzes with local progress tracking
-- Reference library pointing at official manuals (Oxygen 28.1, AEM Guides)
-- Day 1 slide deck (`docs/day1-slides.html`)
+Production URL: see [docs/VERCEL.md](docs/VERCEL.md) (filled after the first successful deploy).
 
-## Enable GitHub Pages
+## Run
 
-1. Repo **Settings → Pages**
-2. Source: **Deploy from a branch**
-3. Branch: `main`, folder: `/ (root)`
-4. Save. The site is live in about a minute.
+```
+npm ci
+npm run content:generate   # writes content/lessons/day-001.mdx … day-090.mdx
+npm run dev                # http://localhost:8080 in this sandbox; Vercel uses next start
+```
+
+Scripts: `dev`, `build`, `start`, `lint`, `content:audit`, `test`.
+
+Node 20 or 22 (`.nvmrc` is 22). No secrets required to build.
 
 ## How to study
 
-1. Open the LMS in a browser.
-2. Start **Track 0 — Orientation**.
-3. Do not skip labs. Oxygen is learned by editing valid XML, not by reading menus.
-4. Install the official **Live Tutorials** add-on inside Oxygen for in-product missions.
-5. Keep the [Oxygen XML Editor 28.1 User Guide](https://www.oxygenxml.com/doc/ug-editor/) open as the source of truth.
+Home is Today: current day, streak, Daily Burst (5–8 min), next unfinished lab, search.
 
-## Official sources this pack is built on
+A weekday day is 75–110 minutes in four pauseable blocks. XP follows labs, quizzes, and quests — not page views. Badges wait for a lab that can fail.
 
-- https://www.oxygenxml.com/doc/ug-editor/
-- https://www.oxygenxml.com/documentation.html
-- https://www.oxygenxml.com/videos.html
-- https://www.oxygenxml.com/working_with_dita_in_oxygen.html
-- https://www.youtube.com/@oxygenxml
-- Adobe Experience League — AEM Guides “Edit in Oxygen”
+Game rules: [docs/GAME.md](docs/GAME.md). Update guard: [docs/UPDATE_GUARD.md](docs/UPDATE_GUARD.md).
 
-Oxygen XML Editor is a product of Syncro Soft. This bootcamp is an independent training pack, not an official Syncro Soft or Adobe product.
+## Add a day
 
-## Maintainer
+1. Edit or add the day object in `scripts/days/weekNN.mjs`.
+2. Run `npm run content:generate`.
+3. `npm run content:audit` must pass. A missing Day file fails `next build`.
 
-Prepared for Nikita Choudhry (`choudhrynikita`) — September 2026.
+## v1 classroom
+
+The original 8-track LMS lives in `legacy/` and is linked from Library. Flower-docs is unchanged. v1 lesson ids map through `content/curriculum/legacy-map.json`. Importing v1 ticks awards the Legacy classroom badge only.
+
+## Deploy (Vercel)
+
+1. Import `choudhrynikita/Oxygen-Bootcamp` in the Vercel dashboard.
+2. Framework: Next.js.
+3. Root Directory: `.` (repo root).
+4. Install: `npm ci`. Build: `npm run build`.
+5. Production branch: `main`. Preview on PRs.
+6. Node 22.
+
+`vercel.json` pins install/build. Do not set `output: 'export'`.
+
+GitHub Pages is not the classroom. If Pages is still enabled, it may serve `legacy/` only — ignore it.
+
+## Copyright
+
+Training materials are original or rewritten from the v1 LMS. Official Oxygen and Adobe manuals are linked, not pasted. See [docs/CONTENT_POLICY.md](docs/CONTENT_POLICY.md) and [LICENSE](LICENSE).

@@ -1,0 +1,73 @@
+---
+day: 71
+week: 11
+title: When each authoring method is used
+objective: "Match a job to a method: classic templated page, instrumented headless/visual, doc-based marketing page."
+timeboxMinutes: 90
+skills: [aemSites]
+legacyLessonIds: []
+youtube:
+  - id: VcMI0zWIKdg
+    title: How to Build a Global Site in AEM Sites
+    watchFor:
+      - When document-based is the point
+  - id: idByz7WrhbQ
+    title: AEM from Headful to Headless (Adobe for Business)
+    watchFor:
+      - When visual/headless authoring shows up
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/universal-editor/authoring-methods", label: AEM authoring methods, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/document-authoring", label: Document Authoring, dated: 2026-09 }
+lab:
+  id: lab-71
+  title: Job → method table
+  pack: aem-author-field-log
+  failWhen: DITA procedure is assigned to Document Authoring as if it were DITA.
+  expected: Four rows. DITA stays off the Sites methods.
+  steps:
+    - "Job: WKND-style page with Core Components → Page Editor."
+    - "Job: instrumented app/page that Universal Editor is wired for → Universal Editor."
+    - "Job: marketers in Word/Google Docs → Document Authoring."
+    - "Job: DITA procedure → Oxygen or Guides, not these three."
+    - Write the table in the field log.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the matching rule and what it forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Table has four honest rows
+    minutes: 25
+    done: DITA is not a Sites method.
+  - id: c
+    block: C
+    title: A marketer who wants Word — which method
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [output-oracle, glossary-lightning]
+toolCards: [universal-editor, page-editor]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Four rows. DITA stays off the Sites methods. }
+quiz:
+  - q: "Universal Editor replaces AEM Guides. True?"
+    answer: 1
+    why: Guides is DITA on AEM. Universal Editor is a Sites/visual method.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "Which job on your team is currently using the wrong method?"
+tomorrowHook: Content Fragments for headless authors.
+---
+
+## Match the job
+
+If you only remember one thing: DITA does not become Document Authoring because both use the word document.

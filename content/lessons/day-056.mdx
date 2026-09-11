@@ -1,0 +1,95 @@
+---
+day: 56
+week: 9
+title: AEM author vs publish — you are not a developer this week
+objective: "Write what the author environment is for, what the publish environment is for, and why a DITA map is not an AEM page."
+timeboxMinutes: 90
+skills: [aemSites]
+legacyLessonIds: [t7-aem]
+youtube:
+  - id: idByz7WrhbQ
+    title: AEM from Headful to Headless (Adobe for Business)
+    watchFor:
+      - Headful Sites vs headless mentions
+      - That AEM is more than one authoring surface
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/quick-start", label: AEM as a Cloud Service authoring quick start, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/getting-started/first-steps", label: AEM 6.5 first steps for authors, dated: 2026-09 }
+lab:
+  id: lab-56
+  title: "Field log: author vs publish vs Oxygen"
+  pack: aem-author-field-log
+  failWhen: "The log names AEM Oxygen XML Editor, or treats publish as ‘the PDF button’, or claims Guides is a Sites theme."
+  expected: Four factual sentences. Mock labeled. Landing-page rule present.
+  steps:
+    - You may not have an AEM instance. That is expected. Use official video + labeled mocks + this field log.
+    - "Create oxygen-bootcamp-work/week9/field-log-56.txt with four sentences: (1) Author is where you edit pages. (2) Publish is what the site visitor hits. (3) Oxygen is Syncro Soft desktop DITA. (4) There is no product named AEM Oxygen XML Editor."
+    - "Add: a campaign landing page belongs in Sites first, not in a DITA map."
+    - "Sketch or paste a labeled mock: two boxes, Author | Publish. Caption: mock."
+    - Do not install AEM locally as this lab. Do not treat WKND code as an authoring exercise.
+sessionQuests:
+  - id: a
+    block: A
+    title: "Name author, publish, and Oxygen as three different things"
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the four sentences honest
+    minutes: 25
+    done: Log written. Mock labeled. No fake product name.
+  - id: c
+    block: C
+    title: Catch publish-as-PDF in your own draft and delete it
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [glossary-lightning, authors-dare]
+toolCards: [sites-console]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Four factual sentences. Mock labeled. Landing-page rule present. }
+quiz:
+  - q: "Campaign landing pages should be written in Oxygen. True?"
+    answer: 1
+    why: "v1: Landing pages belong in AEM Sites. Oxygen is structured XML topics."
+    options:
+      - "True"
+      - "False"
+  - q: "Author vs publish: you Quick Publish a page. What did you ask AEM to do?"
+    answer: 1
+    why: "Publish is a topology, not a transform scenario."
+    options:
+      - Run DITA-OT
+      - Activate the page (and often its assets) to the publish environment
+      - Commit to Git
+  - q: "Why are this week’s screenshots called mocks if you have no instance?"
+    answer: 1
+    why: "Content policy: label mocks as mocks. Do not use stock photos as product UI."
+    options:
+      - To hide Adobe UI
+      - Official UI is copyrighted; labeled mocks plus Experience League videos are the honest substitute
+      - Mocks are graded as code
+fieldNotePrompt: "When would you refuse to write a procedure as a Sites Text component?"
+tomorrowHook: "Tomorrow the Sites console — where pages live as a tree, not as a ditamap."
+---
+
+## AEM as an author
+
+v1: *AEM Author is pages, assets, fragments, and workflows. Use Sites for marketing pages, Content Fragments for headless fields, Experience Fragments for reusable layout, and AEM Guides for DITA stored in the DAM.*
+
+This week is **Sites**. You are an author, not a developer. You will not deploy WKND as code.
+
+## Author vs publish
+
+**Author** is the editing environment. **Publish** is the public (or internal) live copy. Quick Publish copies selected trees. This is not DITA-OT.
+
+## Figure
+
+Labeled mock: two servers, author left, publish right. Caption: *Mock. Not a screenshot of a customer instance.*

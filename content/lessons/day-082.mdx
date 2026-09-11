@@ -1,0 +1,73 @@
+---
+day: 82
+week: 12
+title: Handoff clinic
+objective: "Decide, for three objects, who edits in Guides vs Oxygen vs Sites."
+timeboxMinutes: 90
+skills: [aemGuides, aemSites]
+legacyLessonIds: [t7-guides]
+youtube:
+  - id: idByz7WrhbQ
+    title: AEM from Headful to Headless (Adobe for Business)
+    watchFor:
+      - Pages and fragments — keep them off the DITA table
+  - id: ozFZz6YZMCY
+    title: DITA Maps Manager View in Oxygen XML Editor 19
+    watchFor:
+      - The map stays a map
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/overview", label: AEM Guides overview, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/install-conf-guide/editor-configs/editor-cloud-settings/conf-edit-in-oxygen", label: Configure Edit in Oxygen, dated: 2026-09 }
+lab:
+  id: lab-82
+  title: Three objects
+  pack: guides-oxygen-handoff
+  failWhen: The landing page is assigned to Oxygen or the map to Sites.
+  expected: Three correct surfaces.
+  steps:
+    - "Object 1: kitepump.ditamap restructure → Oxygen."
+    - "Object 2: SME comment on a step → Guides."
+    - "Object 3: beach campaign landing page → Sites."
+    - Write the three. Fail if any two share a surface they should not.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name the three objects and surfaces
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: No crossed wires
+    minutes: 25
+    done: Three assignments. Badge-worthy if all correct.
+  - id: c
+    block: C
+    title: The object people always put in the wrong tool
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [glossary-lightning, authors-dare]
+toolCards: [guides-web-editor, sites-console]
+badgeId: guides-handoff
+boss: true
+checks:
+  - { id: lab, prompt: Three correct surfaces. }
+quiz:
+  - q: "A campaign landing page with a hero belongs in Oxygen. True?"
+    answer: 1
+    why: "Sites. v1 T7 quiz, still true."
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "Which object would your team mis-route?"
+tomorrowHook: "Capstone starts — one product story, two surfaces."
+---
+
+## Clinic
+
+If the map goes to Sites or the landing page goes to Oxygen, you are not done. Retry is unlimited. Week continues if Friday lab is done.

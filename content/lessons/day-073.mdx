@@ -1,0 +1,68 @@
+---
+day: 73
+week: 11
+title: "Assets — upload, move, basic metadata"
+objective: "Upload or mock an image, set a title and description, and write the move path."
+timeboxMinutes: 90
+skills: [aemSites]
+legacyLessonIds: []
+youtube:
+  - id: 7-Lcw5PejhI
+    title: Go live faster with quick site creation in AEM
+    watchFor:
+      - Authoring adjacent to assets
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/quick-start", label: Assets basic operations, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/basic-handling", label: AEM Basic Handling, dated: 2026-09 }
+lab:
+  id: lab-73
+  title: "One asset, honest metadata"
+  pack: aem-author-field-log
+  failWhen: "You commit a 20 MB photo to git, or you paste a copyrighted Adobe screenshot."
+  expected: Path + title + description. Git stays small.
+  steps:
+    - "On instance: Assets > upload a small photo you own or a public-domain beach photo. Title. Description. Do not steal a vendor screenshot."
+    - Move it to a folder you are allowed to use. Write the path.
+    - "On mock: write the path you would use: /content/dam/kitepump/beach-card.jpg (mock)."
+    - "Write: DAM path is not a DITA image href, though Guides may store DITA images in DAM later."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Assets console and what git forbids
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Metadata is filled
+    minutes: 25
+    done: Path written. No binary in git.
+  - id: c
+    block: C
+    title: Move vs copy on a live DAM
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [assets-console]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Path + title + description. Git stays small. }
+quiz:
+  - q: "You should commit the DAM binary into this Git repo. True?"
+    answer: 1
+    why: "CONTENT_BUDGET.md. Assets live in AEM or object storage, not this git tree."
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "What title did you give the asset?"
+tomorrowHook: Language copies at awareness level.
+---
+
+## Assets
+
+Upload, move, basic metadata. Experience League Assets basic operations is the source. No vendor PDFs in git.

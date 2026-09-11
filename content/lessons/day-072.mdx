@@ -1,0 +1,68 @@
+---
+day: 72
+week: 11
+title: Content Fragments for headless authors
+objective: Open or mock a Content Fragment model and write three fields. It is not a page and not a DITA reference.
+timeboxMinutes: 90
+skills: [aemSites]
+legacyLessonIds: []
+youtube:
+  - id: idByz7WrhbQ
+    title: AEM from Headful to Headless (Adobe for Business)
+    watchFor:
+      - Content Fragment model builder
+      - Fragment vs page
+sources:
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/universal-editor/authoring-methods", label: AEM authoring methods, dated: 2026-09 }
+  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/quick-start", label: AEM as a Cloud Service authoring quick start, dated: 2026-09 }
+lab:
+  id: lab-72
+  title: "Three fields, no page tree"
+  pack: aem-author-field-log
+  failWhen: You edit the fragment as if it were a Sites page layout.
+  expected: Three fields. Two ‘is not’ sentences.
+  steps:
+    - "On instance: open a Content Fragment (WKND has them). Write the model name and three fields."
+    - "On mock: invent nothing pretty — write ‘model: Kitepump spec (mock) / fields: name, pressure, valve’ and label mock."
+    - "Write: this is not an Experience Fragment and not a DITA reference topic."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Content Fragment and what it forbids (page layout)
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Three fields written
+    minutes: 25
+    done: Model name + fields + two is-nots.
+  - id: c
+    block: C
+    title: Who consumes the fragment
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [glossary-lightning, authors-dare]
+toolCards: [content-fragment]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Three fields. Two ‘is not’ sentences. }
+quiz:
+  - q: "A Content Fragment is a DITA reference stored in AEM. True?"
+    answer: 1
+    why: CF is a headless content model. DITA reference is XML in Oxygen/Guides.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "Who reads this fragment — a page, an app, both, or unknown?"
+tomorrowHook: "Assets: upload, move, metadata."
+---
+
+## Fragments without a page
+
+Structured fields. Headless authors live here. Do not decorate it like a landing page.

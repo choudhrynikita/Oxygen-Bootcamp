@@ -1,0 +1,74 @@
+---
+day: 83
+week: 12
+title: Capstone — DITA publication in Oxygen
+objective: "Ship a small valid Kitepump (or flower-docs) publication: map, keys, one reuse, completeness clean, local WebHelp or a recorded transform attempt."
+timeboxMinutes: 110
+skills: [maps, reuse, publish]
+legacyLessonIds: [t7-capstone]
+youtube:
+  - id: zNmXfKWXwO8
+    title: Creating a Publishing Template to Customize WebHelp and PDF using CSS
+    watchFor:
+      - WebHelp as the draft output
+  - id: JkPeWea3Y3U
+    title: DITA Map Completeness Check
+    watchFor:
+      - Zero missing hrefs
+sources:
+  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-83
+  title: DITA half of the capstone
+  pack: kitepump-dita
+  failWhen: "Completeness is dirty, or reuse is copy-paste, or you skipped the transform log."
+  expected: Clean completeness. Key + reuse. Transform evidence.
+  steps:
+    - Map with at least six topics or a documented subset of flower-docs + kitepump. Completeness clean.
+    - One key (product name) used twice. One conkeyref or conref of a warning.
+    - One ditaval or a written reason you did not filter.
+    - WebHelp Responsive or a failed transform you then repaired (Day 40 skill).
+    - "Note: local output is a draft if Guides is the release."
+sessionQuests:
+  - id: a
+    block: A
+    title: Name completeness as the capstone gate
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the map complete
+    minutes: 25
+    done: Completeness clean. Key + reuse present.
+  - id: c
+    block: C
+    title: "First transform error, if any"
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [authors-dare, warmup-match]
+toolCards: [maps-manager, transformation]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Clean completeness. Key + reuse. Transform evidence. }
+quiz:
+  - q: "Capstone DITA can skip completeness if WebHelp opened. True?"
+    answer: 1
+    why: The book can still miss topics. Completeness is the gate.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "How many topics, and which warning is reused?"
+tomorrowHook: AEM page family for the same product.
+---
+
+## DITA half
+
+This is the Oxygen proof. Six topics, reuse, completeness, a transform. Flower-docs may join kitepump. Do not replace flower-docs in the repo; copy into your work folder.

@@ -1,0 +1,68 @@
+---
+day: 46
+week: 7
+title: Content Fusion as collaboration context
+objective: Explain Fusion as a collaboration layer around Oxygen files — not a replacement for a CCMS.
+timeboxMinutes: 75
+skills: [review]
+legacyLessonIds: []
+youtube:
+  - id: Vglmv_lDg7Y
+    title: Interactive Tutorials in Oxygen
+    watchFor:
+      - In-product missions vs a shared review
+sources:
+  - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+lab:
+  id: lab-46
+  title: Fusion vs CCMS in four lines
+  pack: kitepump-dita
+  failWhen: You describe Fusion as Adobe Experience Manager.
+  expected: Four lines. Fusion stays Syncro Soft collaboration context.
+  steps:
+    - Read the official Fusion description from Oxygen’s documentation hub. Quote at most two lines.
+    - "Write: what Fusion is for (share a change set with a reviewer)."
+    - "Write: what it is not (AEM Guides baselines, translation memory, Sites)."
+    - Write who on a Guides shop should ignore Fusion and live in Guides review.
+sessionQuests:
+  - id: a
+    block: A
+    title: Name Fusion and what it forbids (pretending to be Guides)
+    minutes: 22
+    done: You named the official control and wrote what it forbids.
+  - id: b
+    block: B
+    title: Keep the four lines distinct
+    minutes: 25
+    done: No AEM DAM claim.
+  - id: c
+    block: C
+    title: Pick the reviewer who should not see Fusion
+    minutes: 22
+    done: Quiz score ≥ 70% and a one-sentence error note.
+  - id: d
+    block: D
+    title: Write what you would tell a teammate
+    minutes: 20
+    done: Field note saved.
+dailyBurstPool: [glossary-lightning, authors-dare]
+toolCards: [review]
+badgeId: null
+boss: false
+checks:
+  - { id: lab, prompt: Four lines. Fusion stays Syncro Soft collaboration context. }
+quiz:
+  - q: "Content Fusion stores your DITA in the AEM DAM. True?"
+    answer: 1
+    why: Guides stores DITA in AEM. Fusion is Oxygen’s collaboration context.
+    options:
+      - "True"
+      - "False"
+fieldNotePrompt: "Would you introduce Fusion on a team that already lives in Guides? Why not?"
+tomorrowHook: Hand a zip to a reviewer who is not a specialist.
+---
+
+## Fusion is context
+
+A reviewer who will not install Oxygen still needs a way to comment. Fusion is one Syncro Soft answer. It is not your CCMS. If the shop is AEM Guides, the review lives there.

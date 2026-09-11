@@ -1,0 +1,15 @@
+[
+  { "id": "author-mode", "name": "Author mode", "for": "Daily DITA writing with CSS rendering and content completion.", "notFor": "Hand-editing well-formedness emergencies or XSD design.", "href": "https://www.oxygenxml.com/doc/ug-editor/" },
+  { "id": "text-mode", "name": "Text mode", "for": "Surgery on tags, entities, and broken well-formedness.", "notFor": "Writing a whole chapter by typing angle brackets.", "href": "https://www.oxygenxml.com/doc/ug-editor/" },
+  { "id": "maps-manager", "name": "DITA Maps Manager", "for": "The book: topicrefs, keys, completeness, transforms.", "notFor": "Treating the tree as the filesystem.", "href": "https://oxygenxml.com/demo/DITA_Maps_Manager.html" },
+  { "id": "outline", "name": "Outline", "for": "Jump the element tree of the current topic.", "notFor": "Managing the publication TOC.", "href": "https://www.oxygenxml.com/doc/ug-editor/" },
+  { "id": "attributes", "name": "Attributes", "for": "id, keys, href, props on the selected node.", "notFor": "Body text.", "href": "https://www.oxygenxml.com/doc/ug-editor/" },
+  { "id": "review", "name": "Review", "for": "Track changes and comments in Oxygen.", "notFor": "Mixing Content Fusion comments and Guides review on the same file by accident.", "href": "https://www.oxygenxml.com/doc/ug-editor/" },
+  { "id": "transformation", "name": "Transformation", "for": "DITA-OT scenarios: WebHelp, PDF, logs.", "notFor": "AEM Sites replication.", "href": "https://www.oxygenxml.com/doc/ug-editor/" },
+  { "id": "sites-console", "name": "Sites console", "for": "Create pages, page properties, publish/unpublish.", "notFor": "DITA maps.", "href": "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author" },
+  { "id": "page-editor", "name": "Page Editor", "for": "In-place component authoring on an AEM template.", "notFor": "DITA tasks.", "href": "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/quick-start" },
+  { "id": "universal-editor", "name": "Universal Editor", "for": "Visual editing of instrumented pages, including headless/edge cases.", "notFor": "Assuming it replaces Guides.", "href": "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/universal-editor/authoring-methods" },
+  { "id": "guides-web-editor", "name": "Guides web editor", "for": "Browser DITA on AEM: SMEs, review, baselines.", "notFor": "Map surgery, Schematron, offline frameworks.", "href": "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/overview" },
+  { "id": "assets-console", "name": "Assets", "for": "Upload, move, basic metadata.", "notFor": "Writing procedures.", "href": "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/quick-start" },
+  { "id": "content-fragment", "name": "Content Fragments", "for": "Headless structured fields without a page tree.", "notFor": "A DITA map substitute.", "href": "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/universal-editor/authoring-methods" }
+]
