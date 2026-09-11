@@ -30,7 +30,7 @@ export default function ProgressPage() {
       <p className="text-muted">
         Rank {rank.label} · {progressed} / 90 days with a lab · {state.game.xp} XP
       </p>
-      <p className="text-sm">Rank needs both curriculum days and skill XP. Daily Burst cannot jump rank alone.</p>
+      <p className="text-sm">Rank needs both finished days and skill XP. The 5-minute warmup cannot jump rank by itself.</p>
       <StreakStrip />
       <h2 className="mt-6 font-[family-name:var(--font-sans)] text-lg font-semibold text-navy">XP by skill</h2>
       <ul className="list-none p-0">

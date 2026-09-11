@@ -1,8 +1,8 @@
 ---
 day: 37
 week: 6
-title: WebHelp Responsive — a draft you can click
-objective: "Publish kitepump.ditamap to WebHelp Responsive and open the output index.html, then match three TOC entries to topic titles."
+title: Make a clickable draft site
+objective: "Publish kitepump.ditamap to a draft site and open the output index.html, then match three table-of-contents entries to page titles."
 timeboxMinutes: 90
 skills: [publish, maps]
 legacyLessonIds: [t5-publish]
@@ -10,87 +10,81 @@ youtube:
   - id: zNmXfKWXwO8
     title: Creating a Publishing Template to Customize WebHelp and PDF using CSS
     watchFor:
-      - WebHelp output as a folder of HTML
-      - A publishing template vs the scenario
+      - Output as a folder of HTML
+      - A publishing template vs the recipe
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/videos.html", label: Oxygen official video catalog, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
 lab:
   id: lab-37
-  title: "WebHelp draft, three TOC checks"
+  title: "Draft site, three contents checks"
   pack: kitepump-dita
-  failWhen: "You published a single topic and called it the book, or you cannot find index.html, or you committed the output into topics/."
-  expected: WebHelp folder exists. Three TOC lines mapped to files. Key resolved in HTML — or a first error line parked for Day 40.
+  failWhen: "You published a single page and called it the book, or you cannot find index.html, or you saved the output into topics/."
+  expected: A site folder exists. Three contents lines mapped to files. Product name resolved — or a first error line parked for day 40.
   steps:
-    - Apply the WebHelp Responsive scenario on kitepump.ditamap. Wait for the Transformation view.
+    - Apply the WebHelp Responsive recipe on kitepump.ditamap. Wait for the Transformation view.
     - "If the status is SUCCESS, open out-webhelp/index.html in a browser (Oxygen may offer Open)."
-    - Write three TOC labels you see and the topic files they come from.
-    - "Confirm the product-name key resolved in HTML (Kitepump HP-40a, not the key string)."
+    - Write three table-of-contents labels you see and the page files they come from.
+    - "Confirm the product name resolved in the site (Kitepump KP-2a, not the key string)."
     - "If the expert step is missing, check whether novice.ditaval was attached. Write which it was."
-    - "If the status is FAILED, do not panic — Day 40 is the failed-log lab. Still paste the first error line into the field note and stop; do not thrash for an hour."
+    - "If the status is FAILED, do not panic — day 40 is the failed-log lab. Still paste the first error line into the field note and stop; do not thrash for an hour."
 sessionQuests:
   - id: a
     block: A
-    title: Name WebHelp Responsive and the output entry file
+    title: Find Apply Transformation Scenario and the Transformation view
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Open index.html and match three TOC entries
+    title: Open index.html and match three contents entries
     minutes: 25
-    done: Output exists. Three mappings written. Key checked.
+    done: Output exists. Three mappings written. Product name checked.
   - id: c
     block: C
-    title: Find one TOC surprise (navtitle vs title) and write it
+    title: "Pick the entry file, and why a page can pass completeness and still be hidden"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [warmup-match, one-line-repair]
+    done: Note saved.
+dailyBurstPool: [output-oracle, one-line-repair]
 toolCards: [transformation, maps-manager]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: WebHelp folder exists. Three TOC lines mapped to files. Key resolved in HTML — or a first error line parked for Day 40. }
+  - { id: lab, prompt: A site folder exists. Three contents lines mapped to files. Product name resolved — or a first error line parked for day 40. }
 quiz:
-  - q: "WebHelp Responsive output is a folder. What is the usual entry file?"
+  - q: "A WebHelp output is a folder. What is the usual file you open first?"
     answer: 1
     why: You open HTML. The map is source.
     options:
       - the .ditamap
       - index.html (verify in your output)
-      - schema.xsd
-  - q: "The TOC is missing a topic that completeness includes. First place you look?"
+      - the completeness report
+  - q: "The site’s table of contents is missing a page that completeness still includes. First place you look?"
     answer: 0
-    why: Publish reads the map. toc=no hides a node. Completeness does not mean ‘visible in TOC’.
+    why: Publish reads the booklet. toc=no hides a node. Completeness does not mean ‘visible in the site contents’.
     options:
-      - "toc=\"no\" on the topicref, or a submap not referenced"
-      - AEM page properties
-      - Author CSS Hints
-  - q: "Local WebHelp is the AEM Guides release. True?"
-    answer: 1
-    why: Local output is a draft. Guides/server baseline is the release when that is your CCMS.
-    options:
-      - "True"
-      - "False"
-fieldNotePrompt: "Which TOC label disagreed with the topic title, and was that navtitle on purpose?"
-tomorrowHook: "Tomorrow you run a PDF path (Publishing Engine or Chemistry) as a draft, not a brand."
+      - "toc=\"no\" on the booklet line, or a nested booklet not pointed at"
+      - Hints in Author
+      - Help > About
+fieldNotePrompt: "Which three contents labels did you match to files, and did the product name show?"
+tomorrowHook: Tomorrow you make a PDF draft — or you write why the PDF tool is missing.
 ---
 
-## WebHelp Responsive
+## A site you can click
 
-This is the HTML draft of the book. Apply the scenario. Read **Transformation**. Open `index.html`.
+**WebHelp** is a draft website the engine builds from your booklet. Apply the recipe. Read **Transformation**. Open `index.html`.
 
-You are not designing a theme today. You are proving the map produces a site you can click.
+You are not designing a theme today. You are proving the booklet produces a site you can click.
 
-## Keys and filters
+If the product name is still the key string, the root map or the recipe’s booklet input is wrong.
 
-HTML is the proof that keys resolved and that DITAVAL did or did not drop a step. If the product name is still `product-name`, the root map or the scenario’s map input is wrong.
+A local site is a draft on your desk. That is enough this week.
 
-## Figure
+## Word today
 
-Browser with WebHelp TOC on the left. Caption: *Draft output. Not AEM Sites. Not Guides server publish.*
+**WebHelp** — a draft website the engine builds from your booklet. You open `index.html`.

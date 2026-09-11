@@ -1,7 +1,7 @@
 {
   "name": "oxygen-bootcamp",
   "private": true,
-  "version": "2026.09.1",
+  "version": "2026.09.2",
   "description": "Oxygen Bootcamp — 90-day authoring training for Oxygen XML and AEM Authoring / AEM Guides.",
   "sideEffects": false,
   "engines": {

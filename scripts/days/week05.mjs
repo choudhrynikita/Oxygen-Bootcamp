@@ -7,15 +7,15 @@ export default [
   {
     n: 29,
     week: 5,
-    title: "Profiling attributes you can say out loud",
+    title: "Hide text some readers should not see",
     objective:
-      "Mark one step audience=expert and one paragraph platform=print, and write what each value means on this desk.",
+      "Mark one step for experts and one paragraph for print, turn on the colors in Author, and write what each mark means on this desk.",
     minutes: 90,
     skills: ["reuse", "ditaTopics"],
     legacy: ["t5-profile"],
     youtube: [
       yt("profile", [
-        "Color of profiled text in Author",
+        "Color of marked text in Author",
         "Where audience and platform are set",
       ]),
     ],
@@ -24,96 +24,83 @@ export default [
     badgeId: null,
     lab: {
       pack: "kitepump-dita",
-      title: "Two conditions, two meanings",
+      title: "Two marks, two meanings",
       steps: [
-        "In inflate-the-tire.dita, set audience=\"expert\" on one step (the gauge nuance).",
-        "In what-kitepump-is.dita, set platform=\"print\" on one paragraph you would drop from WebHelp.",
-        "Turn on profiling colors in Author (Profiling / Conditional Text — verify the label). Expert and print should look different.",
-        "Write oxygen-bootcamp-work/week5/condition-meanings.txt: audience=expert means ____. platform=print means ____. Do not invent a third attribute today.",
-        "Do not set otherprops=\"maybe\" or a joke value.",
-        "Validate. Completeness still clean.",
+        "Open prime-the-pump.dita. The sample may already mark one step audience=\"expert\" (the gauge step). If not, set audience=\"expert\" on that step.",
+        "In what-is-kitepump.dita, set platform=\"print\" on one paragraph you would drop from a screen copy.",
+        "Turn on profiling colors in Author (Profiling / Conditional Text — if the label differs, write the label you see). Expert and print should look different.",
+        "Write oxygen-bootcamp-work/week5/condition-meanings.txt: audience=expert means ____. platform=print means ____. Do not invent a third mark today.",
+        "Do not set a joke value. Do not mark the whole how-to when you meant one step.",
+        "Save. No red error. Completeness still clean.",
       ],
       failWhen:
-        "A profiling value has no sentence definition, or you profiled the whole topic when you meant one step, or colors never turned on.",
+        "A mark has no sentence in the meanings file, or you marked the whole how-to when you meant one step, or colors never turned on.",
       expected:
-        "Two attributes, two written meanings. Colors visible. Files valid.",
+        "Two marks, two written meanings. Colors visible. Files open clean.",
     },
     quiz: [
       {
-        q: "audience=\"expert\" on a step. Without a DITAVAL, what does a default WebHelp transform usually do?",
+        q: "You marked a step audience=expert. You have not hidden it yet. Is the step still in the file?",
         options: [
-          "Hide the step",
-          "Include it — profiling attributes are data until a DITAVAL acts",
-          "Fail the transform",
-        ],
-        answer: 1,
-        why: "Attributes mark content. DITAVAL includes, excludes, or flags. No DITAVAL, no filter.",
-      },
-      {
-        q: "You set otherprops=\"asdf\" so you can ‘filter later’. Verdict?",
-        options: [
-          "Fine — values are freeform",
-          "Refuse — a condition you cannot explain is a landmine",
-          "Fine if the color is pretty",
-        ],
-        answer: 1,
-        why: "Conditions you can explain. Joke values become production filters by accident.",
-      },
-      {
-        q: "The whole task is audience=expert. What did you probably want?",
-        options: [
-          "A separate task, or one step profiled — not a hidden chapter with no map signal",
-          "platform=print on the map",
-          "A conref of the task",
+          "Yes — a mark is a label. It does not delete the step",
+          "No — the mark deletes the step",
+          "Only if completeness is clean",
         ],
         answer: 0,
-        why: "Hiding an entire procedure with one attribute is how novices lose a chapter. Prefer a dedicated topic or a honest map branch.",
+        why: "The mark labels the step. It does not delete the step. You still see it in Text.",
+      },
+      {
+        q: "The whole how-to is marked audience=expert. What did you probably want?",
+        options: [
+          "A separate how-to, or one step marked — not a hidden chapter with no booklet signal",
+          "platform=print on the booklet",
+          "A warning pointer on the title",
+        ],
+        answer: 0,
+        why: "Hiding a whole how-to with one mark is how a chapter disappears. Prefer a dedicated page, or mark the one step.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name audience and platform and what a joke value forbids",
-      doTitle: "Keep two explained conditions",
-      doDone: "Two attributes. Meanings file written. Colors on. Files valid.",
-      stress: "Profile a whole topic, then undo it down to one step",
+      learn: "Find the audience and platform fields on a step or paragraph",
+      doTitle: "Mark one expert step and one print paragraph, and write the meanings",
+      doDone: "Two marks. Meanings file written. Colors on. Files clean.",
+      stress: "Pick whether a mark deletes the step, and what a whole-page mark probably wanted",
     }),
-    fieldNotePrompt: "Say the two condition values in a sentence a new hire would survive.",
-    tomorrowHook: "Tomorrow a DITAVAL file includes, excludes, or flags those conditions on purpose.",
-    body: `## Profiling is data
+    fieldNotePrompt:
+      "What did audience=expert and platform=print mean in the two sentences you wrote?",
+    tomorrowHook: "Tomorrow a switch file shows, hides, or flags those marks on purpose.",
+    body: `## A mark is not a delete
 
-v1: *Condition attributes plus a DITAVAL file include, exclude, or flag content. Color profiled text in Author mode.*
+Some readers should not see a step. You do not delete the step. You **mark** it.
 
-Today is the attributes. **audience**, **platform**, **product**, **rev**, **props**, **otherprops**. Pick two. Write what they mean **on this desk**.
+Today you set two marks: **audience="expert"** on a step, **platform="print"** on a paragraph. Author can paint marked text in color. Turn that on. If you cannot see the mark, you will forget it is there.
 
-## Color
+A mark you cannot explain will become a filter someone else trusts. Do not invent a joke value.
 
-Author can paint profiled text. Turn that on. If you cannot see the mark, you will forget it is there and ship an expert-only step to everyone.
+The step is still in the file. A switch file tomorrow will act on the mark.
 
-## Explain or do not use
+## Word today
 
-A condition you cannot explain will become a filter someone else trusts. Do not invent \`otherprops="maybe"\`.
-
-## Figure
-
-One step with a profiling color. Caption: *Attributes view on the step element. Profiling colors on in Author.*
+**Condition** (also called profiling) — a mark such as audience or platform that says who a chunk is for. It does not hide anything until a switch file says so.
 `,
   },
   {
     n: 30,
     week: 5,
-    title: "DITAVAL — include, exclude, flag",
+    title: "A switch file for those readers",
     objective:
-      "Write a DITAVAL that excludes audience=expert, flag platform=print, and apply it so you can see the difference in Author.",
+      "Write a switch file that hides expert steps and a second one that flags print paragraphs, then apply each in Author so you can see the difference.",
     minutes: 90,
     skills: ["reuse", "publish"],
     legacy: ["t5-profile"],
     youtube: [
       yt("profile", [
-        "DITAVAL attached to profiling",
-        "Exclude vs flag in the UI",
+        "A switch file attached to profiling",
+        "Hide vs flag in the UI",
       ]),
       yt("advProfile", [
         "A condition group you would not invent yet",
-        "How flag is different from exclude",
+        "How flag is different from hide",
       ]),
     ],
     sources: [S.authorDita, S.learnDita, S.ugEditor],
@@ -121,89 +108,74 @@ One step with a profiling color. Caption: *Attributes view on the step element. 
     badgeId: "ditaval-explained",
     lab: {
       pack: "kitepump-dita",
-      title: "novice.ditaval vs print-flag.ditaval",
+      title: "Two switch files",
       steps: [
-        "Create ditaval/novice.ditaval: exclude audience=expert. Keep other conditions include (or omit).",
-        "Create ditaval/print-flag.ditaval: flag platform=print (style or color — write what you picked).",
-        "In Oxygen, apply novice.ditaval as the profiling filter for Author (DITA > Profiling / Conditional Text — verify label). The expert step should disappear or gray out per your setting.",
+        "Create ditaval/novice.ditaval: exclude audience=expert. Leave other marks alone (include them, or omit them).",
+        "Create ditaval/print-flag.ditaval: flag platform=print (a style or a color — write what you picked).",
+        "In Oxygen, apply novice.ditaval as the profiling filter for Author (DITA > Profiling / Conditional Text — verify the label). The expert step should disappear or gray out per your setting.",
         "Switch to print-flag.ditaval. The print paragraph should stay visible but flagged.",
         "Write oxygen-bootcamp-work/week5/ditaval-explained.txt: exclude means ____. flag means ____. include means ____.",
         "Do not delete the expert step from the source file.",
       ],
       failWhen:
-        "You deleted the expert step instead of filtering it, or the DITAVAL has no prop action, or you cannot explain exclude vs flag.",
+        "You deleted the expert step instead of filtering it, or a switch file has no action, or you cannot explain exclude vs flag.",
       expected:
-        "Two DITAVAL files. Author view changes with the filter. Source still contains the expert step. Meanings file written.",
+        "Two switch files. Author view changes with the filter. Source still contains the expert step. Meanings file written.",
     },
     quiz: [
       {
-        q: "Exclude vs flag: which one removes the node from output?",
-        options: [
-          "flag",
-          "exclude",
-          "include",
-        ],
+        q: "Exclude vs flag: which one removes the chunk from what the reader sees?",
+        options: ["flag", "exclude", "include"],
         answer: 1,
         why: "exclude drops the content. flag keeps it and marks it. include keeps it.",
       },
       {
-        q: "You applied novice.ditaval in Author. The source file no longer has the expert step in Text mode. What went wrong?",
+        q: "You applied the novice switch file in Author. Text view no longer has the expert step. What went wrong?",
         options: [
           "Nothing — exclude deletes source",
           "You edited or deleted source instead of filtering the view",
-          "DITAVAL always rewrites the topic",
+          "A switch file always rewrites the page",
         ],
         answer: 1,
-        why: "A filter is a view and a publish input. Source keeps the step.",
-      },
-      {
-        q: "A DITAVAL you cannot explain is attached to the shipping transform. Risk?",
-        options: [
-          "None if completeness is clean",
-          "You may drop safety steps from the novice PDF without knowing",
-          "Author mode will refuse to open",
-        ],
-        answer: 1,
-        why: "Completeness does not simulate DITAVAL. The badge is ditaval-explained: you can say what it does.",
+        why: "A filter is a view. Source keeps the step.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name include, exclude, and flag",
-      doTitle: "Keep the expert step in source while novice.ditaval hides it",
-      doDone: "Two ditavals. View changes. Source still has the step. Meanings written.",
-      stress: "Apply the wrong ditaval, notice the expert step, switch back",
+      learn: "Find where Author attaches a switch file",
+      doTitle: "Hide the expert step in the view while it stays in the file",
+      doDone: "Two switch files. View changes. Source still has the step. Meanings written.",
+      stress: "Pick exclude vs flag, and what a missing step in Text means",
     }),
-    fieldNotePrompt: "In one sentence, who is novice.ditaval for, and what must still appear in that output?",
-    tomorrowHook: "Tomorrow you refuse conditions you cannot explain — including leftover flags from a copy-paste.",
-    body: `## DITAVAL
+    fieldNotePrompt:
+      "Who is the novice switch file for, and did the expert step stay in Text view?",
+    tomorrowHook: "Tomorrow you keep only the marks you can explain, and you delete the rest.",
+    body: `## A list of actions
 
-A **.ditaval** file is a list of actions on profiling values: **include**, **exclude**, **flag**.
+A **.ditaval** file is a switch file: a list of actions on your marks. The actions are **include**, **exclude**, and **flag**.
 
-Attach it in Author to preview. Attach it to a transformation scenario to publish (Week 6).
+Attach it in Author to preview. You will use a switch file again in week 6 when you make a site or a PDF. Today you only preview.
 
-## Explain it
+If you cannot say what the file does, do not attach it.
 
-**ditaval-explained** means you can say: novice output drops expert steps; print flag paints print-only notes; nothing else is filtered.
+Open the switch file in Text. It is a small file you can read. It is not only a hidden setting.
 
-If you cannot say it, do not attach it.
+## Word today
 
-## Figure
-
-Two files in \`ditaval/\`. Caption: *DITAVAL is XML you can read. Open it in Text. Do not treat it as a GUI-only preset.*
+**ditaval** — a switch file that includes, excludes, or flags marked text.
 `,
   },
   {
     n: 31,
     week: 5,
-    title: "Conditions you can explain — retire the rest",
+    title: "Only keep switches you can explain",
     objective:
-      "Audit every profiling attribute in the kitepump pack and delete or justify each value in a list.",
+      "Search the pack for every audience, platform, and similar mark, then delete or justify each value in a list.",
     minutes: 90,
     skills: ["reuse", "review"],
     legacy: ["t5-profile"],
     youtube: [
       yt("advProfile", [
-        "Grouped conditions — awareness only",
+        "Grouped conditions — look, do not copy yet",
         "A filter that would surprise you",
       ]),
     ],
@@ -212,90 +184,77 @@ Two files in \`ditaval/\`. Caption: *DITAVAL is XML you can read. Open it in Tex
     badgeId: "ditaval-explained",
     lab: {
       pack: "kitepump-dita",
-      title: "Condition census",
+      title: "A list of every mark",
       steps: [
-        "Find in Files for audience=, platform=, product=, otherprops=, props=, rev= across kitepump.",
+        "Find in Files for audience= and platform= across the kitepump folder. Also search product=, otherprops=, props=, and rev= — extra mark fields some files use. If you cannot explain one, it goes on the delete list.",
         "Write oxygen-bootcamp-work/week5/condition-census.txt: each hit, the value, one-line meaning, keep or delete.",
         "Delete any value you cannot explain. Do not replace it with a different joke.",
-        "Leave audience=expert and platform=print if they still match Day 29 meanings.",
-        "If you find grouped conditions from a paste, simplify to one attribute unless you can draw the group.",
-        "Validate. Completeness clean.",
+        "Leave audience=expert and platform=print if they still match yesterday’s meanings.",
+        "If you find grouped marks from a paste, simplify to one attribute unless you can draw the group.",
+        "Save. Completeness clean.",
       ],
       failWhen:
-        "A profiling value remains without a census line, or you deleted the expert step’s content while removing the attribute, or the census is empty because you skipped Find in Files.",
+        "A mark remains without a list line, or you deleted the expert step’s words while removing a mark, or the list is empty because you skipped Find in Files.",
       expected:
-        "Census matches the pack. Every remaining condition has a meaning. Files valid.",
+        "The list matches the pack. Every remaining mark has a meaning. Files clean.",
     },
     quiz: [
       {
-        q: "Find in Files shows otherprops=\"legacy\". Nobody can define legacy. First move?",
+        q: "Find in Files shows audience=\"legacy\". Nobody can say what legacy means. What do you do?",
         options: [
-          "Keep it for the next team",
-          "Remove it, or define it in the census and a ditaval — no third option",
-          "Set it on every topic for consistency",
+          "Keep it for the next person",
+          "Remove it, or write a meaning and a switch file action — those are the two options",
+          "Set it on every page so it looks consistent",
         ],
         answer: 1,
-        why: "Undefined conditions are unexploded filters. Define or delete.",
+        why: "A mark with no meaning is a filter waiting to surprise you. Define it or delete it.",
       },
       {
-        q: "Advanced profiling attribute groups exist. You are a junior author. When do you start using them this week?",
+        q: "A product name in the booklet vs a product mark on a step. Which one changes the word in the sentence?",
         options: [
-          "Today — more power",
-          "You do not, unless a lead hands you a drawn model",
-          "Only in AEM Guides",
+          "The mark — it rewrites text",
+          "The name in the booklet — a mark shows or hides a chunk, it does not rename a word",
+          "They do the same job",
         ],
         answer: 1,
-        why: "Awareness from the video. Practice stays on simple audience/platform.",
-      },
-      {
-        q: "product profiling vs a product-name key. Which one changes the string in running text?",
-        options: [
-          "Profiling — it rewrites text",
-          "The key — profiling shows or hides elements, it does not rename a keyword",
-          "Both do the same job",
-        ],
-        answer: 1,
-        why: "Keys substitute. Profiling includes/excludes/flags. Do not mix the jobs.",
+        why: "A key changes the word. A condition shows, hides, or flags the chunk. Different tools.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name the census and what an undefined value forbids",
-      doTitle: "Keep only explained conditions",
-      doDone: "Census complete. Leftover values gone. Pack valid.",
-      stress: "Find one surprise hit in Find in Files",
+      learn: "Find Find in Files and search the kitepump folder",
+      doTitle: "List every mark and delete the ones you cannot explain",
+      doDone: "List complete. Leftover values gone. Pack clean.",
+      stress: "Pick what to do with a mystery value, and key vs mark",
     }),
-    fieldNotePrompt: "Which condition did you delete, and what bug would it have caused in a novice PDF?",
-    tomorrowHook: "Tomorrow you turn on Track Changes and leave a comment a reviewer can accept.",
-    body: `## Census
+    fieldNotePrompt:
+      "Which mark did you delete, and why?",
+    tomorrowHook: "Tomorrow you turn on suggested edits and leave a comment a teammate can read.",
+    body: `## Search the pack
 
-Find in Files is the audit. A condition that is not in the census does not exist as policy — it exists as a bug.
+Find in Files is the audit. A mark that is not on your list is not a plan. It is a surprise.
 
-## Groups
+The video shows grouped marks. Watch for the idea. Do not design groups this week.
 
-The advanced profiling video shows attribute groups. Watch for the idea. Do not design groups this week.
+A **key** changes the word. A **condition** shows or hides the chunk. Do not mix the jobs.
 
-## Keys vs conditions
+## Word today
 
-**keyref** changes the word. **Profiling** shows or hides the element. Different tools.
-
-## Figure
-
-Find in Files panel with audience= hits. Caption: *Search the pack, not only the open file.*
+**Find in Files** — a search across many files, not only the one you have open.
 `,
   },
   {
     n: 32,
     week: 5,
-    title: "Change tracking and comments — one review channel",
+    title: "Comments and suggested edits",
     objective:
-      "Track Changes, edit a paragraph, comment, accept one change and reject another — without mixing Fusion and Guides review on the same file.",
+      "Turn on suggested edits, change a paragraph, add a comment, accept one change and reject another.",
     minutes: 90,
     skills: ["review", "oxygenUi"],
     legacy: ["t4-review"],
     youtube: [
       yt("wysiwyg", [
-        "Review extras if shown",
         "Comments in Author",
+        "Review extras if they appear",
       ]),
     ],
     sources: [S.ugEditor, S.ugAuthor, S.authorDita],
@@ -305,86 +264,77 @@ Find in Files panel with audience= hits. Caption: *Search the pack, not only the
       pack: "kitepump-dita",
       title: "Accept one, reject one",
       steps: [
-        "Open inflate-the-tire.dita. Turn on Track Changes (Review toolbar — verify the label).",
-        "Edit one cmd (insertion). Delete a word in context (deletion). Add a comment on the warning note: confirm pinch-hazard still belongs.",
-        "Open Review view. You should see insertion, deletion, comment.",
+        "Open prime-the-pump.dita. Turn on Track Changes (Review toolbar — verify the label).",
+        "Edit one step (an insertion). Delete a word in the context line (a deletion). Add a comment on the warning: confirm the pinch warning still belongs.",
+        "Open Review view. You should see insertion, deletion, and comment.",
         "Accept the insertion. Reject the deletion. Leave the comment for a teammate — or resolve it if your version uses resolve. Write which you did.",
-        "Turn Track Changes off before you ‘just tidy’ something else.",
-        "Do not paste a Content Fusion comment thread into this file. Do not pretend AEM Guides review is the same panel.",
+        "Turn Track Changes off before you tidy anything else.",
+        "Do not type the warning sentence over a name pointer and call it an edit.",
       ],
       failWhen:
-        "Track Changes was off so the edit vanished into the source, or you accepted everything without reading, or you mixed a second review product into the file.",
+        "Track Changes was off so the edit vanished into the source, or you accepted everything without reading, or you replaced a warning pointer with a copied sentence.",
       expected:
-        "Review view shows the leftover comment (or a resolved thread you recorded). One accept, one reject. File valid.",
+        "Review view shows the leftover comment (or a resolved thread you recorded). One accept, one reject. File clean.",
     },
     quiz: [
       {
-        q: "v1: Do not mix Content Fusion comments and AEM Guides review on the same file. Why?",
-        options: [
-          "The XML becomes not well-formed immediately",
-          "Two review channels split the decision; accepts in one tool miss the other",
-          "Oxygen cannot open files with comments",
-        ],
-        answer: 1,
-        why: "Both can store marks. The team will miss one set. Pick a channel per file.",
-      },
-      {
-        q: "Track Changes is on and you tidy a conkeyref by typing the sentence. What did you do?",
+        q: "Track Changes is on and you tidy a warning pointer by typing the sentence. What did you do?",
         options: [
           "A useful accept",
-          "You may have replaced a pointer with a copy, and the diff hides it as ‘edit’",
-          "Nothing — conkeyref is locked",
+          "You may have replaced a pointer with a copy, and the suggested edit hides that",
+          "Nothing — a pointer cannot be edited",
         ],
         answer: 1,
-        why: "Review the XML in Text if a change looks like ordinary typing on reused content.",
+        why: "Glance at Text if a change looks like ordinary typing on reused content.",
       },
       {
-        q: "Review View records insertions, deletions, and comments. Where is that view?",
+        q: "Review view records insertions, deletions, and comments. Where is that view?",
         options: [
-          "AEM Sites console",
-          "Oxygen’s Review view / panel (right rail or Window menu — verify the label)",
-          "The Transformation view",
+          "Help > About",
+          "Oxygen’s Review view (right side or Window menu — verify the label)",
+          "The completeness report",
         ],
         answer: 1,
-        why: "v1 lab: Track Changes, edit a paragraph, comment, accept.",
+        why: "Suggested edits live in Review view, not in the version dialog and not in completeness.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Track Changes and Review view and what a second channel forbids",
+      learn: "Find Track Changes and Review view",
       doTitle: "Accept one change, reject one, leave a comment",
-      doDone: "Review view matches the story. File valid. Track Changes off at the end.",
-      stress: "Turn tracking off too early, lose a diff, undo from Review if you can",
+      doDone: "Review view matches the story. File clean. Track Changes off at the end.",
+      stress: "Pick what typing over a pointer can hide, and where Review view lives",
     }),
-    fieldNotePrompt: "Which review channel does this desk use for DITA, and which two will you refuse to mix?",
-    tomorrowHook: "Tomorrow you touch Author CSS the allowed way — Hints, not a personal theme.",
-    body: `## Review View
+    fieldNotePrompt:
+      "Which change did you accept, which did you reject, and what did the comment say?",
+    tomorrowHook: "Tomorrow you turn on Hints — labels that appear while you type.",
+    body: `## Suggested edits
 
-v1: *Review View records insertions, deletions, and comments. Do not mix Content Fusion comments and AEM Guides review on the same file.*
+**Track Changes** is a mode that records insertions and deletions so you can accept or reject them. **Review view** lists those edits and your **comments**.
 
-**Track Changes** on. Edit. Comment. Accept or reject with intent. Then turn it off.
+Turn it on. Edit. Comment. Accept or reject with intent. Then turn it off.
 
-## One channel
+This desk uses this panel. One file, one place for comments.
 
-Desktop Oxygen review is this panel. Content Fusion is a collaboration product. AEM Guides has its own review. One file, one channel.
+If you type over a reused warning while tracking is on, you may replace a pointer with a copy. Check Text if the “edit” looks too smooth.
 
-## Figure
+## Word today
 
-Review panel: insertion green, deletion red, comment card. Caption: *Review view, not the Transformation view, not Sites.*
+**Track Changes** — a mode that records suggested edits. **Comment** — a note on a chunk for a teammate.
 `,
   },
   {
     n: 33,
     week: 5,
-    title: "Author CSS you may touch — frameworks, Hints, content completion",
+    title: "Hints that appear while you type",
     objective:
-      "Turn on the Hints style layer, use content completion on Enter, and refuse to invent CSS in Options.",
+      "Turn on Hints, use the list that appears when you press Enter, and leave the look of Author alone.",
     minutes: 90,
     skills: ["oxygenUi", "ditaTopics"],
     legacy: ["t6-framework"],
     youtube: [
       yt("customize", [
-        "Framework as a package",
-        "Hints / inline actions — not a personal stylesheet first",
+        "A framework as a package",
+        "Hints and inline actions — not a private look first",
       ]),
     ],
     sources: [S.ugEditor, S.authorDita, S.ugAuthor],
@@ -392,85 +342,72 @@ Review panel: insertion green, deletion red, comment card. Caption: *Review view
     badgeId: null,
     lab: {
       pack: "kitepump-dita",
-      title: "Hints on, personal CSS off",
+      title: "Hints on",
       steps: [
         "In Author, find the Styles dropdown (default / Hints / Inline actions / Full tags — verify labels).",
-        "Turn on Hints. Write three hint labels you see on a task (e.g. cmd, info, result).",
-        "Place the caret in steps. Press Enter. Content completion should offer step, not a free paragraph at all costs.",
+        "Turn on Hints. Write three hint labels you see on a how-to (for example cmd, info, result).",
+        "Place the caret in the steps. Press Enter. The list should offer a step, not a free paragraph at all costs.",
         "Open Outline. Click result to jump. Click cmd to jump.",
-        "Do not add a custom CSS file in Options to make headings teal. If you already did, remove it and write that you did.",
-        "Write oxygen-bootcamp-work/week5/framework-note.txt: a framework packages schema, CSS, toolbars, templates. I may turn on Hints. I may not ship a personal theme.",
+        "Do not add a private look in Options to make headings a new color. If you already did, remove it and write that you did.",
+        "Write oxygen-bootcamp-work/week5/framework-note.txt: a framework packages the page rules, the look, the toolbar, and the templates. I may turn on Hints. I do not ship a private look.",
       ],
       failWhen:
-        "You added personal Author CSS as the lab, or you never opened content completion, or Hints stayed off.",
+        "You added a private Author look as the lab, or you never opened the Enter list, or Hints stayed off.",
       expected:
-        "Hints on. Three labels listed. Enter used for completion. Framework note written. No personal theme.",
+        "Hints on. Three labels listed. Enter used for the list. Framework note written. No private look.",
     },
     quiz: [
       {
-        q: "A framework packages schema, CSS, toolbars, and templates. Who owns that package on a team desk?",
+        q: "A framework packages page rules, look, toolbars, and templates. Who owns that package on a team desk?",
         options: [
-          "Each author in Options",
-          "The information architect / lead, shared with the install",
-          "AEM Sites templates",
+          "Each writer in Options",
+          "The lead, shared with the install",
+          "Whoever last changed the heading color",
         ],
         answer: 1,
-        why: "v1: Use Hints and Inline actions. Do not each invent CSS in Options.",
+        why: "You may turn on Hints. You do not each invent a private look.",
       },
       {
-        q: "Enter in Author opens content completion. You press Enter twice to ‘make space’. What goes wrong?",
+        q: "Enter in Author opens a list of next pieces. You press Enter twice to ‘make space’. What goes wrong?",
         options: [
-          "Nothing — like Word",
-          "You may insert illegal or extra elements the model did not ask for",
-          "Oxygen converts the file to Markdown",
+          "Nothing — like a normal word processor",
+          "You may insert extra pieces this kind of page did not ask for",
+          "Oxygen converts the file to a notepad file",
         ],
         answer: 1,
-        why: "Enter is a schema-aware insert. Space is not a design tool.",
-      },
-      {
-        q: "Full tags vs Hints. Which one is for daily writing?",
-        options: [
-          "Full tags — always",
-          "Hints (or default) for writing; Full tags when you need to see structure",
-          "Neither — use Grid",
-        ],
-        answer: 1,
-        why: "Full tags are a diagnostic layer. Hints teach the model. Grid is not a novel.",
+        why: "Enter is a smart insert. Space is not a design tool.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Hints, Enter completion, and what Options CSS forbids on this desk",
-      doTitle: "Keep Hints on and personal CSS off",
-      doDone: "Three hint labels listed. Framework note written. No personal theme.",
-      stress: "Turn on Full tags, find a wrapper you forgot, turn Hints back on",
+      learn: "Find the Styles dropdown and turn on Hints",
+      doTitle: "Press Enter in a how-to and write the first offers",
+      doDone: "Three hint labels listed. Framework note written. No private look.",
+      stress: "Pick who owns the package, and what double-Enter can insert",
     }),
-    fieldNotePrompt: "What did content completion refuse to insert, and why was it right?",
-    tomorrowHook: "Tomorrow you Find/Replace with a scope — and you refuse a repo-wide replace you cannot undo.",
-    body: `## Frameworks
+    fieldNotePrompt:
+      "What did the Enter list offer, and what did it not offer?",
+    tomorrowHook: "Tomorrow you find and replace in a folder — without breaking the booklet.",
+    body: `## Labels while you type
 
-v1: *A framework packages schema, CSS, toolbars, and templates. Use Hints and Inline actions. Do not each invent CSS in Options.*
+**Hints** are labels in Author that show the name of the piece you are in (step, command, result) while you type.
 
-You may toggle **Hints**, **Inline actions**, **Full tags**. You may not ship a personal Author theme that only your login can see.
+You may toggle **Hints**, **Inline actions**, and **Full tags**. You may not ship a private Author look that only your login can see.
 
-## Content completion
+**Enter** opens a list of next legal pieces. The parent piece decides the list. If a toolbar button is grey, this kind of page does not allow that thing in that spot.
 
-**Enter** opens completion. The parent element decides the list. If a toolbar action is disabled, the model refused it.
+Outline is the tree. Click to jump.
 
-## Outline
+## Word today
 
-Outline is the tree. Click to jump. If Outline and the canvas disagree, trust Outline plus Text.
-
-## Figure
-
-Styles dropdown on the Author toolbar. Caption: *Verify the label in your version. Hints is a layer, not a new file type.*
+**Framework** — a package that tells Oxygen how this kind of page works: rules, look, toolbar, templates. **Hints** are one layer you may turn on.
 `,
   },
   {
     n: 34,
     week: 5,
-    title: "Find/Replace with care — scope, then a dry run",
+    title: "Find and replace without breaking files",
     objective:
-      "Replace a product string in a scoped folder without touching the library warning or the map’s keydef by accident.",
+      "Replace a product string in a scoped folder without touching the library warning or the booklet’s stored name by accident.",
     minutes: 90,
     skills: ["oxygenUi", "xmlLiteracy"],
     legacy: ["t4-validate"],
@@ -482,81 +419,70 @@ Styles dropdown on the Author toolbar. Caption: *Verify the label in your versio
     badgeId: null,
     lab: {
       pack: "kitepump-dita",
-      title: "Scoped replace, then completeness",
+      title: "A scoped replace, then completeness",
       steps: [
-        "Find in Files: HP-40a (or your product string) across the kitepump folder. Count the hits. Note which are keydef, keyref, and leftover hardcoded text.",
-        "If you still have hardcoded product strings in topics, replace them in topics/ only — not in maps/, not in ditaval/, not in warnings.dita unless you mean to.",
-        "Use Find/Replace in Files with a file filter (*.dita) and a folder scope. Preview replacements if your version has Preview. Do not Replace All on the repo root.",
-        "After replace: validate open files, then completeness on the root map.",
-        "Write oxygen-bootcamp-work/week5/replace-log.txt: scope, filter, how many replacements, what you refused to touch.",
-        "Undo from local history or Git if the map’s keydef changed by accident — then write that you needed undo.",
+        "Find in Files: KP-2a (or your product string) across the kitepump folder. Count the hits. Note which are the stored name in the booklet, which are pointers, and which are leftover typed text.",
+        "If topics still have a typed product string, replace them in topics/ only — not in maps/, not in ditaval/, not in warnings.dita unless you mean to.",
+        "Use Find/Replace in Files with a file filter (*.dita) and a folder scope. Preview replacements if your version has Preview. Do not Replace All on the whole workspace.",
+        "After replace: confirm open files have no red error, then run completeness on the root map.",
+        "Write oxygen-bootcamp-work/week5/replace-log.txt: scope, filter, how many replacements, what you left untouched.",
+        "If the booklet’s stored name changed by accident, undo, then write that you needed undo.",
       ],
       failWhen:
-        "Replace All ran on the whole workspace, or the keydef was emptied, or warnings.dita lost a sentence you did not intend.",
+        "Replace All ran on the whole workspace, or the booklet’s stored name was emptied, or warnings.dita lost a sentence you did not intend.",
       expected:
-        "Replace log written. Keydef still holds the name. Completeness clean. No workspace-wide replace.",
+        "Replace log written. The booklet still holds the product name. Completeness clean. No workspace-wide replace.",
     },
     quiz: [
       {
-        q: "Find/Replace in Files can restrict to an XPath. You need that today?",
-        options: [
-          "Yes, always",
-          "Not required today — folder plus *.dita is the junior-safe scope; XPath is Week 8",
-          "XPath is only for Schematron",
-        ],
-        answer: 1,
-        why: "v1 mentions XPath restrict as a power tool. Scope first. XPath later.",
-      },
-      {
-        q: "Replace All on the repo root for ‘note’ → ‘caution’. What blows up?",
+        q: "Replace All on the whole workspace for note → caution. What blows up?",
         options: [
           "Nothing — words are words",
-          "Element names, comments, and unmatched sentences",
-          "Only Markdown files",
+          "Tag names, comments, and unmatched sentences",
+          "Only the completeness report",
         ],
         answer: 1,
-        why: "You will rename XML names. Scope and preview exist because of this class of mistake.",
+        why: "You will rename tags. Folder plus file filter exist because of this class of mistake.",
       },
       {
-        q: "The product name lives in a keydef. A topic still has a hardcoded copy. First repair?",
+        q: "The product name lives in the booklet. A page still has a typed copy. First repair?",
         options: [
-          "Replace All including the map",
-          "Replace the topic copy with a keyref; leave the keydef as the source",
-          "Delete the keydef so there is one copy in the topic",
+          "Replace All including the booklet",
+          "Replace the page copy with a name pointer; leave the booklet as the source",
+          "Delete the name in the booklet so there is one copy on the page",
         ],
         answer: 1,
-        why: "The map owns the name. Replace in topics is toward keyref, not toward deleting the key.",
+        why: "The booklet owns the name. Replace on pages is toward a key, not toward deleting the key.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name folder scope and file filter and what Replace All on root forbids",
-      doTitle: "Keep the keydef intact after a scoped replace",
-      doDone: "Log written. Completeness clean. No accidental library wipe.",
-      stress: "Preview a too-wide replace and cancel it",
+      learn: "Find Find/Replace in Files and the folder field",
+      doTitle: "Replace in topics/ only, then run completeness",
+      doDone: "Log written. Completeness clean. Booklet name still there.",
+      stress: "Pick what a workspace-wide replace breaks, and how to repair a typed product name",
     }),
-    fieldNotePrompt: "What would you refuse to Replace All even with preview, and why?",
-    tomorrowHook: "Tomorrow is the Week 5 boss: conditions, review, Hints, and a replace you can defend.",
-    body: `## Scope first
+    fieldNotePrompt:
+      "What folder did you search, how many replacements ran, and what did you leave untouched?",
+    tomorrowHook: "Tomorrow is the week check. Passing it opens week 6.",
+    body: `## Folder first
 
-Find in Files is an audit. Replace is a weapon. Set **folder**, **file filter**, and if you have it, **preview**.
+Find in Files is an audit. Replace is a sharp tool. Set **folder**, **file filter**, and if you have it, **preview**.
 
-Never Replace All on the workspace root. Never replace an XML name as if it were English.
+Never Replace All on the whole workspace. Never replace a tag name as if it were English.
 
-## Keys
+If the string is the product name, the repair is a **keyref** (a name pointer), not a replace that also hits the booklet’s stored name.
 
-If the string is the product name, the repair is a **keyref**, not a clever replace that also hits the keydef.
+## Word today
 
-## Figure
-
-Find/Replace in Files dialog with a folder path and \`*.dita\`. Caption: *Scope is a field, not a hope.*
+**Scope** — the folder and file type you search in, so you do not change the whole workspace.
 `,
   },
   {
     n: 35,
     week: 5,
-    title: "Boss — Author tools you can defend",
+    title: "Week 5 check",
     objective:
-      "Explain one DITAVAL, show Track Changes hygiene, prove Hints are on, and pass a condition census.",
+      "Explain one switch file, show suggested-edit hygiene, prove Hints are on, and pass the mark list.",
     minutes: 110,
     skills: ["review", "reuse", "oxygenUi"],
     legacy: ["t5-profile", "t4-review"],
@@ -570,87 +496,77 @@ Find/Replace in Files dialog with a folder path and \`*.dita\`. Caption: *Scope 
     boss: true,
     lab: {
       pack: "kitepump-dita",
-      title: "Clinic: filter, review, Hints",
+      title: "Filter, review, Hints",
       steps: [
-        "Copy kitepump to oxygen-bootcamp-work/week5-clinic/.",
+        "Copy kitepump to oxygen-bootcamp-work/week5-check/ so you do not wreck the original.",
         "Apply novice.ditaval in Author. Show that the expert step is filtered. Switch off. Source still has the step.",
-        "Track Changes: make a dummy edit, reject it. Leave no stray tracking on when you stop.",
-        "Hints on. Content completion on Enter in a task. Write the first three offers.",
-        "Condition census still true on the clinic copy. No unexplained otherprops.",
-        "Timed completeness read on the clinic copy. Write file-visit count.",
-        "Answer the boss quiz. Day 36 still unlocks if Day 34 lab is done.",
+        "Track Changes: make a dummy edit, reject it. Leave tracking off when you stop.",
+        "Hints on. Press Enter in a how-to. Write the first three offers.",
+        "The mark list still matches the check copy. No unexplained marks.",
+        "Run completeness on the check copy.",
+        "Pass the quiz. Week 6 stays locked until this day is finished (lab + quiz + a short note).",
       ],
       failWhen:
-        "The expert step was deleted from source, or Track Changes is still recording junk, or a condition has no meaning, or Hints were never opened.",
+        "The expert step was deleted from source, or Track Changes is still recording junk, or a mark has no meaning, or Hints were never opened.",
       expected:
-        "Clinic copy valid. DITAVAL explained in one sentence. Review clean. Hints on. Completeness count written.",
+        "Check copy clean. Switch file explained in one sentence. Review clean. Hints on. Completeness clean.",
     },
     quiz: [
       {
-        q: "A yellow light bulb Quick Fix appears on a profiling error. When do you click it?",
+        q: "A yellow bulb offers to fix a mark. When do you click it?",
         options: [
-          "Always — it is official",
-          "Only when you can explain what it will change",
-          "Never in Author mode",
+          "Always — bulbs are official",
+          "Only when you can say what it will change",
+          "Never in Author",
         ],
         answer: 1,
-        why: "Quick Fixes can reshape structure. Read first. Same rule as Week 1.",
+        why: "Some fixes reshape the page. Read first. Same rule as week 1.",
       },
       {
-        q: "You failed this boss. Does Day 36 stay locked?",
+        q: "You failed this check. Does week 6 open?",
         options: [
-          "Yes, forever",
-          "No, if Friday (Day 34) lab is done the next week can unlock. The boss badge stays locked until you pass.",
-          "No, Daily Burst unlocks the week",
+          "Yes, Friday’s replace is enough",
+          "No. Week 6 stays locked until this day is finished. Retry the quiz if you need to.",
+          "Yes, if the 5-minute warmup is done",
         ],
         answer: 1,
-        why: "Boss badge waits. Curriculum week does not hostage you if Friday lab is done.",
+        why: "Lab, quiz, and a short note. Retry is free. The warmup does not open the week.",
       },
       {
-        q: "novice.ditaval is explained as ‘makes it pretty’. Ship it?",
+        q: "The novice switch file is explained as ‘makes it pretty’. Ship it?",
         options: [
-          "Yes if the PDF looks nicer",
-          "No — the badge requires include/exclude/flag in operational words",
+          "Yes if Author looks nicer",
+          "No — you must say include, exclude, or flag in plain words",
           "Yes if Hints are on",
         ],
         answer: 1,
-        why: "ditaval-explained is a meaning, not a vibe.",
-      },
-      {
-        q: "Review comments from Fusion and desktop Track Changes both live on inflate-the-tire.dita. First move?",
-        options: [
-          "Keep both for safety",
-          "Pick one channel; export or resolve the other before you accept",
-          "Publish WebHelp — comments strip automatically",
-        ],
-        answer: 1,
-        why: "Two channels split the decision. Publishing may or may not strip marks — do not bet the procedure on it.",
+        why: "A switch file is an action list, not a vibe.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name DITAVAL actions, Review view, and Hints",
-      doTitle: "Clinic copy still honest",
-      doDone: "Filter proven. Review clean. Hints on. Census true. Completeness counted.",
-      stress: "Explain exclude vs flag in one sentence",
+      learn: "Name exclude, flag, Review view, and Hints out loud",
+      doTitle: "Prove the filter, the rejected edit, and Hints on the check copy",
+      doDone: "Filter proven. Review clean. Hints on. List true. Completeness clean.",
+      stress: "Pass the quiz. Retry if you need to.",
     }),
-    fieldNotePrompt: "Write the DITAVAL in one sentence a lead could put in a runbook.",
-    tomorrowHook: "Week 6: transformation scenarios, WebHelp, PDF, and a FAILED log you must be able to read.",
-    body: `## Clinic
+    fieldNotePrompt:
+      "Write the switch file in one sentence: who it is for, and what it hides or flags.",
+    tomorrowHook:
+      "Week 6: turn the booklet into a site or a PDF. You will read the log even when it works.",
+    body: `## A check, not a show
 
-This is a week boss: filter + review hygiene + Author layers + completeness.
-
-Fail it and **Day 36 still unlocks if Day 34 lab is done**. The badge stays locked until you retry.
-
-## Proof
+This is the week boss. You already met these tools.
 
 1. **Exclude** hides a step in the view; Text still has it.
-2. **Track Changes** off, leftover dummy rejected.
+2. **Track Changes** off; leftover dummy rejected.
 3. **Hints** on; Enter completes a step.
-4. **Census** has no orphans.
+4. **The list** has no mystery marks.
 
-## Figure
+Fail the quiz and **week 6 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week.
 
-Author with profiling colors + Review empty of junk + Styles = Hints. Caption: *Three panels, one clinic.*
+## Word today
+
+No new word. Use **ditaval**, **exclude**, **flag**, **Track Changes**, and **Hints** in the note you write.
 `,
   },
 ].map((d) => ({ ...d, week: weekOf(d.n) }));

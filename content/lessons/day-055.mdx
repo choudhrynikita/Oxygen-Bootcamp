@@ -1,8 +1,8 @@
 ---
 day: 55
 week: 8
-title: Accessibility of the DITA you write
-objective: "Fix alt text, heading order, and a table header in kitepump, and say what Author CSS cannot fake."
+title: Make pages people can actually use
+objective: "Add real alt text, keep one title, give a table a header row, and pass the quiz so week 9 can open."
 timeboxMinutes: 90
 skills: [ditaTopics, review]
 legacyLessonIds: []
@@ -10,11 +10,11 @@ youtube:
   - id: bnQwJZD58wY
     title: WYSIWYG XML Editing
     watchFor:
-      - Author is CSS. Accessibility is in the XML.
+      - The page view is not the published page
   - id: w4jtBsSIiyw
     title: Schematron rules and Quick Fixes
     watchFor:
-      - Policy you could encode later
+      - A rule you could write later for missing alt
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
@@ -23,51 +23,82 @@ lab:
   id: lab-55
   title: "Alt, title, table header"
   pack: kitepump-dita
-  failWhen: "Alt is empty or equals the filename, or the table has no header."
-  expected: Image with teaching-point alt. Table with header. CSS limitation written.
+  failWhen: "Alt is empty or equals the file name, or the table has no header, or you leave the check copy broken."
+  expected: Image with teaching-point alt. Table with a header. Limitation written. Check copy opens clean.
   steps:
-    - "Add an image to a topic with alt text that states the teaching point, not ‘image1.png’."
-    - "Check titles: one title per topic, shortdesc is not a second h1."
+    - Copy a kitepump topic to oxygen-bootcamp-work/week8/usable/ so you do not wreck the sample.
+    - "Add an image (or a figure with a placeholder) whose alt text states the teaching point, not the file name."
+    - "Check titles: one title per page. The short line under the title is not a second title."
     - "If you have a simple table, give it a header row. If not, add a two-column lookup table with headers."
-    - "Write: Author CSS cannot make missing alt accessible in WebHelp."
+    - "Write in oxygen-bootcamp-work/week8/usable-note.txt: pretty Author view cannot make missing alt usable in the HTML output."
+    - Pass the quiz. You can retry it. Week 9 stays locked until this day is finished (lab + quiz + a short note).
 sessionQuests:
   - id: a
     block: A
-    title: "Name alt and table headers as content, not chrome"
+    title: "Find alt text, the title, and a table header"
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Topic still validates with the image
+    title: "Make one page usable: alt, one title, header row"
     minutes: 25
-    done: Alt is a teaching point. Table has a header.
+    done: Alt is a teaching point. Table has a header. Note written.
   - id: c
     block: C
-    title: What a screen reader gets from filename alt
+    title: Pass the quiz. Retry if you need to.
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [output-oracle, glossary-lightning]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, one-line-repair]
 toolCards: [author-mode]
 badgeId: null
 boss: true
 checks:
-  - { id: lab, prompt: Image with teaching-point alt. Table with header. CSS limitation written. }
+  - { id: lab, prompt: Image with teaching-point alt. Table with a header. Limitation written. Check copy opens clean. }
 quiz:
-  - q: "Pretty Author CSS is enough for output accessibility. True?"
+  - q: "Pretty Author view is enough for the published page to be usable. True or not?"
     answer: 1
-    why: "The XML has to carry alt, headers, and titles. CSS can hide the problem in Author and still fail the output."
+    why: "A screen reader reads the file, not your CSS. Alt and headers live in the page."
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "Which inaccessible pattern do you still see in your real job?"
-tomorrowHook: AEM as an author — Sites is not DITA.
+      - "True — if it looks fine on your screen, it is fine"
+      - "Not true — the file has to carry alt text, headers, and a real title. Pretty view can hide a missing alt"
+      - True for PDF only
+  - q: "You failed this check. Does week 9 open anyway?"
+    answer: 1
+    why: Next week waits. Retry is free. The warmup does not open the week.
+    options:
+      - "Yes, the Friday page is enough"
+      - "No. Finish this day’s lab, quiz, and note. You can retry the quiz."
+      - "Yes, if you do the 5-minute warmup"
+  - q: "The first completeness error yesterday was a missing file. First move this week?"
+    answer: 0
+    why: One error at a time. Same words for the same things. Switches stay off.
+    options:
+      - "Repair that row, then re-run the check"
+      - Turn on an experimental switch
+      - Type audience=ninja so the filter is richer
+fieldNotePrompt: "What alt text did you write, and what did the table’s header row say?"
+tomorrowHook: Tomorrow you meet the website team next door. Different app. Different job.
 ---
 
 ## The content you write
 
-Alt text is a teaching point. Tables have headers. Titles are titles. Author CSS is not an accessibility tree. Week 8 clinic badge waits if the lab fails. Week 9 still unlocks if Friday (Day 54) lab is done.
+**Alt text** is the words a screen reader speaks when there is a picture. Write the teaching point. Not `image1.png`.
+
+Tables have **header** rows. Titles are titles. The short line under the title is not a second title.
+
+Pretty Author view is not the published page. WebHelp will not invent alt you did not write.
+
+This is the week boss. Fail the quiz and **week 9 stays locked**. Retry as many times as you want.
+
+## Word today
+
+**Alt text** — the words that stand in for a picture when a person cannot see it.
+
+## One line about later
+
+Next week you walk to the website team. Not today.

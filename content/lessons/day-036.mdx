@@ -1,8 +1,8 @@
 ---
 day: 36
 week: 6
-title: Transformation scenarios — the map is what you publish
-objective: "Open Configure Transformation Scenario, filter DITA Map, and attach a scenario to kitepump.ditamap without running a broken output path."
+title: "What \"publish\" means here"
+objective: "Open Configure Transformation Scenario, filter DITA Map, and attach a recipe to kitepump.ditamap without dumping output into the source folder."
 timeboxMinutes: 90
 skills: [publish, maps]
 legacyLessonIds: [t5-publish]
@@ -10,87 +10,87 @@ youtube:
   - id: zNmXfKWXwO8
     title: Creating a Publishing Template to Customize WebHelp and PDF using CSS
     watchFor:
-      - Where publishing templates sit relative to a scenario
-      - That WebHelp and PDF can share CSS ideas — awareness
+      - Where publishing recipes sit
+      - That a site and a PDF are two outputs from the same booklet
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
 lab:
   id: lab-36
-  title: "Name the scenario, pick the output folder"
+  title: "Name the recipe, pick the output folder"
   pack: kitepump-dita
-  failWhen: "Output is set to the source topics/ folder, or you published a single topic when you meant the map, or you skipped Configure and mashed Apply on a mystery default."
-  expected: Scenario named and associated to the map. Output folder outside source. DITAVAL field noted. Nothing published yet if you chose to wait — or a clean first run if you did run it.
+  failWhen: "Output is set to the source topics/ folder, or you published a single page when you meant the booklet, or you skipped Configure and ran a mystery default."
+  expected: Recipe named and attached to the booklet. Output folder outside source. Switch-file field noted. Nothing published yet — or a clean first run if you did run it.
   steps:
-    - Set kitepump.ditamap as root map. Open DITA Maps Manager.
+    - Set kitepump.ditamap as the root map. Open DITA Maps Manager.
     - Configure Transformation Scenario (toolbar or Document > Transformation — verify the label). Filter ‘DITA Map’.
-    - Select DITA Map WebHelp Responsive. Do not run it yet.
+    - Select DITA Map WebHelp Responsive. That is a clickable draft site. Do not run it yet.
     - "Set the output folder to oxygen-bootcamp-work/week6/out-webhelp/ — outside the source tree. If the default is inside maps/, change it."
-    - Attach novice.ditaval if the scenario has a DITAVAL field. Write whether you attached it.
-    - Save the scenario association on the map if your version stores it. Write the scenario name in oxygen-bootcamp-work/week6/scenario-name.txt.
+    - "If the recipe has a field for a switch file, attach novice.ditaval. Write whether you attached it."
+    - Save the recipe on the map if your version stores it. Write the recipe name in oxygen-bootcamp-work/week6/scenario-name.txt.
 sessionQuests:
   - id: a
     block: A
-    title: Name Configure Transformation Scenario and what an in-source out folder forbids
+    title: Find Configure Transformation Scenario and the DITA Map filter
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep output outside the pack
+    title: Attach a recipe and put output outside the pack
     minutes: 25
-    done: Scenario associated to the map. Output path recorded. DITAVAL field noted.
+    done: Recipe associated to the booklet. Output path recorded. Switch-file field noted.
   - id: c
     block: C
-    title: Filter the scenario list wrong (XML instead of DITA Map) and recover
+    title: "Pick what you publish, and why output cannot live in topics/"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [glossary-lightning, authors-dare]
+    done: Note saved.
+dailyBurstPool: [output-oracle, one-line-repair]
 toolCards: [transformation, maps-manager]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Scenario named and associated to the map. Output folder outside source. DITAVAL field noted. Nothing published yet if you chose to wait — or a clean first run if you did run it. }
+  - { id: lab, prompt: Recipe named and attached to the booklet. Output folder outside source. Switch-file field noted. Nothing published yet — or a clean first run if you did run it. }
 quiz:
-  - q: "Apply Transformation Scenario runs DITA-OT. What should you select as the resource?"
+  - q: "You run a transformation scenario. What should you select as the thing to publish?"
     answer: 1
-    why: "v1: Publish the map. A topic transform is a fragment, not the handbook."
+    why: "Publish the booklet. One page is a fragment, not the handbook."
     options:
       - The currently open paragraph
-      - The DITA map (the book)
-      - A Schematron file
-  - q: "Output folder inside topics/. What goes wrong next week?"
+      - The DITA map (the booklet)
+      - Help > About
+  - q: "Output folder is inside topics/. What goes wrong later?"
     answer: 1
     why: out/ stays out. Source stays source.
     options:
-      - Nothing — DITA-OT skips XML
-      - Generated HTML gets topicref’d or committed as source
-      - Oxygen deletes the map
-  - q: "In AEM Guides the server baseline is the release; a local PDF is a draft. True?"
-    answer: 0
-    why: v1 sentence. Desktop transforms are drafts unless your desk says otherwise.
-    options:
-      - "True"
-      - "False"
-fieldNotePrompt: "What scenario name did you associate, and where does HTML go?"
-tomorrowHook: Tomorrow you actually run WebHelp Responsive and open index.html from the output folder.
+      - Nothing — the engine skips page files
+      - "Generated files get mixed with source, or even pointed at by the booklet"
+      - Oxygen deletes the booklet
+fieldNotePrompt: "What recipe name did you attach, and where will the output folder live?"
+tomorrowHook: Tomorrow you run that recipe and open a clickable draft site.
 ---
 
-## Transformation scenarios
+## Publish, on this desk
 
-v1: *Apply Transformation Scenario runs DITA-OT. Publish the map. In AEM Guides the server baseline is the release; a local PDF is a draft.*
+**Publish** here means: turn the booklet into a site or a PDF.
 
-**Configure Transformation Scenario** → filter **DITA Map**. Pick the type. Set **output** outside source (e.g. `out/`).
+A **transformation scenario** is a saved recipe: which booklet, which engine, which output folder.
 
-## DITAVAL on the scenario
+**DITA-OT** is the engine that turns the booklet into a site or a PDF. You do not start it by hand. The recipe starts it.
 
-Author preview and publish filters are different attachments. If novice.ditaval belongs on this output, attach it here too.
+**Configure Transformation Scenario** → filter **DITA Map**. Pick the type. Set **output** outside source (for example `out/`).
 
-## Figure
+If yesterday’s switch file belongs on this output, attach it here too. Author preview and publish filters are different attachments.
 
-Transformation dialog: filter DITA Map, output path `oxygen-bootcamp-work/week6/out-webhelp/`. Caption: *Right rail Transformation view, or the toolbar Apply. Verify labels.*
+The recipe named **WebHelp Responsive** makes a clickable draft site. You will run it tomorrow.
+
+Do not run it yet unless you want a peek.
+
+## Word today
+
+**Publish** — turn the booklet into a site or a PDF. **Transformation scenario** — the saved recipe. **DITA-OT** — the engine that does the turning.

@@ -1,8 +1,8 @@
 ---
 day: 51
 week: 8
-title: "Branch filtering — the idea, not the production switch"
-objective: Explain branch filtering as ‘this subtree uses a different ditaval’ and refuse to turn it on in a live map you do not own.
+title: Big booklets that feel slow
+objective: "Write three things that make Author crawl on a big booklet, and use Maps Manager on kitepump instead of opening every page at once."
 timeboxMinutes: 90
 skills: [reuse, maps]
 legacyLessonIds: []
@@ -10,59 +10,84 @@ youtube:
   - id: CgBbPW3mJzw
     title: Profiling and Reuse
     watchFor:
-      - Ditaval at map level vs a mystery flag
+      - Extra color marks on a page
+      - A filter on a booklet vs a mark on one step
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
   - { href: "https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part1-base/introduction/dita-release-overview.html", label: DITA 1.3 overview (OASIS), dated: 2018-12 }
 lab:
   id: lab-51
-  title: "Draw the subtree, do not throw the switch"
+  title: "Three slowness causes, one small book"
   pack: kitepump-dita
-  failWhen: You push branch filtering to the only copy of the map.
-  expected: A sketch plus a restraint sentence. Copy remains publishable without the experiment.
+  failWhen: "You skip the three causes, or you try to prove slowness by copying a giant book into the pack."
+  expected: Three slowness causes in your words. Maps Manager used. Pack still small.
   steps:
-    - "Sketch on paper: Service topichead filtered novice, Product topichead unfiltered."
-    - Write how a ditavalval on a topicref (verify the element name in your DITA version) would differ from a transform-level ditaval.
-    - Do not add ditavalref to the shipping kitepump map unless you copied it first.
-    - "Record: I did not enable a DITA 1.3 feature I cannot support in review."
+    - Open kitepump.ditamap in Maps Manager. Do not open both topics in Author at the same time unless you need them.
+    - "Write three slowness causes in oxygen-bootcamp-work/week8/slow-author.txt: (1) a huge booklet opened as one Author page with every tag showing, (2) live checking of every file on every keystroke, (3) extra color marks and extra panels left on from last week."
+    - "On this small pack, turn profiling colors on, then off again. Write one line: kitepump is small, so it stays snappy. A 400-page book with the same panels would not."
+    - Do not paste a second copy of the whole company book into this folder to ‘feel’ slowness.
 sessionQuests:
   - id: a
     block: A
-    title: Name branch filtering and what it forbids (surprise subtrees)
+    title: "Open the booklet in Maps Manager, not as one giant Author page"
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the shipping map boring
+    title: Write three slowness causes
     minutes: 25
-    done: Sketch done. Shipping map untouched or copied.
+    done: Three causes saved. Pack still small.
   - id: c
     block: C
-    title: Explain ditavalref vs transform ditaval in one sentence
+    title: "Pick the first move on a slow book, and why this tiny pack still teaches it"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [glossary-lightning, authors-dare]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, one-line-repair]
 toolCards: [maps-manager]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: A sketch plus a restraint sentence. Copy remains publishable without the experiment. }
+  - { id: lab, prompt: Three slowness causes in your words. Maps Manager used. Pack still small. }
 quiz:
-  - q: "Branch filtering is required to print a PDF. True?"
+  - q: "A 2,000-page booklet feels slow in Author. First move?"
     answer: 1
-    why: "A transform-level ditaval is enough for this course. Branch filtering is an idea you must be able to explain, not a switch to flip at work."
+    why: Author is a page view. Maps Manager is the book. Slow is usually too much book in the page view.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "When would you tell a lead ‘not this release’ about branch filtering?"
-tomorrowHook: "DITA 2.0 experimental flags — what exists, what you will not enable at work."
+      - "Open the whole book in Author with every tag showing, so you can see everything"
+      - Use Maps Manager. Open one page when you need it. Turn off live check-everything if it is on
+      - Add more color marks
+  - q: "kitepump only has two pages. Why write slowness causes today?"
+    answer: 0
+    why: The pack is the apple. The three causes are the lesson. You do not need a giant book to name them.
+    options:
+      - So you do not do those three things on a real shop book next month
+      - Because this pack is already slow
+      - Because completeness requires it
+fieldNotePrompt: "What three slowness causes did you write? Paste them."
+tomorrowHook: "Tomorrow: switches you should not turn on at work yet. Look. Do not flip them on the live map."
 ---
 
-## Idea only
+## Slow is usually self-inflicted
 
-A subtree can carry its own filter. That is powerful and easy to make undebuggable. This week you can draw it. You do not owe production a ditavalref.
+kitepump is two pages. It will not crawl. A real shop book will, if you treat Author like a place to hold the whole company.
+
+Do not open a huge booklet in Author with every tag showing. Do not validate the world on every keystroke. Do not leave every color mark and every panel on from last week.
+
+Use **Maps Manager** for the book. Open one page when you write.
+
+## Word today
+
+**Slow booklet** — a big table of contents that crawls when you open too much of it in the page view.
+
+## Watch
+
+The profiling video. Extra color marks on a page are useful. On a 400-page book with every panel open, they add up.
+
+## Lab
+
+Three causes, written down. Do not import a giant book to prove a point.

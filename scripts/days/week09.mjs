@@ -7,16 +7,16 @@ export default [
   {
     n: 56,
     week: 9,
-    title: "AEM author vs publish — you are not a developer this week",
+    title: "Another team writes web pages in Adobe",
     objective:
-      "Write what the author environment is for, what the publish environment is for, and why a DITA map is not an AEM page.",
+      "Write what AEM is, what Oxygen still is, and why they are not the same product.",
     minutes: 90,
     skills: ["aemSites"],
     legacy: ["t7-aem"],
     youtube: [
       yt("aemHeadless", [
-        "Headful Sites vs headless mentions",
-        "That AEM is more than one authoring surface",
+        "That Adobe has a website tool with an editing side",
+        "You are only looking — you will not build a headless site today",
       ]),
     ],
     sources: [S.aemAuthor, S.aemCloudQs, S.aem65],
@@ -24,83 +24,105 @@ export default [
     badgeId: null,
     lab: {
       pack: "aem-author-field-log",
-      title: "Field log: author vs publish vs Oxygen",
+      title: "Field log: two desks",
       steps: [
-        "You may not have an AEM instance. That is expected. Use official video + labeled mocks + this field log.",
-        "Create oxygen-bootcamp-work/week9/field-log-56.txt with four sentences: (1) Author is where you edit pages. (2) Publish is what the site visitor hits. (3) Oxygen is Syncro Soft desktop DITA. (4) There is no product named AEM Oxygen XML Editor.",
-        "Add: a campaign landing page belongs in Sites first, not in a DITA map.",
+        "You may not have an AEM login. That is expected. Use the official video, the labeled mock in the pack, and this field log.",
+        "Create oxygen-bootcamp-work/week9/field-log-56.txt with four sentences: (1) Author is where the website team edits pages. (2) Publish is what a site visitor hits. (3) Oxygen is the Syncro Soft writing app you have used since week 1. (4) There is no product named AEM Oxygen XML Editor.",
+        "Add: a campaign landing page belongs on the website team’s desk first, not in your DITA booklet.",
         "Sketch or paste a labeled mock: two boxes, Author | Publish. Caption: mock.",
-        "Do not install AEM locally as this lab. Do not treat WKND code as an authoring exercise.",
+        "Do not install AEM on your laptop as this lab. Do not treat a developer tutorial as an authoring exercise.",
       ],
       failWhen:
-        "The log names AEM Oxygen XML Editor, or treats publish as ‘the PDF button’, or claims Guides is a Sites theme.",
+        "The log names AEM Oxygen XML Editor as a real product, or treats publish as last week’s PDF button, or has no mock caption.",
       expected:
         "Four factual sentences. Mock labeled. Landing-page rule present.",
     },
     quiz: [
       {
-        q: "Campaign landing pages should be written in Oxygen. True?",
-        options: ["True", "False"],
-        answer: 1,
-        why: "v1: Landing pages belong in AEM Sites. Oxygen is structured XML topics.",
+        q: "What is AEM, in one line?",
+        options: [
+          "Adobe’s website tool. Another team writes web pages in it",
+          "The Syncro Soft writing app you installed in week 1",
+          "A PDF engine",
+        ],
+        answer: 0,
+        why: "AEM is Adobe Experience Manager. It is a different desk. You still write help pages in Oxygen.",
       },
       {
-        q: "Author vs publish: you Quick Publish a page. What did you ask AEM to do?",
+        q: "Oxygen and AEM are the same product. True or not?",
         options: [
-          "Run DITA-OT",
-          "Activate the page (and often its assets) to the publish environment",
-          "Commit to Git",
+          "True — the name is AEM Oxygen XML Editor",
+          "Not true. Oxygen is Syncro Soft. AEM is Adobe. There is no product called AEM Oxygen XML Editor",
+          "True — they both save files, so they are one app",
         ],
         answer: 1,
-        why: "Publish is a topology, not a transform scenario.",
+        why: "Two companies. Two apps. They can hand work to each other later. They are not one editor.",
       },
       {
-        q: "Why are this week’s screenshots called mocks if you have no instance?",
+        q: "Author vs publish: what is the difference?",
         options: [
-          "To hide Adobe UI",
-          "Official UI is copyrighted; labeled mocks plus Experience League videos are the honest substitute",
-          "Mocks are graded as code",
+          "Author is where they edit. Publish is the live copy a visitor hits",
+          "Author is Oxygen. Publish is a DITA map",
+          "They are two names for last week’s WebHelp folder",
         ],
-        answer: 1,
-        why: "Content policy: label mocks as mocks. Do not use stock photos as product UI.",
+        answer: 0,
+        why: "Two environments. Edit on author. Visitors see publish. This is not a transform scenario.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name author, publish, and Oxygen as three different things",
-      doTitle: "Keep the four sentences honest",
+      learn: "Watch the official video and open the labeled mock",
+      doTitle: "Write the four sentences and caption the mock",
       doDone: "Log written. Mock labeled. No fake product name.",
-      stress: "Catch publish-as-PDF in your own draft and delete it",
+      stress: "Pick what AEM is, what Oxygen still is, and what author vs publish means",
     }),
-    fieldNotePrompt: "When would you refuse to write a procedure as a Sites Text component?",
-    tomorrowHook: "Tomorrow the Sites console — where pages live as a tree, not as a ditamap.",
-    body: `## AEM as an author
+    fieldNotePrompt:
+      "What four sentences did you write? Paste them.",
+    tomorrowHook:
+      "Tomorrow the Sites tree — where their pages live. It is not your booklet.",
+    body: `## A different desk
 
-v1: *AEM Author is pages, assets, fragments, and workflows. Use Sites for marketing pages, Content Fragments for headless fields, Experience Fragments for reusable layout, and AEM Guides for DITA stored in the DAM.*
+You have been writing help pages in **Oxygen**, the Syncro Soft writing app, since week 1.
 
-This week is **Sites**. You are an author, not a developer. You will not deploy WKND as code.
+Another team writes web pages in a tool called **AEM** (Adobe Experience Manager). Adobe makes it. It is a website tool. Landing pages, marketing pages, the public site.
+
+Oxygen is still your writing app. AEM is still their website tool. They are not the same product. There is no product called “AEM Oxygen XML Editor.” If a search hit or a coworker’s note uses that mash-up, it is still wrong. Write the two names on two lines in your notes.
 
 ## Author vs publish
 
-**Author** is the editing environment. **Publish** is the public (or internal) live copy. Quick Publish copies selected trees. This is not DITA-OT.
+**Author** is the editing environment — where the website team changes a page.
+
+**Publish** is the live copy a visitor hits.
+
+That pair is not last week’s WebHelp folder. You are not running DITA-OT. You are not making a PDF.
+
+You will hear extra words in the video (headless, cloud). Skip them today. You only need: another team, another app, author vs publish.
+
+## Word today
+
+**AEM** — Adobe’s website tool. Not Oxygen. Not your booklet.
 
 ## Figure
 
-Labeled mock: two servers, author left, publish right. Caption: *Mock. Not a screenshot of a customer instance.*
+Labeled mock: two boxes, Author | Publish. Caption: *Mock. Not a screenshot of a customer instance.*
+
+## Lab
+
+Four sentences. Mock labeled. If you have no login, the pack \`aem-author-field-log\` is the work.
 `,
   },
   {
     n: 57,
     week: 9,
-    title: "Sites console — the tree is not a DITA map",
+    title: "The Sites tree is not your booklet",
     objective:
-      "Name the Sites console, list three things you can do there (navigate, create, select), and refuse to call the tree a ditamap.",
+      "Name the Sites console, list three things you can do there, and write why that tree is not a DITA map.",
     minutes: 90,
     skills: ["aemSites", "oxygenUi"],
     legacy: ["t7-aem"],
     youtube: [
       yt("aemQuick", [
-        "Site creation / console context",
         "Where pages appear as a tree",
+        "The console around that tree",
       ]),
     ],
     sources: [S.basicHandling, S.aemCloudQs, S.aemAuthor],
@@ -110,74 +132,86 @@ Labeled mock: two servers, author left, publish right. Caption: *Mock. Not a scr
       pack: "aem-author-field-log",
       title: "Field log: Sites console",
       steps: [
-        "Watch the official Quick site creation video. Pause on the Sites console (or closest view). Write three control names you can see.",
-        "Write oxygen-bootcamp-work/week9/field-log-57.txt: Sites console is a page tree. A DITA map is a book of topics. They do not share a toolbar.",
-        "List: navigate to a folder, open a page’s properties, open a page for edit — as jobs, not as guessed clicks if the UI differs. Write ‘verify in your version’ next to any guessed label.",
-        "Labeled mock: left rail + card view of pages. Caption: mock.",
+        "Watch the official Quick site creation video. Pause on the Sites console (or the closest view). Write three control names you can see.",
+        "Open samples/aem-author-field-log/mocks/sites-console.txt. It is a labeled mock, not a screenshot of Adobe UI.",
+        "Write oxygen-bootcamp-work/week9/field-log-57.txt: Sites console is a page tree. A DITA map is a booklet of topics. They do not share a toolbar.",
+        "List three jobs: go to a folder, open a page’s properties, open a page for edit. Write ‘verify in your version’ next to any guessed label.",
         "Do not draw Oxygen Maps Manager inside the mock.",
       ],
       failWhen:
         "The log calls the Sites tree a ditamap, or the mock includes Oxygen toolbars, or there are zero official-video notes.",
       expected:
-        "Three control names from the video. Tree vs map sentence. Mock labeled.",
+        "Three control names from the video. Tree vs booklet sentence. Mock labeled.",
     },
     quiz: [
       {
-        q: "You need to find the Kitepump landing page. First AEM surface?",
+        q: "You need to find the Kitepump landing page on the website team’s desk. First surface?",
         options: [
-          "DITA Maps Manager",
-          "Sites console",
-          "Transformation view",
+          "DITA Maps Manager in Oxygen",
+          "The Sites console in AEM",
+          "Help > About",
         ],
         answer: 1,
-        why: "Pages live in Sites. Maps live in Oxygen (or Guides).",
+        why: "Pages live in Sites. Booklets live in Oxygen. Two trees. Two apps.",
       },
       {
-        q: "Basic Handling in Experience League is about what?",
+        q: "The Sites tree and your booklet both look like lists. Why not treat them as the same thing?",
         options: [
-          "DITA conref",
-          "How authors move around AEM (find, select, edit)",
-          "Chemistry CSS",
+          "They are the same thing",
+          "Sites holds web pages. A map holds pointers to help-page files. Different files, different toolbar",
+          "Sites is a completeness check",
         ],
         answer: 1,
-        why: "S.basicHandling is the official authoring handling guide. Use it.",
+        why: "A tree is a tree. The thing in it is not. Do not look for topicref here.",
       },
       {
-        q: "Card view vs column view vs list view. Why care?",
+        q: "Card view, column view, list view. Why care?",
         options: [
-          "They are DITA topic types",
-          "They are ways to see the same page tree — pick one and still know it is not a map",
-          "They change publish topology",
+          "They are DITA page types",
+          "They are ways to see the same page tree — pick one and still know it is not your booklet",
+          "They change author vs publish",
         ],
         answer: 1,
-        why: "Basic Handling. Views are views.",
+        why: "Views are views. The tree is still Sites.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Sites console and what a ditamap comparison forbids",
-      doTitle: "Keep the mock free of Oxygen chrome",
-      doDone: "Three controls named. Mock labeled. Tree vs map written.",
-      stress: "Pause the video and write a label you actually saw",
+      learn: "Pause the video on the Sites console and write three labels",
+      doTitle: "Write tree vs booklet and caption the mock",
+      doDone: "Three controls named. Mock labeled. Tree vs booklet written.",
+      stress: "Pick where a landing page lives, and why the tree is not a map",
     }),
-    fieldNotePrompt: "What did the Sites console show that Maps Manager never will?",
-    tomorrowHook: "Tomorrow you create a page (or log the create-page wizard from video/mock) and open page properties.",
+    fieldNotePrompt:
+      "Which three control names did you write from the video or the mock?",
+    tomorrowHook:
+      "Tomorrow you make a page (or walk the create-page wizard on a labeled mock) and write title vs name.",
     body: `## Sites console
 
-The **Sites** console is where page trees live. Create, copy, move, properties, publish. **Basic Handling** is the official name for this literacy.
+The **Sites** console is where the website team’s page tree lives. Create, copy, move, properties. Official docs call the literacy **Basic Handling** — how you move around, select, and open.
 
-It is not Maps Manager. Do not look for topicref or keys here.
+It is not Maps Manager. Do not look for a topicref, a key, or completeness here.
+
+Kitepump is still your training product. Their landing page for it would live in this tree. Your handbook still lives in Oxygen.
+
+## Word today
+
+**Sites** — the AEM console that holds web pages as a tree. Not your booklet.
 
 ## Figure
 
-Labeled mock: Sites card view with a Kitepump folder. Caption: *Mock. Kitepump is the training product story, not a live Adobe demo.*
+Labeled mock: Sites card view with a Kitepump folder. Caption: *Mock. Kitepump is the training product story, not a live Adobe demo.* Open \`samples/aem-author-field-log/mocks/sites-console.txt\`.
+
+## Watch
+
+Pause the video on the tree. Write labels you actually saw. If a label differs in your shop, write “verify”.
 `,
   },
   {
     n: 58,
     week: 9,
-    title: "Create page and page properties",
+    title: "Make a page (or walk a labeled mock)",
     objective:
-      "Log the Create Page wizard (template + title + name) and three page properties you would actually fill for Kitepump.",
+      "Log the Create Page wizard (template, title, name) and three page properties you would fill for Kitepump.",
     minutes: 90,
     skills: ["aemSites"],
     legacy: ["t7-aem"],
@@ -194,66 +228,74 @@ Labeled mock: Sites card view with a Kitepump folder. Caption: *Mock. Kitepump i
       pack: "aem-author-field-log",
       title: "Field log: create page",
       steps: [
-        "From video or instance: Create Page. Note: parent folder, template, title, name (URL fragment).",
-        "Write oxygen-bootcamp-work/week9/field-log-58.txt with a fake-but-honest page: title Kitepump HP-40, name kitepump-hp-40, template (write the template name you saw, or ‘standard page template — verify’).",
-        "Page properties: title, description, on/off time if shown. Do not invent SEO fields you did not see.",
-        "Write: the name field is not a DITA topic id, even if both are lowercase hyphens.",
+        "From video, instance, or labeled mock: Create Page. Note parent folder, template, title, and name (the URL bit).",
+        "Write oxygen-bootcamp-work/week9/field-log-58.txt with a fillable page: title Kitepump HP-40, name kitepump-hp-40, template (write the template name you saw, or ‘standard page template — verify’).",
+        "Page properties: title, description, on/off time if shown. Do not invent fields you did not see.",
+        "Write: the name field is not a DITA topic id, even if both are lowercase with hyphens.",
         "Labeled mock: Create Page wizard. Caption: mock.",
       ],
       failWhen:
-        "You treat the page name as a topicref href, or you skip template choice, or you paste WKND developer setup as the lab.",
+        "You treat the page name as a booklet pointer, or you skip template choice, or you paste a developer setup as the lab.",
       expected:
         "Log with parent, template, title, name. Three properties. Mock labeled.",
     },
     quiz: [
       {
-        q: "Page name vs page title. Which one is the URL fragment?",
+        q: "Page name vs page title. Which one is the URL bit?",
         options: [
           "Title always",
-          "Name (the node name) — title is the human heading",
-          "The DITA shortdesc",
+          "Name — title is the human heading",
+          "The short line under a DITA title",
         ],
         answer: 1,
         why: "Title can change for display. Name is the path. Verify labels in your AEM version.",
       },
       {
-        q: "You pick a template at create time. Can you casually swap it later like a DITA topic type?",
+        q: "You pick a template at create time. Can you casually swap it later like a DITA page type?",
         options: [
-          "Yes, always frictionless",
-          "Often no — template is a contract with the page; changing it is a lead/developer move",
-          "Templates are ditavals",
+          "Yes, always easy",
+          "Often no — the template is the page shape they already built. Changing it is a lead or developer move",
+          "Templates are ditaval files",
         ],
         answer: 1,
         why: "Authors choose from allowed templates. They do not redesign the template this week.",
       },
       {
-        q: "WKND tutorial appears in sources. Are you developing WKND today?",
+        q: "A template here is the same as File > New in Oxygen. True or not?",
         options: [
-          "Yes — clone the repo",
-          "No — it is a reference for what an author site can look like",
-          "Yes — deploy to production",
+          "True — both are File > New",
+          "Not true. In Oxygen a template starts a help page. In AEM a template is the web-page shape already built for that site",
+          "True if the name is lowercase",
         ],
         answer: 1,
-        why: "Author week. Not a developer week.",
+        why: "Same English word. Two desks. Define it each time.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Create Page fields: template, title, name",
-      doTitle: "Keep the Kitepump page log fillable",
+      learn: "Find Create Page: template, title, name",
+      doTitle: "Fill a Kitepump page log from video or mock",
       doDone: "Four create fields + three properties. Mock labeled.",
-      stress: "Refuse a property you did not see in video or UI",
+      stress: "Pick name vs title, and what an AEM template is",
     }),
-    fieldNotePrompt: "What template name did you actually see (or explicitly mark verify)?",
-    tomorrowHook: "Tomorrow Edit vs Preview — the page canvas is not Author mode, and Preview is not publish.",
+    fieldNotePrompt:
+      "What template name did you actually see (or explicitly mark verify)? What title and name did you write?",
+    tomorrowHook:
+      "Tomorrow Edit vs Preview. Neither is Publish. Neither is Oxygen’s Author view.",
     body: `## Create Page
 
-**Create** → **Page**. Parent folder. **Template**. **Title**. **Name**. Then **Open** or **Done** (verify).
+**Create** → **Page**. Parent folder. **Template**. **Title**. **Name**. Then **Open** or **Done** (verify the button).
 
-Page **Properties** hold title, tags, appearance, cloud — fill what an author is asked to fill. Do not hunt developer tabs.
+A **template** here is the page shape the website team already built. It is not File > New in Oxygen.
 
-## Not DITA
+**Name** is the URL bit. **Title** is what people read. Lowercase hyphen names look like topic files. They are not. There is no concept template here.
 
-Lowercase hyphen names look like topic files. They are not. There is no \`concept.dtd\` here.
+Page **Properties** hold title, tags, times — fill what an author is asked to fill. Do not hunt developer tabs.
+
+If you have no instance, the wizard in the video plus a labeled mock is the lab.
+
+## Word today
+
+**Template** (AEM) — the web-page shape already built for that site. Not an Oxygen File > New starter.
 
 ## Figure
 
@@ -263,15 +305,15 @@ Labeled mock: wizard step Template → step Title/Name. Caption: *Mock. Verify b
   {
     n: 59,
     week: 9,
-    title: "Edit vs Preview — neither is publish, neither is Oxygen Author",
+    title: "Edit and Preview are not Publish",
     objective:
-      "Describe Edit (component chrome) vs Preview (visitor-like) and write what still requires the Sites console or a workflow.",
+      "Describe Edit (handles on the page) vs Preview (visitor-like) and write that neither one sends the page live.",
     minutes: 90,
     skills: ["aemSites"],
     legacy: ["t7-aem"],
     youtube: [
       yt("aemHeadless", [
-        "Headful editing context",
+        "An editing canvas if shown",
         "Preview as a distinct mode if shown",
       ]),
     ],
@@ -282,9 +324,9 @@ Labeled mock: wizard step Template → step Title/Name. Caption: *Mock. Verify b
       pack: "aem-author-field-log",
       title: "Field log: Edit vs Preview",
       steps: [
-        "Write oxygen-bootcamp-work/week9/field-log-59.txt: Edit shows component handles. Preview hides them so you can read the page. Preview does not activate the page to publish.",
-        "Add: Oxygen Author mode is CSS for XML. Page Editor Edit mode is component chrome for AEM pages. Do not call Page Editor ‘Author mode’.",
-        "List one thing you can only do in Edit (open a component dialog) and one thing Preview is for (read the layout).",
+        "Write oxygen-bootcamp-work/week9/field-log-59.txt: Edit shows handles on the pieces of the page. Preview hides them so you can read the page. Preview does not send the page live.",
+        "Add: Oxygen Author view is the page view for XML. Page Editor Edit is the canvas for AEM pages. Do not call Page Editor ‘Author mode’.",
+        "List one thing you can only do in Edit (open a piece’s dialog) and one thing Preview is for (read the layout).",
         "Labeled mock: same page, two states, Edit | Preview. Caption: mock.",
       ],
       failWhen:
@@ -294,142 +336,164 @@ Labeled mock: wizard step Template → step Title/Name. Caption: *Mock. Verify b
     },
     quiz: [
       {
-        q: "Preview in Page Editor pushes the page live. True?",
-        options: ["True", "False"],
+        q: "Preview in Page Editor sends the page live. True or not?",
+        options: [
+          "True — Preview means publish",
+          "Not true. Preview is a view. Publish is a later action that copies the page to the live environment",
+          "True if the page looks fine in Edit",
+        ],
         answer: 1,
-        why: "Preview is a view. Publish/Quick Publish is activation.",
+        why: "Three verbs. Edit. Preview. Publish. Preview does not copy anything to visitors.",
       },
       {
         q: "Why not call Page Editor ‘Author mode’?",
         options: [
-          "Adobe forbids the word author",
-          "Author mode already names Oxygen’s CSS XML view — colliding names smash two products",
+          "Adobe never uses the word author",
+          "Author mode already names Oxygen’s page view — colliding names smash two products",
           "Page Editor has no editing",
         ],
         answer: 1,
-        why: "Keep families distinct. Say Edit in Page Editor.",
+        why: "Keep the desks distinct. Say Edit in Page Editor. Say Author in Oxygen.",
       },
       {
-        q: "You need to change the page title in properties. Are you in Edit on the canvas?",
+        q: "You need to change the page title in properties. Are you on the Edit canvas?",
         options: [
-          "Always — titles are components only",
-          "Often Page Properties from console or editor menu — not the same as a Text component",
+          "Always — titles only live on the canvas",
+          "Often Page Properties from the console or an editor menu — not the same as typing on the canvas",
           "In Maps Manager",
         ],
         answer: 1,
-        why: "Properties vs components. Both exist.",
+        why: "Properties vs the canvas. Both exist. The title in properties is not a sentence you typed in Edit.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Edit, Preview, and Publish as three verbs",
-      doTitle: "Keep Page Editor from being called Author mode",
-      doDone: "Log distinguishes three verbs. Mock labeled.",
-      stress: "Find one UI label that collided with Oxygen in your draft and fix it",
+      learn: "Find Edit and Preview on the page canvas (video or mock)",
+      doTitle: "Write three verbs: Edit, Preview, Publish",
+      doDone: "Log distinguishes three verbs. Mock labeled. Author mode not borrowed.",
+      stress: "Pick what Preview does not do, and why Author mode is the wrong name",
     }),
-    fieldNotePrompt: "Which verb did you mix up before this lesson — Edit, Preview, or Publish?",
-    tomorrowHook: "Tomorrow components vs pages — a Text component is not a DITA concept.",
-    body: `## Edit vs Preview vs Publish
+    fieldNotePrompt:
+      "Which verb did you mix up before this lesson — Edit, Preview, or Publish? What did you write in the log?",
+    tomorrowHook:
+      "Tomorrow a page is a stack of blocks, not a DITA topic.",
+    body: `## Three verbs
 
-**Edit** — component chrome, dialogs, insert. **Preview** — read the page without chrome. **Publish** — activate to the publish environment.
+**Edit** — handles on the pieces of the page, dialogs, insert.
 
-Oxygen **Author** is a different product’s mode. Do not borrow the word.
+**Preview** — read the page without the handles.
+
+**Publish** — copy the page to the live environment. Not today as a click. Tomorrow-plus. Today you only keep Preview apart from Publish.
+
+Oxygen **Author** is a different product’s page view. Do not borrow the word. Say **Edit** in Page Editor.
+
+## Word today
+
+**Page Editor** — the AEM canvas where you edit a web page. Edit and Preview live here. Publish does not.
 
 ## Figure
 
-Labeled mock: toggle Edit | Preview in Page Editor. Caption: *Mock. Not a transform scenario.*
+Labeled mock: toggle Edit | Preview. Caption: *Mock. Not a transform scenario. Not Oxygen Author view.*
 `,
   },
   {
     n: 60,
     week: 9,
-    title: "Components vs pages — do not smash DITA types into Core Components",
+    title: "A page is a stack of blocks, not a DITA topic",
     objective:
-      "Name page vs component, and refuse to call a Text component a concept topic.",
+      "Name page vs block, and write why a Text block is not an explaining page.",
     minutes: 90,
     skills: ["aemSites", "ditaTopics"],
     legacy: ["t7-aem"],
-    youtube: [
-      yt("aemQuick", ["A page made of components if shown"]),
-    ],
+    youtube: [yt("aemQuick", ["A page made of stacked pieces, if shown"])],
     sources: [S.coreComp, S.aemAuthor, S.wknd],
     toolCards: ["page-editor"],
     badgeId: null,
     lab: {
       pack: "aem-author-field-log",
-      title: "Field log: page vs component",
+      title: "Field log: page vs block",
       steps: [
-        "Write oxygen-bootcamp-work/week9/field-log-60.txt: A page is a tree of components on a template. A DITA topic is a typed XML document. A Text component is not a concept. A Teaser is not a shortdesc.",
-        "List four Core Components you will meet next week: Text, Image, Teaser, Title — awareness only today.",
-        "Draw a labeled mock: page skeleton with three component boxes. Caption: mock.",
-        "Write one sentence: Experience Fragments are reusable layout, not conref.",
+        "Write oxygen-bootcamp-work/week9/field-log-60.txt: A page is a stack of blocks on a template. A DITA topic is a typed XML file. A Text block is not a concept. A Teaser is not the short line under a DITA title.",
+        "List four ready-made blocks you will meet next week: Text, Image, Teaser, Title — names only today.",
+        "Draw a labeled mock: page skeleton with three block boxes. Caption: mock.",
+        "Write one sentence: you would not paste the prime-the-pump how-to into a Text block on a landing page.",
       ],
       failWhen:
-        "The log calls Text a DITA concept, or XF a conref, or the mock is unlabeled.",
+        "The log calls Text a DITA concept, or the mock is unlabeled, or you skip the four block names.",
       expected:
-        "Page vs component vs topic vs conref distinguished. Mock labeled.",
+        "Page vs block vs topic distinguished. Four names listed. Mock labeled.",
     },
     quiz: [
       {
-        q: "A Text component on a landing page is where you should paste the inflate-the-tire task. True?",
-        options: ["True", "False"],
-        answer: 1,
-        why: "Procedures belong in DITA tasks (Oxygen/Guides). Landing pages teaser the product; they do not become the handbook.",
-      },
-      {
-        q: "Experience Fragment vs DITA conref. Shared idea, same implementation?",
+        q: "A Text block on a landing page is where you should paste the prime-the-pump how-to. True or not?",
         options: [
-          "Same XML",
-          "Shared idea (reuse), different system — XF is AEM layout; conref is DITA XML",
-          "XF is a keydef",
+          "True — faster",
+          "Not true. How-to pages belong in Oxygen. A landing page can tease the product. It does not become the handbook",
+          "True if the block is named Task",
         ],
         answer: 1,
-        why: "v1 listed XF for reusable layout and conref for DITA. Do not smash.",
+        why: "Two desks. A block is a piece of a web page. A topic is a whole help file.",
       },
       {
-        q: "Core Components introduction is in sources. Are you implementing a component today?",
+        q: "What is a component in AEM, in one line?",
         options: [
-          "Yes — HTL",
-          "No — authors insert them; developers implement them",
-          "Yes — Schematron",
+          "A DITA map",
+          "A block on the page — Title, Text, Image. Adobe ships a ready-made set of these blocks",
+          "A completeness row",
         ],
         answer: 1,
-        why: "Author week. Next week you use Text/Image/Teaser as an author.",
+        why: "Component means block. The page is a stack of them on a template.",
+      },
+      {
+        q: "Are you building a new block type today?",
+        options: [
+          "Yes — write code",
+          "No — authors insert ready-made blocks. Developers build new types",
+          "Yes — a Schematron file",
+        ],
+        answer: 1,
+        why: "Author week. Next week you place Text, Image, Teaser as an author. You do not implement them.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name page, component, topic, conref as four different objects",
-      doTitle: "Keep the smash-words out of the log",
+      learn: "Find a page made of stacked blocks in the video or mock",
+      doTitle: "Write page vs block vs topic, and list four block names",
       doDone: "Four-object rule written. Mock labeled.",
-      stress: "Delete any sentence that calls AEM a DITA map",
+      stress: "Pick what a Text block is not, and what a component is",
     }),
-    fieldNotePrompt: "What would you put on the Kitepump landing page vs in inflate-the-tire.dita?",
-    tomorrowHook: "Tomorrow Quick Publish, Unpublish, and Basic Handling — the first AEM ship action.",
-    body: `## Pages and components
+    fieldNotePrompt:
+      "What would you put on a Kitepump landing page vs in prime-the-pump.dita? Two sentences.",
+    tomorrowHook:
+      "Tomorrow you send a page live, and take it down. Still a mock if you have no login.",
+    body: `## Pages and blocks
 
-A **page** has a template and a paragraph system of **components**. Core Components (Text, Image, Title, Teaser, Container, …) are the usual author kit.
+An AEM **page** has a template and a stack of **blocks**. Adobe’s ready-made blocks are called **Core Components** — Title, Text, Image, Teaser, and more. You insert them. You do not build them this week.
 
-A **DITA topic** is not a component. **conref** is not an Experience Fragment. **keyref** is not a content fragment variation — we will say that again in Week 11.
+A **DITA topic** is a whole file with a type (explaining page, how-to, lookup). It is not a block. Do not paste a how-to into a Text block and call the landing page the handbook.
+
+## Word today
+
+**Component** — a block on an AEM page. Title, Text, Image. Not a DITA topic.
 
 ## Figure
 
-Labeled mock: page with Title, Image, Text stacked. Caption: *Mock. Not Author mode.*
+Labeled mock: page with Title, Image, Text stacked. Caption: *Mock. Not Oxygen Author view.*
 `,
   },
   {
     n: 61,
     week: 9,
-    title: "Quick Publish, Unpublish, Basic Handling",
+    title: "Send a page live, and take it down",
     objective:
-      "Log Quick Publish vs Publish vs Unpublish, and write what you must check (references, assets) before you click.",
+      "Log Quick Publish vs Unpublish, and write a short checklist you would run before you click.",
     minutes: 90,
     skills: ["aemSites"],
     legacy: ["t7-aem"],
     youtube: [
       yt("aemQuick", [
-        "Going live / site creation leading to published site",
-        "Any publish action shown",
+        "Going live / any publish action shown",
+        "That a live site is the point of the wizard",
       ]),
-      yt("aemGlobal", ["A live site is not a local DITA-OT out/ folder"]),
+      yt("aemGlobal", ["A live site is not a local HTML folder on your laptop"]),
     ],
     sources: [S.basicHandling, S.aemAuthor, S.aemCloudQs],
     toolCards: ["sites-console"],
@@ -438,62 +502,76 @@ Labeled mock: page with Title, Image, Text stacked. Caption: *Mock. Not Author m
       pack: "aem-author-field-log",
       title: "Field log: publish actions",
       steps: [
-        "Read Basic Handling + authoring essentials on publish/unpublish (Experience League). Quote at most one sentence, then write your own.",
-        "Write oxygen-bootcamp-work/week9/field-log-61.txt: Quick Publish is a short path to activate selected pages. Manage Publication / Publish may include children and later times — verify labels. Unpublish removes from the publish environment.",
-        "Checklist: did I select the right page, do references/assets need to come along, is this the author environment I’m allowed to publish from?",
+        "Read Basic Handling plus authoring essentials on publish and unpublish (Experience League). Quote at most one sentence, then write your own.",
+        "Write oxygen-bootcamp-work/week9/field-log-61.txt: Quick Publish is a short path to copy selected pages to the live environment. Manage Publication / Publish may include children and later times — verify labels. Unpublish takes the page off the live environment.",
+        "Checklist: did I select the right page, do pictures need to come along, is this the author environment I’m allowed to publish from?",
         "Write: this is not Apply Transformation Scenario. No out/ folder appears on your laptop.",
         "Labeled mock: Sites console with Quick Publish on a Kitepump page. Caption: mock.",
       ],
       failWhen:
-        "The log treats Quick Publish as DITA-OT, or skips Unpublish, or has no checklist.",
+        "The log treats Quick Publish as last week’s DITA-OT run, or skips Unpublish, or has no checklist.",
       expected:
-        "Three actions named. Checklist present. Mock labeled. Badge evidence is the checklist.",
+        "Three actions named. Checklist present. Mock labeled.",
     },
     quiz: [
       {
-        q: "Quick Publish vs a DITA-OT WebHelp folder. Same button?",
+        q: "Quick Publish vs last week’s WebHelp folder. Same button?",
         options: [
           "Yes",
-          "No — AEM activation vs local transform",
-          "Yes on Cloud only",
+          "No — AEM copies a page to the live environment. DITA-OT writes HTML on your laptop",
+          "Yes if you Preview first",
         ],
         answer: 1,
-        why: "Two families. Two verbs: activate vs transform.",
+        why: "Two desks. Two verbs: send live vs write HTML on your laptop.",
       },
       {
-        q: "You Quick Publish a page but the hero image 404s on publish. Likely miss?",
+        q: "You Quick Publish a page but the picture at the top is missing on the live site. Likely miss?",
         options: [
-          "Chemistry",
-          "The image asset was not published / not referenced correctly",
-          "Missing ditamap",
+          "The booklet is missing",
+          "The picture was not sent live, or it is not referenced correctly",
+          "You forgot Help > About",
         ],
         answer: 1,
-        why: "Assets have their own publish state. Authors check references.",
+        why: "Pictures have their own live state. Authors check what goes along with the page.",
       },
       {
-        q: "Unpublish means delete from author. True?",
-        options: ["True", "False"],
+        q: "Unpublish means delete the page from author. True or not?",
+        options: [
+          "True — gone everywhere",
+          "Not true. Unpublish affects the live environment. Author can still hold the page",
+          "True if you also Preview",
+        ],
         answer: 1,
-        why: "Unpublish affects the publish environment. Author can still hold the page.",
+        why: "Take it down on publish. The editing copy can stay.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Quick Publish, Publish, Unpublish",
-      doTitle: "Keep a pre-publish checklist",
+      learn: "Find Quick Publish and Unpublish on the Sites console (video or mock)",
+      doTitle: "Write a pre-publish checklist",
       doDone: "Checklist written. Mock labeled. Not confused with DITA-OT.",
-      stress: "Add assets/references as a checklist line if you forgot it",
+      stress: "Pick Quick Publish vs a transform, and what Unpublish does not delete",
     }),
-    fieldNotePrompt: "What would you check before Quick Publish on a page with a new image?",
-    tomorrowHook: "Tomorrow is the Week 9 boss: author vs publish, console, create, Edit/Preview, Quick Publish — still mocks if no instance.",
-    body: `## Publish actions
+    fieldNotePrompt:
+      "What three checklist lines did you write? What would you check before sending a page with a new picture?",
+    tomorrowHook:
+      "Tomorrow is the week 9 check. Field logs 56–61, still mocks if no instance. Week 10 stays locked until that day is finished.",
+    body: `## Send it. Take it down.
 
-**Quick Publish** — fast activate of what you selected. **Publish / Manage Publication** — more control (tree, schedule — verify). **Unpublish** — take it off publish.
+**Quick Publish** — fast copy of what you selected to the live environment.
 
-**Basic Handling** covers selecting items and using the rail. Read it. Do not memorize a 2016 screenshot.
+**Publish / Manage Publication** — more control (tree, schedule — verify labels).
 
-## Not a transform
+**Unpublish** — take it off the live environment. The author copy can stay.
 
-No DITA-OT log. No \`index.html\` on your laptop. A published URL on the publish host is the proof — or a field log if you have no instance.
+**Basic Handling** covers selecting items and using the rail. Read it. Do not memorize an old screenshot.
+
+This is not last week’s transform. No DITA-OT log. No \`index.html\` on your laptop. A published URL is the proof — or a field log if you have no instance.
+
+Pictures have to go live too, or the live page shows a hole.
+
+## Word today
+
+**Quick Publish** — a short path to send selected pages live. Not Preview. Not a DITA-OT run.
 
 ## Figure
 
@@ -503,15 +581,15 @@ Labeled mock: Quick Publish confirmation. Caption: *Mock. Checklist lives in you
   {
     n: 62,
     week: 9,
-    title: "Boss — AEM author literacy without smashing Oxygen",
+    title: "Week 9 check",
     objective:
-      "Produce a seven-day field log that keeps Sites, Oxygen, and Guides distinct, and pass the Week 9 quiz.",
+      "Gather this week’s field logs, keep Oxygen and AEM on two lines, and pass the quiz so week 10 can open.",
     minutes: 110,
     skills: ["aemSites", "review"],
     legacy: ["t7-aem"],
     youtube: [
-      yt("aemQuick", ["Site creation recap"]),
-      yt("aemHeadless", ["AEM is more than one surface recap"]),
+      yt("aemQuick", ["Site creation recap — the tree and going live"]),
+      yt("aemHeadless", ["AEM is a website tool with more than one surface — recap only"]),
     ],
     sources: [S.aemAuthor, S.basicHandling, S.coreComp],
     toolCards: ["sites-console", "page-editor"],
@@ -519,77 +597,89 @@ Labeled mock: Quick Publish confirmation. Caption: *Mock. Checklist lives in you
     boss: true,
     lab: {
       pack: "aem-author-field-log",
-      title: "Clinic: field logs 56–61",
+      title: "Field logs 56–61 in one folder",
       steps: [
-        "Gather field-log-56 through 61 into oxygen-bootcamp-work/week9-clinic/.",
-        "Grep for ‘AEM Oxygen’. Zero hits. Grep for unlabeled ‘screenshot’ claims — every figure must say mock if it is a mock.",
-        "Write a one-page Kitepump plan: one landing page (Sites), one handbook (DITA in Oxygen). They share a product story, not a CMS.",
+        "Gather field-log-56 through 61 into oxygen-bootcamp-work/week9-check/.",
+        "Search your notes for the words AEM Oxygen. You should find zero hits. Every figure that is a mock must say mock.",
+        "Write a one-page Kitepump plan: one landing page (Sites), one handbook (DITA in Oxygen). They share a product story, not an app.",
         "Timed: list the menu path for Create Page and for Quick Publish as you understand them, with ‘verify label’ notes.",
-        "Day 63 still unlocks if Day 61 lab is done.",
+        "Pass the quiz. You can retry it. Week 10 stays locked until this day is finished (lab + quiz + a short note).",
       ],
       failWhen:
-        "Logs smash AEM and Oxygen into one CMS, or Quick Publish is described as DITA-OT, or mocks are unlabeled.",
+        "Logs smash AEM and Oxygen into one app, or Quick Publish is described as DITA-OT, or mocks are unlabeled.",
       expected:
-        "Clinic folder complete. Zero fake product names. Two-surface Kitepump plan. Verify-labels present.",
+        "Check folder complete. Zero fake product names. Two-desk Kitepump plan. Verify-labels present.",
     },
     quiz: [
       {
-        q: "You failed this boss. Does Day 63 stay locked?",
+        q: "You failed this check. Does week 10 open anyway?",
         options: [
-          "Yes, forever",
-          "No, if Friday (Day 61) lab is done the next week can unlock. The boss badge stays locked until you pass.",
-          "No, Daily Burst unlocks the week",
+          "Yes, the Friday page is enough",
+          "No. Finish this day’s lab, quiz, and note. You can retry the quiz.",
+          "Yes, if you do the 5-minute warmup",
         ],
         answer: 1,
-        why: "Boss badge waits. Curriculum week does not hostage you if Friday lab is done.",
+        why: "Next week waits until you can keep the two desks apart and name Quick Publish without saying transform. Retry is free.",
       },
       {
-        q: "AEM Author is not DITA. Which object is DITA this week?",
+        q: "You have no AEM login this week. Can you still finish the labs?",
         options: [
-          "The landing page Text component",
+          "No, impossible",
+          "Yes — a field log plus labeled mocks plus official video notes",
+          "Only with a copied screenshot from the internet",
+        ],
+        answer: 1,
+        why: "The pack is aem-author-field-log. A fake login is not the lab.",
+      },
+      {
+        q: "AEM Author is not DITA. Which object is still DITA this week?",
+        options: [
+          "The landing page Text block",
           "The kitepump handbook you still have in Oxygen",
           "Page properties",
         ],
         answer: 1,
-        why: "Two surfaces, one product story. Week 12 will require both.",
+        why: "Two desks, one product story. The handbook did not move.",
       },
       {
-        q: "You have no AEM instance. Can you earn aem-quick-publish?",
+        q: "There is a product called AEM Oxygen XML Editor. True or not?",
         options: [
-          "No, impossible",
-          "Yes — a field log with a real checklist plus labeled mocks plus official video notes",
-          "Only with a pirated screenshot",
+          "True — that is the desktop app",
+          "Not true. Oxygen is Syncro Soft. AEM is Adobe. Write the two names on two lines",
+          "True in the Sites console",
         ],
         answer: 1,
-        why: "The pack is aem-author-field-log. Honesty over fake access.",
-      },
-      {
-        q: "Guides stores DITA in AEM. That means the Sites console is Maps Manager. True?",
-        options: ["True", "False"],
-        answer: 1,
-        why: "Guides has its own editors and map console. Sites is pages. Week 12.",
+        why: "Day 56. If it is in your notes, delete it.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Sites vs Oxygen vs Guides",
-      doTitle: "Keep the clinic logs unsmashed",
-      doDone: "Grep clean. Two-surface plan written. Labels verified.",
-      stress: "Explain Quick Publish without saying transform",
+      learn: "Name Sites vs Oxygen as two desks",
+      doTitle: "Gather the logs and write the two-desk Kitepump plan",
+      doDone: "Folder complete. Zero fake product names. Plan written.",
+      stress: "Pass the quiz. Retry if you need to.",
     }),
-    fieldNotePrompt: "Write the two-surface Kitepump plan in four sentences.",
-    tomorrowHook: "Week 10: Core Components you actually insert — Text, Image, Teaser, Title, Container — still as an author.",
-    body: `## Clinic
+    fieldNotePrompt:
+      "Write the two-desk Kitepump plan in four sentences.",
+    tomorrowHook:
+      "Week 10: you place Text, Image, and Teaser on a page — still as an author, still a mock if you have no login.",
+    body: `## A check, not a show
 
-This is a week boss. Your evidence is **field logs**, not a stolen instance.
+This is the week boss. Your evidence is **field logs**, not a stolen login.
 
-Fail it and **Day 63 still unlocks if Day 61 lab is done**. **aem-quick-publish** waits on an honest checklist.
+You already met these four facts. You are only proving you can name them.
 
-## Proof
-
-1. Author ≠ publish ≠ DITA-OT.
+1. Author ≠ publish ≠ last week’s DITA-OT run.
 2. Sites console ≠ Maps Manager.
 3. Edit ≠ Preview ≠ Publish.
-4. Page ≠ topic. Component ≠ conref.
+4. Page ≠ topic. Block ≠ how-to.
+
+Fail the quiz and **week 10 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week.
+
+If you have no instance, a field log with a real checklist plus labeled mocks plus official video notes is enough.
+
+## Word today
+
+**Two desks** — Oxygen for the handbook. AEM Sites for the web pages. One product story. Not one app.
 
 ## Figure
 

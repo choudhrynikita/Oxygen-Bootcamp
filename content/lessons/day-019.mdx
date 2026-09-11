@@ -1,96 +1,83 @@
 ---
 day: 19
 week: 3
-title: Related links — generated beats handmade when the map already knows
-objective: "Let a collection-type or related-links list point at siblings, and delete a handmade list that duplicated the map."
+title: Name files so they are easy to find
+objective: "Rename one page the safe way, or move it and update the booklet so completeness stays clean."
 timeboxMinutes: 90
-skills: [maps, ditaTopics]
-legacyLessonIds: [t3-maps, t3-insert]
+skills: [maps, oxygenUi]
+legacyLessonIds: [t3-maps]
 youtube:
   - id: ozFZz6YZMCY
     title: DITA Maps Manager View in Oxygen XML Editor 19
     watchFor:
-      - collection-type on a topicref
-      - How sibling links show after publish — or in Author preview
+      - What happens when a path changes
 sources:
   - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
-  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
-  - { href: "https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part1-base/introduction/dita-release-overview.html", label: DITA 1.3 overview (OASIS), dated: 2018-12 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
 lab:
   id: lab-19
-  title: "Siblings, not a pasted See also"
-  pack: kitepump-dita
-  failWhen: "A bullet list of filenames sits in conbody as fake related links, or collection-type is set but the siblings are not in the same parent."
-  expected: Three topics under Care. collection-type set. No handmade See also of paths. Completeness clean.
+  title: Rename without losing the pointer
+  pack: flower-docs
+  failWhen: "Completeness reports a missing file, or the new name has spaces, or you renamed the disk file and never updated the booklet."
+  expected: New name is simple. Completeness clean. Old and new names written down.
   steps:
-    - "On the Care mapref or the parent topicref, set collection-type=\"family\" (or sequence if you want ordered next/prev). Write which you picked."
-    - "In what-kitepump-is.dita, if you pasted a See also list of filenames, delete it."
-    - Add a related-links section only if you must point outside the family. One linkrel to inflate-the-tire is enough — or skip it if family covers it.
-    - Create topics/parts-list.dita (reference) and add it to Care so the family has three members.
-    - "Run completeness. In the field note, list how a reader should move from concept → task → reference without a handmade list."
+    - Pick a page you added (or vase-parts.dita if you make a short new one).
+    - "If Oxygen can rename and update references, use that. If not: rename on disk, then edit the pointer in the booklet to match."
+    - Run completeness. It must be clean.
+    - Write the old name and the new name in oxygen-bootcamp-work/week3/day-19-rename.txt.
+    - Keep lowercase hyphens. No spaces. No FINAL(2).
 sessionQuests:
   - id: a
     block: A
-    title: Name collection-type and what a handmade See also forbids
+    title: Find the pointer path in the booklet
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep Care as a family of three
+    title: Rename or move one page and keep completeness clean
     minutes: 25
-    done: collection-type set. No path list in conbody. Completeness clean.
+    done: Simple new name. Completeness clean.
   - id: c
     block: C
-    title: "Paste a fake See also, then delete it"
+    title: "Pick what breaks on a silent rename, and which file name to use"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [output-oracle, glossary-lightning]
-toolCards: [maps-manager, author-mode]
+    done: Note saved.
+dailyBurstPool: [menu-path-race, one-line-repair]
+toolCards: [maps-manager]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Three topics under Care. collection-type set. No handmade See also of paths. Completeness clean. }
+  - { id: lab, prompt: New name is simple. Completeness clean. Old and new names written down. }
 quiz:
-  - q: "A See also list in the concept hard-codes inflate-the-tire.dita. The file moves. What happens?"
-    answer: 1
-    why: A bullet of filenames is prose. related-links and collection-type are structure.
+  - q: "You renamed a file on disk and skipped the booklet. What breaks?"
+    answer: 0
+    why: The booklet still has the old path.
     options:
-      - The list updates because it is DITA
-      - "The list lies — it is text, not a pointer the map owns"
-      - Completeness rewrites the list
-  - q: "collection-type=\"family\" on a topicref with one child. What did you get?"
+      - The pointer in the map
+      - Help > About
+      - The colour of Author view
+  - q: "Which name should you pick?"
     answer: 1
-    why: Family links siblings. One child has no siblings. Add members or drop the attribute.
+    why: "Lowercase, hyphens, boring. Boring is good."
     options:
-      - A full related-links group
-      - Almost nothing — family needs siblings
-      - A submap
-  - q: "You need a link to a topic in a different chapter. Best first tool?"
-    answer: 1
-    why: collection-type is local family. Cross-chapter wants xref/key or an explicit related link.
-    options:
-      - collection-type on this chapter
-      - "related-links or an xref (soon: a key)"
-      - Paste the other chapter’s map into this topic
-fieldNotePrompt: "When would you refuse collection-type and write an explicit related-links entry instead?"
-tomorrowHook: "Tomorrow you name files so a move is boring — lowercase, hyphens, no FINAL(2)."
+      - Vase Parts FINAL.dita
+      - vase-parts.dita
+      - Document (3).dita
+fieldNotePrompt: "Old name → new name. Did completeness stay clean?"
+tomorrowHook: "Tomorrow you ship a small handbook: map plus your pages, completeness clean."
 ---
 
-## Related links
+## Boring names win
 
-The map already knows the family. **collection-type** (`family`, `sequence`, `choice`) tells processors to generate sibling or next/prev links.
+`vase-parts.dita` will still make sense in six months. `Vase Parts FINAL(2).dita` will not.
 
-**related-links** in a topic is for a pointer the map cannot infer. Use it sparingly.
+When you rename, update the booklet. Then run completeness. If you skip that, the pointer still points at a ghost.
 
-## Handmade lists
+## Word today
 
-A bullet list of filenames is not a link. It will not move when the file moves. Completeness will not see it. Delete it.
-
-## Figure
-
-Care parent with three children and collection-type=family. Caption: *Edit Properties on the parent topicref, not on each child.*
+**href** — the path stored in a pointer. You can say “the path in the booklet line.”

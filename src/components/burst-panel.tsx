@@ -15,14 +15,21 @@ type BurstItem = {
   options?: string[];
   answer?: number;
   why?: string;
+  fromDay?: number;
   dare?: { text: string; forbidden: string; maxWords: number };
   skill: "xmlLiteracy" | "oxygenUi" | "ditaTopics" | "maps" | "reuse" | "publish" | "review" | "aemSites" | "aemGuides";
 };
 
 const pool = bursts as BurstItem[];
-const terms = glossary as { term: string; def: string; decoys: string[] }[];
+const terms = glossary as { term: string; def: string; decoys: string[]; fromDay?: number }[];
 
-export function BurstPanel({ preferredPool }: { preferredPool: BurstType[] }) {
+export function BurstPanel({
+  preferredPool,
+  currentDay = 1,
+}: {
+  preferredPool: BurstType[];
+  currentDay?: number;
+}) {
   const today = localDate();
   const ensureBurst = useBootcamp((s) => s.ensureBurst);
   const completeBurst = useBootcamp((s) => s.completeBurst);
@@ -38,18 +45,19 @@ export function BurstPanel({ preferredPool }: { preferredPool: BurstType[] }) {
 
   const item = useMemo(() => {
     const type = (burst.type || preferredPool[0]) as BurstType;
-    const matches = pool.filter((b) => b.type === type);
-    if (!matches.length) return pool[0];
+    const matches = pool.filter((b) => b.type === type && (b.fromDay ?? 1) <= currentDay);
+    const usable = matches.length ? matches : pool.filter((b) => (b.fromDay ?? 1) <= currentDay);
+    if (!usable.length) return pool[0];
     const seed = Array.from(today).reduce((a, c) => a + c.charCodeAt(0), 0);
-    return matches[seed % matches.length];
-  }, [burst.type, preferredPool, today]);
+    return usable[seed % usable.length];
+  }, [burst.type, preferredPool, today, currentDay]);
 
   if (!item) return null;
 
   function succeed() {
     completeBurst(today, item.skill);
     setCelebrate(true);
-    setResult(item.why ?? "Burst recorded. Curriculum day is unchanged.");
+    setResult(item.why ?? "Warmup recorded. It does not finish today’s lesson.");
   }
 
   const done = burst.date === today && burst.done;
@@ -57,17 +65,22 @@ export function BurstPanel({ preferredPool }: { preferredPool: BurstType[] }) {
   return (
     <section className="rounded-xl border border-line bg-card p-4 shadow-[var(--shadow-soft)]" aria-labelledby="burst-h">
       <h2 id="burst-h" className="mt-0 font-[family-name:var(--font-sans)] text-base font-semibold">
-        Daily Burst · {item.type.replace(/-/g, " ")}
+        Today’s warmup
       </h2>
-      <p className="mt-0 text-sm text-muted">5–8 minutes. Ticks the streak. Does not complete a curriculum day.</p>
+      <p className="mt-0 text-sm text-muted">5–8 minutes. Keeps your streak. Does not finish the day’s lesson.</p>
       <p className="font-medium">{item.prompt}</p>
 
       {item.type === "glossary-lightning" ? (
-        <GlossaryRound onWin={succeed} disabled={done} seed={Array.from(today).reduce((a, c) => a + c.charCodeAt(0), 0)} />
+        <GlossaryRound
+          onWin={succeed}
+          disabled={done}
+          seed={Array.from(today).reduce((a, c) => a + c.charCodeAt(0), 0)}
+          currentDay={currentDay}
+        />
       ) : item.type === "authors-dare" && item.dare ? (
         <div>
           <p className="text-sm">
-            Constraint: ≤ {item.dare.maxWords} words, no “{item.dare.forbidden}”.
+            At most {item.dare.maxWords} words, and do not use “{item.dare.forbidden}”.
           </p>
           <p className="rounded-md bg-track p-2 text-sm">{item.dare.text}</p>
           <textarea
@@ -86,13 +99,13 @@ export function BurstPanel({ preferredPool }: { preferredPool: BurstType[] }) {
               const words = dare.trim().split(/\s+/).filter(Boolean);
               const hasForbidden = new RegExp(item.dare!.forbidden, "i").test(dare);
               if (words.length === 0 || words.length > item.dare!.maxWords || hasForbidden) {
-                setResult("Rewrite fails the constraint. Count the words. Drop the forbidden word.");
+                setResult("Too long, empty, or it still has the banned word. Try again.");
                 return;
               }
               succeed();
             }}
           >
-            Submit rewrite
+            Save rewrite
           </button>
         </div>
       ) : (
@@ -117,7 +130,7 @@ export function BurstPanel({ preferredPool }: { preferredPool: BurstType[] }) {
             data-testid="burst-lock"
             onClick={() => {
               if (pick === item.answer) succeed();
-              else setResult(item.why ?? "Not the first place.");
+              else setResult(item.why ?? "Not that one. Read it once more.");
             }}
           >
             Lock answer
@@ -125,17 +138,29 @@ export function BurstPanel({ preferredPool }: { preferredPool: BurstType[] }) {
         </div>
       )}
 
-      {done ? <p className="text-sm text-good">Burst done for {today}.</p> : null}
+      {done ? <p className="text-sm text-good">Warmup done for {today}.</p> : null}
       {result ? <p className="text-sm">{result}</p> : null}
       <Celebrate show={celebrate} label="Streak ticked" />
     </section>
   );
 }
 
-function GlossaryRound({ onWin, disabled, seed }: { onWin: () => void; disabled: boolean; seed: number }) {
+function GlossaryRound({
+  onWin,
+  disabled,
+  seed,
+  currentDay,
+}: {
+  onWin: () => void;
+  disabled: boolean;
+  seed: number;
+  currentDay: number;
+}) {
   const [i, setI] = useState(0);
   const [wrong, setWrong] = useState(0);
-  const card = terms[i % terms.length];
+  const learned = terms.filter((t) => (t.fromDay ?? 1) <= currentDay);
+  const deck = learned.length ? learned : terms.slice(0, 3);
+  const card = deck[i % deck.length];
   if (!card) return null;
   const options = shuffleStable([card.def, ...card.decoys].slice(0, 3), seed + i);
   return (
@@ -165,15 +190,12 @@ function GlossaryRound({ onWin, disabled, seed }: { onWin: () => void; disabled:
   );
 }
 
-function shuffleStable(list: string[], seed: number): string[] {
-  const a = [...list];
-  let s = (seed % 2147483646) + 1;
-  for (let i = a.length - 1; i > 0; i--) {
-    s = (s * 16807) % 2147483647;
-    const j = s % (i + 1);
-    const tmp = a[i];
-    a[i] = a[j];
-    a[j] = tmp;
+function shuffleStable<T>(arr: T[], seed: number): T[] {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    seed = (seed * 9301 + 49297) % 233280;
+    const j = seed % (i + 1);
+    [copy[i], copy[j]] = [copy[j], copy[i]];
   }
-  return a;
+  return copy;
 }

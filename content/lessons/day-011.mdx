@@ -1,103 +1,86 @@
 ---
 day: 11
 week: 2
-title: "Lists and notes — pick the type, do not decorate"
-objective: "Insert a ul, an ol, and three note types (note, caution, warning) and explain why warning is not bold text."
-timeboxMinutes: 90
+title: Lists and notes
+objective: "Put a bullet list, a numbered list, and one note on the right kind of page."
+timeboxMinutes: 85
 skills: [ditaTopics, oxygenUi]
 legacyLessonIds: [t3-insert]
 youtube:
-  - id: bnQwJZD58wY
-    title: WYSIWYG XML Editing
+  - id: t2cG3Xe1TXY
+    title: DITA Editing
     watchFor:
-      - Toolbar insert for lists
-      - Note element vs italic paragraph
+      - Insert a list
+      - Insert a note
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
 lab:
   id: lab-11
-  title: Condition notes that mean something
+  title: "One list, one note, the right page"
   pack: flower-docs
-  failWhen: "A warning is only bold/italic with no <note>, or type is missing, or the file is invalid."
-  expected: "Valid concept. One ul, one ol, three notes with types note/caution/warning. Topicref under Care."
+  failWhen: "The explaining page has numbered steps, or the how-to’s steps became bullets, or the note is a fake extra step."
+  expected: Bullets on the explaining page. Real steps plus one note on the how-to. Both clean.
   steps:
-    - "File > New > DITA Concept. Title: Condition the stems. File: topics/condition-notes.dita."
-    - "Shortdesc: what conditioning means in this studio (one sentence)."
-    - "In conbody: one unordered list of materials (bucket, clean water, shears)."
-    - "One ordered list of three conditioning moves (unwrap, recut, hydrate). This list is orientation, not a full task — keep it to three short items."
-    - "Insert three <note> elements. Set type (Attributes view): note, caution, warning."
-    - "warning: bleach mix is not a drink. caution: dull shears crush stems. note: time box is 30 minutes."
-    - Do not fake warning by bolding a paragraph. Validate. Append under Care.
+    - Open your explaining page (what-a-cut-flower.dita). Add a bullet list of two flower parts. Not numbered — these are not steps.
+    - "Open your how-to (change-the-water.dita). Confirm the steps are still real steps, not a bullet list."
+    - "On the how-to, insert a Note under step 1: Recut over a bin so stems do not slip."
+    - Do not turn the note into another step. Do not put the note on the hours table.
+    - Save both files. No red error.
 sessionQuests:
   - id: a
     block: A
-    title: Name note types and what bold-as-warning forbids
+    title: Find Insert for a list and for a note
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep three typed notes in condition-notes.dita
+    title: "Bullets on the explaining page, a note on the how-to"
     minutes: 25
-    done: "Valid file. ul, ol, note/caution/warning. Map lists it."
+    done: Both files clean. Steps still look like steps.
   - id: c
     block: C
-    title: "Change a warning to a plain paragraph, then put the type back"
+    title: "Pick bullets vs numbers, and what a note is for"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [authors-dare, warmup-match]
-toolCards: [author-mode, attributes]
+    done: Note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [author-mode]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: "Valid concept. One ul, one ol, three notes with types note/caution/warning. Topicref under Care." }
+  - { id: lab, prompt: Bullets on the explaining page. Real steps plus one note on the how-to. Both clean. }
 quiz:
-  - q: "Why does a PDF still shout if you used <note type=\"warning\"> instead of bold?"
-    answer: 1
-    why: Type is data. CSS/PDF turn it into a label. Bold is paint. Filters and reuse cannot see paint.
-    options:
-      - It does not — you must also bold the text
-      - Publishing styles the note type; the element is the contract
-      - Warning notes only work in AEM Sites
-  - q: "An ordered list of fifteen actions lives in a concept. What should you suspect?"
-    answer: 1
-    why: ol is legal. A long how-to still wants a task. Legal is not the same as honest.
-    options:
-      - Nothing — ol is legal in conbody
-      - You probably needed a task with steps
-      - Ordered lists are illegal in DITA
-  - q: "Attributes view is blank when the caret is in a note. First place you look?"
+  - q: "Flower parts (stem, bloom) on an explaining page should be…"
     answer: 0
-    why: Attributes belong to the element. Click the note tag in Outline if the caret is only in the text.
+    why: Parts are not a procedure. Bullets are fine. Numbers would look like a how-to.
     options:
-      - Whether the note element (not the text inside) is selected
-      - The PDF Chemistry install
-      - AEM workflow payload
-fieldNotePrompt: "When would you refuse a caution and escalate it to warning?"
-tomorrowHook: Tomorrow you insert a real table and an image with alt text a screen reader can use.
+      - A bullet list
+      - Numbered steps
+      - A second title
+  - q: A note on a how-to is for…
+    answer: 0
+    why: A note is a tip beside the work. It is not a fourth step and not a lookup table.
+    options:
+      - A warning or a tip beside a step
+      - Replacing the steps
+      - The hours table
+fieldNotePrompt: "Where did you put the note, and why not on the hours page?"
+tomorrowHook: Tomorrow a small table and a picture with alt text.
 ---
 
-## Lists
+## Lists are not decoration
 
-**ul** is a set. **ol** is a sequence that is not a task (short orientation). A procedure with a result is still a **task**. Do not hide a job in a list.
+- **Bullets** — a set of things, no order.
+- **Numbers** — only when the order is the work. On a task, use real steps.
+- **A note** — a tip or a warning beside the work. Not a fourth step.
 
-Toolbar insert. If you type hyphens in a paragraph, you do not have a list — you have a paragraph with hyphens.
+If you use numbers because they “look serious,” you are decorating. Stop.
 
-## Notes
+## Word today
 
-`<note type="note|tip|fastpath|restriction|important|remember|attention|caution|notice|danger|warning">`.
-
-Pick **caution** for damage to the work. Pick **warning** for harm to a person. Do not decorate a paragraph and call it a warning.
-
-## Attributes
-
-**Attributes** view (right rail) holds `type` on the note. Click the element in **Outline** if the panel looks empty.
-
-## Figure
-
-Three notes stacked: note (i), caution (triangle), warning (stop). Caption: *Author CSS paints the type. The type attribute is the source of truth.*
+**Note** — a tip or warning beside a step or a paragraph.

@@ -1,8 +1,8 @@
 ---
 day: 38
 week: 6
-title: "PDF draft — Publishing Engine or Chemistry, not a brand course"
-objective: "Run a DITA Map PDF scenario (Chemistry or Publishing Engine, whichever your install has) and write which engine produced the file."
+title: Make a PDF draft
+objective: "Run a DITA Map PDF recipe if your install has one, write which tool produced the file, and skip with a reason if it is missing."
 timeboxMinutes: 90
 skills: [publish, oxygenUi]
 legacyLessonIds: [t5-publish]
@@ -10,88 +10,81 @@ youtube:
   - id: zNmXfKWXwO8
     title: Creating a Publishing Template to Customize WebHelp and PDF using CSS
     watchFor:
-      - PDF mentioned next to WebHelp / CSS
-      - "That CSS ideas can apply to PDF — awareness, not homework"
+      - PDF mentioned next to the site output
+      - "That look settings can apply to PDF — awareness, not homework"
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/videos.html", label: Oxygen official video catalog, dated: 2026-09 }
 lab:
   id: lab-38
-  title: "One PDF, named engine"
+  title: "One PDF, named tool"
   pack: kitepump-dita
-  failWhen: "You ship a screenshot of someone else’s PDF as yours, or you dump output into topics/, or you claim Chemistry when the log says another engine."
-  expected: pdf-engine.txt names the engine or the missing-engine message. Output path outside source. Warning presence noted if PDF exists.
+  failWhen: "You ship a screenshot of someone else’s PDF as yours, or you dump output into topics/, or you claim a tool name the log does not use."
+  expected: pdf-engine.txt names the tool or the missing-tool message. Output path outside source. Warning presence noted if a PDF exists.
   steps:
-    - "In Configure Transformation Scenario, filter DITA Map PDF. Pick the scenario your install ships (PDF — based on HTML5 & CSS / Chemistry, or Publishing Engine — verify the name)."
+    - "In Configure Transformation Scenario, filter DITA Map PDF. Pick the recipe your install ships (PDF — based on HTML5 & CSS, Chemistry, or another PDF recipe — verify the name)."
     - Output to oxygen-bootcamp-work/week6/out-pdf/. Run it.
-    - "If SUCCESS, open the PDF. Write: engine name, page count, whether the pinch warning appears."
-    - "If the engine is not installed, write that in oxygen-bootcamp-work/week6/pdf-engine.txt and run the scenario far enough to capture the missing-engine message. That message is the lab, not a fake PDF."
-    - Do not install random CSS themes to ‘make it pretty’. Do not treat this as InDesign.
-    - Keep the PDF out of the source map folder.
+    - "If SUCCESS, open the PDF. Write: tool name, page count, whether the pinch warning appears."
+    - "Chemistry is a PDF tool some teams use — if you do not have it, skip and write why. If any PDF recipe is missing, write the missing-tool message in oxygen-bootcamp-work/week6/pdf-engine.txt. That message is the lab, not a fake PDF."
+    - Do not install a random look to ‘make it pretty’. Do not treat this as a layout app.
+    - Keep the PDF out of the source booklet folder.
 sessionQuests:
   - id: a
     block: A
-    title: Name the PDF engine your install actually has
+    title: "Find a DITA Map PDF recipe, or the missing-tool message"
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the PDF (or the missing-engine message) outside source
+    title: Run a PDF draft or write why you skipped
     minutes: 25
-    done: Engine named. Output path clean. Warning presence noted or failure parked.
+    done: "Tool named, or skip reason written. Output path clean."
   - id: c
     block: C
-    title: Read the first PDF log line even on SUCCESS
+    title: "Pick why the tool name matters, and the first move when borders drop"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [one-line-repair, menu-path-race]
+    done: Note saved.
+dailyBurstPool: [output-oracle, one-line-repair]
 toolCards: [transformation]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: pdf-engine.txt names the engine or the missing-engine message. Output path outside source. Warning presence noted if PDF exists. }
+  - { id: lab, prompt: pdf-engine.txt names the tool or the missing-tool message. Output path outside source. Warning presence noted if a PDF exists. }
 quiz:
-  - q: "Chemistry vs Publishing Engine vs a generic DITA-OT PDF plugin. Why write the name?"
+  - q: "Why write the PDF tool’s name?"
     answer: 1
-    why: Week 6 is log literacy. Engines have names.
+    why: This week is log literacy. Tools have names.
     options:
       - It is trivia
-      - The log and the missing-plugin errors use that name; ‘the PDF button’ is not a diagnosis
-      - AEM Sites needs it
-  - q: "The PDF dropped your table borders. First move as a junior author?"
+      - The log and the missing-tool errors use that name; ‘the PDF button’ is not a diagnosis
+      - The booklet check needs it
+  - q: "The PDF dropped your table borders. First move today?"
     answer: 1
-    why: This is not a designer course. Validity and scenario choice first. Styles Basket is awareness tomorrow.
+    why: "Validity and recipe choice first. Look comes later, and not from you this week."
     options:
-      - Rewrite the CALS table as HTML
-      - Record it; do not start a CSS career this afternoon — check whether the table is valid first
-      - Switch the whole book to Markdown
-  - q: "A local PDF is a draft. Who owns the release PDF if the team uses Guides?"
-    answer: 1
-    why: "v1: In AEM Guides the server baseline is the release; a local PDF is a draft."
-    options:
-      - Whoever hit Apply last on a laptop
-      - "The server/baseline publish in Guides, unless your desk written policy says otherwise"
-      - Flower-docs
-fieldNotePrompt: "Which engine ran, or which exact missing-engine line did you capture?"
-tomorrowHook: Tomorrow you read a SUCCESS log like a skeptic — then Day 40 forces a FAILED one.
+      - Rewrite the table as a picture
+      - Write it down; check whether the table is clean first. Do not start a look career this afternoon
+      - Switch the whole book to a notepad file
+fieldNotePrompt: "Which PDF tool ran, or which exact missing-tool line did you capture?"
+tomorrowHook: Tomorrow you read a SUCCESS log like a skeptic.
 ---
 
-## PDF is a transform
+## A PDF is also a recipe
 
-A PDF is not a print layout you paint. It is DITA-OT (and maybe **Chemistry** or **Publishing Engine**) reading the map.
+A **PDF** is a print-style file the engine builds from your booklet.
 
-Name the engine. Put the file in `out-pdf/`. Check one fact (the warning). Stop.
+**Chemistry** is a PDF tool some teams use — if you do not have it, skip and write why.
 
-## Missing engine
+Name the tool. Put the file in `out-pdf/`. Check one fact (the warning). Stop.
 
-If Chemistry is not installed, the log says so. That line is a valid lab outcome. Do not download a random plugin off a blog.
+If the tool is not installed, the log says so. That line is a valid lab outcome. Do not download a random add-on off a blog.
 
-## Figure
+## Word today
 
-Transformation view SUCCESS plus a PDF icon. Caption: *Draft. Engine name in the scenario title. Verify in Help > About / scenario description.*
+**PDF** — a print-style file the engine builds from your booklet. **Chemistry** — a PDF tool some teams use; skip and write why if you do not have it.

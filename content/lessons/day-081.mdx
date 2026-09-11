@@ -1,8 +1,8 @@
 ---
 day: 81
 week: 12
-title: Guides lab — one mental cycle
-objective: Write a checkout → Edit in Oxygen (or Guides editor) → check-in → request publish cycle for one topic.
+title: One full loop on paper (or mock)
+objective: "Write a checkout → edit → check-in → request publish cycle for one topic, with no Sites Create Page in it."
 timeboxMinutes: 90
 skills: [aemGuides, oxygenUi]
 legacyLessonIds: [t7-connector]
@@ -19,50 +19,77 @@ lab:
   title: "Cycle on paper, or for real"
   pack: guides-oxygen-handoff
   failWhen: The cycle includes Sites Create Page as a step.
-  expected: A four-step cycle with no Sites page in it.
+  expected: A four-step cycle with no Sites page in it. Mock labeled if needed.
   steps:
     - Pick prime-the-pump.dita as the object.
-    - "Write the cycle with actual control names you verified, or ‘verify this label in your version’ plus the official article."
+    - "Write oxygen-bootcamp-work/week12/field-log-81.txt with four steps: checkout, edit (Guides or Edit in Oxygen), check in, request publish."
+    - "Use control names you verified, or write ‘verify this label in your version’ plus the official article."
     - "If you have Guides, do the cycle once. If not, label mock and still write it."
     - Completeness on the local analog remains clean.
+    - Do not add Sites Create Page as a step.
 sessionQuests:
   - id: a
     block: A
-    title: Name the four steps
+    title: Read the four steps in order
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Cycle has no Sites page
+    title: Write the cycle with no Sites page in it
     minutes: 25
     done: Four steps. Mock labeled if needed.
   - id: c
     block: C
-    title: Where the lock lives
+    title: "Pick whether Create Page belongs, and which step holds the lock"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [output-oracle, glossary-lightning]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, output-oracle]
 toolCards: [guides-web-editor, author-mode]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: A four-step cycle with no Sites page in it. }
+  - { id: lab, prompt: A four-step cycle with no Sites page in it. Mock labeled if needed. }
 quiz:
-  - q: "The Guides cycle includes Create Page in Sites. True?"
+  - q: "The Guides cycle includes Create Page in Sites. True or not?"
     answer: 1
-    why: Different family.
+    why: One object. One loop. Stay on the handbook desk.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "Which step would you forget under time pressure?"
-tomorrowHook: Handoff clinic.
+      - True — every publish starts with a new page
+      - Not true — this loop is handbook work. Create Page is the other desk
+      - True if the topic is a landing page
+  - q: "Which step holds the lock?"
+    answer: 1
+    why: Checkout borrows the topic. That is the lock.
+    options:
+      - Preview
+      - Checkout
+      - Quick Publish
+fieldNotePrompt: "Write the four steps you put in the log, in order."
+tomorrowHook: "Tomorrow is the week check: who edits where — map, SME comment, landing page."
 ---
 
-## One object, one cycle
+## One object, one loop
 
-Pick a task. Walk it. Do not wander into Sites.
+Pick a how-to. Walk it.
+
+1. **Checkout**
+2. **Edit** (Guides, or Edit in Oxygen)
+3. **Check in**
+4. **Request publish** (Guides, not Sites Quick Publish)
+
+No Create Page. No landing-page hero. No Page Editor. Those are the other desk.
+
+If you have Guides, do it once. If not, write the loop and label the mock. Completeness on the local analog stays clean.
+
+## Lab
+
+Four steps. Real or paper. No Sites page in the list.
+
+## Figure
+
+Labeled mock: four arrows in a row. Caption: *Mock. Handbook loop only.*

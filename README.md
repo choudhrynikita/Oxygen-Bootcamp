@@ -1,8 +1,8 @@
 # Oxygen Bootcamp
 
-90-day authoring training for **Oxygen XML Author / Editor / Web Author** (Syncro Soft) and **AEM authoring** — Sites, Page Editor, Universal Editor, Document Authoring, Assets, Content Fragments, **AEM Guides**, and **Edit in Oxygen**.
+90-day desk for a new help writer. Weeks 1–8 are **Oxygen XML Author / Editor** (Syncro Soft). Weeks 9–12 add **AEM authoring** and **AEM Guides**. There is no product called “AEM Oxygen XML Editor.”
 
-Oxygen is Syncro Soft. AEM Guides can launch Oxygen. There is no product called “AEM Oxygen XML Editor.”
+You install the app on day 1. You do not get a quiz about Adobe’s website tool until week 9.
 
 **Live classroom is Vercel**, not GitHub Pages. Pages is a footnote for the old static shell.
 
@@ -22,7 +22,7 @@ Node 20 or 22 (`.nvmrc` is 22). No secrets required to build.
 
 ## How to study
 
-Home is Today: current day, streak, Daily Burst (5–8 min), next unfinished lab, search.
+Home is Today: what you will do, a 5-minute warmup, the next practice, search. Pedagogy: [docs/PEDAGOGY.md](docs/PEDAGOGY.md). Voice: [docs/VOICE.md](docs/VOICE.md).
 
 A weekday day is 75–110 minutes in four pauseable blocks. XP follows labs, quizzes, and quests — not page views. Badges wait for a lab that can fail.
 

@@ -1,8 +1,8 @@
 ---
 day: 83
 week: 12
-title: Capstone — DITA publication in Oxygen
-objective: "Ship a small valid Kitepump (or flower-docs) publication: map, keys, one reuse, completeness clean, local WebHelp or a recorded transform attempt."
+title: "Capstone: a DITA handbook in Oxygen"
+objective: "Ship a small valid Kitepump (or flower-docs) publication: map, keys, one reuse, completeness clean, and a local WebHelp or a recorded transform attempt."
 timeboxMinutes: 110
 skills: [maps, reuse, publish]
 legacyLessonIds: [t7-capstone]
@@ -14,7 +14,7 @@ youtube:
   - id: JkPeWea3Y3U
     title: DITA Map Completeness Check
     watchFor:
-      - Zero missing hrefs
+      - Zero missing links
 sources:
   - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
@@ -24,51 +24,78 @@ lab:
   title: DITA half of the capstone
   pack: kitepump-dita
   failWhen: "Completeness is dirty, or reuse is copy-paste, or you skipped the transform log."
-  expected: Clean completeness. Key + reuse. Transform evidence.
+  expected: Clean completeness. Key plus reuse. Transform evidence.
   steps:
-    - Map with at least six topics or a documented subset of flower-docs + kitepump. Completeness clean.
-    - One key (product name) used twice. One conkeyref or conref of a warning.
-    - One ditaval or a written reason you did not filter.
-    - WebHelp Responsive or a failed transform you then repaired (Day 40 skill).
-    - "Note: local output is a draft if Guides is the release."
+    - "Work in oxygen-bootcamp-work/week12/, not inside samples/. Copy what you need."
+    - "Map with at least six topics, or a documented subset of flower-docs plus kitepump. Completeness clean."
+    - One key (product name) used twice. One reused warning (conkeyref or conref).
+    - "One ditaval, or a written reason you did not filter."
+    - "WebHelp Responsive, or a failed transform you then repaired (the week 6 skill)."
+    - "Note: local output is a draft if Guides is the release on your desk."
 sessionQuests:
   - id: a
     block: A
-    title: Name completeness as the capstone gate
+    title: Open the capstone map and run completeness
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the map complete
+    title: "Keep the map complete, with a key and one reused warning"
     minutes: 25
-    done: Completeness clean. Key + reuse present.
+    done: Completeness clean. Key plus reuse present. Transform evidence.
   - id: c
     block: C
-    title: "First transform error, if any"
+    title: Pick whether an open HTML skips completeness
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [authors-dare, warmup-match]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, output-oracle]
 toolCards: [maps-manager, transformation]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Clean completeness. Key + reuse. Transform evidence. }
+  - { id: lab, prompt: Clean completeness. Key plus reuse. Transform evidence. }
 quiz:
-  - q: "Capstone DITA can skip completeness if WebHelp opened. True?"
+  - q: "The HTML opened. Completeness still shows a missing link. Are you done?"
     answer: 1
-    why: The book can still miss topics. Completeness is the gate.
+    why: A site can open and still miss a page. Completeness names the miss.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "How many topics, and which warning is reused?"
-tomorrowHook: AEM page family for the same product.
+      - "Yes — if it opened, it shipped"
+      - No — fix the missing link. Completeness is the gate
+      - Yes if the folder is named FINAL
+  - q: "The product name is typed by hand in six topics. What should it have been?"
+    answer: 0
+    why: "Week 4: the map owns the name. Topics point at it."
+    options:
+      - "A key in the map, used twice or more"
+      - A Teaser description
+      - A language copy
+fieldNotePrompt: "How many topics, which warning is reused, and did completeness pass?"
+tomorrowHook: "Tomorrow: a small family of AEM pages for the same product."
 ---
 
-## DITA half
+## The Oxygen half
 
-This is the Oxygen proof. Six topics, reuse, completeness, a transform. Flower-docs may join kitepump. Do not replace flower-docs in the repo; copy into your work folder.
+This is the handbook proof. You already know every piece.
+
+- A **map** with at least six topics
+- A **key** for the product name, used twice
+- One **reused warning**
+- **Completeness** clean
+- A **transform** (WebHelp, or a failure you then repaired)
+
+Copy into `oxygen-bootcamp-work/week12/`. Do not replace the samples in the repo.
+
+Local WebHelp is a draft if Guides is the release. Say so in the log.
+
+## Lab
+
+The book builds. The links work. The name is a key. The warning is reused.
+
+## Figure
+
+Maps Manager plus a completeness report. Caption: *Your work folder, not the sample original.*

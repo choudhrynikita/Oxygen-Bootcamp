@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
-import { BarChart3, BookOpen, CalendarDays, Map, Settings, Wrench } from "lucide-react";
+import { BarChart3, BookOpen, CalendarDays, FileText, Map, Settings, Wrench } from "lucide-react";
 import { useBootcamp } from "@/lib/bootcamp/store";
 import { GuardDialog } from "@/components/guard-dialog";
 
@@ -65,9 +65,9 @@ export function Shell({ children }: { children: ReactNode }) {
             <Link href="/" className="flex items-center gap-2 text-sidebar-fg no-underline">
               <span
                 aria-hidden
-                className="grid h-9 w-9 place-items-center rounded-[12px] bg-accent font-[family-name:var(--font-sans)] text-sm font-semibold text-accent-fg"
+                className="grid h-9 w-9 place-items-center rounded-[12px] bg-accent text-accent-fg"
               >
-                {"</>"}
+                <FileText className="h-4 w-4" />
               </span>
               <span className="font-[family-name:var(--font-sans)] text-sm font-semibold tracking-wide">
                 Oxygen Bootcamp

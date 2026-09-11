@@ -1,8 +1,8 @@
 ---
 day: 26
 week: 4
-title: A warning library you can defend
-objective: Hold three reusable notes in one library topic and conkeyref each into the right task — no unused chunks.
+title: Build a small warning library
+objective: Hold three reusable notes in one library file and point at each from the right how-to. No unused chunks.
 timeboxMinutes: 90
 skills: [reuse, ditaTopics]
 legacyLessonIds: [t5-reuse]
@@ -10,8 +10,8 @@ youtube:
   - id: K_fjZn285Wo
     title: Working with DITA Reusable Components View
     watchFor:
-      - More than one reusable component in a view
-      - Insert without copying text
+      - More than one reusable chunk in the view
+      - Insert without copying the sentence
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
   - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
@@ -20,78 +20,67 @@ lab:
   id: lab-26
   title: "Three warnings, three homes"
   pack: kitepump-dita
-  failWhen: "A library note is unused, or a task copies the sentence, or a fourth speculative warning exists with no home."
-  expected: "Three notes, three conkeyrefs, three tasks. No unused chunks. Completeness clean."
+  failWhen: "A library note is unused, or a how-to copies the sentence, or a fourth warning exists with no home."
+  expected: "Three notes, three pointers, three how-tos. No unused chunks. Completeness clean."
   steps:
-    - "In warnings.dita, keep pinch-hazard. Add note id=\"eye-protection\" type=\"caution\" and note id=\"burst-risk\" type=\"warning\"."
-    - conkeyref eye-protection into bleed-the-valve.dita. conkeyref burst-risk into a new task topics/read-the-gauge.dita (three cmds).
-    - pinch-hazard stays on inflate-the-tire.
-    - Every library note is used at least once. Do not add a fourth ‘just in case’.
-    - "Open Text on a task: you should see conkeyref, not the sentence."
-    - Completeness clean. Library still not a TOC chapter.
+    - "In warnings.dita, keep pinch-hazard. Add a caution note id=\"eye-protection\" and a warning note id=\"burst-risk\"."
+    - "Point eye-protection into bleed-the-valve.dita (create that how-to if needed: three steps). Point burst-risk into a new how-to topics/read-the-gauge.dita (three steps)."
+    - pinch-hazard stays on prime-the-pump (or inflate-the-kite if that is where you put it yesterday).
+    - Every library note is used at least once. Do not add a fourth “just in case”.
+    - "Open Text on a how-to: you should see the name pointer, not the sentence."
+    - Completeness clean. Library still not a chapter.
 sessionQuests:
   - id: a
     block: A
-    title: Name three library ids and what an unused chunk forbids
+    title: Find all three notes in the library file
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep every warning used once
+    title: Point each warning at one how-to
     minutes: 25
-    done: Three conkeyrefs. Zero unused notes. Text shows pointers.
+    done: Three pointers. Zero unused notes. Text shows pointers.
   - id: c
     block: C
-    title: Edit the library sentence and watch two tasks change
+    title: "Pick a bad first reuse, and what an unused library note is"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [authors-dare, warmup-match]
+    done: Note saved.
+dailyBurstPool: [one-line-repair, authors-dare]
 toolCards: [author-mode, maps-manager]
 badgeId: first-conref
 boss: false
 checks:
-  - { id: lab, prompt: "Three notes, three conkeyrefs, three tasks. No unused chunks. Completeness clean." }
+  - { id: lab, prompt: "Three notes, three pointers, three how-tos. No unused chunks. Completeness clean." }
 quiz:
-  - q: "Reuse small stable chunks such as warnings. Which chunk is a bad first conref?"
+  - q: "Which chunk is a bad first reuse?"
     answer: 1
-    why: A chapter is a map. A product name is a keyref. Warnings are the conref-sized chunk.
+    why: A chapter is a booklet problem. A product name is a key. Warnings are the small stable chunk.
     options:
       - A one-sentence pinch warning
-      - The entire Care chapter
-      - A product name keyword
-  - q: "A library note is never conkeyref’d. What is it?"
+      - A whole chapter of the booklet
+      - "The product name (that is a key, and you already did it)"
+  - q: "A library note is never pointed at. What is it?"
     answer: 1
-    why: Unused reuse is inventory you will not maintain. Delete or use it.
+    why: Unused reuse is inventory you will not maintain. Use it or delete it.
     options:
-      - A healthy warehouse
-      - Dead content that will rot and still look official in the library file
+      - A spare you should keep forever
+      - "A sentence nobody will update, still sitting in the library file"
       - A keydef
-  - q: "You need a slightly different warning in one task. First move?"
-    answer: 1
-    why: Do not edit a conref’d copy in place. You either share the sentence or you do not.
-    options:
-      - conref and then edit the pulled text in the task
-      - "Write a local note, or make a second library id if the variant is real"
-      - Put if/else in the conref path
-fieldNotePrompt: "Which warning would you refuse to reuse, and why is a local note better?"
-tomorrowHook: "Tomorrow you practice the opposite craft: when copy is better than reuse."
+fieldNotePrompt: "Which three warnings did you make, and which how-to uses each one?"
+tomorrowHook: "Tomorrow you practice the other craft: when a local copy is better."
 ---
 
-## A library is not a junk drawer
+## Three notes, three homes
 
-Three notes. Three homes. If you cannot name the task that uses a chunk, delete the chunk.
+If you cannot name the how-to that uses a chunk, delete the chunk.
 
-Stable means the sentence will still be true next quarter. “Hold the HP-40a upright” is a product fact — that may want a key inside the note, or a scoped library, not a single global sentence.
+Change the sentence in the library. The how-tos should follow. Do not type into the pulled warning on the how-to. Change the source, or stop reusing it.
 
-## Do not edit the pull
+## Word today
 
-Author may let you type into a resolved conref. Don’t. Change the source, or break the reuse.
-
-## Figure
-
-warnings.dita: three ids. Three tasks pointing in. Caption: *Reusable Components view with three entries, all used.*
+**Library topic** — a page that holds reusable chunks. It is not a chapter in the booklet.

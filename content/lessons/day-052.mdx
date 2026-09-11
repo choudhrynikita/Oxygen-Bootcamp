@@ -1,8 +1,8 @@
 ---
 day: 52
 week: 8
-title: DITA 2.0 flags and optional AI — what not to turn on at work
-objective: "List what DITA 2.0 experimental support exists in your Oxygen, and write a hard no for production flags you cannot staff."
+title: Switches you should not turn on at work yet
+objective: "Write the Oxygen version, list any experimental switches you can see, and leave the shipping map alone."
 timeboxMinutes: 90
 skills: [xmlLiteracy, review]
 legacyLessonIds: [t6-ai]
@@ -10,7 +10,8 @@ youtube:
   - id: N5cNgWfQAdQ
     title: Customizing the DITA editing experience
     watchFor:
-      - Frameworks are safer than mystery flags
+      - A safer custom setup vs a mystery switch
+      - "That frameworks are a desk setting, not a flag to flip on a customer map"
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
   - { href: "https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part1-base/introduction/dita-release-overview.html", label: DITA 1.3 overview (OASIS), dated: 2018-12 }
@@ -19,51 +20,74 @@ lab:
   id: lab-52
   title: The do-not-enable card
   pack: kitepump-dita
-  failWhen: You enable an experimental flag on kitepump.ditamap and leave it on.
-  expected: "Version recorded. Do-not-enable sentence. AI output, if any, rewritten by you."
+  failWhen: "You enable an experimental switch on kitepump.ditamap and leave it on, or you skip the version number."
+  expected: "Version recorded. Do-not-enable sentence. Any AI draft rewritten by you, or a not-licensed line."
   steps:
-    - Help > About. Write the Oxygen version.
-    - "Open Options and find DITA / experimental features (verify labels). Screenshot-less: write the names you see, or write ‘not present in this version’."
-    - "Write: I will not enable a DITA 2.0 experimental flag on a customer map."
-    - "If Oxygen AI Positron is licensed, draft a task then rewrite every cmd yourself. If not, write ‘not licensed — human still owns the cmd’."
+    - Help > About. Write the Oxygen version in oxygen-bootcamp-work/week8/do-not-enable.txt.
+    - "Open Options and find DITA or experimental features (verify labels). Write the names you see, or write ‘not present in this version’."
+    - "Write: I will not turn on an experimental switch on a customer map. I will not add a per-chapter filter (a branch filter) to the only copy of kitepump.ditamap."
+    - "If your copy of Oxygen can draft a step for you, draft one command then rewrite every word yourself. If not, write ‘not licensed — I still own the command’."
+    - Do not leave an experimental flag on. Do not save a changed Options set as the shop default.
 sessionQuests:
   - id: a
     block: A
-    title: Name experimental flags as not-for-production
+    title: Find Help > About and the Options list
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Shipping map has no experimental flag
+    title: Write the do-not-enable card and leave the map alone
     minutes: 25
-    done: Do-not-enable card written. Map unchanged.
+    done: Version written. Switches named or marked absent. Map unchanged.
   - id: c
     block: C
-    title: Who owns an AI-drafted step
+    title: "Pick when to enable an experimental switch, and who owns a drafted step"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [authors-dare, warmup-match]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, one-line-repair]
 toolCards: [author-mode]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: "Version recorded. Do-not-enable sentence. AI output, if any, rewritten by you." }
+  - { id: lab, prompt: "Version recorded. Do-not-enable sentence. Any AI draft rewritten by you, or a not-licensed line." }
 quiz:
-  - q: "Positron (or any AI draft) owns the cmd elements if the XML validates. True?"
+  - q: "An experimental switch exists in Options. When do you turn it on for a customer booklet?"
     answer: 1
-    why: Optional. Confirm IT policy. Valid XML can still be the wrong procedure.
+    why: Look. Write the name. Leave it off. A customer map is not a test bed.
     options:
-      - "True"
-      - False — a human and Schematron still own the result
-fieldNotePrompt: "What would you say if a lead asked you to ‘just turn on DITA 2.0’ this afternoon?"
-tomorrowHook: Troubleshooting invalid maps with the broken pack.
+      - "This afternoon, if a lead asks"
+      - You do not. Experimental means the vendor is testing. It is not a work instruction
+      - Always — new is better
+  - q: "Oxygen drafts a command for you. The file has no red error. Who owns the step?"
+    answer: 1
+    why: A clean file can still tell a person to do the wrong thing. You own the words.
+    options:
+      - "The draft tool, because the file opens"
+      - You. Valid XML can still be the wrong procedure. Rewrite every command you would ship
+      - Help > About
+fieldNotePrompt: "What version did you write down, and which switches did you see (or not see)?"
+tomorrowHook: Tomorrow you fix a broken booklet. One error at a time. The pack is supposed to fail.
 ---
 
-## Hard no
+## Look. Do not flip.
 
-Experimental DITA 2.0 flags exist so vendors can test. They are not a work instruction. AI Positron can draft XML. You still rewrite the cmd. Confirm IT policy.
+Oxygen can hide experimental switches under Options. A newer DITA version, a per-chapter filter, a draft tool that writes a command for you.
+
+Those switches exist so vendors can test. They are not a work instruction.
+
+A **branch filter** is a filter on one chapter of a booklet, different from the rest. Powerful. Easy to make undebuggable. You can explain it. You do not add it to the only copy of kitepump.
+
+If a draft tool writes a step, you rewrite the command. Confirm shop policy.
+
+## Word today
+
+**Experimental switch** — an Options flag the vendor is still testing. Off on a customer map.
+
+## Lab
+
+Version. Names you saw (or ‘not present’). One hard no. Map unchanged.

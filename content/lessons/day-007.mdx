@@ -1,108 +1,99 @@
 ---
 day: 7
 week: 1
-title: Review clinic — errors you will hit this week
-objective: "Repair a broken map, explain three errors in one sentence each, and pass the Week 1 boss quiz."
+title: Week 1 check
+objective: "Fix three simple breaks, say what each error meant, and pass the quiz so week 2 can open."
 timeboxMinutes: 90
-skills: [review, maps, xmlLiteracy]
-legacyLessonIds: [t4-complete, t4-validate]
+skills: [review, xmlLiteracy, oxygenUi]
+legacyLessonIds: [t4-validate]
 youtube:
-  - id: JkPeWea3Y3U
-    title: DITA Map Completeness Check
-    watchFor:
-      - The completeness report rows
-      - Missing href vs missing id
   - id: Vglmv_lDg7Y
     title: Interactive Tutorials in Oxygen
     watchFor:
-      - Where Live Tutorials sit after install
+      - Where the in-app tutorials sit if you installed them
 sources:
-  - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
   - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
 lab:
   id: lab-7
-  title: "Clinic: three breaks, three repairs"
+  title: "Three breaks, three repairs"
   pack: flower-docs
-  failWhen: "You cannot explain one of the three errors in a sentence, or you leave the clinic copy broken."
-  expected: Clinic copy completeness is clean. Three error sentences in your field note.
+  failWhen: "You cannot say what one of the three errors meant, or you leave the check copy broken."
+  expected: Check copy opens clean. Three one-line notes about the three breaks.
   steps:
-    - Copy samples/flower-docs to oxygen-bootcamp-work/week1-clinic/ (do not vandalize the repo copy if you can avoid it).
-    - "Break 1: rename a topic file without updating the topicref. Run completeness. Repair."
-    - "Break 2: delete a closing tag in Text on hello-concept.dita. Read the well-formed error. Undo."
-    - "Break 3: remove the product keydef from the map. Open change-water.dita. See the unresolved key. Restore the keydef."
-    - "Timed completeness read: run completeness once on a clean map. Write how many files it visited."
-    - Answer the boss quiz. Retry is unlimited. Next week still unlocks if Day 6 lab is done.
+    - Copy your week1 folder to oxygen-bootcamp-work/week1-check/ so you do not wreck the original.
+    - "Break 1: delete a closing tag in Text. Read the red error. Undo."
+    - "Break 2: put the file on the desktop in your head — actually move a copy to the desktop, then move it back into the folder. Write why the desktop is a bad home."
+    - "Break 3: clear the title, save, read the error or the empty tab, put the title back."
+    - The page must open with no red error when you stop.
+    - Pass the quiz. You can retry it. Week 2 stays locked until this day is finished (lab + quiz + a short note).
 sessionQuests:
   - id: a
     block: A
-    title: Name completeness vs schema validation
+    title: Name the three breaks from this week
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Clinic copy still validates
+    title: Repair the check copy until it opens clean
     minutes: 25
-    done: Three breaks repaired. Completeness clean.
+    done: Three one-line notes. No red error.
   - id: c
     block: C
-    title: Explain each error in one sentence
+    title: Pass the quiz. Retry if you need to.
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [one-line-repair, menu-path-race]
-toolCards: [maps-manager]
-badgeId: completeness-clean
+    done: Note saved.
+dailyBurstPool: [warmup-match, menu-path-race]
+toolCards: [author-mode]
+badgeId: null
 boss: true
 checks:
-  - { id: lab, prompt: Clinic copy completeness is clean. Three error sentences in your field note. }
+  - { id: lab, prompt: Check copy opens clean. Three one-line notes about the three breaks. }
 quiz:
-  - q: "Completeness is clean but a topic is still invalid. What is true?"
-    answer: 1
-    why: "Validate the file for schema. Completeness is missing targets, images, keys. You need both."
+  - q: "You deleted a closing tag. The app says the file is not well-formed. First move?"
+    answer: 0
+    why: Undo is the whole move. Then you know what the message looks like next time.
     options:
-      - Impossible — completeness includes schema
-      - Possible — completeness is the book; schema is the file
-      - Then the root map is wrong
-  - q: "You failed this boss. Does Day 8 stay locked?"
-    answer: 1
-    why: Boss badge waits. Curriculum week does not hostage you if Friday lab is done.
+      - "Undo, then read the message you just saw"
+      - Install a new app
+      - Ignore red lines
+  - q: "Why not keep help pages on the desktop?"
+    answer: 0
+    why: A folder you chose is a home. The desktop is a hallway.
     options:
-      - "Yes, forever"
-      - "No, if Friday (Day 6) lab is done the next week can unlock. The boss badge stays locked until you pass."
-      - "No, Daily Burst unlocks the week"
-  - q: "Unresolved keyref in Author. First place you look?"
+      - "They are harder to find later, and later booklets look for a folder"
+      - Desktops cannot store .dita files
+      - Oxygen will delete them overnight
+  - q: "You failed this check. Does week 2 open anyway?"
     answer: 1
-    why: Keys live in the map. Root map plus keydef. Not a publish engine.
+    why: Next week waits until you can save a clean page and say what a red error meant. Retry is free.
     options:
-      - CSS PDF Chemistry
-      - Root map and the keydef
-      - AEM workflow payload
-fieldNotePrompt: Write the three errors you caused and the one-line repair for each.
-tomorrowHook: "Week 2: concept, task, and reference as objects you will live in — not vocabulary slides."
+      - "Yes, the Friday page is enough"
+      - "No. Finish this day’s lab, quiz, and note. You can retry the quiz."
+      - "Yes, if you do the 5-minute warmup"
+fieldNotePrompt: Write the three breaks and the one-line repair for each.
+tomorrowHook: "Week 2: three kinds of pages — what it is, how to do it, and facts you look up. Still no booklet."
 ---
 
-## Clinic, not a ceremony
+## A check, not a show
 
-This is a week boss: mixed repair + scenario questions + a timed completeness read.
+This is the week boss. You already met these errors. You are only proving you can name them.
 
-Fail it and **Day 8 still unlocks if Day 6 lab is done**. The boss badge stays locked until you retry. Retry is unlimited.
+1. **Tags do not match** — you deleted a closing tag in Text.
+2. **Lost file** — it lived on the desktop.
+3. **Empty title** — the page has no name.
 
-## Errors from this week
+Fail the quiz and **week 2 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week.
 
-1. **Missing href** — file moved, map not updated.
-2. **Not well-formed** — deleted a closing tag in Text.
-3. **Unresolved key** — root map unset, or keydef removed.
-4. **Wrong topic type** — steps inside a concept when you needed a task.
+## One line about later
 
-## Figure
-
-Completeness report: one row per problem. Caption: *DITA Maps Manager > Validate and Check for Completeness.*
+Adobe has a website tool used by another team. You will open that in **week 9**. Not now. Do not mix it with Oxygen in your notes.
 
 ## Tone
 
-Wit is allowed: the ampersand strikes again. Do not mock yourself for a red error. Repair it.
+Red errors are normal. Repair them. Then go home.

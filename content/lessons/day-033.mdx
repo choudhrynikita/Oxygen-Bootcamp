@@ -1,8 +1,8 @@
 ---
 day: 33
 week: 5
-title: "Author CSS you may touch — frameworks, Hints, content completion"
-objective: "Turn on the Hints style layer, use content completion on Enter, and refuse to invent CSS in Options."
+title: Hints that appear while you type
+objective: "Turn on Hints, use the list that appears when you press Enter, and leave the look of Author alone."
 timeboxMinutes: 90
 skills: [oxygenUi, ditaTopics]
 legacyLessonIds: [t6-framework]
@@ -10,92 +10,81 @@ youtube:
   - id: N5cNgWfQAdQ
     title: Customizing the DITA editing experience
     watchFor:
-      - Framework as a package
-      - Hints / inline actions — not a personal stylesheet first
+      - A framework as a package
+      - Hints and inline actions — not a private look first
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-author/", label: Oxygen XML Author User Guide, dated: 2026-09 }
 lab:
   id: lab-33
-  title: "Hints on, personal CSS off"
+  title: Hints on
   pack: kitepump-dita
-  failWhen: "You added personal Author CSS as the lab, or you never opened content completion, or Hints stayed off."
-  expected: Hints on. Three labels listed. Enter used for completion. Framework note written. No personal theme.
+  failWhen: "You added a private Author look as the lab, or you never opened the Enter list, or Hints stayed off."
+  expected: Hints on. Three labels listed. Enter used for the list. Framework note written. No private look.
   steps:
     - "In Author, find the Styles dropdown (default / Hints / Inline actions / Full tags — verify labels)."
-    - "Turn on Hints. Write three hint labels you see on a task (e.g. cmd, info, result)."
-    - "Place the caret in steps. Press Enter. Content completion should offer step, not a free paragraph at all costs."
+    - "Turn on Hints. Write three hint labels you see on a how-to (for example cmd, info, result)."
+    - "Place the caret in the steps. Press Enter. The list should offer a step, not a free paragraph at all costs."
     - Open Outline. Click result to jump. Click cmd to jump.
-    - "Do not add a custom CSS file in Options to make headings teal. If you already did, remove it and write that you did."
-    - "Write oxygen-bootcamp-work/week5/framework-note.txt: a framework packages schema, CSS, toolbars, templates. I may turn on Hints. I may not ship a personal theme."
+    - "Do not add a private look in Options to make headings a new color. If you already did, remove it and write that you did."
+    - "Write oxygen-bootcamp-work/week5/framework-note.txt: a framework packages the page rules, the look, the toolbar, and the templates. I may turn on Hints. I do not ship a private look."
 sessionQuests:
   - id: a
     block: A
-    title: "Name Hints, Enter completion, and what Options CSS forbids on this desk"
+    title: Find the Styles dropdown and turn on Hints
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep Hints on and personal CSS off
+    title: Press Enter in a how-to and write the first offers
     minutes: 25
-    done: Three hint labels listed. Framework note written. No personal theme.
+    done: Three hint labels listed. Framework note written. No private look.
   - id: c
     block: C
-    title: "Turn on Full tags, find a wrapper you forgot, turn Hints back on"
+    title: "Pick who owns the package, and what double-Enter can insert"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [one-line-repair, menu-path-race]
+    done: Note saved.
+dailyBurstPool: [one-line-repair, authors-dare]
 toolCards: [author-mode, outline]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Hints on. Three labels listed. Enter used for completion. Framework note written. No personal theme. }
+  - { id: lab, prompt: Hints on. Three labels listed. Enter used for the list. Framework note written. No private look. }
 quiz:
-  - q: "A framework packages schema, CSS, toolbars, and templates. Who owns that package on a team desk?"
+  - q: "A framework packages page rules, look, toolbars, and templates. Who owns that package on a team desk?"
     answer: 1
-    why: "v1: Use Hints and Inline actions. Do not each invent CSS in Options."
+    why: You may turn on Hints. You do not each invent a private look.
     options:
-      - Each author in Options
-      - "The information architect / lead, shared with the install"
-      - AEM Sites templates
-  - q: "Enter in Author opens content completion. You press Enter twice to ‘make space’. What goes wrong?"
+      - Each writer in Options
+      - "The lead, shared with the install"
+      - Whoever last changed the heading color
+  - q: "Enter in Author opens a list of next pieces. You press Enter twice to ‘make space’. What goes wrong?"
     answer: 1
-    why: Enter is a schema-aware insert. Space is not a design tool.
+    why: Enter is a smart insert. Space is not a design tool.
     options:
-      - Nothing — like Word
-      - You may insert illegal or extra elements the model did not ask for
-      - Oxygen converts the file to Markdown
-  - q: "Full tags vs Hints. Which one is for daily writing?"
-    answer: 1
-    why: Full tags are a diagnostic layer. Hints teach the model. Grid is not a novel.
-    options:
-      - Full tags — always
-      - Hints (or default) for writing; Full tags when you need to see structure
-      - Neither — use Grid
-fieldNotePrompt: "What did content completion refuse to insert, and why was it right?"
-tomorrowHook: Tomorrow you Find/Replace with a scope — and you refuse a repo-wide replace you cannot undo.
+      - Nothing — like a normal word processor
+      - You may insert extra pieces this kind of page did not ask for
+      - Oxygen converts the file to a notepad file
+fieldNotePrompt: "What did the Enter list offer, and what did it not offer?"
+tomorrowHook: Tomorrow you find and replace in a folder — without breaking the booklet.
 ---
 
-## Frameworks
+## Labels while you type
 
-v1: *A framework packages schema, CSS, toolbars, and templates. Use Hints and Inline actions. Do not each invent CSS in Options.*
+**Hints** are labels in Author that show the name of the piece you are in (step, command, result) while you type.
 
-You may toggle **Hints**, **Inline actions**, **Full tags**. You may not ship a personal Author theme that only your login can see.
+You may toggle **Hints**, **Inline actions**, and **Full tags**. You may not ship a private Author look that only your login can see.
 
-## Content completion
+**Enter** opens a list of next legal pieces. The parent piece decides the list. If a toolbar button is grey, this kind of page does not allow that thing in that spot.
 
-**Enter** opens completion. The parent element decides the list. If a toolbar action is disabled, the model refused it.
+Outline is the tree. Click to jump.
 
-## Outline
+## Word today
 
-Outline is the tree. Click to jump. If Outline and the canvas disagree, trust Outline plus Text.
-
-## Figure
-
-Styles dropdown on the Author toolbar. Caption: *Verify the label in your version. Hints is a layer, not a new file type.*
+**Framework** — a package that tells Oxygen how this kind of page works: rules, look, toolbar, templates. **Hints** are one layer you may turn on.

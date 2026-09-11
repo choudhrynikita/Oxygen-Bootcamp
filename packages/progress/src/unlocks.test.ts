@@ -17,7 +17,7 @@ describe("unlocks", () => {
     assert.equal(canUnlock(s, 2), true);
   });
 
-  it("unlocks next week if Friday lab is done even when boss is not", () => {
+  it("does not open next week from Friday lab if the boss is unfinished", () => {
     const s = freshState();
     s.days["6"] = {
       status: "lab_done",
@@ -32,6 +32,22 @@ describe("unlocks", () => {
       burstsDone: [],
       sessionQuestsDone: [],
       hourlyBlocksCompleted: 0,
+    };
+    assert.equal(canUnlock(s, 8), false);
+    const synced = syncLocks(s);
+    assert.equal(synced.days["8"]?.status ?? "locked", "locked");
+  });
+
+  it("opens next week only when the boss day is complete", () => {
+    const s = freshState();
+    s.days["7"] = {
+      status: "complete",
+      checks: {},
+      burstsDone: [],
+      sessionQuestsDone: [],
+      hourlyBlocksCompleted: 0,
+      quizScore: 100,
+      fieldNote: "Installed Oxygen and saved a page.",
     };
     assert.equal(canUnlock(s, 8), true);
     const synced = syncLocks(s);

@@ -7,16 +7,16 @@ export default [
   {
     n: 63,
     week: 10,
-    title: "Title and Text — type on the page, not in a DITA body",
+    title: "Type on the page (Title and Text)",
     objective:
-      "Log how an author inserts Title and Text Core Components and what each dialog forbids (HTML soup, fake headings).",
+      "Put a heading and two short sentences on a web page using Title and Text, and keep the handbook steps out of the body.",
     minutes: 90,
     skills: ["aemSites"],
     legacy: ["t7-aem"],
     youtube: [
       yt("aemHeadless", [
-        "Headful pages still use components",
-        "Content as fields vs as page layout",
+        "A page made of blocks, not one blob of text",
+        "A heading and a body on the canvas",
       ]),
     ],
     sources: [S.coreComp, S.aemAuthor, S.wknd],
@@ -24,79 +24,92 @@ export default [
     badgeId: null,
     lab: {
       pack: "aem-author-field-log",
-      title: "Field log: Title + Text",
+      title: "Title and two sentences",
       steps: [
-        "Read Core Components intro + Title and Text component pages on Experience League (skim, do not paste).",
-        "Write oxygen-bootcamp-work/week10/field-log-63.txt: Title component is a heading with a type (h1–h6) the template allows. Text is a rich-text body. Do not fake an h1 inside Text if Title exists.",
-        "Kitepump landing: one Title (Kitepump HP-40), one Text (two sentences, no pasted handbook steps).",
-        "Write what the Text dialog lets you bold/list — and that this is not DITA <cmd>.",
+        "You may not have AEM. That is expected. Use the official video, a labeled mock, and a field log.",
+        "Read the Core Components pages for Title and Text (skim). Write oxygen-bootcamp-work/week10/field-log-63.txt.",
+        "In the log: Title is the heading block. You pick a heading size (h1, h2, and so on) that the page template allows. Text is the body block.",
+        "Kitepump landing: one Title (Kitepump HP-40) and one Text with two short marketing sentences. Do not paste inflate-the-tire steps.",
+        "Write what Text lets you do (bold, a list). Write that this is not a DITA how-to.",
         "Labeled mock: Title over Text. Caption: mock.",
       ],
       failWhen:
-        "You paste inflate-the-tire steps into Text, or you skip heading type, or the mock is unlabeled.",
+        "You paste handbook steps into Text, or you skip heading size, or the mock has no caption.",
       expected:
-        "Log names Title vs Text. Kitepump copy is marketing-short. Mock labeled.",
+        "Log names Title vs Text. Kitepump copy is two short sentences. Mock labeled.",
     },
     quiz: [
       {
-        q: "The template already has an h1 in the page Title component. You add another h1 in Text. What goes wrong?",
+        q: "The page already has a Title set as the main heading. You also make a main heading inside Text. What is the problem?",
         options: [
-          "Nothing — more h1s help SEO always",
-          "You fight the template and confuse headings",
+          "Nothing — extra main headings always help",
+          "You now have two main headings on one page",
           "AEM deletes the page",
         ],
         answer: 1,
-        why: "Responsive layout without fighting the template starts with headings.",
+        why: "Title owns the heading. Do not fake a second main heading inside Text.",
       },
       {
-        q: "Text component lists are DITA <ol> with cmd. True?",
-        options: ["True", "False"],
-        answer: 1,
-        why: "HTML-ish rich text in a component. Not a task model.",
-      },
-      {
-        q: "Where do the inflate steps still live?",
+        q: "Where do the inflate-the-tire steps live?",
         options: [
-          "In the Text component",
-          "In inflate-the-tire.dita",
+          "In the Text block on the web page",
+          "In the handbook page in Oxygen",
           "In page properties",
         ],
         answer: 1,
-        why: "Two surfaces, one story. Handbook stays DITA.",
+        why: "The web page is short. The how-to stays in the handbook.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Title vs Text and what a fake h1 forbids",
-      doTitle: "Keep Kitepump Text to two marketing sentences",
-      doDone: "Log written. Mock labeled. No handbook paste.",
-      stress: "Delete a pasted step if you added one",
+      learn: "Find Title and Text in the docs or the video",
+      doTitle: "Write two marketing sentences, not handbook steps",
+      doDone: "Log written. Mock labeled. No how-to paste.",
+      stress: "Pick where the heading lives, and where the steps live",
     }),
-    fieldNotePrompt: "What heading type did the Title component offer in the docs/video?",
-    tomorrowHook: "Tomorrow Image — alt text again, now in an AEM dialog, plus the Assets idea.",
-    body: `## Title and Text
+    fieldNotePrompt: "What did you put in Title, and what did you put in Text? Two sentences.",
+    tomorrowHook: "Tomorrow you put a picture on the page and write a short phrase for it.",
+    body: `## Type on the page
 
-Core Components **Title** and **Text** are the daily desk. Title is a heading. Text is body copy for the **page**.
+Last week you made a page in AEM — Adobe’s website tool — and looked at Edit, Preview, and Publish. Today you put words on that page.
 
-Do not paste the DITA handbook into Text. Do not fight the template’s heading.
+A page is built from **components**. A component is a block you drop onto the page. Adobe ships a set of ready-made blocks called **Core Components**. Today you use two of them.
+
+**Title** is the heading block. You pick a heading size (h1, h2, and so on) in a small form. Use the size the template already planned. **Text** is the body. You can bold and make a list there.
+
+Do not paste the handbook how-to into Text. The handbook stays in Oxygen. This page is a short web page.
+
+## Word today
+
+**Title** — the heading block on an AEM page.
+
+**Text** — the body block. It is not a DITA how-to.
+
+## Watch
+
+Play the official video. Pause when you see a page made of blocks. Look for a heading and a body.
+
+## Lab
+
+You may not have AEM. Use the video, a labeled mock, and the field log. Two marketing sentences for Kitepump. Not the inflate steps.
 
 ## Figure
 
-Labeled mock: Title (h1) + Text. Caption: *Mock. Page Editor Edit state.*
+Labeled mock: Title over Text. Caption: *Mock. Page Editor, Edit. Not a customer screenshot.*
 `,
   },
   {
     n: 64,
     week: 10,
-    title: "Image component — alt in the dialog, asset from DAM",
+    title: "Put a picture on the page",
     objective:
-      "Log how an author places an Image Core Component, fills alt, and why the file lives in Assets, not on the desktop.",
+      "Place an Image block, write a short alt phrase, and say that the file lives in the asset library — not on your desktop.",
     minutes: 90,
     skills: ["aemSites"],
     legacy: ["t7-aem"],
     youtube: [
       yt("aemGlobal", [
-        "Images on a real site",
-        "Assets as a separate concern if shown",
+        "Pictures on a real site",
+        "Files living in a library, not on a laptop",
       ]),
     ],
     sources: [S.coreComp, S.assets, S.aemAuthor],
@@ -104,159 +117,178 @@ Labeled mock: Title (h1) + Text. Caption: *Mock. Page Editor Edit state.*
     badgeId: null,
     lab: {
       pack: "aem-author-field-log",
-      title: "Field log: Image + alt",
+      title: "Picture plus alt phrase",
       steps: [
-        "Read Image Core Component + Assets basic operations (skim).",
-        "Write oxygen-bootcamp-work/week10/field-log-64.txt: pick from Assets (DAM), set alt in the component (or from asset metadata — write which the docs say wins), do not upload a random desktop PNG as the long-term source if the desk uses Assets.",
-        "Kitepump: alt phrase ‘Kitepump HP-40 floor pump, upright, gauge visible’ — not kitepump.png.",
-        "Write: DITA image alt and AEM image alt are the same job on two surfaces. Both can fail.",
-        "Labeled mock: Image component dialog with Alt text field. Caption: mock.",
+        "Read the Image Core Component page and Assets basic operations (skim).",
+        "Write oxygen-bootcamp-work/week10/field-log-64.txt: pick the file from Assets (the library in AEM). Set alt in the Image form. Do not treat a random desktop PNG as the long-term file.",
+        "Kitepump alt phrase: Kitepump HP-40 floor pump, upright, gauge visible. Not kitepump.png.",
+        "Write: a picture on an AEM page and a picture in a DITA page are the same job on two desks. Both need a real phrase.",
+        "Write: if you crop on the page, the library file often stays. Check. Do not assume you destroyed the original.",
+        "Labeled mock: Image form with Alt text filled. Caption: mock.",
       ],
       failWhen:
-        "Alt is the filename, or the log says images live only on the author’s laptop, or Assets is called Maps Manager.",
+        "Alt is the file name, or the log says pictures live only on your laptop, or Assets is called Maps Manager.",
       expected:
-        "Alt phrase written. Assets named as source. Mock labeled.",
+        "Alt phrase written. Assets named as the source. Mock labeled.",
     },
     quiz: [
       {
-        q: "Asset unpublished, page published. Visitor sees?",
+        q: "You published the page but not the picture. What does a visitor often see?",
         options: [
-          "The desktop PNG",
-          "Often a broken image — publish the asset too",
-          "The DITA image automatically",
+          "The picture from your laptop",
+          "A broken picture — publish the file in the library too",
+          "The picture from the DITA handbook, automatically",
         ],
         answer: 1,
-        why: "Assets have publish state. Week 9 checklist.",
+        why: "The picture is its own file in Assets. It has its own publish state. You met that last week.",
       },
       {
-        q: "Decorative image. Empty alt vs missing alt?",
+        q: "A good alt for the hero picture is…",
         options: [
-          "Same",
-          "Empty can be a decision; missing is a defect — confirm how the Image component represents decorative",
-          "AEM forbids decorative images",
+          "kitepump.png",
+          "Kitepump HP-40 floor pump, upright, gauge visible",
+          "image",
         ],
         answer: 1,
-        why: "Same literacy as DITA. Confirm the dialog.",
-      },
-      {
-        q: "You crop in the Image component. Did you change the DAM original?",
-        options: [
-          "Always",
-          "Usually a rendition/crop on the page; the DAM file may stay — verify, do not assume",
-          "Never in any version",
-        ],
-        answer: 1,
-        why: "Authors should not assume they destroyed the master. Check the desk.",
+        why: "Alt is a phrase a person can hear. A file name is not a phrase.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Image alt and Assets as the source",
-      doTitle: "Keep alt as a phrase",
-      doDone: "Phrase written. Mock labeled. Filename-alt refused.",
-      stress: "Add ‘publish the asset’ to your checklist if missing",
+      learn: "Find the Image block and the Alt text field",
+      doTitle: "Write a real alt phrase, not a file name",
+      doDone: "Phrase written. Mock labeled. Assets named as the source.",
+      stress: "Pick what a visitor sees if the picture was not published",
     }),
-    fieldNotePrompt: "Write the exact alt string you would ship for the hero image.",
-    tomorrowHook: "Tomorrow Teaser — a card that points somewhere, not a dumped paragraph.",
-    body: `## Image
+    fieldNotePrompt: "Write the exact alt phrase you would ship for the hero picture.",
+    tomorrowHook: "Tomorrow a card that points somewhere — not a dumped paragraph.",
+    body: `## Put a picture on the page
 
-Core Component **Image** points at **Assets**. Alt is a phrase. Publish the asset.
+The **Image** block points at a file in **Assets**. Assets is the file library inside AEM. You pick the picture there. You do not leave it on the desktop.
 
-This is the same alt discipline as Week 2, on a different dialog.
+**Alt** is a short phrase that describes the picture for someone who cannot see it. Write a phrase. Do not paste the file name.
+
+Publish the picture as well as the page. Last week you saw that a page can go live while its picture stays behind.
+
+If you crop on the page, that is usually a crop for this page. The file in the library often stays. Check before you panic.
+
+## Word today
+
+**Image** — the picture block on the page.
+
+**Assets** — the library of files in AEM (pictures, PDFs, and so on).
+
+## Watch
+
+Pause the official video on a page with a picture. Ask: where does that file live?
+
+## Lab
+
+Field log plus labeled mock. No AEM instance required.
 
 ## Figure
 
-Labeled mock: Image dialog, Alt text filled. Caption: *Mock. Not a DITA image element.*
+Labeled mock: Image form, Alt text filled. Caption: *Mock. Not a DITA image tag.*
 `,
   },
   {
     n: 65,
     week: 10,
-    title: "Teaser — a card with a destination",
+    title: "A card that points somewhere (Teaser)",
     objective:
-      "Log a Teaser’s title, description, image, and link, and refuse to paste a full task into the description.",
+      "Spec a Teaser with a title, one sentence, a picture, and a real link — and keep the how-to out of the card.",
     minutes: 90,
     skills: ["aemSites"],
     legacy: ["t7-aem"],
     youtube: [
-      yt("aemQuick", ["Cards / teasers on a generated site if shown"]),
+      yt("aemQuick", ["Cards or teasers on a generated site, if they show"]),
     ],
     sources: [S.coreComp, S.wknd, S.aemAuthor],
     toolCards: ["page-editor"],
     badgeId: null,
     lab: {
       pack: "aem-author-field-log",
-      title: "Field log: one Kitepump teaser",
+      title: "One Kitepump card",
       steps: [
-        "Read Teaser Core Component docs (skim).",
-        "Write oxygen-bootcamp-work/week10/field-log-65.txt for a teaser: title Inflate in three steps, description one sentence, link to a how-to page (or a future Guides URL — write ‘page that does not exist yet’ if needed). Image alt phrase.",
-        "Write: teaser description is not the task. The task stays in DITA.",
-        "If the teaser can inherit from the target page, note that. Do not invent fields you did not see.",
-        "Labeled mock: teaser card. Caption: mock.",
+        "Read the Teaser Core Component page (skim).",
+        "Write oxygen-bootcamp-work/week10/field-log-65.txt for one teaser: title Inflate in three steps, description one sentence, link to a how-to page (or write ‘page that does not exist yet’). Image alt phrase.",
+        "Write: the teaser description is not the task. The task stays in the handbook.",
+        "If the docs say the teaser can pull title or picture from the target page, note that. Do not invent fields you did not see.",
+        "Labeled mock: one teaser card. Caption: mock.",
       ],
       failWhen:
-        "Description contains three cmds, or the teaser has no destination, or the mock is unlabeled.",
+        "The description holds three how-to steps, or the card has no destination, or the mock has no caption.",
       expected:
-        "One teaser spec with title, one-sentence description, link, alt. Mock labeled.",
+        "One teaser spec with title, one sentence, link, and alt. Mock labeled.",
     },
     quiz: [
       {
-        q: "A Teaser is a DITA shortdesc. True?",
-        options: ["True", "False"],
-        answer: 1,
-        why: "Similar job (lure + pointer), different system. Do not smash names.",
-      },
-      {
-        q: "Teaser links to the DITA WebHelp on your laptop out/ folder. Verdict?",
+        q: "A Teaser is the same thing as the short line under a DITA title. True or not?",
         options: [
-          "Fine for production",
-          "Refuse — production links to published URLs (Sites or Guides), not a laptop path",
-          "Fine if the path is absolute",
+          "True — same file, same tag",
+          "Not true — similar job (lure plus pointer), different tool",
+          "True on Cloud only",
         ],
         answer: 1,
-        why: "Draft transforms are not the live site.",
+        why: "A short line under a DITA title lives in the handbook. A Teaser lives on the web page.",
       },
       {
-        q: "Empty link on a teaser that looks clickable. Problem?",
+        q: "The card looks clickable but the link is empty. What do you do?",
         options: [
-          "None",
-          "A fake affordance — pick a page or do not use Teaser",
-          "AEM fills it at publish",
+          "Leave it — AEM fills the link at publish",
+          "Pick a real page, or do not use a Teaser",
+          "Point it at a folder on your laptop",
         ],
         answer: 1,
-        why: "Cards that do not go anywhere train people to ignore cards.",
+        why: "A card that goes nowhere trains people to ignore cards.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Teaser fields and what a dumped task forbids",
+      learn: "Find the Teaser fields: title, description, image, link",
       doTitle: "Keep the description to one sentence",
       doDone: "Teaser spec complete. Mock labeled.",
-      stress: "Remove cmd-like verbs from the description",
+      stress: "Pick what an empty link on a clickable card means",
     }),
-    fieldNotePrompt: "Where should the teaser’s link go in a real desk — a Sites how-to, or a Guides topic URL?",
-    tomorrowHook: "Tomorrow Container and responsive layout — you will not fight the template grid.",
-    body: `## Teaser
+    fieldNotePrompt: "What page does your card point at? Write the title or ‘page that does not exist yet’.",
+    tomorrowHook: "Tomorrow a box that holds other blocks, without fighting the template.",
+    body: `## A card that points somewhere
 
-A **Teaser** is a card: image, title, short text, link. It points. It does not contain the procedure.
+A **Teaser** is a card: picture, title, short text, and a link. It points. It does not hold the procedure.
 
-Kitepump landing can tease Care. The steps stay in the handbook.
+Kitepump’s landing page can tease Care. The steps stay in the handbook.
+
+The link must go to a published page (a Sites page, or a help URL your shop actually ships). Not a folder on your laptop. Not \`out/index.html\` from a local Oxygen build.
+
+If the card looks clickable, it needs a destination. If you have no destination, do not use a Teaser.
+
+## Word today
+
+**Teaser** — a card with a picture, a title, a short line, and a link.
+
+## Watch
+
+Look for cards on the official site-creation video. Pause on one. Ask: where would that click go?
+
+## Lab
+
+One Kitepump teaser in the field log. One sentence. One link. Labeled mock.
 
 ## Figure
 
-Labeled mock: three teaser cards in a row. Caption: *Mock. Destinations are pages, not out/index.html.*
+Labeled mock: three teaser cards in a row. Caption: *Mock. Destinations are pages, not a laptop folder.*
 `,
   },
   {
     n: 66,
     week: 10,
-    title: "Container and responsive layout — do not fight the template",
+    title: "A box that holds other blocks",
     objective:
-      "Log Container as a layout wrapper and write two layout fights you will refuse (nested containers for fun, breaking the grid).",
+      "Use Container as a box that holds Title, Image, Text, and Teasers, and skip extra nested boxes.",
     minutes: 90,
     skills: ["aemSites"],
     legacy: ["t7-aem"],
     youtube: [
       yt("aemGlobal", [
-        "A global site layout that already works",
+        "A site layout that already works",
         "What authors should not restyle",
       ]),
     ],
@@ -265,64 +297,70 @@ Labeled mock: three teaser cards in a row. Caption: *Mock. Destinations are page
     badgeId: null,
     lab: {
       pack: "aem-author-field-log",
-      title: "Field log: Container without a fight",
+      title: "A simple stack",
       steps: [
-        "Read Container Core Component (skim): layout, columns if offered, background.",
-        "Write oxygen-bootcamp-work/week10/field-log-66.txt: I will put Title, Image, Text, Teaser in the template’s containers. I will not add five nested containers to ‘center’ a button.",
-        "Write two refuses: (1) paste tables as layout, (2) set odd widths that break mobile. Responsive is the template’s job first.",
-        "Kitepump landing skeleton: hero (Title+Image+Text) then a Container of teasers. That is enough.",
+        "Read the Container Core Component page (skim): layout, columns if offered, background.",
+        "Write oxygen-bootcamp-work/week10/field-log-66.txt: I will put Title, Image, Text, and Teaser in the template’s containers. I will not add five nested boxes to centre a button.",
+        "Write two things you will not do: (1) paste a table as layout, (2) set odd widths that break a phone screen. Layout for small screens is the template’s job first.",
+        "Kitepump landing skeleton: hero (Title + Image + Text), then a Container of teasers. That is enough.",
         "Labeled mock: simple stacked layout. Caption: mock. Not a designer portfolio.",
       ],
       failWhen:
-        "The log proposes nested containers as the craft, or you redesign the template in CSS, or you smash this with Oxygen Author CSS.",
+        "The log treats nested boxes as the craft, or you redesign the template in CSS, or you mix this with Oxygen’s page-view styles.",
       expected:
-        "Skeleton written. Two refuses. Mock labeled. No template fight.",
+        "Skeleton written. Two ‘will not’ lines. Mock labeled. No template fight.",
     },
     quiz: [
       {
-        q: "The page looks off-center. First move as a junior author?",
+        q: "The page looks off-centre. First move as a junior author?",
         options: [
-          "Add nested Containers until it looks Word-like",
-          "Check you are in the template’s intended container; ask a lead before custom layout",
-          "Paste a CALS table",
+          "Add nested Containers until it looks like a Word doc",
+          "Check you are in the template’s intended box; ask a lead before a custom layout",
+          "Paste a table and hope",
         ],
         answer: 1,
-        why: "Responsive layout without fighting the template.",
+        why: "Fill the box the template gave you. Do not invent a new grid.",
       },
       {
-        q: "Oxygen Hints CSS vs AEM Container. Same control?",
-        options: [
-          "Yes",
-          "No — different products, different layout systems",
-          "Yes on Cloud",
-        ],
-        answer: 1,
-        why: "Do not smash.",
-      },
-      {
-        q: "Container can be a grid of teasers. When is that OK?",
+        q: "The template offers a row of teasers inside a Container. Is that allowed?",
         options: [
           "Never",
-          "When the template/component offers that layout — you fill it, you do not invent a new grid system",
-          "Only with DITA maps",
+          "Yes — you fill the layout it offers. You do not invent a new one",
+          "Only with a DITA map",
         ],
         answer: 1,
-        why: "Use offered layout. Do not invent one.",
+        why: "Use the layout that is already there.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Container and two layout fights you refuse",
+      learn: "Find Container as a box that holds other blocks",
       doTitle: "Keep the Kitepump skeleton simple",
-      doDone: "Skeleton + two refuses. Mock labeled.",
-      stress: "Remove one extra wrapper from your sketch",
+      doDone: "Skeleton plus two ‘will not’ lines. Mock labeled.",
+      stress: "Pick the first move when the page looks off-centre",
     }),
-    fieldNotePrompt: "What layout request would you bounce to a developer instead of nesting containers?",
-    tomorrowHook: "Tomorrow Experience Fragments as reusable layout — awareness, not a conref clone.",
-    body: `## Container
+    fieldNotePrompt: "How did you stack the Kitepump blocks? One short list.",
+    tomorrowHook: "Tomorrow you reuse a layout strip — not the same as reusing a DITA warning.",
+    body: `## A box that holds other blocks
 
-**Container** groups components. Templates already have them. Authors fill them. Nested containers as a hobby break mobile.
+A **Container** is a box that groups other blocks. Templates already have them. You fill them.
 
-Responsive layout is **not** a junior-author CSS course. Same spirit as Styles Basket: awareness, don’t fork.
+Do not add five nested boxes to centre a button. That breaks phones. Do not paste a table as a layout trick. Do not restyle the page with CSS. That is not this job.
+
+A good Kitepump landing page: a hero (Title, Image, Text) and one Container of teasers. Stop there.
+
+Oxygen’s page view has its own styles. Those do not control an AEM Container. Different tools.
+
+## Word today
+
+**Container** — a box on the page that holds other blocks.
+
+## Watch
+
+Look at a finished layout in the official video. Notice how little the author moved the walls.
+
+## Lab
+
+Write the skeleton. Write two things you will not do. Label the mock.
 
 ## Figure
 
@@ -332,16 +370,16 @@ Labeled mock: one hero, one container of three teasers. Caption: *Mock. Simple o
   {
     n: 67,
     week: 10,
-    title: "Experience Fragment awareness — reusable layout, not conref",
+    title: "Reuse a layout (not the same as Oxygen reuse)",
     objective:
-      "Explain XF as an AEM reusable layout chunk and write when you would still use a Core Component instead.",
+      "Explain an Experience Fragment as a reusable layout strip, and keep the handbook warning in DITA.",
     minutes: 90,
     skills: ["aemSites", "reuse"],
     legacy: ["t7-aem"],
     youtube: [
       yt("aemHeadless", [
-        "Fragments in the AEM family if mentioned",
-        "Headless vs page layout",
+        "Fragments in the AEM family, if mentioned",
+        "A layout chunk vs a page of fields",
       ]),
     ],
     sources: [S.aemAuthor, S.coreComp, S.aemMethods],
@@ -349,59 +387,65 @@ Labeled mock: one hero, one container of three teasers. Caption: *Mock. Simple o
     badgeId: null,
     lab: {
       pack: "aem-author-field-log",
-      title: "Field log: XF vs conref vs CF",
+      title: "A promo strip, not a warning library",
       steps: [
-        "Write oxygen-bootcamp-work/week10/field-log-67.txt: Experience Fragment = reusable page layout (header promo, footer strip). Content Fragment = structured fields for headless/other (Week 11). conref = DITA XML reuse.",
-        "Kitepump: a promo XF ‘Shop HP-40’ could appear on two pages. The pinch warning stays a DITA conkeyref.",
-        "Write when you would refuse XF: a one-off sentence, or a procedure.",
+        "Write oxygen-bootcamp-work/week10/field-log-67.txt: Experience Fragment = a reusable page layout (header promo, footer strip). Next week you will meet Content Fragments, which are fill-in forms. A DITA conref is XML reuse in Oxygen. Three different things.",
+        "Kitepump: a promo strip ‘Shop HP-40’ could appear on two pages. The pinch warning stays a DITA reuse in the handbook.",
+        "Write when you would not use an Experience Fragment: a one-off sentence, or a procedure.",
         "Labeled mock: two pages sharing a promo strip. Caption: mock. Not a conref arrow.",
       ],
       failWhen:
-        "The log says XF is conref, or CF is XF, or a procedure is placed in an XF as the handbook.",
+        "The log says an Experience Fragment is a conref, or a procedure is stored in the fragment as the handbook.",
       expected:
-        "Three-way distinction written. One Kitepump XF idea. One refuse. Mock labeled.",
+        "Three-way distinction written. One Kitepump promo idea. One ‘would not’. Mock labeled.",
     },
     quiz: [
       {
-        q: "Reuse the pinch warning on two AEM pages via XF. Verdict?",
+        q: "You want the pinch warning on two AEM pages. Do you put it in an Experience Fragment?",
         options: [
-          "Perfect — XF is conref",
-          "Wrong surface — that sentence is DITA; pages should link to the handbook or paraphrase without pretending to be the warning library",
-          "Perfect — also keyref it",
+          "Yes — an Experience Fragment is a conref",
+          "No — that sentence is DITA. Link to the handbook, or paraphrase. Do not pretend the fragment is the warning library",
+          "Yes — also add a keyref",
         ],
         answer: 1,
-        why: "Safety library stays DITA. XF is layout.",
+        why: "Safety lines stay in the handbook. An Experience Fragment is layout.",
       },
       {
-        q: "A header used on 40 pages. XF or copy-paste components?",
+        q: "A header used on 40 pages. Copy-paste the blocks each time, or reuse a layout strip?",
         options: [
           "Copy-paste",
-          "XF (or the template) — layout reuse is the point",
+          "Reuse a layout strip (Experience Fragment or the template) — that is the point",
           "A DITA map",
         ],
         answer: 1,
-        why: "That is the XF/template job.",
-      },
-      {
-        q: "Content Fragments are this afternoon’s lab. True?",
-        options: ["True", "False — Week 11"],
-        answer: 1,
-        why: "Awareness of the name so you do not mix it with XF today.",
+        why: "Layout you would otherwise copy from page to page is the job.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name XF vs CF vs conref",
-      doTitle: "Keep the pinch warning out of the XF",
+      learn: "See Experience Fragment as a reusable layout strip",
+      doTitle: "Keep the pinch warning in the handbook",
       doDone: "Three-way note written. Mock labeled.",
-      stress: "Refuse one smash synonym in your draft",
+      stress: "Pick where the pinch warning lives",
     }),
-    fieldNotePrompt: "What layout chunk on Kitepump would actually deserve an XF?",
-    tomorrowHook: "Tomorrow annotations, versions, restore — author-level history, not Git.",
-    body: `## Experience Fragments
+    fieldNotePrompt: "What promo strip did you reuse, and on which two pages?",
+    tomorrowHook: "Tomorrow: notes on the page, snapshots, and restore.",
+    body: `## Reuse a layout
 
-v1: *Experience Fragments for reusable layout.* They are AEM. They are not \`conref\`. They are not Content Fragments.
+An **Experience Fragment** is a reusable chunk of page layout. A promo strip. A footer. Something you would otherwise copy from page to page.
 
-Use them for a promo strip you would otherwise copy from page to page. Do not store the handbook there.
+It is not a **conref**. A conref reuses a piece of XML in Oxygen. You did that in week 4. Different desk, different file.
+
+It is not a **Content Fragment**. That is a fill-in form of fields. You will meet it next week. Do not mix the names.
+
+Use an Experience Fragment for ‘Shop HP-40’ on two pages. Do not store the handbook there. Do not store a procedure there.
+
+## Word today
+
+**Experience Fragment** — a reusable strip of page layout in AEM.
+
+## Lab
+
+Three names in the log. One promo idea. One thing you would not put in the strip. Labeled mock.
 
 ## Figure
 
@@ -411,96 +455,101 @@ Labeled mock: shared promo strip. Caption: *Mock. Layout reuse, not XML reuse.*
   {
     n: 68,
     week: 10,
-    title: "Annotations, versions, restore — author-level history",
+    title: "Notes, versions, restore",
     objective:
-      "Log how an author annotates a page, creates a version, and restores — and write how this is not Git and not DITA Track Changes.",
+      "Log annotate, version, and restore on an AEM page, and write that this is not Git and not Oxygen Track Changes.",
     minutes: 90,
     skills: ["aemSites", "review"],
     legacy: ["t7-aem", "t4-review"],
     youtube: [
-      yt("aemGlobal", ["A live site that still needs review discipline"]),
+      yt("aemGlobal", ["A live site that still needs a review path"]),
     ],
     sources: [S.aemAuthor, S.basicHandling, S.aem65],
     toolCards: ["page-editor", "review"],
     badgeId: null,
     lab: {
       pack: "aem-author-field-log",
-      title: "Field log: annotate and restore",
+      title: "Three verbs on the page",
       steps: [
-        "Read Experience League on annotations and page versions (authoring). Write oxygen-bootcamp-work/week10/field-log-68.txt with the menu names you saw (verify labels).",
-        "Three verbs: annotate (comment on the page), version (snapshot), restore (roll back the page).",
-        "Write: this is not Git. This is not Oxygen Track Changes. This is not Guides review. Pick a channel for the page.",
-        "Kitepump: you would version before a campaign swap, not after a panic.",
-        "Labeled mock: timeline of versions. Caption: mock.",
+        "Read Experience League on annotations and page versions (authoring). Write oxygen-bootcamp-work/week10/field-log-68.txt with the menu names you saw. If a label differs, write ‘verify in your version’.",
+        "Three verbs: annotate (leave a note on the page), version (take a snapshot), restore (put an old snapshot back).",
+        "Write: this is not Git. This is not Oxygen Track Changes. If the landing page is in AEM, review it in AEM.",
+        "Kitepump: take a version before a campaign swap, not after a panic.",
+        "Write a question in the log: after restore, do I still need to publish? (Usually yes — restore is on author.)",
+        "Labeled mock: a list of versions. Caption: mock.",
       ],
       failWhen:
-        "The log says restore is Git revert, or annotations are DITA comments, or you mix three review channels on the landing page.",
+        "The log says restore is Git, or annotations are DITA comments, or you mix three review tools on the same landing page.",
       expected:
-        "Three verbs with official-ish names. Channel rule. Mock labeled.",
+        "Three verbs with menu names (or verify notes). One channel for the page. Mock labeled.",
     },
     quiz: [
       {
-        q: "You restored a page version. Did that unpublish automatically?",
+        q: "You restored a page version. Did that publish the page?",
         options: [
           "Always",
-          "Not necessarily — restore is author-side; you may still need to publish",
-          "Restore is publish",
+          "Not always — restore is on the author side. You may still need to publish",
+          "Restore is the same as Publish",
         ],
         answer: 1,
-        why: "Author vs publish still applies. Verify on your instance.",
+        why: "Author vs publish still applies. Restore puts the old page back on author.",
       },
       {
-        q: "Annotations vs XF vs DITA comments. Why pick one for the landing page?",
+        q: "Why take a version before you swap the teaser?",
         options: [
-          "They merge",
-          "Split channels hide the decision",
-          "AEM forbids annotations if DITA exists",
+          "AEM requires a version every hour",
+          "Restore needs a snapshot. Panic has none",
+          "Versions replace the asset library",
         ],
         answer: 1,
-        why: "Same mix rule as Week 7, now on a page.",
-      },
-      {
-        q: "Version before a teaser swap. Why?",
-        options: [
-          "AEM requires versions hourly",
-          "Restore needs a snapshot; panic has none",
-          "Versions replace backups of Assets",
-        ],
-        answer: 1,
-        why: "Author-level insurance.",
+        why: "A snapshot is insurance on the author side.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name annotate, version, restore as AEM page verbs",
-      doTitle: "Keep Git and Track Changes out of the page channel",
-      doDone: "Three verbs logged. Channel rule written. Mock labeled.",
-      stress: "Add ‘publish after restore?’ as a question in the log",
+      learn: "Find annotate, version, and restore in the docs or video",
+      doTitle: "Write the three verbs and one channel for the page",
+      doDone: "Three verbs logged. Channel written. Mock labeled.",
+      stress: "Pick whether restore also publishes",
     }),
-    fieldNotePrompt: "When would you refuse to restore without talking to the last editor?",
-    tomorrowHook: "Tomorrow workflows at author level and the Week 10 boss — a Core Components desk you can name.",
-    body: `## History on the page
+    fieldNotePrompt: "Which three verbs did you write in the log? Quote the menu names you saw.",
+    tomorrowHook: "Tomorrow is the week check: name the blocks and one way to ship the page.",
+    body: `## Notes, snapshots, restore
 
-**Annotations** are page comments. **Versions** are snapshots of the page. **Restore** rolls back the page on author.
+An **annotation** is a note stuck on the AEM page for a teammate. A **version** is a snapshot of the page. **Restore** puts an old snapshot back on author.
 
-Not Git. Not Track Changes. Not Fusion. If the landing page is in AEM, review it in AEM.
+This is not Git. This is not Track Changes in Oxygen. If the landing page lives in AEM, leave the notes in AEM.
+
+Take a version before a campaign swap. After a restore, check whether you still need to publish. Restore does not always mean live.
+
+## Word today
+
+**Annotation** — a note on the AEM page.
+
+**Version** — a snapshot of the page you can go back to.
+
+**Restore** — put that snapshot back on author.
+
+## Lab
+
+Three verbs. Menu names from the docs (or a verify note). Labeled mock.
 
 ## Figure
 
-Labeled mock: version list with Restore. Caption: *Mock. Verify the Timewarp/versions label in your version.*
+Labeled mock: version list with Restore. Caption: *Mock. Check the label in your version of AEM.*
 `,
   },
   {
     n: 69,
     week: 10,
-    title: "Boss — Core Components desk and a workflow you can name",
+    title: "Week 10 check",
     objective:
-      "Name Text, Image, Teaser, Title, Container, XF awareness, plus one author workflow, without fighting the template.",
+      "Name Title, Text, Image, Teaser, Container, and Experience Fragment on a landing skeleton, plus one way to ship the page.",
     minutes: 110,
     skills: ["aemSites", "review"],
     legacy: ["t7-aem"],
     youtube: [
-      yt("aemHeadless", ["Surfaces recap"]),
-      yt("aemGlobal", ["A finished site recap"]),
+      yt("aemHeadless", ["Blocks on a page, recap"]),
+      yt("aemGlobal", ["A finished site, recap"]),
     ],
     sources: [S.coreComp, S.aemAuthor, S.basicHandling],
     toolCards: ["page-editor", "sites-console"],
@@ -508,81 +557,86 @@ Labeled mock: version list with Restore. Caption: *Mock. Verify the Timewarp/ver
     boss: true,
     lab: {
       pack: "aem-author-field-log",
-      title: "Clinic: landing skeleton + workflow",
+      title: "Landing skeleton plus a ship path",
       steps: [
-        "Gather field-log-63 through 68. Add field-log-69.txt: Kitepump landing skeleton (Title, Image+alt, Text, Container of Teasers, optional XF promo). Two refuses (no handbook paste, no nested-container hobby).",
-        "Read a page-workflow topic on Experience League (request activation, or the workflow your docs show). Write the workflow name and who starts it. If your desk uses only Quick Publish, write that as the honest workflow.",
-        "Grep clinic folder for conref=XF or ‘Author mode’ meaning Page Editor. Fix hits.",
+        "Gather field-log-63 through 68. Add field-log-69.txt: Kitepump landing skeleton (Title, Image with alt, Text, Container of Teasers, optional Experience Fragment promo). Two ‘will not’ lines (no handbook paste, no nested-box hobby).",
+        "Read a page-workflow topic on Experience League (request activation, or the path your docs show). Write the name and who starts it. If your desk uses only Quick Publish, write that.",
+        "A **workflow** is a named path that asks someone (or the system) to publish. Quick Publish is the short path you met last week. Name the one you would actually click.",
+        "Check the week10 folder: no sentence that calls an Experience Fragment a conref. No sentence that calls Page Editor ‘Author mode’.",
         "Labeled mock: the landing skeleton. Caption: mock.",
-        "Day 70 still unlocks if Day 68 lab is done.",
+        "Pass the quiz. Week 11 stays locked until this day is finished (lab + quiz + a short note).",
       ],
       failWhen:
-        "Skeleton missing a component you claimed, or workflow unnamed, or smash-words remain, or mocks unlabeled.",
+        "Skeleton missing a block you claimed, or the ship path is unnamed, or mixed names remain, or mocks have no caption.",
       expected:
-        "Skeleton + workflow name. Grep clean. Badge evidence is the named desk kit.",
+        "Skeleton plus a workflow name or Quick Publish. Names clean. Mock labeled.",
     },
     quiz: [
       {
-        q: "You failed this boss. Does Day 70 stay locked?",
+        q: "You failed this check. Does week 11 open anyway?",
         options: [
-          "Yes, forever",
-          "No, if Friday (Day 68) lab is done the next week can unlock. The boss badge stays locked until you pass.",
-          "No, Daily Burst unlocks the week",
+          "Yes, Friday’s log is enough",
+          "No. Finish this day’s lab, quiz, and note. You can retry the quiz.",
+          "Yes, if you do the 5-minute warmup",
         ],
         answer: 1,
-        why: "Boss badge waits.",
+        why: "Next week waits until you can name the blocks and one way to ship. Retry is free.",
       },
       {
-        q: "core-components-desk means you implemented HTL. True?",
-        options: ["True", "False"],
-        answer: 1,
-        why: "It means you can name and use the author kit. Developers implement.",
-      },
-      {
-        q: "A workflow ‘Request for Activation’ vs Quick Publish. Why name yours?",
+        q: "The core-components-desk badge means you wrote the code behind Title and Text. True or not?",
         options: [
-          "Trivia",
-          "Some desks forbid Quick Publish; the runbook name is the craft",
-          "Workflows are DITA-OT",
+          "True — authors write the code",
+          "Not true — you can name and use the blocks. Developers build them",
+          "True on Cloud only",
         ],
         answer: 1,
-        why: "Author-level workflows. Name the one you would actually click.",
+        why: "This week is author work. You insert the blocks. You do not implement them.",
       },
       {
-        q: "Restore then Quick Publish without looking. Risk?",
+        q: "You restore an old hero, then Quick Publish without looking. What can go wrong?",
         options: [
-          "None",
-          "You may ship an old hero or unpublish-needed asset state you did not check",
-          "AEM blocks it always",
+          "Nothing — restore is always safe",
+          "You may ship an old picture, or a picture that was never published",
+          "AEM blocks it every time",
         ],
         answer: 1,
-        why: "Checklist still applies.",
+        why: "Restore is on author. Publish is a second step. Check the picture too.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name the Core Components kit and one workflow",
-      doTitle: "Keep the landing skeleton honest",
-      doDone: "Skeleton + workflow + grep clean. Mock labeled.",
-      stress: "Refuse template fighting in one sentence",
+      learn: "List the blocks on the Kitepump landing page",
+      doTitle: "Write the skeleton and one ship path",
+      doDone: "Skeleton plus workflow or Quick Publish. Mock labeled.",
+      stress: "Pass the quiz. Retry if you need to.",
     }),
-    fieldNotePrompt: "List the components on the Kitepump landing and the workflow that would ship it.",
-    tomorrowHook: "Week 11: Universal Editor vs Page Editor vs Document Authoring, Content Fragments, Assets, language copies.",
-    body: `## Clinic
+    fieldNotePrompt: "List the blocks on the Kitepump landing and the ship path you named.",
+    tomorrowHook: "Week 11: three ways people write in AEM. Names first.",
+    body: `## A check, not a show
 
-This is a week boss. **core-components-desk** is a named kit: Title, Text, Image, Teaser, Container, XF awareness — plus a workflow name.
+This is the week boss. You already met these blocks. You are proving you can name them.
 
-Fail it and **Day 70 still unlocks if Day 68 lab is done**.
+- **Title, Text, Image, Teaser, Container**
+- **Experience Fragment** as a layout strip, not a DITA reuse
+- One **workflow** (a named path to ask for publish) or **Quick Publish** if that is the path your desk uses
+
+Fail the quiz and **week 11 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week.
+
+You may not have AEM. The evidence is the field log, the labeled mock, and the official video. That is enough.
+
+## Word today
+
+**Workflow** — a named path that asks for publish. Quick Publish is the short path. Some desks want the longer named path. Write the one you would click.
 
 ## Proof
 
 1. Landing skeleton without handbook paste.
 2. Alt phrases.
-3. No layout hobby.
-4. One workflow or an honest Quick Publish.
+3. No extra nested boxes.
+4. One ship path.
 
 ## Figure
 
-Labeled mock of the landing. Caption: *Mock. Same product story as kitepump-dita, different surface.*
+Labeled mock of the landing. Caption: *Mock. Same product story as the handbook, different desk.*
 `,
   },
 ].map((d) => ({ ...d, week: weekOf(d.n) }));

@@ -1,8 +1,8 @@
 ---
 day: 78
 week: 12
-title: Edit in Oxygen — configuration as a concept
-objective: Point at the official Configure Edit in Oxygen article and write the PID/key as something an admin owns.
+title: Edit in Oxygen — what that button means
+objective: Open the official Configure Edit in Oxygen article and write that an admin turns the button on — authors do not guess settings on the live system.
 timeboxMinutes: 90
 skills: [aemGuides, oxygenUi]
 legacyLessonIds: [t7-connector]
@@ -10,7 +10,7 @@ youtube:
   - id: N5cNgWfQAdQ
     title: Customizing the DITA editing experience
     watchFor:
-      - Desktop frameworks must match what the server expects
+      - Desktop setups must match what the server expects
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/install-conf-guide/editor-configs/editor-cloud-settings/conf-edit-in-oxygen", label: Configure Edit in Oxygen, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/install-conf-guide/on-prem-ig/web-editor-configs/conf-edit-in-oxygen", label: Desktop tools / Edit in Oxygen (Guides), dated: 2026-09 }
@@ -19,51 +19,78 @@ lab:
   id: lab-78
   title: Admin owns the switch
   pack: guides-oxygen-handoff
-  failWhen: You paste a made-up OSGi config as if you applied it.
-  expected: Article linked in your note. PID treated as an admin question. Parity sentence written.
+  failWhen: You paste a made-up config as if you applied it on production.
+  expected: Article noted. Setting treated as an admin question. Match-the-server sentence written.
   steps:
     - Open the Experience League article Configure Edit in Oxygen (Source box).
-    - "Write the idea: admin enables the connector. Authors do not guess a PID on production."
-    - "Copy the PID name from the v1 lesson as a question for an admin: com.adobe.fmdita.xmleditor.config.XmlEditorConfig / xmleditor.editinoxygen=true — then write ‘verify in the article for your cloud vs on-prem’."
-    - "Write: keep DITA version, catalogs, and Schematron identical on server and desktop."
+    - "Write oxygen-bootcamp-work/week12/field-log-78.txt: an admin enables the connector. Authors do not guess a setting on production."
+    - Copy the setting name from the pack as a question for an admin (com.adobe.fmdita.xmleditor.config.XmlEditorConfig / xmleditor.editinoxygen=true). Then write ‘verify in the article for your cloud vs on-prem’.
+    - "Write: keep DITA version, catalogs, and house-style checks the same on server and desktop."
+    - Do not paste a made-up config as if you applied it.
 sessionQuests:
   - id: a
     block: A
-    title: Name the official article and what authors must not flip
+    title: Open the official Configure Edit in Oxygen article
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Parity sentence written
+    title: Write that an admin owns the switch
     minutes: 25
-    done: Admin owns the switch. Catalogs must match.
+    done: Admin question written. Match-the-server sentence written.
   - id: c
     block: C
-    title: What breaks if Schematron differs desktop vs server
+    title: "Pick who turns the button on, and what a rules mismatch does"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [authors-dare, warmup-match]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, output-oracle]
 toolCards: [guides-web-editor, author-mode]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Article linked in your note. PID treated as an admin question. Parity sentence written. }
+  - { id: lab, prompt: Article noted. Setting treated as an admin question. Match-the-server sentence written. }
 quiz:
-  - q: "Authors should enable Edit in Oxygen by guessing OSGi keys on prod. True?"
+  - q: "Who turns on Edit in Oxygen?"
     answer: 1
-    why: "Admin work. You need the concept and the official article, not a cowboy config."
+    why: The button is real. The live switch is admin work.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "Who would you ask to enable Edit in Oxygen?"
-tomorrowHook: Maps and topics living on AEM.
+      - "Any author, by guessing the setting on production"
+      - "An admin, after reading the official article"
+      - The 5-minute warmup
+  - q: "House-style checks differ on the desktop and on the server. What breaks?"
+    answer: 1
+    why: "Same rules on both desks, or you fight yourself."
+    options:
+      - Nothing — desktop always wins
+      - A topic can look clean in Oxygen and fail when you check it in
+      - Sites Quick Publish fails
+fieldNotePrompt: "Who would you ask to enable Edit in Oxygen, and which article did you open?"
+tomorrowHook: "Tomorrow: the booklet lives in AEM’s library. Your laptop holds a working copy."
 ---
 
-## Concept, not a prod change
+## A button, not a prod change
 
-The connector is real. Your lab is to understand it. Official article in the Source box. Verify labels and keys for cloud vs on-prem.
+**Edit in Oxygen** is a button in Guides. It opens the topic in desktop Oxygen. Then you check it back in.
+
+An admin turns this on. You do not guess a setting on the live system. The official article is in the Source box. Cloud and on-prem labels differ. Verify.
+
+Keep the DITA version, the catalogs, and the house-style checks the same on the server and on the desktop. If they differ, a topic can look clean in Oxygen and fail when you check it in.
+
+Your lab is to understand the button. It is not to change production.
+
+## Word today
+
+**Edit in Oxygen** — a Guides button that opens the topic in desktop Oxygen.
+
+## Lab
+
+Article open. Admin question written. No cowboy config.
+
+## Figure
+
+Labeled mock: Guides toolbar with Edit in Oxygen. Caption: *Mock. Admin owns the switch.*

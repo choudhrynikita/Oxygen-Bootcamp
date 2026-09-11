@@ -1,7 +1,7 @@
 ---
 day: 85
 week: 12
-title: "Two surfaces, one story"
+title: "Two desks, one product story"
 objective: "Write a one-page comparison: how the DITA book and the AEM family tell the same Kitepump story, and where they must differ."
 timeboxMinutes: 90
 skills: [aemGuides, aemSites, ditaTopics]
@@ -10,7 +10,7 @@ youtube:
   - id: idByz7WrhbQ
     title: AEM from Headful to Headless (Adobe for Business)
     watchFor:
-      - Headful page vs structured content
+      - A laid-out page vs structured content
   - id: t2cG3Xe1TXY
     title: DITA Editing
     watchFor:
@@ -24,51 +24,77 @@ lab:
   title: Comparison sheet
   pack: guides-oxygen-handoff
   failWhen: The sheet claims the two publishes are the same button.
-  expected: Four rows. Badge if the lab is honest.
+  expected: Four rows saved.
   steps:
-    - "Row: product name — key in DITA vs title on the page."
-    - "Row: procedure — task vs a short page that points at help (not a fake task in Text)."
-    - "Row: warning — conkeyref vs a short Text warning (not a reused DITA id)."
-    - "Row: publish — transform/baseline vs Quick Publish."
     - Save oxygen-bootcamp-work/week12/two-surfaces.md.
+    - "Row: product name — key in DITA vs title on the page."
+    - "Row: procedure — task vs a short page that points at help (not a fake how-to in Text)."
+    - "Row: warning — reused DITA warning vs a short Text warning (not a reused DITA id)."
+    - "Row: publish — transform or baseline vs Quick Publish."
+    - Do not claim the two publish buttons are the same button.
 sessionQuests:
   - id: a
     block: A
-    title: Name the four comparison rows
+    title: Read the four comparison rows
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Sheet exists and does not mash publishes
+    title: Save two-surfaces.md without mixing the publish buttons
     minutes: 25
-    done: four rows saved.
+    done: Four rows saved.
   - id: c
     block: C
-    title: The row a junior always mashes
+    title: Pick whether one story means one CMS
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [menu-path-race, output-oracle]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, output-oracle]
 toolCards: [guides-web-editor, page-editor]
 badgeId: two-surfaces-one-story
 boss: false
 checks:
-  - { id: lab, prompt: Four rows. Badge if the lab is honest. }
+  - { id: lab, prompt: Four rows saved. }
 quiz:
-  - q: "One story means one CMS. True?"
+  - q: "One product story means one CMS. True or not?"
     answer: 1
-    why: That is the point of the capstone.
+    why: That is the point of the capstone. Same pump. Two desks.
     options:
-      - "True"
-      - "False — one product story, two families of tools"
-fieldNotePrompt: "Which row was hardest to keep distinct?"
-tomorrowHook: Capstone review — completeness + field log.
+      - True — pick Oxygen or AEM and delete the other
+      - "Not true — one product story, two desks of tools"
+      - True after the capstone zip
+  - q: "Which row is a key in the map on one desk, and a page title on the other?"
+    answer: 1
+    why: "The name is a key in DITA and a title on the page. Same story, different pointer."
+    options:
+      - Publish
+      - Product name
+      - Language copy
+fieldNotePrompt: "Which of the four rows took the longest to keep distinct?"
+tomorrowHook: "Tomorrow: re-run completeness and re-read the AEM log. Fix one thing on each desk."
 ---
 
 ## One story
 
 Kitepump on the beach. The book explains how. The site sells the beach card. They share a name, not a file format.
+
+Write four rows:
+
+1. **Product name** — key vs page title
+2. **Procedure** — task vs a short page that points at help
+3. **Warning** — reused DITA vs a short Text line
+4. **Publish** — transform or baseline vs Quick Publish
+
+The two publish buttons are not the same button. If the sheet says they are, rewrite the row.
+
+## Lab
+
+`oxygen-bootcamp-work/week12/two-surfaces.md`. Four rows.
+
+## Figure
+
+A four-row table. Caption: *Same pump. Two desks.*

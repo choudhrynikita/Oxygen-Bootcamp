@@ -1,116 +1,80 @@
 ---
 day: 21
 week: 3
-title: Boss — map surgery without silent breakage
-objective: "Break and repair a kitepump book: missing href, duplicate topicref, bad id, leftover xref — then pass completeness."
-timeboxMinutes: 110
-skills: [maps, review, xmlLiteracy]
-legacyLessonIds: [t4-complete, t3-maps]
+title: Week 3 check
+objective: "Repair a broken booklet, explain three errors in plain words, and pass the quiz so week 4 can open."
+timeboxMinutes: 90
+skills: [review, maps]
+legacyLessonIds: [t4-complete]
 youtube:
   - id: JkPeWea3Y3U
     title: DITA Map Completeness Check
     watchFor:
-      - The completeness report rows
-      - Missing href vs missing id
-  - id: ozFZz6YZMCY
-    title: DITA Maps Manager View in Oxygen XML Editor 19
-    watchFor:
-      - Root map control on the toolbar
+      - Missing file vs broken tags
 sources:
   - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
-  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
 lab:
   id: lab-21
-  title: "Clinic: four breaks, four repairs"
-  pack: kitepump-dita
-  failWhen: "You cannot explain one of the four errors in a sentence, or you leave the clinic copy broken, or flower-docs was edited instead of kitepump."
-  expected: Clinic copy completeness clean. Four error sentences in the field note. File-visit count recorded.
+  title: Three booklet breaks
+  pack: flower-docs
+  failWhen: "You cannot explain one error, or you leave the check copy broken."
+  expected: Check copy completeness clean. Three one-line repairs.
   steps:
-    - Copy your kitepump pack to oxygen-bootcamp-work/week3-clinic/ (do not vandalize the only copy).
-    - "Break 1: rename a topic file without updating the topicref. Completeness. Repair."
-    - "Break 2: duplicate a topicref in parent and submap. Notice the double TOC. Remove the extra."
-    - "Break 3: change an element id that an xref uses. Follow the xref. Repair the id or the xref."
-    - "Break 4: unset the root map. Open a topic with a keyref if you have one; or xref across folders. Restore the root map."
-    - "Timed completeness read: run once on the clean clinic copy. Write how many files it visited."
-    - Answer the boss quiz. Retry unlimited. Day 22 still unlocks if Day 20 lab is done.
+    - Copy flower-docs to oxygen-bootcamp-work/week3-check/ so you do not wreck the sample.
+    - "Break 1: rename a page file without updating the booklet. Run completeness. Repair."
+    - "Break 2: delete a closing tag on one page. Read the well-formed error. Undo."
+    - "Break 3: add a pointer to a file you never created. Read the row. Remove the pointer or add the file."
+    - Check copy completeness is clean.
+    - Pass the quiz. Week 4 stays locked until this day is finished.
 sessionQuests:
   - id: a
     block: A
-    title: Name completeness vs duplicate-chapter and wrong-id failures
+    title: Name the three breaks out loud
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Clinic copy still validates
+    title: Repair the check copy
     minutes: 25
-    done: Four breaks repaired. Completeness clean. File-visit count written.
+    done: Completeness clean. Three one-line notes.
   - id: c
     block: C
-    title: Explain each error in one sentence
+    title: Pass the quiz. Retry if you need to.
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [authors-dare, warmup-match]
-toolCards: [maps-manager, outline]
+    done: Note saved.
+dailyBurstPool: [menu-path-race, one-line-repair]
+toolCards: [maps-manager]
 badgeId: completeness-clean
 boss: true
 checks:
-  - { id: lab, prompt: Clinic copy completeness clean. Four error sentences in the field note. File-visit count recorded. }
+  - { id: lab, prompt: Check copy completeness clean. Three one-line repairs. }
 quiz:
-  - q: "Completeness is clean but an xref still jumps to the wrong paragraph. What is true?"
+  - q: "Completeness is clean but a page is still red. What is true?"
     answer: 1
-    why: Completeness finds missing targets. It does not score whether the surviving id is the one you meant.
+    why: "Two checks. Booklet pointers, and page skeleton. You need both."
     options:
-      - Impossible — completeness checks xref text
-      - Possible — the id exists but is on the wrong element
-      - Then the submap is illegal
-  - q: "You failed this boss. Does Day 22 stay locked?"
+      - Impossible
+      - Possible — completeness is the booklet; the red line is that page’s tags
+      - Then the root map is wrong
+  - q: "You failed this check. Does week 4 open?"
     answer: 1
-    why: Boss badge waits. Curriculum week does not hostage you if Friday lab is done.
+    why: Reuse week waits until you can repair a booklet.
     options:
-      - "Yes, forever"
-      - "No, if Friday (Day 20) lab is done the next week can unlock. The boss badge stays locked until you pass."
-      - "No, Daily Burst unlocks the week"
-  - q: "Parent map and submap both href the same topic. Completeness is green. Ship it?"
-    answer: 1
-    why: "Completeness is missing targets, images, keys. Duplicates can be valid and wrong."
-    options:
-      - Yes — green means the book is honest
-      - No — you shipped the chapter twice; completeness does not mean unique
-      - Yes if the ids differ
-  - q: "Flower-docs still exists. Kitepump is the Week 3 pack. What do you not do?"
-    answer: 1
-    why: Flower-docs stays the Week 1–2 bench. Kitepump is additive.
-    options:
-      - Keep both
-      - Replace flower-docs with kitepump
-      - Open either as root map when you work that book
-fieldNotePrompt: Write the four errors you caused and the one-line repair for each.
-tomorrowHook: "Week 4: keys and conref as practice — you will reuse a warning, not memorize a glossary."
+      - "Yes, Friday’s handbook is enough"
+      - "No. Finish lab, quiz, and note. Retry the quiz if you need to."
+      - "Yes, if the warmup is done"
+fieldNotePrompt: "The three errors, and the one-line repair for each."
+tomorrowHook: "Week 4: one product name, used everywhere — instead of typing it forty times."
 ---
 
-## Clinic, not a ceremony
+## Check
 
-This is a week boss: mixed repair + scenario questions + a timed completeness read.
+You now know the apple of a booklet: pointers, a tree, a completeness row.
 
-Fail it and **Day 22 still unlocks if Day 20 lab is done**. The boss badge stays locked until you retry.
-
-## Errors from this week
-
-1. **Missing href** — file moved, map not updated.
-2. **Duplicate chapter** — parent and submap both point at the same topic.
-3. **Wrong id** — xref target exists but is the wrong element.
-4. **Wrong root map** — keys and some xrefs look broken.
-
-## Two packs
-
-`flower-docs` stays. `kitepump-dita` is the product book from here through publish. Do not merge them into one map.
-
-## Figure
-
-Completeness report: one row per problem. Caption: *DITA Maps Manager > Validate and Check for Completeness.*
+Fail the quiz and **week 4 stays locked**. Retry is free.

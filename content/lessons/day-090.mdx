@@ -1,8 +1,8 @@
 ---
 day: 90
 week: 12
-title: "Portfolio export, skills inventory, what next"
-objective: "Export progress, list skills with evidence, and write three things this course does not teach."
+title: "What you can do now, and what is next"
+objective: "Export progress, list skills with evidence, and write three things this course does not teach — plus one next course you would actually take."
 timeboxMinutes: 90
 skills: [review]
 legacyLessonIds: []
@@ -10,64 +10,85 @@ youtube:
   - id: PiCWAIiKx78
     title: Getting Started with Oxygen XML Editor
     watchFor:
-      - "How far you have come from first launch — evidence, not a slogan"
+      - "How far you have come from the first window — evidence, not a slogan"
 sources:
   - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/overview", label: AEM Guides overview, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction", label: Core Components introduction, dated: 2026-09 }
 lab:
   id: lab-90
-  title: Export + inventory
+  title: Export plus inventory
   pack: guides-oxygen-handoff
   failWhen: "You claim this course made you an AEM developer, or you skip the export."
-  expected: JSON export exists. Inventory has evidence. Three not-taught items.
+  expected: JSON export exists. Inventory has evidence. Three not-taught items. One next course.
   steps:
-    - Settings > Export progress + game state. Keep the JSON.
-    - List each skill with one piece of evidence (day number + artifact).
-    - "Write what is not taught: specializations, DITA-OT customizing, AEM developer path (HTL, models). Listed, not taught."
+    - "Settings: Export progress and game state. Keep the JSON."
+    - Write oxygen-bootcamp-work/week12/inventory.txt. List each skill with one piece of evidence (day number plus a file).
+    - "Write what is not taught: DITA specializations, customizing DITA-OT, the AEM developer path (the code behind the blocks). Listed, not taught."
     - Write one next course you would actually take.
+    - Do not claim this course made you an AEM developer.
 sessionQuests:
   - id: a
     block: A
-    title: Name three things not taught
+    title: Read the three things this course does not teach
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Export exists
+    title: Export progress and write the inventory
     minutes: 25
-    done: JSON saved. Inventory has day numbers.
+    done: JSON saved. Inventory has day numbers. One next course written.
   - id: c
     block: C
-    title: The skill with the weakest evidence
+    title: "Pick whether DITA-OT plugins were taught, and what counts as evidence"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [one-line-repair, menu-path-race]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, output-oracle]
 toolCards: []
 badgeId: portfolio-ready
 boss: false
 checks:
-  - { id: lab, prompt: JSON export exists. Inventory has evidence. Three not-taught items. }
+  - { id: lab, prompt: JSON export exists. Inventory has evidence. Three not-taught items. One next course. }
 quiz:
-  - q: "This course taught you to customize DITA-OT plugins. True?"
+  - q: "This course taught you to customize DITA-OT plugins. True or not?"
     answer: 1
-    why: Day 90 is honest about the edge of the map.
+    why: Week 6 taught you to run a transform and read a log. Plugin work is a later course.
     options:
-      - "True"
-      - "False — listed as next, not taught"
+      - True — week 6 was that
+      - "Not true — listed as next, not taught"
+      - True if WebHelp opened
+  - q: "What is the evidence for a skill on the inventory?"
+    answer: 1
+    why: Evidence is a file with a date. Not a streak.
+    options:
+      - A feeling that you remember it
+      - A day number plus a file you actually wrote
+      - The warmup streak
 fieldNotePrompt: "What will you learn next, in one line?"
-tomorrowHook: There is no Day 91 in this pack. Add Week 13 in docs when you need it.
+tomorrowHook: There is no day 91 in this pack. Add a next course when you need one.
 ---
 
 ## Done looks like this
 
-You can open a DITA map in Oxygen, reuse with keys and conrefs, publish WebHelp or PDF, then switch to AEM, create and edit pages, publish, run a workflow, author a Content Fragment, and explain when Guides + Oxygen beats in-AEM web editing.
+You can open a DITA booklet in Oxygen, reuse with keys and conrefs, publish WebHelp or PDF, then switch to AEM, create and edit pages, publish, fill a Content Fragment, and say when Guides plus Oxygen is the handbook desk.
 
 You are not a DITA-OT customizer. You are not an AEM developer. Those paths are listed, not taught.
 
-Export your progress. Keep the evidence.
+Export your progress. Keep the evidence. Write one next course you would actually take.
+
+## Word today
+
+None. You already have the words. The inventory is the proof.
+
+## Lab
+
+JSON export. Inventory with day numbers. Three not-taught items. One next course.
+
+## Figure
+
+A short inventory. Caption: *Day numbers plus files. That is the portfolio.*

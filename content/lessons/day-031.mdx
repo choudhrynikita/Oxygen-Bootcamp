@@ -1,8 +1,8 @@
 ---
 day: 31
 week: 5
-title: Conditions you can explain — retire the rest
-objective: Audit every profiling attribute in the kitepump pack and delete or justify each value in a list.
+title: Only keep switches you can explain
+objective: "Search the pack for every audience, platform, and similar mark, then delete or justify each value in a list."
 timeboxMinutes: 90
 skills: [reuse, review]
 legacyLessonIds: [t5-profile]
@@ -10,7 +10,7 @@ youtube:
   - id: YRi9XPK6CcY
     title: Advanced Profiling Using Conditional Processing Attribute Groups
     watchFor:
-      - Grouped conditions — awareness only
+      - "Grouped conditions — look, do not copy yet"
       - A filter that would surprise you
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
@@ -18,82 +18,71 @@ sources:
   - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
 lab:
   id: lab-31
-  title: Condition census
+  title: A list of every mark
   pack: kitepump-dita
-  failWhen: "A profiling value remains without a census line, or you deleted the expert step’s content while removing the attribute, or the census is empty because you skipped Find in Files."
-  expected: Census matches the pack. Every remaining condition has a meaning. Files valid.
+  failWhen: "A mark remains without a list line, or you deleted the expert step’s words while removing a mark, or the list is empty because you skipped Find in Files."
+  expected: The list matches the pack. Every remaining mark has a meaning. Files clean.
   steps:
-    - "Find in Files for audience=, platform=, product=, otherprops=, props=, rev= across kitepump."
+    - "Find in Files for audience= and platform= across the kitepump folder. Also search product=, otherprops=, props=, and rev= — extra mark fields some files use. If you cannot explain one, it goes on the delete list."
     - "Write oxygen-bootcamp-work/week5/condition-census.txt: each hit, the value, one-line meaning, keep or delete."
     - Delete any value you cannot explain. Do not replace it with a different joke.
-    - Leave audience=expert and platform=print if they still match Day 29 meanings.
-    - "If you find grouped conditions from a paste, simplify to one attribute unless you can draw the group."
-    - Validate. Completeness clean.
+    - Leave audience=expert and platform=print if they still match yesterday’s meanings.
+    - "If you find grouped marks from a paste, simplify to one attribute unless you can draw the group."
+    - Save. Completeness clean.
 sessionQuests:
   - id: a
     block: A
-    title: Name the census and what an undefined value forbids
+    title: Find Find in Files and search the kitepump folder
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep only explained conditions
+    title: List every mark and delete the ones you cannot explain
     minutes: 25
-    done: Census complete. Leftover values gone. Pack valid.
+    done: List complete. Leftover values gone. Pack clean.
   - id: c
     block: C
-    title: Find one surprise hit in Find in Files
+    title: "Pick what to do with a mystery value, and key vs mark"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [authors-dare, warmup-match]
+    done: Note saved.
+dailyBurstPool: [one-line-repair, authors-dare]
 toolCards: [attributes, outline]
 badgeId: ditaval-explained
 boss: false
 checks:
-  - { id: lab, prompt: Census matches the pack. Every remaining condition has a meaning. Files valid. }
+  - { id: lab, prompt: The list matches the pack. Every remaining mark has a meaning. Files clean. }
 quiz:
-  - q: "Find in Files shows otherprops=\"legacy\". Nobody can define legacy. First move?"
+  - q: "Find in Files shows audience=\"legacy\". Nobody can say what legacy means. What do you do?"
     answer: 1
-    why: Undefined conditions are unexploded filters. Define or delete.
+    why: A mark with no meaning is a filter waiting to surprise you. Define it or delete it.
     options:
-      - Keep it for the next team
-      - "Remove it, or define it in the census and a ditaval — no third option"
-      - Set it on every topic for consistency
-  - q: "Advanced profiling attribute groups exist. You are a junior author. When do you start using them this week?"
+      - Keep it for the next person
+      - "Remove it, or write a meaning and a switch file action — those are the two options"
+      - Set it on every page so it looks consistent
+  - q: "A product name in the booklet vs a product mark on a step. Which one changes the word in the sentence?"
     answer: 1
-    why: Awareness from the video. Practice stays on simple audience/platform.
+    why: "A key changes the word. A condition shows, hides, or flags the chunk. Different tools."
     options:
-      - Today — more power
-      - "You do not, unless a lead hands you a drawn model"
-      - Only in AEM Guides
-  - q: "product profiling vs a product-name key. Which one changes the string in running text?"
-    answer: 1
-    why: Keys substitute. Profiling includes/excludes/flags. Do not mix the jobs.
-    options:
-      - Profiling — it rewrites text
-      - "The key — profiling shows or hides elements, it does not rename a keyword"
-      - Both do the same job
-fieldNotePrompt: "Which condition did you delete, and what bug would it have caused in a novice PDF?"
-tomorrowHook: Tomorrow you turn on Track Changes and leave a comment a reviewer can accept.
+      - The mark — it rewrites text
+      - "The name in the booklet — a mark shows or hides a chunk, it does not rename a word"
+      - They do the same job
+fieldNotePrompt: "Which mark did you delete, and why?"
+tomorrowHook: Tomorrow you turn on suggested edits and leave a comment a teammate can read.
 ---
 
-## Census
+## Search the pack
 
-Find in Files is the audit. A condition that is not in the census does not exist as policy — it exists as a bug.
+Find in Files is the audit. A mark that is not on your list is not a plan. It is a surprise.
 
-## Groups
+The video shows grouped marks. Watch for the idea. Do not design groups this week.
 
-The advanced profiling video shows attribute groups. Watch for the idea. Do not design groups this week.
+A **key** changes the word. A **condition** shows or hides the chunk. Do not mix the jobs.
 
-## Keys vs conditions
+## Word today
 
-**keyref** changes the word. **Profiling** shows or hides the element. Different tools.
-
-## Figure
-
-Find in Files panel with audience= hits. Caption: *Search the pack, not only the open file.*
+**Find in Files** — a search across many files, not only the one you have open.

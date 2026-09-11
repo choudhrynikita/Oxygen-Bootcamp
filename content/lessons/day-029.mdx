@@ -1,8 +1,8 @@
 ---
 day: 29
 week: 5
-title: Profiling attributes you can say out loud
-objective: "Mark one step audience=expert and one paragraph platform=print, and write what each value means on this desk."
+title: Hide text some readers should not see
+objective: "Mark one step for experts and one paragraph for print, turn on the colors in Author, and write what each mark means on this desk."
 timeboxMinutes: 90
 skills: [reuse, ditaTopics]
 legacyLessonIds: [t5-profile]
@@ -10,7 +10,7 @@ youtube:
   - id: CgBbPW3mJzw
     title: Profiling and Reuse
     watchFor:
-      - Color of profiled text in Author
+      - Color of marked text in Author
       - Where audience and platform are set
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
@@ -18,84 +18,73 @@ sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
 lab:
   id: lab-29
-  title: "Two conditions, two meanings"
+  title: "Two marks, two meanings"
   pack: kitepump-dita
-  failWhen: "A profiling value has no sentence definition, or you profiled the whole topic when you meant one step, or colors never turned on."
-  expected: "Two attributes, two written meanings. Colors visible. Files valid."
+  failWhen: "A mark has no sentence in the meanings file, or you marked the whole how-to when you meant one step, or colors never turned on."
+  expected: "Two marks, two written meanings. Colors visible. Files open clean."
   steps:
-    - "In inflate-the-tire.dita, set audience=\"expert\" on one step (the gauge nuance)."
-    - "In what-kitepump-is.dita, set platform=\"print\" on one paragraph you would drop from WebHelp."
-    - Turn on profiling colors in Author (Profiling / Conditional Text — verify the label). Expert and print should look different.
-    - "Write oxygen-bootcamp-work/week5/condition-meanings.txt: audience=expert means ____. platform=print means ____. Do not invent a third attribute today."
-    - "Do not set otherprops=\"maybe\" or a joke value."
-    - Validate. Completeness still clean.
+    - "Open prime-the-pump.dita. The sample may already mark one step audience=\"expert\" (the gauge step). If not, set audience=\"expert\" on that step."
+    - "In what-is-kitepump.dita, set platform=\"print\" on one paragraph you would drop from a screen copy."
+    - "Turn on profiling colors in Author (Profiling / Conditional Text — if the label differs, write the label you see). Expert and print should look different."
+    - "Write oxygen-bootcamp-work/week5/condition-meanings.txt: audience=expert means ____. platform=print means ____. Do not invent a third mark today."
+    - Do not set a joke value. Do not mark the whole how-to when you meant one step.
+    - Save. No red error. Completeness still clean.
 sessionQuests:
   - id: a
     block: A
-    title: Name audience and platform and what a joke value forbids
+    title: Find the audience and platform fields on a step or paragraph
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep two explained conditions
+    title: "Mark one expert step and one print paragraph, and write the meanings"
     minutes: 25
-    done: Two attributes. Meanings file written. Colors on. Files valid.
+    done: Two marks. Meanings file written. Colors on. Files clean.
   - id: c
     block: C
-    title: "Profile a whole topic, then undo it down to one step"
+    title: "Pick whether a mark deletes the step, and what a whole-page mark probably wanted"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [menu-path-race, output-oracle]
+    done: Note saved.
+dailyBurstPool: [one-line-repair, authors-dare]
 toolCards: [attributes, author-mode]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: "Two attributes, two written meanings. Colors visible. Files valid." }
+  - { id: lab, prompt: "Two marks, two written meanings. Colors visible. Files open clean." }
 quiz:
-  - q: "audience=\"expert\" on a step. Without a DITAVAL, what does a default WebHelp transform usually do?"
-    answer: 1
-    why: "Attributes mark content. DITAVAL includes, excludes, or flags. No DITAVAL, no filter."
-    options:
-      - Hide the step
-      - Include it — profiling attributes are data until a DITAVAL acts
-      - Fail the transform
-  - q: "You set otherprops=\"asdf\" so you can ‘filter later’. Verdict?"
-    answer: 1
-    why: Conditions you can explain. Joke values become production filters by accident.
-    options:
-      - Fine — values are freeform
-      - Refuse — a condition you cannot explain is a landmine
-      - Fine if the color is pretty
-  - q: "The whole task is audience=expert. What did you probably want?"
+  - q: "You marked a step audience=expert. You have not hidden it yet. Is the step still in the file?"
     answer: 0
-    why: Hiding an entire procedure with one attribute is how novices lose a chapter. Prefer a dedicated topic or a honest map branch.
+    why: The mark labels the step. It does not delete the step. You still see it in Text.
     options:
-      - "A separate task, or one step profiled — not a hidden chapter with no map signal"
-      - platform=print on the map
-      - A conref of the task
-fieldNotePrompt: Say the two condition values in a sentence a new hire would survive.
-tomorrowHook: "Tomorrow a DITAVAL file includes, excludes, or flags those conditions on purpose."
+      - Yes — a mark is a label. It does not delete the step
+      - No — the mark deletes the step
+      - Only if completeness is clean
+  - q: "The whole how-to is marked audience=expert. What did you probably want?"
+    answer: 0
+    why: "Hiding a whole how-to with one mark is how a chapter disappears. Prefer a dedicated page, or mark the one step."
+    options:
+      - "A separate how-to, or one step marked — not a hidden chapter with no booklet signal"
+      - platform=print on the booklet
+      - A warning pointer on the title
+fieldNotePrompt: "What did audience=expert and platform=print mean in the two sentences you wrote?"
+tomorrowHook: "Tomorrow a switch file shows, hides, or flags those marks on purpose."
 ---
 
-## Profiling is data
+## A mark is not a delete
 
-v1: *Condition attributes plus a DITAVAL file include, exclude, or flag content. Color profiled text in Author mode.*
+Some readers should not see a step. You do not delete the step. You **mark** it.
 
-Today is the attributes. **audience**, **platform**, **product**, **rev**, **props**, **otherprops**. Pick two. Write what they mean **on this desk**.
+Today you set two marks: **audience="expert"** on a step, **platform="print"** on a paragraph. Author can paint marked text in color. Turn that on. If you cannot see the mark, you will forget it is there.
 
-## Color
+A mark you cannot explain will become a filter someone else trusts. Do not invent a joke value.
 
-Author can paint profiled text. Turn that on. If you cannot see the mark, you will forget it is there and ship an expert-only step to everyone.
+The step is still in the file. A switch file tomorrow will act on the mark.
 
-## Explain or do not use
+## Word today
 
-A condition you cannot explain will become a filter someone else trusts. Do not invent `otherprops="maybe"`.
-
-## Figure
-
-One step with a profiling color. Caption: *Attributes view on the step element. Profiling colors on in Author.*
+**Condition** (also called profiling) — a mark such as audience or platform that says who a chunk is for. It does not hide anything until a switch file says so.

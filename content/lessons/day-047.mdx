@@ -1,8 +1,8 @@
 ---
 day: 47
 week: 7
-title: Hand files to a reviewer who is not a specialist
-objective: "Package a zip a non-specialist can open, plus a one-page what-to-look-at, without sending your entire disk."
+title: Hand off a clean folder
+objective: "Pack the booklet and its pages into a small folder a reviewer can open, plus a one-page note, without sending your whole disk."
 timeboxMinutes: 90
 skills: [review, maps]
 legacyLessonIds: [t6-git]
@@ -10,59 +10,77 @@ youtube:
   - id: LuAVmn1j7f0
     title: Getting Started with DITA Using Oxygen XML Editor
     watchFor:
-      - "The map as the thing you send, not random topics"
+      - "The map as the thing you send, not random pages"
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
   - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
 lab:
   id: lab-47
-  title: Reviewer zip + cover note
+  title: Reviewer folder plus cover note
   pack: kitepump-dita
-  failWhen: "You send the whole oxygen-bootcamp-work tree, or you omit the map."
-  expected: A small pack with the map and a cover note a non-specialist can follow.
+  failWhen: "You send the whole oxygen-bootcamp-work tree, or you omit the map, or you include a publish out/ folder."
+  expected: "A small pack with the map, the pages, and a cover note a non-writer can follow."
   steps:
     - Copy kitepump.ditamap and its topics into oxygen-bootcamp-work/week7/reviewer-pack/.
     - "Add README-reviewer.txt: open the map in Maps Manager; comment only on prime-the-pump.dita; do not rename files."
-    - "If you use Git, write why the pack is a zip this week (the reviewer has no repo)."
-    - List the files in the zip. Do not include out/ transforms.
+    - List every file in the pack in oxygen-bootcamp-work/week7/reviewer-list.txt. Do not include out/ publish folders.
+    - "If you use Git at work, write one line: this week the pack is a folder (or a zip) because the reviewer has no repo."
 sessionQuests:
   - id: a
     block: A
-    title: Name the map as the thing you hand over
+    title: Find the map and the two topic files you will copy
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Pack still complete if opened
+    title: Build a small reviewer pack with a cover note
     minutes: 25
-    done: Zip contents listed. Map included. out/ excluded.
+    done: Map included. out/ excluded. File list written.
   - id: c
     block: C
-    title: What breaks if they rename a file
+    title: "Pick why the map must go in the pack, and what stays out"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [authors-dare, warmup-match]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, one-line-repair]
 toolCards: [maps-manager]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: A small pack with the map and a cover note a non-specialist can follow. }
+  - { id: lab, prompt: "A small pack with the map, the pages, and a cover note a non-writer can follow." }
 quiz:
-  - q: "A reviewer without Oxygen should receive only the one topic file. True?"
+  - q: "A reviewer without Oxygen should receive only the one topic file. True or not?"
     answer: 1
-    why: Keys and sibling topics break without the map. Send the tiny book or use a browser review tool.
+    why: The booklet holds the pointers. One loose page loses its neighbors and its product name key.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "What will you refuse to put in a reviewer zip?"
-tomorrowHook: "Team flow lab: pick CCMS or Git, not both by accident."
+      - True — one file is simpler
+      - "Not true — keys and sibling pages break without the map. Send the tiny book, or use a browser review tool"
+      - True if the file name is FINAL
+  - q: "What stays out of a reviewer pack?"
+    answer: 2
+    why: "Send the book. Do not send last week’s HTML, and do not send every file you have ever saved."
+    options:
+      - The map
+      - The cover note
+      - Publish output folders (out/) and the rest of your disk
+fieldNotePrompt: "What files did you put in the reviewer pack? Paste the list."
+tomorrowHook: "Tomorrow you pick one place the files live — a folder or Git, not both by accident."
 ---
 
-## The zip is a book
+## The pack is a book
 
-Send the map plus topics. Say what to comment on. Say do not rename. Git is later. Master Files help you rename without silent breakage — the reviewer does not have that.
+Send the **map** plus the **pages** it points at. Say what to comment on. Say do not rename files. A renamed file is a broken pointer.
+
+Do not send `out/` publish folders. Do not send your whole `oxygen-bootcamp-work/` tree. Git can wait until the reviewer has a repo.
+
+## Word today
+
+**Reviewer pack** — a small folder (or zip) with the booklet, its pages, and a cover note. Not your whole disk.
+
+## Lab
+
+Copy. Cover note. List. If a file is missing from the list, it is missing from the pack.

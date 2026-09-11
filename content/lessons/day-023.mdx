@@ -1,8 +1,8 @@
 ---
 day: 23
 week: 4
-title: "conref is path plus id — practice, not a definition slide"
-objective: "Pull a warning note from a library topic into a task using conref, and break it on purpose to see the unresolved content."
+title: Reuse a warning instead of copying it
+objective: "Write a warning in one library file, pull it into a how-to with a pointer, then break the pointer on purpose and repair it."
 timeboxMinutes: 90
 skills: [reuse, ditaTopics]
 legacyLessonIds: [t5-reuse]
@@ -11,91 +11,82 @@ youtube:
     title: Working with DITA Reusable Components View
     watchFor:
       - Reusable Components view
-      - How a conref looks in Author vs Text
+      - How a reused warning looks in Author vs Text
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
   - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
 lab:
   id: lab-23
-  title: conref a warning into inflate-the-tire
+  title: "One warning, one pointer"
   pack: kitepump-dita
-  failWhen: "The warning sentence is duplicated in the task, or conref is missing, or the library topic is a TOC chapter you forgot to hide."
-  expected: One source sentence. Task shows it via conref. Text has no copy. Completeness/validation clean after repair.
+  failWhen: "The warning sentence is copied into the how-to, or there is no pointer, or the library page is a chapter in the table of contents."
+  expected: One source sentence. The how-to shows it through a pointer. Text has no copy. Completeness is clean after repair.
   steps:
-    - "Create topics/library/warnings.dita (concept or a warehouse topic). One <note id=\"pinch-hazard\" type=\"warning\">: pinch hazard at the lever. Keep that sentence only in this file."
-    - "Give the library topic a stable id. Append it to the map with toc=\"no\" or processing-role so it does not become a chapter (write which attribute you used)."
-    - "In inflate-the-tire.dita, insert a note and set conref to warnings.dita#warnings/pinch-hazard (adjust to your topic id). Use Reusable Components view if you have it."
-    - "Author should show the warning text. Text should show conref, not a copy of the sentence."
-    - Typo the conref path. Author shows unresolved. Record the message. Repair.
-    - Do not copy the warning sentence into the task as a backup paragraph.
+    - "Create topics/library/warnings.dita (an explaining page is fine). One warning note with id=\"pinch-hazard\": pinch hazard at the lever. That sentence lives only in this file."
+    - "Add the library page to the booklet. Hide it from the table of contents (toc=\"no\" on the pointer, or the similar control your version shows). Write which setting you used."
+    - "In prime-the-pump.dita, insert a note that points at that warning (conref to warnings.dita, id pinch-hazard). Use Reusable Components view if you have it."
+    - "Author should show the warning text. Text should show the pointer, not a second copy of the sentence."
+    - Typo the path on the pointer. Author shows a broken pull. Write the message. Put the path back.
+    - Do not paste the warning sentence into the how-to as a backup paragraph.
 sessionQuests:
   - id: a
     block: A
-    title: Name conref (path plus id) and what a copied warning forbids
+    title: "Find Reusable Components view, or the pointer fields on a note"
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the pinch warning in one file
+    title: Write the pinch warning once and pull it into the how-to
     minutes: 25
-    done: conref resolves. Task Text has no copy of the sentence. Library not a TOC chapter.
+    done: Author shows the warning. Text shows the pointer. Library is not a chapter.
   - id: c
     block: C
-    title: "Typo the path, read unresolved, repair"
+    title: "Pick what the id points at, and why the view can be empty"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [one-line-repair, menu-path-race]
+    done: Note saved.
+dailyBurstPool: [one-line-repair, authors-dare]
 toolCards: [author-mode, attributes]
 badgeId: first-conref
 boss: false
 checks:
-  - { id: lab, prompt: One source sentence. Task shows it via conref. Text has no copy. Completeness/validation clean after repair. }
+  - { id: lab, prompt: One source sentence. The how-to shows it through a pointer. Text has no copy. Completeness is clean after repair. }
 quiz:
-  - q: "conref uses a path plus id. What is the id pointing at?"
+  - q: "A warning pointer uses a path plus an id. What is the id on?"
     answer: 1
-    why: "v1: conref uses a path plus id. The id is on the note (or other element), not on the folder."
+    why: The path finds the file. The id finds the note inside it.
     options:
-      - The filename without extension
-      - The element that holds the reusable chunk
-      - The map’s product key
-  - q: "You conref a whole task into another task. What should you suspect?"
-    answer: 1
-    why: Reuse small stable chunks such as warnings. A whole procedure is usually a topic you point at.
-    options:
-      - Normal — reuse as much as possible
-      - "You probably wanted a topicref, a key, or a smaller chunk"
-      - DITA forbids conref on tasks
+      - The file name without a suffix
+      - The note (the chunk) you want to pull
+      - The product name in the booklet
   - q: "Reusable Components view is empty. First place you look?"
     answer: 0
-    why: "The view reads the map. No root map, no library."
+    why: "The view reads the booklet. No root map, no library list."
     options:
-      - Whether the root map is set and the library topic is in that map
-      - Schema Design
-      - AEM Assets
-fieldNotePrompt: "What would happen if you edited the warning in the task instead of in the library file?"
-tomorrowHook: Tomorrow you replace that path with conkeyref so the map owns the library too.
+      - Whether the root map is set and the library page is in that booklet
+      - Help > About
+      - The desktop
+fieldNotePrompt: "Which file holds the warning sentence, and which how-to points at it?"
+tomorrowHook: "Tomorrow you point at the library by a name in the booklet, not by a file path."
 ---
 
-## conref
+## Write the warning once
 
-v1: *conref uses a path plus id. conkeyref uses a key and is preferred. Reuse small stable chunks such as warnings.*
+A **conref** is a pointer that pulls a chunk from another file by **path plus id**.
 
-Today you do the path-plus-id form so you can feel it break. The library topic holds the note. The task points at it.
+Today you feel the path form. The library file holds the note. The how-to points at it. Author shows the words. Text shows the pointer.
 
-## Reusable Components
+**Reusable Components** view lists chunks from the root map. Insert from there if you have it. Do not paste the sentence.
 
-**DITA Reusable Components** view lists candidates from the root map. Insert from there. Do not paste the sentence.
+## Hide the library
 
-## Hide the warehouse
+A library page is not a chapter. `toc="no"` on its booklet line hides it from the table of contents. Write the setting you used.
 
-A library topic is not a chapter. `toc="no"` or a resource-only keydef keeps it out of the TOC. Write the attribute you used.
+## Word today
 
-## Figure
-
-Left: warnings.dita with id pinch-hazard. Right: task note with conref. Caption: *Author shows the text. Text shows the pointer.*
+**conref** — a pointer that reuses a chunk by file path plus id.

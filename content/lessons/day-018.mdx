@@ -1,101 +1,84 @@
 ---
 day: 18
 week: 3
-title: "xref — point at a topic, not at a URL you invented"
-objective: "Insert two xrefs: one to a topic, one to an element id, and prove a broken href shows up in completeness."
+title: Check that every link still works
+objective: Run the completeness check on the booklet and repair one broken pointer you caused on purpose.
 timeboxMinutes: 90
-skills: [ditaTopics, maps]
-legacyLessonIds: [t3-insert]
+skills: [maps, review]
+legacyLessonIds: [t4-complete]
 youtube:
-  - id: t2cG3Xe1TXY
-    title: DITA Editing
+  - id: JkPeWea3Y3U
+    title: DITA Map Completeness Check
     watchFor:
-      - Insert Cross Reference
-      - Target picker vs typing a URL
+      - The completeness report
+      - A missing file row
 sources:
-  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
-  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
   - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
 lab:
   id: lab-18
-  title: "Two xrefs, one broken on purpose"
-  pack: kitepump-dita
-  failWhen: "An xref is a raw https link to a local file, or you leave the broken href in the map, or the element xref has no id target."
-  expected: "Two working xrefs (topic + element). Completeness was red, then clean. No invented URL."
+  title: "Break a pointer, then fix it"
+  pack: flower-docs
+  failWhen: "You never ran completeness, or you left a broken pointer, or you only validated one topic."
+  expected: You saw a missing-file row and repaired it. Completeness is clean again.
   steps:
-    - "In what-kitepump-is.dita, insert an xref to inflate-the-tire.dita using the toolbar (Insert Cross Reference). Do not type https://."
-    - "Insert a second xref to inflate-the-tire.dita#gauge-check (the step id from Day 17)."
-    - Validate both topics. Follow the xref in Author — it should jump.
-    - Break the topic xref href (typo the filename). Run completeness on the root map. Record the exact row.
-    - Repair the href. Completeness clean.
-    - "Write one sentence in the concept: xrefs are DITA pointers, not website URLs."
+    - "With flowers.ditamap as the root map, run Validate and Check for Completeness from Maps Manager."
+    - Write how many problems it reported in oxygen-bootcamp-work/week3/day-18-before.txt.
+    - "On purpose: change one pointer to a file name that does not exist. Run completeness again. Read the row."
+    - Put the real file name back. Run completeness again. It should be clean (or back to the same count as before).
+    - Do not only validate the one page. The booklet check is the apple.
 sessionQuests:
   - id: a
     block: A
-    title: Name Insert Cross Reference and what an https href forbids in a local book
+    title: Find Validate and Check for Completeness
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep two xrefs resolvable
+    title: "Cause a missing file, read the row, put it back"
     minutes: 25
-    done: Topic xref and element xref jump. Completeness clean after the break/repair.
+    done: Completeness is clean again. You quoted the missing-file row.
   - id: c
     block: C
-    title: "Typo the href, read the completeness row, fix it"
+    title: "Pick page-clean vs booklet-broken, and where the check lives"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [one-line-repair, menu-path-race]
-toolCards: [author-mode, maps-manager]
+    done: Note saved.
+dailyBurstPool: [menu-path-race, one-line-repair]
+toolCards: [maps-manager]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: "Two working xrefs (topic + element). Completeness was red, then clean. No invented URL." }
+  - { id: lab, prompt: You saw a missing-file row and repaired it. Completeness is clean again. }
 quiz:
-  - q: "You paste https://example.com/inflate.html into an xref href for a DITA topic. What did you ship?"
-    answer: 1
-    why: "xref href in a DITA book should be a topic/element (or a key). A URL is a website, not a topic move."
-    options:
-      - A portable book link
-      - A web address that will not track the DITA file when it moves
-      - A keyref
-  - q: "The xref text is hardcoded ‘click here’. First repair?"
-    answer: 1
-    why: Click here fails accessibility and reuse. The target title travels with the link.
-    options:
-      - Leave it — screen readers prefer click here
-      - "Let the xref use the target title, or write a phrase that names the destination"
-      - Convert the xref to an image
-  - q: "Completeness reports the xref target missing, but the topic opens. What is likely?"
+  - q: "A page can be clean while the booklet is broken. How?"
     answer: 0
-    why: href is relative to the file that contains the xref unless you use a key.
+    why: Page check = this file. Booklet check = do the pointers work. You need both.
     options:
-      - The href path is wrong relative to the source topic
-      - Author mode cannot follow valid xrefs
-      - You need AEM Guides to resolve xrefs
-fieldNotePrompt: "Quote the completeness row you caused. What path would have been right on the first try?"
-tomorrowHook: Tomorrow you add related links the map can generate — and you refuse a handmade list that duplicates the map.
+      - "The page’s tags match, but the booklet still points at a missing file"
+      - Impossible
+      - Only if you publish
+  - q: "Where do you run the booklet check?"
+    answer: 0
+    why: Completeness lives on the booklet.
+    options:
+      - "Maps Manager, on the map"
+      - Help > About
+      - Only on the current paragraph
+fieldNotePrompt: Quote the missing-file row you saw.
+tomorrowHook: Tomorrow you name files so moving them does not go silent.
 ---
 
-## xref
+## Do the pointers work?
 
-An **xref** points at a DITA target: a topic, or a topic plus element id. Use the toolbar picker. Do not invent a website URL for a file that lives in the map.
+**Validate and Check for Completeness** (from Maps Manager) asks: does every pointer still find a file, a picture, a name?
 
-Keys (next week) are even better: the map owns the name, the path can move.
+A page can be fine on its own and still missing from the book — or named in the book and missing on disk.
 
-## Link text
+## Word today
 
-Prefer empty xref text so the processor pulls the target title. If you write text, name the destination. Never “click here.”
-
-## Completeness
-
-A typo in href is a completeness row. Cause one. Read it. Fix it. That is the literacy.
-
-## Figure
-
-Insert Cross Reference dialog: tree of the root map. Caption: *Picker from the root map. Not a browser address bar.*
+**Completeness** — a booklet check that the pointers still work.

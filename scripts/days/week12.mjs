@@ -7,12 +7,17 @@ export default [
   {
     n: 76,
     week: 12,
-    title: "Guides web editor vs desktop Oxygen",
-    objective: "Write who lives in Guides and who still opens Oxygen, without inventing a product named AEM Oxygen XML Editor.",
+    title: "Guides in the browser vs Oxygen on the desktop",
+    objective:
+      "Write who lives in Guides and who still opens Oxygen, and cross out the fake product name AEM Oxygen XML Editor.",
     minutes: 90,
     skills: ["aemGuides", "oxygenUi"],
     legacy: ["t7-guides"],
-    youtube: [yt("ditaStart", ["Desktop Maps Manager as the thing Guides will not fully replace"])],
+    youtube: [
+      yt("ditaStart", [
+        "Desktop booklet tools that a browser editor will not fully replace",
+      ]),
+    ],
     sources: [S.guidesOverview, S.guidesStart, S.ugEditor],
     toolCards: ["guides-web-editor", "maps-manager"],
     badgeId: null,
@@ -21,43 +26,86 @@ export default [
       title: "Who lives where",
       steps: [
         "Read samples/guides-oxygen-handoff/who-edits-where.md.",
-        "Write: SMEs and review cycles → Guides web editor.",
-        "Write: map surgery, Schematron, offline frameworks → Oxygen desktop.",
-        "Write the forbidden name: there is no AEM Oxygen XML Editor.",
+        "Write oxygen-bootcamp-work/week12/field-log-76.txt.",
+        "Write: subject-matter experts and review cycles → Guides web editor.",
+        "Write: rebuilding a booklet, house-style checks, offline frameworks → Oxygen desktop.",
+        "Write the forbidden name and cross it out: there is no product called AEM Oxygen XML Editor.",
+        "If you have no Guides, label a mock of two desks and still write the two homes.",
       ],
       failWhen: "You use the forbidden product name as if it were real.",
-      expected: "Two homes, one forbidden name crossed out.",
+      expected: "Two homes written. Forbidden name crossed out. Mock labeled if no instance.",
     },
     quiz: [
       {
-        q: "Guides is the browser DITA editor plus reviews, translation, baselines, and publishing. True?",
-        options: ["True", "False"],
+        q: "What is AEM Guides, in one line?",
+        options: [
+          "Adobe’s DITA tool in the browser: write, review, and publish the handbook",
+          "A theme for the Sites page tree",
+          "A new name for Oxygen XML Editor",
+        ],
         answer: 0,
-        why: "That is the v1 T7 sentence. SMEs should live there. Oxygen is for specialist work.",
+        why: "Guides is Adobe’s DITA desk in the browser. Oxygen is Syncro Soft on the desktop.",
+      },
+      {
+        q: "There is a product called AEM Oxygen XML Editor. True or not?",
+        options: [
+          "True — Adobe bought Oxygen and merged the names",
+          "Not true — two companies, two apps. Guides can open Oxygen. They are not one product",
+          "True if you enable a connector",
+        ],
+        answer: 1,
+        why: "You wrote this in week 9. It is still true. Cross the fake name out.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Guides vs Oxygen and the forbidden mash-up",
-      doTitle: "Handoff card matches the pack",
-      doDone: "Two homes written. Forbidden name refused.",
-      stress: "A SME who was given desktop by mistake",
+      learn: "Read who-edits-where.md in the pack",
+      doTitle: "Write two homes and cross out the fake product name",
+      doDone: "Two homes written. Fake product name crossed out.",
+      stress: "Pick what Guides is, and whether the merged product name is real",
     }),
-    fieldNotePrompt: "Who on your team is a SME, and where should they edit?",
-    tomorrowHook: "Check-in / check-out mental model.",
-    body: `## Two editors, one repository story
+    fieldNotePrompt: "What two homes did you write, and which fake product name did you cross out?",
+    tomorrowHook: "Tomorrow: checkout and check-in, like borrowing a book.",
+    body: `## Two desks, one handbook
 
-Guides is Adobe’s DITA CCMS in the browser. Oxygen is Syncro Soft on the desktop. Guides can launch Oxygen. They are not one product.
+**AEM Guides** is Adobe’s DITA tool in the browser. People write, review, and publish the handbook there. Subject-matter experts should live there.
+
+**Oxygen** is still Syncro Soft on your desktop. You still open it to rebuild a booklet, run house-style checks, and work offline.
+
+Guides can launch Oxygen. They are not one product. There is no product called **AEM Oxygen XML Editor**. You wrote that in week 9. Write it again.
+
+If you have no Guides, a labeled mock of two desks is the lab.
+
+## Word today
+
+**AEM Guides** — Adobe’s DITA tool in the browser.
+
+## Watch
+
+The Oxygen booklet video is a reminder of what the desktop still does. You are not installing a merged app.
+
+## Lab
+
+Two homes. One forbidden name, crossed out.
+
+## Figure
+
+Labeled mock: browser desk | desktop desk. Caption: *Mock. Two products.*
 `,
   },
   {
     n: 77,
     week: 12,
-    title: "Checkout / check-in mental model",
-    objective: "Write the cycle: checkout, edit, check in — and what happens if you skip checkout.",
+    title: "Checkout and check-in, like borrowing a book",
+    objective:
+      "Write the cycle: checkout, edit, check in — and what goes wrong if two people skip the lock.",
     minutes: 90,
     skills: ["aemGuides", "review"],
     legacy: ["t7-connector"],
-    youtube: [yt("completeness", ["A book still needs a lock — different product, same idea of not clobbering"])],
+    youtube: [
+      yt("completeness", [
+        "A book still needs a lock so two people do not overwrite the same page",
+      ]),
+    ],
     sources: [S.guidesOverview, S.editOxygen],
     toolCards: ["guides-web-editor"],
     badgeId: "checkout-checkin",
@@ -65,10 +113,11 @@ Guides is Adobe’s DITA CCMS in the browser. Oxygen is Syncro Soft on the deskt
       pack: "guides-oxygen-handoff",
       title: "Cycle card",
       steps: [
-        "Write: checkout locks the topic so a teammate cannot overwrite you.",
-        "Write: edit in Guides or, if enabled, Edit in Oxygen.",
-        "Write: check in returns the lock and versions the topic in Guides.",
-        "Write the failure: skip checkout, two writers, last save wins or a conflict you cannot explain.",
+        "Write oxygen-bootcamp-work/week12/field-log-77.txt with four sentences.",
+        "Checkout locks the topic so a teammate cannot overwrite you. Like borrowing a library book.",
+        "Edit in Guides, or — if the desk allows it — Edit in Oxygen.",
+        "Check in returns the lock and stores a version of the topic in Guides.",
+        "Skip checkout: two writers, last save wins, or a conflict you cannot explain.",
         "If you have Guides, complete one real cycle. If not, label this mock and still write the cycle.",
       ],
       failWhen: "You describe checkout as AEM Sites Quick Publish.",
@@ -76,34 +125,73 @@ Guides is Adobe’s DITA CCMS in the browser. Oxygen is Syncro Soft on the deskt
     },
     quiz: [
       {
-        q: "Checkout in Guides is the same as Preview in the Page Editor. True?",
-        options: ["True", "False"],
+        q: "Checkout in Guides is the same as Preview in the Page Editor. True or not?",
+        options: [
+          "True — both are a look-before-you-leap",
+          "Not true — checkout is a lock on a DITA topic. Preview is a Sites view",
+          "True on Cloud only",
+        ],
         answer: 1,
-        why: "Checkout is a lock on a DITA object. Preview is a Sites mode.",
+        why: "A lock is not a preview. Different desks.",
+      },
+      {
+        q: "Two writers edit the same topic with no checkout. What often happens?",
+        options: [
+          "Guides merges every sentence automatically",
+          "Last save wins, or a conflict nobody can explain",
+          "The topic publishes itself",
+        ],
+        answer: 1,
+        why: "Borrow the book. Write. Return it.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name checkout and what skipping it forbids",
-      doTitle: "Cycle card is complete",
-      doDone: "Four sentences. No Sites mash-up.",
-      stress: "Two writers, one topic, no lock",
+      learn: "See checkout as borrowing the topic, check-in as giving it back",
+      doTitle: "Write the four-sentence cycle card",
+      doDone: "Four sentences. No Sites mix-up.",
+      stress: "Pick checkout vs Preview, and what skip-the-lock does",
     }),
-    fieldNotePrompt: "Have you ever overwritten someone by skipping a lock? What would you do now?",
-    tomorrowHook: "Edit in Oxygen as a configuration concept.",
-    body: `## Lock, edit, return
+    fieldNotePrompt: "Write the four sentences you put on the cycle card.",
+    tomorrowHook: "Tomorrow: the Edit in Oxygen button — what it means, and who turns it on.",
+    body: `## Borrow, write, return
 
-You do not need a live Guides box to learn the mental model. You do need the words right.
+**Checkout** locks the topic so a teammate cannot overwrite you. Like borrowing a library book. **Check-in** gives the book back and stores a version in Guides.
+
+In between, you edit. In Guides in the browser, or — if the desk allows it — in Oxygen on the desktop.
+
+You do not need a live Guides box to learn the words. You do need the words right. Checkout is not Preview. Checkout is not Quick Publish.
+
+Skip the lock and two people write the same file. Last save wins, or a conflict you cannot explain.
+
+## Word today
+
+**Checkout** — borrow the topic. It is locked for you.
+
+**Check-in** — give it back. Guides stores a version.
+
+## Lab
+
+Four sentences. Real cycle if you have Guides. Labeled mock if you do not.
+
+## Figure
+
+Labeled mock: Checkout → Edit → Check in. Caption: *Mock. A lock, not a publish.*
 `,
   },
   {
     n: 78,
     week: 12,
-    title: "Edit in Oxygen — configuration as a concept",
-    objective: "Point at the official Configure Edit in Oxygen article and write the PID/key as something an admin owns.",
+    title: "Edit in Oxygen — what that button means",
+    objective:
+      "Open the official Configure Edit in Oxygen article and write that an admin turns the button on — authors do not guess settings on the live system.",
     minutes: 90,
     skills: ["aemGuides", "oxygenUi"],
     legacy: ["t7-connector"],
-    youtube: [yt("customize", ["Desktop frameworks must match what the server expects"])],
+    youtube: [
+      yt("customize", [
+        "Desktop setups must match what the server expects",
+      ]),
+    ],
     sources: [S.editOxygen, S.desktop, S.guidesOverview],
     toolCards: ["guides-web-editor", "author-mode"],
     badgeId: null,
@@ -112,84 +200,154 @@ You do not need a live Guides box to learn the mental model. You do need the wor
       title: "Admin owns the switch",
       steps: [
         "Open the Experience League article Configure Edit in Oxygen (Source box).",
-        "Write the idea: admin enables the connector. Authors do not guess a PID on production.",
-        "Copy the PID name from the v1 lesson as a question for an admin: com.adobe.fmdita.xmleditor.config.XmlEditorConfig / xmleditor.editinoxygen=true — then write ‘verify in the article for your cloud vs on-prem’.",
-        "Write: keep DITA version, catalogs, and Schematron identical on server and desktop.",
+        "Write oxygen-bootcamp-work/week12/field-log-78.txt: an admin enables the connector. Authors do not guess a setting on production.",
+        "Copy the setting name from the pack as a question for an admin (com.adobe.fmdita.xmleditor.config.XmlEditorConfig / xmleditor.editinoxygen=true). Then write ‘verify in the article for your cloud vs on-prem’.",
+        "Write: keep DITA version, catalogs, and house-style checks the same on server and desktop.",
+        "Do not paste a made-up config as if you applied it.",
       ],
-      failWhen: "You paste a made-up OSGi config as if you applied it.",
-      expected: "Article linked in your note. PID treated as an admin question. Parity sentence written.",
+      failWhen: "You paste a made-up config as if you applied it on production.",
+      expected:
+        "Article noted. Setting treated as an admin question. Match-the-server sentence written.",
     },
     quiz: [
       {
-        q: "Authors should enable Edit in Oxygen by guessing OSGi keys on prod. True?",
-        options: ["True", "False"],
+        q: "Who turns on Edit in Oxygen?",
+        options: [
+          "Any author, by guessing the setting on production",
+          "An admin, after reading the official article",
+          "The 5-minute warmup",
+        ],
         answer: 1,
-        why: "Admin work. You need the concept and the official article, not a cowboy config.",
+        why: "The button is real. The live switch is admin work.",
+      },
+      {
+        q: "House-style checks differ on the desktop and on the server. What breaks?",
+        options: [
+          "Nothing — desktop always wins",
+          "A topic can look clean in Oxygen and fail when you check it in",
+          "Sites Quick Publish fails",
+        ],
+        answer: 1,
+        why: "Same rules on both desks, or you fight yourself.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name the official article and what authors must not flip",
-      doTitle: "Parity sentence written",
-      doDone: "Admin owns the switch. Catalogs must match.",
-      stress: "What breaks if Schematron differs desktop vs server",
+      learn: "Open the official Configure Edit in Oxygen article",
+      doTitle: "Write that an admin owns the switch",
+      doDone: "Admin question written. Match-the-server sentence written.",
+      stress: "Pick who turns the button on, and what a rules mismatch does",
     }),
-    fieldNotePrompt: "Who would you ask to enable Edit in Oxygen?",
-    tomorrowHook: "Maps and topics living on AEM.",
-    body: `## Concept, not a prod change
+    fieldNotePrompt: "Who would you ask to enable Edit in Oxygen, and which article did you open?",
+    tomorrowHook: "Tomorrow: the booklet lives in AEM’s library. Your laptop holds a working copy.",
+    body: `## A button, not a prod change
 
-The connector is real. Your lab is to understand it. Official article in the Source box. Verify labels and keys for cloud vs on-prem.
+**Edit in Oxygen** is a button in Guides. It opens the topic in desktop Oxygen. Then you check it back in.
+
+An admin turns this on. You do not guess a setting on the live system. The official article is in the Source box. Cloud and on-prem labels differ. Verify.
+
+Keep the DITA version, the catalogs, and the house-style checks the same on the server and on the desktop. If they differ, a topic can look clean in Oxygen and fail when you check it in.
+
+Your lab is to understand the button. It is not to change production.
+
+## Word today
+
+**Edit in Oxygen** — a Guides button that opens the topic in desktop Oxygen.
+
+## Lab
+
+Article open. Admin question written. No cowboy config.
+
+## Figure
+
+Labeled mock: Guides toolbar with Edit in Oxygen. Caption: *Mock. Admin owns the switch.*
 `,
   },
   {
     n: 79,
     week: 12,
-    title: "Maps and topics living on AEM",
-    objective: "Explain that Guides stores DITA in the DAM, and a desktop path is a working copy after checkout.",
+    title: "Booklets and pages living in AEM",
+    objective:
+      "Explain that Guides stores the DITA booklet in AEM’s library, and a desktop path is a working copy after checkout.",
     minutes: 90,
     skills: ["aemGuides", "maps"],
     legacy: [],
-    youtube: [yt("maps", ["The map is still the book, wherever it lives"])],
+    youtube: [
+      yt("maps", ["The booklet is still a table of contents, wherever it lives"]),
+    ],
     sources: [S.guidesOverview, S.guidesStart],
     toolCards: ["guides-web-editor", "maps-manager"],
     badgeId: null,
     lab: {
       pack: "guides-oxygen-handoff",
-      title: "DAM vs working copy",
+      title: "Library vs working copy",
       steps: [
-        "Write: in Guides, the map is an asset in the DAM, not a desktop-only file.",
+        "Write oxygen-bootcamp-work/week12/field-log-79.txt: in Guides, the map is a file in AEM’s library (Assets), not a desktop-only file.",
         "Write: Edit in Oxygen makes a working copy. Check in puts it back.",
-        "Open kitepump.ditamap locally as the analog of that working copy. Completeness still applies.",
-        "Do not upload the sample into a real DAM as a stunt.",
+        "Open kitepump.ditamap locally as the analog of that working copy. Run completeness. The links should still work.",
+        "Do not upload the sample into a real library as a stunt.",
       ],
-      failWhen: "You treat the Git repo as the AEM DAM.",
-      expected: "DAM vs working copy written. Local completeness still clean.",
+      failWhen: "You treat this git repo as the AEM library.",
+      expected: "Library vs working copy written. Local completeness still clean.",
     },
     quiz: [
       {
-        q: "Once DITA lives in AEM, completeness in Oxygen no longer matters. True?",
-        options: ["True", "False"],
+        q: "Once DITA lives in AEM, completeness in Oxygen no longer matters. True or not?",
+        options: [
+          "True — the server fixes links",
+          "Not true — the booklet can still miss files. Completeness still names them",
+          "True after the first check-in",
+        ],
         answer: 1,
-        why: "The book can still miss hrefs. Completeness is still a map action.",
+        why: "Storage moved. The booklet is still a booklet. Broken links still break.",
+      },
+      {
+        q: "After checkout, the file on your laptop is…",
+        options: [
+          "The only copy that exists",
+          "A working copy. Check in puts it back in the library",
+          "A Sites page",
+        ],
+        answer: 1,
+        why: "Borrow, edit, return. The library keeps the book.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name DAM storage vs working copy",
-      doTitle: "Local analog still complete",
-      doDone: "kitepump completeness clean. No DAM stunt.",
-      stress: "Two working copies, one check-in",
+      learn: "See the booklet as a library file, and the laptop as a working copy",
+      doTitle: "Run completeness on the local analog",
+      doDone: "kitepump completeness clean. No library stunt.",
+      stress: "Pick whether completeness retired, and what a working copy is",
     }),
-    fieldNotePrompt: "Where does your team’s map actually live today?",
-    tomorrowHook: "Publish outputs from Guides.",
-    body: `## The book still exists
+    fieldNotePrompt: "Where did you write that the booklet lives, and did local completeness still pass?",
+    tomorrowHook: "Tomorrow: publish from Guides vs a local Oxygen draft.",
+    body: `## The booklet still exists
 
-Storage moved. The map is still a map. Completeness did not retire.
+In Guides, the map is a file in AEM’s **library** (Assets). It is not a desktop-only file.
+
+**Edit in Oxygen** makes a **working copy** on your laptop — a copy you edit while the library holds the book. Check in puts it back.
+
+Open \`kitepump.ditamap\` locally as the analog of that working copy. Completeness still applies. Missing links still matter. Storage moved. The booklet did not retire.
+
+Do not treat this git repo as the AEM library. Do not upload the sample into a real library as a stunt.
+
+## Word today
+
+**Working copy** — the file on your laptop after checkout. Check in returns it.
+
+## Lab
+
+Two sentences (library vs working copy). Local completeness still clean.
+
+## Figure
+
+Labeled mock: library box and laptop box, one arrow each way. Caption: *Mock. Borrow and return.*
 `,
   },
   {
     n: 80,
     week: 12,
-    title: "Publish outputs from Guides",
-    objective: "Contrast Guides server publish (baseline, output) with a local Oxygen WebHelp draft.",
+    title: "Publish from Guides",
+    objective:
+      "Contrast a local Oxygen WebHelp draft with a Guides server publish, and keep Sites Quick Publish off the DITA output list.",
     minutes: 90,
     skills: ["aemGuides", "publish"],
     legacy: ["t5-publish"],
@@ -201,9 +359,9 @@ Storage moved. The map is still a map. Completeness did not retire.
       pack: "guides-oxygen-handoff",
       title: "Draft vs release",
       steps: [
-        "Write: local Oxygen PDF/WebHelp is a draft.",
-        "Write: Guides publish uses the server baseline as the release (verify wording in your shop).",
-        "If you have Guides, note one output type you saw. If not, write ‘mock — AEM Guides documentation lists outputs; I did not invent a button’.",
+        "Write oxygen-bootcamp-work/week12/field-log-80.txt: local Oxygen PDF or WebHelp is a draft.",
+        "Write: Guides publish uses a server **baseline** (a named snapshot of the book) as the release. Verify the wording in your shop.",
+        "If you have Guides, note one output type you saw. If not, write ‘mock — the Guides docs list outputs; I did not invent a button’.",
         "Do not call Sites Quick Publish a DITA output.",
       ],
       failWhen: "Quick Publish is listed as a DITA output.",
@@ -211,30 +369,63 @@ Storage moved. The map is still a map. Completeness did not retire.
     },
     quiz: [
       {
-        q: "A local WebHelp from Oxygen is the release of record on a Guides shop. True?",
-        options: ["True", "False — the server baseline is the release; local is a draft"],
+        q: "A local WebHelp from Oxygen is the release of record on a Guides shop. True or not?",
+        options: [
+          "True — if the HTML opened, it shipped",
+          "Not true — the server baseline is the release. Local is a draft",
+          "True if you named the folder FINAL",
+        ],
         answer: 1,
-        why: "v1 T5 sentence. Keep it.",
+        why: "You learned local WebHelp in week 6. On a Guides shop, that build is a draft.",
+      },
+      {
+        q: "Sites Quick Publish is a DITA output. True or not?",
+        options: [
+          "True — publish is publish",
+          "Not true — Quick Publish activates an AEM web page. Guides publish ships the handbook",
+          "True on Cloud only",
+        ],
+        answer: 1,
+        why: "Two desks. Two publish buttons. Do not mix them.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name baseline as release and local as draft",
-      doTitle: "Sites stays out of the DITA output list",
-      doDone: "Two sentences. No Quick Publish mash-up.",
-      stress: "Who clicks publish in Guides",
+      learn: "See local WebHelp as a draft and Guides as the release",
+      doTitle: "Keep Sites Quick Publish off the DITA output list",
+      doDone: "Two sentences. No Quick Publish mix-up.",
+      stress: "Pick draft vs release, and whether Quick Publish ships DITA",
     }),
     fieldNotePrompt: "Who is allowed to publish DITA where you work, or ‘unknown’?",
-    tomorrowHook: "Guides lab — a full mental cycle.",
+    tomorrowHook: "Tomorrow: one full loop on paper — checkout, edit, check in, ask to publish.",
     body: `## Draft vs release
 
-Oxygen can still build WebHelp on your laptop. That is a draft. Guides owns the release if that is the CCMS. Sites Quick Publish is a different family.
+Oxygen can still build WebHelp or PDF on your laptop. That is a **draft**. You used that in week 6.
+
+On a Guides shop, **Guides publish** is the release. It uses a **baseline** — a named snapshot of the book — so everyone knows which version shipped. Verify the wording on your desk.
+
+Sites **Quick Publish** activates a web page. It is not a DITA output. Do not put it on this list.
+
+If you have no Guides, write ‘mock’ and do not invent a button.
+
+## Word today
+
+**Baseline** — a named snapshot of the handbook that Guides can publish.
+
+## Lab
+
+Draft vs release. One output type, or a mock note. Sites kept off the list.
+
+## Figure
+
+Labeled mock: laptop draft | server release. Caption: *Mock. Two publish buttons, two desks.*
 `,
   },
   {
     n: 81,
     week: 12,
-    title: "Guides lab — one mental cycle",
-    objective: "Write a checkout → Edit in Oxygen (or Guides editor) → check-in → request publish cycle for one topic.",
+    title: "One full loop on paper (or mock)",
+    objective:
+      "Write a checkout → edit → check-in → request publish cycle for one topic, with no Sites Create Page in it.",
     minutes: 90,
     skills: ["aemGuides", "oxygenUi"],
     legacy: ["t7-connector"],
@@ -247,43 +438,76 @@ Oxygen can still build WebHelp on your laptop. That is a draft. Guides owns the 
       title: "Cycle on paper, or for real",
       steps: [
         "Pick prime-the-pump.dita as the object.",
-        "Write the cycle with actual control names you verified, or ‘verify this label in your version’ plus the official article.",
+        "Write oxygen-bootcamp-work/week12/field-log-81.txt with four steps: checkout, edit (Guides or Edit in Oxygen), check in, request publish.",
+        "Use control names you verified, or write ‘verify this label in your version’ plus the official article.",
         "If you have Guides, do the cycle once. If not, label mock and still write it.",
         "Completeness on the local analog remains clean.",
+        "Do not add Sites Create Page as a step.",
       ],
       failWhen: "The cycle includes Sites Create Page as a step.",
-      expected: "A four-step cycle with no Sites page in it.",
+      expected: "A four-step cycle with no Sites page in it. Mock labeled if needed.",
     },
     quiz: [
       {
-        q: "The Guides cycle includes Create Page in Sites. True?",
-        options: ["True", "False"],
+        q: "The Guides cycle includes Create Page in Sites. True or not?",
+        options: [
+          "True — every publish starts with a new page",
+          "Not true — this loop is handbook work. Create Page is the other desk",
+          "True if the topic is a landing page",
+        ],
         answer: 1,
-        why: "Different family.",
+        why: "One object. One loop. Stay on the handbook desk.",
+      },
+      {
+        q: "Which step holds the lock?",
+        options: ["Preview", "Checkout", "Quick Publish"],
+        answer: 1,
+        why: "Checkout borrows the topic. That is the lock.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name the four steps",
-      doTitle: "Cycle has no Sites page",
+      learn: "Read the four steps in order",
+      doTitle: "Write the cycle with no Sites page in it",
       doDone: "Four steps. Mock labeled if needed.",
-      stress: "Where the lock lives",
+      stress: "Pick whether Create Page belongs, and which step holds the lock",
     }),
-    fieldNotePrompt: "Which step would you forget under time pressure?",
-    tomorrowHook: "Handoff clinic.",
-    body: `## One object, one cycle
+    fieldNotePrompt: "Write the four steps you put in the log, in order.",
+    tomorrowHook: "Tomorrow is the week check: who edits where — map, SME comment, landing page.",
+    body: `## One object, one loop
 
-Pick a task. Walk it. Do not wander into Sites.
+Pick a how-to. Walk it.
+
+1. **Checkout**
+2. **Edit** (Guides, or Edit in Oxygen)
+3. **Check in**
+4. **Request publish** (Guides, not Sites Quick Publish)
+
+No Create Page. No landing-page hero. No Page Editor. Those are the other desk.
+
+If you have Guides, do it once. If not, write the loop and label the mock. Completeness on the local analog stays clean.
+
+## Lab
+
+Four steps. Real or paper. No Sites page in the list.
+
+## Figure
+
+Labeled mock: four arrows in a row. Caption: *Mock. Handbook loop only.*
 `,
   },
   {
     n: 82,
     week: 12,
-    title: "Handoff clinic",
-    objective: "Decide, for three objects, who edits in Guides vs Oxygen vs Sites.",
+    title: "Week 12 check — who edits where",
+    objective:
+      "Decide, for three objects, who edits in Oxygen, who edits in Guides, and who edits in Sites.",
     minutes: 90,
     skills: ["aemGuides", "aemSites"],
     legacy: ["t7-guides"],
-    youtube: [yt("aemHeadless", ["Pages and fragments — keep them off the DITA table"]), yt("maps", ["The map stays a map"])],
+    youtube: [
+      yt("aemHeadless", ["Pages and fragments — keep them off the DITA table"]),
+      yt("maps", ["The booklet stays a booklet"]),
+    ],
     sources: [S.guidesOverview, S.aemAuthor, S.editOxygen],
     toolCards: ["guides-web-editor", "sites-console"],
     badgeId: "guides-handoff",
@@ -292,44 +516,88 @@ Pick a task. Walk it. Do not wander into Sites.
       pack: "guides-oxygen-handoff",
       title: "Three objects",
       steps: [
+        "Write oxygen-bootcamp-work/week12/field-log-82.txt.",
         "Object 1: kitepump.ditamap restructure → Oxygen.",
-        "Object 2: SME comment on a step → Guides.",
-        "Object 3: beach campaign landing page → Sites.",
-        "Write the three. Fail if any two share a surface they should not.",
+        "Object 2: a subject-matter expert comments on a step → Guides.",
+        "Object 3: a beach campaign landing page → Sites.",
+        "Labeled mock: three objects, three desks. Caption: mock.",
+        "Pass the quiz. Retry is free. The capstone starts tomorrow; finish this check first.",
       ],
-      failWhen: "The landing page is assigned to Oxygen or the map to Sites.",
-      expected: "Three correct surfaces.",
+      failWhen: "The landing page is assigned to Oxygen, or the map is assigned to Sites.",
+      expected: "Three correct desks. Mock labeled.",
     },
     quiz: [
       {
-        q: "A campaign landing page with a hero belongs in Oxygen. True?",
-        options: ["True", "False"],
+        q: "A campaign landing page with a hero belongs in Oxygen. True or not?",
+        options: [
+          "True — one CMS for everything",
+          "Not true — landing pages belong in Sites",
+          "True if you wrap it in a map",
+        ],
         answer: 1,
-        why: "Sites. v1 T7 quiz, still true.",
+        why: "You wrote this in week 9. It is still true. Sites for the campaign page.",
+      },
+      {
+        q: "Who rebuilds the booklet when the chapters move?",
+        options: ["Sites Page Editor", "Oxygen", "Document Authoring"],
+        answer: 1,
+        why: "Maps, completeness, keys: desktop Oxygen.",
+      },
+      {
+        q: "A reviewer flags one step. Where should they comment?",
+        options: [
+          "Guides in the browser",
+          "A sticky note on the Sites hero",
+          "A new language copy",
+        ],
+        answer: 0,
+        why: "Subject-matter experts live in Guides.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name the three objects and surfaces",
-      doTitle: "No crossed wires",
-      doDone: "Three assignments. Badge-worthy if all correct.",
-      stress: "The object people always put in the wrong tool",
+      learn: "Read the three objects and the three desks",
+      doTitle: "Assign map, SME comment, and landing page",
+      doDone: "Three assignments. Mock labeled.",
+      stress: "Pass the quiz. Retry if you need to.",
     }),
-    fieldNotePrompt: "Which object would your team mis-route?",
-    tomorrowHook: "Capstone starts — one product story, two surfaces.",
-    body: `## Clinic
+    fieldNotePrompt: "Write the three objects and the desk you assigned to each.",
+    tomorrowHook: "Capstone starts: a DITA handbook in Oxygen for the same product.",
+    body: `## A check, not a show
 
-If the map goes to Sites or the landing page goes to Oxygen, you are not done. Retry is unlimited. Week continues if Friday lab is done.
+This is the week boss. Three objects. Three desks.
+
+- Rebuild the booklet → **Oxygen**
+- A reviewer flags a step → **Guides**
+- A campaign landing page → **Sites**
+
+If the map goes to Sites, or the landing page goes to Oxygen, you are not done. Retry is free.
+
+The capstone starts tomorrow. It needs this split in your bones.
+
+## Proof
+
+1. Two handbook desks (Guides and Oxygen), one website desk (Sites).
+2. No fake product name.
+3. Checkout is a lock, not a preview.
+
+## Figure
+
+Labeled mock: three objects, three desks. Caption: *Mock. Who edits where.*
 `,
   },
   {
     n: 83,
     week: 12,
-    title: "Capstone — DITA publication in Oxygen",
-    objective: "Ship a small valid Kitepump (or flower-docs) publication: map, keys, one reuse, completeness clean, local WebHelp or a recorded transform attempt.",
+    title: "Capstone: a DITA handbook in Oxygen",
+    objective:
+      "Ship a small valid Kitepump (or flower-docs) publication: map, keys, one reuse, completeness clean, and a local WebHelp or a recorded transform attempt.",
     minutes: 110,
     skills: ["maps", "reuse", "publish"],
     legacy: ["t7-capstone"],
-    youtube: [yt("webhelp", ["WebHelp as the draft output"]), yt("completeness", ["Zero missing hrefs"])],
+    youtube: [
+      yt("webhelp", ["WebHelp as the draft output"]),
+      yt("completeness", ["Zero missing links"]),
+    ],
     sources: [S.mapsDemo, S.authorDita, S.ugEditor],
     toolCards: ["maps-manager", "transformation"],
     badgeId: null,
@@ -337,45 +605,82 @@ If the map goes to Sites or the landing page goes to Oxygen, you are not done. R
       pack: "kitepump-dita",
       title: "DITA half of the capstone",
       steps: [
-        "Map with at least six topics or a documented subset of flower-docs + kitepump. Completeness clean.",
-        "One key (product name) used twice. One conkeyref or conref of a warning.",
-        "One ditaval or a written reason you did not filter.",
-        "WebHelp Responsive or a failed transform you then repaired (Day 40 skill).",
-        "Note: local output is a draft if Guides is the release.",
+        "Work in oxygen-bootcamp-work/week12/, not inside samples/. Copy what you need.",
+        "Map with at least six topics, or a documented subset of flower-docs plus kitepump. Completeness clean.",
+        "One key (product name) used twice. One reused warning (conkeyref or conref).",
+        "One ditaval, or a written reason you did not filter.",
+        "WebHelp Responsive, or a failed transform you then repaired (the week 6 skill).",
+        "Note: local output is a draft if Guides is the release on your desk.",
       ],
       failWhen: "Completeness is dirty, or reuse is copy-paste, or you skipped the transform log.",
-      expected: "Clean completeness. Key + reuse. Transform evidence.",
+      expected: "Clean completeness. Key plus reuse. Transform evidence.",
     },
     quiz: [
       {
-        q: "Capstone DITA can skip completeness if WebHelp opened. True?",
-        options: ["True", "False"],
+        q: "The HTML opened. Completeness still shows a missing link. Are you done?",
+        options: [
+          "Yes — if it opened, it shipped",
+          "No — fix the missing link. Completeness is the gate",
+          "Yes if the folder is named FINAL",
+        ],
         answer: 1,
-        why: "The book can still miss topics. Completeness is the gate.",
+        why: "A site can open and still miss a page. Completeness names the miss.",
+      },
+      {
+        q: "The product name is typed by hand in six topics. What should it have been?",
+        options: [
+          "A key in the map, used twice or more",
+          "A Teaser description",
+          "A language copy",
+        ],
+        answer: 0,
+        why: "Week 4: the map owns the name. Topics point at it.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name completeness as the capstone gate",
-      doTitle: "Keep the map complete",
-      doDone: "Completeness clean. Key + reuse present.",
-      stress: "First transform error, if any",
+      learn: "Open the capstone map and run completeness",
+      doTitle: "Keep the map complete, with a key and one reused warning",
+      doDone: "Completeness clean. Key plus reuse present. Transform evidence.",
+      stress: "Pick whether an open HTML skips completeness",
     }),
-    fieldNotePrompt: "How many topics, and which warning is reused?",
-    tomorrowHook: "AEM page family for the same product.",
-    body: `## DITA half
+    fieldNotePrompt: "How many topics, which warning is reused, and did completeness pass?",
+    tomorrowHook: "Tomorrow: a small family of AEM pages for the same product.",
+    body: `## The Oxygen half
 
-This is the Oxygen proof. Six topics, reuse, completeness, a transform. Flower-docs may join kitepump. Do not replace flower-docs in the repo; copy into your work folder.
+This is the handbook proof. You already know every piece.
+
+- A **map** with at least six topics
+- A **key** for the product name, used twice
+- One **reused warning**
+- **Completeness** clean
+- A **transform** (WebHelp, or a failure you then repaired)
+
+Copy into \`oxygen-bootcamp-work/week12/\`. Do not replace the samples in the repo.
+
+Local WebHelp is a draft if Guides is the release. Say so in the log.
+
+## Lab
+
+The book builds. The links work. The name is a key. The warning is reused.
+
+## Figure
+
+Maps Manager plus a completeness report. Caption: *Your work folder, not the sample original.*
 `,
   },
   {
     n: 84,
     week: 12,
-    title: "Capstone — AEM page family",
-    objective: "Create or mock a small page family that tells the same Kitepump story: one parent, two children, Text/Image/Teaser, no DITA dumped into Text.",
+    title: "Capstone: a small family of AEM pages",
+    objective:
+      "Create or mock a small page family that tells the same Kitepump story: one parent, two children, Title / Text / Image / Teaser, no DITA dumped into Text.",
     minutes: 110,
     skills: ["aemSites"],
     legacy: ["t7-aem"],
-    youtube: [yt("aemQuick", ["Pages as a family"]), yt("aemHeadless", ["Components not topics"])],
+    youtube: [
+      yt("aemQuick", ["Pages as a family"]),
+      yt("aemHeadless", ["Blocks, not topics"]),
+    ],
     sources: [S.aemCloudQs, S.coreComp, S.wknd],
     toolCards: ["sites-console", "page-editor"],
     badgeId: null,
@@ -384,43 +689,81 @@ This is the Oxygen proof. Six topics, reuse, completeness, a transform. Flower-d
       title: "Sites half of the capstone",
       steps: [
         "Parent page: Kitepump (title). Child: Beach use. Child: Where to buy (or mock names).",
-        "Core Components: Title, Text, Image with teaching-point alt, Teaser linking parent to child.",
-        "Quick Publish or mock the payload. Field log filled.",
-        "No DITA XML pasted into Text.",
+        "Blocks: Title, Text, Image with a real alt phrase, Teaser linking parent to child.",
+        "Quick Publish or mock the payload. Fill oxygen-bootcamp-work/week12/field-log-84.txt.",
+        "No DITA XML pasted into Text. Rewrite for the page. Link to the help if you must.",
+        "Labeled mock: three pages in a tree. Caption: mock.",
       ],
-      failWhen: "You paste a DITA task into the Text component, or the family has one orphan page with no parent.",
-      expected: "Three pages (or mocks). Components used honestly. Payload written.",
+      failWhen:
+        "You paste a DITA how-to into the Text block, or the family has one orphan page with no parent.",
+      expected: "Three pages (or mocks). Blocks used as taught. Payload written.",
     },
     quiz: [
       {
-        q: "Pasting the DITA task into Text keeps the capstone ‘one story’. True?",
-        options: ["True", "False — that smashes families; tell the story in page language"],
+        q: "Pasting the DITA how-to into Text keeps the capstone as one story. True or not?",
+        options: [
+          "True — one story means one file",
+          "Not true — same product, two desks. Rewrite for the page. Link to the help if you must",
+          "True if you hide the tags",
+        ],
         answer: 1,
-        why: "Same product, two models. Rewrite for the page. Link to the help if you must.",
+        why: "One product story. Two models. Do not dump the handbook into the hero.",
+      },
+      {
+        q: "How do you connect parent to child on the web page?",
+        options: [
+          "A topicref in a map",
+          "A Teaser (or another real link) on the parent, pointing at the child",
+          "A ditaval",
+        ],
+        answer: 1,
+        why: "Pages point with links and teasers. Maps point with topicrefs. Different desks.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name the page family and what Text forbids",
-      doTitle: "Family exists on instance or mock",
-      doDone: "Three pages. Field log filled.",
-      stress: "How the Teaser points at the child",
+      learn: "See the three pages as a parent plus two children",
+      doTitle: "Build or mock the family with Title, Text, Image, Teaser",
+      doDone: "Three pages. Field log filled. Mock labeled.",
+      stress: "Pick whether pasting the how-to into Text is the capstone",
     }),
-    fieldNotePrompt: "What is the parent page title?",
-    tomorrowHook: "Same product story on both surfaces — a comparison sheet.",
-    body: `## Sites half
+    fieldNotePrompt: "What is the parent page title, and what are the two children called?",
+    tomorrowHook: "Tomorrow: one product story on both desks — a comparison sheet.",
+    body: `## The Sites half
 
 Same product. Different model. Pages, not topicrefs.
+
+- One **parent**
+- Two **children**
+- **Title, Text, Image, Teaser**
+- A real **alt** phrase
+- No handbook XML in Text
+
+You may not have AEM. A labeled mock plus a field log is the lab. Quick Publish on a real instance if you have one.
+
+The page sells the beach card. The book explains how. They share a name, not a file format.
+
+## Lab
+
+Three pages or three mocks. Blocks as taught. No DITA paste.
+
+## Figure
+
+Labeled mock: parent plus two children. Caption: *Mock. A family of pages, not a map.*
 `,
   },
   {
     n: 85,
     week: 12,
-    title: "Two surfaces, one story",
-    objective: "Write a one-page comparison: how the DITA book and the AEM family tell the same Kitepump story, and where they must differ.",
+    title: "Two desks, one product story",
+    objective:
+      "Write a one-page comparison: how the DITA book and the AEM family tell the same Kitepump story, and where they must differ.",
     minutes: 90,
     skills: ["aemGuides", "aemSites", "ditaTopics"],
     legacy: ["t7-capstone"],
-    youtube: [yt("aemHeadless", ["Headful page vs structured content"]), yt("ditaEdit", ["Typed topics"])],
+    youtube: [
+      yt("aemHeadless", ["A laid-out page vs structured content"]),
+      yt("ditaEdit", ["Typed topics"]),
+    ],
     sources: [S.guidesOverview, S.aemAuthor, S.authorDita],
     toolCards: ["guides-web-editor", "page-editor"],
     badgeId: "two-surfaces-one-story",
@@ -428,41 +771,70 @@ Same product. Different model. Pages, not topicrefs.
       pack: "guides-oxygen-handoff",
       title: "Comparison sheet",
       steps: [
-        "Row: product name — key in DITA vs title on the page.",
-        "Row: procedure — task vs a short page that points at help (not a fake task in Text).",
-        "Row: warning — conkeyref vs a short Text warning (not a reused DITA id).",
-        "Row: publish — transform/baseline vs Quick Publish.",
         "Save oxygen-bootcamp-work/week12/two-surfaces.md.",
+        "Row: product name — key in DITA vs title on the page.",
+        "Row: procedure — task vs a short page that points at help (not a fake how-to in Text).",
+        "Row: warning — reused DITA warning vs a short Text warning (not a reused DITA id).",
+        "Row: publish — transform or baseline vs Quick Publish.",
+        "Do not claim the two publish buttons are the same button.",
       ],
       failWhen: "The sheet claims the two publishes are the same button.",
-      expected: "Four rows. Badge if the lab is honest.",
+      expected: "Four rows saved.",
     },
     quiz: [
       {
-        q: "One story means one CMS. True?",
-        options: ["True", "False — one product story, two families of tools"],
+        q: "One product story means one CMS. True or not?",
+        options: [
+          "True — pick Oxygen or AEM and delete the other",
+          "Not true — one product story, two desks of tools",
+          "True after the capstone zip",
+        ],
         answer: 1,
-        why: "That is the point of the capstone.",
+        why: "That is the point of the capstone. Same pump. Two desks.",
+      },
+      {
+        q: "Which row is a key in the map on one desk, and a page title on the other?",
+        options: ["Publish", "Product name", "Language copy"],
+        answer: 1,
+        why: "The name is a key in DITA and a title on the page. Same story, different pointer.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name the four comparison rows",
-      doTitle: "Sheet exists and does not mash publishes",
-      doDone: "four rows saved.",
-      stress: "The row a junior always mashes",
+      learn: "Read the four comparison rows",
+      doTitle: "Save two-surfaces.md without mixing the publish buttons",
+      doDone: "Four rows saved.",
+      stress: "Pick whether one story means one CMS",
     }),
-    fieldNotePrompt: "Which row was hardest to keep distinct?",
-    tomorrowHook: "Capstone review — completeness + field log.",
+    fieldNotePrompt: "Which of the four rows took the longest to keep distinct?",
+    tomorrowHook: "Tomorrow: re-run completeness and re-read the AEM log. Fix one thing on each desk.",
     body: `## One story
 
 Kitepump on the beach. The book explains how. The site sells the beach card. They share a name, not a file format.
+
+Write four rows:
+
+1. **Product name** — key vs page title
+2. **Procedure** — task vs a short page that points at help
+3. **Warning** — reused DITA vs a short Text line
+4. **Publish** — transform or baseline vs Quick Publish
+
+The two publish buttons are not the same button. If the sheet says they are, rewrite the row.
+
+## Lab
+
+\`oxygen-bootcamp-work/week12/two-surfaces.md\`. Four rows.
+
+## Figure
+
+A four-row table. Caption: *Same pump. Two desks.*
 `,
   },
   {
     n: 86,
     week: 12,
     title: "Capstone review",
-    objective: "Re-run completeness on the DITA half and re-read the AEM field log. Fix one issue on each surface.",
+    objective:
+      "Re-run completeness on the DITA half and re-read the AEM field log. Fix one issue on each desk.",
     minutes: 90,
     skills: ["review", "maps", "aemSites"],
     legacy: [],
@@ -472,41 +844,67 @@ Kitepump on the beach. The book explains how. The site sells the beach card. The
     badgeId: null,
     lab: {
       pack: "kitepump-dita",
-      title: "One fix per surface",
+      title: "One fix per desk",
       steps: [
-        "Completeness on the capstone map. Quote the report (zero is a valid quote).",
+        "Completeness on the capstone map. Quote the report (zero missing links is a valid quote).",
         "Field log: fix one missing payload or alt.",
-        "Write what you would tell a teammate in two sentences — one per surface.",
+        "Write what you would tell a teammate in two sentences — one per desk.",
+        "Save oxygen-bootcamp-work/week12/field-log-86.txt.",
       ],
-      failWhen: "You skip one surface.",
+      failWhen: "You skip one desk.",
       expected: "Quoted completeness. One AEM fix. Two teammate sentences.",
     },
     quiz: [
       {
-        q: "Review means watching the videos again. True?",
-        options: ["True", "False — review means the reports and the log"],
+        q: "Review means watching the videos again. True or not?",
+        options: [
+          "True — rewatch is the badge",
+          "Not true — review means the completeness report and the field log",
+          "True if you take notes",
+        ],
         answer: 1,
-        why: "Evidence. Not a rewatch badge.",
+        why: "Evidence. Not a rewatch.",
+      },
+      {
+        q: "Completeness reports zero missing links. What do you write?",
+        options: [
+          "Nothing — zero does not count",
+          "Quote the zero. That is a valid quote",
+          "Run a language copy instead",
+        ],
+        answer: 1,
+        why: "Zero is a result. Write it down.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name the two reports",
-      doTitle: "Both surfaces still honest",
+      learn: "Open the completeness report and the AEM field log",
+      doTitle: "Fix one thing on each desk",
       doDone: "Completeness quoted. Field log patched.",
-      stress: "The remaining issue you will not pretend is done",
+      stress: "Pick what review means, and whether zero counts",
     }),
-    fieldNotePrompt: "What is still not done, in one sentence?",
-    tomorrowHook: "Capstone delivery package.",
+    fieldNotePrompt: "What is still not done, in one sentence? If everything is done, write that.",
+    tomorrowHook: "Tomorrow: hand in the work. Small zip. First file a lead should open.",
     body: `## Review is evidence
 
-Completeness output. Field log. Two sentences. No slogans.
+Completeness output. Field log. Two sentences for a teammate. One per desk.
+
+If completeness is already clean, quote the zero. If an alt is missing, write it. Do not skip a desk because it felt finished yesterday.
+
+## Lab
+
+One quoted report. One AEM fix. Two teammate sentences.
+
+## Figure
+
+A completeness report next to a field log. Caption: *Both desks. Both pieces of evidence.*
 `,
   },
   {
     n: 87,
     week: 12,
-    title: "Capstone delivery",
-    objective: "Zip the DITA work folder (no out/ bloat) and export the AEM field log. List what a lead would open first.",
+    title: "Hand in the work",
+    objective:
+      "List what a lead would open first: the map, then the comparison sheet. Keep the zip small — no giant output folders.",
     minutes: 75,
     skills: ["review", "publish"],
     legacy: ["t7-capstone"],
@@ -518,43 +916,79 @@ Completeness output. Field log. Two sentences. No slogans.
       pack: "guides-oxygen-handoff",
       title: "Delivery list",
       steps: [
-        "List: map path, topic list, ditaval if any, transform log snippet, field-log.md, two-surfaces.md.",
-        "Do not zip node_modules or 5 GB of WebHelp skins.",
+        "Write oxygen-bootcamp-work/week12/delivery.txt.",
+        "List: map path, topic list, ditaval if any, transform log snippet, field-log files, two-surfaces.md.",
+        "Do not zip node_modules or a huge WebHelp output folder.",
         "Write the first file a lead should open (the map, then the comparison sheet).",
       ],
-      failWhen: "The zip includes binaries the CONTENT_BUDGET forbids.",
+      failWhen: "The zip includes huge binaries or a full WebHelp skin tree.",
       expected: "A short delivery list. First file named.",
     },
     quiz: [
       {
-        q: "The lead should open the WebHelp skin CSS first. True?",
-        options: ["True", "False — map, then the comparison sheet"],
+        q: "The lead should open the WebHelp skin CSS first. True or not?",
+        options: [
+          "True — pretty is proof",
+          "Not true — the map, then the comparison sheet",
+          "True if the CSS is short",
+        ],
         answer: 1,
-        why: "The book, then the story across surfaces.",
+        why: "The book, then the story across desks.",
+      },
+      {
+        q: "Why leave the huge WebHelp folder out of the zip?",
+        options: [
+          "Leads cannot open HTML",
+          "The list plus the map is the handoff. The giant output is a draft you can rebuild",
+          "Git requires skins",
+        ],
+        answer: 1,
+        why: "Small zip. Rebuild the draft if someone needs it.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name the first file",
-      doTitle: "Delivery list is small",
+      learn: "Name the first file a lead opens",
+      doTitle: "Write a small delivery list",
       doDone: "List written. No bloat.",
-      stress: "What you left out on purpose",
+      stress: "Pick the first file, and what stays out of the zip",
     }),
-    fieldNotePrompt: "First file a lead opens?",
-    tomorrowHook: "Oral exam sheet.",
+    fieldNotePrompt: "What is the first file a lead opens? Write the path.",
+    tomorrowHook: "Tomorrow: a talk-through sheet. Ten answers, out loud if you can.",
     body: `## Hand it over
 
-Small zip. Honest list. No skins, no DAM dumps.
+Small zip. Short list. No skins, no library dumps, no \`node_modules\`.
+
+A lead opens:
+
+1. The **map**
+2. The **comparison sheet** (\`two-surfaces.md\`)
+
+Then the field logs, then a transform snippet. That order.
+
+If you built WebHelp, keep a note that it is a draft. Do not ship a 5 GB output tree.
+
+## Lab
+
+\`delivery.txt\`. First file named. Zip stays small.
+
+## Figure
+
+A short list on a page. Caption: *Map first. Comparison second.*
 `,
   },
   {
     n: 88,
     week: 12,
-    title: "Oral exam sheet",
-    objective: "Answer out loud (or in writing if you are alone) ten questions a hiring lead would actually ask.",
+    title: "Talk-through sheet",
+    objective:
+      "Answer out loud (or in writing if you are alone) ten questions a hiring lead would actually ask.",
     minutes: 90,
     skills: ["review", "xmlLiteracy", "aemSites"],
     legacy: [],
-    youtube: [yt("gettingStarted", ["Modes you must still be able to name"]), yt("aemQuick", ["Publish you must still be able to name"])],
+    youtube: [
+      yt("gettingStarted", ["Modes you must still be able to name"]),
+      yt("aemQuick", ["Publish you must still be able to name"]),
+    ],
     sources: [S.ugEditor, S.aemAuthor, S.guidesOverview],
     toolCards: [],
     badgeId: null,
@@ -562,51 +996,82 @@ Small zip. Honest list. No skins, no DAM dumps.
       pack: "guides-oxygen-handoff",
       title: "Ten answers",
       steps: [
-        "1. Author vs Text vs Grid.",
+        "Write oxygen-bootcamp-work/week12/talk-through.txt.",
+        "1. Author vs Text vs Grid in Oxygen.",
         "2. Well-formed vs valid.",
         "3. Map vs topic.",
         "4. keyref vs href.",
         "5. Completeness vs schema.",
         "6. Local WebHelp vs Guides baseline.",
-        "7. Author vs publish (AEM).",
+        "7. Author vs publish in AEM.",
         "8. Page Editor vs Universal Editor vs Document Authoring.",
         "9. Guides vs Oxygen.",
         "10. Why there is no AEM Oxygen XML Editor.",
-        "Write answers. Speak them if you can.",
+        "Write short answers. Speak them if you can.",
       ],
-      failWhen: "Any answer mashes families, or #10 fails.",
+      failWhen: "Any answer mixes the two desks, or #10 treats the fake product name as real.",
       expected: "Ten short answers. #10 is a hard no on the fake product name.",
     },
     quiz: [
       {
-        q: "There is a product called AEM Oxygen XML Editor. True?",
-        options: ["True", "False"],
+        q: "There is a product called AEM Oxygen XML Editor. True or not?",
+        options: [
+          "True — that is the connector",
+          "Not true — Guides can open Oxygen. They are not one product",
+          "True after an admin enables the button",
+        ],
         answer: 1,
-        why: "If you miss this on Day 88, start Day 1.",
+        why: "If you miss this on day 88, go back to day 76 (and day 56).",
+      },
+      {
+        q: "Local WebHelp and a Guides baseline are the same publish. True or not?",
+        options: [
+          "True",
+          "Not true — local is a draft, the baseline is the release on a Guides shop",
+          "True if both made HTML",
+        ],
+        answer: 1,
+        why: "Question 6 on the sheet. Draft vs release.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name all ten prompts",
-      doTitle: "Ten answers exist",
+      learn: "Read the ten prompts before you write",
+      doTitle: "Write ten short answers",
       doDone: "File saved. #10 correct.",
-      stress: "The question you still hedge",
+      stress: "Pick the fake product name, and draft vs release",
     }),
-    fieldNotePrompt: "Which question did you hedge?",
-    tomorrowHook: "Written scenario exam and error clinic.",
+    fieldNotePrompt: "Which of the ten questions did you hesitate on? Quote your answer.",
+    tomorrowHook: "Tomorrow: three written scenarios and a broken map to repair.",
     body: `## Out loud
 
-Short answers. Concrete verbs. No slogans.
+Ten short answers. Concrete verbs. No slogans.
+
+You have met every word on this list. If one is fuzzy, open that week’s field log and rewrite the line.
+
+Number 10 is not a trick. There is no product called AEM Oxygen XML Editor.
+
+## Lab
+
+\`talk-through.txt\`. Ten answers. Speak them if you can.
+
+## Figure
+
+A numbered list of ten. Caption: *Short answers. Number 10 is no.*
 `,
   },
   {
     n: 89,
     week: 12,
-    title: "Written scenario exam and error clinic",
-    objective: "Solve three scenarios (broken map, wrong CMS, failed transform) in writing.",
+    title: "Written scenarios and error repair",
+    objective:
+      "Solve three scenarios in writing (broken map, wrong desk, failed transform), then repair the broken map copy.",
     minutes: 90,
     skills: ["review", "maps", "publish", "aemSites"],
     legacy: ["t4-complete", "t5-publish", "t7-aem"],
-    youtube: [yt("completeness", ["Missing href"]), yt("webhelp", ["Failed transform reading"])],
+    youtube: [
+      yt("completeness", ["A missing link"]),
+      yt("webhelp", ["Reading a failed transform"]),
+    ],
     sources: [S.mapsDemo, S.aemAuthor, S.guidesOverview],
     toolCards: ["maps-manager", "transformation", "sites-console"],
     badgeId: null,
@@ -614,82 +1079,143 @@ Short answers. Concrete verbs. No slogans.
       pack: "kitepump-broken-map",
       title: "Three scenarios",
       steps: [
+        "Write oxygen-bootcamp-work/week12/field-log-89.txt.",
         "Scenario A: completeness names a missing href. First move?",
-        "Scenario B: a PM wants the landing page written as a DITA map. What do you say?",
-        "Scenario C: PDF transform failed. First place you look?",
-        "Write three answers. Then repair the broken map copy if it is still broken.",
+        "Scenario B: a project manager wants the landing page written as a DITA map. What do you say?",
+        "Scenario C: a PDF transform failed. First place you look?",
+        "Then repair the broken map copy in the pack (work on a copy). Completeness clean when you stop.",
       ],
       failWhen: "Any first move is ‘reinstall Oxygen’ or ‘Quick Publish the map’.",
-      expected: "Three first moves. Broken map clinic copy clean.",
+      expected: "Three first moves. Broken map copy clean.",
     },
     quiz: [
       {
-        q: "A failed PDF transform: first place you look is the Sites console. True?",
-        options: ["True", "False — the transformation log, first error"],
+        q: "A failed PDF transform: first place you look is the Sites console. True or not?",
+        options: [
+          "True — publish lives in Sites",
+          "Not true — open the transformation log and read the first real error",
+          "True if the PDF is for the landing page",
+        ],
         answer: 1,
-        why: "Output oracle from the game rules, now as an exam.",
+        why: "Week 6: the log is the oracle. Sites is the other desk.",
+      },
+      {
+        q: "A project manager wants the landing page written as a DITA map. What do you say?",
+        options: [
+          "Yes — one CMS",
+          "No — the landing page is Sites. The handbook is DITA. They share a product story, not a file format",
+          "Yes, then Quick Publish the map",
+        ],
+        answer: 1,
+        why: "Scenario B. You have been saying this since week 9.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name the three first moves",
-      doTitle: "Broken copy clean",
+      learn: "Read the three scenarios before you write",
+      doTitle: "Write three first moves, then repair the broken copy",
       doDone: "Three answers. Completeness clean.",
-      stress: "The PM in scenario B",
+      stress: "Pick the first look on a failed PDF, and what you tell the project manager",
     }),
-    fieldNotePrompt: "What did you tell the PM?",
-    tomorrowHook: "Portfolio export and what is not taught.",
-    body: `## Exam
+    fieldNotePrompt: "What did you tell the project manager in scenario B? Two sentences.",
+    tomorrowHook: "Last day: what you can do now, what this course did not teach, and what is next.",
+    body: `## Three first moves
 
-First moves. Then repair. No reinstall folklore.
+A. Completeness names a missing link. Open the map. Fix the href (or drop the row). Run completeness again.
+
+B. A project manager wants the landing page as a DITA map. Say no. The landing page is Sites. The handbook is DITA.
+
+C. A PDF transform failed. Open the transformation log. Quote the first real error. Do not reinstall Oxygen. Do not Quick Publish the map.
+
+Then repair the broken map copy. Completeness clean when you stop.
+
+## Lab
+
+Three answers. One repaired copy.
+
+## Figure
+
+A completeness report with one missing href. Caption: *Fix the link. Do not reinstall.*
 `,
   },
   {
     n: 90,
     week: 12,
-    title: "Portfolio export, skills inventory, what next",
-    objective: "Export progress, list skills with evidence, and write three things this course does not teach.",
+    title: "What you can do now, and what is next",
+    objective:
+      "Export progress, list skills with evidence, and write three things this course does not teach — plus one next course you would actually take.",
     minutes: 90,
     skills: ["review"],
     legacy: [],
-    youtube: [yt("gettingStarted", ["How far you have come from first launch — evidence, not a slogan"])],
+    youtube: [
+      yt("gettingStarted", [
+        "How far you have come from the first window — evidence, not a slogan",
+      ]),
+    ],
     sources: [S.learnDita, S.guidesOverview, S.coreComp],
     toolCards: [],
     badgeId: "portfolio-ready",
     lab: {
       pack: "guides-oxygen-handoff",
-      title: "Export + inventory",
+      title: "Export plus inventory",
       steps: [
-        "Settings > Export progress + game state. Keep the JSON.",
-        "List each skill with one piece of evidence (day number + artifact).",
-        "Write what is not taught: specializations, DITA-OT customizing, AEM developer path (HTL, models). Listed, not taught.",
+        "Settings: Export progress and game state. Keep the JSON.",
+        "Write oxygen-bootcamp-work/week12/inventory.txt. List each skill with one piece of evidence (day number plus a file).",
+        "Write what is not taught: DITA specializations, customizing DITA-OT, the AEM developer path (the code behind the blocks). Listed, not taught.",
         "Write one next course you would actually take.",
+        "Do not claim this course made you an AEM developer.",
       ],
       failWhen: "You claim this course made you an AEM developer, or you skip the export.",
-      expected: "JSON export exists. Inventory has evidence. Three not-taught items.",
+      expected: "JSON export exists. Inventory has evidence. Three not-taught items. One next course.",
     },
     quiz: [
       {
-        q: "This course taught you to customize DITA-OT plugins. True?",
-        options: ["True", "False — listed as next, not taught"],
+        q: "This course taught you to customize DITA-OT plugins. True or not?",
+        options: [
+          "True — week 6 was that",
+          "Not true — listed as next, not taught",
+          "True if WebHelp opened",
+        ],
         answer: 1,
-        why: "Day 90 is honest about the edge of the map.",
+        why: "Week 6 taught you to run a transform and read a log. Plugin work is a later course.",
+      },
+      {
+        q: "What is the evidence for a skill on the inventory?",
+        options: [
+          "A feeling that you remember it",
+          "A day number plus a file you actually wrote",
+          "The warmup streak",
+        ],
+        answer: 1,
+        why: "Evidence is a file with a date. Not a streak.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name three things not taught",
-      doTitle: "Export exists",
-      doDone: "JSON saved. Inventory has day numbers.",
-      stress: "The skill with the weakest evidence",
+      learn: "Read the three things this course does not teach",
+      doTitle: "Export progress and write the inventory",
+      doDone: "JSON saved. Inventory has day numbers. One next course written.",
+      stress: "Pick whether DITA-OT plugins were taught, and what counts as evidence",
     }),
     fieldNotePrompt: "What will you learn next, in one line?",
-    tomorrowHook: "There is no Day 91 in this pack. Add Week 13 in docs when you need it.",
+    tomorrowHook: "There is no day 91 in this pack. Add a next course when you need one.",
     body: `## Done looks like this
 
-You can open a DITA map in Oxygen, reuse with keys and conrefs, publish WebHelp or PDF, then switch to AEM, create and edit pages, publish, run a workflow, author a Content Fragment, and explain when Guides + Oxygen beats in-AEM web editing.
+You can open a DITA booklet in Oxygen, reuse with keys and conrefs, publish WebHelp or PDF, then switch to AEM, create and edit pages, publish, fill a Content Fragment, and say when Guides plus Oxygen is the handbook desk.
 
 You are not a DITA-OT customizer. You are not an AEM developer. Those paths are listed, not taught.
 
-Export your progress. Keep the evidence.
+Export your progress. Keep the evidence. Write one next course you would actually take.
+
+## Word today
+
+None. You already have the words. The inventory is the proof.
+
+## Lab
+
+JSON export. Inventory with day numbers. Three not-taught items. One next course.
+
+## Figure
+
+A short inventory. Caption: *Day numbers plus files. That is the portfolio.*
 `,
   },
 ].map((d) => ({ ...d, week: weekOf(d.n) }));

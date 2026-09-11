@@ -2,7 +2,7 @@
 
 ## What the learner can do
 
-Open Oxygen Bootcamp, run an 8-minute Daily Burst, start Day 1, and be in Oxygen in the first session. On a phone they can run a 20-minute block, tick a quest, and take a quiz. Streaks and badges live in the browser and survive a curriculum version bump (update guard). Rank needs both labs and XP floors — Daily Burst cannot jump rank.
+Open Oxygen Bootcamp, install the app on day 1, type a sentence on day 2. On a phone they can run a 20-minute block, tick a quest, and take a quiz. Streaks and badges live in the browser and survive a curriculum version bump (update guard). Rank needs both labs and XP floors — the warmup cannot jump rank.
 
 After Day 90 they can open a DITA map in Oxygen, reuse with keys and conrefs, publish WebHelp or PDF, then switch to AEM, create and edit pages, publish, run a workflow, author a Content Fragment, and explain when Guides + Oxygen beats in-AEM web editing.
 

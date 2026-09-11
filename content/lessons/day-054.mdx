@@ -1,8 +1,8 @@
 ---
 day: 54
 week: 8
-title: "Performance with large maps, and Schematron as policy"
-objective: "Write three things that make Author crawl, and read one Schematron assert as compiled house style."
+title: House rules that catch the same mistake twice
+objective: Read one house rule as a Schematron assert (or write a pretend one) and say what it flags.
 timeboxMinutes: 90
 skills: [oxygenUi, review]
 legacyLessonIds: [t6-schematron]
@@ -10,59 +10,82 @@ youtube:
   - id: w4jtBsSIiyw
     title: Schematron rules and Quick Fixes
     watchFor:
-      - An assert message as policy
-      - Quick Fix as a structured rewrite
+      - An assert message as a house rule
+      - A Quick Fix as a structured rewrite — only if you can say what it will change
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
 lab:
   id: lab-54
-  title: Slow Author / Schematron policy card
+  title: "One house rule, in your words"
   pack: kitepump-dita
-  failWhen: You copy a 200-line Schematron from a forum as ‘the rule’.
-  expected: Three slowness causes. One assert in your words.
+  failWhen: "You copy a long rules file from a forum as ‘the rule’, or you skip writing the rule in your own words."
+  expected: "One assert in your words, real or pretend. Pretend is labeled pretend."
   steps:
-    - "Write three slowness causes: huge unsplitting maps, Author CSS with full tags on a 400-topic book, validating the world on every keystroke without a scenario."
-    - "If you have a Schematron, open one rule and write what it forbids. If not, write a pretend assert: shortdesc must not start with ‘This topic’ — and say it is pretend."
-    - Do not paste a vendor Schematron file into git.
+    - "If you have a Schematron file at work, open one rule. Write what it flags, in plain words, in oxygen-bootcamp-work/week8/house-rule.txt."
+    - "If you do not have one, write a pretend rule and label it pretend: the short line under the title must not start with ‘This topic’."
+    - "Write one sentence: Schematron is a rules file that flags the same mistake. Grammar will not catch ‘This topic’. This file can."
+    - Do not paste a long rules file from a forum into your folder and call it the shop rule.
 sessionQuests:
   - id: a
     block: A
-    title: "Name Schematron as policy, not grammar"
+    title: "Find one Schematron rule, or write a pretend one and label it"
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the policy card original
+    title: Rewrite the rule in plain words
     minutes: 25
-    done: Three slowness causes. One assert rewritten.
+    done: One house rule in house-rule.txt. Pretend is labeled.
   - id: c
     block: C
-    title: When a Quick Fix is too clever
+    title: "Pick what Schematron flags that grammar cannot, and when to trust a Quick Fix"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [one-line-repair, menu-path-race]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, one-line-repair]
 toolCards: [author-mode]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Three slowness causes. One assert in your words. }
+  - { id: lab, prompt: "One assert in your words, real or pretend. Pretend is labeled pretend." }
 quiz:
-  - q: "Schematron encodes style-guide rules grammar cannot express. True?"
-    answer: 0
-    why: That is the point. Read one assert as compiled policy.
+  - q: "A page is well-formed and valid, but the short line under the title starts with ‘This topic’. Who can flag that?"
+    answer: 1
+    why: Well-formed is the skeleton. Valid is the page type. House rules are extra. That is the point.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "What house rule would you encode first if you could only have one assert?"
-tomorrowHook: "Accessibility of the content you write — alt, titles, tables."
+      - The grammar of the page type — it already blocks those words
+      - A house rules file (Schematron). Grammar will not catch wording. This file can
+      - Help > About
+  - q: "A yellow bulb offers a Quick Fix on a house rule. When do you click it?"
+    answer: 1
+    why: "Some fixes are fine. Some rewrite the page. If you cannot say what will change, Undo is cheaper."
+    options:
+      - Always — bulbs are official
+      - Only when you can say what it will change
+      - "Never, in any view"
+fieldNotePrompt: "What house rule did you write, and was it real or pretend?"
+tomorrowHook: "Tomorrow is the week 8 check: make pages people can actually use. Week 9 stays locked until that day is finished."
 ---
 
-## Slow is usually self-inflicted
+## The same mistake, twice
 
-Do not open a 2,000-topic map in Author with full tags and live validate-everything. Split. Use Maps Manager. Schematron is policy. Quick Fixes only when you can explain them.
+Grammar tells you a how-to may not want an explaining-page body. It does not tell you that the short line under the title should not start with “This topic”.
+
+**Schematron** is a rules file that flags the same mistake. A shop writes the rule once. Oxygen shows it every time. That is a house rule, compiled.
+
+If you have no file yet, write a pretend one and label it pretend. Do not paste a stranger’s 200-line file into git.
+
+A **Quick Fix** can rewrite the page to match the rule. Click it only when you can say what will change.
+
+## Word today
+
+**Schematron** — a rules file that flags the same mistake. Not grammar. Not spelling. Shop wording.
+
+## Watch
+
+The official Schematron video. Watch the assert message. That sentence is the house rule.

@@ -1,104 +1,90 @@
 ---
 day: 16
 week: 3
-title: "Submaps — a chapter is a map, not a folder"
-objective: "Create a submap, point the parent map at it, and prove completeness still walks both files."
+title: The booklet view
+objective: "Open Maps Manager, set the sample map as the root booklet, and explain how that tree is not the folder list."
 timeboxMinutes: 90
 skills: [maps, oxygenUi]
-legacyLessonIds: [t3-maps]
+legacyLessonIds: [t2-dita-ui, t3-maps]
 youtube:
   - id: ozFZz6YZMCY
     title: DITA Maps Manager View in Oxygen XML Editor 19
     watchFor:
-      - A map referenced from a map
-      - Root map vs the file you are editing
+      - Maps Manager tree
+      - Root map control on the toolbar
   - id: LuAVmn1j7f0
     title: Getting Started with DITA Using Oxygen XML Editor
     watchFor:
-      - Where the map will later live
+      - DITA perspective docks Maps Manager
 sources:
   - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
-  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
 lab:
   id: lab-16
-  title: Kitepump care as a submap
-  pack: kitepump-dita
-  failWhen: "The submap is a folder with no map file, or topics are referenced twice, or completeness never opens care.ditamap."
-  expected: Root maprefs the care submap. Two valid topics. Completeness walks parent + child. Zero duplicate topicrefs.
+  title: "Maps Manager, on purpose"
+  pack: flower-docs
+  failWhen: "You only opened the map as tags, or you cannot say tree vs folder list."
+  expected: Maps Manager shows the sample booklet. Root map is set. Two-line note saved.
   steps:
-    - Create oxygen-bootcamp-work/week3/kitepump/ (or samples/kitepump-dita/ if the pack already exists). This is the new product next to flower-docs — do not replace flower-docs.
-    - "Create maps/kitepump.ditamap (root) and maps/care.ditamap (submap). Root title: Kitepump handbook. Submap title: Care."
-    - "In the submap, topicref two new topics: topics/what-kitepump-is.dita (concept) and topics/inflate-the-tire.dita (task, three cmds)."
-    - "In the root map, add <mapref href=\"maps/care.ditamap\"/> (or topicref format=\"ditamap\" — write which your version inserts)."
-    - Set kitepump.ditamap as root map. Completeness must visit both maps and both topics.
-    - Do not copy the two topics into the root map as a second set of topicrefs.
+    - "Switch to the DITA perspective if you have it, so Maps Manager docks on the side."
+    - "Open flowers.ditamap in Maps Manager (the tree), not only as tags."
+    - "Set this map as the root map. The control is on the toolbar — if the label differs, write the label you see."
+    - "In oxygen-bootcamp-work/week3/day-16-views.txt write two lines: Maps Manager = the booklet. Project view = the files on disk."
+    - Do not add a page yet.
 sessionQuests:
   - id: a
     block: A
-    title: Name mapref and what a folder-as-chapter forbids
+    title: Find Maps Manager and the root map control
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the care submap owned by the root
+    title: Open the sample booklet in the tree and set it as root
     minutes: 25
-    done: Completeness walks both maps. Topics are not duplicated.
+    done: Tree is showing. Two-line note saved.
   - id: c
     block: C
-    title: "Set the wrong root map, watch a key fail, switch back"
+    title: "Pick what the tree shows, and why a root map matters"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [authors-dare, warmup-match]
-toolCards: [maps-manager]
-badgeId: map-is-a-book
+    done: Note saved.
+dailyBurstPool: [menu-path-race, one-line-repair]
+toolCards: [maps-manager, outline]
+badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Root maprefs the care submap. Two valid topics. Completeness walks parent + child. Zero duplicate topicrefs. }
+  - { id: lab, prompt: Maps Manager shows the sample booklet. Root map is set. Two-line note saved. }
 quiz:
-  - q: "A folder named care/ with two topics is a submap. True?"
-    answer: 1
-    why: A submap is a .ditamap the parent references. A folder is only a folder.
-    options:
-      - "True"
-      - "False"
-  - q: "You set care.ditamap as root map to edit it, then forget to switch back. What breaks first?"
+  - q: Maps Manager shows…
     answer: 0
-    why: Keys resolve from the root map. The wrong root map is the classic unresolved-key bug.
+    why: The tree is publication structure. The folder list is files on disk. They are not the same.
     options:
-      - Keys defined only on the parent look unresolved
-      - The submap files delete themselves
-      - Author mode disables
-  - q: "Parent and submap both topicref inflate-the-tire.dita. What did you ship?"
-    answer: 1
-    why: "Two topicrefs are two TOC entries. An alias is a key, not a second href."
+      - The booklet (what the reader will follow)
+      - Every file on your whole computer
+      - Help > About
+  - q: "Why set a root map?"
+    answer: 0
+    why: "The sample booklet already defines a product name. Without a root map, that name may not show."
     options:
-      - A useful alias
-      - A duplicated chapter in the book
-      - A keydef
-fieldNotePrompt: "When would you refuse to split a map, even if the folder is getting large?"
-tomorrowHook: Tomorrow you put stable ids on topics and elements so xrefs can survive a title change.
+      - So names defined in the booklet can resolve on the pages
+      - So Oxygen can delete unused files
+      - So the desktop stays empty
+fieldNotePrompt: "How is the booklet tree different from the folder list?"
+tomorrowHook: Tomorrow you add one of your pages to the booklet.
 ---
 
-## Submaps
+## The tree is the booklet
 
-A **submap** is a map the parent map references. Use it when a chapter is a book of its own: Care, Parts, Service.
+**DITA Maps Manager** is the booklet view. The folder list (Project view) is just files on disk.
 
-The parent uses `mapref` (or a topicref with `format="ditamap"`). The filesystem folder is not the chapter.
+A page can sit on disk and still be missing from the booklet. That is like a chapter printed and left in a drawer.
 
-## Root map
+**Root map** — the booklet Oxygen should use as the main table of contents. Set it. Later, names defined in the booklet will work.
 
-Set the **root map** to the parent when you want keys and completeness for the whole book. You may open the submap as root to edit it — then switch back.
+## Word today
 
-## kitepump-dita
-
-This pack sits **beside** flower-docs. Flower-docs stays. Kitepump is a portable floor pump used in later reuse and publish labs.
-
-## Figure
-
-Two map files: kitepump.ditamap → care.ditamap → two topics. Caption: *Maps Manager tree after mapref. Not two copies of the topics.*
+**Maps Manager** — the side tree that shows the booklet, not the folders.

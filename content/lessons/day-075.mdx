@@ -1,8 +1,8 @@
 ---
 day: 75
 week: 11
-title: Authoring methods clinic
-objective: "Given four jobs, pick the method, and fail the one that is secretly DITA."
+title: Week 11 check
+objective: "Given four jobs, pick Page Editor, Document Authoring, Content Fragment, or Oxygen — and keep the DITA how-to off the AEM list."
 timeboxMinutes: 90
 skills: [aemSites, aemGuides]
 legacyLessonIds: []
@@ -10,7 +10,7 @@ youtube:
   - id: VcMI0zWIKdg
     title: How to Build a Global Site in AEM Sites
     watchFor:
-      - Methods in one sitting
+      - The methods in one sitting
   - id: idByz7WrhbQ
     title: AEM from Headful to Headless (Adobe for Business)
     watchFor:
@@ -24,51 +24,89 @@ lab:
   title: Four jobs
   pack: aem-author-field-log
   failWhen: Job D is assigned to Page Editor or Document Authoring.
-  expected: Four correct assignments. Job D stays DITA.
+  expected: Four correct assignments. Job D stays DITA. Mock labeled.
   steps:
-    - "Job A: hero + teaser on a templated site page → Page Editor."
+    - Write oxygen-bootcamp-work/week11/field-log-75.txt with four assignments.
+    - "Job A: hero plus teaser on a templated site page → Page Editor."
     - "Job B: marketers in Google Docs → Document Authoring."
     - "Job C: product fields for an app → Content Fragment."
-    - "Job D: 12-step pump prime with conkeyref → Oxygen / Guides, not Sites."
-    - Write the four answers. The clinic fails if Job D goes to Sites.
+    - "Job D: a 12-step pump prime with reused warnings → Oxygen (or Guides next week), not Sites."
+    - "Labeled mock: the four jobs. Caption: mock."
+    - Pass the quiz. Week 12 stays locked until this day is finished (lab + quiz + a short note).
 sessionQuests:
   - id: a
     block: A
-    title: Name the four jobs
+    title: Read the four jobs out loud
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Job D stays DITA
+    title: Assign all four. Keep Job D in Oxygen
     minutes: 25
-    done: Four assignments written.
+    done: Four assignments written. Mock labeled.
   - id: c
     block: C
-    title: Why Job D is not Document Authoring
+    title: Pass the quiz. Retry if you need to.
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [menu-path-race, output-oracle]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [page-editor, universal-editor, content-fragment]
 badgeId: null
 boss: true
 checks:
-  - { id: lab, prompt: Four correct assignments. Job D stays DITA. }
+  - { id: lab, prompt: Four correct assignments. Job D stays DITA. Mock labeled. }
 quiz:
-  - q: "If the boss quiz is failed, Week 12 stays locked forever. True?"
+  - q: "You failed this check. Does week 12 open anyway?"
     answer: 1
-    why: Same rule all course.
+    why: The handoff week waits until you can match the four jobs. Retry is free.
     options:
-      - "True"
-      - False — Friday lab can unlock; badge waits
-fieldNotePrompt: "Which job would your current team mis-assign?"
-tomorrowHook: Guides web editor vs desktop Oxygen.
+      - "Yes, Friday’s table is enough"
+      - "No. Finish this day’s lab, quiz, and note. You can retry the quiz."
+      - "Yes, if the 5-minute warmup is done"
+  - q: "Job D is a 12-step pump prime with reused warnings. Where does it live?"
+    answer: 1
+    why: A DITA how-to with reuse is handbook work. Not a Sites method.
+    options:
+      - "Document Authoring, because it is a document"
+      - Oxygen (or Guides next week)
+      - A Content Fragment named steps
+  - q: "Product fields an app will read. Which of these?"
+    answer: 1
+    why: Fields for an app are a Content Fragment.
+    options:
+      - Page Editor
+      - Content Fragment
+      - A DITA map
+fieldNotePrompt: Write the four jobs and the method you assigned to each.
+tomorrowHook: "Week 12: Guides in the browser, Oxygen on the desktop, and who edits where."
 ---
 
-## Clinic
+## A check, not a show
 
-If you put DITA in Document Authoring because both say document, start this week over. Families stay distinct.
+This is the week boss. Four jobs. Four methods. You already met them.
+
+- Templated page with blocks → **Page Editor**
+- Marketers in Google Docs → **Document Authoring**
+- Fields for an app → **Content Fragment**
+- DITA how-to → **Oxygen** (Guides is next week)
+
+If you put the how-to in Document Authoring because both say document, start the four rows again.
+
+Fail the quiz and **week 12 stays locked**. Retry is free. The warmup does not open the week.
+
+You may not have AEM. The table in the field log is the evidence.
+
+## Proof
+
+1. Three AEM names still distinct.
+2. Content Fragment is fields, not a layout strip.
+3. Job D stays in the handbook.
+
+## Figure
+
+Labeled mock of the four jobs. Caption: *Mock. The how-to row is Oxygen.*

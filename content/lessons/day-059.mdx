@@ -1,8 +1,8 @@
 ---
 day: 59
 week: 9
-title: "Edit vs Preview — neither is publish, neither is Oxygen Author"
-objective: Describe Edit (component chrome) vs Preview (visitor-like) and write what still requires the Sites console or a workflow.
+title: Edit and Preview are not Publish
+objective: Describe Edit (handles on the page) vs Preview (visitor-like) and write that neither one sends the page live.
 timeboxMinutes: 90
 skills: [aemSites]
 legacyLessonIds: [t7-aem]
@@ -10,7 +10,7 @@ youtube:
   - id: idByz7WrhbQ
     title: AEM from Headful to Headless (Adobe for Business)
     watchFor:
-      - Headful editing context
+      - An editing canvas if shown
       - Preview as a distinct mode if shown
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
@@ -23,68 +23,77 @@ lab:
   failWhen: "The log says Preview publishes the page, or Page Editor is called Oxygen Author mode, or you skip the mock label."
   expected: Edit vs Preview vs Publish as three verbs. Mock labeled. Naming rule present.
   steps:
-    - "Write oxygen-bootcamp-work/week9/field-log-59.txt: Edit shows component handles. Preview hides them so you can read the page. Preview does not activate the page to publish."
-    - "Add: Oxygen Author mode is CSS for XML. Page Editor Edit mode is component chrome for AEM pages. Do not call Page Editor ‘Author mode’."
-    - List one thing you can only do in Edit (open a component dialog) and one thing Preview is for (read the layout).
+    - "Write oxygen-bootcamp-work/week9/field-log-59.txt: Edit shows handles on the pieces of the page. Preview hides them so you can read the page. Preview does not send the page live."
+    - "Add: Oxygen Author view is the page view for XML. Page Editor Edit is the canvas for AEM pages. Do not call Page Editor ‘Author mode’."
+    - List one thing you can only do in Edit (open a piece’s dialog) and one thing Preview is for (read the layout).
     - "Labeled mock: same page, two states, Edit | Preview. Caption: mock."
 sessionQuests:
   - id: a
     block: A
-    title: "Name Edit, Preview, and Publish as three verbs"
+    title: Find Edit and Preview on the page canvas (video or mock)
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep Page Editor from being called Author mode
+    title: "Write three verbs: Edit, Preview, Publish"
     minutes: 25
-    done: Log distinguishes three verbs. Mock labeled.
+    done: Log distinguishes three verbs. Mock labeled. Author mode not borrowed.
   - id: c
     block: C
-    title: Find one UI label that collided with Oxygen in your draft and fix it
+    title: "Pick what Preview does not do, and why Author mode is the wrong name"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [one-line-repair, menu-path-race]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [page-editor]
 badgeId: null
 boss: false
 checks:
   - { id: lab, prompt: Edit vs Preview vs Publish as three verbs. Mock labeled. Naming rule present. }
 quiz:
-  - q: "Preview in Page Editor pushes the page live. True?"
+  - q: "Preview in Page Editor sends the page live. True or not?"
     answer: 1
-    why: Preview is a view. Publish/Quick Publish is activation.
+    why: Three verbs. Edit. Preview. Publish. Preview does not copy anything to visitors.
     options:
-      - "True"
-      - "False"
+      - True — Preview means publish
+      - Not true. Preview is a view. Publish is a later action that copies the page to the live environment
+      - True if the page looks fine in Edit
   - q: "Why not call Page Editor ‘Author mode’?"
     answer: 1
-    why: Keep families distinct. Say Edit in Page Editor.
+    why: Keep the desks distinct. Say Edit in Page Editor. Say Author in Oxygen.
     options:
-      - Adobe forbids the word author
-      - Author mode already names Oxygen’s CSS XML view — colliding names smash two products
+      - Adobe never uses the word author
+      - Author mode already names Oxygen’s page view — colliding names smash two products
       - Page Editor has no editing
-  - q: "You need to change the page title in properties. Are you in Edit on the canvas?"
+  - q: "You need to change the page title in properties. Are you on the Edit canvas?"
     answer: 1
-    why: Properties vs components. Both exist.
+    why: Properties vs the canvas. Both exist. The title in properties is not a sentence you typed in Edit.
     options:
-      - Always — titles are components only
-      - Often Page Properties from console or editor menu — not the same as a Text component
+      - Always — titles only live on the canvas
+      - Often Page Properties from the console or an editor menu — not the same as typing on the canvas
       - In Maps Manager
-fieldNotePrompt: "Which verb did you mix up before this lesson — Edit, Preview, or Publish?"
-tomorrowHook: Tomorrow components vs pages — a Text component is not a DITA concept.
+fieldNotePrompt: "Which verb did you mix up before this lesson — Edit, Preview, or Publish? What did you write in the log?"
+tomorrowHook: "Tomorrow a page is a stack of blocks, not a DITA topic."
 ---
 
-## Edit vs Preview vs Publish
+## Three verbs
 
-**Edit** — component chrome, dialogs, insert. **Preview** — read the page without chrome. **Publish** — activate to the publish environment.
+**Edit** — handles on the pieces of the page, dialogs, insert.
 
-Oxygen **Author** is a different product’s mode. Do not borrow the word.
+**Preview** — read the page without the handles.
+
+**Publish** — copy the page to the live environment. Not today as a click. Tomorrow-plus. Today you only keep Preview apart from Publish.
+
+Oxygen **Author** is a different product’s page view. Do not borrow the word. Say **Edit** in Page Editor.
+
+## Word today
+
+**Page Editor** — the AEM canvas where you edit a web page. Edit and Preview live here. Publish does not.
 
 ## Figure
 
-Labeled mock: toggle Edit | Preview in Page Editor. Caption: *Mock. Not a transform scenario.*
+Labeled mock: toggle Edit | Preview. Caption: *Mock. Not a transform scenario. Not Oxygen Author view.*

@@ -7,583 +7,555 @@ export default [
   {
     n: 1,
     week: 1,
-    title: "Structured authoring sits next to WYSIWYG",
-    objective:
-      "Tell a teammate why a DITA topic in Oxygen and an AEM page in Sites can both be right — and what you must not mix.",
-    minutes: 90,
-    skills: ["xmlLiteracy", "aemSites"],
-    legacy: ["t0-what"],
+    title: "Install Oxygen and look around",
+    objective: "Download Oxygen, open it, and write down the version from Help > About.",
+    minutes: 75,
+    skills: ["oxygenUi"],
+    legacy: ["t1-install"],
     youtube: [
       yt("gettingStarted", [
-        "How the presenter names Oxygen XML Editor (Syncro Soft)",
-        "The four editing modes on the editor stack",
+        "The window when the app first opens",
+        "Where the menus sit at the top",
       ]),
     ],
-    sources: [S.ugEditor, S.aemAuthor, S.documentation],
+    sources: [S.ugEditor, S.documentation],
     toolCards: [],
     badgeId: null,
     lab: {
       pack: "flower-docs",
-      title: "Four sentences, four surfaces",
+      title: "Get the app open",
       steps: [
-        "Open a notes file (plain text is fine).",
-        "Write one sentence: what Oxygen XML Editor is for (desktop XML / DITA).",
-        "Write one sentence: what AEM Sites Page Editor is for (pages, components).",
-        "Write one sentence: what AEM Guides is for (DITA in the AEM repository).",
-        "Write one sentence: what you will not call this stack (there is no product named AEM Oxygen XML Editor).",
-        "Save the note in oxygen-bootcamp-work/day-01-surfaces.txt.",
+        "Go to oxygenxml.com and download Oxygen XML Author or Oxygen XML Editor (the trial is fine).",
+        "Install it and open it. You should see a window with menus at the top and a big empty area in the middle.",
+        "Open Help > About. Write the version in a plain text file named oxygen-bootcamp-work/day-01-version.txt.",
+        "Walk the window once: top menus, left side, bottom tabs if any are showing. You do not have to name them yet.",
+        "If you cannot install today, look at the labeled mock in this lesson, write why you could not install, and still write what you see in the mock.",
       ],
-      failWhen: "Any sentence names a product 'AEM Oxygen XML Editor' or treats Guides as a theme for Sites.",
-      expected: "Four factual sentences. No invented product name.",
+      failWhen: "You never opened the app (or the mock) and you have no version note.",
+      expected: "A version number in day-01-version.txt, or a mock note that says why the app is not installed.",
     },
     quiz: [
       {
-        q: "A campaign landing page with a hero image and form belongs where first?",
+        q: "What is Oxygen, in one line?",
         options: [
-          "A DITA map in Oxygen",
-          "AEM Sites (Page Editor or Universal Editor)",
-          "A Schematron file",
+          "A writing app for help pages stored as files",
+          "A website you publish to customers",
+          "A photo editor",
         ],
-        answer: 1,
-        why: "Landing pages are Sites work. Oxygen is for structured XML topics, not marketing page layout.",
+        answer: 0,
+        why: "Oxygen is the app on your computer (or in a browser later) where you write structured help pages.",
       },
       {
-        q: "AEM Guides can launch desktop Oxygen. That means Adobe ships Oxygen. True?",
-        options: ["True", "False"],
+        q: "Where do you read the version number?",
+        options: ["File > New", "Help > About", "The Recycle Bin"],
         answer: 1,
-        why: "Oxygen is Syncro Soft. Guides can open it through a connector. The products stay distinct.",
+        why: "Help > About shows the version. If your menu label is slightly different, write that next to the number and keep going.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name the three surfaces and what each forbids",
-      doTitle: "Keep the four-sentence note honest",
-      doDone: "The note has four sentences and zero invented product names.",
-      stress: "Catch the fake product name",
+      learn: "Find Help > About and read the version",
+      doTitle: "Install Oxygen, or complete the mock and say why",
+      doDone: "Version is written down, or the mock note is saved.",
+      stress: "Pick what Oxygen is, and where the version lives",
     }),
-    fieldNotePrompt: "In one sentence, when would you refuse to write a procedure as a Sites Text component?",
-    tomorrowHook: "Tomorrow you install Oxygen XML Author and learn Author vs Text vs Grid by touching the same sentence in each.",
-    body: `## Sit next to this
+    fieldNotePrompt: "What did the window look like when it first opened? Two sentences is enough.",
+    tomorrowHook: "Tomorrow you open a sample page and type one sentence.",
+    body: `## You got a desk
 
-You will use two families of tools on one team.
+You were hired to write help pages. Those pages are files on a computer. **Oxygen** is the writing app you will live in for most of this course.
 
-**Oxygen XML Author / Editor / Web Author** is a Syncro Soft desktop (and browser) suite for XML. Writers live in Author mode. Developers live in Text mode. You validate, reuse, and publish DITA from here.
+Today you only install it and look at the window. You will not write a real page yet. You will not meet any other company’s tools today.
 
-**AEM authoring** is Adobe. Sites, Page Editor, Universal Editor, Document Authoring, Assets, Content Fragments, and **AEM Guides**. Guides stores DITA in AEM. An admin can enable **Edit in Oxygen** so a specialist opens the same topic on the desktop.
+## Install
 
-There is no product called “AEM Oxygen XML Editor.” If a slide says that, the slide is wrong.
+1. Open [oxygenxml.com](https://www.oxygenxml.com/) in a browser.
+2. Download **Oxygen XML Author** or **Oxygen XML Editor**. Author is enough for writers. Editor is fine too.
+3. Install. Open the app.
+4. Click **Help > About**. Write the version in \`oxygen-bootcamp-work/day-01-version.txt\`.
 
-## Why both exist
+If a menu name is different on your copy, write “my menu said …” next to it and keep going.
 
-A DITA topic is a typed document: concept, task, reference. A map is the book. Keys and conrefs are reuse. Publishing is a transform (WebHelp, PDF). That is Oxygen’s job.
+## What you should see
 
-An AEM page is a tree of components on a template. Publish is an author/publish topology, not DITA-OT. That is Sites’ job.
+A window. Menus along the top. A big area in the middle that will hold a page. Some side panels that may be empty. That is the desk.
 
-Guides is the DITA CCMS on AEM: check-in, review, baseline, translation, server publish. SMEs can stay in the browser. Map surgery still wants Oxygen.
+## Word today
 
-## Figure
-
-The wireframe below is a **labeled mock**, not a screenshot. Left: Oxygen with Maps Manager. Right: AEM Sites console. They do not share a toolbar.
+**Oxygen** — the writing app from Syncro Soft. Remember the name. You will open it every day.
 
 ## Watch
 
-Play the official Getting Started webinar. Pause when the presenter names the modes. Write the four names: Text, Grid, Author, Schema Design. Schema Design is not your daily writing mode.
+Play the official Getting Started video. Pause on the first full window. You are only looking. You do not need the four editing modes yet.
 
-## Lab rule
+## Lab
 
-The lab is the four-sentence note. If you cannot say the difference without slogans, do not mark it done.
+The lab is: the app is open, and you wrote the version down. If you cannot install, use the labeled mock and say why.
 `,
   },
   {
     n: 2,
     week: 1,
-    title: "Install Oxygen, then Author vs Text vs Grid",
-    objective: "Install a trial of Oxygen XML Author, launch it, and edit one sentence in Author, Text, and Grid.",
-    minutes: 90,
-    skills: ["oxygenUi", "xmlLiteracy"],
-    legacy: ["t1-install", "t2-modes"],
+    title: "Open a sample and type a sentence",
+    objective: "Open the sample page, type one sentence, and save the file.",
+    minutes: 80,
+    skills: ["oxygenUi"],
+    legacy: ["t1-xml"],
     youtube: [
-      yt("gettingStarted", ["First launch layout", "Where Help > About lives"]),
-      yt("wysiwyg", ["Author mode canvas", "How Enter opens content completion"]),
+      yt("gettingStarted", ["File > Open", "How a page looks in the big middle area"]),
     ],
-    sources: [S.ugEditor, S.ugAuthor, S.videos],
-    toolCards: ["author-mode", "text-mode"],
+    sources: [S.ugEditor, S.firstDita],
+    toolCards: ["author-mode"],
     badgeId: null,
     lab: {
       pack: "flower-docs",
-      title: "Same sentence, three modes",
+      title: "One sentence in the sample",
       steps: [
-        "Download the standalone kit from oxygenxml.com. Install it. Remember the folder — add-ons live under plugins/.",
-        "Launch. Register a trial or license. Open Help > About. Write the version in oxygen-bootcamp-work/day-02-version.txt.",
-        "File > Open samples/flower-docs/topics/hello-concept.dita.",
-        "In Author mode, add a sentence under the first paragraph: The desk copy is a sample, not a live catalog.",
-        "Switch to Text. Find that sentence in XML. Do not break a tag.",
-        "Switch to Grid. Confirm the same paragraph exists as a row. Switch back to Author.",
-        "If you cannot install today, complete the labeled mock in this lesson and record why in the version file. Still write the three-mode observation.",
+        "In Oxygen: File > Open. Open samples/flower-docs/topics/hello-concept.dita from this course.",
+        "Click in the big writing area. Add this sentence under the first paragraph: The desk copy is a sample, not a live catalog.",
+        "Save (Ctrl+S or Cmd+S). Confirm the file name in the tab still ends with .dita.",
+        "Close the file. Open it again. Your sentence should still be there.",
+        "Write the full path of the file in oxygen-bootcamp-work/day-02-path.txt.",
       ],
-      failWhen: "You only opened Author and never switched tabs, or you left a raw unescaped ampersand in the sentence.",
-      expected: "Version recorded. The new sentence exists in Author and Text. File still validates.",
+      failWhen: "You typed in a notes app instead of Oxygen, or you did not save, or the sentence is gone after reopen.",
+      expected: "The sample file opens, the extra sentence is there after save and reopen, and you wrote the path down.",
     },
     quiz: [
       {
-        q: "Which mode is CSS visual editing for daily DITA writing?",
-        options: ["Grid", "Author", "Schema Design"],
-        answer: 1,
-        why: "Author mode renders XML with CSS. Grid is repetitive data. Schema Design is for XSD architects.",
+        q: "How do you open a page that already exists?",
+        options: ["File > Open", "Help > About", "Close the app and hope"],
+        answer: 0,
+        why: "File > Open picks a file on disk. Help > About is only the version.",
       },
       {
-        q: "You type & in Author for “Assets & workflow”. What must the XML contain?",
-        options: ["A raw &", "&", "A comment around the word and"],
+        q: "You typed a sentence and the tab still shows the file name. What should you do before you quit?",
+        options: ["Nothing — typing is enough", "Save, then open the file again to check", "Rename it to FINAL"],
         answer: 1,
-        why: "A raw ampersand is not well-formed. Author should insert & for you. Check Text mode.",
+        why: "If it is not saved, it is not in the file. Reopen is how you prove it.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Author, Text, and Grid and what each forbids",
-      doTitle: "File still validates after the extra sentence",
-      doDone: "hello-concept.dita validates and the sentence is in both Author and Text.",
-      stress: "Find the ampersand if you used one",
+      learn: "Find File > Open and the Save command",
+      doTitle: "Type one sentence in the sample and save",
+      doDone: "The sentence is still there after you reopen the file.",
+      stress: "Pick how you open a file, and how you prove a save",
     }),
-    fieldNotePrompt: "When would you refuse to stay in Author and drop to Text?",
-    tomorrowHook: "Tomorrow you use File > New and save a topic with lowercase hyphens.",
-    body: `## Install
+    fieldNotePrompt: "Where does the file live on your computer? Paste the path.",
+    tomorrowHook: "Tomorrow you look at the same file two ways: as a page, and as tags.",
+    body: `## A page is a file
 
-Download the standalone kit from oxygenxml.com. Install and remember the folder. Add-ons live under \`plugins/\`. Launch and register a trial or license. Open the bundled sample project if the installer offers it. Turn on automatic validation.
+Yesterday you opened the app. Today you open a **page**. A page is just a file. This course ships a tiny sample shop called flower-docs. You will write into it, not into a blank desktop file.
 
-Write the version from **Help > About**. If your menu label differs, write “verify this label in your version” next to it and keep going.
+**File > Open** → \`samples/flower-docs/topics/hello-concept.dita\`.
 
-## Three writer modes
+The big middle area is where you type. Add one sentence. **Save**. Close. Open it again. If the sentence is still there, you did the job.
 
-- **Text** — surgery. You see tags. You can break well-formedness in one keystroke.
-- **Grid** — repetitive data. Rows and cells. Not a novel.
-- **Author** — CSS visual writing. Enter opens **content completion**, not “new paragraph at all costs.”
-- **Schema Design** — XSD architects. You will not live here this week.
+## Word today
 
-Author is not Word. The content model still wins. If a toolbar action is disabled, the parent element does not allow that child.
+**Topic** — one help page in its own file. Today you edited a topic. You do not need other kinds of pages yet.
 
-## Figure
+## If the file will not open
 
-Bottom tabs on the editor stack: Text · Grid · Author. Caption: *Menu path: the tabs under the editor, not Window > Perspective.*
+Use File > Open, not drag-onto-Slack. The file name should end in \`.dita\`. If Oxygen asks which type it is, pick a DITA topic.
 
-## Video
+## Lab
 
-WYSIWYG XML Editing shows Author as CSS, not as a fake word processor. Watch for content completion on Enter.
+One sentence, saved, still there after reopen. Write the path down so you can find it tomorrow.
 `,
   },
   {
     n: 3,
     week: 1,
-    title: "New Document wizard, first DITA topic, save discipline",
-    objective: "Create a Concept topic from the New wizard, save it with lowercase hyphens, and keep it inside a project folder — not on the desktop.",
-    minutes: 90,
-    skills: ["oxygenUi", "ditaTopics"],
-    legacy: ["t1-newdoc", "t1-xml"],
+    title: "Two views of the same file",
+    objective: "Look at the same sentence in the page view and in the tags view, then glance at Grid.",
+    minutes: 85,
+    skills: ["oxygenUi", "xmlLiteracy"],
+    legacy: ["t2-modes"],
     youtube: [
-      yt("ditaStart", ["File New for a DITA topic", "Where the map will later live"]),
-      yt("tutorials", ["Help > Install new add-ons for Live Tutorials"]),
+      yt("wysiwyg", ["The Author canvas", "The tabs under the editor"]),
     ],
-    sources: [S.firstDita, S.ugEditor, S.learnDita],
-    toolCards: ["author-mode"],
-    badgeId: "first-valid-task",
+    sources: [S.ugEditor, S.ugAuthor],
+    toolCards: ["author-mode", "text-mode"],
+    badgeId: null,
     lab: {
       pack: "flower-docs",
-      title: "Hello concept, saved like a writer",
+      title: "Same sentence, two views",
       steps: [
-        "Create a folder oxygen-bootcamp-work/ if you skipped it.",
-        "In Oxygen: File > New. Choose a DITA Concept template so Author mode gets a toolbar.",
-        "Title: Hello concept. File name: hello-concept.dita (lowercase, hyphens).",
-        "Save under oxygen-bootcamp-work/week1/, not the desktop.",
-        "Add a shortdesc of one sentence. Add one paragraph in conbody.",
-        "Confirm tabs Text, Grid, Author all open the same file.",
-        "Optional: Help > Install new add-ons > Live Tutorials. Bookmark the User Guide.",
+        "Open hello-concept.dita again.",
+        "Find the tabs under the big writing area. They are named Text, Grid, and Author (the order can vary).",
+        "Stay in Author. That is the page view. Confirm your sentence from yesterday is still readable as a normal sentence.",
+        "Switch to Text. You should see angle brackets around the same words. Do not delete a bracket.",
+        "Switch to Grid. It looks a bit like a spreadsheet. Glance, then switch back to Author.",
+        "In oxygen-bootcamp-work/day-03-views.txt write one line: Author looks like a page. Text shows tags.",
       ],
-      failWhen: "The file is Hello Concept.dita on the desktop, or the topic is invalid because title is empty.",
-      expected: "hello-concept.dita validates. Path uses lowercase hyphens. Shortdesc is present.",
+      failWhen: "You never left Author, or you deleted a tag in Text and left it broken.",
+      expected: "You saw the sentence in Author and in Text. The file still opens.",
     },
     quiz: [
       {
-        q: "Well-formed means the file matches a DTD. True?",
-        options: ["True", "False"],
-        answer: 1,
-        why: "Well-formed is syntax only (tags nest and match). Validity requires a schema or DTD.",
+        q: "Author view is for…",
+        options: [
+          "Daily writing that looks like a page",
+          "Drawing a website layout",
+          "Only reading Help > About",
+        ],
+        answer: 0,
+        why: "Author is the page view. You will write here most days.",
       },
       {
-        q: "Why does File > New matter more than a blank XML file?",
+        q: "Text view shows…",
         options: [
-          "It downloads AEM Guides",
-          "The template attaches a framework so Author gets the DITA toolbar",
-          "It publishes WebHelp",
+          "A spreadsheet of the shop’s prices",
+          "The same page with tags around the words",
+          "A second copy of the file on the desktop",
         ],
         answer: 1,
-        why: "Without a framework, Author is a generic XML view. Templates give you the DITA toolbar and content completion.",
+        why: "Text is the same file. The tags are the skeleton. One file, two views.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name File > New and the template that attaches the DITA framework",
-      doTitle: "Keep hello-concept.dita valid in the project folder",
-      doDone: "File validates, is lowercase-hyphenated, and is not on the desktop.",
-      stress: "Explain well-formed vs valid in one sentence",
+      learn: "Find the Author, Text, and Grid tabs under the page",
+      doTitle: "See your sentence in Author and in Text",
+      doDone: "You wrote the one-line note. The file still opens.",
+      stress: "Pick what Author is for, and what Text shows",
     }),
-    fieldNotePrompt: "What will you do when a teammate emails Hello Concept FINAL(2).dita?",
-    tomorrowHook: "Tomorrow you type in Author, paste from a browser, and read validation messages that actually matter.",
-    body: `## File > New
+    fieldNotePrompt: "In your words: what is different when you switch from Author to Text?",
+    tomorrowHook: "Tomorrow you make a new page from a template and save it in a folder.",
+    body: `## One file, two views
 
-**File > New.** Choose a DITA Topic or DocBook template so Author mode gets a toolbar. Save with lowercase hyphens. Confirm tabs Text, Grid, Author.
+The tabs under the page are **Author**, **Text**, and **Grid**.
 
-A loose file on the desktop will haunt you when the map looks for \`topics/hello-concept.dita\` and finds nothing.
+- **Author** — looks like a page. This is where you write on most days.
+- **Text** — the same page with **tags** (those angle brackets). The tags are the skeleton of the file.
+- **Grid** — looks a bit like a spreadsheet. You will almost never live here this week. Glance and leave.
 
-## Well-formed vs valid
+Author is not Microsoft Word. If a button on the toolbar is grey, the page type does not allow that thing in that spot. You will feel this later. Today, just switch tabs.
 
-**Well-formed** means tags nest and match (the blue check in Oxygen’s language). **Valid** also obeys a schema (the red check). Elements nest. Attributes hold \`id\` and props. Never leave a raw ampersand in text.
+## Word today
 
-Delete a closing tag in Text mode, watch the error, undo. That is the whole literacy.
+**Tag** — a label in angle brackets, like \`<p>\` around a paragraph. You do not need to memorise a list. You only need to see that Text view is the same file.
 
-## Project vs loose files
+## Watch
 
-Use a project folder or Oxygen project. Relative paths in maps assume you are not wandering the desktop. Master Files (later week) can rewrite references on rename. This week: pick a folder and stay there.
+The official WYSIWYG video shows Author as a page view, not as a fake Word. Watch for the tabs under the editor.
 
-## Live Tutorials
+## Do not
 
-Install the official Live Tutorials add-on inside Oxygen (**Help > Install new add-ons**). In-product missions beat a second browser tab.
+Do not delete a closing tag “to see what happens” unless you are ready to Undo. Tomorrow is soon enough for a safe broken file.
 `,
   },
   {
     n: 4,
     week: 1,
-    title: "Author mode typing, smart paste, validation that matters",
-    objective: "Type in Author, paste a formatted list from a browser, and repair the first real validation error — not a warning you do not understand.",
+    title: "Make a new page and save it in a folder",
+    objective: "Create a new page from a template, give it a simple file name, and save it in a folder — not on the desktop.",
+    minutes: 90,
+    skills: ["oxygenUi", "ditaTopics"],
+    legacy: ["t1-newdoc"],
+    youtube: [
+      yt("ditaStart", ["File > New", "A DITA topic template"]),
+      yt("tutorials", ["Help > Install new add-ons, if you want the in-app lessons"]),
+    ],
+    sources: [S.firstDita, S.ugEditor],
+    toolCards: ["author-mode"],
+    badgeId: "first-valid-task",
+    lab: {
+      pack: "flower-docs",
+      title: "A new page in a real folder",
+      steps: [
+        "Create a folder oxygen-bootcamp-work/week1/ if it does not exist.",
+        "In Oxygen: File > New. Choose a DITA Concept template. (Concept just means “a page that explains what something is.”)",
+        "Title: Hello concept. File name: hello-concept.dita — all lowercase, with a hyphen, not a space.",
+        "Save under oxygen-bootcamp-work/week1/, not the desktop.",
+        "Under the title, add one short line that says what the page is about. Then add one paragraph in the body.",
+        "Confirm Author, Text, and Grid still open this same file.",
+      ],
+      failWhen: "The file is Hello Concept.dita on the desktop, or the title is empty, or the file will not save.",
+      expected: "hello-concept.dita sits in week1/, has a title and a paragraph, and opens again after save.",
+    },
+    quiz: [
+      {
+        q: "Why File > New instead of a blank notepad file?",
+        options: [
+          "The template sets the page up so the writing toolbar works",
+          "Notepad cannot save",
+          "File > New publishes the page to the web",
+        ],
+        answer: 0,
+        why: "A template gives Oxygen the right kind of page. A random .txt file will not get the DITA toolbar.",
+      },
+      {
+        q: "Which file name will be easier for the rest of the course?",
+        options: ["Hello Concept FINAL (2).dita", "hello-concept.dita", "Document.dita"],
+        answer: 1,
+        why: "Lowercase, hyphens, no spaces. Other people and later booklets can find it.",
+      },
+    ],
+    quests: defaultQuests({
+      learn: "Find File > New and the Concept template",
+      doTitle: "Save hello-concept.dita in week1/, not on the desktop",
+      doDone: "The file opens, the name is lowercase with a hyphen, and it is in the folder.",
+      stress: "Pick why a template matters, and which file name to use",
+    }),
+    fieldNotePrompt: "What folder did you save in? Why not the desktop?",
+    tomorrowHook: "Tomorrow you paste a list and fix one red error on purpose.",
+    body: `## New page, real folder
+
+**File > New.** Pick a **DITA Concept** template. A concept is a page that explains what something is. You will meet the other two kinds of pages next week.
+
+Save as \`hello-concept.dita\` in \`oxygen-bootcamp-work/week1/\`.
+
+Not the desktop. A file on the desktop gets lost the first time someone looks for \`topics/hello-concept.dita\`.
+
+## Names
+
+Lowercase. Hyphens. No spaces. \`hello-concept.dita\` is a good name. \`Hello Concept FINAL (2).dita\` is how files get lost.
+
+## Word today
+
+**Template** — a starter page Oxygen already knows how to edit. File > New attaches the right toolbar. A blank notepad file does not.
+
+## Optional
+
+**Help > Install new add-ons** has official Live Tutorials inside Oxygen. Nice extra. Not required to finish today.
+`,
+  },
+  {
+    n: 5,
+    week: 1,
+    title: "Paste a list and fix a red error",
+    objective: "Paste a short list into your page, then cause one red error on purpose, read it, and fix it.",
     minutes: 90,
     skills: ["oxygenUi", "ditaTopics"],
     legacy: ["t3-insert", "t4-validate"],
     youtube: [
-      yt("wysiwyg", ["Smart paste result in Author", "Validation strip at the bottom"]),
-      yt("ditaEdit", ["Toolbar insert vs typing tags by hand"]),
+      yt("wysiwyg", ["Paste into Author", "The error list under the page"]),
+      yt("ditaEdit", ["Insert from the toolbar vs typing tags by hand"]),
     ],
     sources: [S.authorDita, S.ugEditor],
     toolCards: ["author-mode", "outline"],
     badgeId: "well-formed",
     lab: {
       pack: "flower-docs",
-      title: "Paste, then make it valid",
+      title: "Paste, then repair one red line",
       steps: [
-        "Open hello-concept.dita (yours or samples/flower-docs/topics/hello-concept.dita).",
-        "Copy a short formatted list from a browser article (three items is enough).",
-        "Paste into conbody in Author. Oxygen Smart Paste should turn it into DITA lists.",
-        "Open Text. Inspect the tags. If you got <ul> from HTML leftover, you are not in a DITA framework — fix the file type.",
-        "Insert an element the content model rejects (a step inside a concept). Read the validation message. Undo.",
-        "Leave one real, intentional error: a second title element if the model forbids it, or an unclosed tag in Text. Record the exact message. Repair it.",
+        "Open your hello-concept.dita from week1/ (or the sample if yours is missing).",
+        "Copy a short three-item list from any browser page.",
+        "Paste it into the body in Author. Oxygen should turn it into a list. If it pastes as a blob of text, make a simple list with the toolbar instead.",
+        "Switch to Text. Look at the tags around the list. Do not panic.",
+        "In Text, delete one closing tag on purpose. Read the red error. Write the exact message in oxygen-bootcamp-work/day-05-error.txt. Then Undo.",
+        "Save. The page should open with no red error.",
       ],
-      failWhen: "You ignored a red error, or you used a Quick Fix you cannot explain.",
-      expected: "File validates. You wrote the error message you saw and how you repaired it.",
+      failWhen: "You left the file broken, or you clicked a magic fix you cannot explain, or you never read the error message.",
+      expected: "The list is in the page. You quoted one red error. You undid it. The file opens clean.",
     },
     quiz: [
       {
-        q: "A yellow light bulb Quick Fix appears on an error. When do you click it?",
+        q: "A yellow bulb offers to “fix” the error. When do you click it?",
         options: [
-          "Always — it is official",
-          "Only when you can explain what it will change",
-          "Never in Author mode",
+          "Always — bulbs are official",
+          "Only when you can say what it will change",
+          "Never, in any view",
         ],
         answer: 1,
-        why: "Quick Fixes are useful and also able to reshape structure. Read the message. If you cannot explain it, undo is cheaper than a mystery.",
+        why: "Some fixes are fine. Some rewrite the page. If you cannot say what will change, Undo is cheaper.",
       },
       {
-        q: "Smart Paste from Word gave you nested lists that do not match your house style. First move?",
+        q: "You deleted a closing tag in Text. The file is “not well-formed.” That means…",
         options: [
-          "Publish anyway",
-          "Inspect Text mode, then simplify the list in Author",
-          "Switch to Schema Design",
+          "The tags no longer match, so the file is broken as XML",
+          "The shop will not like your wording",
+          "You forgot to publish",
         ],
-        answer: 1,
-        why: "Paste is a start. Validate and inspect tags after every large paste.",
+        answer: 0,
+        why: "Well-formed means the tags nest and match. It is about the skeleton, not about spelling.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name the validation strip and what a red error forbids",
-      doTitle: "File still validates after smart paste",
-      doDone: "The topic validates. You recorded one error message you caused and repaired.",
-      stress: "Refuse a Quick Fix you cannot explain",
+      learn: "Find the error list under the page",
+      doTitle: "Paste a list, cause one red error, read it, undo",
+      doDone: "You quoted the error. The file opens clean.",
+      stress: "Pick when to trust a magic fix, and what “not well-formed” means",
     }),
-    fieldNotePrompt: "What validation message did you actually see today? Quote it.",
-    tomorrowHook: "Tomorrow you open DITA Maps Manager and append a child topic.",
-    body: `## Author typing
+    fieldNotePrompt: "Quote the red error you saw. One line.",
+    tomorrowHook: "Tomorrow you finish one real page: title, short line under the title, and a body.",
+    body: `## Paste, then look
 
-Toolbar actions insert legal children. **Enter** is content completion. If you fight the model, the model wins.
+Paste is useful and messy. After a paste, glance at **Text** view. If the list looks like a list, you are fine. If it looks like leftover website code, undo and make the list with the toolbar.
 
-**Outline** on the right (or **Window** menu — verify the label) shows the element tree. Click a \`p\` there to jump.
+## Break it on purpose
 
-## Smart paste
+In Text, delete one closing tag. Read the red line. Write it down. **Undo**.
 
-Smart Paste converts Word or HTML to DITA. It is not magic. Validate after every large paste. If the list is a mess, simplify it. Do not ship a paste artifact.
+That red line is not a personal insult. It is the app saying the skeleton does not match.
 
-## Messages that matter
+## Words today
 
-Well-formed is syntax. Validate is schema. A scenario can run DTD plus Schematron. Red errors block a clean transform. Warnings might be style. Read the first red error. Repair that. Do not “clean up” twenty warnings you do not own yet.
+**Well-formed** — the tags nest and match. A missing \`</p>\` is not well-formed.
 
-## Figure
+**Valid** — the file also follows the rules for this kind of page (a concept may not want a how-to step in it). You will feel “valid” more next week. Today, well-formed is the apple.
 
-Bottom panel: error list. Double-click jumps to the node. Caption: *Validation strip under the editor, not the Transformation view.*
-`,
-  },
-  {
-    n: 5,
-    week: 1,
-    title: "DITA Maps Manager, first map, append child topic",
-    objective: "Open flowers.ditamap in Maps Manager, set it as root map, and append a child topic without breaking completeness.",
-    minutes: 90,
-    skills: ["maps", "oxygenUi"],
-    legacy: ["t2-dita-ui", "t3-maps"],
-    youtube: [
-      yt("maps", [
-        "Maps Manager tree vs the filesystem",
-        "Append Child on a topicref",
-        "Root map control on the toolbar",
-      ]),
-      yt("ditaStart", ["DITA perspective docks Maps Manager"]),
-    ],
-    sources: [S.mapsDemo, S.authorDita, S.ugEditor],
-    toolCards: ["maps-manager", "outline"],
-    badgeId: "map-is-a-book",
-    lab: {
-      pack: "flower-docs",
-      title: "Append a child to the flower map",
-      steps: [
-        "Switch to the DITA perspective so Maps Manager docks. If the DITA toolbar vanishes, the file is not recognized as DITA.",
-        "Open samples/flower-docs/flowers.ditamap in Maps Manager (not only as a text file).",
-        "Set this map as the root map so keys resolve. Toolbar: the root map control — verify the label in your version.",
-        "Create a short concept topics/vase-parts.dita (title Vase parts, one shortdesc, one paragraph).",
-        "In Maps Manager, right-click the Care topichead (or the node you want) > Append Child > Reference. Point at vase-parts.dita.",
-        "Run Validate and Check for Completeness from Maps Manager, not only the current file.",
-      ],
-      failWhen: "The new topic exists on disk but is not in the map, or completeness reports a missing href.",
-      expected: "flowers.ditamap lists vase-parts.dita. Completeness is clean.",
-    },
-    quiz: [
-      {
-        q: "A map is the table of contents. Where should you run completeness?",
-        options: [
-          "Only on the current topic",
-          "From DITA Maps Manager on the map",
-          "From Schema Design",
-        ],
-        answer: 1,
-        why: "Valid files can still make a broken book. Completeness reports missing targets, images, and keys on the map.",
-      },
-      {
-        q: "Keys look broken in Author. First place you look?",
-        options: [
-          "AEM Sites console",
-          "Whether the root map is set",
-          "The PDF Chemistry install",
-        ],
-        answer: 1,
-        why: "Keys resolve from the root map. No root map, no keys.",
-      },
-    ],
-    quests: defaultQuests({
-      learn: "Name Maps Manager and what it forbids (treating the tree as the filesystem)",
-      doTitle: "Keep the map complete after Append Child",
-      doDone: "Completeness is clean and vase-parts.dita is a child topicref.",
-      stress: "Break an href on purpose, read completeness, then fix it",
-    }),
-    fieldNotePrompt: "What is the difference between the Maps Manager tree and the Project view file list?",
-    tomorrowHook: "Tomorrow you build the flower-docs mini publication as a real lab.",
-    body: `## DITA perspective
+## Outline
 
-Switch to the DITA perspective so **DITA Maps Manager** docks. If the DITA toolbar vanishes, the file is not recognized as DITA.
-
-## The map is the book
-
-A map is the table of contents. Set a **root map** so keys resolve. Run **Validate and Check for Completeness** from this view, not only the current file.
-
-Right-click a node > **Append Child** to add a topicref. **Edit Properties** on a topicref for keys, navtitle, linking.
-
-The tree is publication structure, not the filesystem. Project view is files. Maps Manager is the book.
-
-## flower-docs
-
-Open \`samples/flower-docs/flowers.ditamap\`. It already has a concept, a task, and a \`product\` key (Aurora Vase). You will add to this pack, not replace it.
-
-## Figure
-
-Left rail: Maps Manager tree. Caption: *Window docks Maps Manager on the left in the DITA perspective. Verify the menu path in your version.*
+The **Outline** panel (often on the right) lists the pieces of the page. Click a paragraph there to jump. If you cannot find it, skip it. It is a helper, not the lesson.
 `,
   },
   {
     n: 6,
     week: 1,
-    title: "Lab — flower-docs mini publication",
-    objective: "Ship a tiny valid publication: map, concept, task, product key, completeness clean.",
-    minutes: 110,
-    skills: ["maps", "ditaTopics", "oxygenUi"],
-    legacy: ["t3-maps", "t3-topics", "t5-keys"],
-    youtube: [
-      yt("maps", ["Publishing actions live on the map", "Edit Properties"]),
-      yt("ditaEdit", ["Concept vs task in the same book"]),
-    ],
-    sources: [S.mapsDemo, S.firstDita, S.authorDita],
-    toolCards: ["maps-manager", "attributes"],
-    badgeId: "map-is-a-book",
+    title: "Your first real page",
+    objective: "Finish one page with a title, a short line under the title, and two short paragraphs. It must open with no red error.",
+    minutes: 100,
+    skills: ["ditaTopics", "oxygenUi"],
+    legacy: ["t3-topics"],
+    youtube: [yt("ditaEdit", ["Title and the short line under it", "A normal paragraph in the body"])],
+    sources: [S.firstDita, S.authorDita],
+    toolCards: ["author-mode"],
+    badgeId: null,
     lab: {
       pack: "flower-docs",
-      title: "Flower studio handbook, desk-ready",
+      title: "One page, done",
       steps: [
-        "Open samples/flower-docs/flowers.ditamap in Maps Manager. Set it as root map.",
-        "Confirm topics/hello-concept.dita and topics/change-water.dita open from the map.",
-        "Confirm the product key resolves: Author should show Aurora Vase where keyref=\"product\" is used.",
-        "Add topics/vase-parts.dita if missing from Day 5. Append it under Getting started or Care with a topicref.",
-        "Add a third topic topics/studio-hours.dita (reference: title Studio hours, one simple table with Day / Hours).",
-        "Give studio-hours a keys attribute on its topicref (studio-hours).",
-        "Validate and Check for Completeness. Zero missing hrefs, images, or keys.",
-        "Do not publish WebHelp yet. Valid beats pretty. Record a screenshot-less note: number of topics in the map.",
+        "Open or create topics/what-a-cut-flower.dita (or oxygen-bootcamp-work/week1/what-a-cut-flower.dita).",
+        "Title: What a cut flower is.",
+        "Under the title, write one short line that would make sense in a search hit. Do not copy the title word for word.",
+        "In the body, two paragraphs: what a cut flower is, and what this handbook will not cover (growing from seed).",
+        "Do not add numbered how-to steps. That is next week.",
+        "Save. Confirm there is no red error. Write the file path in oxygen-bootcamp-work/day-06-page.txt.",
       ],
-      failWhen: "Completeness reports a missing topic, or the product key shows as unresolved, or studio-hours is a concept pretending to be a lookup table without a table.",
-      expected: "Map lists at least four topics. Completeness clean. product key resolves to Aurora Vase.",
+      failWhen: "The title is empty, the short line copies the title, there is a numbered how-to, or a red error remains.",
+      expected: "A clean page with a title, a distinct short line, and two paragraphs. Path written down.",
     },
     quiz: [
       {
-        q: "change-water.dita is a task. Why not write those steps as a numbered list inside hello-concept.dita?",
+        q: "The short line under the title is for…",
         options: [
-          "You can, DITA does not care",
-          "A guide that requires tasks will reject a fake procedure in a concept",
-          "Tasks cannot live in the same map as concepts",
+          "Search hits and previews — a reader sees it before the full page",
+          "The printer only",
+          "A second title because one is never enough",
         ],
-        answer: 1,
-        why: "Concept = what it is. Task = how to do it with steps. Do not fake a procedure as a numbered list inside a concept if your guide requires a task.",
+        answer: 0,
+        why: "If it copies the title, the reader sees the same sentence twice. Make it add a bit.",
       },
       {
-        q: "The product name is defined in the map as a key. Where does the writer put the visible word Aurora Vase in a topic?",
+        q: "You want three actions to recut a stem. Where do those actions go this week?",
         options: [
-          "Hard-code it in every title",
-          "Use keyref on keyword (or equivalent) so the map owns the name",
-          "Put it in an AEM Experience Fragment",
+          "A numbered list on this “what it is” page — faster",
+          "They wait. Next week you write a how-to page",
+          "Help > About",
         ],
         answer: 1,
-        why: "flower-docs already uses keyword keyref=\"product\". The map’s keydef owns the name.",
+        why: "This week’s apple is one explaining page. How-to pages are week 2.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name the root map control and what it forbids (orphan keys)",
-      doTitle: "Keep the map complete",
-      doDone: "Completeness is clean. Four topics. product key resolves.",
-      stress: "Break a topicref href, read the completeness row, fix it",
+      learn: "Find the title and the short line under it",
+      doTitle: "Finish one clean explaining page",
+      doDone: "No red error. Short line is not the title. No how-to list.",
+      stress: "Pick what the short line is for, and where steps will live",
     }),
-    fieldNotePrompt: "How many topics are in your map, and which one is the task?",
-    tomorrowHook: "Tomorrow is the Week 1 clinic: errors you will hit again.",
-    body: `## This is the Week 1 publication
+    fieldNotePrompt: "What is your page about, in one sentence you would say out loud?",
+    tomorrowHook: "Tomorrow is the week check. You will break a file on purpose and fix it. Passing it opens week 2.",
+    body: `## This is the week’s apple
 
-You are not designing a brand. You are proving the pack opens in Oxygen.
+You are not making a booklet yet. You are proving you can finish **one page**.
 
-\`samples/flower-docs/\` is the lab bench. Keep it. Later weeks add kitepump-dita beside it. Do not replace flower-docs.
+- A **title**
+- A **short line under the title** (not a copy of the title)
+- Two short **paragraphs**
+- No red error
+- Saved in a folder you can find
 
-Open \`flowers.ditamap\` in Maps Manager:
-
-- \`hello-concept.dita\` — concept
-- \`change-water.dita\` — task with three steps and a product keyref
-- \`product\` keydef — Aurora Vase
-
-You add vase parts and studio hours. Completeness must be clean.
+No table of contents this week. No website tools. No how-to steps. If you need steps, write “week 2” in your notes and leave them off this page.
 
 ## Figure
 
-Map tree:
+A simple page mock: title at the top, one short line, two paragraphs. Caption: *Author view of a finished explaining page.*
 
-1. Getting started → Hello concept, Vase parts
-2. Care → Change the water
-3. Studio hours (reference)
+## Do not publish
 
-Caption: *Maps Manager tree after Append Child. Not the filesystem.*
-
-## Do not publish yet
-
-Transformation scenarios are Week 6. Today: valid map, resolving keys, honest topic types.
+Publishing (making a website or a PDF from your files) is weeks away. Valid and saved beats pretty.
 `,
   },
   {
     n: 7,
     week: 1,
-    title: "Review clinic — errors you will hit this week",
-    objective: "Repair a broken map, explain three errors in one sentence each, and pass the Week 1 boss quiz.",
+    title: "Week 1 check",
+    objective: "Fix three simple breaks, say what each error meant, and pass the quiz so week 2 can open.",
     minutes: 90,
-    skills: ["review", "maps", "xmlLiteracy"],
-    legacy: ["t4-complete", "t4-validate"],
-    youtube: [
-      yt("completeness", ["The completeness report rows", "Missing href vs missing id"]),
-      yt("tutorials", ["Where Live Tutorials sit after install"]),
-    ],
-    sources: [S.mapsDemo, S.ugEditor, S.learnDita],
-    toolCards: ["maps-manager"],
-    badgeId: "completeness-clean",
+    skills: ["review", "xmlLiteracy", "oxygenUi"],
+    legacy: ["t4-validate"],
+    youtube: [yt("tutorials", ["Where the in-app tutorials sit if you installed them"])],
+    sources: [S.ugEditor, S.learnDita],
+    toolCards: ["author-mode"],
+    badgeId: null,
     boss: true,
     lab: {
       pack: "flower-docs",
-      title: "Clinic: three breaks, three repairs",
+      title: "Three breaks, three repairs",
       steps: [
-        "Copy samples/flower-docs to oxygen-bootcamp-work/week1-clinic/ (do not vandalize the repo copy if you can avoid it).",
-        "Break 1: rename a topic file without updating the topicref. Run completeness. Repair.",
-        "Break 2: delete a closing tag in Text on hello-concept.dita. Read the well-formed error. Undo.",
-        "Break 3: remove the product keydef from the map. Open change-water.dita. See the unresolved key. Restore the keydef.",
-        "Timed completeness read: run completeness once on a clean map. Write how many files it visited.",
-        "Answer the boss quiz. Retry is unlimited. Next week still unlocks if Day 6 lab is done.",
+        "Copy your week1 folder to oxygen-bootcamp-work/week1-check/ so you do not wreck the original.",
+        "Break 1: delete a closing tag in Text. Read the red error. Undo.",
+        "Break 2: put the file on the desktop in your head — actually move a copy to the desktop, then move it back into the folder. Write why the desktop is a bad home.",
+        "Break 3: clear the title, save, read the error or the empty tab, put the title back.",
+        "The page must open with no red error when you stop.",
+        "Pass the quiz. You can retry it. Week 2 stays locked until this day is finished (lab + quiz + a short note).",
       ],
-      failWhen: "You cannot explain one of the three errors in a sentence, or you leave the clinic copy broken.",
-      expected: "Clinic copy completeness is clean. Three error sentences in your field note.",
+      failWhen: "You cannot say what one of the three errors meant, or you leave the check copy broken.",
+      expected: "Check copy opens clean. Three one-line notes about the three breaks.",
     },
     quiz: [
       {
-        q: "Completeness is clean but a topic is still invalid. What is true?",
-        options: [
-          "Impossible — completeness includes schema",
-          "Possible — completeness is the book; schema is the file",
-          "Then the root map is wrong",
-        ],
-        answer: 1,
-        why: "Validate the file for schema. Completeness is missing targets, images, keys. You need both.",
+        q: "You deleted a closing tag. The app says the file is not well-formed. First move?",
+        options: ["Undo, then read the message you just saw", "Install a new app", "Ignore red lines"],
+        answer: 0,
+        why: "Undo is the whole move. Then you know what the message looks like next time.",
       },
       {
-        q: "You failed this boss. Does Day 8 stay locked?",
+        q: "Why not keep help pages on the desktop?",
         options: [
-          "Yes, forever",
-          "No, if Friday (Day 6) lab is done the next week can unlock. The boss badge stays locked until you pass.",
-          "No, Daily Burst unlocks the week",
+          "They are harder to find later, and later booklets look for a folder",
+          "Desktops cannot store .dita files",
+          "Oxygen will delete them overnight",
         ],
-        answer: 1,
-        why: "Boss badge waits. Curriculum week does not hostage you if Friday lab is done.",
+        answer: 0,
+        why: "A folder you chose is a home. The desktop is a hallway.",
       },
       {
-        q: "Unresolved keyref in Author. First place you look?",
-        options: ["CSS PDF Chemistry", "Root map and the keydef", "AEM workflow payload"],
+        q: "You failed this check. Does week 2 open anyway?",
+        options: [
+          "Yes, the Friday page is enough",
+          "No. Finish this day’s lab, quiz, and note. You can retry the quiz.",
+          "Yes, if you do the 5-minute warmup",
+        ],
         answer: 1,
-        why: "Keys live in the map. Root map plus keydef. Not a publish engine.",
+        why: "Next week waits until you can save a clean page and say what a red error meant. Retry is free.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name completeness vs schema validation",
-      doTitle: "Clinic copy still validates",
-      doDone: "Three breaks repaired. Completeness clean.",
-      stress: "Explain each error in one sentence",
+      learn: "Name the three breaks from this week",
+      doTitle: "Repair the check copy until it opens clean",
+      doDone: "Three one-line notes. No red error.",
+      stress: "Pass the quiz. Retry if you need to.",
     }),
-    fieldNotePrompt: "Write the three errors you caused and the one-line repair for each.",
-    tomorrowHook: "Week 2: concept, task, and reference as objects you will live in — not vocabulary slides.",
-    body: `## Clinic, not a ceremony
+    fieldNotePrompt: "Write the three breaks and the one-line repair for each.",
+    tomorrowHook: "Week 2: three kinds of pages — what it is, how to do it, and facts you look up. Still no booklet.",
+    body: `## A check, not a show
 
-This is a week boss: mixed repair + scenario questions + a timed completeness read.
+This is the week boss. You already met these errors. You are only proving you can name them.
 
-Fail it and **Day 8 still unlocks if Day 6 lab is done**. The boss badge stays locked until you retry. Retry is unlimited.
+1. **Tags do not match** — you deleted a closing tag in Text.
+2. **Lost file** — it lived on the desktop.
+3. **Empty title** — the page has no name.
 
-## Errors from this week
+Fail the quiz and **week 2 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week.
 
-1. **Missing href** — file moved, map not updated.
-2. **Not well-formed** — deleted a closing tag in Text.
-3. **Unresolved key** — root map unset, or keydef removed.
-4. **Wrong topic type** — steps inside a concept when you needed a task.
+## One line about later
 
-## Figure
-
-Completeness report: one row per problem. Caption: *DITA Maps Manager > Validate and Check for Completeness.*
+Adobe has a website tool used by another team. You will open that in **week 9**. Not now. Do not mix it with Oxygen in your notes.
 
 ## Tone
 
-Wit is allowed: the ampersand strikes again. Do not mock yourself for a red error. Repair it.
+Red errors are normal. Repair them. Then go home.
 `,
   },
 ].map((d) => ({ ...d, week: weekOf(d.n) }));

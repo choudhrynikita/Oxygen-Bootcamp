@@ -1,8 +1,8 @@
 ---
 day: 76
 week: 12
-title: Guides web editor vs desktop Oxygen
-objective: "Write who lives in Guides and who still opens Oxygen, without inventing a product named AEM Oxygen XML Editor."
+title: Guides in the browser vs Oxygen on the desktop
+objective: "Write who lives in Guides and who still opens Oxygen, and cross out the fake product name AEM Oxygen XML Editor."
 timeboxMinutes: 90
 skills: [aemGuides, oxygenUi]
 legacyLessonIds: [t7-guides]
@@ -10,7 +10,7 @@ youtube:
   - id: LuAVmn1j7f0
     title: Getting Started with DITA Using Oxygen XML Editor
     watchFor:
-      - Desktop Maps Manager as the thing Guides will not fully replace
+      - Desktop booklet tools that a browser editor will not fully replace
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/overview", label: AEM Guides overview, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/getting-started", label: AEM Guides get started, dated: 2026-09 }
@@ -20,50 +20,82 @@ lab:
   title: Who lives where
   pack: guides-oxygen-handoff
   failWhen: You use the forbidden product name as if it were real.
-  expected: "Two homes, one forbidden name crossed out."
+  expected: Two homes written. Forbidden name crossed out. Mock labeled if no instance.
   steps:
     - Read samples/guides-oxygen-handoff/who-edits-where.md.
-    - "Write: SMEs and review cycles → Guides web editor."
-    - "Write: map surgery, Schematron, offline frameworks → Oxygen desktop."
-    - "Write the forbidden name: there is no AEM Oxygen XML Editor."
+    - Write oxygen-bootcamp-work/week12/field-log-76.txt.
+    - "Write: subject-matter experts and review cycles → Guides web editor."
+    - "Write: rebuilding a booklet, house-style checks, offline frameworks → Oxygen desktop."
+    - "Write the forbidden name and cross it out: there is no product called AEM Oxygen XML Editor."
+    - "If you have no Guides, label a mock of two desks and still write the two homes."
 sessionQuests:
   - id: a
     block: A
-    title: Name Guides vs Oxygen and the forbidden mash-up
+    title: Read who-edits-where.md in the pack
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Handoff card matches the pack
+    title: Write two homes and cross out the fake product name
     minutes: 25
-    done: Two homes written. Forbidden name refused.
+    done: Two homes written. Fake product name crossed out.
   - id: c
     block: C
-    title: A SME who was given desktop by mistake
+    title: "Pick what Guides is, and whether the merged product name is real"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [output-oracle, glossary-lightning]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, output-oracle]
 toolCards: [guides-web-editor, maps-manager]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: "Two homes, one forbidden name crossed out." }
+  - { id: lab, prompt: Two homes written. Forbidden name crossed out. Mock labeled if no instance. }
 quiz:
-  - q: "Guides is the browser DITA editor plus reviews, translation, baselines, and publishing. True?"
+  - q: "What is AEM Guides, in one line?"
     answer: 0
-    why: That is the v1 T7 sentence. SMEs should live there. Oxygen is for specialist work.
+    why: Guides is Adobe’s DITA desk in the browser. Oxygen is Syncro Soft on the desktop.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "Who on your team is a SME, and where should they edit?"
-tomorrowHook: Check-in / check-out mental model.
+      - "Adobe’s DITA tool in the browser: write, review, and publish the handbook"
+      - A theme for the Sites page tree
+      - A new name for Oxygen XML Editor
+  - q: "There is a product called AEM Oxygen XML Editor. True or not?"
+    answer: 1
+    why: You wrote this in week 9. It is still true. Cross the fake name out.
+    options:
+      - True — Adobe bought Oxygen and merged the names
+      - "Not true — two companies, two apps. Guides can open Oxygen. They are not one product"
+      - True if you enable a connector
+fieldNotePrompt: "What two homes did you write, and which fake product name did you cross out?"
+tomorrowHook: "Tomorrow: checkout and check-in, like borrowing a book."
 ---
 
-## Two editors, one repository story
+## Two desks, one handbook
 
-Guides is Adobe’s DITA CCMS in the browser. Oxygen is Syncro Soft on the desktop. Guides can launch Oxygen. They are not one product.
+**AEM Guides** is Adobe’s DITA tool in the browser. People write, review, and publish the handbook there. Subject-matter experts should live there.
+
+**Oxygen** is still Syncro Soft on your desktop. You still open it to rebuild a booklet, run house-style checks, and work offline.
+
+Guides can launch Oxygen. They are not one product. There is no product called **AEM Oxygen XML Editor**. You wrote that in week 9. Write it again.
+
+If you have no Guides, a labeled mock of two desks is the lab.
+
+## Word today
+
+**AEM Guides** — Adobe’s DITA tool in the browser.
+
+## Watch
+
+The Oxygen booklet video is a reminder of what the desktop still does. You are not installing a merged app.
+
+## Lab
+
+Two homes. One forbidden name, crossed out.
+
+## Figure
+
+Labeled mock: browser desk | desktop desk. Caption: *Mock. Two products.*

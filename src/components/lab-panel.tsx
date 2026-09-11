@@ -24,7 +24,7 @@ export function LabPanel({ day }: { day: DayDoc }) {
   return (
     <section className="mt-8 rounded-xl border-l-[5px] border-teal bg-lab p-4" aria-labelledby="lab-h">
       <h2 id="lab-h" className="mt-0 font-[family-name:var(--font-sans)] text-xl font-semibold text-navy">
-        Lab. {day.lab.title}
+        Lab: {day.lab.title}
       </h2>
       <p className="text-sm">
         Pack: <code>{day.lab.pack}</code>

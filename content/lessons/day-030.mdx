@@ -1,8 +1,8 @@
 ---
 day: 30
 week: 5
-title: "DITAVAL — include, exclude, flag"
-objective: "Write a DITAVAL that excludes audience=expert, flag platform=print, and apply it so you can see the difference in Author."
+title: A switch file for those readers
+objective: "Write a switch file that hides expert steps and a second one that flags print paragraphs, then apply each in Author so you can see the difference."
 timeboxMinutes: 90
 skills: [reuse, publish]
 legacyLessonIds: [t5-profile]
@@ -10,95 +10,86 @@ youtube:
   - id: CgBbPW3mJzw
     title: Profiling and Reuse
     watchFor:
-      - DITAVAL attached to profiling
-      - Exclude vs flag in the UI
+      - A switch file attached to profiling
+      - Hide vs flag in the UI
   - id: YRi9XPK6CcY
     title: Advanced Profiling Using Conditional Processing Attribute Groups
     watchFor:
       - A condition group you would not invent yet
-      - How flag is different from exclude
+      - How flag is different from hide
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
   - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
 lab:
   id: lab-30
-  title: novice.ditaval vs print-flag.ditaval
+  title: Two switch files
   pack: kitepump-dita
-  failWhen: "You deleted the expert step instead of filtering it, or the DITAVAL has no prop action, or you cannot explain exclude vs flag."
-  expected: Two DITAVAL files. Author view changes with the filter. Source still contains the expert step. Meanings file written.
+  failWhen: "You deleted the expert step instead of filtering it, or a switch file has no action, or you cannot explain exclude vs flag."
+  expected: Two switch files. Author view changes with the filter. Source still contains the expert step. Meanings file written.
   steps:
-    - "Create ditaval/novice.ditaval: exclude audience=expert. Keep other conditions include (or omit)."
-    - "Create ditaval/print-flag.ditaval: flag platform=print (style or color — write what you picked)."
-    - "In Oxygen, apply novice.ditaval as the profiling filter for Author (DITA > Profiling / Conditional Text — verify label). The expert step should disappear or gray out per your setting."
+    - "Create ditaval/novice.ditaval: exclude audience=expert. Leave other marks alone (include them, or omit them)."
+    - "Create ditaval/print-flag.ditaval: flag platform=print (a style or a color — write what you picked)."
+    - "In Oxygen, apply novice.ditaval as the profiling filter for Author (DITA > Profiling / Conditional Text — verify the label). The expert step should disappear or gray out per your setting."
     - Switch to print-flag.ditaval. The print paragraph should stay visible but flagged.
     - "Write oxygen-bootcamp-work/week5/ditaval-explained.txt: exclude means ____. flag means ____. include means ____."
     - Do not delete the expert step from the source file.
 sessionQuests:
   - id: a
     block: A
-    title: "Name include, exclude, and flag"
+    title: Find where Author attaches a switch file
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the expert step in source while novice.ditaval hides it
+    title: Hide the expert step in the view while it stays in the file
     minutes: 25
-    done: Two ditavals. View changes. Source still has the step. Meanings written.
+    done: Two switch files. View changes. Source still has the step. Meanings written.
   - id: c
     block: C
-    title: "Apply the wrong ditaval, notice the expert step, switch back"
+    title: "Pick exclude vs flag, and what a missing step in Text means"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [output-oracle, glossary-lightning]
+    done: Note saved.
+dailyBurstPool: [one-line-repair, authors-dare]
 toolCards: [author-mode, attributes]
 badgeId: ditaval-explained
 boss: false
 checks:
-  - { id: lab, prompt: Two DITAVAL files. Author view changes with the filter. Source still contains the expert step. Meanings file written. }
+  - { id: lab, prompt: Two switch files. Author view changes with the filter. Source still contains the expert step. Meanings file written. }
 quiz:
-  - q: "Exclude vs flag: which one removes the node from output?"
+  - q: "Exclude vs flag: which one removes the chunk from what the reader sees?"
     answer: 1
     why: exclude drops the content. flag keeps it and marks it. include keeps it.
     options:
       - flag
       - exclude
       - include
-  - q: "You applied novice.ditaval in Author. The source file no longer has the expert step in Text mode. What went wrong?"
+  - q: "You applied the novice switch file in Author. Text view no longer has the expert step. What went wrong?"
     answer: 1
-    why: A filter is a view and a publish input. Source keeps the step.
+    why: A filter is a view. Source keeps the step.
     options:
       - Nothing — exclude deletes source
       - You edited or deleted source instead of filtering the view
-      - DITAVAL always rewrites the topic
-  - q: "A DITAVAL you cannot explain is attached to the shipping transform. Risk?"
-    answer: 1
-    why: "Completeness does not simulate DITAVAL. The badge is ditaval-explained: you can say what it does."
-    options:
-      - None if completeness is clean
-      - You may drop safety steps from the novice PDF without knowing
-      - Author mode will refuse to open
-fieldNotePrompt: "In one sentence, who is novice.ditaval for, and what must still appear in that output?"
-tomorrowHook: Tomorrow you refuse conditions you cannot explain — including leftover flags from a copy-paste.
+      - A switch file always rewrites the page
+fieldNotePrompt: "Who is the novice switch file for, and did the expert step stay in Text view?"
+tomorrowHook: "Tomorrow you keep only the marks you can explain, and you delete the rest."
 ---
 
-## DITAVAL
+## A list of actions
 
-A **.ditaval** file is a list of actions on profiling values: **include**, **exclude**, **flag**.
+A **.ditaval** file is a switch file: a list of actions on your marks. The actions are **include**, **exclude**, and **flag**.
 
-Attach it in Author to preview. Attach it to a transformation scenario to publish (Week 6).
+Attach it in Author to preview. You will use a switch file again in week 6 when you make a site or a PDF. Today you only preview.
 
-## Explain it
+If you cannot say what the file does, do not attach it.
 
-**ditaval-explained** means you can say: novice output drops expert steps; print flag paints print-only notes; nothing else is filtered.
+Open the switch file in Text. It is a small file you can read. It is not only a hidden setting.
 
-If you cannot say it, do not attach it.
+## Word today
 
-## Figure
-
-Two files in `ditaval/`. Caption: *DITAVAL is XML you can read. Open it in Text. Do not treat it as a GUI-only preset.*
+**ditaval** — a switch file that includes, excludes, or flags marked text.

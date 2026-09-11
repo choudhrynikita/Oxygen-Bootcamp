@@ -1,107 +1,90 @@
 ---
 day: 10
 week: 2
-title: A reference is lookup — not a lecture
-objective: "Write a valid reference topic with a simple table a florist can scan, and keep prose out of the table cells."
+title: A page for looking things up
+objective: Write a lookup page with a title and a small table of facts. Not a lecture.
 timeboxMinutes: 90
-skills: [ditaTopics, oxygenUi]
+skills: [ditaTopics]
 legacyLessonIds: [t3-topics]
 youtube:
-  - id: qepRkQxhTXQ
-    title: DITA intro (Oxygen webinar)
+  - id: t2cG3Xe1TXY
+    title: DITA Editing
     watchFor:
-      - How reference is named next to concept and task
-      - "A table used as lookup, not as layout"
+      - A reference template
+      - A simple table
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
-  - { href: "https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part1-base/introduction/dita-release-overview.html", label: DITA 1.3 overview (OASIS), dated: 2018-12 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
 lab:
   id: lab-10
-  title: Variety card as a reference
+  title: Studio hours
   pack: flower-docs
-  failWhen: "The table is a layout hack with one giant cell of prose, or the topic is a concept pretending to be a lookup, or it is not in the map."
-  expected: Valid reference. Table with a header row and three data rows. Topicref under Lookup.
+  failWhen: "There is no table, or the page is a lecture with no facts to look up, or you used a Task template."
+  expected: A reference file with a small table. Clean.
   steps:
-    - "File > New > DITA Reference. Title: Variety card. File: topics/variety-card.dita."
-    - "Shortdesc: one sentence — lookup facts for common studio varieties, not care instructions."
-    - "In refbody, insert a simple table (toolbar table action). Four rows: Variety / Water / Light / Notes."
-    - "Fill three data rows (e.g. tulip, rose, eucalyptus). Cells stay short. No paragraphs inside cells."
-    - Do not put ‘how to change water’ in this file. That is change-water.dita.
-    - Validate. Append under a topichead named Lookup (create the topichead if missing) on flowers.ditamap.
+    - "File > New > DITA Reference. Title: Studio hours. File: oxygen-bootcamp-work/week2/studio-hours.dita."
+    - Add one short line under the title.
+    - "Insert a two-column table: Day / Hours. Four rows is enough (Mon–Thu, or similar)."
+    - Do not write a story about why the studio closes on Sunday. Facts only.
+    - Save. No red error.
 sessionQuests:
   - id: a
     block: A
-    title: Name reference vs concept vs task and what a lookup forbids
+    title: Open File > New and pick the Reference template
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep variety-card.dita a scan table
+    title: Make a small Day / Hours table
     minutes: 25
-    done: Valid reference. Header plus three data rows. Map lists it under Lookup.
+    done: Reference file with a table. Clean.
   - id: c
     block: C
-    title: Refuse a paragraph that wandered into a table cell
+    title: "Pick where hours belong, and how a lookup page should read"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [glossary-lightning, authors-dare]
-toolCards: [author-mode, outline]
+    done: Note saved.
+dailyBurstPool: [warmup-match, one-line-repair]
+toolCards: [author-mode]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Valid reference. Table with a header row and three data rows. Topicref under Lookup. }
+  - { id: lab, prompt: A reference file with a small table. Clean. }
 quiz:
-  - q: "Studio hours from Week 1 was a reference with Day / Hours. Why not make that a task?"
+  - q: Studio opening hours belong on…
     answer: 1
-    why: A task needs a job the reader performs. A schedule is facts. Facts go in a reference.
+    why: Hours are facts you look up. That is a reference.
     options:
-      - "Hours change, so they must be steps"
-      - There is nothing to do — it is a lookup
-      - References cannot contain tables
-  - q: "A table cell contains a three-sentence paragraph of advice. First move?"
+      - A how-to page
+      - A lookup page with a table
+      - Help > About
+  - q: A lookup page should read like…
     answer: 1
-    why: Cells are for scan. Advice is a concept or a note. Tasks are for actions.
+    why: "If you need a speech, you wanted a concept. If you need steps, you wanted a task."
     options:
-      - Publish — CALS allows any text
-      - Cut the advice into a concept or a note; leave the cell a fact
-      - Convert the whole reference into a task
-  - q: "File > New without a Reference template, then you type <reference> in a concept. What goes wrong?"
-    answer: 1
-    why: Topic type is the document element. A concept cannot contain a reference document. Use the right template.
-    options:
-      - Nothing — the tags are the same
-      - The concept DTD rejects <reference>; the file is invalid
-      - Oxygen converts it on save
-fieldNotePrompt: "Which fact in your table would be wrong as a step, and why?"
-tomorrowHook: Tomorrow you insert lists and note types — and you pick caution vs warning on purpose.
+      - A speech
+      - A small table or list a person can scan
+      - A numbered procedure
+fieldNotePrompt: "What fact is in your table, and who would look it up?"
+tomorrowHook: Tomorrow you pick the right list and the right note — without decorating the page.
 ---
 
-## Reference = lookup facts
+## Facts you look up
 
-A **reference** is a scan surface: properties, tables, catalogs. Title names the set. Shortdesc says what you can look up. `refbody` holds sections and tables.
+Oxygen calls this a **reference**. Hours, names, sizes, part numbers. A table or a tight list. Not a speech.
 
-v1: *Do not fake a procedure as a numbered list inside a concept if your guide requires a task.* The twin sin is a lecture inside a reference table.
+You now have all three apples of the week:
 
-## Tables
+1. **Concept** — what it is
+2. **Task** — how to do it
+3. **Reference** — facts you look up
 
-Toolbar insert. CALS is the default DITA table model. Header row is real header — not bolded first data. Cells stay short.
+Still no booklet. Three files in a folder is enough.
 
-## Topic type is a contract
+## Word today
 
-| Need | Type |
-|---|---|
-| What it is | concept |
-| How to do it | task |
-| Facts to look up | reference |
-
-If you are unsure, ask: would a reader search this, or perform this?
-
-## Figure
-
-Simple table in Author: four columns, header shaded. Caption: *Toolbar table action in a DITA reference. Not a Word nested table.*
+**Reference** — a page of facts a person scans, often a table.

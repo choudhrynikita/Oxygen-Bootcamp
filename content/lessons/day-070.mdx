@@ -1,8 +1,8 @@
 ---
 day: 70
 week: 11
-title: Three AEM authoring methods — names first
-objective: "Name Page Editor, Universal Editor, and Document Authoring, and refuse to pick a favourite without a use."
+title: "Three ways to write in AEM, names first"
+objective: "Name Page Editor, Universal Editor, and Document Authoring in one line each, and keep Oxygen off that list."
 timeboxMinutes: 90
 skills: [aemSites]
 legacyLessonIds: []
@@ -10,8 +10,8 @@ youtube:
   - id: VcMI0zWIKdg
     title: How to Build a Global Site in AEM Sites
     watchFor:
-      - Document-based authoring
-      - Universal Editor WYSIWYG
+      - "Document-based authoring, if shown"
+      - A visual editor that is not the classic page canvas
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/universal-editor/authoring-methods", label: AEM authoring methods, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/document-authoring", label: Document Authoring, dated: 2026-09 }
@@ -20,51 +20,90 @@ lab:
   id: lab-70
   title: "Three names, three one-liners"
   pack: aem-author-field-log
-  failWhen: You merge all three into ‘the AEM editor’.
-  expected: Three one-liners. Three names.
+  failWhen: "You merge all three into one editor, or you put Oxygen on the list."
+  expected: Three one-liners. Three names. Mock labeled.
   steps:
-    - "Page Editor: in-place components on an AEM template (what you used in Week 10)."
-    - "Universal Editor: visual editing of instrumented pages, including cases that are not classic Page Editor."
-    - "Document Authoring: Word/Google-doc based flow with a sidekick (verify current name)."
-    - Write all three. Label mocks if you have no instance.
+    - "You may not have AEM. Use the official article, the video, and a field log."
+    - Write oxygen-bootcamp-work/week11/field-log-70.txt with three names and one line each.
+    - "Page Editor: the canvas you used in week 10. You drop Title, Text, Image, Teaser onto a template."
+    - "Universal Editor: a visual editor for pages that are wired for it, including pages that are not the classic Page Editor."
+    - "Document Authoring: writing an AEM page from Word or Google Docs, with a helper in the browser. Verify the current product name in the article."
+    - Do not merge the three into ‘the AEM editor’. Do not add Oxygen to the list.
+    - "Labeled mock: three boxes, one name each. Caption: mock."
 sessionQuests:
   - id: a
     block: A
-    title: Name the three methods
+    title: Find the three names in the official article
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the one-liners unmixed
+    title: Write one line for each name
     minutes: 25
-    done: Three names in the field log.
+    done: Three names in the field log. Mock labeled.
   - id: c
     block: C
-    title: Which one your shop actually has
+    title: Pick whether Document Authoring is Oxygen
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [menu-path-race, output-oracle]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [page-editor, universal-editor]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Three one-liners. Three names. }
+  - { id: lab, prompt: Three one-liners. Three names. Mock labeled. }
 quiz:
-  - q: "Document Authoring is how you edit DITA in Oxygen. True?"
+  - q: "Document Authoring is how you edit a DITA how-to in Oxygen. True or not?"
     answer: 1
-    why: Document Authoring is an AEM Sites method. Oxygen is Syncro Soft XML.
+    why: Same English word. Different tools. Oxygen is the DITA app. Document Authoring is AEM.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "Which of the three exists on your project, or ‘unknown / mock’?"
-tomorrowHook: When each method is used.
+      - True — both use the word document
+      - Not true — Document Authoring is an AEM way to write a web page from Word or Google Docs
+      - True if you have Guides
+  - q: The canvas you used last week to drop Title and Text is…
+    answer: 0
+    why: Page Editor is the classic AEM canvas. Oxygen Author view is a different product.
+    options:
+      - Page Editor
+      - Document Authoring
+      - Oxygen Author view
+fieldNotePrompt: "Which of the three names did you write down, and which one (if any) exists on your project? ‘Unknown / mock’ is fine."
+tomorrowHook: "Tomorrow: when to use each way — and when none of them is the job."
 ---
 
-## Methods stay distinct
+## Three names first
 
-Experience League’s authoring methods article is the source. Do not smash them into one CMS blur. Do not smash them with Oxygen.
+AEM has more than one way to write a page. Today you only learn the names. You do not pick a favourite.
+
+**Page Editor** is the canvas you used last week. You drop blocks onto a template.
+
+**Universal Editor** is a visual editor for pages that are wired for it. Some of those pages are not the classic Page Editor template.
+
+**Document Authoring** is writing an AEM page from Word or Google Docs. A helper in the browser sends the doc into AEM. Verify the current name in the official article — product labels move.
+
+Oxygen is not a fourth item on this list. Oxygen is the DITA app on your desktop (and in a browser, earlier in the course). Different desk.
+
+## Word today
+
+**Page Editor** — the classic AEM canvas of blocks.
+
+**Universal Editor** — a visual editor for pages wired for it.
+
+**Document Authoring** — an AEM page written from Word or Google Docs.
+
+## Watch
+
+Play the official video. Pause on each named editor if it appears. You are collecting names, not clicking around a live site.
+
+## Lab
+
+Three one-liners. Labeled mock. No AEM instance required.
+
+## Figure
+
+Labeled mock: three boxes. Caption: *Mock. Three names, not one blur.*

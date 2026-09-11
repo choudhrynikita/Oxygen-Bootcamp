@@ -2,10 +2,10 @@
   {
     "day": 1,
     "week": 1,
-    "title": "Structured authoring sits next to WYSIWYG",
+    "title": "Install Oxygen and look around",
     "badgeId": null,
     "legacy": [
-      "t0-what"
+      "t1-install"
     ],
     "youtube": [
       "PiCWAIiKx78"
@@ -14,25 +14,34 @@
   {
     "day": 2,
     "week": 1,
-    "title": "Install Oxygen, then Author vs Text vs Grid",
+    "title": "Open a sample and type a sentence",
     "badgeId": null,
     "legacy": [
-      "t1-install",
-      "t2-modes"
+      "t1-xml"
     ],
     "youtube": [
-      "PiCWAIiKx78",
-      "bnQwJZD58wY"
+      "PiCWAIiKx78"
     ]
   },
   {
     "day": 3,
     "week": 1,
-    "title": "New Document wizard, first DITA topic, save discipline",
+    "title": "Two views of the same file",
+    "badgeId": null,
+    "legacy": [
+      "t2-modes"
+    ],
+    "youtube": [
+      "bnQwJZD58wY"
+    ]
+  },
+  {
+    "day": 4,
+    "week": 1,
+    "title": "Make a new page and save it in a folder",
     "badgeId": "first-valid-task",
     "legacy": [
-      "t1-newdoc",
-      "t1-xml"
+      "t1-newdoc"
     ],
     "youtube": [
       "LuAVmn1j7f0",
@@ -40,9 +49,9 @@
     ]
   },
   {
-    "day": 4,
+    "day": 5,
     "week": 1,
-    "title": "Author mode typing, smart paste, validation that matters",
+    "title": "Paste a list and fix a red error",
     "badgeId": "well-formed",
     "legacy": [
       "t3-insert",
@@ -54,52 +63,33 @@
     ]
   },
   {
-    "day": 5,
-    "week": 1,
-    "title": "DITA Maps Manager, first map, append child topic",
-    "badgeId": "map-is-a-book",
-    "legacy": [
-      "t2-dita-ui",
-      "t3-maps"
-    ],
-    "youtube": [
-      "ozFZz6YZMCY",
-      "LuAVmn1j7f0"
-    ]
-  },
-  {
     "day": 6,
     "week": 1,
-    "title": "Lab — flower-docs mini publication",
-    "badgeId": "map-is-a-book",
+    "title": "Your first real page",
+    "badgeId": null,
     "legacy": [
-      "t3-maps",
-      "t3-topics",
-      "t5-keys"
+      "t3-topics"
     ],
     "youtube": [
-      "ozFZz6YZMCY",
       "t2cG3Xe1TXY"
     ]
   },
   {
     "day": 7,
     "week": 1,
-    "title": "Review clinic — errors you will hit this week",
-    "badgeId": "completeness-clean",
+    "title": "Week 1 check",
+    "badgeId": null,
     "legacy": [
-      "t4-complete",
       "t4-validate"
     ],
     "youtube": [
-      "JkPeWea3Y3U",
       "Vglmv_lDg7Y"
     ]
   },
   {
     "day": 8,
     "week": 2,
-    "title": "A concept is what it is — not how to do it",
+    "title": "A page that explains what something is",
     "badgeId": null,
     "legacy": [
       "t3-topics"
@@ -111,44 +101,43 @@
   {
     "day": 9,
     "week": 2,
-    "title": "A task is steps with a result — not a story",
-    "badgeId": "first-valid-task",
+    "title": "A page with steps",
+    "badgeId": null,
     "legacy": [
       "t3-topics"
     ],
     "youtube": [
-      "t2cG3Xe1TXY",
-      "LuAVmn1j7f0"
+      "t2cG3Xe1TXY"
     ]
   },
   {
     "day": 10,
     "week": 2,
-    "title": "A reference is lookup — not a lecture",
+    "title": "A page for looking things up",
     "badgeId": null,
     "legacy": [
       "t3-topics"
     ],
     "youtube": [
-      "qepRkQxhTXQ"
+      "t2cG3Xe1TXY"
     ]
   },
   {
     "day": 11,
     "week": 2,
-    "title": "Lists and notes — pick the type, do not decorate",
+    "title": "Lists and notes",
     "badgeId": null,
     "legacy": [
       "t3-insert"
     ],
     "youtube": [
-      "bnQwJZD58wY"
+      "t2cG3Xe1TXY"
     ]
   },
   {
     "day": 12,
     "week": 2,
-    "title": "Tables you can scan, images with alt text",
+    "title": "A table and a picture",
     "badgeId": null,
     "legacy": [
       "t3-insert"
@@ -160,33 +149,31 @@
   {
     "day": 13,
     "week": 2,
-    "title": "Preview vs source — and Markdown that stays in its lane",
+    "title": "Three pages that belong together",
     "badgeId": null,
     "legacy": [
-      "t3-markdown"
+      "t3-topics"
     ],
     "youtube": [
-      "fdAsWfU66bI"
+      "LuAVmn1j7f0"
     ]
   },
   {
     "day": 14,
     "week": 2,
-    "title": "Boss — twelve topics, three types, one book",
-    "badgeId": "completeness-clean",
+    "title": "Week 2 check",
+    "badgeId": null,
     "legacy": [
-      "t3-topics",
-      "t3-maps"
+      "t3-topics"
     ],
     "youtube": [
-      "ozFZz6YZMCY",
-      "JkPeWea3Y3U"
+      "t2cG3Xe1TXY"
     ]
   },
   {
     "day": 15,
     "week": 3,
-    "title": "topicref is a contract — href, keys, navtitle, linking",
+    "title": "A table of contents for your pages",
     "badgeId": null,
     "legacy": [
       "t3-maps"
@@ -198,9 +185,10 @@
   {
     "day": 16,
     "week": 3,
-    "title": "Submaps — a chapter is a map, not a folder",
-    "badgeId": "map-is-a-book",
+    "title": "The booklet view",
+    "badgeId": null,
     "legacy": [
+      "t2-dita-ui",
       "t3-maps"
     ],
     "youtube": [
@@ -211,35 +199,34 @@
   {
     "day": 17,
     "week": 3,
-    "title": "IDs that stay when the title changes",
+    "title": "Add a page to the booklet",
     "badgeId": null,
     "legacy": [
-      "t3-topics"
+      "t3-maps"
     ],
     "youtube": [
-      "t2cG3Xe1TXY"
+      "ozFZz6YZMCY"
     ]
   },
   {
     "day": 18,
     "week": 3,
-    "title": "xref — point at a topic, not at a URL you invented",
+    "title": "Check that every link still works",
     "badgeId": null,
     "legacy": [
-      "t3-insert"
+      "t4-complete"
     ],
     "youtube": [
-      "t2cG3Xe1TXY"
+      "JkPeWea3Y3U"
     ]
   },
   {
     "day": 19,
     "week": 3,
-    "title": "Related links — generated beats handmade when the map already knows",
+    "title": "Name files so they are easy to find",
     "badgeId": null,
     "legacy": [
-      "t3-maps",
-      "t3-insert"
+      "t3-maps"
     ],
     "youtube": [
       "ozFZz6YZMCY"
@@ -248,33 +235,32 @@
   {
     "day": 20,
     "week": 3,
-    "title": "Name files, then move them without silent breakage",
-    "badgeId": null,
+    "title": "A small handbook",
+    "badgeId": "map-is-a-book",
     "legacy": [
-      "t3-maps"
+      "t3-maps",
+      "t3-topics"
+    ],
+    "youtube": [
+      "ozFZz6YZMCY"
+    ]
+  },
+  {
+    "day": 21,
+    "week": 3,
+    "title": "Week 3 check",
+    "badgeId": "completeness-clean",
+    "legacy": [
+      "t4-complete"
     ],
     "youtube": [
       "JkPeWea3Y3U"
     ]
   },
   {
-    "day": 21,
-    "week": 3,
-    "title": "Boss — map surgery without silent breakage",
-    "badgeId": "completeness-clean",
-    "legacy": [
-      "t4-complete",
-      "t3-maps"
-    ],
-    "youtube": [
-      "JkPeWea3Y3U",
-      "ozFZz6YZMCY"
-    ]
-  },
-  {
     "day": 22,
     "week": 4,
-    "title": "Keys are names — the map owns the path",
+    "title": "One product name, used everywhere",
     "badgeId": "key-not-path",
     "legacy": [
       "t5-keys"
@@ -286,7 +272,7 @@
   {
     "day": 23,
     "week": 4,
-    "title": "conref is path plus id — practice, not a definition slide",
+    "title": "Reuse a warning instead of copying it",
     "badgeId": "first-conref",
     "legacy": [
       "t5-reuse"
@@ -298,7 +284,7 @@
   {
     "day": 24,
     "week": 4,
-    "title": "conkeyref — the map owns the library too",
+    "title": "Point at the library by name, not by path",
     "badgeId": "key-not-path",
     "legacy": [
       "t5-reuse",
@@ -311,7 +297,7 @@
   {
     "day": 25,
     "week": 4,
-    "title": "Key scopes — beginner, one nested map",
+    "title": "A booklet inside a booklet",
     "badgeId": null,
     "legacy": [
       "t5-keys"
@@ -323,7 +309,7 @@
   {
     "day": 26,
     "week": 4,
-    "title": "A warning library you can defend",
+    "title": "Build a small warning library",
     "badgeId": "first-conref",
     "legacy": [
       "t5-reuse"
@@ -335,7 +321,7 @@
   {
     "day": 27,
     "week": 4,
-    "title": "When reuse is worse than copy",
+    "title": "When it is better to copy",
     "badgeId": null,
     "legacy": [
       "t5-reuse"
@@ -347,7 +333,7 @@
   {
     "day": 28,
     "week": 4,
-    "title": "Boss — reuse you can explain",
+    "title": "Week 4 check",
     "badgeId": "key-not-path",
     "legacy": [
       "t5-reuse",
@@ -361,7 +347,7 @@
   {
     "day": 29,
     "week": 5,
-    "title": "Profiling attributes you can say out loud",
+    "title": "Hide text some readers should not see",
     "badgeId": null,
     "legacy": [
       "t5-profile"
@@ -373,7 +359,7 @@
   {
     "day": 30,
     "week": 5,
-    "title": "DITAVAL — include, exclude, flag",
+    "title": "A switch file for those readers",
     "badgeId": "ditaval-explained",
     "legacy": [
       "t5-profile"
@@ -386,7 +372,7 @@
   {
     "day": 31,
     "week": 5,
-    "title": "Conditions you can explain — retire the rest",
+    "title": "Only keep switches you can explain",
     "badgeId": "ditaval-explained",
     "legacy": [
       "t5-profile"
@@ -398,7 +384,7 @@
   {
     "day": 32,
     "week": 5,
-    "title": "Change tracking and comments — one review channel",
+    "title": "Comments and suggested edits",
     "badgeId": null,
     "legacy": [
       "t4-review"
@@ -410,7 +396,7 @@
   {
     "day": 33,
     "week": 5,
-    "title": "Author CSS you may touch — frameworks, Hints, content completion",
+    "title": "Hints that appear while you type",
     "badgeId": null,
     "legacy": [
       "t6-framework"
@@ -422,7 +408,7 @@
   {
     "day": 34,
     "week": 5,
-    "title": "Find/Replace with care — scope, then a dry run",
+    "title": "Find and replace without breaking files",
     "badgeId": null,
     "legacy": [
       "t4-validate"
@@ -434,7 +420,7 @@
   {
     "day": 35,
     "week": 5,
-    "title": "Boss — Author tools you can defend",
+    "title": "Week 5 check",
     "badgeId": "ditaval-explained",
     "legacy": [
       "t5-profile",
@@ -448,7 +434,7 @@
   {
     "day": 36,
     "week": 6,
-    "title": "Transformation scenarios — the map is what you publish",
+    "title": "What \"publish\" means here",
     "badgeId": null,
     "legacy": [
       "t5-publish"
@@ -460,7 +446,7 @@
   {
     "day": 37,
     "week": 6,
-    "title": "WebHelp Responsive — a draft you can click",
+    "title": "Make a clickable draft site",
     "badgeId": null,
     "legacy": [
       "t5-publish"
@@ -472,7 +458,7 @@
   {
     "day": 38,
     "week": 6,
-    "title": "PDF draft — Publishing Engine or Chemistry, not a brand course",
+    "title": "Make a PDF draft",
     "badgeId": null,
     "legacy": [
       "t5-publish"
@@ -484,7 +470,7 @@
   {
     "day": 39,
     "week": 6,
-    "title": "SUCCESS logs still deserve a read",
+    "title": "Read the log even when it works",
     "badgeId": null,
     "legacy": [
       "t5-publish"
@@ -496,7 +482,7 @@
   {
     "day": 40,
     "week": 6,
-    "title": "FAILED transform — read the first real error",
+    "title": "When publish fails, read the first real error",
     "badgeId": "transform-log-reader",
     "legacy": [
       "t5-publish",
@@ -510,7 +496,7 @@
   {
     "day": 41,
     "week": 6,
-    "title": "Styles Basket awareness — not a designer course",
+    "title": "Leave the look of the site to a designer",
     "badgeId": null,
     "legacy": [
       "t5-publish"
@@ -522,7 +508,7 @@
   {
     "day": 42,
     "week": 6,
-    "title": "Boss — publish with a log you can read",
+    "title": "Week 6 check",
     "badgeId": "transform-log-reader",
     "legacy": [
       "t5-publish"
@@ -535,7 +521,7 @@
   {
     "day": 43,
     "week": 7,
-    "title": "Oxygen XML Web Author — the browser cousin",
+    "title": "Oxygen in a web browser",
     "badgeId": "web-author-tour",
     "legacy": [],
     "youtube": [
@@ -545,7 +531,7 @@
   {
     "day": 44,
     "week": 7,
-    "title": "What desktop still does better",
+    "title": "When the desktop app is still the right tool",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -555,7 +541,7 @@
   {
     "day": 45,
     "week": 7,
-    "title": "Review workflow in Oxygen",
+    "title": "Send a file out for review",
     "badgeId": null,
     "legacy": [
       "t4-review"
@@ -567,7 +553,7 @@
   {
     "day": 46,
     "week": 7,
-    "title": "Content Fusion as collaboration context",
+    "title": "Work with someone who does not live in Oxygen",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -577,7 +563,7 @@
   {
     "day": 47,
     "week": 7,
-    "title": "Hand files to a reviewer who is not a specialist",
+    "title": "Hand off a clean folder",
     "badgeId": null,
     "legacy": [
       "t6-git"
@@ -589,7 +575,7 @@
   {
     "day": 48,
     "week": 7,
-    "title": "Team flow — CCMS or Git, pick one",
+    "title": "Pick one place the files live",
     "badgeId": null,
     "legacy": [
       "t6-git"
@@ -601,7 +587,7 @@
   {
     "day": 49,
     "week": 7,
-    "title": "Collaboration clinic",
+    "title": "Week 7 check",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -612,7 +598,7 @@
   {
     "day": 50,
     "week": 8,
-    "title": "Subject scheme — awareness, not a taxonomy project",
+    "title": "Keep the same words for the same things",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -622,7 +608,7 @@
   {
     "day": 51,
     "week": 8,
-    "title": "Branch filtering — the idea, not the production switch",
+    "title": "Big booklets that feel slow",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -632,7 +618,7 @@
   {
     "day": 52,
     "week": 8,
-    "title": "DITA 2.0 flags and optional AI — what not to turn on at work",
+    "title": "Switches you should not turn on at work yet",
     "badgeId": null,
     "legacy": [
       "t6-ai"
@@ -644,7 +630,7 @@
   {
     "day": 53,
     "week": 8,
-    "title": "Troubleshooting invalid maps",
+    "title": "Fix a broken booklet, one error at a time",
     "badgeId": "completeness-clean",
     "legacy": [
       "t6-xpath",
@@ -657,7 +643,7 @@
   {
     "day": 54,
     "week": 8,
-    "title": "Performance with large maps, and Schematron as policy",
+    "title": "House rules that catch the same mistake twice",
     "badgeId": null,
     "legacy": [
       "t6-schematron"
@@ -669,7 +655,7 @@
   {
     "day": 55,
     "week": 8,
-    "title": "Accessibility of the DITA you write",
+    "title": "Make pages people can actually use",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -680,7 +666,7 @@
   {
     "day": 56,
     "week": 9,
-    "title": "AEM author vs publish — you are not a developer this week",
+    "title": "Another team writes web pages in Adobe",
     "badgeId": null,
     "legacy": [
       "t7-aem"
@@ -692,7 +678,7 @@
   {
     "day": 57,
     "week": 9,
-    "title": "Sites console — the tree is not a DITA map",
+    "title": "The Sites tree is not your booklet",
     "badgeId": null,
     "legacy": [
       "t7-aem"
@@ -704,7 +690,7 @@
   {
     "day": 58,
     "week": 9,
-    "title": "Create page and page properties",
+    "title": "Make a page (or walk a labeled mock)",
     "badgeId": null,
     "legacy": [
       "t7-aem"
@@ -716,7 +702,7 @@
   {
     "day": 59,
     "week": 9,
-    "title": "Edit vs Preview — neither is publish, neither is Oxygen Author",
+    "title": "Edit and Preview are not Publish",
     "badgeId": null,
     "legacy": [
       "t7-aem"
@@ -728,7 +714,7 @@
   {
     "day": 60,
     "week": 9,
-    "title": "Components vs pages — do not smash DITA types into Core Components",
+    "title": "A page is a stack of blocks, not a DITA topic",
     "badgeId": null,
     "legacy": [
       "t7-aem"
@@ -740,7 +726,7 @@
   {
     "day": 61,
     "week": 9,
-    "title": "Quick Publish, Unpublish, Basic Handling",
+    "title": "Send a page live, and take it down",
     "badgeId": "aem-quick-publish",
     "legacy": [
       "t7-aem"
@@ -753,7 +739,7 @@
   {
     "day": 62,
     "week": 9,
-    "title": "Boss — AEM author literacy without smashing Oxygen",
+    "title": "Week 9 check",
     "badgeId": "aem-quick-publish",
     "legacy": [
       "t7-aem"
@@ -766,7 +752,7 @@
   {
     "day": 63,
     "week": 10,
-    "title": "Title and Text — type on the page, not in a DITA body",
+    "title": "Type on the page (Title and Text)",
     "badgeId": null,
     "legacy": [
       "t7-aem"
@@ -778,7 +764,7 @@
   {
     "day": 64,
     "week": 10,
-    "title": "Image component — alt in the dialog, asset from DAM",
+    "title": "Put a picture on the page",
     "badgeId": null,
     "legacy": [
       "t7-aem"
@@ -790,7 +776,7 @@
   {
     "day": 65,
     "week": 10,
-    "title": "Teaser — a card with a destination",
+    "title": "A card that points somewhere (Teaser)",
     "badgeId": null,
     "legacy": [
       "t7-aem"
@@ -802,7 +788,7 @@
   {
     "day": 66,
     "week": 10,
-    "title": "Container and responsive layout — do not fight the template",
+    "title": "A box that holds other blocks",
     "badgeId": null,
     "legacy": [
       "t7-aem"
@@ -814,7 +800,7 @@
   {
     "day": 67,
     "week": 10,
-    "title": "Experience Fragment awareness — reusable layout, not conref",
+    "title": "Reuse a layout (not the same as Oxygen reuse)",
     "badgeId": null,
     "legacy": [
       "t7-aem"
@@ -826,7 +812,7 @@
   {
     "day": 68,
     "week": 10,
-    "title": "Annotations, versions, restore — author-level history",
+    "title": "Notes, versions, restore",
     "badgeId": null,
     "legacy": [
       "t7-aem",
@@ -839,7 +825,7 @@
   {
     "day": 69,
     "week": 10,
-    "title": "Boss — Core Components desk and a workflow you can name",
+    "title": "Week 10 check",
     "badgeId": "core-components-desk",
     "legacy": [
       "t7-aem"
@@ -852,7 +838,7 @@
   {
     "day": 70,
     "week": 11,
-    "title": "Three AEM authoring methods — names first",
+    "title": "Three ways to write in AEM, names first",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -862,7 +848,7 @@
   {
     "day": 71,
     "week": 11,
-    "title": "When each authoring method is used",
+    "title": "When to use each way",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -873,7 +859,7 @@
   {
     "day": 72,
     "week": 11,
-    "title": "Content Fragments for headless authors",
+    "title": "A form-like page (Content Fragment) in plain words",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -883,7 +869,7 @@
   {
     "day": 73,
     "week": 11,
-    "title": "Assets — upload, move, basic metadata",
+    "title": "Upload a file to the asset library",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -893,7 +879,7 @@
   {
     "day": 74,
     "week": 11,
-    "title": "Language copies — awareness",
+    "title": "Language copies, awareness only",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -903,7 +889,7 @@
   {
     "day": 75,
     "week": 11,
-    "title": "Authoring methods clinic",
+    "title": "Week 11 check",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -914,7 +900,7 @@
   {
     "day": 76,
     "week": 12,
-    "title": "Guides web editor vs desktop Oxygen",
+    "title": "Guides in the browser vs Oxygen on the desktop",
     "badgeId": null,
     "legacy": [
       "t7-guides"
@@ -926,7 +912,7 @@
   {
     "day": 77,
     "week": 12,
-    "title": "Checkout / check-in mental model",
+    "title": "Checkout and check-in, like borrowing a book",
     "badgeId": "checkout-checkin",
     "legacy": [
       "t7-connector"
@@ -938,7 +924,7 @@
   {
     "day": 78,
     "week": 12,
-    "title": "Edit in Oxygen — configuration as a concept",
+    "title": "Edit in Oxygen — what that button means",
     "badgeId": null,
     "legacy": [
       "t7-connector"
@@ -950,7 +936,7 @@
   {
     "day": 79,
     "week": 12,
-    "title": "Maps and topics living on AEM",
+    "title": "Booklets and pages living in AEM",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -960,7 +946,7 @@
   {
     "day": 80,
     "week": 12,
-    "title": "Publish outputs from Guides",
+    "title": "Publish from Guides",
     "badgeId": null,
     "legacy": [
       "t5-publish"
@@ -972,7 +958,7 @@
   {
     "day": 81,
     "week": 12,
-    "title": "Guides lab — one mental cycle",
+    "title": "One full loop on paper (or mock)",
     "badgeId": null,
     "legacy": [
       "t7-connector"
@@ -984,7 +970,7 @@
   {
     "day": 82,
     "week": 12,
-    "title": "Handoff clinic",
+    "title": "Week 12 check — who edits where",
     "badgeId": "guides-handoff",
     "legacy": [
       "t7-guides"
@@ -997,7 +983,7 @@
   {
     "day": 83,
     "week": 12,
-    "title": "Capstone — DITA publication in Oxygen",
+    "title": "Capstone: a DITA handbook in Oxygen",
     "badgeId": null,
     "legacy": [
       "t7-capstone"
@@ -1010,7 +996,7 @@
   {
     "day": 84,
     "week": 12,
-    "title": "Capstone — AEM page family",
+    "title": "Capstone: a small family of AEM pages",
     "badgeId": null,
     "legacy": [
       "t7-aem"
@@ -1023,7 +1009,7 @@
   {
     "day": 85,
     "week": 12,
-    "title": "Two surfaces, one story",
+    "title": "Two desks, one product story",
     "badgeId": "two-surfaces-one-story",
     "legacy": [
       "t7-capstone"
@@ -1046,7 +1032,7 @@
   {
     "day": 87,
     "week": 12,
-    "title": "Capstone delivery",
+    "title": "Hand in the work",
     "badgeId": null,
     "legacy": [
       "t7-capstone"
@@ -1058,7 +1044,7 @@
   {
     "day": 88,
     "week": 12,
-    "title": "Oral exam sheet",
+    "title": "Talk-through sheet",
     "badgeId": null,
     "legacy": [],
     "youtube": [
@@ -1069,7 +1055,7 @@
   {
     "day": 89,
     "week": 12,
-    "title": "Written scenario exam and error clinic",
+    "title": "Written scenarios and error repair",
     "badgeId": null,
     "legacy": [
       "t4-complete",
@@ -1084,7 +1070,7 @@
   {
     "day": 90,
     "week": 12,
-    "title": "Portfolio export, skills inventory, what next",
+    "title": "What you can do now, and what is next",
     "badgeId": "portfolio-ready",
     "legacy": [],
     "youtube": [

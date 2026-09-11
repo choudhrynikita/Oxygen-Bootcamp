@@ -1,8 +1,8 @@
 ---
 day: 22
 week: 4
-title: Keys are names — the map owns the path
-objective: Define a product-name key in the root map and keyref it twice so a rename in the map updates both topics.
+title: "One product name, used everywhere"
+objective: "Put the product name in the booklet once, point at it from two pages, then change it once and watch both pages follow."
 timeboxMinutes: 90
 skills: [reuse, maps]
 legacyLessonIds: [t5-keys]
@@ -10,90 +10,83 @@ youtube:
   - id: LuAVmn1j7f0
     title: Getting Started with DITA Using Oxygen XML Editor
     watchFor:
-      - Root map so keys resolve
-      - keyref in a topic
+      - Root map so names in the booklet work
+      - A product name used on a page
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
   - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
   - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
 lab:
   id: lab-22
-  title: "product-name key, two hits"
+  title: Change the name once
   pack: kitepump-dita
-  failWhen: "The product string is hardcoded in both topics, or root map is unset when you mark the lab done, or only one topic uses the key."
-  expected: keydef on the map. Two keyrefs. Author shows HP-40a in both. Completeness clean with root map set.
+  failWhen: "You typed the product string on both pages, or you left the root map unset, or only one page uses the name from the booklet."
+  expected: The booklet holds Kitepump KP-2a. Two pages show it. Completeness is clean with the root map set.
   steps:
-    - Open kitepump.ditamap as root map.
-    - "Add a keydef keys=\"product-name\" with keyword Kitepump HP-40 (or the name your pack already uses)."
-    - "In what-kitepump-is.dita and inflate-the-tire.dita, insert <keyword keyref=\"product-name\"/> in a sentence. Do not type the product string in those two places."
-    - Change the keydef keyword to Kitepump HP-40a. Both topics should show the new name in Author.
-    - Unset the root map. Confirm the key looks unresolved. Set the root map again.
-    - Run completeness. Unresolved keys are a row — fix any you caused.
+    - Open samples/kitepump-dita/kitepump.ditamap. Set it as the root map (the main booklet).
+    - "Find the product name in the booklet. The sample already has a name (Kitepump KP-2) stored once. If you cannot see it in the tree, open the booklet in Text and look for keys=\"product\"."
+    - "Open what-is-kitepump.dita and prime-the-pump.dita. Each page should use that name, not a typed copy of Kitepump KP-2. If a sentence still types the name, replace that bit with a keyword that points at the name in the booklet."
+    - "In the booklet, change the stored name to Kitepump KP-2a. Both pages should show KP-2a in Author."
+    - Unset the root map. The name on the pages should look broken or empty. Set the root map again.
+    - Run completeness. Fix any broken name you caused.
 sessionQuests:
   - id: a
     block: A
-    title: "Name keydef, keyref, and what an unset root map forbids"
+    title: Find the product name in the booklet and set the root map
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep product-name resolving in two topics
+    title: Change the name once and confirm two pages follow
     minutes: 25
-    done: Two keyrefs. Map owns HP-40a. Completeness clean.
+    done: Both pages show KP-2a. Completeness is clean. Root map is set.
   - id: c
     block: C
-    title: "Unset the root map, watch the unresolved key, restore it"
+    title: "Pick where you look when a name looks broken, and why the booklet owns it"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [warmup-match, one-line-repair]
+    done: Note saved.
+dailyBurstPool: [one-line-repair, authors-dare]
 toolCards: [maps-manager, attributes]
 badgeId: key-not-path
 boss: false
 checks:
-  - { id: lab, prompt: keydef on the map. Two keyrefs. Author shows HP-40a in both. Completeness clean with root map set. }
+  - { id: lab, prompt: The booklet holds Kitepump KP-2a. Two pages show it. Completeness is clean with the root map set. }
 quiz:
-  - q: "Keys look broken in Author. First place you look?"
-    answer: 1
-    why: "v1: Always set the root map or keyrefs look broken. Keys are names defined in a map."
-    options:
-      - AEM Sites console
-      - Whether the root map is set
-      - The PDF Chemistry install
-  - q: "You keyref a topic as keyref=\"inflate\" instead of href. What must exist?"
+  - q: "The product name looks broken in Author. First place you look?"
     answer: 0
-    why: "keyref looks up a key, not a filename. The map binds the name to a target."
+    why: Names in the booklet only work when that booklet is the root map.
     options:
-      - A matching keys on a topicref or keydef in the root map
-      - A file named inflate.dita in the same folder
-      - An AEM Experience Fragment
-  - q: "Why prefer a key over href for the product name?"
-    answer: 1
-    why: A path-plus-string in every topic is copy. A key is one edit.
+      - Whether the root map is set
+      - Help > About
+      - The Recycle Bin
+  - q: "Why put the product name in the booklet instead of typing it on every page?"
+    answer: 0
+    why: One name in the booklet is one edit. Forty typed copies are forty misses.
     options:
-      - Keys are faster to parse
-      - The map owns the string; topics do not hard-code a name that will change
-      - href is illegal on keyword
-fieldNotePrompt: "What string in your pack should have been a key this week, and was not?"
-tomorrowHook: Tomorrow you conref a warning by path-plus-id — then you will feel why keys are kinder.
+      - You change it once and every page that uses the name follows
+      - The booklet cannot store words
+      - Typing is the only way a title works
+fieldNotePrompt: "What name did you put in the booklet, and what did the two pages show after you changed it?"
+tomorrowHook: "Tomorrow you write a warning once and point at it, instead of copying it."
 ---
 
-## Keys are names
+## Type it once
 
-v1: *Keys are names defined in a map. Always set the root map or keyrefs look broken.*
+Last week the booklet was a table of contents. This week it also holds **names**.
 
-A **keydef** (or a topicref with `keys`) binds a name to a target or a string. A **keyref** uses the name. The path lives in one place.
+You have two pages that mention the shop’s product. If you type “Kitepump KP-2” in both, a rename will miss a page. Put the name in the booklet. Point at it from the pages.
 
-flower-docs already did this with `keyword keyref="product"` → Aurora Vase. Kitepump gets `product-name`.
+Open `kitepump.ditamap`. Set it as the **root map** — the main booklet Oxygen should use. Then change the stored name. Both pages should follow.
 
-## Key, not path
+## Word today
 
-href is a path. Paths move. Keys stay. This badge is **key-not-path**: you stop typing folders into every topic.
+**Key** — a name defined in the booklet. A **keydef** is the line that sets it. A **keyref** is the pointer on a page that uses it. You can say “the name in the booklet” out loud.
 
-## Figure
+## If the name looks broken
 
-Map snippet: keydef product-name → keyword Kitepump HP-40a. Caption: *Root map owns the name. Topics keyref it.*
+Unset the root map on purpose. The pages cannot see the name. Set it again. That is the whole trick.

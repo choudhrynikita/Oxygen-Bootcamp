@@ -1,8 +1,8 @@
 ---
 day: 43
 week: 7
-title: Oxygen XML Web Author — the browser cousin
-objective: Tour Web Author enough to name three things it shares with desktop and three it does not.
+title: Oxygen in a web browser
+objective: "Open Web Author (or a labeled mock) and write three things it shares with the desktop app, and three things it does not."
 timeboxMinutes: 90
 skills: [oxygenUi, review]
 legacyLessonIds: []
@@ -10,7 +10,8 @@ youtube:
   - id: PiCWAIiKx78
     title: Getting Started with Oxygen XML Editor
     watchFor:
-      - Desktop chrome you will not see in a browser tab
+      - The desktop window when the app first opens
+      - Menus and side panels you may not see in a browser tab
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
@@ -19,65 +20,76 @@ lab:
   id: lab-43
   title: "Three shares, three gaps"
   pack: kitepump-dita
-  failWhen: "You claim Web Author publishes WebHelp locally like desktop, or you call it AEM Guides."
-  expected: "Six factual lines. Web Author is Syncro Soft in a browser, not Guides."
+  failWhen: "You never opened the desktop app or the mock, or you wrote that the browser tab can do every desktop job."
+  expected: Six factual lines. Web Author is Oxygen in a browser. The desktop app is still the full desk.
   steps:
-    - Read the official Web Author product page from the Source box. Do not scrape a manual into your notes.
-    - Open kitepump-dita on desktop so you have a baseline.
-    - "Write three shared things (Author canvas, validation, DITA toolbar actions — verify labels)."
-    - "Write three desktop-only things (Maps Manager power, Transformation scenarios, Schematron + frameworks, offline)."
-    - Save oxygen-bootcamp-work/week7/web-author-gap.txt.
+    - Open kitepump.ditamap on the desktop app so you have a baseline. Look at Author view on one page.
+    - "Read the official Web Author page from the Source box (or the video catalog). If your shop has a Web Author URL, open it. If not, use the labeled mock in this lesson."
+    - "Write three things the browser app still has: a page view, a way to see errors, a writing toolbar. Check the labels. Write “verify” next to any label you guessed."
+    - "Write three things the desktop app still does that the browser tab may not: the booklet view with a completeness check, local publish, work with no internet."
+    - Save the six lines in oxygen-bootcamp-work/week7/web-author-gap.txt.
 sessionQuests:
   - id: a
     block: A
-    title: "Name Web Author and what it is not (Guides, Sites)"
+    title: "Find Web Author on the official page, or open the labeled mock"
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the gap list honest
+    title: Write three shares and three gaps
     minutes: 25
-    done: "Six lines, no product mash-up."
+    done: Six lines in week7/web-author-gap.txt.
   - id: c
     block: C
-    title: Catch the Guides vs Web Author mix-up
+    title: "Pick what Web Author is, and where completeness still lives"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [one-line-repair, menu-path-race]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, one-line-repair]
 toolCards: [author-mode]
 badgeId: web-author-tour
 boss: false
 checks:
-  - { id: lab, prompt: "Six factual lines. Web Author is Syncro Soft in a browser, not Guides." }
+  - { id: lab, prompt: Six factual lines. Web Author is Oxygen in a browser. The desktop app is still the full desk. }
 quiz:
-  - q: "Oxygen XML Web Author is the same product as AEM Guides. True?"
-    answer: 1
-    why: Web Author is Syncro Soft. Guides is Adobe. They can connect. They are not the same editor.
+  - q: "What is Web Author?"
+    answer: 0
+    why: "Web Author is still Oxygen. It lives in a browser. It is a thinner desk, not a different kind of page."
     options:
-      - "True"
-      - "False"
-  - q: "Where do you still want desktop Oxygen?"
+      - "Oxygen in a browser tab, from the same company as the desktop app"
+      - A second booklet file
+      - The PDF you published last week
+  - q: "You need to run a completeness check on the booklet and read a local publish log. Where do you work?"
     answer: 1
-    why: SMEs can comment in a browser. Specialists still need desktop for the book.
+    why: The browser cousin is for writing and light review. Completeness and local publish still live on the desktop.
     options:
-      - Typing a shortdesc
-      - "Map surgery, Schematron, offline frameworks"
-      - Reading a comment
-fieldNotePrompt: "Who on your team should never be forced onto desktop Oxygen?"
-tomorrowHook: "Tomorrow: what desktop still does better, with a file in your hand."
+      - Only in a browser tab — it can do every desktop job
+      - On the desktop app
+      - In a notes app
+fieldNotePrompt: "What three things did you write that the desktop app still does better? Paste the lines."
+tomorrowHook: Tomorrow you prove three desktop moves on the booklet in your hand.
 ---
 
-## Web Author
+## Same company, thinner desk
 
-Oxygen XML Web Author is Syncro Soft in a browser. Author mode still exists. Validation still exists. It is not AEM Guides and not Sites.
+**Web Author** is Oxygen in a browser tab. Same company as the desktop app (Syncro Soft). You still see a page view. You can still type. You can still see a red error.
 
-Use it when a writer is away from the licensed desktop, or when IT wants a thinner client. Do not expect every add-on.
+It is not the full desk. Do not expect every add-on, every publish button, or a completeness check that matches last week.
 
-## Figure
+Use it when you are away from the licensed desktop, or when someone only needs to read a page and leave a comment. Do not send a writer into a browser tab and then ask them for a local WebHelp folder.
 
-Labeled mock: a browser tab with an Author canvas and a slimmer rail. Caption: *Not a screenshot. Verify the current Web Author layout in the official video catalog.*
+## Word today
+
+**Web Author** — Oxygen in a browser. Same writing app. Fewer tools.
+
+## Watch
+
+Play the Getting Started video. Pause on the first full desktop window. That chrome is what a browser tab may not give you.
+
+## Lab
+
+Six lines: three shares, three gaps. If you have no Web Author URL, the labeled mock counts. Caption the mock as a mock.

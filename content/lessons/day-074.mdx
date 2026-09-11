@@ -1,8 +1,8 @@
 ---
 day: 74
 week: 11
-title: Language copies — awareness
-objective: "Explain a language copy as a Sites mechanism, not a DITA ditaval, and write who owns translation on your team."
+title: "Language copies, awareness only"
+objective: "Explain a language copy as an AEM copy of a page tree for another language, not a DITA ditaval, and write who owns translation."
 timeboxMinutes: 75
 skills: [aemSites]
 legacyLessonIds: []
@@ -10,7 +10,7 @@ youtube:
   - id: VcMI0zWIKdg
     title: How to Build a Global Site in AEM Sites
     watchFor:
-      - MSM / language and translation as a workflow
+      - "Language and translation as a workflow, if shown"
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/universal-editor/authoring-methods", label: AEM authoring methods, dated: 2026-09 }
@@ -18,51 +18,76 @@ lab:
   id: lab-74
   title: Language copy vs ditaval
   pack: aem-author-field-log
-  failWhen: You run MSM on a live site as a lab stunt.
-  expected: Two distinctions + owner line. No production stunt.
+  failWhen: You run a language copy on a live site as a lab stunt.
+  expected: Two distinctions plus an owner line. No production copy. Mock labeled.
   steps:
-    - "Write: language copy / MSM (verify current name) copies a page tree for another language."
-    - "Write: ditaval filters a DITA book. It is not a language copy."
-    - "Write who owns translation: a team name or ‘unknown — awareness only’."
+    - "Write oxygen-bootcamp-work/week11/field-log-74.txt: a language copy copies a page tree for another language. Verify the current menu name in the docs."
+    - "Write: a ditaval filters a DITA book. It is not a language copy."
+    - "Write who owns translation: a team name, or ‘unknown — awareness only’."
     - Do not create a language copy on a production tree you do not own.
+    - "Labeled mock: English tree and French tree as two folders. Caption: mock."
 sessionQuests:
   - id: a
     block: A
-    title: Name language copy and what ditaval is not
+    title: Read language copy as a page-tree copy for another language
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Owner line written
+    title: "Write the owner line, or ‘unknown’"
     minutes: 25
     done: No production copy created.
   - id: c
     block: C
-    title: Who would be angry if you copied live
+    title: "Pick language copy vs ditaval, and whether you run it live today"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [one-line-repair, menu-path-race]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [sites-console]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Two distinctions + owner line. No production stunt. }
+  - { id: lab, prompt: Two distinctions plus an owner line. No production copy. Mock labeled. }
 quiz:
-  - q: "A ditaval is how AEM copies English pages into French. True?"
+  - q: "A ditaval is how AEM copies English pages into French. True or not?"
     answer: 1
-    why: Ditaval is DITA filtering. Language copies are Sites.
+    why: You used ditavals in the handbook. Language copies are Sites. Different desks.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "Who owns translation, or ‘unknown’?"
-tomorrowHook: Authoring methods clinic.
+      - True — filter equals translate
+      - Not true — a ditaval filters a DITA book. A language copy is an AEM page-tree copy
+      - True if the ditaval is named fr
+  - q: "Today’s lab asks you to create a language copy on a live site. True or not?"
+    answer: 1
+    why: You can explain the idea. You do not perform it on someone else’s live tree.
+    options:
+      - True — that is the badge
+      - Not true — awareness only. Do not touch a live tree you do not own
+      - "True on a mock site only, then push it live"
+fieldNotePrompt: "Who owns translation on your team, or ‘unknown’? One line."
+tomorrowHook: "Tomorrow is the week check: four jobs, four methods. The how-to stays in Oxygen."
 ---
 
 ## Awareness only
 
-You can explain language copies. You do not perform them on someone else’s live tree for a badge.
+A **language copy** is an AEM copy of a page tree for another language. English pages in one folder. French pages in another. People then translate. Verify the current menu name — it moves.
+
+A **ditaval** filters a DITA book (show the novice steps, hide the expert ones). You already used that. It is not a language copy.
+
+Today you explain the idea. You write who owns translation, or you write ‘unknown’. You do not click the action on a live tree you do not own.
+
+## Word today
+
+**Language copy** — a copy of an AEM page tree started for another language.
+
+## Lab
+
+Two sentences (language copy vs ditaval). One owner line. Labeled mock. No live click.
+
+## Figure
+
+Labeled mock: two folders, EN and FR. Caption: *Mock. Awareness. No live copy.*

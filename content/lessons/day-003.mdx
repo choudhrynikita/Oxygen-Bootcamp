@@ -1,100 +1,97 @@
 ---
 day: 3
 week: 1
-title: "New Document wizard, first DITA topic, save discipline"
-objective: "Create a Concept topic from the New wizard, save it with lowercase hyphens, and keep it inside a project folder — not on the desktop."
-timeboxMinutes: 90
-skills: [oxygenUi, ditaTopics]
-legacyLessonIds: [t1-newdoc, t1-xml]
+title: Two views of the same file
+objective: "Look at the same sentence in the page view and in the tags view, then glance at Grid."
+timeboxMinutes: 85
+skills: [oxygenUi, xmlLiteracy]
+legacyLessonIds: [t2-modes]
 youtube:
-  - id: LuAVmn1j7f0
-    title: Getting Started with DITA Using Oxygen XML Editor
+  - id: bnQwJZD58wY
+    title: WYSIWYG XML Editing
     watchFor:
-      - File New for a DITA topic
-      - Where the map will later live
-  - id: Vglmv_lDg7Y
-    title: Interactive Tutorials in Oxygen
-    watchFor:
-      - Help > Install new add-ons for Live Tutorials
+      - The Author canvas
+      - The tabs under the editor
 sources:
-  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/eppo-first-dita-topic.html", label: First DITA topic (Oxygen), dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
-  - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-author/", label: Oxygen XML Author User Guide, dated: 2026-09 }
 lab:
   id: lab-3
-  title: "Hello concept, saved like a writer"
+  title: "Same sentence, two views"
   pack: flower-docs
-  failWhen: "The file is Hello Concept.dita on the desktop, or the topic is invalid because title is empty."
-  expected: hello-concept.dita validates. Path uses lowercase hyphens. Shortdesc is present.
+  failWhen: "You never left Author, or you deleted a tag in Text and left it broken."
+  expected: You saw the sentence in Author and in Text. The file still opens.
   steps:
-    - Create a folder oxygen-bootcamp-work/ if you skipped it.
-    - "In Oxygen: File > New. Choose a DITA Concept template so Author mode gets a toolbar."
-    - "Title: Hello concept. File name: hello-concept.dita (lowercase, hyphens)."
-    - "Save under oxygen-bootcamp-work/week1/, not the desktop."
-    - Add a shortdesc of one sentence. Add one paragraph in conbody.
-    - "Confirm tabs Text, Grid, Author all open the same file."
-    - "Optional: Help > Install new add-ons > Live Tutorials. Bookmark the User Guide."
+    - Open hello-concept.dita again.
+    - "Find the tabs under the big writing area. They are named Text, Grid, and Author (the order can vary)."
+    - Stay in Author. That is the page view. Confirm your sentence from yesterday is still readable as a normal sentence.
+    - Switch to Text. You should see angle brackets around the same words. Do not delete a bracket.
+    - "Switch to Grid. It looks a bit like a spreadsheet. Glance, then switch back to Author."
+    - "In oxygen-bootcamp-work/day-03-views.txt write one line: Author looks like a page. Text shows tags."
 sessionQuests:
   - id: a
     block: A
-    title: Name File > New and the template that attaches the DITA framework
+    title: "Find the Author, Text, and Grid tabs under the page"
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep hello-concept.dita valid in the project folder
+    title: See your sentence in Author and in Text
     minutes: 25
-    done: "File validates, is lowercase-hyphenated, and is not on the desktop."
+    done: You wrote the one-line note. The file still opens.
   - id: c
     block: C
-    title: Explain well-formed vs valid in one sentence
+    title: "Pick what Author is for, and what Text shows"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [menu-path-race, output-oracle]
-toolCards: [author-mode]
-badgeId: first-valid-task
+    done: Note saved.
+dailyBurstPool: [warmup-match, menu-path-race]
+toolCards: [author-mode, text-mode]
+badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: hello-concept.dita validates. Path uses lowercase hyphens. Shortdesc is present. }
+  - { id: lab, prompt: You saw the sentence in Author and in Text. The file still opens. }
 quiz:
-  - q: "Well-formed means the file matches a DTD. True?"
-    answer: 1
-    why: Well-formed is syntax only (tags nest and match). Validity requires a schema or DTD.
+  - q: Author view is for…
+    answer: 0
+    why: Author is the page view. You will write here most days.
     options:
-      - "True"
-      - "False"
-  - q: "Why does File > New matter more than a blank XML file?"
+      - Daily writing that looks like a page
+      - Drawing a website layout
+      - Only reading Help > About
+  - q: Text view shows…
     answer: 1
-    why: "Without a framework, Author is a generic XML view. Templates give you the DITA toolbar and content completion."
+    why: "Text is the same file. The tags are the skeleton. One file, two views."
     options:
-      - It downloads AEM Guides
-      - The template attaches a framework so Author gets the DITA toolbar
-      - It publishes WebHelp
-fieldNotePrompt: "What will you do when a teammate emails Hello Concept FINAL(2).dita?"
-tomorrowHook: "Tomorrow you type in Author, paste from a browser, and read validation messages that actually matter."
+      - A spreadsheet of the shop’s prices
+      - The same page with tags around the words
+      - A second copy of the file on the desktop
+fieldNotePrompt: "In your words: what is different when you switch from Author to Text?"
+tomorrowHook: Tomorrow you make a new page from a template and save it in a folder.
 ---
 
-## File > New
+## One file, two views
 
-**File > New.** Choose a DITA Topic or DocBook template so Author mode gets a toolbar. Save with lowercase hyphens. Confirm tabs Text, Grid, Author.
+The tabs under the page are **Author**, **Text**, and **Grid**.
 
-A loose file on the desktop will haunt you when the map looks for `topics/hello-concept.dita` and finds nothing.
+- **Author** — looks like a page. This is where you write on most days.
+- **Text** — the same page with **tags** (those angle brackets). The tags are the skeleton of the file.
+- **Grid** — looks a bit like a spreadsheet. You will almost never live here this week. Glance and leave.
 
-## Well-formed vs valid
+Author is not Microsoft Word. If a button on the toolbar is grey, the page type does not allow that thing in that spot. You will feel this later. Today, just switch tabs.
 
-**Well-formed** means tags nest and match (the blue check in Oxygen’s language). **Valid** also obeys a schema (the red check). Elements nest. Attributes hold `id` and props. Never leave a raw ampersand in text.
+## Word today
 
-Delete a closing tag in Text mode, watch the error, undo. That is the whole literacy.
+**Tag** — a label in angle brackets, like `<p>` around a paragraph. You do not need to memorise a list. You only need to see that Text view is the same file.
 
-## Project vs loose files
+## Watch
 
-Use a project folder or Oxygen project. Relative paths in maps assume you are not wandering the desktop. Master Files (later week) can rewrite references on rename. This week: pick a folder and stay there.
+The official WYSIWYG video shows Author as a page view, not as a fake Word. Watch for the tabs under the editor.
 
-## Live Tutorials
+## Do not
 
-Install the official Live Tutorials add-on inside Oxygen (**Help > Install new add-ons**). In-product missions beat a second browser tab.
+Do not delete a closing tag “to see what happens” unless you are ready to Undo. Tomorrow is soon enough for a safe broken file.

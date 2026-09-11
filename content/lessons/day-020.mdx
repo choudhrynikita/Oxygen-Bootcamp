@@ -1,101 +1,93 @@
 ---
 day: 20
 week: 3
-title: "Name files, then move them without silent breakage"
-objective: "Rename one topic with Master Files or a careful map edit, and prove a desktop-style FINAL(2) name never enters the pack."
-timeboxMinutes: 90
-skills: [maps, oxygenUi]
-legacyLessonIds: [t3-maps]
+title: A small handbook
+objective: "Ship a tiny booklet: the sample map, your pages, completeness clean. Do not publish a website yet."
+timeboxMinutes: 110
+skills: [maps, ditaTopics, oxygenUi]
+legacyLessonIds: [t3-maps, t3-topics]
 youtube:
-  - id: JkPeWea3Y3U
-    title: DITA Map Completeness Check
+  - id: ozFZz6YZMCY
+    title: DITA Maps Manager View in Oxygen XML Editor 19
     watchFor:
-      - Missing href after a move
-      - How many files the check visited
+      - The tree after your pages are in it
 sources:
   - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
-  - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/eppo-first-dita-topic.html", label: First DITA topic (Oxygen), dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
 lab:
   id: lab-20
-  title: Rename without lying to the map
-  pack: kitepump-dita
-  failWhen: "The map still points at the old path, or completeness is clean while a leftover xref uses the old name, or the new file lives on the desktop."
-  expected: pump-parts.dita in its new folder. Map and xrefs updated. Completeness clean. Naming topic in the map.
+  title: "Flower studio handbook, on the desk"
+  pack: flower-docs
+  failWhen: "A week-2 page is missing from the tree, or completeness reports a missing file."
+  expected: Tree lists at least three pages. Completeness clean. Count written down.
   steps:
-    - "Write the house rules in topics/file-naming.dita: lowercase, hyphens, no spaces, no FINAL, no (2), topic id matches basename when possible."
-    - Append that concept to the root map.
-    - "Rename parts-list.dita to pump-parts.dita. Update the topicref href. If your Oxygen project has Master Files enabled, use it and write that you did; if not, edit the map and search the pack for the old name."
-    - Run completeness. Then grep (Find in Files) for parts-list. Zero hits except the field note.
-    - Move pump-parts.dita into topics/ref/ (create the folder). Update href. Completeness clean.
-    - "Refuse a filename Pump Parts FINAL(2).dita — if a teammate sent one, save it under the house name instead."
+    - Open flowers.ditamap in Maps Manager. Set it as the root map.
+    - "The booklet should list at least: an explaining page, a how-to, and a lookup page. Add any that are missing from week 2."
+    - "If the sample has a product name that shows on a page, leave it. Do not fight it."
+    - Run completeness. Zero missing files.
+    - Do not publish a website or a PDF. Write how many pages the tree lists in oxygen-bootcamp-work/week3/day-20-count.txt.
 sessionQuests:
   - id: a
     block: A
-    title: Name lowercase-hyphen rules and what an OS-only rename forbids
+    title: Read the tree like a table of contents
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep hrefs true after rename and move
+    title: "Keep at least three pages in the booklet, completeness clean"
     minutes: 25
-    done: New path in the map. Find in Files clean. Completeness clean.
+    done: Count written. Completeness clean.
   - id: c
     block: C
-    title: "Rename in the OS only, read completeness, then fix every pointer"
+    title: "Pick why publish waits, and what “not in the tree” means"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [glossary-lightning, authors-dare]
-toolCards: [maps-manager]
-badgeId: null
+    done: Note saved.
+dailyBurstPool: [menu-path-race, one-line-repair]
+toolCards: [maps-manager, attributes]
+badgeId: map-is-a-book
 boss: false
 checks:
-  - { id: lab, prompt: pump-parts.dita in its new folder. Map and xrefs updated. Completeness clean. Naming topic in the map. }
+  - { id: lab, prompt: Tree lists at least three pages. Completeness clean. Count written down. }
 quiz:
-  - q: "You renamed a file in the OS file manager. Oxygen still opens the old tab. Completeness is red. First repair?"
-    answer: 1
-    why: The OS does not update DITA pointers. Completeness is telling the truth.
-    options:
-      - Ignore completeness — the tab is open
-      - "Update every href/key that pointed at the old path, then close the stale tab"
-      - Delete the map
-  - q: "Master Files can rewrite references on rename. When is that still not enough?"
-    answer: 1
-    why: Master Files updates project references. It does not search Slack. Find in Files after every rename.
-    options:
-      - Never — Master Files is magic
-      - "When a path lives in a comment, a SME email, or a file not in the project"
-      - When the file is a concept
-  - q: "Why refuse Hello Concept FINAL(2).dita?"
+  - q: "Why not publish a website today?"
     answer: 0
-    why: Oxygen can open it. Your map and your teammates cannot live with it.
+    why: Week 6 is publish. Today is “the book’s table of contents works.”
     options:
-      - "Spaces, capitals, and FINAL(2) break href discipline and collide on the next email"
-      - DITA forbids digits in filenames
-      - Oxygen cannot open files with parentheses
-fieldNotePrompt: "What leftover string would still say the old filename if you forgot Find in Files?"
-tomorrowHook: "Tomorrow is the Week 3 boss: a kitepump map you can break and repair without silent misses."
+      - A clean booklet is the apple. Publishing is a later week
+      - Oxygen cannot publish
+      - Publishing deletes the map
+  - q: "The how-to is on disk but not in the tree. Are you done?"
+    answer: 1
+    why: "The handbook is the tree, not the folder."
+    options:
+      - "Yes"
+      - "No — add the pointer, then run completeness"
+fieldNotePrompt: "How many pages are in your booklet, and which one is the how-to?"
+tomorrowHook: "Tomorrow is the week check. Passing it opens reuse (one product name, used everywhere)."
 ---
 
-## File naming
+## The week’s apple
 
-Lowercase. Hyphens. No spaces. No `FINAL`. No `(2)`. Basename matches topic id when you can. Maps live in `maps/`. Topics live in `topics/`. Images in `images/`.
+A **handbook** on this desk means:
 
-A teammate email named `Hello Concept FINAL(2).dita` gets saved under the house name. The email name never enters the pack.
+- A map (table of contents)
+- Pages it points at
+- Completeness clean
 
-## Moving files
-
-Move, then **update hrefs**. Enable **Master Files** on the map if your project allows it so Oxygen rewrites references on rename. Then **Find in Files** for the old name anyway.
-
-## Silent breakage
-
-The failure mode is completeness green on the current file and red on the book — or worse, green because the topicref still points at a copy you forgot. Run completeness on the **root map**.
+No website. No PDF. The sample shop’s flower-docs pack is the bench. Keep it.
 
 ## Figure
 
-Find in Files hits for `parts-list` going to zero. Caption: *Find in Files after rename. Completeness is necessary, not sufficient, if an xref was typed by hand.*
+A tree mock:
+
+1. Getting started → explaining page
+2. Care → how-to
+3. Studio hours → lookup
+
+Caption: *Maps Manager after you add your pages. Not the folder list.*

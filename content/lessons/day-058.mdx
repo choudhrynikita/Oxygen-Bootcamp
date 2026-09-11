@@ -1,8 +1,8 @@
 ---
 day: 58
 week: 9
-title: Create page and page properties
-objective: Log the Create Page wizard (template + title + name) and three page properties you would actually fill for Kitepump.
+title: Make a page (or walk a labeled mock)
+objective: "Log the Create Page wizard (template, title, name) and three page properties you would fill for Kitepump."
 timeboxMinutes: 90
 skills: [aemSites]
 legacyLessonIds: [t7-aem]
@@ -20,76 +20,82 @@ lab:
   id: lab-58
   title: "Field log: create page"
   pack: aem-author-field-log
-  failWhen: "You treat the page name as a topicref href, or you skip template choice, or you paste WKND developer setup as the lab."
+  failWhen: "You treat the page name as a booklet pointer, or you skip template choice, or you paste a developer setup as the lab."
   expected: "Log with parent, template, title, name. Three properties. Mock labeled."
   steps:
-    - "From video or instance: Create Page. Note: parent folder, template, title, name (URL fragment)."
-    - "Write oxygen-bootcamp-work/week9/field-log-58.txt with a fake-but-honest page: title Kitepump HP-40, name kitepump-hp-40, template (write the template name you saw, or ‘standard page template — verify’)."
-    - "Page properties: title, description, on/off time if shown. Do not invent SEO fields you did not see."
-    - "Write: the name field is not a DITA topic id, even if both are lowercase hyphens."
+    - "From video, instance, or labeled mock: Create Page. Note parent folder, template, title, and name (the URL bit)."
+    - "Write oxygen-bootcamp-work/week9/field-log-58.txt with a fillable page: title Kitepump HP-40, name kitepump-hp-40, template (write the template name you saw, or ‘standard page template — verify’)."
+    - "Page properties: title, description, on/off time if shown. Do not invent fields you did not see."
+    - "Write: the name field is not a DITA topic id, even if both are lowercase with hyphens."
     - "Labeled mock: Create Page wizard. Caption: mock."
 sessionQuests:
   - id: a
     block: A
-    title: "Name Create Page fields: template, title, name"
+    title: "Find Create Page: template, title, name"
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the Kitepump page log fillable
+    title: Fill a Kitepump page log from video or mock
     minutes: 25
     done: Four create fields + three properties. Mock labeled.
   - id: c
     block: C
-    title: Refuse a property you did not see in video or UI
+    title: "Pick name vs title, and what an AEM template is"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [warmup-match, one-line-repair]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [sites-console, page-editor]
 badgeId: null
 boss: false
 checks:
   - { id: lab, prompt: "Log with parent, template, title, name. Three properties. Mock labeled." }
 quiz:
-  - q: "Page name vs page title. Which one is the URL fragment?"
+  - q: "Page name vs page title. Which one is the URL bit?"
     answer: 1
     why: Title can change for display. Name is the path. Verify labels in your AEM version.
     options:
       - Title always
-      - Name (the node name) — title is the human heading
-      - The DITA shortdesc
-  - q: "You pick a template at create time. Can you casually swap it later like a DITA topic type?"
+      - Name — title is the human heading
+      - The short line under a DITA title
+  - q: "You pick a template at create time. Can you casually swap it later like a DITA page type?"
     answer: 1
     why: Authors choose from allowed templates. They do not redesign the template this week.
     options:
-      - "Yes, always frictionless"
-      - Often no — template is a contract with the page; changing it is a lead/developer move
-      - Templates are ditavals
-  - q: "WKND tutorial appears in sources. Are you developing WKND today?"
+      - "Yes, always easy"
+      - Often no — the template is the page shape they already built. Changing it is a lead or developer move
+      - Templates are ditaval files
+  - q: "A template here is the same as File > New in Oxygen. True or not?"
     answer: 1
-    why: Author week. Not a developer week.
+    why: Same English word. Two desks. Define it each time.
     options:
-      - Yes — clone the repo
-      - No — it is a reference for what an author site can look like
-      - Yes — deploy to production
-fieldNotePrompt: "What template name did you actually see (or explicitly mark verify)?"
-tomorrowHook: "Tomorrow Edit vs Preview — the page canvas is not Author mode, and Preview is not publish."
+      - True — both are File > New
+      - Not true. In Oxygen a template starts a help page. In AEM a template is the web-page shape already built for that site
+      - True if the name is lowercase
+fieldNotePrompt: "What template name did you actually see (or explicitly mark verify)? What title and name did you write?"
+tomorrowHook: Tomorrow Edit vs Preview. Neither is Publish. Neither is Oxygen’s Author view.
 ---
 
 ## Create Page
 
-**Create** → **Page**. Parent folder. **Template**. **Title**. **Name**. Then **Open** or **Done** (verify).
+**Create** → **Page**. Parent folder. **Template**. **Title**. **Name**. Then **Open** or **Done** (verify the button).
 
-Page **Properties** hold title, tags, appearance, cloud — fill what an author is asked to fill. Do not hunt developer tabs.
+A **template** here is the page shape the website team already built. It is not File > New in Oxygen.
 
-## Not DITA
+**Name** is the URL bit. **Title** is what people read. Lowercase hyphen names look like topic files. They are not. There is no concept template here.
 
-Lowercase hyphen names look like topic files. They are not. There is no `concept.dtd` here.
+Page **Properties** hold title, tags, times — fill what an author is asked to fill. Do not hunt developer tabs.
+
+If you have no instance, the wizard in the video plus a labeled mock is the lab.
+
+## Word today
+
+**Template** (AEM) — the web-page shape already built for that site. Not an Oxygen File > New starter.
 
 ## Figure
 

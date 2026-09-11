@@ -5,6 +5,26 @@ import { fileURLToPath } from "node:url";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const lessonDir = join(root, "content/lessons");
 const banned = /\b(lorem ipsum|TODO|FIXME|placeholder video|TBD)\b/i;
+const slop = [
+  /what it forbids/i,
+  /sits next to/i,
+  /keep the .{0,40} honest/i,
+  /clinic, not a ceremony/i,
+  /map surgery/i,
+  /desk-ready/i,
+  /hostage you/i,
+  /zero invented/i,
+  /if a slide says/i,
+  /wit is allowed/i,
+  /the model wins/i,
+  /CSS visual editing/i,
+  /When would you refuse/i,
+];
+
+const earlyAem = /\b(AEM|Guides|Sites console|Quick Publish|Content Fragment|Experience Fragment|Universal Editor|Core Components|DAM)\b/;
+const earlyMap = /\b(Maps Manager|topicref|ditamap|completeness)\b/i;
+const earlyKey = /\b(conref|keyref|conkeyref|DITAVAL|Schematron)\b/i;
+
 const ytId = /^[A-Za-z0-9_-]{11}$/;
 
 const errors = [];
@@ -34,6 +54,15 @@ for (let n = 1; n <= 90; n++) {
   }
   const raw = readFileSync(path, "utf8");
   if (banned.test(raw)) fail(`${name} contains banned placeholder text`);
+  for (const re of slop) {
+    if (re.test(raw)) fail(`${name} has AI-slop phrasing (${re})`);
+  }
+  if (n <= 7 && earlyAem.test(raw) && !/week 9/i.test(raw)) {
+    fail(`${name} teaches AEM before week 9`);
+  }
+  if (n <= 14 && earlyMap.test(raw)) fail(`${name} teaches maps before week 3`);
+  if (n <= 21 && earlyKey.test(raw)) fail(`${name} teaches reuse terms before week 4`);
+
   for (const field of ["objective:", "lab:", "sessionQuests:", "sources:", "dailyBurstPool:"]) {
     if (!raw.includes(field)) fail(`${name} missing ${field}`);
   }

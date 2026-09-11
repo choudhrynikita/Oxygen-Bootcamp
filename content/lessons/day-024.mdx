@@ -1,8 +1,8 @@
 ---
 day: 24
 week: 4
-title: conkeyref — the map owns the library too
-objective: Replace yesterday’s path conref with conkeyref so a folder move does not break the warning.
+title: "Point at the library by name, not by path"
+objective: "Give the library a name in the booklet, switch the warning pointer to that name, then move the file and confirm the how-to still works."
 timeboxMinutes: 90
 skills: [reuse, maps]
 legacyLessonIds: [t5-reuse, t5-keys]
@@ -10,94 +10,79 @@ youtube:
   - id: K_fjZn285Wo
     title: Working with DITA Reusable Components View
     watchFor:
-      - Reusable component inserted as a key
-      - conkeyref in Text mode
+      - A reusable chunk inserted with a name
+      - The pointer in Text after you switch it
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
   - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
   - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
 lab:
   id: lab-24
-  title: "Same warning, now a key"
+  title: "Same warning, now a name"
   pack: kitepump-dita
-  failWhen: "The task still uses a path conref, or you copied the sentence, or the key is undefined on the map."
-  expected: "conkeyref in both tasks. Map holds keys=\"warnings-lib\". Move did not edit the tasks. Completeness clean."
+  failWhen: "The how-to still uses a path pointer, or you copied the sentence, or the name is missing from the booklet."
+  expected: "Name pointers in both how-tos. The booklet holds keys=\"warnings-lib\". Moving the file did not mean editing the how-tos. Completeness clean."
   steps:
-    - "On the library topicref, set keys=\"warnings-lib\"."
-    - "In inflate-the-tire.dita, change the note from conref=path to conkeyref=\"warnings-lib/pinch-hazard\". Remove the path conref."
-    - Move warnings.dita into topics/library/ if it is not already there. Update the topicref href only — the task should still resolve via the key.
-    - Unset root map; confirm unresolved; restore.
-    - "Add the same conkeyref to a second task (create topics/bleed-the-valve.dita if needed, three cmds plus the warning)."
-    - "Completeness clean. Two tasks, one library sentence."
+    - "On the library page’s line in the booklet, set keys=\"warnings-lib\"."
+    - "In prime-the-pump.dita, change the warning from a path pointer (conref) to a name pointer: conkeyref=\"warnings-lib/pinch-hazard\". Remove the path form."
+    - Move warnings.dita into topics/library/ if it is not already there. Update only the booklet line’s path. The how-to should still resolve through the name.
+    - Unset the root map. Confirm the warning looks broken. Set the root map again.
+    - "Add the same name pointer to a second how-to (create topics/inflate-the-kite.dita if needed: three steps plus the warning)."
+    - "Completeness clean. Two how-tos, one library sentence."
 sessionQuests:
   - id: a
     block: A
-    title: Name conkeyref and what a leftover path conref forbids
+    title: Find the keys field on the library line in the booklet
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the warning on a key in two tasks
+    title: Switch the warning to a name pointer on two how-tos
     minutes: 25
-    done: Two conkeyrefs. Library moved. Tasks not edited for the move. Completeness clean.
+    done: Two name pointers. Library moved. How-tos not edited for the move. Completeness clean.
   - id: c
     block: C
-    title: "Break the key name, read unresolved, repair"
+    title: "Pick why a name beats a path, and what pinch-hazard is"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [menu-path-race, output-oracle]
+    done: Note saved.
+dailyBurstPool: [one-line-repair, authors-dare]
 toolCards: [maps-manager, attributes]
 badgeId: key-not-path
 boss: false
 checks:
-  - { id: lab, prompt: "conkeyref in both tasks. Map holds keys=\"warnings-lib\". Move did not edit the tasks. Completeness clean." }
+  - { id: lab, prompt: "Name pointers in both how-tos. The booklet holds keys=\"warnings-lib\". Moving the file did not mean editing the how-tos. Completeness clean." }
 quiz:
-  - q: "conkeyref is preferred over conref. Why, in one operational reason?"
-    answer: 1
-    why: "v1: conkeyref uses a key and is preferred. Keys are retargetable. Paths are not."
+  - q: "Why point at the library by a name in the booklet, not by a file path?"
+    answer: 0
+    why: "Move the library, update one booklet line. The how-tos keep the name."
     options:
-      - It is newer XML
-      - The map can retarget the library without editing every task
-      - conref is deprecated in DITA 1.3
-  - q: "conkeyref=\"warnings-lib/pinch-hazard\". What is pinch-hazard?"
+      - The booklet can retarget the library without editing every how-to
+      - Paths are not allowed on notes
+      - "A name is shorter to type, and that is the only reason"
+  - q: "The pointer says warnings-lib/pinch-hazard. What is pinch-hazard?"
     answer: 1
-    why: The key finds the topic. The id finds the element.
+    why: The name finds the page. The id finds the note.
     options:
-      - A filename
-      - An element id inside the key’s target topic
-      - A ditaval flag
-  - q: "You leave both conref and conkeyref on the same note. What should you do?"
-    answer: 1
-    why: Processors pick a precedence. You should not have to remember it under deadline.
-    options:
-      - Keep both as fallback
-      - Keep one. Two pointers is a fight when they disagree
-      - Convert the note to a keyword
-fieldNotePrompt: "If the library file moves again next month, which file do you expect to edit?"
-tomorrowHook: "Tomorrow you peek at key scopes — enough to not panic, not enough to design a CCMS."
+      - A file name
+      - The id of the note inside the library page that name points at
+      - The product name in the booklet
+fieldNotePrompt: "When you moved the library file, which file did you edit — the booklet line, or the how-to pages?"
+tomorrowHook: "Tomorrow you put one booklet inside another, so the same name can mean two products."
 ---
 
-## conkeyref
+## Same chunk, better pointer
 
-Same chunk, better pointer. **conkeyref** is `key/id`. The map’s `keys="warnings-lib"` owns the file path.
+A **conkeyref** is a pointer that pulls a chunk by a **name in the booklet**, not by a file path. It looks like `name/id`.
 
-Move the library. Update one topicref. Tasks sleep through it.
+Give the library line `keys="warnings-lib"`. The how-to stores that name. Move the file. Update one booklet path. The how-tos sleep through it.
 
-## Practice
+If a sentence still exists twice, you are not done.
 
-This week is practice. You now have:
+## Word today
 
-- a product **keyref**
-- a warning **conkeyref**
-- a leftover **conref** you retired
-
-If any sentence still exists twice, you are not done.
-
-## Figure
-
-Text mode: `<note conkeyref="warnings-lib/pinch-hazard"/>`. Caption: *No path. No copied sentence.*
+**conkeyref** — a pointer that reuses a chunk by a name from the booklet, plus an id.

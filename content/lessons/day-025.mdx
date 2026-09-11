@@ -1,8 +1,8 @@
 ---
 day: 25
 week: 4
-title: "Key scopes — beginner, one nested map"
-objective: Put the same key name on two submaps with different values and show which value a topic sees.
+title: A booklet inside a booklet
+objective: "Put the same product name on two nested booklets with different values, and write which value each page shows."
 timeboxMinutes: 90
 skills: [reuse, maps]
 legacyLessonIds: [t5-keys]
@@ -10,88 +10,81 @@ youtube:
   - id: qepRkQxhTXQ
     title: DITA intro (Oxygen webinar)
     watchFor:
-      - Maps defining keys
-      - Why two products cannot share one flat key space blindly
+      - Maps that define names
+      - Two products that need the same name with different values
 sources:
   - { href: "https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part1-base/introduction/dita-release-overview.html", label: DITA 1.3 overview (OASIS), dated: 2018-12 }
   - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
 lab:
   id: lab-25
-  title: "Two scopes, one key name"
+  title: "Two nested booklets, one name"
   pack: kitepump-dita
-  failWhen: "Both products show the same name because scopes were omitted, or you nested more than one extra keyscope ‘to see what happens’ and cannot explain it."
-  expected: Two scoped submaps. Two different product-name values. Scope note explains what each topic saw.
+  failWhen: "Both products show the same name because the nested labels are missing, or you added extra nested levels you cannot explain."
+  expected: Two nested booklets. Two different product-name values. The note says what each page showed.
   steps:
-    - "Create maps/hp40.ditamap and maps/hp20.ditamap as submaps. Each keydef keys=\"product-name\" to a different string (HP-40 vs HP-20)."
-    - "Set keyscope on each mapref from the root (e.g. keyscope=\"hp40\" and keyscope=\"hp20\"). Verify the attribute name in your DITA version."
-    - Put a small concept in each submap that keyrefs product-name. Open each with the root map set.
-    - "Write oxygen-bootcamp-work/week4/scope-note.txt: which value each topic shows, and what you saw if you opened a topic with the wrong root."
-    - Do not try to merge HP-20 into flower-docs. Do not design a six-level scope tree.
-    - Completeness on the root map.
+    - "Create maps/kp2.ditamap and maps/kp1.ditamap as nested booklets. Each one sets keys=\"product-name\" to a different string (KP-2 vs KP-1)."
+    - "From the root booklet, point at each nested booklet. Set keyscope on each of those lines (for example keyscope=\"kp2\" and keyscope=\"kp1\"). If the label differs, write the label you see."
+    - Put a small explaining page in each nested booklet that uses product-name. Open each with the root map set.
+    - "Write oxygen-bootcamp-work/week4/scope-note.txt: which value each page shows."
+    - Do not add a third nested level. Do not merge this into flower-docs.
+    - Run completeness on the root map.
 sessionQuests:
   - id: a
     block: A
-    title: Name keyscope and what a flat collision forbids
+    title: Find where a booklet line can point at another booklet
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep HP-40 and HP-20 as two values of one key name
+    title: Give KP-2 and KP-1 their own nested booklets
     minutes: 25
-    done: Two scopes. Two strings. Scope note written. Completeness clean.
+    done: Two values. Scope note written. Completeness clean.
   - id: c
     block: C
-    title: "Remove one keyscope, watch the collision, restore it"
+    title: "Pick what happens with no branch label, and how a page writes the name inside one"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [glossary-lightning, authors-dare]
+    done: Note saved.
+dailyBurstPool: [one-line-repair, authors-dare]
 toolCards: [maps-manager, author-mode]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Two scoped submaps. Two different product-name values. Scope note explains what each topic saw. }
+  - { id: lab, prompt: Two nested booklets. Two different product-name values. The note says what each page showed. }
 quiz:
-  - q: "Without keyscope, two submaps both define product-name. What happens?"
+  - q: "Two nested booklets both set product-name, and you did not label the branches. What happens?"
     answer: 1
-    why: "Flat key space: one name, one binding. Scopes keep the same name in two chapters."
+    why: "Without a branch label, one name can only mean one thing. The other binding is lost."
     options:
-      - DITA merges the strings
-      - One definition wins (usually first in the map); the other is a collision you may not notice in Author
-      - Oxygen deletes the second submap
-  - q: "You are a junior author. A lead asks you to add a third keyscope level this afternoon. First move?"
-    answer: 1
-    why: Beginner scopes are one nested map. A tree you cannot draw will ship the wrong product name.
+      - The two strings join into one
+      - One value wins. You may not notice in Author that the other product is wrong
+      - Oxygen deletes the second nested booklet
+  - q: "Inside a labeled nested booklet, how do you write the product name on a page?"
+    answer: 0
+    why: "Inside that branch, the short name is enough."
     options:
-      - Do it — more scopes are more reuse
-      - "Ask which value a topic is supposed to see, and refuse a tree you cannot draw"
-      - Put the key in AEM page properties
-  - q: "keyref=\"hp40.product-name\" (explicit scope). When do you type that?"
-    answer: 1
-    why: "Inside the scoped map, product-name is enough. Qualified names are for crossing scopes on purpose."
-    options:
-      - Always — implicit scope is illegal
-      - When you are outside the scope and still need that product’s value
-      - Never in DITA 1.3
-fieldNotePrompt: "Draw the two-scope tree in words. If you cannot, you nested too far."
-tomorrowHook: Tomorrow you build a small warning library and reuse it without turning the book into a puzzle.
+      - Just the name (product-name) — the branch already applies
+      - You must type the folder path every time
+      - You cannot use a name inside a nested booklet
+fieldNotePrompt: "What product name did each nested booklet show on its page?"
+tomorrowHook: Tomorrow you build a small warning library and use every chunk.
 ---
 
-## Key scopes, beginner
+## One book, two inner books
 
-A **keyscope** puts a name on a branch of the map. Inside that branch, `product-name` means this product. A sibling branch may reuse the same key name.
+A map can point at another map. That inner file is still a table of contents. Call it a **nested booklet**.
 
-This is not a CCMS design course. One extra level. Draw it. If you cannot draw it, do not ship it.
+A **keyscope** is a label on that nested booklet’s line. Inside that branch, `product-name` means this product. A sibling branch may reuse the same name for a different product.
 
-## Collision
+One extra level. Draw it. If you cannot draw it, do not add more.
 
-Without scopes, two `keydef keys="product-name"` collide. One wins. Authors see the wrong pump.
+Without the label, two `keydef keys="product-name"` collide. One wins. A page can show the wrong pump.
 
-## Figure
+## Word today
 
-Root → mapref keyscope=hp40, mapref keyscope=hp20. Caption: *Same key name. Two bindings. Beginner shape only.*
+**keyscope** — a label on a nested booklet so the same name can mean two different things.

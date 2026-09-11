@@ -8,6 +8,7 @@ import { useBootcamp } from "@/lib/bootcamp/store";
 import type { DayDoc } from "@/lib/bootcamp/types";
 import { canUnlock } from "@progress/unlocks";
 import { rankFor } from "@game/xp";
+import { WEEK_THEMES } from "@/lib/bootcamp/weeks";
 
 type Summary = {
   day: number;
@@ -46,6 +47,9 @@ export function TodayClient({ catalog, day1 }: { catalog: Summary[]; day1: DayDo
   });
 
   const burstPool = current?.dailyBurstPool ?? day1.dailyBurstPool;
+  const dayNum = current?.day ?? 1;
+  const week = current?.week ?? 1;
+  const firstVisit = !days["1"]?.status || days["1"]?.status === "available";
 
   return (
     <div className="grid gap-4">
@@ -54,27 +58,37 @@ export function TodayClient({ catalog, day1 }: { catalog: Summary[]; day1: DayDo
           Today
         </p>
         <h1 className="mt-1 mb-0 text-3xl">
-          Day {current?.day ?? 1}: {current?.title ?? day1.title}
+          Day {dayNum}: {current?.title ?? day1.title}
         </h1>
         <p className="mt-1 text-muted">
-          {current?.timeboxMinutes ?? 90} min · Week {current?.week ?? 1} · Rank {rank.label}
+          About {current?.timeboxMinutes ?? 90} minutes · Week {week}: {WEEK_THEMES[week]} · {rank.label}
         </p>
       </header>
+
+      {firstVisit && dayNum === 1 ? (
+        <section className="rounded-xl border border-line bg-card p-4">
+          <h2 className="mt-0 font-[family-name:var(--font-sans)] text-base font-semibold">Welcome to the desk</h2>
+          <p className="mb-0">
+            You write help pages. This course puts you in Oxygen, the app writers use. Day 1 is
+            install and look around. That is enough. Adobe’s website tool waits until week 9.
+          </p>
+        </section>
+      ) : null}
 
       <StreakStrip />
 
       <section className="rounded-xl border border-line bg-card p-4">
-        <h2 className="mt-0 font-[family-name:var(--font-sans)] text-base font-semibold">Objective</h2>
+        <h2 className="mt-0 font-[family-name:var(--font-sans)] text-base font-semibold">What you will do</h2>
         <p className="mb-0">{current?.objective ?? day1.objective}</p>
         <div className="mt-3 flex flex-wrap gap-2">
           <Link
-            href={`/session/${current?.day ?? 1}`}
+            href={`/session/${dayNum}`}
             className="rounded-full bg-accent px-4 py-2 font-[family-name:var(--font-sans)] text-sm font-medium text-accent-fg no-underline"
           >
             Start session
           </Link>
           <Link
-            href={`/day/${current?.day ?? 1}`}
+            href={`/day/${dayNum}`}
             className="rounded-full border border-line px-4 py-2 font-[family-name:var(--font-sans)] text-sm no-underline"
           >
             Full day
@@ -92,11 +106,11 @@ export function TodayClient({ catalog, day1 }: { catalog: Summary[]; day1: DayDo
         <h2 className="mt-0 font-[family-name:var(--font-sans)] text-base font-semibold">Next unfinished lab</h2>
         <p className="mb-2">{current?.labTitle}</p>
         <p className="m-0 text-sm text-muted">
-          XP {game.xp} · badges {game.badges.length} · cards {game.cards.length}
+          {game.xp} XP · {game.badges.length} badges
         </p>
       </section>
 
-      <BurstPanel preferredPool={burstPool} />
+      <BurstPanel preferredPool={burstPool} currentDay={dayNum} />
 
       <label className="block">
         <span className="font-[family-name:var(--font-sans)] text-sm">Search days</span>
@@ -105,7 +119,7 @@ export function TodayClient({ catalog, day1 }: { catalog: Summary[]; day1: DayDo
           value={q}
           onChange={(e) => setQ(e.target.value)}
           className="mt-1 w-full rounded-md border border-line bg-card px-3 py-2"
-          placeholder="Maps, conref, Quick Publish…"
+          placeholder="Install, how-to, table of contents…"
         />
       </label>
       {q.trim() ? (
@@ -116,7 +130,7 @@ export function TodayClient({ catalog, day1 }: { catalog: Summary[]; day1: DayDo
               <li key={d.day} className="border-b border-line py-2">
                 {locked ? (
                   <span className="text-muted">
-                    Day {d.day} · {d.title} (locked)
+                    Day {d.day} · {d.title} (locked — finish the previous check)
                   </span>
                 ) : (
                   <Link href={`/day/${d.day}`}>

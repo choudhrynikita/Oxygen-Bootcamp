@@ -1,8 +1,8 @@
 ---
 day: 62
 week: 9
-title: Boss — AEM author literacy without smashing Oxygen
-objective: "Produce a seven-day field log that keeps Sites, Oxygen, and Guides distinct, and pass the Week 9 quiz."
+title: Week 9 check
+objective: "Gather this week’s field logs, keep Oxygen and AEM on two lines, and pass the quiz so week 10 can open."
 timeboxMinutes: 110
 skills: [aemSites, review]
 legacyLessonIds: [t7-aem]
@@ -10,98 +10,105 @@ youtube:
   - id: 7-Lcw5PejhI
     title: Go live faster with quick site creation in AEM
     watchFor:
-      - Site creation recap
+      - Site creation recap — the tree and going live
   - id: idByz7WrhbQ
     title: AEM from Headful to Headless (Adobe for Business)
     watchFor:
-      - AEM is more than one surface recap
+      - AEM is a website tool with more than one surface — recap only
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/basic-handling", label: AEM Basic Handling, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction", label: Core Components introduction, dated: 2026-09 }
 lab:
   id: lab-62
-  title: "Clinic: field logs 56–61"
+  title: Field logs 56–61 in one folder
   pack: aem-author-field-log
-  failWhen: "Logs smash AEM and Oxygen into one CMS, or Quick Publish is described as DITA-OT, or mocks are unlabeled."
-  expected: Clinic folder complete. Zero fake product names. Two-surface Kitepump plan. Verify-labels present.
+  failWhen: "Logs smash AEM and Oxygen into one app, or Quick Publish is described as DITA-OT, or mocks are unlabeled."
+  expected: Check folder complete. Zero fake product names. Two-desk Kitepump plan. Verify-labels present.
   steps:
-    - Gather field-log-56 through 61 into oxygen-bootcamp-work/week9-clinic/.
-    - Grep for ‘AEM Oxygen’. Zero hits. Grep for unlabeled ‘screenshot’ claims — every figure must say mock if it is a mock.
-    - "Write a one-page Kitepump plan: one landing page (Sites), one handbook (DITA in Oxygen). They share a product story, not a CMS."
+    - Gather field-log-56 through 61 into oxygen-bootcamp-work/week9-check/.
+    - Search your notes for the words AEM Oxygen. You should find zero hits. Every figure that is a mock must say mock.
+    - "Write a one-page Kitepump plan: one landing page (Sites), one handbook (DITA in Oxygen). They share a product story, not an app."
     - "Timed: list the menu path for Create Page and for Quick Publish as you understand them, with ‘verify label’ notes."
-    - Day 63 still unlocks if Day 61 lab is done.
+    - Pass the quiz. You can retry it. Week 10 stays locked until this day is finished (lab + quiz + a short note).
 sessionQuests:
   - id: a
     block: A
-    title: Name Sites vs Oxygen vs Guides
+    title: Name Sites vs Oxygen as two desks
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the clinic logs unsmashed
+    title: Gather the logs and write the two-desk Kitepump plan
     minutes: 25
-    done: Grep clean. Two-surface plan written. Labels verified.
+    done: Folder complete. Zero fake product names. Plan written.
   - id: c
     block: C
-    title: Explain Quick Publish without saying transform
+    title: Pass the quiz. Retry if you need to.
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [authors-dare, warmup-match]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [sites-console, page-editor]
 badgeId: aem-quick-publish
 boss: true
 checks:
-  - { id: lab, prompt: Clinic folder complete. Zero fake product names. Two-surface Kitepump plan. Verify-labels present. }
+  - { id: lab, prompt: Check folder complete. Zero fake product names. Two-desk Kitepump plan. Verify-labels present. }
 quiz:
-  - q: "You failed this boss. Does Day 63 stay locked?"
+  - q: "You failed this check. Does week 10 open anyway?"
     answer: 1
-    why: Boss badge waits. Curriculum week does not hostage you if Friday lab is done.
+    why: Next week waits until you can keep the two desks apart and name Quick Publish without saying transform. Retry is free.
     options:
-      - "Yes, forever"
-      - "No, if Friday (Day 61) lab is done the next week can unlock. The boss badge stays locked until you pass."
-      - "No, Daily Burst unlocks the week"
-  - q: "AEM Author is not DITA. Which object is DITA this week?"
+      - "Yes, the Friday page is enough"
+      - "No. Finish this day’s lab, quiz, and note. You can retry the quiz."
+      - "Yes, if you do the 5-minute warmup"
+  - q: "You have no AEM login this week. Can you still finish the labs?"
     answer: 1
-    why: "Two surfaces, one product story. Week 12 will require both."
-    options:
-      - The landing page Text component
-      - The kitepump handbook you still have in Oxygen
-      - Page properties
-  - q: "You have no AEM instance. Can you earn aem-quick-publish?"
-    answer: 1
-    why: The pack is aem-author-field-log. Honesty over fake access.
+    why: The pack is aem-author-field-log. A fake login is not the lab.
     options:
       - "No, impossible"
-      - Yes — a field log with a real checklist plus labeled mocks plus official video notes
-      - Only with a pirated screenshot
-  - q: "Guides stores DITA in AEM. That means the Sites console is Maps Manager. True?"
+      - Yes — a field log plus labeled mocks plus official video notes
+      - Only with a copied screenshot from the internet
+  - q: "AEM Author is not DITA. Which object is still DITA this week?"
     answer: 1
-    why: Guides has its own editors and map console. Sites is pages. Week 12.
+    why: "Two desks, one product story. The handbook did not move."
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: Write the two-surface Kitepump plan in four sentences.
-tomorrowHook: "Week 10: Core Components you actually insert — Text, Image, Teaser, Title, Container — still as an author."
+      - The landing page Text block
+      - The kitepump handbook you still have in Oxygen
+      - Page properties
+  - q: "There is a product called AEM Oxygen XML Editor. True or not?"
+    answer: 1
+    why: "Day 56. If it is in your notes, delete it."
+    options:
+      - True — that is the desktop app
+      - Not true. Oxygen is Syncro Soft. AEM is Adobe. Write the two names on two lines
+      - True in the Sites console
+fieldNotePrompt: Write the two-desk Kitepump plan in four sentences.
+tomorrowHook: "Week 10: you place Text, Image, and Teaser on a page — still as an author, still a mock if you have no login."
 ---
 
-## Clinic
+## A check, not a show
 
-This is a week boss. Your evidence is **field logs**, not a stolen instance.
+This is the week boss. Your evidence is **field logs**, not a stolen login.
 
-Fail it and **Day 63 still unlocks if Day 61 lab is done**. **aem-quick-publish** waits on an honest checklist.
+You already met these four facts. You are only proving you can name them.
 
-## Proof
-
-1. Author ≠ publish ≠ DITA-OT.
+1. Author ≠ publish ≠ last week’s DITA-OT run.
 2. Sites console ≠ Maps Manager.
 3. Edit ≠ Preview ≠ Publish.
-4. Page ≠ topic. Component ≠ conref.
+4. Page ≠ topic. Block ≠ how-to.
+
+Fail the quiz and **week 10 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week.
+
+If you have no instance, a field log with a real checklist plus labeled mocks plus official video notes is enough.
+
+## Word today
+
+**Two desks** — Oxygen for the handbook. AEM Sites for the web pages. One product story. Not one app.
 
 ## Figure
 

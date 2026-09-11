@@ -108,7 +108,7 @@ export function defaultQuests({ learn, doTitle, doDone, stress }) {
       block: "A",
       title: learn,
       minutes: 22,
-      done: "You named the official control and wrote what it forbids.",
+      done: "You can point to it on the screen.",
     },
     {
       id: "b",
@@ -122,14 +122,14 @@ export function defaultQuests({ learn, doTitle, doDone, stress }) {
       block: "C",
       title: stress,
       minutes: 22,
-      done: "Quiz score ≥ 70% and a one-sentence error note.",
+      done: "Quiz score at least 70%.",
     },
     {
       id: "d",
       block: "D",
-      title: "Write what you would tell a teammate",
+      title: "Write what you did today, in plain words",
       minutes: 20,
-      done: "Field note saved.",
+      done: "Note saved.",
     },
   ];
 }

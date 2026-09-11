@@ -1,7 +1,7 @@
 ---
 day: 88
 week: 12
-title: Oral exam sheet
+title: Talk-through sheet
 objective: Answer out loud (or in writing if you are alone) ten questions a hiring lead would actually ask.
 timeboxMinutes: 90
 skills: [review, xmlLiteracy, aemSites]
@@ -23,58 +23,79 @@ lab:
   id: lab-88
   title: Ten answers
   pack: guides-oxygen-handoff
-  failWhen: "Any answer mashes families, or #10 fails."
+  failWhen: "Any answer mixes the two desks, or #10 treats the fake product name as real."
   expected: "Ten short answers. #10 is a hard no on the fake product name."
   steps:
-    - 1. Author vs Text vs Grid.
+    - Write oxygen-bootcamp-work/week12/talk-through.txt.
+    - 1. Author vs Text vs Grid in Oxygen.
     - 2. Well-formed vs valid.
     - 3. Map vs topic.
     - 4. keyref vs href.
     - 5. Completeness vs schema.
     - 6. Local WebHelp vs Guides baseline.
-    - 7. Author vs publish (AEM).
+    - 7. Author vs publish in AEM.
     - 8. Page Editor vs Universal Editor vs Document Authoring.
     - 9. Guides vs Oxygen.
     - 10. Why there is no AEM Oxygen XML Editor.
-    - Write answers. Speak them if you can.
+    - Write short answers. Speak them if you can.
 sessionQuests:
   - id: a
     block: A
-    title: Name all ten prompts
+    title: Read the ten prompts before you write
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Ten answers exist
+    title: Write ten short answers
     minutes: 25
     done: "File saved. #10 correct."
   - id: c
     block: C
-    title: The question you still hedge
+    title: "Pick the fake product name, and draft vs release"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [authors-dare, warmup-match]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, output-oracle]
 toolCards: []
 badgeId: null
 boss: false
 checks:
   - { id: lab, prompt: "Ten short answers. #10 is a hard no on the fake product name." }
 quiz:
-  - q: "There is a product called AEM Oxygen XML Editor. True?"
+  - q: "There is a product called AEM Oxygen XML Editor. True or not?"
     answer: 1
-    why: "If you miss this on Day 88, start Day 1."
+    why: "If you miss this on day 88, go back to day 76 (and day 56)."
+    options:
+      - True — that is the connector
+      - Not true — Guides can open Oxygen. They are not one product
+      - True after an admin enables the button
+  - q: "Local WebHelp and a Guides baseline are the same publish. True or not?"
+    answer: 1
+    why: Question 6 on the sheet. Draft vs release.
     options:
       - "True"
-      - "False"
-fieldNotePrompt: "Which question did you hedge?"
-tomorrowHook: Written scenario exam and error clinic.
+      - "Not true — local is a draft, the baseline is the release on a Guides shop"
+      - True if both made HTML
+fieldNotePrompt: "Which of the ten questions did you hesitate on? Quote your answer."
+tomorrowHook: "Tomorrow: three written scenarios and a broken map to repair."
 ---
 
 ## Out loud
 
-Short answers. Concrete verbs. No slogans.
+Ten short answers. Concrete verbs. No slogans.
+
+You have met every word on this list. If one is fuzzy, open that week’s field log and rewrite the line.
+
+Number 10 is not a trick. There is no product called AEM Oxygen XML Editor.
+
+## Lab
+
+`talk-through.txt`. Ten answers. Speak them if you can.
+
+## Figure
+
+A numbered list of ten. Caption: *Short answers. Number 10 is no.*

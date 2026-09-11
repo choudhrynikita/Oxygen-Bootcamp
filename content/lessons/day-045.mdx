@@ -1,8 +1,8 @@
 ---
 day: 45
 week: 7
-title: Review workflow in Oxygen
-objective: "Track changes, comment, accept one, and refuse to mix Fusion comments with Guides review on the same file."
+title: Send a file out for review
+objective: "Turn on Track Changes, edit one command, add one comment, and accept the edit."
 timeboxMinutes: 90
 skills: [review, oxygenUi]
 legacyLessonIds: [t4-review]
@@ -10,7 +10,8 @@ youtube:
   - id: bnQwJZD58wY
     title: WYSIWYG XML Editing
     watchFor:
-      - Author canvas while Review is open
+      - Author canvas while you write
+      - Where a comment might sit on the page
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
@@ -18,53 +19,74 @@ lab:
   id: lab-45
   title: "One tracked edit, one comment, one accept"
   pack: kitepump-dita
-  failWhen: "You edited with Track Changes off and called it a review, or you mixed two review systems in the note."
-  expected: Review view shows the cycle. The one-line mixing rule is in the field note.
+  failWhen: "You edited with Track Changes off and called it a review, or you left the copy broken, or you never wrote which way you closed the comment."
+  expected: Review view shows the cycle. One accept. Comment noted. File opens clean.
   steps:
-    - Open prime-the-pump.dita. Turn on Track Changes (Review view — verify the label).
-    - Edit a cmd. Add a comment on the context paragraph.
-    - Accept the edit. Leave the comment or resolve it — write which you did.
-    - "Write one line: I will not mix Content Fusion comments and AEM Guides review on this file."
+    - Copy prime-the-pump.dita to oxygen-bootcamp-work/week7/prime-the-pump-review.dita so you do not wreck the sample.
+    - Open the copy. Turn on Track Changes (Review view — verify the label in your version).
+    - Edit one command (a cmd line). Add a comment on the context paragraph.
+    - Accept the edit. Leave the comment or resolve it — write which you did in oxygen-bootcamp-work/week7/review-cycle.txt.
+    - Save. The copy should open with no red error.
 sessionQuests:
   - id: a
     block: A
-    title: Name Review view and what mixing two systems forbids
+    title: Find Track Changes and the Review view
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Tracked edit still validates
+    title: "Edit, comment, accept on a copy of the how-to"
     minutes: 25
-    done: File valid. One accept. Mixing rule written.
+    done: One accept. Comment noted. File opens clean.
   - id: c
     block: C
-    title: Explain the leftover comment in one sentence
+    title: "Pick what Track Changes shows, and what leftover marks mean"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [output-oracle, glossary-lightning]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, one-line-repair]
 toolCards: [review]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Review view shows the cycle. The one-line mixing rule is in the field note. }
+  - { id: lab, prompt: Review view shows the cycle. One accept. Comment noted. File opens clean. }
 quiz:
-  - q: "You should run Content Fusion comments and AEM Guides review on the same topic at once. True?"
-    answer: 1
-    why: Two review systems on one file hide status. Pick the source of truth.
+  - q: "Track Changes is on. You edit a command. What should a reviewer see?"
+    answer: 0
+    why: Track Changes keeps the old and the new until a person decides. That is the review.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "Which review system does your team actually own?"
-tomorrowHook: Content Fusion as collaboration context — not a second CMS.
+      - "The new words marked as a change, until someone accepts or rejects them"
+      - Nothing — typing always hides the old words forever
+      - A new booklet file on the desktop
+  - q: "You left twelve leftover insertions in a page you want to ship. First move?"
+    answer: 0
+    why: Leftover marks are not a style. They are unfinished review. Finish them before you hand the file on.
+    options:
+      - "Accept or reject each one on purpose, then save"
+      - "Publish first, clean later"
+      - Rename the file to FINAL
+fieldNotePrompt: "What did you change in the command, and did you accept it? One or two sentences."
+tomorrowHook: Tomorrow you work with someone who does not live in Oxygen — a share they can open in a browser.
 ---
 
 ## Review view
 
-Insertions, deletions, comments. Accept/reject like a grown-up. Do not mix Content Fusion comments and AEM Guides review on the same file.
+**Track Changes** marks insertions and deletions so a second person can see what you did. **Comments** sit on a sentence. Accept or reject like a grown-up. Then save.
 
-Caption: *Review lives in a dockable view. Verify Review > Track Changes in your version.*
+Do not mix two review piles on the same file (desktop comments plus a second share tool, both half-done). Pick one pile. Finish it.
+
+## Word today
+
+**Track Changes** — a switch that marks what you type so a reviewer can accept or reject it.
+
+## Watch
+
+The WYSIWYG video is the page view. You want the same canvas with Review open. Verify the label **Review > Track Changes** in your version.
+
+## Lab
+
+A copy of the how-to. One edit. One comment. One accept. Write which way you closed the comment.

@@ -1,8 +1,8 @@
 ---
 day: 67
 week: 10
-title: "Experience Fragment awareness — reusable layout, not conref"
-objective: Explain XF as an AEM reusable layout chunk and write when you would still use a Core Component instead.
+title: Reuse a layout (not the same as Oxygen reuse)
+objective: "Explain an Experience Fragment as a reusable layout strip, and keep the handbook warning in DITA."
 timeboxMinutes: 90
 skills: [aemSites, reuse]
 legacyLessonIds: [t7-aem]
@@ -10,80 +10,86 @@ youtube:
   - id: idByz7WrhbQ
     title: AEM from Headful to Headless (Adobe for Business)
     watchFor:
-      - Fragments in the AEM family if mentioned
-      - Headless vs page layout
+      - "Fragments in the AEM family, if mentioned"
+      - A layout chunk vs a page of fields
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction", label: Core Components introduction, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/universal-editor/authoring-methods", label: AEM authoring methods, dated: 2026-09 }
 lab:
   id: lab-67
-  title: "Field log: XF vs conref vs CF"
+  title: "A promo strip, not a warning library"
   pack: aem-author-field-log
-  failWhen: "The log says XF is conref, or CF is XF, or a procedure is placed in an XF as the handbook."
-  expected: Three-way distinction written. One Kitepump XF idea. One refuse. Mock labeled.
+  failWhen: "The log says an Experience Fragment is a conref, or a procedure is stored in the fragment as the handbook."
+  expected: Three-way distinction written. One Kitepump promo idea. One ‘would not’. Mock labeled.
   steps:
-    - "Write oxygen-bootcamp-work/week10/field-log-67.txt: Experience Fragment = reusable page layout (header promo, footer strip). Content Fragment = structured fields for headless/other (Week 11). conref = DITA XML reuse."
-    - "Kitepump: a promo XF ‘Shop HP-40’ could appear on two pages. The pinch warning stays a DITA conkeyref."
-    - "Write when you would refuse XF: a one-off sentence, or a procedure."
+    - "Write oxygen-bootcamp-work/week10/field-log-67.txt: Experience Fragment = a reusable page layout (header promo, footer strip). Next week you will meet Content Fragments, which are fill-in forms. A DITA conref is XML reuse in Oxygen. Three different things."
+    - "Kitepump: a promo strip ‘Shop HP-40’ could appear on two pages. The pinch warning stays a DITA reuse in the handbook."
+    - "Write when you would not use an Experience Fragment: a one-off sentence, or a procedure."
     - "Labeled mock: two pages sharing a promo strip. Caption: mock. Not a conref arrow."
 sessionQuests:
   - id: a
     block: A
-    title: Name XF vs CF vs conref
+    title: See Experience Fragment as a reusable layout strip
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the pinch warning out of the XF
+    title: Keep the pinch warning in the handbook
     minutes: 25
     done: Three-way note written. Mock labeled.
   - id: c
     block: C
-    title: Refuse one smash synonym in your draft
+    title: Pick where the pinch warning lives
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [authors-dare, warmup-match]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [page-editor]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Three-way distinction written. One Kitepump XF idea. One refuse. Mock labeled. }
+  - { id: lab, prompt: Three-way distinction written. One Kitepump promo idea. One ‘would not’. Mock labeled. }
 quiz:
-  - q: "Reuse the pinch warning on two AEM pages via XF. Verdict?"
+  - q: "You want the pinch warning on two AEM pages. Do you put it in an Experience Fragment?"
     answer: 1
-    why: Safety library stays DITA. XF is layout.
+    why: Safety lines stay in the handbook. An Experience Fragment is layout.
     options:
-      - Perfect — XF is conref
-      - Wrong surface — that sentence is DITA; pages should link to the handbook or paraphrase without pretending to be the warning library
-      - Perfect — also keyref it
-  - q: "A header used on 40 pages. XF or copy-paste components?"
+      - Yes — an Experience Fragment is a conref
+      - "No — that sentence is DITA. Link to the handbook, or paraphrase. Do not pretend the fragment is the warning library"
+      - Yes — also add a keyref
+  - q: "A header used on 40 pages. Copy-paste the blocks each time, or reuse a layout strip?"
     answer: 1
-    why: That is the XF/template job.
+    why: Layout you would otherwise copy from page to page is the job.
     options:
       - Copy-paste
-      - XF (or the template) — layout reuse is the point
+      - Reuse a layout strip (Experience Fragment or the template) — that is the point
       - A DITA map
-  - q: "Content Fragments are this afternoon’s lab. True?"
-    answer: 1
-    why: Awareness of the name so you do not mix it with XF today.
-    options:
-      - "True"
-      - False — Week 11
-fieldNotePrompt: "What layout chunk on Kitepump would actually deserve an XF?"
-tomorrowHook: "Tomorrow annotations, versions, restore — author-level history, not Git."
+fieldNotePrompt: "What promo strip did you reuse, and on which two pages?"
+tomorrowHook: "Tomorrow: notes on the page, snapshots, and restore."
 ---
 
-## Experience Fragments
+## Reuse a layout
 
-v1: *Experience Fragments for reusable layout.* They are AEM. They are not `conref`. They are not Content Fragments.
+An **Experience Fragment** is a reusable chunk of page layout. A promo strip. A footer. Something you would otherwise copy from page to page.
 
-Use them for a promo strip you would otherwise copy from page to page. Do not store the handbook there.
+It is not a **conref**. A conref reuses a piece of XML in Oxygen. You did that in week 4. Different desk, different file.
+
+It is not a **Content Fragment**. That is a fill-in form of fields. You will meet it next week. Do not mix the names.
+
+Use an Experience Fragment for ‘Shop HP-40’ on two pages. Do not store the handbook there. Do not store a procedure there.
+
+## Word today
+
+**Experience Fragment** — a reusable strip of page layout in AEM.
+
+## Lab
+
+Three names in the log. One promo idea. One thing you would not put in the strip. Labeled mock.
 
 ## Figure
 

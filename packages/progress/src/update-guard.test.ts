@@ -23,7 +23,7 @@ describe("update guard", () => {
     const report: GuardReport = {
       needed: true,
       fromVersion: "2026.09.0",
-      toVersion: "2026.09.1",
+      toVersion: "2026.09.2",
       changedDays: [{ day: 3, reason: "lab changed" }],
       badgesKept: ["well-formed"],
       badgesDropped: [],
@@ -31,7 +31,7 @@ describe("update guard", () => {
     const next = applyGuard(s, "keep-skip", report, ["well-formed"], { "well-formed": 1 });
     assert.equal(next.days["1"].status, "complete");
     assert.equal(next.game.badges.includes("well-formed"), true);
-    assert.equal(next.curriculumVersion, "2026.09.1");
+    assert.equal(next.curriculumVersion, "2026.09.2");
   });
 
   it("drops badges whose lab no longer exists", () => {
@@ -47,7 +47,7 @@ describe("update guard", () => {
     const report: GuardReport = {
       needed: true,
       fromVersion: "old",
-      toVersion: "2026.09.1",
+      toVersion: "2026.09.2",
       changedDays: [],
       badgesKept: [],
       badgesDropped: ["ghost-badge"],

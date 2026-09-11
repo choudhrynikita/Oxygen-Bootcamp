@@ -1,8 +1,8 @@
 ---
 day: 49
 week: 7
-title: Collaboration clinic
-objective: "Repair a messy handoff: mixed review comments, a missing map, and a dual-source claim."
+title: Week 7 check
+objective: "Repair a messy handoff: a pack with no map, leftover Track Changes, and a note that claims two homes. Pass the quiz so week 8 can open."
 timeboxMinutes: 90
 skills: [review, maps]
 legacyLessonIds: []
@@ -10,64 +10,95 @@ youtube:
   - id: ozFZz6YZMCY
     title: DITA Maps Manager View in Oxygen XML Editor 19
     watchFor:
-      - Map as the unit of handoff
+      - The map as the unit you hand off
   - id: JkPeWea3Y3U
     title: DITA Map Completeness Check
     watchFor:
-      - Missing href after a bad zip
+      - A missing pointer after a bad pack
 sources:
   - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
 lab:
   id: lab-49
-  title: "Clinic: three handoff faults"
+  title: Three handoff faults
   pack: kitepump-dita
-  failWhen: "The clinic copy still has no map, or the Fusion sentence still says CMS."
-  expected: Map present. Review clean enough to ship. Fusion sentence corrected.
+  failWhen: "The check copy still has no map, or leftover insertions are still in the page, or the note still claims two homes."
+  expected: Map present. Review clean enough to send. One-home sentence. Send list written.
   steps:
-    - "Fault 1: a pack with topics and no map. Add the map. Completeness."
-    - "Fault 2: Track Changes left on with 12 leftover insertions. Accept or reject with intent. File validates."
-    - "Fault 3: a note that says ‘Fusion is our AEM CMS’. Rewrite it."
-    - "Timed: list the files you would send a SME in 60 seconds."
+    - Copy kitepump to oxygen-bootcamp-work/week7-check/ so you do not wreck the original.
+    - "Fault 1: make a pack with topics and no map, then add the map back. Run completeness."
+    - "Fault 2: turn on Track Changes, leave two leftover insertions, then accept or reject with intent. File opens clean."
+    - "Fault 3: a note that says ‘the files live on my desktop and in the zip and both are home’. Rewrite it to one home."
+    - "List the files you would send a reviewer, in 60 seconds, in oxygen-bootcamp-work/week7-check/send-list.txt."
+    - Pass the quiz. You can retry it. Week 8 stays locked until this day is finished (lab + quiz + a short note).
 sessionQuests:
   - id: a
     block: A
-    title: Name the three faults
+    title: Name the three faults from this week
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Clinic pack is a book again
+    title: Repair the check copy until it is a book again
     minutes: 25
-    done: Map + valid topics + honest Fusion line.
+    done: Map present. Review finished. One home. Send list written.
   - id: c
     block: C
-    title: SME file list in one sentence
+    title: Pass the quiz. Retry if you need to.
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [menu-path-race, output-oracle]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, one-line-repair]
 toolCards: [review, maps-manager]
 badgeId: null
 boss: true
 checks:
-  - { id: lab, prompt: Map present. Review clean enough to ship. Fusion sentence corrected. }
+  - { id: lab, prompt: Map present. Review clean enough to send. One-home sentence. Send list written. }
 quiz:
-  - q: "Day 50 unlocks only if this boss is perfect. True?"
+  - q: "You failed this check. Does week 8 open anyway?"
     answer: 1
-    why: Same rule as Week 1. Boss badge stays locked until you pass.
+    why: Next week waits until you can hand off a book with one home and a finished review. Retry is free.
     options:
-      - "True"
-      - False — Friday lab can unlock the next week; the badge waits
-fieldNotePrompt: "Which fault would have wasted a real reviewer an hour?"
-tomorrowHook: "Hard Oxygen: subject scheme, flags you must not turn on at work, broken maps."
+      - "Yes, the Friday page is enough"
+      - "No. Finish this day’s lab, quiz, and note. You can retry the quiz."
+      - "Yes, if you do the 5-minute warmup"
+  - q: "A reviewer pack is missing the map. What breaks?"
+    answer: 1
+    why: "The pack is a book. The map is the table of contents. No map, no book."
+    options:
+      - Nothing — each page is a full book
+      - "Pointers, keys, and neighbor pages. The reviewer cannot see the booklet"
+      - Help > About
+  - q: "Web Author is the same thing as the desktop app, just in a browser. What is still true?"
+    answer: 1
+    why: Thinner desk. Same writing app. You still pick one place the files live.
+    options:
+      - Every desktop button is in the browser tab
+      - Same company and same kind of page. Fewer tools. Completeness and local publish still live on the desktop
+      - The browser tab stores the only copy of the files
+fieldNotePrompt: Write the three faults and the one-line repair for each.
+tomorrowHook: "Week 8: when things break. Same words, slow booklets, a broken map you can repair. Still Oxygen."
 ---
 
-## Clinic
+## A check, not a show
 
-Handoffs fail in boring ways: no map, leftover markup, wrong product names. Repair them. Next week still unlocks if Day 48 lab is done.
+This is the week boss. You already met these faults. You are only proving you can name them.
+
+1. **No map in the pack** — you sent pages and no booklet.
+2. **Leftover Track Changes** — the review was not finished.
+3. **Two homes** — a desktop copy and a zip both claimed to be the real files.
+
+Fail the quiz and **week 8 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week.
+
+## Word today
+
+**Handoff** — giving someone else a pack they can open. Map, pages, cover note, one home.
+
+## Tone
+
+Messy packs are normal the first time. Repair them. Then go home.

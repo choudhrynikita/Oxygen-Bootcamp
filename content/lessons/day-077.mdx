@@ -1,8 +1,8 @@
 ---
 day: 77
 week: 12
-title: Checkout / check-in mental model
-objective: "Write the cycle: checkout, edit, check in — and what happens if you skip checkout."
+title: "Checkout and check-in, like borrowing a book"
+objective: "Write the cycle: checkout, edit, check in — and what goes wrong if two people skip the lock."
 timeboxMinutes: 90
 skills: [aemGuides, review]
 legacyLessonIds: [t7-connector]
@@ -10,7 +10,7 @@ youtube:
   - id: JkPeWea3Y3U
     title: DITA Map Completeness Check
     watchFor:
-      - "A book still needs a lock — different product, same idea of not clobbering"
+      - A book still needs a lock so two people do not overwrite the same page
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/overview", label: AEM Guides overview, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/install-conf-guide/editor-configs/editor-cloud-settings/conf-edit-in-oxygen", label: Configure Edit in Oxygen, dated: 2026-09 }
@@ -21,49 +21,78 @@ lab:
   failWhen: You describe checkout as AEM Sites Quick Publish.
   expected: Four sentences. Mock labeled if no instance.
   steps:
-    - "Write: checkout locks the topic so a teammate cannot overwrite you."
-    - "Write: edit in Guides or, if enabled, Edit in Oxygen."
-    - "Write: check in returns the lock and versions the topic in Guides."
-    - "Write the failure: skip checkout, two writers, last save wins or a conflict you cannot explain."
+    - Write oxygen-bootcamp-work/week12/field-log-77.txt with four sentences.
+    - Checkout locks the topic so a teammate cannot overwrite you. Like borrowing a library book.
+    - "Edit in Guides, or — if the desk allows it — Edit in Oxygen."
+    - Check in returns the lock and stores a version of the topic in Guides.
+    - "Skip checkout: two writers, last save wins, or a conflict you cannot explain."
     - "If you have Guides, complete one real cycle. If not, label this mock and still write the cycle."
 sessionQuests:
   - id: a
     block: A
-    title: Name checkout and what skipping it forbids
+    title: "See checkout as borrowing the topic, check-in as giving it back"
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Cycle card is complete
+    title: Write the four-sentence cycle card
     minutes: 25
-    done: Four sentences. No Sites mash-up.
+    done: Four sentences. No Sites mix-up.
   - id: c
     block: C
-    title: "Two writers, one topic, no lock"
+    title: "Pick checkout vs Preview, and what skip-the-lock does"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [glossary-lightning, authors-dare]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, output-oracle]
 toolCards: [guides-web-editor]
 badgeId: checkout-checkin
 boss: false
 checks:
   - { id: lab, prompt: Four sentences. Mock labeled if no instance. }
 quiz:
-  - q: "Checkout in Guides is the same as Preview in the Page Editor. True?"
+  - q: "Checkout in Guides is the same as Preview in the Page Editor. True or not?"
     answer: 1
-    why: Checkout is a lock on a DITA object. Preview is a Sites mode.
+    why: A lock is not a preview. Different desks.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "Have you ever overwritten someone by skipping a lock? What would you do now?"
-tomorrowHook: Edit in Oxygen as a configuration concept.
+      - True — both are a look-before-you-leap
+      - Not true — checkout is a lock on a DITA topic. Preview is a Sites view
+      - True on Cloud only
+  - q: "Two writers edit the same topic with no checkout. What often happens?"
+    answer: 1
+    why: Borrow the book. Write. Return it.
+    options:
+      - Guides merges every sentence automatically
+      - "Last save wins, or a conflict nobody can explain"
+      - The topic publishes itself
+fieldNotePrompt: Write the four sentences you put on the cycle card.
+tomorrowHook: "Tomorrow: the Edit in Oxygen button — what it means, and who turns it on."
 ---
 
-## Lock, edit, return
+## Borrow, write, return
 
-You do not need a live Guides box to learn the mental model. You do need the words right.
+**Checkout** locks the topic so a teammate cannot overwrite you. Like borrowing a library book. **Check-in** gives the book back and stores a version in Guides.
+
+In between, you edit. In Guides in the browser, or — if the desk allows it — in Oxygen on the desktop.
+
+You do not need a live Guides box to learn the words. You do need the words right. Checkout is not Preview. Checkout is not Quick Publish.
+
+Skip the lock and two people write the same file. Last save wins, or a conflict you cannot explain.
+
+## Word today
+
+**Checkout** — borrow the topic. It is locked for you.
+
+**Check-in** — give it back. Guides stores a version.
+
+## Lab
+
+Four sentences. Real cycle if you have Guides. Labeled mock if you do not.
+
+## Figure
+
+Labeled mock: Checkout → Edit → Check in. Caption: *Mock. A lock, not a publish.*

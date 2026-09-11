@@ -1,8 +1,8 @@
 ---
 day: 87
 week: 12
-title: Capstone delivery
-objective: Zip the DITA work folder (no out/ bloat) and export the AEM field log. List what a lead would open first.
+title: Hand in the work
+objective: "List what a lead would open first: the map, then the comparison sheet. Keep the zip small — no giant output folders."
 timeboxMinutes: 75
 skills: [review, publish]
 legacyLessonIds: [t7-capstone]
@@ -18,50 +18,76 @@ lab:
   id: lab-87
   title: Delivery list
   pack: guides-oxygen-handoff
-  failWhen: The zip includes binaries the CONTENT_BUDGET forbids.
+  failWhen: The zip includes huge binaries or a full WebHelp skin tree.
   expected: A short delivery list. First file named.
   steps:
-    - "List: map path, topic list, ditaval if any, transform log snippet, field-log.md, two-surfaces.md."
-    - Do not zip node_modules or 5 GB of WebHelp skins.
+    - Write oxygen-bootcamp-work/week12/delivery.txt.
+    - "List: map path, topic list, ditaval if any, transform log snippet, field-log files, two-surfaces.md."
+    - Do not zip node_modules or a huge WebHelp output folder.
     - "Write the first file a lead should open (the map, then the comparison sheet)."
 sessionQuests:
   - id: a
     block: A
-    title: Name the first file
+    title: Name the first file a lead opens
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Delivery list is small
+    title: Write a small delivery list
     minutes: 25
     done: List written. No bloat.
   - id: c
     block: C
-    title: What you left out on purpose
+    title: "Pick the first file, and what stays out of the zip"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [glossary-lightning, authors-dare]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, output-oracle]
 toolCards: [maps-manager]
 badgeId: null
 boss: false
 checks:
   - { id: lab, prompt: A short delivery list. First file named. }
 quiz:
-  - q: "The lead should open the WebHelp skin CSS first. True?"
+  - q: "The lead should open the WebHelp skin CSS first. True or not?"
     answer: 1
-    why: "The book, then the story across surfaces."
+    why: "The book, then the story across desks."
     options:
-      - "True"
-      - "False — map, then the comparison sheet"
-fieldNotePrompt: "First file a lead opens?"
-tomorrowHook: Oral exam sheet.
+      - True — pretty is proof
+      - "Not true — the map, then the comparison sheet"
+      - True if the CSS is short
+  - q: "Why leave the huge WebHelp folder out of the zip?"
+    answer: 1
+    why: Small zip. Rebuild the draft if someone needs it.
+    options:
+      - Leads cannot open HTML
+      - The list plus the map is the handoff. The giant output is a draft you can rebuild
+      - Git requires skins
+fieldNotePrompt: "What is the first file a lead opens? Write the path."
+tomorrowHook: "Tomorrow: a talk-through sheet. Ten answers, out loud if you can."
 ---
 
 ## Hand it over
 
-Small zip. Honest list. No skins, no DAM dumps.
+Small zip. Short list. No skins, no library dumps, no `node_modules`.
+
+A lead opens:
+
+1. The **map**
+2. The **comparison sheet** (`two-surfaces.md`)
+
+Then the field logs, then a transform snippet. That order.
+
+If you built WebHelp, keep a note that it is a draft. Do not ship a 5 GB output tree.
+
+## Lab
+
+`delivery.txt`. First file named. Zip stays small.
+
+## Figure
+
+A short list on a page. Caption: *Map first. Comparison second.*

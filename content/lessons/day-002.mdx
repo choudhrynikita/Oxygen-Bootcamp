@@ -1,105 +1,94 @@
 ---
 day: 2
 week: 1
-title: "Install Oxygen, then Author vs Text vs Grid"
-objective: "Install a trial of Oxygen XML Author, launch it, and edit one sentence in Author, Text, and Grid."
-timeboxMinutes: 90
-skills: [oxygenUi, xmlLiteracy]
-legacyLessonIds: [t1-install, t2-modes]
+title: Open a sample and type a sentence
+objective: "Open the sample page, type one sentence, and save the file."
+timeboxMinutes: 80
+skills: [oxygenUi]
+legacyLessonIds: [t1-xml]
 youtube:
   - id: PiCWAIiKx78
     title: Getting Started with Oxygen XML Editor
     watchFor:
-      - First launch layout
-      - Where Help > About lives
-  - id: bnQwJZD58wY
-    title: WYSIWYG XML Editing
-    watchFor:
-      - Author mode canvas
-      - How Enter opens content completion
+      - File > Open
+      - How a page looks in the big middle area
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
-  - { href: "https://www.oxygenxml.com/doc/ug-author/", label: Oxygen XML Author User Guide, dated: 2026-09 }
-  - { href: "https://www.oxygenxml.com/videos.html", label: Oxygen official video catalog, dated: 2026-09 }
+  - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/eppo-first-dita-topic.html", label: First DITA topic (Oxygen), dated: 2026-09 }
 lab:
   id: lab-2
-  title: "Same sentence, three modes"
+  title: One sentence in the sample
   pack: flower-docs
-  failWhen: "You only opened Author and never switched tabs, or you left a raw unescaped ampersand in the sentence."
-  expected: Version recorded. The new sentence exists in Author and Text. File still validates.
+  failWhen: "You typed in a notes app instead of Oxygen, or you did not save, or the sentence is gone after reopen."
+  expected: "The sample file opens, the extra sentence is there after save and reopen, and you wrote the path down."
   steps:
-    - Download the standalone kit from oxygenxml.com. Install it. Remember the folder — add-ons live under plugins/.
-    - Launch. Register a trial or license. Open Help > About. Write the version in oxygen-bootcamp-work/day-02-version.txt.
-    - File > Open samples/flower-docs/topics/hello-concept.dita.
-    - "In Author mode, add a sentence under the first paragraph: The desk copy is a sample, not a live catalog."
-    - Switch to Text. Find that sentence in XML. Do not break a tag.
-    - Switch to Grid. Confirm the same paragraph exists as a row. Switch back to Author.
-    - "If you cannot install today, complete the labeled mock in this lesson and record why in the version file. Still write the three-mode observation."
+    - "In Oxygen: File > Open. Open samples/flower-docs/topics/hello-concept.dita from this course."
+    - "Click in the big writing area. Add this sentence under the first paragraph: The desk copy is a sample, not a live catalog."
+    - Save (Ctrl+S or Cmd+S). Confirm the file name in the tab still ends with .dita.
+    - Close the file. Open it again. Your sentence should still be there.
+    - Write the full path of the file in oxygen-bootcamp-work/day-02-path.txt.
 sessionQuests:
   - id: a
     block: A
-    title: "Name Author, Text, and Grid and what each forbids"
+    title: Find File > Open and the Save command
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: File still validates after the extra sentence
+    title: Type one sentence in the sample and save
     minutes: 25
-    done: hello-concept.dita validates and the sentence is in both Author and Text.
+    done: The sentence is still there after you reopen the file.
   - id: c
     block: C
-    title: Find the ampersand if you used one
+    title: "Pick how you open a file, and how you prove a save"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [one-line-repair, menu-path-race]
-toolCards: [author-mode, text-mode]
+    done: Note saved.
+dailyBurstPool: [warmup-match, menu-path-race]
+toolCards: [author-mode]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Version recorded. The new sentence exists in Author and Text. File still validates. }
+  - { id: lab, prompt: "The sample file opens, the extra sentence is there after save and reopen, and you wrote the path down." }
 quiz:
-  - q: "Which mode is CSS visual editing for daily DITA writing?"
-    answer: 1
-    why: Author mode renders XML with CSS. Grid is repetitive data. Schema Design is for XSD architects.
+  - q: "How do you open a page that already exists?"
+    answer: 0
+    why: File > Open picks a file on disk. Help > About is only the version.
     options:
-      - Grid
-      - Author
-      - Schema Design
-  - q: "You type & in Author for “Assets & workflow”. What must the XML contain?"
+      - File > Open
+      - Help > About
+      - Close the app and hope
+  - q: "You typed a sentence and the tab still shows the file name. What should you do before you quit?"
     answer: 1
-    why: "A raw ampersand is not well-formed. Author should insert & for you. Check Text mode."
+    why: "If it is not saved, it is not in the file. Reopen is how you prove it."
     options:
-      - "A raw &"
-      - "&"
-      - A comment around the word and
-fieldNotePrompt: "When would you refuse to stay in Author and drop to Text?"
-tomorrowHook: Tomorrow you use File > New and save a topic with lowercase hyphens.
+      - Nothing — typing is enough
+      - "Save, then open the file again to check"
+      - Rename it to FINAL
+fieldNotePrompt: "Where does the file live on your computer? Paste the path."
+tomorrowHook: "Tomorrow you look at the same file two ways: as a page, and as tags."
 ---
 
-## Install
+## A page is a file
 
-Download the standalone kit from oxygenxml.com. Install and remember the folder. Add-ons live under `plugins/`. Launch and register a trial or license. Open the bundled sample project if the installer offers it. Turn on automatic validation.
+Yesterday you opened the app. Today you open a **page**. A page is just a file. This course ships a tiny sample shop called flower-docs. You will write into it, not into a blank desktop file.
 
-Write the version from **Help > About**. If your menu label differs, write “verify this label in your version” next to it and keep going.
+**File > Open** → `samples/flower-docs/topics/hello-concept.dita`.
 
-## Three writer modes
+The big middle area is where you type. Add one sentence. **Save**. Close. Open it again. If the sentence is still there, you did the job.
 
-- **Text** — surgery. You see tags. You can break well-formedness in one keystroke.
-- **Grid** — repetitive data. Rows and cells. Not a novel.
-- **Author** — CSS visual writing. Enter opens **content completion**, not “new paragraph at all costs.”
-- **Schema Design** — XSD architects. You will not live here this week.
+## Word today
 
-Author is not Word. The content model still wins. If a toolbar action is disabled, the parent element does not allow that child.
+**Topic** — one help page in its own file. Today you edited a topic. You do not need other kinds of pages yet.
 
-## Figure
+## If the file will not open
 
-Bottom tabs on the editor stack: Text · Grid · Author. Caption: *Menu path: the tabs under the editor, not Window > Perspective.*
+Use File > Open, not drag-onto-Slack. The file name should end in `.dita`. If Oxygen asks which type it is, pick a DITA topic.
 
-## Video
+## Lab
 
-WYSIWYG XML Editing shows Author as CSS, not as a fake word processor. Watch for content completion on Enter.
+One sentence, saved, still there after reopen. Write the path down so you can find it tomorrow.

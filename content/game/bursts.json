@@ -1,161 +1,205 @@
 [
   {
-    "id": "wm-maps",
+    "id": "wm-about",
     "type": "warmup-match",
-    "prompt": "The dockable tree that is the book, not the folder list. Official name?",
-    "options": ["Project view", "DITA Maps Manager", "Sites console"],
+    "fromDay": 1,
+    "prompt": "Where do you read the Oxygen version number?",
+    "options": ["Help > About", "File > Open", "The Recycle Bin"],
+    "answer": 0,
+    "why": "Help > About shows the version.",
+    "skill": "oxygenUi"
+  },
+  {
+    "id": "wm-author",
+    "type": "warmup-match",
+    "fromDay": 3,
+    "prompt": "Which view looks like a normal page while you write?",
+    "options": ["Grid", "Author", "Help > About"],
     "answer": 1,
-    "why": "Maps Manager is publication structure. Project view is files. Sites is AEM.",
-    "skill": "maps"
+    "why": "Author is the page view. Text shows tags. Grid looks like a spreadsheet.",
+    "skill": "oxygenUi"
   },
   {
     "id": "wm-outline",
     "type": "warmup-match",
-    "prompt": "Right rail that shows the element tree of the current topic. Official name?",
-    "options": ["Attributes", "Outline", "Transformation"],
+    "fromDay": 5,
+    "prompt": "Which side list jumps you to a paragraph in the current page?",
+    "options": ["Attributes", "Outline", "Help > About"],
     "answer": 1,
-    "why": "Outline is the element tree. Attributes is the selected node’s properties.",
+    "why": "Outline lists the pieces of the page. Attributes is the selected piece’s properties.",
     "skill": "oxygenUi"
+  },
+  {
+    "id": "wm-maps",
+    "type": "warmup-match",
+    "fromDay": 16,
+    "prompt": "Which tree is the booklet, not the folder list?",
+    "options": ["Project view", "DITA Maps Manager", "The desktop"],
+    "answer": 1,
+    "why": "Maps Manager is the booklet. Project view is files on disk.",
+    "skill": "maps"
   },
   {
     "id": "wm-sites",
     "type": "warmup-match",
-    "prompt": "AEM rail where you create a page under a site. Official name?",
-    "options": ["Maps Manager", "Sites console", "Review view"],
+    "fromDay": 57,
+    "prompt": "In Adobe’s website tool, where do you make a web page?",
+    "options": ["Maps Manager", "Sites console", "Help > About"],
     "answer": 1,
-    "why": "Pages are created in Sites. Maps Manager is Oxygen.",
+    "why": "Web pages are made in Sites. Maps Manager is Oxygen.",
     "skill": "aemSites"
   },
   {
     "id": "wm-qp",
     "type": "warmup-match",
-    "prompt": "AEM action that replicates selected pages without opening the full workflow model. Official name?",
-    "options": ["Quick Publish", "Apply Transformation Scenario", "Check in"],
+    "fromDay": 61,
+    "prompt": "Which action sends a web page live in AEM without a long workflow?",
+    "options": ["Quick Publish", "Save in Oxygen", "Help > About"],
     "answer": 0,
-    "why": "Quick Publish is Sites. Transformation is Oxygen. Check in is Guides.",
+    "why": "Quick Publish is an AEM Sites action. Saving in Oxygen does not send a web page live.",
     "skill": "aemSites"
   },
   {
     "id": "rep-amp",
     "type": "one-line-repair",
+    "fromDay": 5,
     "prompt": "First real error in this snippet:\n<concept id=\"x\"><title>Assets & workflow</title></concept>",
     "options": [
-      "concept cannot have a title",
-      "Raw ampersand in text — not well-formed",
-      "Missing shortdesc is a schema error in all DITA"
+      "A concept cannot have a title",
+      "A raw & in the text breaks the tags",
+      "The file is too short"
     ],
     "answer": 1,
-    "why": "A raw & breaks well-formedness. Shortdesc is often optional. Title is required and present.",
+    "why": "A raw & is not well-formed. The title is fine.",
     "skill": "xmlLiteracy"
   },
   {
     "id": "rep-task",
     "type": "one-line-repair",
-    "prompt": "First real error:\n<task id=\"t\"><title>Do it</title><taskbody><p>Just click OK.</p></taskbody></task>",
+    "fromDay": 9,
+    "prompt": "First real problem:\nA how-to page with no steps, only a paragraph that says “Just click OK.”",
     "options": [
-      "A task body with a lone p and no steps is the wrong model for a procedure",
-      "id must be numeric",
-      "title is illegal in task"
+      "A how-to needs real steps, not a story paragraph",
+      "The id must be a number",
+      "How-to pages cannot have a title"
     ],
     "answer": 0,
-    "why": "Procedures belong in steps/cmd. A paragraph is not a task. The other two claims are false.",
+    "why": "A task is a procedure. Put the work in steps.",
     "skill": "ditaTopics"
   },
   {
     "id": "rep-map",
     "type": "one-line-repair",
-    "prompt": "First real error in a map topicref href=\"Topics/Hello Concept.dita\" when the file is topics/hello-concept.dita",
+    "fromDay": 19,
+    "prompt": "The booklet points at Topics/Hello Concept.dita but the file is topics/hello-concept.dita. First problem?",
     "options": [
-      "href is case- and space-sensitive; this will miss on most systems",
-      "Maps cannot point at concepts",
-      "You must use an AEM path"
+      "The path must match the real file name — spaces and capital letters often break it",
+      "Booklets cannot point at explaining pages",
+      "You must put the file on the desktop"
     ],
     "answer": 0,
-    "why": "File naming rules: lowercase hyphens. Mixed case and spaces break silently on some servers.",
-    "skill": "maps"
-  },
-  {
-    "id": "menu-append",
-    "type": "menu-path-race",
-    "prompt": "Goal: append a child topic to a map node.",
-    "options": [
-      "DITA Maps Manager → right-click node → Append Child → Reference",
-      "File → New → Schema Design",
-      "AEM Sites → Create → Workflow"
-    ],
-    "answer": 0,
-    "why": "Append Child lives on the map node in Maps Manager. Verify the label in your version.",
+    "why": "Lowercase hyphens. Match the disk name.",
     "skill": "maps"
   },
   {
     "id": "menu-new",
     "type": "menu-path-race",
-    "prompt": "Goal: create a DITA concept with a toolbar.",
+    "fromDay": 4,
+    "prompt": "Make a new explaining page with a writing toolbar.",
     "options": [
       "File → New → DITA Concept template",
-      "Tools → XML Schema to JSON",
-      "Sites → Create → Content Fragment"
+      "Help → About",
+      "Close the app"
     ],
     "answer": 0,
-    "why": "The New wizard template attaches the DITA framework. A blank XML file will not.",
+    "why": "The template gives Oxygen the right kind of page.",
     "skill": "oxygenUi"
+  },
+  {
+    "id": "menu-open",
+    "type": "menu-path-race",
+    "fromDay": 2,
+    "prompt": "Open a page that already exists.",
+    "options": ["File → Open", "Help → About", "File → Exit"],
+    "answer": 0,
+    "why": "File > Open picks a file on disk.",
+    "skill": "oxygenUi"
+  },
+  {
+    "id": "menu-append",
+    "type": "menu-path-race",
+    "fromDay": 17,
+    "prompt": "Add a page to the booklet.",
+    "options": [
+      "Maps Manager → right-click a line → Append Child → Reference",
+      "File → New → Schema Design",
+      "Help → About"
+    ],
+    "answer": 0,
+    "why": "Append Child adds a pointer from the booklet to a page.",
+    "skill": "maps"
   },
   {
     "id": "menu-complete",
     "type": "menu-path-race",
-    "prompt": "Goal: check the book for missing hrefs and keys.",
+    "fromDay": 18,
+    "prompt": "Check that every pointer in the booklet still finds a file.",
     "options": [
       "Maps Manager → Validate and Check for Completeness",
       "Help → About",
-      "Assets → Publish"
+      "File → Exit"
     ],
     "answer": 0,
-    "why": "Completeness is a map action, not a topic-only validate.",
+    "why": "Completeness is a booklet check, not Help > About.",
     "skill": "maps"
   },
   {
     "id": "out-wh",
     "type": "output-oracle",
-    "prompt": "WebHelp built but a topic is missing from the TOC. First place you look?",
+    "fromDay": 37,
+    "prompt": "The draft site built, but a page is missing from the contents. First place you look?",
     "options": [
-      "The map topicref, then completeness",
-      "AEM dispatcher flush",
-      "The Oxygen license"
+      "The booklet pointer, then completeness",
+      "The Oxygen license",
+      "The streak calendar"
     ],
     "answer": 0,
-    "why": "If it is not in the map, it will not be in the book. Completeness first.",
+    "why": "If it is not in the booklet, it will not be in the site.",
     "skill": "publish"
   },
   {
     "id": "out-pdf",
     "type": "output-oracle",
-    "prompt": "PDF transform failed. First place you look?",
+    "fromDay": 40,
+    "prompt": "The PDF failed. First place you look?",
     "options": [
-      "The transformation log for the first error",
-      "The Sites console",
-      "The streak calendar"
+      "The log, for the first real error",
+      "The streak calendar",
+      "Help > About"
     ],
     "answer": 0,
-    "why": "Read the log. The first error is usually a missing file, invalid map, or engine path.",
+    "why": "Read the first error. It is usually a missing file or a broken booklet.",
     "skill": "publish"
   },
   {
     "id": "out-key",
     "type": "output-oracle",
-    "prompt": "keyref shows as unresolved in Author. First place you look?",
+    "fromDay": 22,
+    "prompt": "A product name is not filling in on the page. First place you look?",
     "options": [
-      "Root map setting, then the keydef",
-      "Core Components policy",
-      "Git LFS"
+      "Whether the root booklet is set, then the name defined in that booklet",
+      "The colour of Author view",
+      "The desktop"
     ],
     "answer": 0,
-    "why": "Keys resolve from the root map. No root map, no keys.",
+    "why": "Names in the booklet only work if that booklet is the root map.",
     "skill": "reuse"
   },
   {
     "id": "dare-12",
     "type": "authors-dare",
-    "prompt": "Rewrite this shortdesc under the constraint.",
+    "fromDay": 8,
+    "prompt": "Rewrite this short line under the title. Keep it short.",
     "dare": {
       "text": "This topic provides an overview of the product and how users can get started with it in a comprehensive manner.",
       "forbidden": "overview",
@@ -166,7 +210,8 @@
   {
     "id": "dare-warn",
     "type": "authors-dare",
-    "prompt": "Rewrite this note for a warning. No 'please'.",
+    "fromDay": 11,
+    "prompt": "Rewrite this as a warning. Do not use the word please.",
     "dare": {
       "text": "Please be sure to unplug the pump before you change the washer or you might get hurt.",
       "forbidden": "please",
@@ -175,17 +220,27 @@
     "skill": "ditaTopics"
   },
   {
+    "id": "gloss-early",
+    "type": "glossary-lightning",
+    "fromDay": 5,
+    "prompt": "Five cards from words you have already met. Pick the matching meaning.",
+    "skill": "xmlLiteracy",
+    "why": "Warmup recorded. It does not finish today’s lesson."
+  },
+  {
     "id": "gloss-reuse",
     "type": "glossary-lightning",
-    "prompt": "Five cards from recent terms. Pick the definition, not the decoy.",
+    "fromDay": 22,
+    "prompt": "Five cards from words you have already met. Pick the matching meaning.",
     "skill": "reuse",
-    "why": "Burst recorded. Curriculum day is unchanged."
+    "why": "Warmup recorded. It does not finish today’s lesson."
   },
   {
     "id": "gloss-checkout",
     "type": "glossary-lightning",
-    "prompt": "Five cards. Checkout, workflow payload, ditaval, keyref, well-formed.",
+    "fromDay": 77,
+    "prompt": "Five cards from words you have already met. Pick the matching meaning.",
     "skill": "aemGuides",
-    "why": "Burst recorded. Curriculum day is unchanged."
+    "why": "Warmup recorded. It does not finish today’s lesson."
   }
 ]

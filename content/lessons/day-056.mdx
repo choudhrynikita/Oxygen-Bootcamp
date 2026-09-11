@@ -1,8 +1,8 @@
 ---
 day: 56
 week: 9
-title: AEM author vs publish — you are not a developer this week
-objective: "Write what the author environment is for, what the publish environment is for, and why a DITA map is not an AEM page."
+title: Another team writes web pages in Adobe
+objective: "Write what AEM is, what Oxygen still is, and why they are not the same product."
 timeboxMinutes: 90
 skills: [aemSites]
 legacyLessonIds: [t7-aem]
@@ -10,86 +10,103 @@ youtube:
   - id: idByz7WrhbQ
     title: AEM from Headful to Headless (Adobe for Business)
     watchFor:
-      - Headful Sites vs headless mentions
-      - That AEM is more than one authoring surface
+      - That Adobe has a website tool with an editing side
+      - You are only looking — you will not build a headless site today
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/quick-start", label: AEM as a Cloud Service authoring quick start, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/getting-started/first-steps", label: AEM 6.5 first steps for authors, dated: 2026-09 }
 lab:
   id: lab-56
-  title: "Field log: author vs publish vs Oxygen"
+  title: "Field log: two desks"
   pack: aem-author-field-log
-  failWhen: "The log names AEM Oxygen XML Editor, or treats publish as ‘the PDF button’, or claims Guides is a Sites theme."
+  failWhen: "The log names AEM Oxygen XML Editor as a real product, or treats publish as last week’s PDF button, or has no mock caption."
   expected: Four factual sentences. Mock labeled. Landing-page rule present.
   steps:
-    - You may not have an AEM instance. That is expected. Use official video + labeled mocks + this field log.
-    - "Create oxygen-bootcamp-work/week9/field-log-56.txt with four sentences: (1) Author is where you edit pages. (2) Publish is what the site visitor hits. (3) Oxygen is Syncro Soft desktop DITA. (4) There is no product named AEM Oxygen XML Editor."
-    - "Add: a campaign landing page belongs in Sites first, not in a DITA map."
+    - "You may not have an AEM login. That is expected. Use the official video, the labeled mock in the pack, and this field log."
+    - "Create oxygen-bootcamp-work/week9/field-log-56.txt with four sentences: (1) Author is where the website team edits pages. (2) Publish is what a site visitor hits. (3) Oxygen is the Syncro Soft writing app you have used since week 1. (4) There is no product named AEM Oxygen XML Editor."
+    - "Add: a campaign landing page belongs on the website team’s desk first, not in your DITA booklet."
     - "Sketch or paste a labeled mock: two boxes, Author | Publish. Caption: mock."
-    - Do not install AEM locally as this lab. Do not treat WKND code as an authoring exercise.
+    - Do not install AEM on your laptop as this lab. Do not treat a developer tutorial as an authoring exercise.
 sessionQuests:
   - id: a
     block: A
-    title: "Name author, publish, and Oxygen as three different things"
+    title: Watch the official video and open the labeled mock
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the four sentences honest
+    title: Write the four sentences and caption the mock
     minutes: 25
     done: Log written. Mock labeled. No fake product name.
   - id: c
     block: C
-    title: Catch publish-as-PDF in your own draft and delete it
+    title: "Pick what AEM is, what Oxygen still is, and what author vs publish means"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [glossary-lightning, authors-dare]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [sites-console]
 badgeId: null
 boss: false
 checks:
   - { id: lab, prompt: Four factual sentences. Mock labeled. Landing-page rule present. }
 quiz:
-  - q: "Campaign landing pages should be written in Oxygen. True?"
-    answer: 1
-    why: "v1: Landing pages belong in AEM Sites. Oxygen is structured XML topics."
+  - q: "What is AEM, in one line?"
+    answer: 0
+    why: AEM is Adobe Experience Manager. It is a different desk. You still write help pages in Oxygen.
     options:
-      - "True"
-      - "False"
-  - q: "Author vs publish: you Quick Publish a page. What did you ask AEM to do?"
+      - Adobe’s website tool. Another team writes web pages in it
+      - The Syncro Soft writing app you installed in week 1
+      - A PDF engine
+  - q: "Oxygen and AEM are the same product. True or not?"
     answer: 1
-    why: "Publish is a topology, not a transform scenario."
+    why: Two companies. Two apps. They can hand work to each other later. They are not one editor.
     options:
-      - Run DITA-OT
-      - Activate the page (and often its assets) to the publish environment
-      - Commit to Git
-  - q: "Why are this week’s screenshots called mocks if you have no instance?"
-    answer: 1
-    why: "Content policy: label mocks as mocks. Do not use stock photos as product UI."
+      - True — the name is AEM Oxygen XML Editor
+      - Not true. Oxygen is Syncro Soft. AEM is Adobe. There is no product called AEM Oxygen XML Editor
+      - "True — they both save files, so they are one app"
+  - q: "Author vs publish: what is the difference?"
+    answer: 0
+    why: Two environments. Edit on author. Visitors see publish. This is not a transform scenario.
     options:
-      - To hide Adobe UI
-      - Official UI is copyrighted; labeled mocks plus Experience League videos are the honest substitute
-      - Mocks are graded as code
-fieldNotePrompt: "When would you refuse to write a procedure as a Sites Text component?"
-tomorrowHook: "Tomorrow the Sites console — where pages live as a tree, not as a ditamap."
+      - Author is where they edit. Publish is the live copy a visitor hits
+      - Author is Oxygen. Publish is a DITA map
+      - They are two names for last week’s WebHelp folder
+fieldNotePrompt: "What four sentences did you write? Paste them."
+tomorrowHook: Tomorrow the Sites tree — where their pages live. It is not your booklet.
 ---
 
-## AEM as an author
+## A different desk
 
-v1: *AEM Author is pages, assets, fragments, and workflows. Use Sites for marketing pages, Content Fragments for headless fields, Experience Fragments for reusable layout, and AEM Guides for DITA stored in the DAM.*
+You have been writing help pages in **Oxygen**, the Syncro Soft writing app, since week 1.
 
-This week is **Sites**. You are an author, not a developer. You will not deploy WKND as code.
+Another team writes web pages in a tool called **AEM** (Adobe Experience Manager). Adobe makes it. It is a website tool. Landing pages, marketing pages, the public site.
+
+Oxygen is still your writing app. AEM is still their website tool. They are not the same product. There is no product called “AEM Oxygen XML Editor.” If a search hit or a coworker’s note uses that mash-up, it is still wrong. Write the two names on two lines in your notes.
 
 ## Author vs publish
 
-**Author** is the editing environment. **Publish** is the public (or internal) live copy. Quick Publish copies selected trees. This is not DITA-OT.
+**Author** is the editing environment — where the website team changes a page.
+
+**Publish** is the live copy a visitor hits.
+
+That pair is not last week’s WebHelp folder. You are not running DITA-OT. You are not making a PDF.
+
+You will hear extra words in the video (headless, cloud). Skip them today. You only need: another team, another app, author vs publish.
+
+## Word today
+
+**AEM** — Adobe’s website tool. Not Oxygen. Not your booklet.
 
 ## Figure
 
-Labeled mock: two servers, author left, publish right. Caption: *Mock. Not a screenshot of a customer instance.*
+Labeled mock: two boxes, Author | Publish. Caption: *Mock. Not a screenshot of a customer instance.*
+
+## Lab
+
+Four sentences. Mock labeled. If you have no login, the pack `aem-author-field-log` is the work.

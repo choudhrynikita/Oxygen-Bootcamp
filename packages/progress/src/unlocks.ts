@@ -24,16 +24,19 @@ export function dayRecord(state: LearnerState, day: number): DayRecord {
   return state.days[String(day)] ?? emptyDay();
 }
 
-/** Next week still unlocks if the Friday lab is done, even when the boss failed. */
+/**
+ * Day 1 is open.
+ * Day N opens when day N−1 is lab_done / checked / complete — except the day
+ * after a week boss, which waits until that boss is complete (lab + quiz + note).
+ * Friday lab alone does not open next week. Warmup never unlocks a day.
+ */
 export function canUnlock(state: LearnerState, day: number): boolean {
   if (day <= 1) return true;
   const prev = dayRecord(state, day - 1);
-  if (isProgressed(prev.status)) return true;
   if (BOSS_DAYS.includes(day - 1)) {
-    const friday = FRIDAY_DAYS.find((f) => f === day - 2) ?? day - 2;
-    return isProgressed(dayRecord(state, friday).status);
+    return prev.status === "complete";
   }
-  return false;
+  return isProgressed(prev.status);
 }
 
 export function syncLocks(state: LearnerState, totalDays = 90): LearnerState {

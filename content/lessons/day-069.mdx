@@ -1,8 +1,8 @@
 ---
 day: 69
 week: 10
-title: Boss — Core Components desk and a workflow you can name
-objective: "Name Text, Image, Teaser, Title, Container, XF awareness, plus one author workflow, without fighting the template."
+title: Week 10 check
+objective: "Name Title, Text, Image, Teaser, Container, and Experience Fragment on a landing skeleton, plus one way to ship the page."
 timeboxMinutes: 110
 skills: [aemSites, review]
 legacyLessonIds: [t7-aem]
@@ -10,99 +10,104 @@ youtube:
   - id: idByz7WrhbQ
     title: AEM from Headful to Headless (Adobe for Business)
     watchFor:
-      - Surfaces recap
+      - "Blocks on a page, recap"
   - id: VcMI0zWIKdg
     title: How to Build a Global Site in AEM Sites
     watchFor:
-      - A finished site recap
+      - "A finished site, recap"
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction", label: Core Components introduction, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/basic-handling", label: AEM Basic Handling, dated: 2026-09 }
 lab:
   id: lab-69
-  title: "Clinic: landing skeleton + workflow"
+  title: Landing skeleton plus a ship path
   pack: aem-author-field-log
-  failWhen: "Skeleton missing a component you claimed, or workflow unnamed, or smash-words remain, or mocks unlabeled."
-  expected: Skeleton + workflow name. Grep clean. Badge evidence is the named desk kit.
+  failWhen: "Skeleton missing a block you claimed, or the ship path is unnamed, or mixed names remain, or mocks have no caption."
+  expected: Skeleton plus a workflow name or Quick Publish. Names clean. Mock labeled.
   steps:
-    - "Gather field-log-63 through 68. Add field-log-69.txt: Kitepump landing skeleton (Title, Image+alt, Text, Container of Teasers, optional XF promo). Two refuses (no handbook paste, no nested-container hobby)."
-    - "Read a page-workflow topic on Experience League (request activation, or the workflow your docs show). Write the workflow name and who starts it. If your desk uses only Quick Publish, write that as the honest workflow."
-    - Grep clinic folder for conref=XF or ‘Author mode’ meaning Page Editor. Fix hits.
+    - "Gather field-log-63 through 68. Add field-log-69.txt: Kitepump landing skeleton (Title, Image with alt, Text, Container of Teasers, optional Experience Fragment promo). Two ‘will not’ lines (no handbook paste, no nested-box hobby)."
+    - "Read a page-workflow topic on Experience League (request activation, or the path your docs show). Write the name and who starts it. If your desk uses only Quick Publish, write that."
+    - "A **workflow** is a named path that asks someone (or the system) to publish. Quick Publish is the short path you met last week. Name the one you would actually click."
+    - "Check the week10 folder: no sentence that calls an Experience Fragment a conref. No sentence that calls Page Editor ‘Author mode’."
     - "Labeled mock: the landing skeleton. Caption: mock."
-    - Day 70 still unlocks if Day 68 lab is done.
+    - Pass the quiz. Week 11 stays locked until this day is finished (lab + quiz + a short note).
 sessionQuests:
   - id: a
     block: A
-    title: Name the Core Components kit and one workflow
+    title: List the blocks on the Kitepump landing page
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the landing skeleton honest
+    title: Write the skeleton and one ship path
     minutes: 25
-    done: Skeleton + workflow + grep clean. Mock labeled.
+    done: Skeleton plus workflow or Quick Publish. Mock labeled.
   - id: c
     block: C
-    title: Refuse template fighting in one sentence
+    title: Pass the quiz. Retry if you need to.
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [one-line-repair, menu-path-race]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [page-editor, sites-console]
 badgeId: core-components-desk
 boss: true
 checks:
-  - { id: lab, prompt: Skeleton + workflow name. Grep clean. Badge evidence is the named desk kit. }
+  - { id: lab, prompt: Skeleton plus a workflow name or Quick Publish. Names clean. Mock labeled. }
 quiz:
-  - q: "You failed this boss. Does Day 70 stay locked?"
+  - q: "You failed this check. Does week 11 open anyway?"
     answer: 1
-    why: Boss badge waits.
+    why: Next week waits until you can name the blocks and one way to ship. Retry is free.
     options:
-      - "Yes, forever"
-      - "No, if Friday (Day 68) lab is done the next week can unlock. The boss badge stays locked until you pass."
-      - "No, Daily Burst unlocks the week"
-  - q: "core-components-desk means you implemented HTL. True?"
+      - "Yes, Friday’s log is enough"
+      - "No. Finish this day’s lab, quiz, and note. You can retry the quiz."
+      - "Yes, if you do the 5-minute warmup"
+  - q: "The core-components-desk badge means you wrote the code behind Title and Text. True or not?"
     answer: 1
-    why: It means you can name and use the author kit. Developers implement.
+    why: This week is author work. You insert the blocks. You do not implement them.
     options:
-      - "True"
-      - "False"
-  - q: "A workflow ‘Request for Activation’ vs Quick Publish. Why name yours?"
+      - True — authors write the code
+      - Not true — you can name and use the blocks. Developers build them
+      - True on Cloud only
+  - q: "You restore an old hero, then Quick Publish without looking. What can go wrong?"
     answer: 1
-    why: Author-level workflows. Name the one you would actually click.
+    why: Restore is on author. Publish is a second step. Check the picture too.
     options:
-      - Trivia
-      - Some desks forbid Quick Publish; the runbook name is the craft
-      - Workflows are DITA-OT
-  - q: "Restore then Quick Publish without looking. Risk?"
-    answer: 1
-    why: Checklist still applies.
-    options:
-      - None
-      - You may ship an old hero or unpublish-needed asset state you did not check
-      - AEM blocks it always
-fieldNotePrompt: List the components on the Kitepump landing and the workflow that would ship it.
-tomorrowHook: "Week 11: Universal Editor vs Page Editor vs Document Authoring, Content Fragments, Assets, language copies."
+      - Nothing — restore is always safe
+      - "You may ship an old picture, or a picture that was never published"
+      - AEM blocks it every time
+fieldNotePrompt: List the blocks on the Kitepump landing and the ship path you named.
+tomorrowHook: "Week 11: three ways people write in AEM. Names first."
 ---
 
-## Clinic
+## A check, not a show
 
-This is a week boss. **core-components-desk** is a named kit: Title, Text, Image, Teaser, Container, XF awareness — plus a workflow name.
+This is the week boss. You already met these blocks. You are proving you can name them.
 
-Fail it and **Day 70 still unlocks if Day 68 lab is done**.
+- **Title, Text, Image, Teaser, Container**
+- **Experience Fragment** as a layout strip, not a DITA reuse
+- One **workflow** (a named path to ask for publish) or **Quick Publish** if that is the path your desk uses
+
+Fail the quiz and **week 11 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week.
+
+You may not have AEM. The evidence is the field log, the labeled mock, and the official video. That is enough.
+
+## Word today
+
+**Workflow** — a named path that asks for publish. Quick Publish is the short path. Some desks want the longer named path. Write the one you would click.
 
 ## Proof
 
 1. Landing skeleton without handbook paste.
 2. Alt phrases.
-3. No layout hobby.
-4. One workflow or an honest Quick Publish.
+3. No extra nested boxes.
+4. One ship path.
 
 ## Figure
 
-Labeled mock of the landing. Caption: *Mock. Same product story as kitepump-dita, different surface.*
+Labeled mock of the landing. Caption: *Mock. Same product story as the handbook, different desk.*

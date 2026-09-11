@@ -10,10 +10,14 @@ export const BURST_TYPES = [
 export type BurstType = (typeof BURST_TYPES)[number];
 
 export function burstPoolForDay(day: number): BurstType[] {
-  const offset = Math.floor((day - 1) / 6) % 6;
-  const primary = (((day - 1) % 6) + offset) % 6;
-  const secondary = (primary + 1) % 6;
-  return [BURST_TYPES[primary], BURST_TYPES[secondary]];
+  if (day <= 7) return ["warmup-match", "menu-path-race"];
+  if (day <= 14) return ["warmup-match", "one-line-repair"];
+  if (day <= 21) return ["menu-path-race", "one-line-repair"];
+  if (day <= 35) return ["one-line-repair", "authors-dare"];
+  if (day <= 42) return ["output-oracle", "one-line-repair"];
+  if (day <= 55) return ["glossary-lightning", "one-line-repair"];
+  if (day <= 75) return ["warmup-match", "glossary-lightning"];
+  return ["glossary-lightning", "output-oracle"];
 }
 
 /** Never the same type two calendar days in a row. */

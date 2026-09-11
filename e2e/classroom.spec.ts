@@ -4,9 +4,9 @@ test.describe("Oxygen Bootcamp classroom", () => {
   test("home is Today, not a marketing hero", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText("Day");
-    await expect(page.getByRole("heading", { name: /Daily Burst/i })).toBeVisible();
+    await expect(page.getByRole("heading", { name: /Today’s warmup|Today's warmup|Daily Burst/i })).toBeVisible();
     await expect(page.getByText("Next unfinished lab")).toBeVisible();
-    await expect(page.getByRole("searchbox").or(page.getByPlaceholder(/Maps, conref/i))).toBeVisible();
+    await expect(page.getByPlaceholder(/Install, how-to|Maps, conref/i)).toBeVisible();
     await expect(page.getByText(/exciting journey/i)).toHaveCount(0);
   });
 

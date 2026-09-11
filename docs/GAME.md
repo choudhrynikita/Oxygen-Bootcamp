@@ -2,15 +2,16 @@
 
 This is a craft game. Points follow proof of work. Watching a video is never enough to earn a badge.
 
-Curriculum version this document describes: `2026.09.1`.
+Curriculum version this document describes: `2026.09.2`.
 
 ## What is stored
 
 One JSON document in `localStorage` key `oxygen-bootcamp-state-v1`. Schema is in `packages/progress`. Export from Settings. No account.
 
-## Daily Burst (5–8 minutes)
+## Daily warmup (5–8 minutes)
 
-Shown on Today. One burst per local calendar day. Completing it **ticks the streak** and awards a small XP packet. It does **not** mark the curriculum day complete.
+Shown on Today. One warmup per local calendar day. Completing it **ticks the streak** and awards a small XP packet. It does **not** mark the curriculum day complete. Items have a `fromDay` so day 1 cannot ask about maps or AEM.
+
 
 Types (runtime never serves the same type two calendar days in a row):
 
@@ -76,7 +77,8 @@ If days are ahead of XP, rank stays at the last rank whose **both** gates pass.
 
 Dry names. Earned from labs that can fail. See `content/game/badges.json`. Watching a video can be a quest step; the badge waits for the lab.
 
-Week boss badge stays locked on fail even if next week unlocks.
+Week check badge stays locked on fail. Next week stays locked until the boss day is `complete`.
+
 
 ## Tool cards
 

@@ -1,105 +1,105 @@
 ---
 day: 1
 week: 1
-title: Structured authoring sits next to WYSIWYG
-objective: Tell a teammate why a DITA topic in Oxygen and an AEM page in Sites can both be right — and what you must not mix.
-timeboxMinutes: 90
-skills: [xmlLiteracy, aemSites]
-legacyLessonIds: [t0-what]
+title: Install Oxygen and look around
+objective: "Download Oxygen, open it, and write down the version from Help > About."
+timeboxMinutes: 75
+skills: [oxygenUi]
+legacyLessonIds: [t1-install]
 youtube:
   - id: PiCWAIiKx78
     title: Getting Started with Oxygen XML Editor
     watchFor:
-      - How the presenter names Oxygen XML Editor (Syncro Soft)
-      - The four editing modes on the editor stack
+      - The window when the app first opens
+      - Where the menus sit at the top
 sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
-  - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/documentation.html", label: Oxygen documentation hub, dated: 2026-09 }
 lab:
   id: lab-1
-  title: "Four sentences, four surfaces"
+  title: Get the app open
   pack: flower-docs
-  failWhen: "Any sentence names a product 'AEM Oxygen XML Editor' or treats Guides as a theme for Sites."
-  expected: Four factual sentences. No invented product name.
+  failWhen: You never opened the app (or the mock) and you have no version note.
+  expected: "A version number in day-01-version.txt, or a mock note that says why the app is not installed."
   steps:
-    - Open a notes file (plain text is fine).
-    - "Write one sentence: what Oxygen XML Editor is for (desktop XML / DITA)."
-    - "Write one sentence: what AEM Sites Page Editor is for (pages, components)."
-    - "Write one sentence: what AEM Guides is for (DITA in the AEM repository)."
-    - "Write one sentence: what you will not call this stack (there is no product named AEM Oxygen XML Editor)."
-    - Save the note in oxygen-bootcamp-work/day-01-surfaces.txt.
+    - Go to oxygenxml.com and download Oxygen XML Author or Oxygen XML Editor (the trial is fine).
+    - Install it and open it. You should see a window with menus at the top and a big empty area in the middle.
+    - Open Help > About. Write the version in a plain text file named oxygen-bootcamp-work/day-01-version.txt.
+    - "Walk the window once: top menus, left side, bottom tabs if any are showing. You do not have to name them yet."
+    - "If you cannot install today, look at the labeled mock in this lesson, write why you could not install, and still write what you see in the mock."
 sessionQuests:
   - id: a
     block: A
-    title: Name the three surfaces and what each forbids
+    title: Find Help > About and read the version
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the four-sentence note honest
+    title: "Install Oxygen, or complete the mock and say why"
     minutes: 25
-    done: The note has four sentences and zero invented product names.
+    done: "Version is written down, or the mock note is saved."
   - id: c
     block: C
-    title: Catch the fake product name
+    title: "Pick what Oxygen is, and where the version lives"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [warmup-match, one-line-repair]
+    done: Note saved.
+dailyBurstPool: [warmup-match, menu-path-race]
 toolCards: []
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Four factual sentences. No invented product name. }
+  - { id: lab, prompt: "A version number in day-01-version.txt, or a mock note that says why the app is not installed." }
 quiz:
-  - q: "A campaign landing page with a hero image and form belongs where first?"
-    answer: 1
-    why: "Landing pages are Sites work. Oxygen is for structured XML topics, not marketing page layout."
+  - q: "What is Oxygen, in one line?"
+    answer: 0
+    why: Oxygen is the app on your computer (or in a browser later) where you write structured help pages.
     options:
-      - A DITA map in Oxygen
-      - AEM Sites (Page Editor or Universal Editor)
-      - A Schematron file
-  - q: "AEM Guides can launch desktop Oxygen. That means Adobe ships Oxygen. True?"
+      - A writing app for help pages stored as files
+      - A website you publish to customers
+      - A photo editor
+  - q: "Where do you read the version number?"
     answer: 1
-    why: Oxygen is Syncro Soft. Guides can open it through a connector. The products stay distinct.
+    why: "Help > About shows the version. If your menu label is slightly different, write that next to the number and keep going."
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "In one sentence, when would you refuse to write a procedure as a Sites Text component?"
-tomorrowHook: Tomorrow you install Oxygen XML Author and learn Author vs Text vs Grid by touching the same sentence in each.
+      - File > New
+      - Help > About
+      - The Recycle Bin
+fieldNotePrompt: "What did the window look like when it first opened? Two sentences is enough."
+tomorrowHook: Tomorrow you open a sample page and type one sentence.
 ---
 
-## Sit next to this
+## You got a desk
 
-You will use two families of tools on one team.
+You were hired to write help pages. Those pages are files on a computer. **Oxygen** is the writing app you will live in for most of this course.
 
-**Oxygen XML Author / Editor / Web Author** is a Syncro Soft desktop (and browser) suite for XML. Writers live in Author mode. Developers live in Text mode. You validate, reuse, and publish DITA from here.
+Today you only install it and look at the window. You will not write a real page yet. You will not meet any other company’s tools today.
 
-**AEM authoring** is Adobe. Sites, Page Editor, Universal Editor, Document Authoring, Assets, Content Fragments, and **AEM Guides**. Guides stores DITA in AEM. An admin can enable **Edit in Oxygen** so a specialist opens the same topic on the desktop.
+## Install
 
-There is no product called “AEM Oxygen XML Editor.” If a slide says that, the slide is wrong.
+1. Open [oxygenxml.com](https://www.oxygenxml.com/) in a browser.
+2. Download **Oxygen XML Author** or **Oxygen XML Editor**. Author is enough for writers. Editor is fine too.
+3. Install. Open the app.
+4. Click **Help > About**. Write the version in `oxygen-bootcamp-work/day-01-version.txt`.
 
-## Why both exist
+If a menu name is different on your copy, write “my menu said …” next to it and keep going.
 
-A DITA topic is a typed document: concept, task, reference. A map is the book. Keys and conrefs are reuse. Publishing is a transform (WebHelp, PDF). That is Oxygen’s job.
+## What you should see
 
-An AEM page is a tree of components on a template. Publish is an author/publish topology, not DITA-OT. That is Sites’ job.
+A window. Menus along the top. A big area in the middle that will hold a page. Some side panels that may be empty. That is the desk.
 
-Guides is the DITA CCMS on AEM: check-in, review, baseline, translation, server publish. SMEs can stay in the browser. Map surgery still wants Oxygen.
+## Word today
 
-## Figure
-
-The wireframe below is a **labeled mock**, not a screenshot. Left: Oxygen with Maps Manager. Right: AEM Sites console. They do not share a toolbar.
+**Oxygen** — the writing app from Syncro Soft. Remember the name. You will open it every day.
 
 ## Watch
 
-Play the official Getting Started webinar. Pause when the presenter names the modes. Write the four names: Text, Grid, Author, Schema Design. Schema Design is not your daily writing mode.
+Play the official Getting Started video. Pause on the first full window. You are only looking. You do not need the four editing modes yet.
 
-## Lab rule
+## Lab
 
-The lab is the four-sentence note. If you cannot say the difference without slogans, do not mark it done.
+The lab is: the app is open, and you wrote the version down. If you cannot install, use the labeled mock and say why.

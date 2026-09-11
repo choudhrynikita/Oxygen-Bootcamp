@@ -2,7 +2,7 @@
 day: 86
 week: 12
 title: Capstone review
-objective: Re-run completeness on the DITA half and re-read the AEM field log. Fix one issue on each surface.
+objective: Re-run completeness on the DITA half and re-read the AEM field log. Fix one issue on each desk.
 timeboxMinutes: 90
 skills: [review, maps, aemSites]
 legacyLessonIds: []
@@ -16,52 +16,71 @@ sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
 lab:
   id: lab-86
-  title: One fix per surface
+  title: One fix per desk
   pack: kitepump-dita
-  failWhen: You skip one surface.
+  failWhen: You skip one desk.
   expected: Quoted completeness. One AEM fix. Two teammate sentences.
   steps:
-    - Completeness on the capstone map. Quote the report (zero is a valid quote).
+    - Completeness on the capstone map. Quote the report (zero missing links is a valid quote).
     - "Field log: fix one missing payload or alt."
-    - Write what you would tell a teammate in two sentences — one per surface.
+    - Write what you would tell a teammate in two sentences — one per desk.
+    - Save oxygen-bootcamp-work/week12/field-log-86.txt.
 sessionQuests:
   - id: a
     block: A
-    title: Name the two reports
+    title: Open the completeness report and the AEM field log
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Both surfaces still honest
+    title: Fix one thing on each desk
     minutes: 25
     done: Completeness quoted. Field log patched.
   - id: c
     block: C
-    title: The remaining issue you will not pretend is done
+    title: "Pick what review means, and whether zero counts"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [output-oracle, glossary-lightning]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, output-oracle]
 toolCards: [maps-manager, sites-console]
 badgeId: null
 boss: false
 checks:
   - { id: lab, prompt: Quoted completeness. One AEM fix. Two teammate sentences. }
 quiz:
-  - q: "Review means watching the videos again. True?"
+  - q: "Review means watching the videos again. True or not?"
     answer: 1
-    why: Evidence. Not a rewatch badge.
+    why: Evidence. Not a rewatch.
     options:
-      - "True"
-      - False — review means the reports and the log
-fieldNotePrompt: "What is still not done, in one sentence?"
-tomorrowHook: Capstone delivery package.
+      - True — rewatch is the badge
+      - Not true — review means the completeness report and the field log
+      - True if you take notes
+  - q: "Completeness reports zero missing links. What do you write?"
+    answer: 1
+    why: Zero is a result. Write it down.
+    options:
+      - Nothing — zero does not count
+      - Quote the zero. That is a valid quote
+      - Run a language copy instead
+fieldNotePrompt: "What is still not done, in one sentence? If everything is done, write that."
+tomorrowHook: "Tomorrow: hand in the work. Small zip. First file a lead should open."
 ---
 
 ## Review is evidence
 
-Completeness output. Field log. Two sentences. No slogans.
+Completeness output. Field log. Two sentences for a teammate. One per desk.
+
+If completeness is already clean, quote the zero. If an alt is missing, write it. Do not skip a desk because it felt finished yesterday.
+
+## Lab
+
+One quoted report. One AEM fix. Two teammate sentences.
+
+## Figure
+
+A completeness report next to a field log. Caption: *Both desks. Both pieces of evidence.*

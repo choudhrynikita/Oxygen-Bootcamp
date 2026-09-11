@@ -1,8 +1,8 @@
 ---
 day: 80
 week: 12
-title: Publish outputs from Guides
-objective: "Contrast Guides server publish (baseline, output) with a local Oxygen WebHelp draft."
+title: Publish from Guides
+objective: "Contrast a local Oxygen WebHelp draft with a Guides server publish, and keep Sites Quick Publish off the DITA output list."
 timeboxMinutes: 90
 skills: [aemGuides, publish]
 legacyLessonIds: [t5-publish]
@@ -21,48 +21,74 @@ lab:
   failWhen: Quick Publish is listed as a DITA output.
   expected: Draft vs release written. Sites kept out.
   steps:
-    - "Write: local Oxygen PDF/WebHelp is a draft."
-    - "Write: Guides publish uses the server baseline as the release (verify wording in your shop)."
-    - "If you have Guides, note one output type you saw. If not, write ‘mock — AEM Guides documentation lists outputs; I did not invent a button’."
+    - "Write oxygen-bootcamp-work/week12/field-log-80.txt: local Oxygen PDF or WebHelp is a draft."
+    - "Write: Guides publish uses a server **baseline** (a named snapshot of the book) as the release. Verify the wording in your shop."
+    - "If you have Guides, note one output type you saw. If not, write ‘mock — the Guides docs list outputs; I did not invent a button’."
     - Do not call Sites Quick Publish a DITA output.
 sessionQuests:
   - id: a
     block: A
-    title: Name baseline as release and local as draft
+    title: See local WebHelp as a draft and Guides as the release
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Sites stays out of the DITA output list
+    title: Keep Sites Quick Publish off the DITA output list
     minutes: 25
-    done: Two sentences. No Quick Publish mash-up.
+    done: Two sentences. No Quick Publish mix-up.
   - id: c
     block: C
-    title: Who clicks publish in Guides
+    title: "Pick draft vs release, and whether Quick Publish ships DITA"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [menu-path-race, output-oracle]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, output-oracle]
 toolCards: [transformation, guides-web-editor]
 badgeId: null
 boss: false
 checks:
   - { id: lab, prompt: Draft vs release written. Sites kept out. }
 quiz:
-  - q: "A local WebHelp from Oxygen is the release of record on a Guides shop. True?"
+  - q: "A local WebHelp from Oxygen is the release of record on a Guides shop. True or not?"
     answer: 1
-    why: v1 T5 sentence. Keep it.
+    why: "You learned local WebHelp in week 6. On a Guides shop, that build is a draft."
     options:
-      - "True"
-      - False — the server baseline is the release; local is a draft
+      - "True — if the HTML opened, it shipped"
+      - Not true — the server baseline is the release. Local is a draft
+      - True if you named the folder FINAL
+  - q: "Sites Quick Publish is a DITA output. True or not?"
+    answer: 1
+    why: Two desks. Two publish buttons. Do not mix them.
+    options:
+      - True — publish is publish
+      - Not true — Quick Publish activates an AEM web page. Guides publish ships the handbook
+      - True on Cloud only
 fieldNotePrompt: "Who is allowed to publish DITA where you work, or ‘unknown’?"
-tomorrowHook: Guides lab — a full mental cycle.
+tomorrowHook: "Tomorrow: one full loop on paper — checkout, edit, check in, ask to publish."
 ---
 
 ## Draft vs release
 
-Oxygen can still build WebHelp on your laptop. That is a draft. Guides owns the release if that is the CCMS. Sites Quick Publish is a different family.
+Oxygen can still build WebHelp or PDF on your laptop. That is a **draft**. You used that in week 6.
+
+On a Guides shop, **Guides publish** is the release. It uses a **baseline** — a named snapshot of the book — so everyone knows which version shipped. Verify the wording on your desk.
+
+Sites **Quick Publish** activates a web page. It is not a DITA output. Do not put it on this list.
+
+If you have no Guides, write ‘mock’ and do not invent a button.
+
+## Word today
+
+**Baseline** — a named snapshot of the handbook that Guides can publish.
+
+## Lab
+
+Draft vs release. One output type, or a mock note. Sites kept off the list.
+
+## Figure
+
+Labeled mock: laptop draft | server release. Caption: *Mock. Two publish buttons, two desks.*

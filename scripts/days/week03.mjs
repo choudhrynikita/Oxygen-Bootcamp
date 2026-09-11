@@ -7,653 +7,456 @@ export default [
   {
     n: 15,
     week: 3,
-    title: "topicref is a contract — href, keys, navtitle, linking",
-    objective:
-      "Edit one topicref’s properties (keys, navtitle, linking) without breaking completeness or inventing a second title in the topic.",
+    title: "A table of contents for your pages",
+    objective: "Open the sample booklet and see that it is a list of pointers to files, not the files themselves.",
     minutes: 90,
     skills: ["maps", "oxygenUi"],
     legacy: ["t3-maps"],
-    youtube: [
-      yt("maps", [
-        "Edit Properties on a topicref",
-        "navtitle vs the topic title",
-      ]),
-    ],
+    youtube: [yt("maps", ["The tree on the left", "A line that points at a page"])],
     sources: [S.mapsDemo, S.authorDita, S.ugEditor],
-    toolCards: ["maps-manager", "attributes"],
+    toolCards: ["maps-manager"],
     badgeId: null,
     lab: {
       pack: "flower-docs",
-      title: "One topicref, four fields",
+      title: "Look at the sample booklet",
       steps: [
-        "Open flowers.ditamap in Maps Manager. Set it as root map.",
-        "Right-click the Care task change-water.dita > Edit Properties (verify the label).",
-        "Set keys=\"change-water\" if missing. Set navtitle to Change vase water (different from the topic title Change the water).",
-        "Set linking to normal (or leave default). Write the four fields you saw in oxygen-bootcamp-work/week3/topicref-fields.txt.",
-        "Do not duplicate the navtitle as a second <title> inside the topic.",
-        "Run completeness. Open the topic — title in the file must still be Change the water.",
+        "In Oxygen, open samples/flower-docs/flowers.ditamap. If it opens as a wall of tags, look for a booklet view (DITA Maps Manager) and open it there too.",
+        "Count how many pages the booklet points at. Write the number in oxygen-bootcamp-work/week3/day-15-count.txt.",
+        "Click one line in the tree so the page opens. Confirm it is one of the topic files, not the booklet file itself.",
+        "Do not add a page yet. Today you only look.",
       ],
-      failWhen:
-        "You edited the topic title instead of navtitle, or keys are empty, or completeness reports a missing href.",
-      expected:
-        "topicref has keys and a navtitle distinct from the file title. Completeness clean. Field note lists the four fields.",
+      failWhen: "You only opened a topic file and never opened the .ditamap, or you cannot say the booklet is a list of pointers.",
+      expected: "You opened flowers.ditamap, counted the pages it points at, and opened one page from the tree.",
     },
     quiz: [
       {
-        q: "navtitle on the topicref disagrees with <title> in the topic. What publishes in the TOC?",
+        q: "A .ditamap file is…",
         options: [
-          "Always the file title — navtitle is decoration",
-          "The map can show navtitle in the TOC; the topic title still heads the page",
-          "Oxygen rejects the map",
+          "A table of contents that points at page files",
+          "A picture",
+          "The same thing as a how-to page",
         ],
-        answer: 1,
-        why: "navtitle is a map-side label. The topic still owns its title. Do not copy navtitle into a second title element.",
+        answer: 0,
+        why: "The map is the booklet. The topics are the pages. Two kinds of files.",
       },
       {
-        q: "linking=\"none\" on a topicref. What did you just forbid?",
+        q: "If you delete a page file but leave it in the booklet, what happens?",
         options: [
-          "The topic cannot be opened in Author",
-          "Generated related links to and from this topicref",
-          "Images inside the topic",
+          "Nothing — the booklet has a copy of the words",
+          "The pointer breaks. The booklet still names a file that is gone",
+          "Oxygen reprints the page from memory",
         ],
         answer: 1,
-        why: "linking controls generated links. The file still opens. Images are unrelated.",
-      },
-      {
-        q: "You type a second <title> in the topic so the TOC matches. First repair?",
-        options: [
-          "Leave it — two titles are a DITA feature",
-          "Delete the extra title; put the TOC label on the topicref as navtitle",
-          "Move the topic into AEM Sites",
-        ],
-        answer: 1,
-        why: "One title in the topic. TOC labels belong on the map.",
+        why: "The booklet stores a pointer (a path), not a second copy of the page.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Edit Properties and what a second title forbids",
-      doTitle: "Keep navtitle on the topicref",
-      doDone: "keys set. navtitle ≠ file title. Completeness clean.",
-      stress: "Add a second title, read the error or the mess, undo",
+      learn: "Open flowers.ditamap and look at the tree",
+      doTitle: "Count the pages the booklet points at",
+      doDone: "Count written down. One page opened from the tree.",
+      stress: "Pick what a map is, and what a broken pointer means",
     }),
-    fieldNotePrompt: "Which of the four topicref fields would you refuse to leave blank on a shared map, and why?",
-    tomorrowHook: "Tomorrow you split a book: a submap the parent map owns, not a copy of the files.",
-    body: `## The map is the book
+    fieldNotePrompt: "In one sentence, what is the difference between the booklet file and a page file?",
+    tomorrowHook: "Tomorrow you use the booklet view (Maps Manager) on purpose.",
+    body: `## A booklet is a list
 
-A **topicref** is a pointer plus policy. **href** is the file. **keys** is the name the rest of the book uses. **navtitle** is a TOC label when you need one. **linking** and **toc** and **collection-type** change generated behavior.
+Last week you wrote three pages. A **map** is a table of contents that **points at** those pages. The file ends in \`.ditamap\`.
 
-Right-click a node > **Edit Properties**. Do not hand-edit a 200-line map in Text until you can survive Properties.
+It is not a copy of the words. It is a list of pointers.
 
-## Title vs navtitle
+The sample shop already has \`samples/flower-docs/flowers.ditamap\`. Open it. Look. Count. Do not add anything yet.
 
-The topic owns \`<title>\`. The map may own \`navtitle\`. If they match, skip navtitle. If the TOC needs a shorter label, set navtitle — do not add a second title in the file.
+## Word today
 
-## Figure
-
-Edit Properties dialog: href, keys, navtitle, linking. Caption: *Maps Manager > Edit Properties. Verify the menu path in your version.*
+**Map** — a table of contents file that points at your pages.
 `,
   },
   {
     n: 16,
     week: 3,
-    title: "Submaps — a chapter is a map, not a folder",
-    objective:
-      "Create a submap, point the parent map at it, and prove completeness still walks both files.",
+    title: "The booklet view",
+    objective: "Open Maps Manager, set the sample map as the root booklet, and explain how that tree is not the folder list.",
     minutes: 90,
     skills: ["maps", "oxygenUi"],
-    legacy: ["t3-maps"],
+    legacy: ["t2-dita-ui", "t3-maps"],
     youtube: [
-      yt("maps", [
-        "A map referenced from a map",
-        "Root map vs the file you are editing",
-      ]),
-      yt("ditaStart", ["Where the map will later live"]),
+      yt("maps", ["Maps Manager tree", "Root map control on the toolbar"]),
+      yt("ditaStart", ["DITA perspective docks Maps Manager"]),
     ],
-    sources: [S.mapsDemo, S.authorDita, S.ugEditor],
-    toolCards: ["maps-manager"],
-    badgeId: "map-is-a-book",
+    sources: [S.mapsDemo, S.ugEditor],
+    toolCards: ["maps-manager", "outline"],
+    badgeId: null,
     lab: {
-      pack: "kitepump-dita",
-      title: "Kitepump care as a submap",
+      pack: "flower-docs",
+      title: "Maps Manager, on purpose",
       steps: [
-        "Create oxygen-bootcamp-work/week3/kitepump/ (or samples/kitepump-dita/ if the pack already exists). This is the new product next to flower-docs — do not replace flower-docs.",
-        "Create maps/kitepump.ditamap (root) and maps/care.ditamap (submap). Root title: Kitepump handbook. Submap title: Care.",
-        "In the submap, topicref two new topics: topics/what-kitepump-is.dita (concept) and topics/inflate-the-tire.dita (task, three cmds).",
-        "In the root map, add <mapref href=\"maps/care.ditamap\"/> (or topicref format=\"ditamap\" — write which your version inserts).",
-        "Set kitepump.ditamap as root map. Completeness must visit both maps and both topics.",
-        "Do not copy the two topics into the root map as a second set of topicrefs.",
+        "Switch to the DITA perspective if you have it, so Maps Manager docks on the side.",
+        "Open flowers.ditamap in Maps Manager (the tree), not only as tags.",
+        "Set this map as the root map. The control is on the toolbar — if the label differs, write the label you see.",
+        "In oxygen-bootcamp-work/week3/day-16-views.txt write two lines: Maps Manager = the booklet. Project view = the files on disk.",
+        "Do not add a page yet.",
       ],
-      failWhen:
-        "The submap is a folder with no map file, or topics are referenced twice, or completeness never opens care.ditamap.",
-      expected:
-        "Root maprefs the care submap. Two valid topics. Completeness walks parent + child. Zero duplicate topicrefs.",
+      failWhen: "You only opened the map as tags, or you cannot say tree vs folder list.",
+      expected: "Maps Manager shows the sample booklet. Root map is set. Two-line note saved.",
     },
     quiz: [
       {
-        q: "A folder named care/ with two topics is a submap. True?",
-        options: ["True", "False"],
-        answer: 1,
-        why: "A submap is a .ditamap the parent references. A folder is only a folder.",
-      },
-      {
-        q: "You set care.ditamap as root map to edit it, then forget to switch back. What breaks first?",
+        q: "Maps Manager shows…",
         options: [
-          "Keys defined only on the parent look unresolved",
-          "The submap files delete themselves",
-          "Author mode disables",
+          "The booklet (what the reader will follow)",
+          "Every file on your whole computer",
+          "Help > About",
         ],
         answer: 0,
-        why: "Keys resolve from the root map. The wrong root map is the classic unresolved-key bug.",
+        why: "The tree is publication structure. The folder list is files on disk. They are not the same.",
       },
       {
-        q: "Parent and submap both topicref inflate-the-tire.dita. What did you ship?",
+        q: "Why set a root map?",
         options: [
-          "A useful alias",
-          "A duplicated chapter in the book",
-          "A keydef",
+          "So names defined in the booklet can resolve on the pages",
+          "So Oxygen can delete unused files",
+          "So the desktop stays empty",
         ],
-        answer: 1,
-        why: "Two topicrefs are two TOC entries. An alias is a key, not a second href.",
+        answer: 0,
+        why: "The sample booklet already defines a product name. Without a root map, that name may not show.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name mapref and what a folder-as-chapter forbids",
-      doTitle: "Keep the care submap owned by the root",
-      doDone: "Completeness walks both maps. Topics are not duplicated.",
-      stress: "Set the wrong root map, watch a key fail, switch back",
+      learn: "Find Maps Manager and the root map control",
+      doTitle: "Open the sample booklet in the tree and set it as root",
+      doDone: "Tree is showing. Two-line note saved.",
+      stress: "Pick what the tree shows, and why a root map matters",
     }),
-    fieldNotePrompt: "When would you refuse to split a map, even if the folder is getting large?",
-    tomorrowHook: "Tomorrow you put stable ids on topics and elements so xrefs can survive a title change.",
-    body: `## Submaps
+    fieldNotePrompt: "How is the booklet tree different from the folder list?",
+    tomorrowHook: "Tomorrow you add one of your pages to the booklet.",
+    body: `## The tree is the booklet
 
-A **submap** is a map the parent map references. Use it when a chapter is a book of its own: Care, Parts, Service.
+**DITA Maps Manager** is the booklet view. The folder list (Project view) is just files on disk.
 
-The parent uses \`mapref\` (or a topicref with \`format="ditamap"\`). The filesystem folder is not the chapter.
+A page can sit on disk and still be missing from the booklet. That is like a chapter printed and left in a drawer.
 
-## Root map
+**Root map** — the booklet Oxygen should use as the main table of contents. Set it. Later, names defined in the booklet will work.
 
-Set the **root map** to the parent when you want keys and completeness for the whole book. You may open the submap as root to edit it — then switch back.
+## Word today
 
-## kitepump-dita
-
-This pack sits **beside** flower-docs. Flower-docs stays. Kitepump is a portable floor pump used in later reuse and publish labs.
-
-## Figure
-
-Two map files: kitepump.ditamap → care.ditamap → two topics. Caption: *Maps Manager tree after mapref. Not two copies of the topics.*
+**Maps Manager** — the side tree that shows the booklet, not the folders.
 `,
   },
   {
     n: 17,
     week: 3,
-    title: "IDs that stay when the title changes",
-    objective:
-      "Set a stable topic id and one element id, and prove a title edit does not rename the id.",
+    title: "Add a page to the booklet",
+    objective: "Append one of your week 2 pages to the sample map and open it from the tree.",
     minutes: 90,
-    skills: ["ditaTopics", "xmlLiteracy"],
-    legacy: ["t3-topics"],
-    youtube: [
-      yt("ditaEdit", [
-        "id on the topic element",
-        "id on a paragraph or step you might xref",
-      ]),
-    ],
-    sources: [S.authorDita, S.dita13, S.ugEditor],
-    toolCards: ["attributes", "outline"],
+    skills: ["maps", "oxygenUi"],
+    legacy: ["t3-maps"],
+    youtube: [yt("maps", ["Append Child", "A new line in the tree"])],
+    sources: [S.mapsDemo, S.authorDita],
+    toolCards: ["maps-manager"],
     badgeId: null,
     lab: {
-      pack: "kitepump-dita",
-      title: "Stable ids on the inflate task",
+      pack: "flower-docs",
+      title: "Append one page",
       steps: [
-        "Open topics/inflate-the-tire.dita. In Attributes or Text, set the task id to inflate-the-tire (lowercase, hyphens). Not the title string.",
-        "Put id=\"gauge-check\" on the step that mentions the gauge (or add that step).",
-        "Change the topic title to Inflate a tire with Kitepump. Save. Confirm id did not change.",
-        "Create topics/id-rules.dita (concept) with three rules: lowercase, hyphens, never the sentence title.",
-        "Append id-rules.dita to the root or care map. Completeness clean.",
-        "If Oxygen auto-generated an id like unique_123, replace it with a stable one and write why in the field note.",
+        "Copy your week2 explaining page into samples/flower-docs/topics/ if it is not already there (or point at oxygen-bootcamp-work/week2/ if your map can see it). Keep the file name lowercase with hyphens.",
+        "In Maps Manager, right-click a heading (or the map root) > Append Child > Reference. Point at that page.",
+        "Click the new line. The page should open.",
+        "Do not rename files in the folder without updating the booklet. That is a later day.",
       ],
-      failWhen:
-        "The topic id is a sentence, or it changed when the title changed, or two topics share an id in the same map.",
-      expected:
-        "inflate-the-tire id stable across a title edit. gauge-check on one step. id-rules.dita in the map.",
+      failWhen: "The page exists on disk but is not in the tree, or the new line does not open the page.",
+      expected: "The tree shows your page. Clicking it opens the file.",
     },
     quiz: [
       {
-        q: "Oxygen filled id=\"unique_4\". You ship it. What hurts later?",
+        q: "Append Child adds…",
         options: [
-          "Nothing — unique is unique",
-          "xrefs and conrefs that cannot be read by a human in review",
-          "The file becomes not well-formed",
+          "A pointer from the booklet to a page file",
+          "A second copy of the words inside the map",
+          "A website",
         ],
-        answer: 1,
-        why: "Auto ids are valid and opaque. Reviewers and reuse authors need a name they can type.",
+        answer: 0,
+        why: "The new line is a pointer. The words still live in the topic file.",
       },
       {
-        q: "Two topics in one map both have id=\"intro\". What fails?",
-        options: [
-          "Well-formedness of each file",
-          "xrefs that only say #intro — the target is ambiguous in the book",
-          "Maps Manager refuses to open",
-        ],
+        q: "The page is on disk but missing from the tree. Is it in the booklet?",
+        options: ["Yes", "No"],
         answer: 1,
-        why: "Each file can be valid. The book cannot point at #intro alone. Prefer filename + id, or keys.",
-      },
-      {
-        q: "You rename a title to match a product change. Should the topic id follow?",
-        options: [
-          "Yes — ids track titles",
-          "No — ids are addresses; titles are words",
-          "Only if you also rename the file",
-        ],
-        answer: 1,
-        why: "Ids are addresses. Change them only when you are ready to fix every pointer.",
+        why: "On disk is not in the booklet. The tree is what counts.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name topic id vs title and what unique_123 forbids in a shared book",
-      doTitle: "Keep inflate-the-tire as the id after a title edit",
-      doDone: "id stable. gauge-check present. id-rules.dita in the map.",
-      stress: "Duplicate an id on purpose, try an xref, then restore",
+      learn: "Find Append Child on a tree line",
+      doTitle: "Add one of your pages and open it from the tree",
+      doDone: "New line in the tree opens the page.",
+      stress: "Pick what Append Child adds, and whether a drawer file is in the book",
     }),
-    fieldNotePrompt: "What id would you refuse to generate automatically, and what would you type instead?",
-    tomorrowHook: "Tomorrow you xref a topic and an element without typing a web URL.",
-    body: `## IDs are addresses
+    fieldNotePrompt: "Which page did you add, and where does it sit in the tree?",
+    tomorrowHook: "Tomorrow you check that every pointer in the booklet still works.",
+    body: `## Put a chapter in the book
 
-The topic element needs an **id**. Elements you will link to need an id too. Use lowercase hyphens. Match the filename when you can: \`inflate-the-tire.dita\` → \`id="inflate-the-tire"\`.
+Right-click in Maps Manager → **Append Child** → point at a page.
 
-Do not use the title sentence as an id. Titles change. Ids are addresses.
+You did not copy the words into the booklet. You added a pointer.
 
-## Scope
+## Word today
 
-An id must be unique **in the file**. Across a map, two topics named \`intro\` make \`#intro\` a coin toss. Prefer keys (next week) or \`filename.dita#id\`.
-
-## Auto ids
-
-Oxygen may insert \`unique_*\`. Valid. Opaque. Replace them on anything a teammate will xref.
-
-## Figure
-
-Attributes view: id=\`inflate-the-tire\` on the task. Caption: *Attributes panel on the topic element, not on the title text.*
+**topicref** — one line in the booklet that points at a page (a topic file). You can say “a pointer” out loud. Same thing.
 `,
   },
   {
     n: 18,
     week: 3,
-    title: "xref — point at a topic, not at a URL you invented",
-    objective:
-      "Insert two xrefs: one to a topic, one to an element id, and prove a broken href shows up in completeness.",
+    title: "Check that every link still works",
+    objective: "Run the completeness check on the booklet and repair one broken pointer you caused on purpose.",
     minutes: 90,
-    skills: ["ditaTopics", "maps"],
-    legacy: ["t3-insert"],
-    youtube: [
-      yt("ditaEdit", [
-        "Insert Cross Reference",
-        "Target picker vs typing a URL",
-      ]),
-    ],
-    sources: [S.authorDita, S.ugEditor, S.mapsDemo],
-    toolCards: ["author-mode", "maps-manager"],
+    skills: ["maps", "review"],
+    legacy: ["t4-complete"],
+    youtube: [yt("completeness", ["The completeness report", "A missing file row"])],
+    sources: [S.mapsDemo, S.ugEditor],
+    toolCards: ["maps-manager"],
     badgeId: null,
     lab: {
-      pack: "kitepump-dita",
-      title: "Two xrefs, one broken on purpose",
+      pack: "flower-docs",
+      title: "Break a pointer, then fix it",
       steps: [
-        "In what-kitepump-is.dita, insert an xref to inflate-the-tire.dita using the toolbar (Insert Cross Reference). Do not type https://.",
-        "Insert a second xref to inflate-the-tire.dita#gauge-check (the step id from Day 17).",
-        "Validate both topics. Follow the xref in Author — it should jump.",
-        "Break the topic xref href (typo the filename). Run completeness on the root map. Record the exact row.",
-        "Repair the href. Completeness clean.",
-        "Write one sentence in the concept: xrefs are DITA pointers, not website URLs.",
+        "With flowers.ditamap as the root map, run Validate and Check for Completeness from Maps Manager.",
+        "Write how many problems it reported in oxygen-bootcamp-work/week3/day-18-before.txt.",
+        "On purpose: change one pointer to a file name that does not exist. Run completeness again. Read the row.",
+        "Put the real file name back. Run completeness again. It should be clean (or back to the same count as before).",
+        "Do not only validate the one page. The booklet check is the apple.",
       ],
-      failWhen:
-        "An xref is a raw https link to a local file, or you leave the broken href in the map, or the element xref has no id target.",
-      expected:
-        "Two working xrefs (topic + element). Completeness was red, then clean. No invented URL.",
+      failWhen: "You never ran completeness, or you left a broken pointer, or you only validated one topic.",
+      expected: "You saw a missing-file row and repaired it. Completeness is clean again.",
     },
     quiz: [
       {
-        q: "You paste https://example.com/inflate.html into an xref href for a DITA topic. What did you ship?",
+        q: "A page can be clean while the booklet is broken. How?",
         options: [
-          "A portable book link",
-          "A web address that will not track the DITA file when it moves",
-          "A keyref",
-        ],
-        answer: 1,
-        why: "xref href in a DITA book should be a topic/element (or a key). A URL is a website, not a topic move.",
-      },
-      {
-        q: "The xref text is hardcoded ‘click here’. First repair?",
-        options: [
-          "Leave it — screen readers prefer click here",
-          "Let the xref use the target title, or write a phrase that names the destination",
-          "Convert the xref to an image",
-        ],
-        answer: 1,
-        why: "Click here fails accessibility and reuse. The target title travels with the link.",
-      },
-      {
-        q: "Completeness reports the xref target missing, but the topic opens. What is likely?",
-        options: [
-          "The href path is wrong relative to the source topic",
-          "Author mode cannot follow valid xrefs",
-          "You need AEM Guides to resolve xrefs",
+          "The page’s tags match, but the booklet still points at a missing file",
+          "Impossible",
+          "Only if you publish",
         ],
         answer: 0,
-        why: "href is relative to the file that contains the xref unless you use a key.",
+        why: "Page check = this file. Booklet check = do the pointers work. You need both.",
+      },
+      {
+        q: "Where do you run the booklet check?",
+        options: ["Maps Manager, on the map", "Help > About", "Only on the current paragraph"],
+        answer: 0,
+        why: "Completeness lives on the booklet.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name Insert Cross Reference and what an https href forbids in a local book",
-      doTitle: "Keep two xrefs resolvable",
-      doDone: "Topic xref and element xref jump. Completeness clean after the break/repair.",
-      stress: "Typo the href, read the completeness row, fix it",
+      learn: "Find Validate and Check for Completeness",
+      doTitle: "Cause a missing file, read the row, put it back",
+      doDone: "Completeness is clean again. You quoted the missing-file row.",
+      stress: "Pick page-clean vs booklet-broken, and where the check lives",
     }),
-    fieldNotePrompt: "Quote the completeness row you caused. What path would have been right on the first try?",
-    tomorrowHook: "Tomorrow you add related links the map can generate — and you refuse a handmade list that duplicates the map.",
-    body: `## xref
+    fieldNotePrompt: "Quote the missing-file row you saw.",
+    tomorrowHook: "Tomorrow you name files so moving them does not go silent.",
+    body: `## Do the pointers work?
 
-An **xref** points at a DITA target: a topic, or a topic plus element id. Use the toolbar picker. Do not invent a website URL for a file that lives in the map.
+**Validate and Check for Completeness** (from Maps Manager) asks: does every pointer still find a file, a picture, a name?
 
-Keys (next week) are even better: the map owns the name, the path can move.
+A page can be fine on its own and still missing from the book — or named in the book and missing on disk.
 
-## Link text
+## Word today
 
-Prefer empty xref text so the processor pulls the target title. If you write text, name the destination. Never “click here.”
-
-## Completeness
-
-A typo in href is a completeness row. Cause one. Read it. Fix it. That is the literacy.
-
-## Figure
-
-Insert Cross Reference dialog: tree of the root map. Caption: *Picker from the root map. Not a browser address bar.*
+**Completeness** — a booklet check that the pointers still work.
 `,
   },
   {
     n: 19,
     week: 3,
-    title: "Related links — generated beats handmade when the map already knows",
-    objective:
-      "Let a collection-type or related-links list point at siblings, and delete a handmade list that duplicated the map.",
+    title: "Name files so they are easy to find",
+    objective: "Rename one page the safe way, or move it and update the booklet so completeness stays clean.",
     minutes: 90,
-    skills: ["maps", "ditaTopics"],
-    legacy: ["t3-maps", "t3-insert"],
-    youtube: [
-      yt("maps", [
-        "collection-type on a topicref",
-        "How sibling links show after publish — or in Author preview",
-      ]),
-    ],
-    sources: [S.mapsDemo, S.authorDita, S.dita13],
-    toolCards: ["maps-manager", "author-mode"],
+    skills: ["maps", "oxygenUi"],
+    legacy: ["t3-maps"],
+    youtube: [yt("maps", ["What happens when a path changes"])],
+    sources: [S.mapsDemo, S.ugEditor],
+    toolCards: ["maps-manager"],
     badgeId: null,
     lab: {
-      pack: "kitepump-dita",
-      title: "Siblings, not a pasted See also",
+      pack: "flower-docs",
+      title: "Rename without losing the pointer",
       steps: [
-        "On the Care mapref or the parent topicref, set collection-type=\"family\" (or sequence if you want ordered next/prev). Write which you picked.",
-        "In what-kitepump-is.dita, if you pasted a See also list of filenames, delete it.",
-        "Add a related-links section only if you must point outside the family. One linkrel to inflate-the-tire is enough — or skip it if family covers it.",
-        "Create topics/parts-list.dita (reference) and add it to Care so the family has three members.",
-        "Run completeness. In the field note, list how a reader should move from concept → task → reference without a handmade list.",
+        "Pick a page you added (or vase-parts.dita if you make a short new one).",
+        "If Oxygen can rename and update references, use that. If not: rename on disk, then edit the pointer in the booklet to match.",
+        "Run completeness. It must be clean.",
+        "Write the old name and the new name in oxygen-bootcamp-work/week3/day-19-rename.txt.",
+        "Keep lowercase hyphens. No spaces. No FINAL(2).",
       ],
-      failWhen:
-        "A bullet list of filenames sits in conbody as fake related links, or collection-type is set but the siblings are not in the same parent.",
-      expected:
-        "Three topics under Care. collection-type set. No handmade See also of paths. Completeness clean.",
+      failWhen: "Completeness reports a missing file, or the new name has spaces, or you renamed the disk file and never updated the booklet.",
+      expected: "New name is simple. Completeness clean. Old and new names written down.",
     },
     quiz: [
       {
-        q: "A See also list in the concept hard-codes inflate-the-tire.dita. The file moves. What happens?",
-        options: [
-          "The list updates because it is DITA",
-          "The list lies — it is text, not a pointer the map owns",
-          "Completeness rewrites the list",
-        ],
-        answer: 1,
-        why: "A bullet of filenames is prose. related-links and collection-type are structure.",
+        q: "You renamed a file on disk and skipped the booklet. What breaks?",
+        options: ["The pointer in the map", "Help > About", "The colour of Author view"],
+        answer: 0,
+        why: "The booklet still has the old path.",
       },
       {
-        q: "collection-type=\"family\" on a topicref with one child. What did you get?",
-        options: [
-          "A full related-links group",
-          "Almost nothing — family needs siblings",
-          "A submap",
-        ],
+        q: "Which name should you pick?",
+        options: ["Vase Parts FINAL.dita", "vase-parts.dita", "Document (3).dita"],
         answer: 1,
-        why: "Family links siblings. One child has no siblings. Add members or drop the attribute.",
-      },
-      {
-        q: "You need a link to a topic in a different chapter. Best first tool?",
-        options: [
-          "collection-type on this chapter",
-          "related-links or an xref (soon: a key)",
-          "Paste the other chapter’s map into this topic",
-        ],
-        answer: 1,
-        why: "collection-type is local family. Cross-chapter wants xref/key or an explicit related link.",
+        why: "Lowercase, hyphens, boring. Boring is good.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name collection-type and what a handmade See also forbids",
-      doTitle: "Keep Care as a family of three",
-      doDone: "collection-type set. No path list in conbody. Completeness clean.",
-      stress: "Paste a fake See also, then delete it",
+      learn: "Find the pointer path in the booklet",
+      doTitle: "Rename or move one page and keep completeness clean",
+      doDone: "Simple new name. Completeness clean.",
+      stress: "Pick what breaks on a silent rename, and which file name to use",
     }),
-    fieldNotePrompt: "When would you refuse collection-type and write an explicit related-links entry instead?",
-    tomorrowHook: "Tomorrow you name files so a move is boring — lowercase, hyphens, no FINAL(2).",
-    body: `## Related links
+    fieldNotePrompt: "Old name → new name. Did completeness stay clean?",
+    tomorrowHook: "Tomorrow you ship a small handbook: map plus your pages, completeness clean.",
+    body: `## Boring names win
 
-The map already knows the family. **collection-type** (\`family\`, \`sequence\`, \`choice\`) tells processors to generate sibling or next/prev links.
+\`vase-parts.dita\` will still make sense in six months. \`Vase Parts FINAL(2).dita\` will not.
 
-**related-links** in a topic is for a pointer the map cannot infer. Use it sparingly.
+When you rename, update the booklet. Then run completeness. If you skip that, the pointer still points at a ghost.
 
-## Handmade lists
+## Word today
 
-A bullet list of filenames is not a link. It will not move when the file moves. Completeness will not see it. Delete it.
-
-## Figure
-
-Care parent with three children and collection-type=family. Caption: *Edit Properties on the parent topicref, not on each child.*
+**href** — the path stored in a pointer. You can say “the path in the booklet line.”
 `,
   },
   {
     n: 20,
     week: 3,
-    title: "Name files, then move them without silent breakage",
-    objective:
-      "Rename one topic with Master Files or a careful map edit, and prove a desktop-style FINAL(2) name never enters the pack.",
-    minutes: 90,
-    skills: ["maps", "oxygenUi"],
-    legacy: ["t3-maps"],
-    youtube: [
-      yt("completeness", [
-        "Missing href after a move",
-        "How many files the check visited",
-      ]),
-    ],
-    sources: [S.mapsDemo, S.ugEditor, S.authorDita],
-    toolCards: ["maps-manager"],
-    badgeId: null,
+    title: "A small handbook",
+    objective: "Ship a tiny booklet: the sample map, your pages, completeness clean. Do not publish a website yet.",
+    minutes: 110,
+    skills: ["maps", "ditaTopics", "oxygenUi"],
+    legacy: ["t3-maps", "t3-topics"],
+    youtube: [yt("maps", ["The tree after your pages are in it"])],
+    sources: [S.mapsDemo, S.firstDita, S.authorDita],
+    toolCards: ["maps-manager", "attributes"],
+    badgeId: "map-is-a-book",
     lab: {
-      pack: "kitepump-dita",
-      title: "Rename without lying to the map",
+      pack: "flower-docs",
+      title: "Flower studio handbook, on the desk",
       steps: [
-        "Write the house rules in topics/file-naming.dita: lowercase, hyphens, no spaces, no FINAL, no (2), topic id matches basename when possible.",
-        "Append that concept to the root map.",
-        "Rename parts-list.dita to pump-parts.dita. Update the topicref href. If your Oxygen project has Master Files enabled, use it and write that you did; if not, edit the map and search the pack for the old name.",
-        "Run completeness. Then grep (Find in Files) for parts-list. Zero hits except the field note.",
-        "Move pump-parts.dita into topics/ref/ (create the folder). Update href. Completeness clean.",
-        "Refuse a filename Pump Parts FINAL(2).dita — if a teammate sent one, save it under the house name instead.",
+        "Open flowers.ditamap in Maps Manager. Set it as the root map.",
+        "The booklet should list at least: an explaining page, a how-to, and a lookup page. Add any that are missing from week 2.",
+        "If the sample has a product name that shows on a page, leave it. Do not fight it.",
+        "Run completeness. Zero missing files.",
+        "Do not publish a website or a PDF. Write how many pages the tree lists in oxygen-bootcamp-work/week3/day-20-count.txt.",
       ],
-      failWhen:
-        "The map still points at the old path, or completeness is clean while a leftover xref uses the old name, or the new file lives on the desktop.",
-      expected:
-        "pump-parts.dita in its new folder. Map and xrefs updated. Completeness clean. Naming topic in the map.",
+      failWhen: "A week-2 page is missing from the tree, or completeness reports a missing file.",
+      expected: "Tree lists at least three pages. Completeness clean. Count written down.",
     },
     quiz: [
       {
-        q: "You renamed a file in the OS file manager. Oxygen still opens the old tab. Completeness is red. First repair?",
+        q: "Why not publish a website today?",
         options: [
-          "Ignore completeness — the tab is open",
-          "Update every href/key that pointed at the old path, then close the stale tab",
-          "Delete the map",
-        ],
-        answer: 1,
-        why: "The OS does not update DITA pointers. Completeness is telling the truth.",
-      },
-      {
-        q: "Master Files can rewrite references on rename. When is that still not enough?",
-        options: [
-          "Never — Master Files is magic",
-          "When a path lives in a comment, a SME email, or a file not in the project",
-          "When the file is a concept",
-        ],
-        answer: 1,
-        why: "Master Files updates project references. It does not search Slack. Find in Files after every rename.",
-      },
-      {
-        q: "Why refuse Hello Concept FINAL(2).dita?",
-        options: [
-          "Spaces, capitals, and FINAL(2) break href discipline and collide on the next email",
-          "DITA forbids digits in filenames",
-          "Oxygen cannot open files with parentheses",
+          "A clean booklet is the apple. Publishing is a later week",
+          "Oxygen cannot publish",
+          "Publishing deletes the map",
         ],
         answer: 0,
-        why: "Oxygen can open it. Your map and your teammates cannot live with it.",
+        why: "Week 6 is publish. Today is “the book’s table of contents works.”",
+      },
+      {
+        q: "The how-to is on disk but not in the tree. Are you done?",
+        options: ["Yes", "No — add the pointer, then run completeness"],
+        answer: 1,
+        why: "The handbook is the tree, not the folder.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name lowercase-hyphen rules and what an OS-only rename forbids",
-      doTitle: "Keep hrefs true after rename and move",
-      doDone: "New path in the map. Find in Files clean. Completeness clean.",
-      stress: "Rename in the OS only, read completeness, then fix every pointer",
+      learn: "Read the tree like a table of contents",
+      doTitle: "Keep at least three pages in the booklet, completeness clean",
+      doDone: "Count written. Completeness clean.",
+      stress: "Pick why publish waits, and what “not in the tree” means",
     }),
-    fieldNotePrompt: "What leftover string would still say the old filename if you forgot Find in Files?",
-    tomorrowHook: "Tomorrow is the Week 3 boss: a kitepump map you can break and repair without silent misses.",
-    body: `## File naming
+    fieldNotePrompt: "How many pages are in your booklet, and which one is the how-to?",
+    tomorrowHook: "Tomorrow is the week check. Passing it opens reuse (one product name, used everywhere).",
+    body: `## The week’s apple
 
-Lowercase. Hyphens. No spaces. No \`FINAL\`. No \`(2)\`. Basename matches topic id when you can. Maps live in \`maps/\`. Topics live in \`topics/\`. Images in \`images/\`.
+A **handbook** on this desk means:
 
-A teammate email named \`Hello Concept FINAL(2).dita\` gets saved under the house name. The email name never enters the pack.
+- A map (table of contents)
+- Pages it points at
+- Completeness clean
 
-## Moving files
-
-Move, then **update hrefs**. Enable **Master Files** on the map if your project allows it so Oxygen rewrites references on rename. Then **Find in Files** for the old name anyway.
-
-## Silent breakage
-
-The failure mode is completeness green on the current file and red on the book — or worse, green because the topicref still points at a copy you forgot. Run completeness on the **root map**.
+No website. No PDF. The sample shop’s flower-docs pack is the bench. Keep it.
 
 ## Figure
 
-Find in Files hits for \`parts-list\` going to zero. Caption: *Find in Files after rename. Completeness is necessary, not sufficient, if an xref was typed by hand.*
+A tree mock:
+
+1. Getting started → explaining page
+2. Care → how-to
+3. Studio hours → lookup
+
+Caption: *Maps Manager after you add your pages. Not the folder list.*
 `,
   },
   {
     n: 21,
     week: 3,
-    title: "Boss — map surgery without silent breakage",
-    objective:
-      "Break and repair a kitepump book: missing href, duplicate topicref, bad id, leftover xref — then pass completeness.",
-    minutes: 110,
-    skills: ["maps", "review", "xmlLiteracy"],
-    legacy: ["t4-complete", "t3-maps"],
-    youtube: [
-      yt("completeness", ["The completeness report rows", "Missing href vs missing id"]),
-      yt("maps", ["Root map control on the toolbar"]),
-    ],
-    sources: [S.mapsDemo, S.ugEditor, S.learnDita],
-    toolCards: ["maps-manager", "outline"],
+    title: "Week 3 check",
+    objective: "Repair a broken booklet, explain three errors in plain words, and pass the quiz so week 4 can open.",
+    minutes: 90,
+    skills: ["review", "maps"],
+    legacy: ["t4-complete"],
+    youtube: [yt("completeness", ["Missing file vs broken tags"])],
+    sources: [S.mapsDemo, S.ugEditor],
+    toolCards: ["maps-manager"],
     badgeId: "completeness-clean",
     boss: true,
     lab: {
-      pack: "kitepump-dita",
-      title: "Clinic: four breaks, four repairs",
+      pack: "flower-docs",
+      title: "Three booklet breaks",
       steps: [
-        "Copy your kitepump pack to oxygen-bootcamp-work/week3-clinic/ (do not vandalize the only copy).",
-        "Break 1: rename a topic file without updating the topicref. Completeness. Repair.",
-        "Break 2: duplicate a topicref in parent and submap. Notice the double TOC. Remove the extra.",
-        "Break 3: change an element id that an xref uses. Follow the xref. Repair the id or the xref.",
-        "Break 4: unset the root map. Open a topic with a keyref if you have one; or xref across folders. Restore the root map.",
-        "Timed completeness read: run once on the clean clinic copy. Write how many files it visited.",
-        "Answer the boss quiz. Retry unlimited. Day 22 still unlocks if Day 20 lab is done.",
+        "Copy flower-docs to oxygen-bootcamp-work/week3-check/ so you do not wreck the sample.",
+        "Break 1: rename a page file without updating the booklet. Run completeness. Repair.",
+        "Break 2: delete a closing tag on one page. Read the well-formed error. Undo.",
+        "Break 3: add a pointer to a file you never created. Read the row. Remove the pointer or add the file.",
+        "Check copy completeness is clean.",
+        "Pass the quiz. Week 4 stays locked until this day is finished.",
       ],
-      failWhen:
-        "You cannot explain one of the four errors in a sentence, or you leave the clinic copy broken, or flower-docs was edited instead of kitepump.",
-      expected:
-        "Clinic copy completeness clean. Four error sentences in the field note. File-visit count recorded.",
+      failWhen: "You cannot explain one error, or you leave the check copy broken.",
+      expected: "Check copy completeness clean. Three one-line repairs.",
     },
     quiz: [
       {
-        q: "Completeness is clean but an xref still jumps to the wrong paragraph. What is true?",
+        q: "Completeness is clean but a page is still red. What is true?",
         options: [
-          "Impossible — completeness checks xref text",
-          "Possible — the id exists but is on the wrong element",
-          "Then the submap is illegal",
+          "Impossible",
+          "Possible — completeness is the booklet; the red line is that page’s tags",
+          "Then the root map is wrong",
         ],
         answer: 1,
-        why: "Completeness finds missing targets. It does not score whether the surviving id is the one you meant.",
+        why: "Two checks. Booklet pointers, and page skeleton. You need both.",
       },
       {
-        q: "You failed this boss. Does Day 22 stay locked?",
+        q: "You failed this check. Does week 4 open?",
         options: [
-          "Yes, forever",
-          "No, if Friday (Day 20) lab is done the next week can unlock. The boss badge stays locked until you pass.",
-          "No, Daily Burst unlocks the week",
+          "Yes, Friday’s handbook is enough",
+          "No. Finish lab, quiz, and note. Retry the quiz if you need to.",
+          "Yes, if the warmup is done",
         ],
         answer: 1,
-        why: "Boss badge waits. Curriculum week does not hostage you if Friday lab is done.",
-      },
-      {
-        q: "Parent map and submap both href the same topic. Completeness is green. Ship it?",
-        options: [
-          "Yes — green means the book is honest",
-          "No — you shipped the chapter twice; completeness does not mean unique",
-          "Yes if the ids differ",
-        ],
-        answer: 1,
-        why: "Completeness is missing targets, images, keys. Duplicates can be valid and wrong.",
-      },
-      {
-        q: "Flower-docs still exists. Kitepump is the Week 3 pack. What do you not do?",
-        options: [
-          "Keep both",
-          "Replace flower-docs with kitepump",
-          "Open either as root map when you work that book",
-        ],
-        answer: 1,
-        why: "Flower-docs stays the Week 1–2 bench. Kitepump is additive.",
+        why: "Reuse week waits until you can repair a booklet.",
       },
     ],
     quests: defaultQuests({
-      learn: "Name completeness vs duplicate-chapter and wrong-id failures",
-      doTitle: "Clinic copy still validates",
-      doDone: "Four breaks repaired. Completeness clean. File-visit count written.",
-      stress: "Explain each error in one sentence",
+      learn: "Name the three breaks out loud",
+      doTitle: "Repair the check copy",
+      doDone: "Completeness clean. Three one-line notes.",
+      stress: "Pass the quiz. Retry if you need to.",
     }),
-    fieldNotePrompt: "Write the four errors you caused and the one-line repair for each.",
-    tomorrowHook: "Week 4: keys and conref as practice — you will reuse a warning, not memorize a glossary.",
-    body: `## Clinic, not a ceremony
+    fieldNotePrompt: "The three errors, and the one-line repair for each.",
+    tomorrowHook: "Week 4: one product name, used everywhere — instead of typing it forty times.",
+    body: `## Check
 
-This is a week boss: mixed repair + scenario questions + a timed completeness read.
+You now know the apple of a booklet: pointers, a tree, a completeness row.
 
-Fail it and **Day 22 still unlocks if Day 20 lab is done**. The boss badge stays locked until you retry.
-
-## Errors from this week
-
-1. **Missing href** — file moved, map not updated.
-2. **Duplicate chapter** — parent and submap both point at the same topic.
-3. **Wrong id** — xref target exists but is the wrong element.
-4. **Wrong root map** — keys and some xrefs look broken.
-
-## Two packs
-
-\`flower-docs\` stays. \`kitepump-dita\` is the product book from here through publish. Do not merge them into one map.
-
-## Figure
-
-Completeness report: one row per problem. Caption: *DITA Maps Manager > Validate and Check for Completeness.*
+Fail the quiz and **week 4 stays locked**. Retry is free.
 `,
   },
 ].map((d) => ({ ...d, week: weekOf(d.n) }));

@@ -1,8 +1,8 @@
 ---
 day: 72
 week: 11
-title: Content Fragments for headless authors
-objective: Open or mock a Content Fragment model and write three fields. It is not a page and not a DITA reference.
+title: A form-like page (Content Fragment) in plain words
+objective: "Open or mock a Content Fragment, write three fields, and say it is not a laid-out page and not a DITA lookup page."
 timeboxMinutes: 90
 skills: [aemSites]
 legacyLessonIds: []
@@ -10,8 +10,8 @@ youtube:
   - id: idByz7WrhbQ
     title: AEM from Headful to Headless (Adobe for Business)
     watchFor:
-      - Content Fragment model builder
-      - Fragment vs page
+      - "A form of fields, not a page layout"
+      - "Fragment vs page, if shown"
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/universal-editor/authoring-methods", label: AEM authoring methods, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/quick-start", label: AEM as a Cloud Service authoring quick start, dated: 2026-09 }
@@ -19,50 +19,85 @@ lab:
   id: lab-72
   title: "Three fields, no page tree"
   pack: aem-author-field-log
-  failWhen: You edit the fragment as if it were a Sites page layout.
-  expected: Three fields. Two ‘is not’ sentences.
+  failWhen: "You treat the fragment as a Sites page layout, or you skip the two ‘is not’ sentences."
+  expected: Three fields. Two ‘is not’ sentences. Mock labeled if no instance.
   steps:
-    - "On instance: open a Content Fragment (WKND has them). Write the model name and three fields."
-    - "On mock: invent nothing pretty — write ‘model: Kitepump spec (mock) / fields: name, pressure, valve’ and label mock."
-    - "Write: this is not an Experience Fragment and not a DITA reference topic."
+    - "If you have AEM: open a Content Fragment (WKND has them). Write the model name and three fields in oxygen-bootcamp-work/week11/field-log-72.txt."
+    - "If you do not: write ‘model: Kitepump spec (mock) / fields: name, pressure, valve’ and label it mock."
+    - "Write two ‘is not’ sentences: this is not an Experience Fragment, and this is not a DITA lookup page."
+    - "Write who might read the fields: a page, an app, both, or unknown."
+    - Do not decorate the fragment like a landing page.
+    - "Labeled mock: a short form with three fields. Caption: mock."
 sessionQuests:
   - id: a
     block: A
-    title: Name Content Fragment and what it forbids (page layout)
+    title: Find Content Fragment as a form of fields
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Three fields written
+    title: Write three fields and two ‘is not’ sentences
     minutes: 25
-    done: Model name + fields + two is-nots.
+    done: Model name plus fields. Mock labeled if needed.
   - id: c
     block: C
-    title: Who consumes the fragment
+    title: Pick Content Fragment vs Experience Fragment vs a DITA lookup page
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [glossary-lightning, authors-dare]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [content-fragment]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Three fields. Two ‘is not’ sentences. }
+  - { id: lab, prompt: Three fields. Two ‘is not’ sentences. Mock labeled if no instance. }
 quiz:
-  - q: "A Content Fragment is a DITA reference stored in AEM. True?"
+  - q: "A Content Fragment is a DITA lookup page stored in AEM. True or not?"
     answer: 1
-    why: CF is a headless content model. DITA reference is XML in Oxygen/Guides.
+    why: A DITA lookup page is XML in Oxygen. A Content Fragment is an AEM form of fields.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "Who reads this fragment — a page, an app, both, or unknown?"
-tomorrowHook: "Assets: upload, move, metadata."
+      - True — fields are a lookup page
+      - Not true — it is a fill-in form of fields for a page or an app
+      - True if the model is named reference
+  - q: "A promo strip reused on forty pages is which of these?"
+    answer: 1
+    why: Layout strip = Experience Fragment. Fields = Content Fragment. Different jobs.
+    options:
+      - Content Fragment
+      - Experience Fragment (layout strip from last week)
+      - Document Authoring
+fieldNotePrompt: "What three fields did you write, and who reads them — a page, an app, both, or unknown?"
+tomorrowHook: Tomorrow you upload a file to the asset library.
 ---
 
-## Fragments without a page
+## A form, not a layout
 
-Structured fields. Headless authors live here. Do not decorate it like a landing page.
+A **Content Fragment** is a fill-in form of fields. Name. Pressure. Valve. An app can read those fields. A page can read them too. There is no tree of Title / Teaser / Container here.
+
+It is not an **Experience Fragment**. That is a layout strip. Last week.
+
+It is not a DITA lookup page. That is XML in Oxygen. Week 2.
+
+Do not decorate a Content Fragment like a landing page. You are filling fields, not stacking blocks.
+
+If you have no AEM, a labeled mock is the lab. Three fields is enough.
+
+## Word today
+
+**Content Fragment** — a fill-in form of fields in AEM, not a laid-out page.
+
+## Watch
+
+Pause the official video on the form, not on the pretty page. You want fields.
+
+## Lab
+
+Three fields. Two ‘is not’ sentences. Labeled mock.
+
+## Figure
+
+Labeled mock: model name plus three fields. Caption: *Mock. A form, not a landing page.*

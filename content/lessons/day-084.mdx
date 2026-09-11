@@ -1,8 +1,8 @@
 ---
 day: 84
 week: 12
-title: Capstone — AEM page family
-objective: "Create or mock a small page family that tells the same Kitepump story: one parent, two children, Text/Image/Teaser, no DITA dumped into Text."
+title: "Capstone: a small family of AEM pages"
+objective: "Create or mock a small page family that tells the same Kitepump story: one parent, two children, Title / Text / Image / Teaser, no DITA dumped into Text."
 timeboxMinutes: 110
 skills: [aemSites]
 legacyLessonIds: [t7-aem]
@@ -14,7 +14,7 @@ youtube:
   - id: idByz7WrhbQ
     title: AEM from Headful to Headless (Adobe for Business)
     watchFor:
-      - Components not topics
+      - "Blocks, not topics"
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/quick-start", label: AEM as a Cloud Service authoring quick start, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction", label: Core Components introduction, dated: 2026-09 }
@@ -23,51 +23,78 @@ lab:
   id: lab-84
   title: Sites half of the capstone
   pack: aem-author-field-log
-  failWhen: "You paste a DITA task into the Text component, or the family has one orphan page with no parent."
-  expected: Three pages (or mocks). Components used honestly. Payload written.
+  failWhen: "You paste a DITA how-to into the Text block, or the family has one orphan page with no parent."
+  expected: Three pages (or mocks). Blocks used as taught. Payload written.
   steps:
     - "Parent page: Kitepump (title). Child: Beach use. Child: Where to buy (or mock names)."
-    - "Core Components: Title, Text, Image with teaching-point alt, Teaser linking parent to child."
-    - Quick Publish or mock the payload. Field log filled.
-    - No DITA XML pasted into Text.
+    - "Blocks: Title, Text, Image with a real alt phrase, Teaser linking parent to child."
+    - Quick Publish or mock the payload. Fill oxygen-bootcamp-work/week12/field-log-84.txt.
+    - No DITA XML pasted into Text. Rewrite for the page. Link to the help if you must.
+    - "Labeled mock: three pages in a tree. Caption: mock."
 sessionQuests:
   - id: a
     block: A
-    title: Name the page family and what Text forbids
+    title: See the three pages as a parent plus two children
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Family exists on instance or mock
+    title: "Build or mock the family with Title, Text, Image, Teaser"
     minutes: 25
-    done: Three pages. Field log filled.
+    done: Three pages. Field log filled. Mock labeled.
   - id: c
     block: C
-    title: How the Teaser points at the child
+    title: Pick whether pasting the how-to into Text is the capstone
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [warmup-match, one-line-repair]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, output-oracle]
 toolCards: [sites-console, page-editor]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Three pages (or mocks). Components used honestly. Payload written. }
+  - { id: lab, prompt: Three pages (or mocks). Blocks used as taught. Payload written. }
 quiz:
-  - q: "Pasting the DITA task into Text keeps the capstone ‘one story’. True?"
+  - q: "Pasting the DITA how-to into Text keeps the capstone as one story. True or not?"
     answer: 1
-    why: "Same product, two models. Rewrite for the page. Link to the help if you must."
+    why: One product story. Two models. Do not dump the handbook into the hero.
     options:
-      - "True"
-      - False — that smashes families; tell the story in page language
-fieldNotePrompt: "What is the parent page title?"
-tomorrowHook: Same product story on both surfaces — a comparison sheet.
+      - True — one story means one file
+      - "Not true — same product, two desks. Rewrite for the page. Link to the help if you must"
+      - True if you hide the tags
+  - q: "How do you connect parent to child on the web page?"
+    answer: 1
+    why: Pages point with links and teasers. Maps point with topicrefs. Different desks.
+    options:
+      - A topicref in a map
+      - "A Teaser (or another real link) on the parent, pointing at the child"
+      - A ditaval
+fieldNotePrompt: "What is the parent page title, and what are the two children called?"
+tomorrowHook: "Tomorrow: one product story on both desks — a comparison sheet."
 ---
 
-## Sites half
+## The Sites half
 
 Same product. Different model. Pages, not topicrefs.
+
+- One **parent**
+- Two **children**
+- **Title, Text, Image, Teaser**
+- A real **alt** phrase
+- No handbook XML in Text
+
+You may not have AEM. A labeled mock plus a field log is the lab. Quick Publish on a real instance if you have one.
+
+The page sells the beach card. The book explains how. They share a name, not a file format.
+
+## Lab
+
+Three pages or three mocks. Blocks as taught. No DITA paste.
+
+## Figure
+
+Labeled mock: parent plus two children. Caption: *Mock. A family of pages, not a map.*

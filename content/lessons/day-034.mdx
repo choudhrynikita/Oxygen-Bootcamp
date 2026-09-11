@@ -1,8 +1,8 @@
 ---
 day: 34
 week: 5
-title: "Find/Replace with care — scope, then a dry run"
-objective: Replace a product string in a scoped folder without touching the library warning or the map’s keydef by accident.
+title: Find and replace without breaking files
+objective: Replace a product string in a scoped folder without touching the library warning or the booklet’s stored name by accident.
 timeboxMinutes: 90
 skills: [oxygenUi, xmlLiteracy]
 legacyLessonIds: [t4-validate]
@@ -16,80 +16,71 @@ sources:
   - { href: "https://www.oxygenxml.com/doc/ug-editor/topics/author-dita.html", label: Authoring DITA in Oxygen, dated: 2026-09 }
 lab:
   id: lab-34
-  title: "Scoped replace, then completeness"
+  title: "A scoped replace, then completeness"
   pack: kitepump-dita
-  failWhen: "Replace All ran on the whole workspace, or the keydef was emptied, or warnings.dita lost a sentence you did not intend."
-  expected: Replace log written. Keydef still holds the name. Completeness clean. No workspace-wide replace.
+  failWhen: "Replace All ran on the whole workspace, or the booklet’s stored name was emptied, or warnings.dita lost a sentence you did not intend."
+  expected: Replace log written. The booklet still holds the product name. Completeness clean. No workspace-wide replace.
   steps:
-    - "Find in Files: HP-40a (or your product string) across the kitepump folder. Count the hits. Note which are keydef, keyref, and leftover hardcoded text."
-    - "If you still have hardcoded product strings in topics, replace them in topics/ only — not in maps/, not in ditaval/, not in warnings.dita unless you mean to."
-    - "Use Find/Replace in Files with a file filter (*.dita) and a folder scope. Preview replacements if your version has Preview. Do not Replace All on the repo root."
-    - "After replace: validate open files, then completeness on the root map."
-    - "Write oxygen-bootcamp-work/week5/replace-log.txt: scope, filter, how many replacements, what you refused to touch."
-    - Undo from local history or Git if the map’s keydef changed by accident — then write that you needed undo.
+    - "Find in Files: KP-2a (or your product string) across the kitepump folder. Count the hits. Note which are the stored name in the booklet, which are pointers, and which are leftover typed text."
+    - "If topics still have a typed product string, replace them in topics/ only — not in maps/, not in ditaval/, not in warnings.dita unless you mean to."
+    - "Use Find/Replace in Files with a file filter (*.dita) and a folder scope. Preview replacements if your version has Preview. Do not Replace All on the whole workspace."
+    - "After replace: confirm open files have no red error, then run completeness on the root map."
+    - "Write oxygen-bootcamp-work/week5/replace-log.txt: scope, filter, how many replacements, what you left untouched."
+    - "If the booklet’s stored name changed by accident, undo, then write that you needed undo."
 sessionQuests:
   - id: a
     block: A
-    title: Name folder scope and file filter and what Replace All on root forbids
+    title: Find Find/Replace in Files and the folder field
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the keydef intact after a scoped replace
+    title: "Replace in topics/ only, then run completeness"
     minutes: 25
-    done: Log written. Completeness clean. No accidental library wipe.
+    done: Log written. Completeness clean. Booklet name still there.
   - id: c
     block: C
-    title: Preview a too-wide replace and cancel it
+    title: "Pick what a workspace-wide replace breaks, and how to repair a typed product name"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [menu-path-race, output-oracle]
+    done: Note saved.
+dailyBurstPool: [one-line-repair, authors-dare]
 toolCards: [author-mode, text-mode]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Replace log written. Keydef still holds the name. Completeness clean. No workspace-wide replace. }
+  - { id: lab, prompt: Replace log written. The booklet still holds the product name. Completeness clean. No workspace-wide replace. }
 quiz:
-  - q: "Find/Replace in Files can restrict to an XPath. You need that today?"
+  - q: "Replace All on the whole workspace for note → caution. What blows up?"
     answer: 1
-    why: v1 mentions XPath restrict as a power tool. Scope first. XPath later.
-    options:
-      - "Yes, always"
-      - "Not required today — folder plus *.dita is the junior-safe scope; XPath is Week 8"
-      - XPath is only for Schematron
-  - q: "Replace All on the repo root for ‘note’ → ‘caution’. What blows up?"
-    answer: 1
-    why: You will rename XML names. Scope and preview exist because of this class of mistake.
+    why: You will rename tags. Folder plus file filter exist because of this class of mistake.
     options:
       - Nothing — words are words
-      - "Element names, comments, and unmatched sentences"
-      - Only Markdown files
-  - q: "The product name lives in a keydef. A topic still has a hardcoded copy. First repair?"
+      - "Tag names, comments, and unmatched sentences"
+      - Only the completeness report
+  - q: "The product name lives in the booklet. A page still has a typed copy. First repair?"
     answer: 1
-    why: "The map owns the name. Replace in topics is toward keyref, not toward deleting the key."
+    why: "The booklet owns the name. Replace on pages is toward a key, not toward deleting the key."
     options:
-      - Replace All including the map
-      - Replace the topic copy with a keyref; leave the keydef as the source
-      - Delete the keydef so there is one copy in the topic
-fieldNotePrompt: "What would you refuse to Replace All even with preview, and why?"
-tomorrowHook: "Tomorrow is the Week 5 boss: conditions, review, Hints, and a replace you can defend."
+      - Replace All including the booklet
+      - Replace the page copy with a name pointer; leave the booklet as the source
+      - Delete the name in the booklet so there is one copy on the page
+fieldNotePrompt: "What folder did you search, how many replacements ran, and what did you leave untouched?"
+tomorrowHook: Tomorrow is the week check. Passing it opens week 6.
 ---
 
-## Scope first
+## Folder first
 
-Find in Files is an audit. Replace is a weapon. Set **folder**, **file filter**, and if you have it, **preview**.
+Find in Files is an audit. Replace is a sharp tool. Set **folder**, **file filter**, and if you have it, **preview**.
 
-Never Replace All on the workspace root. Never replace an XML name as if it were English.
+Never Replace All on the whole workspace. Never replace a tag name as if it were English.
 
-## Keys
+If the string is the product name, the repair is a **keyref** (a name pointer), not a replace that also hits the booklet’s stored name.
 
-If the string is the product name, the repair is a **keyref**, not a clever replace that also hits the keydef.
+## Word today
 
-## Figure
-
-Find/Replace in Files dialog with a folder path and `*.dita`. Caption: *Scope is a field, not a hope.*
+**Scope** — the folder and file type you search in, so you do not change the whole workspace.

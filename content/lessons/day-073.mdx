@@ -1,8 +1,8 @@
 ---
 day: 73
 week: 11
-title: "Assets — upload, move, basic metadata"
-objective: "Upload or mock an image, set a title and description, and write the move path."
+title: Upload a file to the asset library
+objective: "Upload or mock one picture, set a title and a description, and write the folder path — without putting the file in git."
 timeboxMinutes: 90
 skills: [aemSites]
 legacyLessonIds: []
@@ -10,59 +10,89 @@ youtube:
   - id: 7-Lcw5PejhI
     title: Go live faster with quick site creation in AEM
     watchFor:
-      - Authoring adjacent to assets
+      - "Authoring next to pictures, if shown"
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/quick-start", label: Assets basic operations, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/basic-handling", label: AEM Basic Handling, dated: 2026-09 }
 lab:
   id: lab-73
-  title: "One asset, honest metadata"
+  title: "One file, title, description, path"
   pack: aem-author-field-log
-  failWhen: "You commit a 20 MB photo to git, or you paste a copyrighted Adobe screenshot."
-  expected: Path + title + description. Git stays small.
+  failWhen: "You commit a huge photo to git, or you paste a copyrighted Adobe screenshot, or the path is missing."
+  expected: Path plus title plus description. Git stays small. Mock labeled if no instance.
   steps:
-    - "On instance: Assets > upload a small photo you own or a public-domain beach photo. Title. Description. Do not steal a vendor screenshot."
-    - Move it to a folder you are allowed to use. Write the path.
-    - "On mock: write the path you would use: /content/dam/kitepump/beach-card.jpg (mock)."
-    - "Write: DAM path is not a DITA image href, though Guides may store DITA images in DAM later."
+    - "If you have AEM: Assets, upload a small photo you own or a public-domain picture. Title. Description. Do not steal a vendor screenshot."
+    - Move it to a folder you are allowed to use. Write the path in oxygen-bootcamp-work/week11/field-log-73.txt.
+    - "If you do not have AEM: write the path you would use, for example /content/dam/kitepump/beach-card.jpg, and label it mock."
+    - "Write: this path is not a DITA image href. Guides may store DITA pictures in this library later. Still a different pointer."
+    - Do not put a large photo in this git repo. The library lives in AEM.
+    - "Labeled mock: Assets folder with one file card. Caption: mock."
 sessionQuests:
   - id: a
     block: A
-    title: Name Assets console and what git forbids
+    title: Find the Assets console (or the mock of it)
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Metadata is filled
+    title: "Write path, title, and description"
     minutes: 25
     done: Path written. No binary in git.
   - id: c
     block: C
-    title: Move vs copy on a live DAM
+    title: Pick whether the picture belongs in git
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [warmup-match, one-line-repair]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [assets-console]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Path + title + description. Git stays small. }
+  - { id: lab, prompt: Path plus title plus description. Git stays small. Mock labeled if no instance. }
 quiz:
-  - q: "You should commit the DAM binary into this Git repo. True?"
+  - q: "Should you put the library file into this course’s git repo?"
     answer: 1
-    why: "CONTENT_BUDGET.md. Assets live in AEM or object storage, not this git tree."
+    why: Assets live in AEM. This repo stays small.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "What title did you give the asset?"
-tomorrowHook: Language copies at awareness level.
+      - Yes — so the picture travels with the lesson
+      - "No — the file lives in AEM’s library, not in this git tree"
+      - "Yes, if it is under 20 MB"
+  - q: "You set a title on the file in Assets. Is that the same as the Title block on a page?"
+    answer: 1
+    why: Same English word. File title lives in the library. Page Title is a block.
+    options:
+      - Yes — one title everywhere
+      - "No — one is metadata on the file, the other is a heading block on a page"
+      - Yes on Cloud only
+fieldNotePrompt: "What title did you give the file, and what path did you write?"
+tomorrowHook: "Tomorrow: language copies, awareness only. You will not run one on a live tree."
 ---
 
-## Assets
+## Upload a file
 
-Upload, move, basic metadata. Experience League Assets basic operations is the source. No vendor PDFs in git.
+Last week **Assets** was ‘the library the Image block points at’. Today you put a file in that library.
+
+Upload. Give it a **title** (a name in the library) and a **description**. Move it into a folder you are allowed to use. Write the path.
+
+A typical path looks like `/content/dam/kitepump/beach-card.jpg`. That is not a DITA `href`. Do not mix the two pointers.
+
+Do not dump the photo into this git repo. The library is AEM, not the course folder.
+
+If you have no AEM, write the path you would use and label the mock.
+
+## Word today
+
+**Assets console** — the screen where you upload, move, and name files in AEM’s library.
+
+## Lab
+
+One file (or a mock). Title, description, path. Git stays small.
+
+## Figure
+
+Labeled mock: one file card in a folder. Caption: *Mock. Path written in the log.*

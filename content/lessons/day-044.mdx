@@ -1,8 +1,8 @@
 ---
 day: 44
 week: 7
-title: What desktop still does better
-objective: Prove three desktop-only moves on kitepump.ditamap that you would not bet a browser tab on.
+title: When the desktop app is still the right tool
+objective: Run three desktop-only moves on kitepump.ditamap that you would not bet a browser tab on.
 timeboxMinutes: 90
 skills: [oxygenUi, maps]
 legacyLessonIds: []
@@ -10,7 +10,8 @@ youtube:
   - id: ozFZz6YZMCY
     title: DITA Maps Manager View in Oxygen XML Editor 19
     watchFor:
-      - Completeness from Maps Manager — a desktop-grade move
+      - The booklet view (Maps Manager)
+      - Where you run a completeness check from the booklet
 sources:
   - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
@@ -18,53 +19,71 @@ lab:
   id: lab-44
   title: Three desktop moves
   pack: kitepump-dita
-  failWhen: You skip completeness and write slogans about ‘the cloud’.
+  failWhen: "You skip the completeness check, or you write slogans about ‘the cloud’ with no file in your hand."
   expected: Completeness ran. Three desktop moves named with evidence.
   steps:
-    - Run Validate and Check for Completeness on kitepump.ditamap.
-    - Open Configure Transformation Scenario. Write whether Web Author in your shop even offers local DITA-OT.
-    - "Open a Schematron-aware validate if you have one; if not, write “no Schematron at this desk.”"
-    - Record the three moves in week7/desktop-still.txt.
+    - "Open kitepump.ditamap in Maps Manager. Run Validate and Check for Completeness. Write the result (clean, or the first row you saw)."
+    - Open Configure Transformation Scenario. Write the scenario name you would run. Do not hunt for that same local publish inside a browser tab.
+    - "Turn off wifi for a minute, or write how you would open the booklet on a train with no signal. The desktop copy on disk still opens. A browser tab may not."
+    - Save the three moves in oxygen-bootcamp-work/week7/desktop-still.txt.
 sessionQuests:
   - id: a
     block: A
-    title: Name completeness as a desktop-grade map action
+    title: Find completeness on the booklet in Maps Manager
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Completeness still clean
+    title: Run three desktop moves and write them down
     minutes: 25
-    done: Report ran. Three moves recorded.
+    done: Completeness ran. Three moves in desktop-still.txt.
   - id: c
     block: C
-    title: Explain why a SME does not need this yet
+    title: Pick which jobs stay on the desktop app
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [menu-path-race, output-oracle]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, one-line-repair]
 toolCards: [maps-manager, transformation]
 badgeId: null
 boss: false
 checks:
   - { id: lab, prompt: Completeness ran. Three desktop moves named with evidence. }
 quiz:
-  - q: "Local WebHelp from DITA-OT is primarily a desktop (or server) job. True?"
+  - q: "A completeness check on the booklet is mainly a desktop job this course. True or not?"
     answer: 0
-    why: A browser editor may preview. The transform log you will debug this course lives on desktop or a publish server.
+    why: Maps Manager lives on the desktop app. A reviewer in a browser does not need this button.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "Which desktop move would you refuse to skip before a release?"
-tomorrowHook: "Review workflow: comments and change tracking without mixing tools."
+      - "True — you ran it in Maps Manager last month, and you run it here again"
+      - Not true — only a browser tab can check links
+      - Not true — Help > About checks the booklet
+  - q: "Last week you published WebHelp to a folder on your computer. Who needs that job?"
+    answer: 1
+    why: A browser editor may preview a page. The transform log you debug lives on the desktop (or on a publish server). Not on a reviewer’s phone.
+    options:
+      - Every reviewer who only comments on one sentence
+      - The person who owns the booklet and the publish log
+      - Nobody — publish logs are optional forever
+fieldNotePrompt: "Which of the three desktop moves did you actually run? Quote the completeness result in one line."
+tomorrowHook: "Tomorrow you send a file out for review: track a change, leave a comment, accept one edit."
 ---
 
-## Desktop still wins
+## Desktop still wins some jobs
 
-Maps Manager completeness. Transformation logs. Schematron. Master Files rename. Custom frameworks. Offline.
+The booklet view. A completeness check. A transformation log. A rename that updates pointers. Work with no internet.
 
-Web Author wins for a writer who only needs the topic on a train. Do not make that person install DITA-OT.
+A person who only needs to read one page on a train does not need those buttons. Do not make them install the desktop app for a comment.
+
+You are the person with the booklet. You still need the desktop.
+
+## Word today
+
+**Desktop app** — Oxygen installed on your computer. Full menus. Files on disk. The desk you have used since week 1.
+
+## Lab
+
+Three moves, written down. Completeness is the one you must actually click.

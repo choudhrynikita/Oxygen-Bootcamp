@@ -1,8 +1,8 @@
 ---
 day: 61
 week: 9
-title: "Quick Publish, Unpublish, Basic Handling"
-objective: "Log Quick Publish vs Publish vs Unpublish, and write what you must check (references, assets) before you click."
+title: "Send a page live, and take it down"
+objective: "Log Quick Publish vs Unpublish, and write a short checklist you would run before you click."
 timeboxMinutes: 90
 skills: [aemSites]
 legacyLessonIds: [t7-aem]
@@ -10,12 +10,12 @@ youtube:
   - id: 7-Lcw5PejhI
     title: Go live faster with quick site creation in AEM
     watchFor:
-      - Going live / site creation leading to published site
-      - Any publish action shown
+      - Going live / any publish action shown
+      - That a live site is the point of the wizard
   - id: VcMI0zWIKdg
     title: How to Build a Global Site in AEM Sites
     watchFor:
-      - A live site is not a local DITA-OT out/ folder
+      - A live site is not a local HTML folder on your laptop
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/basic-handling", label: AEM Basic Handling, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
@@ -24,75 +24,84 @@ lab:
   id: lab-61
   title: "Field log: publish actions"
   pack: aem-author-field-log
-  failWhen: "The log treats Quick Publish as DITA-OT, or skips Unpublish, or has no checklist."
-  expected: Three actions named. Checklist present. Mock labeled. Badge evidence is the checklist.
+  failWhen: "The log treats Quick Publish as last week’s DITA-OT run, or skips Unpublish, or has no checklist."
+  expected: Three actions named. Checklist present. Mock labeled.
   steps:
-    - "Read Basic Handling + authoring essentials on publish/unpublish (Experience League). Quote at most one sentence, then write your own."
-    - "Write oxygen-bootcamp-work/week9/field-log-61.txt: Quick Publish is a short path to activate selected pages. Manage Publication / Publish may include children and later times — verify labels. Unpublish removes from the publish environment."
-    - "Checklist: did I select the right page, do references/assets need to come along, is this the author environment I’m allowed to publish from?"
+    - "Read Basic Handling plus authoring essentials on publish and unpublish (Experience League). Quote at most one sentence, then write your own."
+    - "Write oxygen-bootcamp-work/week9/field-log-61.txt: Quick Publish is a short path to copy selected pages to the live environment. Manage Publication / Publish may include children and later times — verify labels. Unpublish takes the page off the live environment."
+    - "Checklist: did I select the right page, do pictures need to come along, is this the author environment I’m allowed to publish from?"
     - "Write: this is not Apply Transformation Scenario. No out/ folder appears on your laptop."
     - "Labeled mock: Sites console with Quick Publish on a Kitepump page. Caption: mock."
 sessionQuests:
   - id: a
     block: A
-    title: "Name Quick Publish, Publish, Unpublish"
+    title: Find Quick Publish and Unpublish on the Sites console (video or mock)
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep a pre-publish checklist
+    title: Write a pre-publish checklist
     minutes: 25
     done: Checklist written. Mock labeled. Not confused with DITA-OT.
   - id: c
     block: C
-    title: Add assets/references as a checklist line if you forgot it
+    title: "Pick Quick Publish vs a transform, and what Unpublish does not delete"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [glossary-lightning, authors-dare]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [sites-console]
 badgeId: aem-quick-publish
 boss: false
 checks:
-  - { id: lab, prompt: Three actions named. Checklist present. Mock labeled. Badge evidence is the checklist. }
+  - { id: lab, prompt: Three actions named. Checklist present. Mock labeled. }
 quiz:
-  - q: "Quick Publish vs a DITA-OT WebHelp folder. Same button?"
+  - q: "Quick Publish vs last week’s WebHelp folder. Same button?"
     answer: 1
-    why: "Two families. Two verbs: activate vs transform."
+    why: "Two desks. Two verbs: send live vs write HTML on your laptop."
     options:
       - "Yes"
-      - No — AEM activation vs local transform
-      - Yes on Cloud only
-  - q: "You Quick Publish a page but the hero image 404s on publish. Likely miss?"
+      - No — AEM copies a page to the live environment. DITA-OT writes HTML on your laptop
+      - Yes if you Preview first
+  - q: "You Quick Publish a page but the picture at the top is missing on the live site. Likely miss?"
     answer: 1
-    why: Assets have their own publish state. Authors check references.
+    why: Pictures have their own live state. Authors check what goes along with the page.
     options:
-      - Chemistry
-      - The image asset was not published / not referenced correctly
-      - Missing ditamap
-  - q: "Unpublish means delete from author. True?"
+      - The booklet is missing
+      - "The picture was not sent live, or it is not referenced correctly"
+      - You forgot Help > About
+  - q: "Unpublish means delete the page from author. True or not?"
     answer: 1
-    why: Unpublish affects the publish environment. Author can still hold the page.
+    why: Take it down on publish. The editing copy can stay.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: "What would you check before Quick Publish on a page with a new image?"
-tomorrowHook: "Tomorrow is the Week 9 boss: author vs publish, console, create, Edit/Preview, Quick Publish — still mocks if no instance."
+      - True — gone everywhere
+      - Not true. Unpublish affects the live environment. Author can still hold the page
+      - True if you also Preview
+fieldNotePrompt: "What three checklist lines did you write? What would you check before sending a page with a new picture?"
+tomorrowHook: "Tomorrow is the week 9 check. Field logs 56–61, still mocks if no instance. Week 10 stays locked until that day is finished."
 ---
 
-## Publish actions
+## Send it. Take it down.
 
-**Quick Publish** — fast activate of what you selected. **Publish / Manage Publication** — more control (tree, schedule — verify). **Unpublish** — take it off publish.
+**Quick Publish** — fast copy of what you selected to the live environment.
 
-**Basic Handling** covers selecting items and using the rail. Read it. Do not memorize a 2016 screenshot.
+**Publish / Manage Publication** — more control (tree, schedule — verify labels).
 
-## Not a transform
+**Unpublish** — take it off the live environment. The author copy can stay.
 
-No DITA-OT log. No `index.html` on your laptop. A published URL on the publish host is the proof — or a field log if you have no instance.
+**Basic Handling** covers selecting items and using the rail. Read it. Do not memorize an old screenshot.
+
+This is not last week’s transform. No DITA-OT log. No `index.html` on your laptop. A published URL is the proof — or a field log if you have no instance.
+
+Pictures have to go live too, or the live page shows a hole.
+
+## Word today
+
+**Quick Publish** — a short path to send selected pages live. Not Preview. Not a DITA-OT run.
 
 ## Figure
 

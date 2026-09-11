@@ -1,8 +1,8 @@
 ---
 day: 89
 week: 12
-title: Written scenario exam and error clinic
-objective: "Solve three scenarios (broken map, wrong CMS, failed transform) in writing."
+title: Written scenarios and error repair
+objective: "Solve three scenarios in writing (broken map, wrong desk, failed transform), then repair the broken map copy."
 timeboxMinutes: 90
 skills: [review, maps, publish, aemSites]
 legacyLessonIds: [t4-complete, t5-publish, t7-aem]
@@ -10,11 +10,11 @@ youtube:
   - id: JkPeWea3Y3U
     title: DITA Map Completeness Check
     watchFor:
-      - Missing href
+      - A missing link
   - id: zNmXfKWXwO8
     title: Creating a Publishing Template to Customize WebHelp and PDF using CSS
     watchFor:
-      - Failed transform reading
+      - Reading a failed transform
 sources:
   - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
@@ -24,50 +24,73 @@ lab:
   title: Three scenarios
   pack: kitepump-broken-map
   failWhen: Any first move is ‘reinstall Oxygen’ or ‘Quick Publish the map’.
-  expected: Three first moves. Broken map clinic copy clean.
+  expected: Three first moves. Broken map copy clean.
   steps:
+    - Write oxygen-bootcamp-work/week12/field-log-89.txt.
     - "Scenario A: completeness names a missing href. First move?"
-    - "Scenario B: a PM wants the landing page written as a DITA map. What do you say?"
-    - "Scenario C: PDF transform failed. First place you look?"
-    - Write three answers. Then repair the broken map copy if it is still broken.
+    - "Scenario B: a project manager wants the landing page written as a DITA map. What do you say?"
+    - "Scenario C: a PDF transform failed. First place you look?"
+    - Then repair the broken map copy in the pack (work on a copy). Completeness clean when you stop.
 sessionQuests:
   - id: a
     block: A
-    title: Name the three first moves
+    title: Read the three scenarios before you write
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Broken copy clean
+    title: "Write three first moves, then repair the broken copy"
     minutes: 25
     done: Three answers. Completeness clean.
   - id: c
     block: C
-    title: The PM in scenario B
+    title: "Pick the first look on a failed PDF, and what you tell the project manager"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [warmup-match, one-line-repair]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, output-oracle]
 toolCards: [maps-manager, transformation, sites-console]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Three first moves. Broken map clinic copy clean. }
+  - { id: lab, prompt: Three first moves. Broken map copy clean. }
 quiz:
-  - q: "A failed PDF transform: first place you look is the Sites console. True?"
+  - q: "A failed PDF transform: first place you look is the Sites console. True or not?"
     answer: 1
-    why: "Output oracle from the game rules, now as an exam."
+    why: "Week 6: the log is the oracle. Sites is the other desk."
     options:
-      - "True"
-      - "False — the transformation log, first error"
-fieldNotePrompt: "What did you tell the PM?"
-tomorrowHook: Portfolio export and what is not taught.
+      - True — publish lives in Sites
+      - Not true — open the transformation log and read the first real error
+      - True if the PDF is for the landing page
+  - q: "A project manager wants the landing page written as a DITA map. What do you say?"
+    answer: 1
+    why: Scenario B. You have been saying this since week 9.
+    options:
+      - Yes — one CMS
+      - "No — the landing page is Sites. The handbook is DITA. They share a product story, not a file format"
+      - "Yes, then Quick Publish the map"
+fieldNotePrompt: "What did you tell the project manager in scenario B? Two sentences."
+tomorrowHook: "Last day: what you can do now, what this course did not teach, and what is next."
 ---
 
-## Exam
+## Three first moves
 
-First moves. Then repair. No reinstall folklore.
+A. Completeness names a missing link. Open the map. Fix the href (or drop the row). Run completeness again.
+
+B. A project manager wants the landing page as a DITA map. Say no. The landing page is Sites. The handbook is DITA.
+
+C. A PDF transform failed. Open the transformation log. Quote the first real error. Do not reinstall Oxygen. Do not Quick Publish the map.
+
+Then repair the broken map copy. Completeness clean when you stop.
+
+## Lab
+
+Three answers. One repaired copy.
+
+## Figure
+
+A completeness report with one missing href. Caption: *Fix the link. Do not reinstall.*

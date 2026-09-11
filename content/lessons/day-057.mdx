@@ -1,8 +1,8 @@
 ---
 day: 57
 week: 9
-title: Sites console — the tree is not a DITA map
-objective: "Name the Sites console, list three things you can do there (navigate, create, select), and refuse to call the tree a ditamap."
+title: The Sites tree is not your booklet
+objective: "Name the Sites console, list three things you can do there, and write why that tree is not a DITA map."
 timeboxMinutes: 90
 skills: [aemSites, oxygenUi]
 legacyLessonIds: [t7-aem]
@@ -10,8 +10,8 @@ youtube:
   - id: 7-Lcw5PejhI
     title: Go live faster with quick site creation in AEM
     watchFor:
-      - Site creation / console context
       - Where pages appear as a tree
+      - The console around that tree
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/basic-handling", label: AEM Basic Handling, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/quick-start", label: AEM as a Cloud Service authoring quick start, dated: 2026-09 }
@@ -21,72 +21,82 @@ lab:
   title: "Field log: Sites console"
   pack: aem-author-field-log
   failWhen: "The log calls the Sites tree a ditamap, or the mock includes Oxygen toolbars, or there are zero official-video notes."
-  expected: Three control names from the video. Tree vs map sentence. Mock labeled.
+  expected: Three control names from the video. Tree vs booklet sentence. Mock labeled.
   steps:
-    - Watch the official Quick site creation video. Pause on the Sites console (or closest view). Write three control names you can see.
-    - "Write oxygen-bootcamp-work/week9/field-log-57.txt: Sites console is a page tree. A DITA map is a book of topics. They do not share a toolbar."
-    - "List: navigate to a folder, open a page’s properties, open a page for edit — as jobs, not as guessed clicks if the UI differs. Write ‘verify in your version’ next to any guessed label."
-    - "Labeled mock: left rail + card view of pages. Caption: mock."
+    - Watch the official Quick site creation video. Pause on the Sites console (or the closest view). Write three control names you can see.
+    - "Open samples/aem-author-field-log/mocks/sites-console.txt. It is a labeled mock, not a screenshot of Adobe UI."
+    - "Write oxygen-bootcamp-work/week9/field-log-57.txt: Sites console is a page tree. A DITA map is a booklet of topics. They do not share a toolbar."
+    - "List three jobs: go to a folder, open a page’s properties, open a page for edit. Write ‘verify in your version’ next to any guessed label."
     - Do not draw Oxygen Maps Manager inside the mock.
 sessionQuests:
   - id: a
     block: A
-    title: Name Sites console and what a ditamap comparison forbids
+    title: Pause the video on the Sites console and write three labels
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the mock free of Oxygen chrome
+    title: Write tree vs booklet and caption the mock
     minutes: 25
-    done: Three controls named. Mock labeled. Tree vs map written.
+    done: Three controls named. Mock labeled. Tree vs booklet written.
   - id: c
     block: C
-    title: Pause the video and write a label you actually saw
+    title: "Pick where a landing page lives, and why the tree is not a map"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [authors-dare, warmup-match]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [sites-console]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Three control names from the video. Tree vs map sentence. Mock labeled. }
+  - { id: lab, prompt: Three control names from the video. Tree vs booklet sentence. Mock labeled. }
 quiz:
-  - q: "You need to find the Kitepump landing page. First AEM surface?"
+  - q: "You need to find the Kitepump landing page on the website team’s desk. First surface?"
     answer: 1
-    why: Pages live in Sites. Maps live in Oxygen (or Guides).
+    why: Pages live in Sites. Booklets live in Oxygen. Two trees. Two apps.
     options:
-      - DITA Maps Manager
-      - Sites console
-      - Transformation view
-  - q: "Basic Handling in Experience League is about what?"
+      - DITA Maps Manager in Oxygen
+      - The Sites console in AEM
+      - Help > About
+  - q: "The Sites tree and your booklet both look like lists. Why not treat them as the same thing?"
     answer: 1
-    why: S.basicHandling is the official authoring handling guide. Use it.
+    why: A tree is a tree. The thing in it is not. Do not look for topicref here.
     options:
-      - DITA conref
-      - "How authors move around AEM (find, select, edit)"
-      - Chemistry CSS
-  - q: "Card view vs column view vs list view. Why care?"
+      - They are the same thing
+      - "Sites holds web pages. A map holds pointers to help-page files. Different files, different toolbar"
+      - Sites is a completeness check
+  - q: "Card view, column view, list view. Why care?"
     answer: 1
-    why: Basic Handling. Views are views.
+    why: Views are views. The tree is still Sites.
     options:
-      - They are DITA topic types
-      - They are ways to see the same page tree — pick one and still know it is not a map
-      - They change publish topology
-fieldNotePrompt: "What did the Sites console show that Maps Manager never will?"
-tomorrowHook: Tomorrow you create a page (or log the create-page wizard from video/mock) and open page properties.
+      - They are DITA page types
+      - They are ways to see the same page tree — pick one and still know it is not your booklet
+      - They change author vs publish
+fieldNotePrompt: "Which three control names did you write from the video or the mock?"
+tomorrowHook: Tomorrow you make a page (or walk the create-page wizard on a labeled mock) and write title vs name.
 ---
 
 ## Sites console
 
-The **Sites** console is where page trees live. Create, copy, move, properties, publish. **Basic Handling** is the official name for this literacy.
+The **Sites** console is where the website team’s page tree lives. Create, copy, move, properties. Official docs call the literacy **Basic Handling** — how you move around, select, and open.
 
-It is not Maps Manager. Do not look for topicref or keys here.
+It is not Maps Manager. Do not look for a topicref, a key, or completeness here.
+
+Kitepump is still your training product. Their landing page for it would live in this tree. Your handbook still lives in Oxygen.
+
+## Word today
+
+**Sites** — the AEM console that holds web pages as a tree. Not your booklet.
 
 ## Figure
 
-Labeled mock: Sites card view with a Kitepump folder. Caption: *Mock. Kitepump is the training product story, not a live Adobe demo.*
+Labeled mock: Sites card view with a Kitepump folder. Caption: *Mock. Kitepump is the training product story, not a live Adobe demo.* Open `samples/aem-author-field-log/mocks/sites-console.txt`.
+
+## Watch
+
+Pause the video on the tree. Write labels you actually saw. If a label differs in your shop, write “verify”.

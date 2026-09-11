@@ -1,8 +1,8 @@
 [
-  { "id": "well-formed", "name": "Well-formed", "earn": "Repair a not-well-formed topic in Text mode and leave it valid.", "day": 4 },
-  { "id": "first-valid-task", "name": "First valid task", "earn": "Create a valid topic from File > New and save it with lowercase hyphens.", "day": 3 },
-  { "id": "map-is-a-book", "name": "Map is a book", "earn": "Append a child topic and keep completeness clean.", "day": 6 },
-  { "id": "completeness-clean", "name": "Completeness clean", "earn": "Pass the Week 1 clinic with a clean completeness report.", "day": 7 },
+  { "id": "well-formed", "name": "Well-formed", "earn": "Cause one red error on purpose, read it, and undo until the page opens clean.", "day": 5 },
+  { "id": "first-valid-task", "name": "First saved page", "earn": "Create a page from File > New and save it in a folder with a simple name.", "day": 4 },
+  { "id": "map-is-a-book", "name": "Booklet", "earn": "Add a page to a table of contents and keep every link working.", "day": 20 },
+  { "id": "completeness-clean", "name": "Links work", "earn": "Pass the week 3 check with a booklet whose links all work.", "day": 21 },
   { "id": "first-conref", "name": "First conref", "earn": "Reuse a warning with conkeyref, not a copy-paste.", "day": 23 },
   { "id": "key-not-path", "name": "Key, not path", "earn": "Define a product-name key and reference it twice.", "day": 24 },
   { "id": "ditaval-explained", "name": "Ditaval explained", "earn": "Profile one step and filter it with a ditaval you can explain.", "day": 29 },

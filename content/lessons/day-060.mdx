@@ -1,8 +1,8 @@
 ---
 day: 60
 week: 9
-title: Components vs pages — do not smash DITA types into Core Components
-objective: "Name page vs component, and refuse to call a Text component a concept topic."
+title: "A page is a stack of blocks, not a DITA topic"
+objective: "Name page vs block, and write why a Text block is not an explaining page."
 timeboxMinutes: 90
 skills: [aemSites, ditaTopics]
 legacyLessonIds: [t7-aem]
@@ -10,80 +10,85 @@ youtube:
   - id: 7-Lcw5PejhI
     title: Go live faster with quick site creation in AEM
     watchFor:
-      - A page made of components if shown
+      - "A page made of stacked pieces, if shown"
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction", label: Core Components introduction, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview", label: WKND author tutorial, dated: 2026-09 }
 lab:
   id: lab-60
-  title: "Field log: page vs component"
+  title: "Field log: page vs block"
   pack: aem-author-field-log
-  failWhen: "The log calls Text a DITA concept, or XF a conref, or the mock is unlabeled."
-  expected: Page vs component vs topic vs conref distinguished. Mock labeled.
+  failWhen: "The log calls Text a DITA concept, or the mock is unlabeled, or you skip the four block names."
+  expected: Page vs block vs topic distinguished. Four names listed. Mock labeled.
   steps:
-    - "Write oxygen-bootcamp-work/week9/field-log-60.txt: A page is a tree of components on a template. A DITA topic is a typed XML document. A Text component is not a concept. A Teaser is not a shortdesc."
-    - "List four Core Components you will meet next week: Text, Image, Teaser, Title — awareness only today."
-    - "Draw a labeled mock: page skeleton with three component boxes. Caption: mock."
-    - "Write one sentence: Experience Fragments are reusable layout, not conref."
+    - "Write oxygen-bootcamp-work/week9/field-log-60.txt: A page is a stack of blocks on a template. A DITA topic is a typed XML file. A Text block is not a concept. A Teaser is not the short line under a DITA title."
+    - "List four ready-made blocks you will meet next week: Text, Image, Teaser, Title — names only today."
+    - "Draw a labeled mock: page skeleton with three block boxes. Caption: mock."
+    - "Write one sentence: you would not paste the prime-the-pump how-to into a Text block on a landing page."
 sessionQuests:
   - id: a
     block: A
-    title: "Name page, component, topic, conref as four different objects"
+    title: Find a page made of stacked blocks in the video or mock
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep the smash-words out of the log
+    title: "Write page vs block vs topic, and list four block names"
     minutes: 25
     done: Four-object rule written. Mock labeled.
   - id: c
     block: C
-    title: Delete any sentence that calls AEM a DITA map
+    title: "Pick what a Text block is not, and what a component is"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [menu-path-race, output-oracle]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [page-editor]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Page vs component vs topic vs conref distinguished. Mock labeled. }
+  - { id: lab, prompt: Page vs block vs topic distinguished. Four names listed. Mock labeled. }
 quiz:
-  - q: "A Text component on a landing page is where you should paste the inflate-the-tire task. True?"
+  - q: "A Text block on a landing page is where you should paste the prime-the-pump how-to. True or not?"
     answer: 1
-    why: Procedures belong in DITA tasks (Oxygen/Guides). Landing pages teaser the product; they do not become the handbook.
+    why: Two desks. A block is a piece of a web page. A topic is a whole help file.
     options:
-      - "True"
-      - "False"
-  - q: "Experience Fragment vs DITA conref. Shared idea, same implementation?"
+      - True — faster
+      - Not true. How-to pages belong in Oxygen. A landing page can tease the product. It does not become the handbook
+      - True if the block is named Task
+  - q: "What is a component in AEM, in one line?"
     answer: 1
-    why: v1 listed XF for reusable layout and conref for DITA. Do not smash.
+    why: Component means block. The page is a stack of them on a template.
     options:
-      - Same XML
-      - "Shared idea (reuse), different system — XF is AEM layout; conref is DITA XML"
-      - XF is a keydef
-  - q: "Core Components introduction is in sources. Are you implementing a component today?"
+      - A DITA map
+      - "A block on the page — Title, Text, Image. Adobe ships a ready-made set of these blocks"
+      - A completeness row
+  - q: "Are you building a new block type today?"
     answer: 1
-    why: Author week. Next week you use Text/Image/Teaser as an author.
+    why: "Author week. Next week you place Text, Image, Teaser as an author. You do not implement them."
     options:
-      - Yes — HTL
-      - No — authors insert them; developers implement them
-      - Yes — Schematron
-fieldNotePrompt: "What would you put on the Kitepump landing page vs in inflate-the-tire.dita?"
-tomorrowHook: "Tomorrow Quick Publish, Unpublish, and Basic Handling — the first AEM ship action."
+      - Yes — write code
+      - No — authors insert ready-made blocks. Developers build new types
+      - Yes — a Schematron file
+fieldNotePrompt: "What would you put on a Kitepump landing page vs in prime-the-pump.dita? Two sentences."
+tomorrowHook: "Tomorrow you send a page live, and take it down. Still a mock if you have no login."
 ---
 
-## Pages and components
+## Pages and blocks
 
-A **page** has a template and a paragraph system of **components**. Core Components (Text, Image, Title, Teaser, Container, …) are the usual author kit.
+An AEM **page** has a template and a stack of **blocks**. Adobe’s ready-made blocks are called **Core Components** — Title, Text, Image, Teaser, and more. You insert them. You do not build them this week.
 
-A **DITA topic** is not a component. **conref** is not an Experience Fragment. **keyref** is not a content fragment variation — we will say that again in Week 11.
+A **DITA topic** is a whole file with a type (explaining page, how-to, lookup). It is not a block. Do not paste a how-to into a Text block and call the landing page the handbook.
+
+## Word today
+
+**Component** — a block on an AEM page. Title, Text, Image. Not a DITA topic.
 
 ## Figure
 
-Labeled mock: page with Title, Image, Text stacked. Caption: *Mock. Not Author mode.*
+Labeled mock: page with Title, Image, Text stacked. Caption: *Mock. Not Oxygen Author view.*

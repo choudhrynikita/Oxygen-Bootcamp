@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useBootcamp } from "@/lib/bootcamp/store";
 import { canUnlock } from "@progress/unlocks";
+import { WEEK_THEMES } from "@/lib/bootcamp/weeks";
 
 type Row = {
   day: number;
@@ -18,12 +19,17 @@ export function PathClient({ catalog }: { catalog: Row[] }) {
   return (
     <div>
       <h1 className="text-3xl">Path · 90 days</h1>
-      <p className="text-muted">Week bosses are marked. Friday lab can unlock next week even if the boss is still open.</p>
+      <p className="text-muted">
+        Finish Sunday’s check (lab, quiz, and a short note) to open the next week. You can retry the
+        quiz as often as you need. The 5-minute warmup never opens a day.
+      </p>
       {weeks.map((w) => {
         const days = catalog.filter((d) => d.week === w);
         return (
           <section key={w} className="mt-6">
-            <h2 className="font-[family-name:var(--font-sans)] text-lg font-semibold text-navy">Week {w}</h2>
+            <h2 className="font-[family-name:var(--font-sans)] text-lg font-semibold text-navy">
+              Week {w} · {WEEK_THEMES[w]}
+            </h2>
             <ol className="grid list-none grid-cols-1 gap-2 p-0 sm:grid-cols-2">
               {days.map((d) => {
                 const rec = state.days[String(d.day)];
@@ -33,7 +39,7 @@ export function PathClient({ catalog }: { catalog: Row[] }) {
                   <>
                     <span className="font-[family-name:var(--font-sans)] text-xs text-muted">
                       Day {d.day}
-                      {d.boss ? " · boss" : ""} · {status.replace("_", " ")}
+                      {d.boss ? " · week check" : ""} · {status.replace("_", " ")}
                     </span>
                     <span className="block">{d.title}</span>
                   </>

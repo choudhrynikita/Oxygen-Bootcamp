@@ -1,8 +1,8 @@
 ---
 day: 35
 week: 5
-title: Boss — Author tools you can defend
-objective: "Explain one DITAVAL, show Track Changes hygiene, prove Hints are on, and pass a condition census."
+title: Week 5 check
+objective: "Explain one switch file, show suggested-edit hygiene, prove Hints are on, and pass the mark list."
 timeboxMinutes: 110
 skills: [review, reuse, oxygenUi]
 legacyLessonIds: [t5-profile, t4-review]
@@ -21,91 +21,82 @@ sources:
   - { href: "https://blog.oxygenxml.com/topics/learnDita.html", label: Resources for learning DITA with Oxygen, dated: 2026-09 }
 lab:
   id: lab-35
-  title: "Clinic: filter, review, Hints"
+  title: "Filter, review, Hints"
   pack: kitepump-dita
-  failWhen: "The expert step was deleted from source, or Track Changes is still recording junk, or a condition has no meaning, or Hints were never opened."
-  expected: Clinic copy valid. DITAVAL explained in one sentence. Review clean. Hints on. Completeness count written.
+  failWhen: "The expert step was deleted from source, or Track Changes is still recording junk, or a mark has no meaning, or Hints were never opened."
+  expected: Check copy clean. Switch file explained in one sentence. Review clean. Hints on. Completeness clean.
   steps:
-    - Copy kitepump to oxygen-bootcamp-work/week5-clinic/.
+    - Copy kitepump to oxygen-bootcamp-work/week5-check/ so you do not wreck the original.
     - Apply novice.ditaval in Author. Show that the expert step is filtered. Switch off. Source still has the step.
-    - "Track Changes: make a dummy edit, reject it. Leave no stray tracking on when you stop."
-    - Hints on. Content completion on Enter in a task. Write the first three offers.
-    - Condition census still true on the clinic copy. No unexplained otherprops.
-    - Timed completeness read on the clinic copy. Write file-visit count.
-    - Answer the boss quiz. Day 36 still unlocks if Day 34 lab is done.
+    - "Track Changes: make a dummy edit, reject it. Leave tracking off when you stop."
+    - Hints on. Press Enter in a how-to. Write the first three offers.
+    - The mark list still matches the check copy. No unexplained marks.
+    - Run completeness on the check copy.
+    - Pass the quiz. Week 6 stays locked until this day is finished (lab + quiz + a short note).
 sessionQuests:
   - id: a
     block: A
-    title: "Name DITAVAL actions, Review view, and Hints"
+    title: "Name exclude, flag, Review view, and Hints out loud"
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Clinic copy still honest
+    title: "Prove the filter, the rejected edit, and Hints on the check copy"
     minutes: 25
-    done: Filter proven. Review clean. Hints on. Census true. Completeness counted.
+    done: Filter proven. Review clean. Hints on. List true. Completeness clean.
   - id: c
     block: C
-    title: Explain exclude vs flag in one sentence
+    title: Pass the quiz. Retry if you need to.
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [output-oracle, glossary-lightning]
+    done: Note saved.
+dailyBurstPool: [one-line-repair, authors-dare]
 toolCards: [review, attributes, outline]
 badgeId: ditaval-explained
 boss: true
 checks:
-  - { id: lab, prompt: Clinic copy valid. DITAVAL explained in one sentence. Review clean. Hints on. Completeness count written. }
+  - { id: lab, prompt: Check copy clean. Switch file explained in one sentence. Review clean. Hints on. Completeness clean. }
 quiz:
-  - q: "A yellow light bulb Quick Fix appears on a profiling error. When do you click it?"
+  - q: "A yellow bulb offers to fix a mark. When do you click it?"
     answer: 1
-    why: Quick Fixes can reshape structure. Read first. Same rule as Week 1.
+    why: Some fixes reshape the page. Read first. Same rule as week 1.
     options:
-      - Always — it is official
-      - Only when you can explain what it will change
-      - Never in Author mode
-  - q: "You failed this boss. Does Day 36 stay locked?"
+      - Always — bulbs are official
+      - Only when you can say what it will change
+      - Never in Author
+  - q: "You failed this check. Does week 6 open?"
     answer: 1
-    why: Boss badge waits. Curriculum week does not hostage you if Friday lab is done.
+    why: "Lab, quiz, and a short note. Retry is free. The warmup does not open the week."
     options:
-      - "Yes, forever"
-      - "No, if Friday (Day 34) lab is done the next week can unlock. The boss badge stays locked until you pass."
-      - "No, Daily Burst unlocks the week"
-  - q: "novice.ditaval is explained as ‘makes it pretty’. Ship it?"
+      - "Yes, Friday’s replace is enough"
+      - No. Week 6 stays locked until this day is finished. Retry the quiz if you need to.
+      - "Yes, if the 5-minute warmup is done"
+  - q: "The novice switch file is explained as ‘makes it pretty’. Ship it?"
     answer: 1
-    why: "ditaval-explained is a meaning, not a vibe."
+    why: "A switch file is an action list, not a vibe."
     options:
-      - Yes if the PDF looks nicer
-      - No — the badge requires include/exclude/flag in operational words
+      - Yes if Author looks nicer
+      - "No — you must say include, exclude, or flag in plain words"
       - Yes if Hints are on
-  - q: "Review comments from Fusion and desktop Track Changes both live on inflate-the-tire.dita. First move?"
-    answer: 1
-    why: Two channels split the decision. Publishing may or may not strip marks — do not bet the procedure on it.
-    options:
-      - Keep both for safety
-      - Pick one channel; export or resolve the other before you accept
-      - Publish WebHelp — comments strip automatically
-fieldNotePrompt: Write the DITAVAL in one sentence a lead could put in a runbook.
-tomorrowHook: "Week 6: transformation scenarios, WebHelp, PDF, and a FAILED log you must be able to read."
+fieldNotePrompt: "Write the switch file in one sentence: who it is for, and what it hides or flags."
+tomorrowHook: "Week 6: turn the booklet into a site or a PDF. You will read the log even when it works."
 ---
 
-## Clinic
+## A check, not a show
 
-This is a week boss: filter + review hygiene + Author layers + completeness.
-
-Fail it and **Day 36 still unlocks if Day 34 lab is done**. The badge stays locked until you retry.
-
-## Proof
+This is the week boss. You already met these tools.
 
 1. **Exclude** hides a step in the view; Text still has it.
-2. **Track Changes** off, leftover dummy rejected.
+2. **Track Changes** off; leftover dummy rejected.
 3. **Hints** on; Enter completes a step.
-4. **Census** has no orphans.
+4. **The list** has no mystery marks.
 
-## Figure
+Fail the quiz and **week 6 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week.
 
-Author with profiling colors + Review empty of junk + Styles = Hints. Caption: *Three panels, one clinic.*
+## Word today
+
+No new word. Use **ditaval**, **exclude**, **flag**, **Track Changes**, and **Hints** in the note you write.

@@ -1,8 +1,8 @@
 ---
 day: 63
 week: 10
-title: "Title and Text — type on the page, not in a DITA body"
-objective: "Log how an author inserts Title and Text Core Components and what each dialog forbids (HTML soup, fake headings)."
+title: Type on the page (Title and Text)
+objective: "Put a heading and two short sentences on a web page using Title and Text, and keep the handbook steps out of the body."
 timeboxMinutes: 90
 skills: [aemSites]
 legacyLessonIds: [t7-aem]
@@ -10,82 +10,95 @@ youtube:
   - id: idByz7WrhbQ
     title: AEM from Headful to Headless (Adobe for Business)
     watchFor:
-      - Headful pages still use components
-      - Content as fields vs as page layout
+      - "A page made of blocks, not one blob of text"
+      - A heading and a body on the canvas
 sources:
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction", label: Core Components introduction, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/author", label: AEM authoring essentials, dated: 2026-09 }
   - { href: "https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview", label: WKND author tutorial, dated: 2026-09 }
 lab:
   id: lab-63
-  title: "Field log: Title + Text"
+  title: Title and two sentences
   pack: aem-author-field-log
-  failWhen: "You paste inflate-the-tire steps into Text, or you skip heading type, or the mock is unlabeled."
-  expected: Log names Title vs Text. Kitepump copy is marketing-short. Mock labeled.
+  failWhen: "You paste handbook steps into Text, or you skip heading size, or the mock has no caption."
+  expected: Log names Title vs Text. Kitepump copy is two short sentences. Mock labeled.
   steps:
-    - "Read Core Components intro + Title and Text component pages on Experience League (skim, do not paste)."
-    - "Write oxygen-bootcamp-work/week10/field-log-63.txt: Title component is a heading with a type (h1–h6) the template allows. Text is a rich-text body. Do not fake an h1 inside Text if Title exists."
-    - "Kitepump landing: one Title (Kitepump HP-40), one Text (two sentences, no pasted handbook steps)."
-    - Write what the Text dialog lets you bold/list — and that this is not DITA <cmd>.
+    - "You may not have AEM. That is expected. Use the official video, a labeled mock, and a field log."
+    - Read the Core Components pages for Title and Text (skim). Write oxygen-bootcamp-work/week10/field-log-63.txt.
+    - "In the log: Title is the heading block. You pick a heading size (h1, h2, and so on) that the page template allows. Text is the body block."
+    - "Kitepump landing: one Title (Kitepump HP-40) and one Text with two short marketing sentences. Do not paste inflate-the-tire steps."
+    - "Write what Text lets you do (bold, a list). Write that this is not a DITA how-to."
     - "Labeled mock: Title over Text. Caption: mock."
 sessionQuests:
   - id: a
     block: A
-    title: Name Title vs Text and what a fake h1 forbids
+    title: Find Title and Text in the docs or the video
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Keep Kitepump Text to two marketing sentences
+    title: "Write two marketing sentences, not handbook steps"
     minutes: 25
-    done: Log written. Mock labeled. No handbook paste.
+    done: Log written. Mock labeled. No how-to paste.
   - id: c
     block: C
-    title: Delete a pasted step if you added one
+    title: "Pick where the heading lives, and where the steps live"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [warmup-match, one-line-repair]
+    done: Note saved.
+dailyBurstPool: [warmup-match, glossary-lightning]
 toolCards: [page-editor]
 badgeId: null
 boss: false
 checks:
-  - { id: lab, prompt: Log names Title vs Text. Kitepump copy is marketing-short. Mock labeled. }
+  - { id: lab, prompt: Log names Title vs Text. Kitepump copy is two short sentences. Mock labeled. }
 quiz:
-  - q: "The template already has an h1 in the page Title component. You add another h1 in Text. What goes wrong?"
+  - q: "The page already has a Title set as the main heading. You also make a main heading inside Text. What is the problem?"
     answer: 1
-    why: Responsive layout without fighting the template starts with headings.
+    why: Title owns the heading. Do not fake a second main heading inside Text.
     options:
-      - Nothing — more h1s help SEO always
-      - You fight the template and confuse headings
+      - Nothing — extra main headings always help
+      - You now have two main headings on one page
       - AEM deletes the page
-  - q: "Text component lists are DITA <ol> with cmd. True?"
+  - q: "Where do the inflate-the-tire steps live?"
     answer: 1
-    why: HTML-ish rich text in a component. Not a task model.
+    why: The web page is short. The how-to stays in the handbook.
     options:
-      - "True"
-      - "False"
-  - q: "Where do the inflate steps still live?"
-    answer: 1
-    why: "Two surfaces, one story. Handbook stays DITA."
-    options:
-      - In the Text component
-      - In inflate-the-tire.dita
+      - In the Text block on the web page
+      - In the handbook page in Oxygen
       - In page properties
-fieldNotePrompt: "What heading type did the Title component offer in the docs/video?"
-tomorrowHook: "Tomorrow Image — alt text again, now in an AEM dialog, plus the Assets idea."
+fieldNotePrompt: "What did you put in Title, and what did you put in Text? Two sentences."
+tomorrowHook: Tomorrow you put a picture on the page and write a short phrase for it.
 ---
 
-## Title and Text
+## Type on the page
 
-Core Components **Title** and **Text** are the daily desk. Title is a heading. Text is body copy for the **page**.
+Last week you made a page in AEM — Adobe’s website tool — and looked at Edit, Preview, and Publish. Today you put words on that page.
 
-Do not paste the DITA handbook into Text. Do not fight the template’s heading.
+A page is built from **components**. A component is a block you drop onto the page. Adobe ships a set of ready-made blocks called **Core Components**. Today you use two of them.
+
+**Title** is the heading block. You pick a heading size (h1, h2, and so on) in a small form. Use the size the template already planned. **Text** is the body. You can bold and make a list there.
+
+Do not paste the handbook how-to into Text. The handbook stays in Oxygen. This page is a short web page.
+
+## Word today
+
+**Title** — the heading block on an AEM page.
+
+**Text** — the body block. It is not a DITA how-to.
+
+## Watch
+
+Play the official video. Pause when you see a page made of blocks. Look for a heading and a body.
+
+## Lab
+
+You may not have AEM. Use the video, a labeled mock, and the field log. Two marketing sentences for Kitepump. Not the inflate steps.
 
 ## Figure
 
-Labeled mock: Title (h1) + Text. Caption: *Mock. Page Editor Edit state.*
+Labeled mock: Title over Text. Caption: *Mock. Page Editor, Edit. Not a customer screenshot.*

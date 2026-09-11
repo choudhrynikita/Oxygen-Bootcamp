@@ -3,12 +3,17 @@ import { describe, it } from "node:test";
 import { burstPoolForDay, pickBurstType } from "./bursts";
 
 describe("burst rotation", () => {
-  it("Days 1–7 primary types are not the same two days in a row", () => {
-    const primaries = [];
-    for (let d = 1; d <= 7; d++) primaries.push(burstPoolForDay(d)[0]);
-    for (let i = 1; i < primaries.length; i++) {
-      assert.notEqual(primaries[i], primaries[i - 1], `day ${i + 1} repeated ${primaries[i]}`);
+  it("week 1 only uses install-safe types", () => {
+    for (let d = 1; d <= 7; d++) {
+      const pool = burstPoolForDay(d);
+      assert.deepEqual(pool, ["warmup-match", "menu-path-race"]);
     }
+  });
+
+  it("week 1 does not ask about maps or AEM types", () => {
+    const pool = burstPoolForDay(1);
+    assert.equal(pool.includes("glossary-lightning"), false);
+    assert.equal(pool.includes("output-oracle"), false);
   });
 
   it("picker never repeats last type when another is available", () => {

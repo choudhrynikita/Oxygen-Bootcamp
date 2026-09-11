@@ -1,8 +1,8 @@
 ---
 day: 53
 week: 8
-title: Troubleshooting invalid maps
-objective: "Use kitepump-broken-map, read completeness, and repair the missing href without guessing."
+title: "Fix a broken booklet, one error at a time"
+objective: "Copy the broken pack, quote the first completeness error, and repair that error before you touch anything else."
 timeboxMinutes: 90
 skills: [maps, xmlLiteracy]
 legacyLessonIds: [t6-xpath, t4-complete]
@@ -10,8 +10,8 @@ youtube:
   - id: JkPeWea3Y3U
     title: DITA Map Completeness Check
     watchFor:
-      - The missing href row
-      - What a missing id looks like vs a missing file
+      - The missing-file row
+      - What a missing file looks like vs a missing id
 sources:
   - { href: "https://oxygenxml.com/demo/DITA_Maps_Manager.html", label: DITA Maps Manager demo, dated: 2026-09 }
   - { href: "https://www.oxygenxml.com/doc/ug-editor/", label: Oxygen XML Editor User Guide 28.1, dated: 2026-09 }
@@ -20,51 +20,71 @@ lab:
   title: Repair the broken book
   pack: kitepump-broken-map
   failWhen: "You edit the repo sample in place and leave it broken, or you ignore the first error and ‘clean up’ unrelated warnings."
-  expected: First error quoted. Clinic copy completeness clean.
+  expected: First error quoted. Check copy completeness clean.
   steps:
-    - Copy samples/kitepump-broken-map to oxygen-bootcamp-work/week8/broken/.
-    - Open kitepump-broken.ditamap in Maps Manager. Run completeness. Write the first error exactly.
-    - The href topics/missing-file.dita does not exist. Either restore a stub file with a matching id or remove the topicref. Pick one and do it.
-    - "XPath toolbar: list every title in the open topic (//*[contains(name(),'title')] is plenty — you need three stolen queries, not XPath 3 fluency)."
-    - Completeness clean on the clinic copy.
+    - Copy samples/kitepump-broken-map to oxygen-bootcamp-work/week8/broken/. Do not edit the sample in place.
+    - Open kitepump-broken.ditamap in Maps Manager. Run completeness. Write the first error exactly in oxygen-bootcamp-work/week8/first-error.txt.
+    - "The pointer topics/missing-file.dita does not exist. Either restore a stub file with a matching id, or remove the topicref. Pick one and do it."
+    - "If you want a lamp: the XPath toolbar searches tags. A simple search for title is enough. Write how many titles you saw. You do not need to become a programmer."
+    - Run completeness again. The check copy should be clean.
 sessionQuests:
   - id: a
     block: A
-    title: Name the completeness row that names a missing file
+    title: Find the completeness row that names a missing file
     minutes: 22
-    done: You named the official control and wrote what it forbids.
+    done: You can point to it on the screen.
   - id: b
     block: B
-    title: Clinic copy still validates as a book
+    title: Repair the check copy until completeness is clean
     minutes: 25
-    done: Completeness clean. First error quoted in the note.
+    done: First error quoted. Copy clean. Sample still broken.
   - id: c
     block: C
-    title: Explain the missing file in one sentence
+    title: "Pick the first move on a missing pointer, and why you copy first"
     minutes: 22
-    done: Quiz score ≥ 70% and a one-sentence error note.
+    done: Quiz score at least 70%.
   - id: d
     block: D
-    title: Write what you would tell a teammate
+    title: "Write what you did today, in plain words"
     minutes: 20
-    done: Field note saved.
-dailyBurstPool: [warmup-match, one-line-repair]
+    done: Note saved.
+dailyBurstPool: [glossary-lightning, one-line-repair]
 toolCards: [maps-manager]
 badgeId: completeness-clean
 boss: false
 checks:
-  - { id: lab, prompt: First error quoted. Clinic copy completeness clean. }
+  - { id: lab, prompt: First error quoted. Check copy completeness clean. }
 quiz:
-  - q: "The first completeness error is a missing href. You should start by restyling the PDF. True?"
+  - q: "The first completeness error is a missing pointer. You should start by restyling the PDF. True or not?"
     answer: 1
-    why: Repair the book. Styles Basket is not this error.
+    why: One error at a time. The first row is the job. Pretty is not this error.
     options:
-      - "True"
-      - "False"
-fieldNotePrompt: Quote the first completeness error you saw.
-tomorrowHook: Large maps and performance — what you will not do in Author.
+      - True — pretty output first
+      - Not true — repair the book. The missing file is the error. Styles wait
+      - True if the cover looks wrong
+  - q: "You copied the broken pack, then repaired the copy. Why not edit the sample in place?"
+    answer: 0
+    why: The broken pack is supposed to fail. Your copy is the one you fix.
+    options:
+      - So tomorrow’s class still has a pack that fails on purpose
+      - Copies are illegal
+      - Completeness only runs on copies
+fieldNotePrompt: Quote the first completeness error you saw. One line.
+tomorrowHook: "Tomorrow: a rules file that flags the same mistake twice. You may not have one yet. You can still write the rule in a sentence."
 ---
 
 ## The broken pack is supposed to fail
 
-`samples/kitepump-broken-map/` points at a file that is not there. Completeness should yell. Copy it. Repair the copy. XPath is a lamp, not a career.
+`samples/kitepump-broken-map/` points at a file that is not there. Completeness should yell.
+
+Copy it. Read the **first** row. Repair **that** row. Then run completeness again.
+
+**XPath** is a search box for tags. Use it as a lamp if you want. It is not a career this week.
+
+## Word today
+
+**Completeness** — a check that the booklet’s pointers match real files (and that ids match). A missing file is a row, not a vibe.
+
+## Do not
+
+Do not restyle the PDF. Do not ‘clean up’ ten warnings before you fix the missing file. One error at a time.
