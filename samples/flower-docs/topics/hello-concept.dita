@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="hello-concept">
+  <title>Hello concept</title>
+  <shortdesc>What this sample set is for.</shortdesc>
+  <conbody>
+    <p>This tiny DITA set is the lab bench for Oxygen Bootcamp. Open
+      <filepath>flowers.ditamap</filepath> in the DITA Maps Manager.</p>
+    <p>The product name used in labs is <keyword keyref="product"/>.</p>
+  </conbody>
+</concept>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="change-water">
+  <title>Change the water</title>
+  <shortdesc>Keep cut flowers fresh by replacing vase water.</shortdesc>
+  <taskbody>
+    <context>
+      <p>Use room-temperature water unless your variety card says otherwise.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>Lift the stems out of the <keyword keyref="product"/> and set them on a clean towel.</cmd>
+      </step>
+      <step>
+        <cmd>Empty the vase and rinse it.</cmd>
+      </step>
+      <step>
+        <cmd>Refill, recut stems at an angle, and return them to the vase.</cmd>
+      </step>
+    </steps>
+    <result>
+      <p>Clouded water is gone and stems can drink again.</p>
+    </result>
+  </taskbody>
+</task>
