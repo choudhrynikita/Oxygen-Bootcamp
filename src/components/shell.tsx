@@ -91,7 +91,7 @@ export function Shell({ children }: { children: ReactNode }) {
                       href={item.href}
                       className={`rounded-full px-3 py-2 font-[family-name:var(--font-sans)] text-sm no-underline ${
                         active
-                          ? "bg-nav-active text-sidebar-fg"
+                          ? "bg-nav-active font-bold text-accent"
                           : "text-sidebar-muted hover:bg-nav-active hover:text-sidebar-fg"
                       }`}
                     >
@@ -120,7 +120,7 @@ export function Shell({ children }: { children: ReactNode }) {
                     <Link
                       href={item.href}
                       className={`flex min-h-14 flex-col items-center justify-center gap-0.5 px-1 py-2 font-[family-name:var(--font-sans)] text-[11px] no-underline ${
-                        active ? "text-accent-fg" : "text-sidebar-muted"
+                        active ? "font-bold text-accent" : "text-sidebar-muted"
                       }`}
                     >
                       <Icon aria-hidden className="h-5 w-5" strokeWidth={1.75} />

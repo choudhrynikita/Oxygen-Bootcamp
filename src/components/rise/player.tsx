@@ -180,22 +180,22 @@ export function PackPlayer({ day, pack }: { day: DayDoc; pack: CoursePack }) {
 
 function Cover({ pack, resume, onStart }: { pack: CoursePack; resume: boolean; onStart: () => void }) {
   return (
-    <section className="flex flex-1 flex-col justify-center bg-navy px-6 py-16 text-sidebar-fg md:px-16">
-      <p className="m-0 font-[family-name:var(--font-sans)] text-xs tracking-[0.18em] text-sidebar-muted uppercase">
+    <section className="flex flex-1 flex-col justify-center bg-accent px-6 py-16 text-accent-fg md:px-16">
+      <p className="m-0 font-[family-name:var(--font-sans)] text-xs tracking-[0.18em] text-accent-fg/80 uppercase">
         {pack.cover.kicker}
       </p>
-      <h1 className="mt-4 max-w-2xl font-[family-name:var(--font-sans)] text-4xl leading-tight font-semibold tracking-tight text-accent-fg md:text-5xl">
+      <h1 className="mt-4 max-w-2xl font-[family-name:var(--font-sans)] text-4xl leading-tight font-bold tracking-tight text-accent-fg md:text-5xl">
         {pack.cover.title}
       </h1>
-      <p className="mt-6 max-w-xl text-lg text-sidebar-fg">{pack.cover.overview}</p>
-      <p className="mt-4 font-[family-name:var(--font-sans)] text-sm text-sidebar-muted">
+      <p className="mt-6 max-w-xl text-lg text-accent-fg/95">{pack.cover.overview}</p>
+      <p className="mt-4 font-[family-name:var(--font-sans)] text-sm text-accent-fg/80">
         {pack.cover.durationMin} min · {pack.cover.audience}
       </p>
       <div className="mt-10">
         <button
           type="button"
           onClick={onStart}
-          className="min-h-12 rounded-full bg-accent px-8 py-3 font-[family-name:var(--font-sans)] text-sm font-semibold text-accent-fg"
+          className="min-h-14 rounded-full bg-card px-10 py-3 font-[family-name:var(--font-sans)] text-sm font-bold text-accent transition-transform duration-150 active:scale-[0.96]"
         >
           {resume ? "Resume course" : "Start course"}
         </button>
@@ -270,7 +270,7 @@ function Outline({
                       disabled={!open}
                       onClick={() => onLesson(l.id)}
                       className={`flex min-h-11 w-full items-start gap-2 rounded-md px-3 py-2 text-left font-[family-name:var(--font-sans)] text-sm disabled:opacity-40 ${
-                        current ? "bg-navy text-accent-fg" : "text-ink"
+                        current ? "bg-pick text-navy" : "text-ink"
                       }`}
                     >
                       <span
@@ -278,7 +278,7 @@ function Outline({
                           done
                             ? "border-good bg-good text-accent-fg"
                             : current
-                              ? "border-accent-fg"
+                              ? "border-accent bg-accent text-accent-fg"
                               : "border-line"
                         }`}
                       >
@@ -286,7 +286,7 @@ function Outline({
                       </span>
                       <span>
                         <span className="block leading-snug">{l.title}</span>
-                        <span className={`block text-[11px] ${current ? "text-chrome-muted" : "text-muted"}`}>
+                        <span className={`block text-[11px] ${current ? "text-accent-dark" : "text-muted"}`}>
                           {l.durationMin} min
                         </span>
                       </span>

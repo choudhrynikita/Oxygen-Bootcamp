@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #f6f1e8;
-  --color-card: #fffdf8;
-  --color-ink: #12202c;
-  --color-muted: #5b6b78;
-  --color-line: #e4d9c8;
-  --color-accent: #c4551b;
-  --color-accent-dark: #8e3510;
-  --color-accent-fg: #fffdf8;
-  --color-navy: #1c3d5a;
-  --color-teal: #1f6f6a;
-  --color-good: #2d6a4f;
-  --color-warn: #9a3412;
-  --color-track: #eadfce;
-  --color-sidebar: #142433;
-  --color-sidebar-fg: #e8eef3;
-  --color-sidebar-muted: #9fb0be;
-  --color-dark-bg: #0f1c28;
-  --color-dark-card: #1b2d3d;
+  --color-paper: #f5f7fa;
+  --color-card: #ffffff;
+  --color-ink: #2c3e50;
+  --color-muted: #6b7c8a;
+  --color-line: #e4e8ee;
+  --color-accent: #3ba4dc;
+  --color-accent-dark: #2b8bbf;
+  --color-accent-fg: #ffffff;
+  --color-navy: #2c3e50;
+  --color-teal: #3ba4dc;
+  --color-good: #27ae60;
+  --color-warn: #e74c3c;
+  --color-track: #e4e8ee;
+  --color-sidebar: #ffffff;
+  --color-sidebar-fg: #2c3e50;
+  --color-sidebar-muted: #6b7c8a;
+  --color-dark-bg: #101820;
+  --color-dark-card: #1a2430;
   --color-dark-ink: #e8eef3;
   --color-dark-muted: #9fb0be;
-  --color-dark-line: #2b4256;
-  --color-pick: #fff4ea;
-  --color-good-bg: #d8f3e0;
-  --color-warn-bg: #fde2d4;
-  --color-lab: #eaf6f4;
-  --color-step: #fffaf2;
-  --color-nav-active: #1e3548;
+  --color-dark-line: #2b3d4d;
+  --color-pick: #e8f4fb;
+  --color-good-bg: #e4f7ec;
+  --color-warn-bg: #fdecea;
+  --color-lab: #e8f4fb;
+  --color-step: #f7fafc;
+  --color-nav-active: #e8f4fb;
   --color-chrome: #d9e2ea;
   --color-chrome-bar: #1b2d3d;
   --color-chrome-menu: #22384a;
@@ -36,8 +36,8 @@
   --color-chrome-muted: #c5d4e0;
   --color-chrome-rule: #c5d0da;
 
-  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "Lato", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lato", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
 
   --radius-xs: 4px;
@@ -46,7 +46,7 @@
   --radius-lg: 16px;
   --radius-xl: 24px;
 
-  --shadow-soft: 0 10px 30px rgba(18, 32, 44, 0.08);
+  --shadow-soft: 0 8px 24px rgba(44, 62, 80, 0.08);
 }
 
 @layer base {
@@ -67,51 +67,63 @@
     --surface: var(--color-dark-card);
     --subtle: var(--color-dark-muted);
     --border: var(--color-dark-line);
-    --accent: #e07a3a;
-    --accent-fg: #0f1c28;
-    --color-paper: #0f1c28;
-    --color-card: #1b2d3d;
+    --accent: #5bb8e8;
+    --accent-fg: #102018;
+    --color-paper: #101820;
+    --color-card: #1a2430;
     --color-ink: #e8eef3;
     --color-muted: #9fb0be;
-    --color-line: #2b4256;
-    --color-accent: #e07a3a;
-    --color-accent-dark: #f0a070;
-    --color-accent-fg: #0f1c28;
-    --color-navy: #c5d8e8;
-    --color-teal: #6db3ae;
+    --color-line: #2b3d4d;
+    --color-accent: #5bb8e8;
+    --color-accent-dark: #8fd0f0;
+    --color-accent-fg: #102018;
+    --color-navy: #e8eef3;
+    --color-teal: #5bb8e8;
     --color-track: #243646;
-    --color-lab: #1a3334;
-    --color-step: #243140;
-    --color-pick: #3a2a1c;
+    --color-lab: #1a333c;
+    --color-step: #1e2a36;
+    --color-pick: #1a333c;
     --color-good-bg: #1a3a2a;
     --color-warn-bg: #3a2418;
-    --color-sidebar: #0c1822;
+    --color-sidebar: #15202b;
+    --color-sidebar-fg: #e8eef3;
+    --color-sidebar-muted: #9fb0be;
+    --color-nav-active: #1e3548;
     --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
   }
 
   [data-contrast="high"] {
     --color-muted: #3a4a56;
     --color-ink: #0a1218;
-    --color-line: #c9b89f;
+    --color-line: #9aa8b4;
   }
 
   html {
     font-size: 16px;
-    --font-sans: var(--font-sans-loaded), "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-    --font-serif: var(--font-serif-loaded), "Source Serif 4", Georgia, "Times New Roman", serif;
+    --font-sans: var(--font-sans-loaded), "Lato", ui-sans-serif, system-ui, sans-serif;
+    --font-serif: var(--font-sans-loaded), "Lato", ui-sans-serif, system-ui, sans-serif;
   }
 
   html,
   body {
     background: var(--bg);
     color: var(--fg);
-    font-family: var(--font-serif);
-    line-height: 1.65;
+    font-family: var(--font-sans);
+    line-height: 1.7;
     min-height: 100%;
   }
 
   body {
     text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
   }
 
   button:not(:disabled),
@@ -134,7 +146,105 @@
   }
 
   .rise-player {
-    min-height: calc(100dvh - 52px);
+    min-height: calc(100dvh - 56px);
+  }
+}
+
+@layer components {
+  .rise-flip {
+    perspective: 1200px;
+  }
+
+  .rise-flip-inner {
+    position: relative;
+    min-height: 12.5rem;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+  }
+
+  .rise-flip-inner.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+  .rise-flip-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .rise-flip-back {
+    transform: rotateY(180deg);
+  }
+
+  .rise-shake {
+    animation: rise-shake 0.45s ease;
+  }
+
+  .rise-pop {
+    animation: rise-pop 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
+  }
+
+  .rise-enter {
+    animation: rise-enter 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .rise-hotspot {
+    animation: rise-pulse 2.2s ease-in-out infinite;
+  }
+}
+
+@keyframes rise-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-6px);
+  }
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+@keyframes rise-pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rise-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rise-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 45%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 0 8px transparent;
   }
 }
 
@@ -146,5 +256,9 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .rise-flip-inner {
+    transition: none;
   }
 }

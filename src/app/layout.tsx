@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { IBM_Plex_Sans, Source_Serif_4 } from "next/font/google";
+import { Lato } from "next/font/google";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { Shell } from "@/components/shell";
 import "./globals.css";
 
-const sans = IBM_Plex_Sans({
+const sans = Lato({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["300", "400", "700"],
   variable: "--font-sans-loaded",
-  display: "swap",
-});
-
-const serif = Source_Serif_4({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-serif-loaded",
   display: "swap",
 });
 
@@ -28,11 +21,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable}`} suppressHydrationWarning>
+    <html lang="en" className={sans.variable} suppressHydrationWarning>
       <body
         className="min-h-screen antialiased"
         style={{
-          fontFamily: "var(--font-serif-loaded), var(--font-serif)",
+          fontFamily: "var(--font-sans-loaded), var(--font-sans)",
         }}
       >
         <PreviewHostBridge />

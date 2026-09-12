@@ -18,7 +18,7 @@ export function FirstWindowGraphic({
     return (
       <button
         type="button"
-        className={`absolute grid h-8 w-8 place-items-center rounded-full border-2 font-[family-name:var(--font-sans)] text-xs font-semibold shadow-[var(--shadow-soft)] ${
+        className={`rise-hotspot absolute grid h-8 w-8 place-items-center rounded-full border-2 font-[family-name:var(--font-sans)] text-xs font-bold shadow-[var(--shadow-soft)] ${
           on
             ? "border-accent bg-accent text-accent-fg"
             : "border-navy bg-card text-navy"
@@ -81,7 +81,7 @@ export function WorkbenchGraphic({
     return (
       <button
         type="button"
-        className={`absolute grid h-8 w-8 place-items-center rounded-full border-2 font-[family-name:var(--font-sans)] text-xs font-semibold ${
+        className={`rise-hotspot absolute grid h-8 w-8 place-items-center rounded-full border-2 font-[family-name:var(--font-sans)] text-xs font-bold ${
           on ? "border-accent bg-accent text-accent-fg" : "border-navy bg-card text-navy"
         } ${className}`}
         aria-pressed={on}
