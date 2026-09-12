@@ -1,0 +1,216 @@
+{
+  "day": 65,
+  "cover": {
+    "kicker": "Day 65 of 90 · Week 10",
+    "title": "A card that points somewhere (Teaser)",
+    "overview": "Spec a Teaser with a title, one sentence, a picture, and a real link :  and keep the how-to out of the card.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Spec a Teaser with a title, one sentence, a picture, and a real link :  and keep the how-to out of the card"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: One Kitepump card"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A Teaser is the same thing as the short line under a DITA title. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Spec a Teaser with a title, one sentence, a picture, and a real link :  and keep the how-to out of the card."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A card that points somewhere",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "A card that points somewhere",
+              "body": "A **Teaser** is a card: picture, title, short text, and a link. It points. It does not hold the procedure.\n\nKitepump’s landing page can tease Care. The steps stay in the handbook.\n\nThe link must go to a published page (a Sites page, or a help URL your shop actually ships). Not a folder on your laptop. Not `out/index.html` from a local Oxygen build.\n\nIf the card looks clickable, it needs a destination. If you have no destination, do not use a Teaser."
+            },
+            {
+              "type": "text",
+              "id": "t-4",
+              "heading": "Figure",
+              "body": "Labeled mock: three teaser cards in a row. Caption: *Mock. Destinations are pages, not a laptop folder.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Teaser** :  a card with a picture, a title, a short line, and a link."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Teaser",
+                  "back": "a card with a picture, a title, a short line, and a link"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "7-Lcw5PejhI",
+              "title": "Go live faster with quick site creation in AEM",
+              "watchFor": [
+                "Cards or teasers on a generated site, if they show"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "One Kitepump card",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The description holds three how-to steps, or the card has no destination, or the mock has no caption.\n\nExpected: One teaser spec with title, one sentence, link, and alt. Mock labeled."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Read the Teaser Core Component page (skim)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Write oxygen-bootcamp-work/week10/field-log-65.txt for one teaser: title Inflate in three steps, description one sentence, link to a how-to page (or write ‘page that does not exist yet’). Image alt phrase."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write: the teaser description is not the task. The task stays in the handbook."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "If the docs say the teaser can pull title or picture from the target page, note that. Do not invent fields you did not see."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Labeled mock: one teaser card. Caption: mock."
+                }
+              ],
+              "summary": "One teaser spec with title, one sentence, link, and alt. Mock labeled."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A Teaser is the same thing as the short line under a DITA title. True or not?",
+              "options": [
+                "True :  same file, same tag",
+                "Not true :  similar job (lure plus pointer), different tool",
+                "True on Cloud only"
+              ],
+              "answer": 1,
+              "why": "A short line under a DITA title lives in the handbook. A Teaser lives on the web page."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "The card looks clickable but the link is empty. What do you do?",
+              "options": [
+                "Leave it :  AEM fills the link at publish",
+                "Pick a real page, or do not use a Teaser",
+                "Point it at a folder on your laptop"
+              ],
+              "answer": 1,
+              "why": "A card that goes nowhere trains people to ignore cards."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Spec a Teaser with a title, one sentence, a picture, and a real link :  and keep the how-to out of the card.",
+    "nextDayHook": "Tomorrow a box that holds other blocks, without fighting the template."
+  }
+}

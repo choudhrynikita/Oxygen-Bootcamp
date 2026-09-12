@@ -1,0 +1,215 @@
+{
+  "day": 53,
+  "cover": {
+    "kicker": "Day 53 of 90 · Week 8",
+    "title": "Fix a broken booklet, one error at a time",
+    "overview": "Copy the broken pack, quote the first completeness error, and repair that error before you touch anything else.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Copy the broken pack, quote the first completeness error, and repair that error before you touch anything else"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Repair the broken book"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: The first completeness error is a missing pointer. You should start by restyling the PDF. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Copy the broken pack, quote the first completeness error, and repair that error before you touch anything else."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "The broken pack is supposed to fail",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "The broken pack is supposed to fail",
+              "body": "`samples/kitepump-broken-map/` points at a file that is not there. Completeness should yell.\n\nCopy it. Read the **first** row. Repair **that** row. Then run completeness again.\n\n**XPath** is a search box for tags. Use it as a lamp if you want. It is not a career this week."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Completeness** :  a check that the booklet’s pointers match real files (and that ids match). A missing file is a row, not a vibe."
+                },
+                {
+                  "title": "Do not",
+                  "body": "Do not restyle the PDF. Do not ‘clean up’ ten warnings before you fix the missing file. One error at a time."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Completeness",
+                  "back": "a check that the booklet’s pointers match real files (and that ids match). A missing file is a row, not a vibe"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "JkPeWea3Y3U",
+              "title": "DITA Map Completeness Check",
+              "watchFor": [
+                "The missing-file row",
+                "What a missing file looks like vs a missing id"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Repair the broken book",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You edit the repo sample in place and leave it broken, or you ignore the first error and ‘clean up’ unrelated warnings.\n\nExpected: First error quoted. Check copy completeness clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Copy samples/kitepump-broken-map to oxygen-bootcamp-work/week8/broken/. Do not edit the sample in place."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Open kitepump-broken.ditamap in Maps Manager. Run completeness. Write the first error exactly in oxygen-bootcamp-work/week8/first-error.txt."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "The pointer topics/missing-file.dita does not exist. Either restore a stub file with a matching id, or remove the topicref. Pick one and do it."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "If you want a lamp: the XPath toolbar searches tags. A simple search for title is enough. Write how many titles you saw. You do not need to become a programmer."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Run completeness again. The check copy should be clean."
+                }
+              ],
+              "summary": "First error quoted. Check copy completeness clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "The first completeness error is a missing pointer. You should start by restyling the PDF. True or not?",
+              "options": [
+                "True :  pretty output first",
+                "Not true :  repair the book. The missing file is the error. Styles wait",
+                "True if the cover looks wrong"
+              ],
+              "answer": 1,
+              "why": "One error at a time. The first row is the job. Pretty is not this error."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You copied the broken pack, then repaired the copy. Why not edit the sample in place?",
+              "options": [
+                "So tomorrow’s class still has a pack that fails on purpose",
+                "Copies are illegal",
+                "Completeness only runs on copies"
+              ],
+              "answer": 0,
+              "why": "The broken pack is supposed to fail. Your copy is the one you fix."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Copy the broken pack, quote the first completeness error, and repair that error before you touch anything else.",
+    "nextDayHook": "Tomorrow: a rules file that flags the same mistake twice. You may not have one yet. You can still write the rule in a sentence."
+  }
+}

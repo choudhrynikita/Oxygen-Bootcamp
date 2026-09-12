@@ -1,0 +1,225 @@
+{
+  "day": 64,
+  "cover": {
+    "kicker": "Day 64 of 90 · Week 10",
+    "title": "Put a picture on the page",
+    "overview": "Place an Image block, write a short alt phrase, and say that the file lives in the asset library :  not on your desktop.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Place an Image block, write a short alt phrase, and say that the file lives in the asset library :  not on your desktop"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Picture plus alt phrase"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: You published the page but not the picture. What does a visitor often see"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Place an Image block, write a short alt phrase, and say that the file lives in the asset library :  not on your desktop."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Put a picture on the page",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Put a picture on the page",
+              "body": "The **Image** block points at a file in **Assets**. Assets is the file library inside AEM. You pick the picture there. You do not leave it on the desktop.\n\n**Alt** is a short phrase that describes the picture for someone who cannot see it. Write a phrase. Do not paste the file name.\n\nPublish the picture as well as the page. Last week you saw that a page can go live while its picture stays behind.\n\nIf you crop on the page, that is usually a crop for this page. The file in the library often stays. Check before you panic."
+            },
+            {
+              "type": "text",
+              "id": "t-4",
+              "heading": "Figure",
+              "body": "Labeled mock: Image form, Alt text filled. Caption: *Mock. Not a DITA image tag.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Image** :  the picture block on the page.\n\n**Assets** :  the library of files in AEM (pictures, PDFs, and so on)."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Image",
+                  "back": "the picture block on the page"
+                },
+                {
+                  "front": "Assets",
+                  "back": "the library of files in AEM (pictures, PDFs, and so on)"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "VcMI0zWIKdg",
+              "title": "How to Build a Global Site in AEM Sites",
+              "watchFor": [
+                "Pictures on a real site",
+                "Files living in a library, not on a laptop"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Picture plus alt phrase",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Alt is the file name, or the log says pictures live only on your laptop, or Assets is called Maps Manager.\n\nExpected: Alt phrase written. Assets named as the source. Mock labeled."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Read the Image Core Component page and Assets basic operations (skim)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Write oxygen-bootcamp-work/week10/field-log-64.txt: pick the file from Assets (the library in AEM). Set alt in the Image form. Do not treat a random desktop PNG as the long-term file."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Kitepump alt phrase: Kitepump HP-40 floor pump, upright, gauge visible. Not kitepump.png."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Write: a picture on an AEM page and a picture in a DITA page are the same job on two desks. Both need a real phrase."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Write: if you crop on the page, the library file often stays. Check. Do not assume you destroyed the original."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Labeled mock: Image form with Alt text filled. Caption: mock."
+                }
+              ],
+              "summary": "Alt phrase written. Assets named as the source. Mock labeled."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "You published the page but not the picture. What does a visitor often see?",
+              "options": [
+                "The picture from your laptop",
+                "A broken picture :  publish the file in the library too",
+                "The picture from the DITA handbook, automatically"
+              ],
+              "answer": 1,
+              "why": "The picture is its own file in Assets. It has its own publish state. You met that last week."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "A good alt for the hero picture is…",
+              "options": [
+                "kitepump.png",
+                "Kitepump HP-40 floor pump, upright, gauge visible",
+                "image"
+              ],
+              "answer": 1,
+              "why": "Alt is a phrase a person can hear. A file name is not a phrase."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Place an Image block, write a short alt phrase, and say that the file lives in the asset library :  not on your desktop.",
+    "nextDayHook": "Tomorrow a card that points somewhere :  not a dumped paragraph."
+  }
+}

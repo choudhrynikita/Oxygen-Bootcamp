@@ -1,0 +1,215 @@
+{
+  "day": 30,
+  "cover": {
+    "kicker": "Day 30 of 90 · Week 5",
+    "title": "A switch file for those readers",
+    "overview": "Write a switch file that hides expert steps and a second one that flags print paragraphs, then apply each in Author so you can see the difference.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Write a switch file that hides expert steps and a second one that flags print paragraphs, then apply each in Author so you can see the difference"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Two switch files"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Exclude vs flag: which one removes the chunk from what the reader sees"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Write a switch file that hides expert steps and a second one that flags print paragraphs, then apply each in Author so you can see the difference."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A list of actions",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "A list of actions",
+              "body": "A **.ditaval** file is a switch file: a list of actions on your marks. The actions are **include**, **exclude**, and **flag**.\n\nAttach it in Author to preview. You will use a switch file again in week 6 when you make a site or a PDF. Today you only preview.\n\nIf you cannot say what the file does, do not attach it.\n\nOpen the switch file in Text. It is a small file you can read. It is not only a hidden setting."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**ditaval** :  a switch file that includes, excludes, or flags marked text."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "ditaval",
+                  "back": "a switch file that includes, excludes, or flags marked text"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "CgBbPW3mJzw",
+              "title": "Profiling and Reuse",
+              "watchFor": [
+                "A switch file attached to profiling",
+                "Hide vs flag in the UI"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Two switch files",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You deleted the expert step instead of filtering it, or a switch file has no action, or you cannot explain exclude vs flag.\n\nExpected: Two switch files. Author view changes with the filter. Source still contains the expert step. Meanings file written."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Create ditaval/novice.ditaval: exclude audience=expert. Leave other marks alone (include them, or omit them)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Create ditaval/print-flag.ditaval: flag platform=print (a style or a color :  write what you picked)."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "In Oxygen, apply novice.ditaval as the profiling filter for Author (DITA > Profiling / Conditional Text :  verify the label). The expert step should disappear or gray out per your setting."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Switch to print-flag.ditaval. The print paragraph should stay visible but flagged."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Write oxygen-bootcamp-work/week5/ditaval-explained.txt: exclude means ____. flag means ____. include means ____."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Do not delete the expert step from the source file."
+                }
+              ],
+              "summary": "Two switch files. Author view changes with the filter. Source still contains the expert step. Meanings file written."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Exclude vs flag: which one removes the chunk from what the reader sees?",
+              "options": [
+                "flag",
+                "exclude",
+                "include"
+              ],
+              "answer": 1,
+              "why": "exclude drops the content. flag keeps it and marks it. include keeps it."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You applied the novice switch file in Author. Text view no longer has the expert step. What went wrong?",
+              "options": [
+                "Nothing :  exclude deletes source",
+                "You edited or deleted source instead of filtering the view",
+                "A switch file always rewrites the page"
+              ],
+              "answer": 1,
+              "why": "A filter is a view. Source keeps the step."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Write a switch file that hides expert steps and a second one that flags print paragraphs, then apply each in Author so you can see the difference.",
+    "nextDayHook": "Tomorrow you keep only the marks you can explain, and you delete the rest."
+  }
+}

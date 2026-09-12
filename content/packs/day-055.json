@@ -1,0 +1,236 @@
+{
+  "day": 55,
+  "cover": {
+    "kicker": "Day 55 of 90 · Week 8 · week check",
+    "title": "Make pages people can actually use",
+    "overview": "Add real alt text, keep one title, give a table a header row, and pass the quiz so week 9 can open.",
+    "durationMin": 90,
+    "audience": "You already met these moves. Today you prove you can name them."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Add real alt text, keep one title, give a table a header row, and pass the quiz so week 9 can open"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Alt, title, table header"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Pretty Author view is enough for the published page to be usable. True or not"
+    },
+    {
+      "id": "lo4",
+      "bloom": "evaluate",
+      "text": "Say what each error meant, in plain words"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "This week’s check",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Add real alt text, keep one title, give a table a header row, and pass the quiz so week 9 can open."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "The content you write",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "The content you write",
+              "body": "**Alt text** is the words a screen reader speaks when there is a picture. Write the teaching point. Not `image1.png`.\n\nTables have **header** rows. Titles are titles. The short line under the title is not a second title.\n\nPretty Author view is not the published page. WebHelp will not invent alt you did not write.\n\nThis is the week boss. Fail the quiz and **week 9 stays locked**. Retry as many times as you want."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Alt text** :  the words that stand in for a picture when a person cannot see it."
+                },
+                {
+                  "title": "One line about later",
+                  "body": "Next week you walk to the website team. Not today."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Alt text",
+                  "back": "the words that stand in for a picture when a person cannot see it"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "bnQwJZD58wY",
+              "title": "WYSIWYG XML Editing",
+              "watchFor": [
+                "The page view is not the published page"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Alt, title, table header",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Alt is empty or equals the file name, or the table has no header, or you leave the check copy broken.\n\nExpected: Image with teaching-point alt. Table with a header. Limitation written. Check copy opens clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Copy a kitepump topic to oxygen-bootcamp-work/week8/usable/ so you do not wreck the sample."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Add an image (or a figure with a placeholder) whose alt text states the teaching point, not the file name."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Check titles: one title per page. The short line under the title is not a second title."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "If you have a simple table, give it a header row. If not, add a two-column lookup table with headers."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Write in oxygen-bootcamp-work/week8/usable-note.txt: pretty Author view cannot make missing alt usable in the HTML output."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Pass the quiz. You can retry it. Week 9 stays locked until this day is finished (lab + quiz + a short note)."
+                }
+              ],
+              "summary": "Image with teaching-point alt. Table with a header. Limitation written. Check copy opens clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Pretty Author view is enough for the published page to be usable. True or not?",
+              "options": [
+                "True :  if it looks fine on your screen, it is fine",
+                "Not true :  the file has to carry alt text, headers, and a real title. Pretty view can hide a missing alt",
+                "True for PDF only"
+              ],
+              "answer": 1,
+              "why": "A screen reader reads the file, not your CSS. Alt and headers live in the page."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You failed this check. Does week 9 open anyway?",
+              "options": [
+                "Yes, the Friday page is enough",
+                "No. Finish this day’s lab, quiz, and note. You can retry the quiz.",
+                "Yes, if you do the 5-minute warmup"
+              ],
+              "answer": 1,
+              "why": "Next week waits. Retry is free. The warmup does not open the week."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "The first completeness error yesterday was a missing file. First move this week?",
+              "options": [
+                "Repair that row, then re-run the check",
+                "Turn on an experimental switch",
+                "Type audience=ninja so the filter is richer"
+              ],
+              "answer": 0,
+              "why": "One error at a time. Same words for the same things. Switches stay off."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Add real alt text, keep one title, give a table a header row, and pass the quiz so week 9 can open.",
+    "nextDayHook": "Tomorrow you meet the website team next door. Different app. Different job."
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "day": 23,
+  "cover": {
+    "kicker": "Day 23 of 90 · Week 4",
+    "title": "Reuse a warning instead of copying it",
+    "overview": "Write a warning in one library file, pull it into a how-to with a pointer, then break the pointer on purpose and repair it.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Write a warning in one library file, pull it into a how-to with a pointer, then break the pointer on purpose and repair it"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: One warning, one pointer"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A warning pointer uses a path plus an id. What is the id on"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Write a warning in one library file, pull it into a how-to with a pointer, then break the pointer on purpose and repair it."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Write the warning once",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Write the warning once",
+              "body": "A **conref** is a pointer that pulls a chunk from another file by **path plus id**.\n\nToday you feel the path form. The library file holds the note. The how-to points at it. Author shows the words. Text shows the pointer.\n\n**Reusable Components** view lists chunks from the root map. Insert from there if you have it. Do not paste the sentence."
+            },
+            {
+              "type": "text",
+              "id": "t-1",
+              "heading": "Hide the library",
+              "body": "A library page is not a chapter. `toc=\"no\"` on its booklet line hides it from the table of contents. Write the setting you used."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**conref** :  a pointer that reuses a chunk by file path plus id."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "conref",
+                  "back": "a pointer that reuses a chunk by file path plus id"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "K_fjZn285Wo",
+              "title": "Working with DITA Reusable Components View",
+              "watchFor": [
+                "Reusable Components view",
+                "How a reused warning looks in Author vs Text"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "One warning, one pointer",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The warning sentence is copied into the how-to, or there is no pointer, or the library page is a chapter in the table of contents.\n\nExpected: One source sentence. The how-to shows it through a pointer. Text has no copy. Completeness is clean after repair."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Create topics/library/warnings.dita (an explaining page is fine). One warning note with id=\"pinch-hazard\": pinch hazard at the lever. That sentence lives only in this file."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Add the library page to the booklet. Hide it from the table of contents (toc=\"no\" on the pointer, or the similar control your version shows). Write which setting you used."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "In prime-the-pump.dita, insert a note that points at that warning (conref to warnings.dita, id pinch-hazard). Use Reusable Components view if you have it."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Author should show the warning text. Text should show the pointer, not a second copy of the sentence."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Typo the path on the pointer. Author shows a broken pull. Write the message. Put the path back."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Do not paste the warning sentence into the how-to as a backup paragraph."
+                }
+              ],
+              "summary": "One source sentence. The how-to shows it through a pointer. Text has no copy. Completeness is clean after repair."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A warning pointer uses a path plus an id. What is the id on?",
+              "options": [
+                "The file name without a suffix",
+                "The note (the chunk) you want to pull",
+                "The product name in the booklet"
+              ],
+              "answer": 1,
+              "why": "The path finds the file. The id finds the note inside it."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Reusable Components view is empty. First place you look?",
+              "options": [
+                "Whether the root map is set and the library page is in that booklet",
+                "Help > About",
+                "The desktop"
+              ],
+              "answer": 0,
+              "why": "The view reads the booklet. No root map, no library list."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Write a warning in one library file, pull it into a how-to with a pointer, then break the pointer on purpose and repair it.",
+    "nextDayHook": "Tomorrow you point at the library by a name in the booklet, not by a file path."
+  }
+}

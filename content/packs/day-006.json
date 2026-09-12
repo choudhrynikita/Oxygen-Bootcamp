@@ -1,0 +1,225 @@
+{
+  "day": 6,
+  "cover": {
+    "kicker": "Day 6 of 90 · Week 1",
+    "title": "Your first real page",
+    "overview": "Finish one page with a title, a short line under the title, and two short paragraphs. It must open with no red error.",
+    "durationMin": 100,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Finish one page with a title, a short line under the title, and two short paragraphs. It must open with no red error"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: One page, done"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: The short line under the title is for…"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Finish one page with a title, a short line under the title, and two short paragraphs. It must open with no red error."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 100 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "This is the week’s apple",
+          "durationMin": 30,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "This is the week’s apple",
+              "body": "You are not making a booklet yet. You are proving you can finish **one page**.\n\n- A **title**\n- A **short line under the title** (not a copy of the title)\n- Two short **paragraphs**\n- No red error\n- Saved in a folder you can find\n\nNo table of contents this week. No website tools. No how-to steps. If you need steps, write “week 2” in your notes and leave them off this page."
+            },
+            {
+              "type": "text",
+              "id": "t-1",
+              "heading": "Figure",
+              "body": "A simple page mock: title at the top, one short line, two paragraphs. Caption: *Author view of a finished explaining page.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Do not publish",
+                  "body": "Publishing (making a website or a PDF from your files) is weeks away. Valid and saved beats pretty."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "title",
+                  "back": "A **short line under the title** (not a copy of the title)"
+                },
+                {
+                  "front": "paragraphs",
+                  "back": "No red error"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "t2cG3Xe1TXY",
+              "title": "DITA Editing",
+              "watchFor": [
+                "Title and the short line under it",
+                "A normal paragraph in the body"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "One page, done",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The title is empty, the short line copies the title, there is a numbered how-to, or a red error remains.\n\nExpected: A clean page with a title, a distinct short line, and two paragraphs. Path written down."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Open or create topics/what-a-cut-flower.dita (or oxygen-bootcamp-work/week1/what-a-cut-flower.dita)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Title: What a cut flower is."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Under the title, write one short line that would make sense in a search hit. Do not copy the title word for word."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "In the body, two paragraphs: what a cut flower is, and what this handbook will not cover (growing from seed)."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not add numbered how-to steps. That is next week."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Save. Confirm there is no red error. Write the file path in oxygen-bootcamp-work/day-06-page.txt."
+                }
+              ],
+              "summary": "A clean page with a title, a distinct short line, and two paragraphs. Path written down."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "The short line under the title is for…",
+              "options": [
+                "Search hits and previews :  a reader sees it before the full page",
+                "The printer only",
+                "A second title because one is never enough"
+              ],
+              "answer": 0,
+              "why": "If it copies the title, the reader sees the same sentence twice. Make it add a bit."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You want three actions to recut a stem. Where do those actions go this week?",
+              "options": [
+                "A numbered list on this “what it is” page :  faster",
+                "They wait. Next week you write a how-to page",
+                "Help > About"
+              ],
+              "answer": 1,
+              "why": "This week’s apple is one explaining page. How-to pages are week 2."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Finish one page with a title, a short line under the title, and two short paragraphs. It must open with no red error.",
+    "nextDayHook": "Tomorrow is the week check. You will break a file on purpose and fix it. Passing it opens week 2."
+  }
+}

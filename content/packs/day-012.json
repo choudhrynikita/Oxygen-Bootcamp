@@ -1,0 +1,217 @@
+{
+  "day": 12,
+  "cover": {
+    "kicker": "Day 12 of 90 · Week 2",
+    "title": "A table and a picture",
+    "overview": "Add one small table and one picture with alt text that would still help if the picture were gone.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Add one small table and one picture with alt text that would still help if the picture were gone"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Table plus a picture with alt"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Alt text is for…"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Add one small table and one picture with alt text that would still help if the picture were gone."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A table you can scan",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "A table you can scan",
+              "body": "If a reader needs two facts (day, hours), a two-column table beats a paragraph."
+            },
+            {
+              "type": "text",
+              "id": "t-1",
+              "heading": "A picture that still works if it vanishes",
+              "body": "**Alt text** is the sentence that stands in for the picture. “image1” is not a sentence. “Clear glass vase with three stems” is."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Alt text** :  a short sentence for a picture, used when the picture cannot be seen."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Alt text",
+                  "back": "a short sentence for a picture, used when the picture cannot be seen"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "t2cG3Xe1TXY",
+              "title": "DITA Editing",
+              "watchFor": [
+                "Insert table",
+                "Insert image"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Table plus a picture with alt",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Alt text is empty or “image1”, or the hours table is gone, or a red error remains.\n\nExpected: Hours table intact. Picture has real alt text. Files clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "On studio-hours.dita, confirm the Day / Hours table still scans in one glance."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "On the explaining page, insert a picture if the pack has one (samples/flower-docs images). If not, insert a placeholder image from the sample and keep going."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write alt text that names what is in the picture, not “image1”. Example: “Clear glass vase with three stems.”"
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Do not put a huge table on the how-to. Hours stay on the lookup page."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Save. No red error."
+                }
+              ],
+              "summary": "Hours table intact. Picture has real alt text. Files clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Alt text is for…",
+              "options": [
+                "A person who cannot see the picture, and for search",
+                "The printer’s colour profile",
+                "Oxygen’s version number"
+              ],
+              "answer": 0,
+              "why": "If the picture is gone, the alt sentence should still make sense."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Studio hours belong in…",
+              "options": [
+                "The how-to’s third step",
+                "The lookup table",
+                "Alt text"
+              ],
+              "answer": 1,
+              "why": "Hours are facts. Keep them on the lookup page."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Add one small table and one picture with alt text that would still help if the picture were gone.",
+    "nextDayHook": "Tomorrow you put the three pages in one folder and check they still open."
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "day": 61,
+  "cover": {
+    "kicker": "Day 61 of 90 · Week 9",
+    "title": "Send a page live, and take it down",
+    "overview": "Log Quick Publish vs Unpublish, and write a short checklist you would run before you click.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Log Quick Publish vs Unpublish, and write a short checklist you would run before you click"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Field log: publish actions"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Quick Publish vs last week’s WebHelp folder. Same button"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Log Quick Publish vs Unpublish, and write a short checklist you would run before you click."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Send it. Take it down.",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Send it. Take it down.",
+              "body": "**Quick Publish** :  fast copy of what you selected to the live environment.\n\n**Publish / Manage Publication** :  more control (tree, schedule :  verify labels).\n\n**Unpublish** :  take it off the live environment. The author copy can stay.\n\n**Basic Handling** covers selecting items and using the rail. Read it. Do not memorize an old screenshot.\n\nThis is not last week’s transform. No DITA-OT log. No `index.html` on your laptop. A published URL is the proof :  or a field log if you have no instance.\n\nPictures have to go live too, or the live page shows a hole."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "Labeled mock: Quick Publish confirmation. Caption: *Mock. Checklist lives in your log.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Quick Publish** :  a short path to send selected pages live. Not Preview. Not a DITA-OT run."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Quick Publish",
+                  "back": "fast copy of what you selected to the live environment"
+                },
+                {
+                  "front": "Publish / Manage Publication",
+                  "back": "more control (tree, schedule :  verify labels)"
+                },
+                {
+                  "front": "Unpublish",
+                  "back": "take it off the live environment. The author copy can stay"
+                },
+                {
+                  "front": "Quick Publish",
+                  "back": "a short path to send selected pages live. Not Preview. Not a DITA-OT run"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "7-Lcw5PejhI",
+              "title": "Go live faster with quick site creation in AEM",
+              "watchFor": [
+                "Going live / any publish action shown",
+                "That a live site is the point of the wizard"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Field log: publish actions",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The log treats Quick Publish as last week’s DITA-OT run, or skips Unpublish, or has no checklist.\n\nExpected: Three actions named. Checklist present. Mock labeled."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Read Basic Handling plus authoring essentials on publish and unpublish (Experience League). Quote at most one sentence, then write your own."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Write oxygen-bootcamp-work/week9/field-log-61.txt: Quick Publish is a short path to copy selected pages to the live environment. Manage Publication / Publish may include children and later times :  verify labels. Unpublish takes the page off the live environment."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Checklist: did I select the right page, do pictures need to come along, is this the author environment I’m allowed to publish from?"
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Write: this is not Apply Transformation Scenario. No out/ folder appears on your laptop."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Labeled mock: Sites console with Quick Publish on a Kitepump page. Caption: mock."
+                }
+              ],
+              "summary": "Three actions named. Checklist present. Mock labeled."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Quick Publish vs last week’s WebHelp folder. Same button?",
+              "options": [
+                "Yes",
+                "No :  AEM copies a page to the live environment. DITA-OT writes HTML on your laptop",
+                "Yes if you Preview first"
+              ],
+              "answer": 1,
+              "why": "Two desks. Two verbs: send live vs write HTML on your laptop."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You Quick Publish a page but the picture at the top is missing on the live site. Likely miss?",
+              "options": [
+                "The booklet is missing",
+                "The picture was not sent live, or it is not referenced correctly",
+                "You forgot Help > About"
+              ],
+              "answer": 1,
+              "why": "Pictures have their own live state. Authors check what goes along with the page."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "Unpublish means delete the page from author. True or not?",
+              "options": [
+                "True :  gone everywhere",
+                "Not true. Unpublish affects the live environment. Author can still hold the page",
+                "True if you also Preview"
+              ],
+              "answer": 1,
+              "why": "Take it down on publish. The editing copy can stay."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Log Quick Publish vs Unpublish, and write a short checklist you would run before you click.",
+    "nextDayHook": "Tomorrow is the week 9 check. Field logs 56-61, still mocks if no instance. Week 10 stays locked until that day is finished."
+  }
+}

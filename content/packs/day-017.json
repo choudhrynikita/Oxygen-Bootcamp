@@ -1,0 +1,206 @@
+{
+  "day": 17,
+  "cover": {
+    "kicker": "Day 17 of 90 · Week 3",
+    "title": "Add a page to the booklet",
+    "overview": "Append one of your week 2 pages to the sample map and open it from the tree.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Append one of your week 2 pages to the sample map and open it from the tree"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Append one page"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Append Child adds…"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Append one of your week 2 pages to the sample map and open it from the tree."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Put a chapter in the book",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Put a chapter in the book",
+              "body": "Right-click in Maps Manager → **Append Child** → point at a page.\n\nYou did not copy the words into the booklet. You added a pointer."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**topicref** :  one line in the booklet that points at a page (a topic file). You can say “a pointer” out loud. Same thing."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "topicref",
+                  "back": "one line in the booklet that points at a page (a topic file). You can say “a pointer” out loud. Same thing"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "ozFZz6YZMCY",
+              "title": "DITA Maps Manager View in Oxygen XML Editor 19",
+              "watchFor": [
+                "Append Child",
+                "A new line in the tree"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Append one page",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The page exists on disk but is not in the tree, or the new line does not open the page.\n\nExpected: The tree shows your page. Clicking it opens the file."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Copy your week2 explaining page into samples/flower-docs/topics/ if it is not already there (or point at oxygen-bootcamp-work/week2/ if your map can see it). Keep the file name lowercase with hyphens."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "In Maps Manager, right-click a heading (or the map root) > Append Child > Reference. Point at that page."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Click the new line. The page should open."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Do not rename files in the folder without updating the booklet. That is a later day."
+                }
+              ],
+              "summary": "The tree shows your page. Clicking it opens the file."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Append Child adds…",
+              "options": [
+                "A pointer from the booklet to a page file",
+                "A second copy of the words inside the map",
+                "A website"
+              ],
+              "answer": 0,
+              "why": "The new line is a pointer. The words still live in the topic file."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "The page is on disk but missing from the tree. Is it in the booklet?",
+              "options": [
+                "Yes",
+                "No"
+              ],
+              "answer": 1,
+              "why": "On disk is not in the booklet. The tree is what counts."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Append one of your week 2 pages to the sample map and open it from the tree.",
+    "nextDayHook": "Tomorrow you check that every pointer in the booklet still works."
+  }
+}

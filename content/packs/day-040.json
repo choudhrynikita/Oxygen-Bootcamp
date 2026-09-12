@@ -1,0 +1,214 @@
+{
+  "day": 40,
+  "cover": {
+    "kicker": "Day 40 of 90 · Week 6",
+    "title": "When publish fails, read the first real error",
+    "overview": "Cause a FAILED run on purpose, quote the first real error, repair it, and rerun to SUCCESS.",
+    "durationMin": 110,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Cause a FAILED run on purpose, quote the first real error, repair it, and rerun to SUCCESS"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Break, read, repair, rerun"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: The log ends with a long technical stack. Where is the first real error usually"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Cause a FAILED run on purpose, quote the first real error, repair it, and rerun to SUCCESS."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 110 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "It must fail first",
+          "durationMin": 35,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "It must fail first",
+              "body": "Cause a real break. Apply the recipe. Read the log from the top. Quote the first human error. Open that file. Repair. Rerun.\n\nGood quote: a line that names `inflate-the-kite.dita` (or whichever file you broke) and says well-formed or missing file.\n\nBad quote: `BUILD FAILED` with no cause."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**FAILED** :  the engine stopped. The quote is the first real error that names a file, not the last stack line."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "FAILED",
+                  "back": "the engine stopped. The quote is the first real error that names a file, not the last stack line"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "JkPeWea3Y3U",
+              "title": "DITA Map Completeness Check",
+              "watchFor": [
+                "Missing path rows you might also see in a log"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Break, read, repair, rerun",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You never produced FAILED, or you quoted only ‘BUILD FAILED’ with no cause, or you left the copy broken, or you ‘fixed’ it by switching to a different booklet.\n\nExpected: failed-first-error.txt has FAILED cause + SUCCESS confirmation. Check copy publishes."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Copy kitepump to oxygen-bootcamp-work/week6-failed/ so you can break a copy."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Break 1 (pick one): point a booklet line at a missing file, or delete a closing tag in a page the booklet includes."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Run WebHelp Responsive. Status must be FAILED (if it still succeeds, break the booklet path until it fails)."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Copy the first real error line (not a long technical dump at the bottom if a human line exists above it) into oxygen-bootcamp-work/week6/failed-first-error.txt."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Repair the copy. Rerun. SUCCESS. Quote the SUCCESS line under the error in the same file."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Write one sentence: the first place I looked was ____ (log, then the file it named)."
+                }
+              ],
+              "summary": "failed-first-error.txt has FAILED cause + SUCCESS confirmation. Check copy publishes."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "The log ends with a long technical stack. Where is the first real error usually?",
+              "options": [
+                "The last line of the stack",
+                "Higher :  an [ERROR] or engine message that names a file",
+                "Help > About"
+              ],
+              "answer": 1,
+              "why": "Read from the first [ERROR] that names a file. The stack is the engine falling after that."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "FAILED because a page is not well-formed. Completeness was clean yesterday. What is true?",
+              "options": [
+                "Completeness always includes well-formedness of every file",
+                "Possible :  you broke the file after, or completeness did not read that file the same way",
+                "Then the engine is wrong"
+              ],
+              "answer": 1,
+              "why": "Run both. A new Text-mode break is a new error."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Cause a FAILED run on purpose, quote the first real error, repair it, and rerun to SUCCESS.",
+    "nextDayHook": "Tomorrow you glance at the look controls so you know they exist :  then you close them."
+  }
+}

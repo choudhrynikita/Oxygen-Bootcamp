@@ -1,0 +1,231 @@
+{
+  "day": 5,
+  "cover": {
+    "kicker": "Day 5 of 90 · Week 1",
+    "title": "Paste a list and fix a red error",
+    "overview": "Paste a short list into your page, then cause one red error on purpose, read it, and fix it.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Paste a short list into your page, then cause one red error on purpose, read it, and fix it"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Paste, then repair one red line"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A yellow bulb offers to “fix” the error. When do you click it"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Paste a short list into your page, then cause one red error on purpose, read it, and fix it."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Paste, then look",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Paste, then look",
+              "body": "Paste is useful and messy. After a paste, glance at **Text** view. If the list looks like a list, you are fine. If it looks like leftover website code, undo and make the list with the toolbar."
+            },
+            {
+              "type": "text",
+              "id": "t-1",
+              "heading": "Break it on purpose",
+              "body": "In Text, delete one closing tag. Read the red line. Write it down. **Undo**.\n\nThat red line is not a personal insult. It is the app saying the skeleton does not match."
+            },
+            {
+              "type": "text",
+              "id": "t-3",
+              "heading": "Outline",
+              "body": "The **Outline** panel (often on the right) lists the pieces of the page. Click a paragraph there to jump. If you cannot find it, skip it. It is a helper, not the lesson."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Words today",
+                  "body": "**Well-formed** :  the tags nest and match. A missing `</p>` is not well-formed.\n\n**Valid** :  the file also follows the rules for this kind of page (a concept may not want a how-to step in it). You will feel “valid” more next week. Today, well-formed is the apple."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Well-formed",
+                  "back": "the tags nest and match. A missing `</p>` is not well-formed"
+                },
+                {
+                  "front": "Valid",
+                  "back": "the file also follows the rules for this kind of page (a concept may not want a how-to step in it). You will feel “valid” more next week. Today, well-formed is the apple"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "bnQwJZD58wY",
+              "title": "WYSIWYG XML Editing",
+              "watchFor": [
+                "Paste into Author",
+                "The error list under the page"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Paste, then repair one red line",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You left the file broken, or you clicked a magic fix you cannot explain, or you never read the error message.\n\nExpected: The list is in the page. You quoted one red error. You undid it. The file opens clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Open your hello-concept.dita from week1/ (or the sample if yours is missing)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Copy a short three-item list from any browser page."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Paste it into the body in Author. Oxygen should turn it into a list. If it pastes as a blob of text, make a simple list with the toolbar instead."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Switch to Text. Look at the tags around the list. Do not panic."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "In Text, delete one closing tag on purpose. Read the red error. Write the exact message in oxygen-bootcamp-work/day-05-error.txt. Then Undo."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Save. The page should open with no red error."
+                }
+              ],
+              "summary": "The list is in the page. You quoted one red error. You undid it. The file opens clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A yellow bulb offers to “fix” the error. When do you click it?",
+              "options": [
+                "Always :  bulbs are official",
+                "Only when you can say what it will change",
+                "Never, in any view"
+              ],
+              "answer": 1,
+              "why": "Some fixes are fine. Some rewrite the page. If you cannot say what will change, Undo is cheaper."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You deleted a closing tag in Text. The file is “not well-formed.” That means…",
+              "options": [
+                "The tags no longer match, so the file is broken as XML",
+                "The shop will not like your wording",
+                "You forgot to publish"
+              ],
+              "answer": 0,
+              "why": "Well-formed means the tags nest and match. It is about the skeleton, not about spelling."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Paste a short list into your page, then cause one red error on purpose, read it, and fix it.",
+    "nextDayHook": "Tomorrow you finish one real page: title, short line under the title, and a body."
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "day": 78,
+  "cover": {
+    "kicker": "Day 78 of 90 · Week 12",
+    "title": "Edit in Oxygen :  what that button means",
+    "overview": "Open the official Configure Edit in Oxygen article and write that an admin turns the button on :  authors do not guess settings on the live system.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Open the official Configure Edit in Oxygen article and write that an admin turns the button on :  authors do not guess settings on the live system"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Admin owns the switch"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Who turns on Edit in Oxygen"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Open the official Configure Edit in Oxygen article and write that an admin turns the button on :  authors do not guess settings on the live system."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A button, not a prod change",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "A button, not a prod change",
+              "body": "**Edit in Oxygen** is a button in Guides. It opens the topic in desktop Oxygen. Then you check it back in.\n\nAn admin turns this on. You do not guess a setting on the live system. The official article is in the Source box. Cloud and on-prem labels differ. Verify.\n\nKeep the DITA version, the catalogs, and the house-style checks the same on the server and on the desktop. If they differ, a topic can look clean in Oxygen and fail when you check it in.\n\nYour lab is to understand the button. It is not to change production."
+            },
+            {
+              "type": "text",
+              "id": "t-3",
+              "heading": "Figure",
+              "body": "Labeled mock: Guides toolbar with Edit in Oxygen. Caption: *Mock. Admin owns the switch.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Edit in Oxygen** :  a Guides button that opens the topic in desktop Oxygen."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Edit in Oxygen",
+                  "back": "a Guides button that opens the topic in desktop Oxygen"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "N5cNgWfQAdQ",
+              "title": "Customizing the DITA editing experience",
+              "watchFor": [
+                "Desktop setups must match what the server expects"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Admin owns the switch",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You paste a made-up config as if you applied it on production.\n\nExpected: Article noted. Setting treated as an admin question. Match-the-server sentence written."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Open the Experience League article Configure Edit in Oxygen (Source box)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Write oxygen-bootcamp-work/week12/field-log-78.txt: an admin enables the connector. Authors do not guess a setting on production."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Copy the setting name from the pack as a question for an admin (com.adobe.fmdita.xmleditor.config.XmlEditorConfig / xmleditor.editinoxygen=true). Then write ‘verify in the article for your cloud vs on-prem’."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Write: keep DITA version, catalogs, and house-style checks the same on server and desktop."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not paste a made-up config as if you applied it."
+                }
+              ],
+              "summary": "Article noted. Setting treated as an admin question. Match-the-server sentence written."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Who turns on Edit in Oxygen?",
+              "options": [
+                "Any author, by guessing the setting on production",
+                "An admin, after reading the official article",
+                "The 5-minute warmup"
+              ],
+              "answer": 1,
+              "why": "The button is real. The live switch is admin work."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "House-style checks differ on the desktop and on the server. What breaks?",
+              "options": [
+                "Nothing :  desktop always wins",
+                "A topic can look clean in Oxygen and fail when you check it in",
+                "Sites Quick Publish fails"
+              ],
+              "answer": 1,
+              "why": "Same rules on both desks, or you fight yourself."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Open the official Configure Edit in Oxygen article and write that an admin turns the button on :  authors do not guess settings on the live system.",
+    "nextDayHook": "Tomorrow: the booklet lives in AEM’s library. Your laptop holds a working copy."
+  }
+}

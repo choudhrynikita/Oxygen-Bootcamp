@@ -1,0 +1,215 @@
+{
+  "day": 36,
+  "cover": {
+    "kicker": "Day 36 of 90 · Week 6",
+    "title": "What \"publish\" means here",
+    "overview": "Open Configure Transformation Scenario, filter DITA Map, and attach a recipe to kitepump.ditamap without dumping output into the source folder.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Open Configure Transformation Scenario, filter DITA Map, and attach a recipe to kitepump.ditamap without dumping output into the source folder"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Name the recipe, pick the output folder"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: You run a transformation scenario. What should you select as the thing to publish"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Open Configure Transformation Scenario, filter DITA Map, and attach a recipe to kitepump.ditamap without dumping output into the source folder."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Publish, on this desk",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Publish, on this desk",
+              "body": "**Publish** here means: turn the booklet into a site or a PDF.\n\nA **transformation scenario** is a saved recipe: which booklet, which engine, which output folder.\n\n**DITA-OT** is the engine that turns the booklet into a site or a PDF. You do not start it by hand. The recipe starts it.\n\n**Configure Transformation Scenario** → filter **DITA Map**. Pick the type. Set **output** outside source (for example `out/`).\n\nIf yesterday’s switch file belongs on this output, attach it here too. Author preview and publish filters are different attachments.\n\nThe recipe named **WebHelp Responsive** makes a clickable draft site. You will run it tomorrow.\n\nDo not run it yet unless you want a peek."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Publish** :  turn the booklet into a site or a PDF. **Transformation scenario** :  the saved recipe. **DITA-OT** :  the engine that does the turning."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Publish",
+                  "back": "turn the booklet into a site or a PDF. **Transformation scenario** :  the saved recipe. **DITA-OT** :  the engine that does the turning"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "zNmXfKWXwO8",
+              "title": "Creating a Publishing Template to Customize WebHelp and PDF using CSS",
+              "watchFor": [
+                "Where publishing recipes sit",
+                "That a site and a PDF are two outputs from the same booklet"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Name the recipe, pick the output folder",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Output is set to the source topics/ folder, or you published a single page when you meant the booklet, or you skipped Configure and ran a mystery default.\n\nExpected: Recipe named and attached to the booklet. Output folder outside source. Switch-file field noted. Nothing published yet :  or a clean first run if you did run it."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Set kitepump.ditamap as the root map. Open DITA Maps Manager."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Configure Transformation Scenario (toolbar or Document > Transformation :  verify the label). Filter ‘DITA Map’."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Select DITA Map WebHelp Responsive. That is a clickable draft site. Do not run it yet."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Set the output folder to oxygen-bootcamp-work/week6/out-webhelp/ :  outside the source tree. If the default is inside maps/, change it."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "If the recipe has a field for a switch file, attach novice.ditaval. Write whether you attached it."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Save the recipe on the map if your version stores it. Write the recipe name in oxygen-bootcamp-work/week6/scenario-name.txt."
+                }
+              ],
+              "summary": "Recipe named and attached to the booklet. Output folder outside source. Switch-file field noted. Nothing published yet :  or a clean first run if you did run it."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "You run a transformation scenario. What should you select as the thing to publish?",
+              "options": [
+                "The currently open paragraph",
+                "The DITA map (the booklet)",
+                "Help > About"
+              ],
+              "answer": 1,
+              "why": "Publish the booklet. One page is a fragment, not the handbook."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Output folder is inside topics/. What goes wrong later?",
+              "options": [
+                "Nothing :  the engine skips page files",
+                "Generated files get mixed with source, or even pointed at by the booklet",
+                "Oxygen deletes the booklet"
+              ],
+              "answer": 1,
+              "why": "out/ stays out. Source stays source."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Open Configure Transformation Scenario, filter DITA Map, and attach a recipe to kitepump.ditamap without dumping output into the source folder.",
+    "nextDayHook": "Tomorrow you run that recipe and open a clickable draft site."
+  }
+}

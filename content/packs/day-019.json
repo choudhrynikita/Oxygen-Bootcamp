@@ -1,0 +1,210 @@
+{
+  "day": 19,
+  "cover": {
+    "kicker": "Day 19 of 90 · Week 3",
+    "title": "Name files so they are easy to find",
+    "overview": "Rename one page the safe way, or move it and update the booklet so completeness stays clean.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Rename one page the safe way, or move it and update the booklet so completeness stays clean"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Rename without losing the pointer"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: You renamed a file on disk and skipped the booklet. What breaks"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Rename one page the safe way, or move it and update the booklet so completeness stays clean."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Boring names win",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Boring names win",
+              "body": "`vase-parts.dita` will still make sense in six months. `Vase Parts FINAL(2).dita` will not.\n\nWhen you rename, update the booklet. Then run completeness. If you skip that, the pointer still points at a ghost."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**href** :  the path stored in a pointer. You can say “the path in the booklet line.”"
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "href",
+                  "back": "the path stored in a pointer. You can say “the path in the booklet line.”"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "ozFZz6YZMCY",
+              "title": "DITA Maps Manager View in Oxygen XML Editor 19",
+              "watchFor": [
+                "What happens when a path changes"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Rename without losing the pointer",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Completeness reports a missing file, or the new name has spaces, or you renamed the disk file and never updated the booklet.\n\nExpected: New name is simple. Completeness clean. Old and new names written down."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Pick a page you added (or vase-parts.dita if you make a short new one)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "If Oxygen can rename and update references, use that. If not: rename on disk, then edit the pointer in the booklet to match."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Run completeness. It must be clean."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Write the old name and the new name in oxygen-bootcamp-work/week3/day-19-rename.txt."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Keep lowercase hyphens. No spaces. No FINAL(2)."
+                }
+              ],
+              "summary": "New name is simple. Completeness clean. Old and new names written down."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "You renamed a file on disk and skipped the booklet. What breaks?",
+              "options": [
+                "The pointer in the map",
+                "Help > About",
+                "The colour of Author view"
+              ],
+              "answer": 0,
+              "why": "The booklet still has the old path."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Which name should you pick?",
+              "options": [
+                "Vase Parts FINAL.dita",
+                "vase-parts.dita",
+                "Document (3).dita"
+              ],
+              "answer": 1,
+              "why": "Lowercase, hyphens, boring. Boring is good."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Rename one page the safe way, or move it and update the booklet so completeness stays clean.",
+    "nextDayHook": "Tomorrow you ship a small handbook: map plus your pages, completeness clean."
+  }
+}

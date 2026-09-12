@@ -1,7 +1,7 @@
 {
   "name": "oxygen-bootcamp",
   "private": true,
-  "version": "2026.09.2",
+  "version": "2026.09.3",
   "description": "Oxygen Bootcamp — 90-day authoring training for Oxygen XML and AEM Authoring / AEM Guides.",
   "sideEffects": false,
   "engines": {
@@ -14,7 +14,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "content:audit": "node scripts/content-audit.mjs",
-    "content:generate": "node scripts/generate-lessons.mjs",
+    "content:generate": "node scripts/generate-lessons.mjs && node scripts/generate-packs.mjs",
     "test": "node --experimental-strip-types --import ./scripts/register-ts-ext.mjs --test packages/progress/src/*.test.ts packages/game/src/*.test.ts",
     "test:e2e": "playwright test",
     "preview": "next start --hostname 127.0.0.1 --port 8081",

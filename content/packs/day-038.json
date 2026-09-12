@@ -1,0 +1,215 @@
+{
+  "day": 38,
+  "cover": {
+    "kicker": "Day 38 of 90 · Week 6",
+    "title": "Make a PDF draft",
+    "overview": "Run a DITA Map PDF recipe if your install has one, write which tool produced the file, and skip with a reason if it is missing.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Run a DITA Map PDF recipe if your install has one, write which tool produced the file, and skip with a reason if it is missing"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: One PDF, named tool"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Why write the PDF tool’s name"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Run a DITA Map PDF recipe if your install has one, write which tool produced the file, and skip with a reason if it is missing."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A PDF is also a recipe",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "A PDF is also a recipe",
+              "body": "A **PDF** is a print-style file the engine builds from your booklet.\n\n**Chemistry** is a PDF tool some teams use :  if you do not have it, skip and write why.\n\nName the tool. Put the file in `out-pdf/`. Check one fact (the warning). Stop.\n\nIf the tool is not installed, the log says so. That line is a valid lab outcome. Do not download a random add-on off a blog."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**PDF** :  a print-style file the engine builds from your booklet. **Chemistry** :  a PDF tool some teams use; skip and write why if you do not have it."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "PDF",
+                  "back": "a print-style file the engine builds from your booklet. **Chemistry** :  a PDF tool some teams use; skip and write why if you do not have it"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "zNmXfKWXwO8",
+              "title": "Creating a Publishing Template to Customize WebHelp and PDF using CSS",
+              "watchFor": [
+                "PDF mentioned next to the site output",
+                "That look settings can apply to PDF :  awareness, not homework"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "One PDF, named tool",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You ship a screenshot of someone else’s PDF as yours, or you dump output into topics/, or you claim a tool name the log does not use.\n\nExpected: pdf-engine.txt names the tool or the missing-tool message. Output path outside source. Warning presence noted if a PDF exists."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "In Configure Transformation Scenario, filter DITA Map PDF. Pick the recipe your install ships (PDF :  based on HTML5 & CSS, Chemistry, or another PDF recipe :  verify the name)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Output to oxygen-bootcamp-work/week6/out-pdf/. Run it."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "If SUCCESS, open the PDF. Write: tool name, page count, whether the pinch warning appears."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Chemistry is a PDF tool some teams use :  if you do not have it, skip and write why. If any PDF recipe is missing, write the missing-tool message in oxygen-bootcamp-work/week6/pdf-engine.txt. That message is the lab, not a fake PDF."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not install a random look to ‘make it pretty’. Do not treat this as a layout app."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Keep the PDF out of the source booklet folder."
+                }
+              ],
+              "summary": "pdf-engine.txt names the tool or the missing-tool message. Output path outside source. Warning presence noted if a PDF exists."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Why write the PDF tool’s name?",
+              "options": [
+                "It is trivia",
+                "The log and the missing-tool errors use that name; ‘the PDF button’ is not a diagnosis",
+                "The booklet check needs it"
+              ],
+              "answer": 1,
+              "why": "This week is log literacy. Tools have names."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "The PDF dropped your table borders. First move today?",
+              "options": [
+                "Rewrite the table as a picture",
+                "Write it down; check whether the table is clean first. Do not start a look career this afternoon",
+                "Switch the whole book to a notepad file"
+              ],
+              "answer": 1,
+              "why": "Validity and recipe choice first. Look comes later, and not from you this week."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Run a DITA Map PDF recipe if your install has one, write which tool produced the file, and skip with a reason if it is missing.",
+    "nextDayHook": "Tomorrow you read a SUCCESS log like a skeptic."
+  }
+}

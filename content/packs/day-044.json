@@ -1,0 +1,207 @@
+{
+  "day": 44,
+  "cover": {
+    "kicker": "Day 44 of 90 · Week 7",
+    "title": "When the desktop app is still the right tool",
+    "overview": "Run three desktop-only moves on kitepump.ditamap that you would not bet a browser tab on.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Run three desktop-only moves on kitepump.ditamap that you would not bet a browser tab on"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Three desktop moves"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A completeness check on the booklet is mainly a desktop job this course. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Run three desktop-only moves on kitepump.ditamap that you would not bet a browser tab on."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Desktop still wins some jobs",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Desktop still wins some jobs",
+              "body": "The booklet view. A completeness check. A transformation log. A rename that updates pointers. Work with no internet.\n\nA person who only needs to read one page on a train does not need those buttons. Do not make them install the desktop app for a comment.\n\nYou are the person with the booklet. You still need the desktop."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Desktop app** :  Oxygen installed on your computer. Full menus. Files on disk. The desk you have used since week 1."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Desktop app",
+                  "back": "Oxygen installed on your computer. Full menus. Files on disk. The desk you have used since week 1"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "ozFZz6YZMCY",
+              "title": "DITA Maps Manager View in Oxygen XML Editor 19",
+              "watchFor": [
+                "The booklet view (Maps Manager)",
+                "Where you run a completeness check from the booklet"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Three desktop moves",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You skip the completeness check, or you write slogans about ‘the cloud’ with no file in your hand.\n\nExpected: Completeness ran. Three desktop moves named with evidence."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Open kitepump.ditamap in Maps Manager. Run Validate and Check for Completeness. Write the result (clean, or the first row you saw)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Open Configure Transformation Scenario. Write the scenario name you would run. Do not hunt for that same local publish inside a browser tab."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Turn off wifi for a minute, or write how you would open the booklet on a train with no signal. The desktop copy on disk still opens. A browser tab may not."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Save the three moves in oxygen-bootcamp-work/week7/desktop-still.txt."
+                }
+              ],
+              "summary": "Completeness ran. Three desktop moves named with evidence."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A completeness check on the booklet is mainly a desktop job this course. True or not?",
+              "options": [
+                "True :  you ran it in Maps Manager last month, and you run it here again",
+                "Not true :  only a browser tab can check links",
+                "Not true :  Help > About checks the booklet"
+              ],
+              "answer": 0,
+              "why": "Maps Manager lives on the desktop app. A reviewer in a browser does not need this button."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Last week you published WebHelp to a folder on your computer. Who needs that job?",
+              "options": [
+                "Every reviewer who only comments on one sentence",
+                "The person who owns the booklet and the publish log",
+                "Nobody :  publish logs are optional forever"
+              ],
+              "answer": 1,
+              "why": "A browser editor may preview a page. The transform log you debug lives on the desktop (or on a publish server). Not on a reviewer’s phone."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Run three desktop-only moves on kitepump.ditamap that you would not bet a browser tab on.",
+    "nextDayHook": "Tomorrow you send a file out for review: track a change, leave a comment, accept one edit."
+  }
+}

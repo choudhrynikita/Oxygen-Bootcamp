@@ -1,0 +1,245 @@
+{
+  "day": 62,
+  "cover": {
+    "kicker": "Day 62 of 90 · Week 9 · week check",
+    "title": "Week 9 check",
+    "overview": "Gather this week’s field logs, keep Oxygen and AEM on two lines, and pass the quiz so week 10 can open.",
+    "durationMin": 110,
+    "audience": "You already met these moves. Today you prove you can name them."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Gather this week’s field logs, keep Oxygen and AEM on two lines, and pass the quiz so week 10 can open"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Field logs 56-61 in one folder"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: You failed this check. Does week 10 open anyway"
+    },
+    {
+      "id": "lo4",
+      "bloom": "evaluate",
+      "text": "Say what each error meant, in plain words"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "This week’s check",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Gather this week’s field logs, keep Oxygen and AEM on two lines, and pass the quiz so week 10 can open."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A check, not a show",
+          "durationMin": 35,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "Folder of field logs. Caption: *aem-author-field-log pack. Mocks labeled.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "A check, not a show",
+                  "body": "This is the week boss. Your evidence is **field logs**, not a stolen login.\n\nYou already met these four facts. You are only proving you can name them.\n\n1. Author ≠ publish ≠ last week’s DITA-OT run.\n2. Sites console ≠ Maps Manager.\n3. Edit ≠ Preview ≠ Publish.\n4. Page ≠ topic. Block ≠ how-to.\n\nFail the quiz and **week 10 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week.\n\nIf you have no instance, a field log with a real checklist plus labeled mocks plus official video notes is enough."
+                },
+                {
+                  "title": "Word today",
+                  "body": "**Two desks** :  Oxygen for the handbook. AEM Sites for the web pages. One product story. Not one app."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Two desks",
+                  "back": "Oxygen for the handbook. AEM Sites for the web pages. One product story. Not one app"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "7-Lcw5PejhI",
+              "title": "Go live faster with quick site creation in AEM",
+              "watchFor": [
+                "Site creation recap :  the tree and going live"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Field logs 56-61 in one folder",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Logs smash AEM and Oxygen into one app, or Quick Publish is described as DITA-OT, or mocks are unlabeled.\n\nExpected: Check folder complete. Zero fake product names. Two-desk Kitepump plan. Verify-labels present."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Gather field-log-56 through 61 into oxygen-bootcamp-work/week9-check/."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Search your notes for the words AEM Oxygen. You should find zero hits. Every figure that is a mock must say mock."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write a one-page Kitepump plan: one landing page (Sites), one handbook (DITA in Oxygen). They share a product story, not an app."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Timed: list the menu path for Create Page and for Quick Publish as you understand them, with ‘verify label’ notes."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Pass the quiz. You can retry it. Week 10 stays locked until this day is finished (lab + quiz + a short note)."
+                }
+              ],
+              "summary": "Check folder complete. Zero fake product names. Two-desk Kitepump plan. Verify-labels present."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "You failed this check. Does week 10 open anyway?",
+              "options": [
+                "Yes, the Friday page is enough",
+                "No. Finish this day’s lab, quiz, and note. You can retry the quiz.",
+                "Yes, if you do the 5-minute warmup"
+              ],
+              "answer": 1,
+              "why": "Next week waits until you can keep the two desks apart and name Quick Publish without saying transform. Retry is free."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You have no AEM login this week. Can you still finish the labs?",
+              "options": [
+                "No, impossible",
+                "Yes :  a field log plus labeled mocks plus official video notes",
+                "Only with a copied screenshot from the internet"
+              ],
+              "answer": 1,
+              "why": "The pack is aem-author-field-log. A fake login is not the lab."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "AEM Author is not DITA. Which object is still DITA this week?",
+              "options": [
+                "The landing page Text block",
+                "The kitepump handbook you still have in Oxygen",
+                "Page properties"
+              ],
+              "answer": 1,
+              "why": "Two desks, one product story. The handbook did not move."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-3",
+              "kind": "mc",
+              "q": "There is a product called AEM Oxygen XML Editor. True or not?",
+              "options": [
+                "True :  that is the desktop app",
+                "Not true. Oxygen is Syncro Soft. AEM is Adobe. Write the two names on two lines",
+                "True in the Sites console"
+              ],
+              "answer": 1,
+              "why": "Day 56. If it is in your notes, delete it."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Gather this week’s field logs, keep Oxygen and AEM on two lines, and pass the quiz so week 10 can open.",
+    "nextDayHook": "Week 10: you place Text, Image, and Teaser on a page :  still as an author, still a mock if you have no login."
+  }
+}

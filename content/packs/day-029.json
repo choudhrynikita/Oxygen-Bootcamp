@@ -1,0 +1,205 @@
+{
+  "day": 29,
+  "cover": {
+    "kicker": "Day 29 of 90 · Week 5",
+    "title": "Hide text some readers should not see",
+    "overview": "Mark one step for experts and one paragraph for print, turn on the colors in Author, and write what each mark means on this desk.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Mark one step for experts and one paragraph for print, turn on the colors in Author, and write what each mark means on this desk"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Two marks, two meanings"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: You marked a step audience=expert. You have not hidden it yet. Is the step still in the file"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Mark one step for experts and one paragraph for print, turn on the colors in Author, and write what each mark means on this desk."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A mark is not a delete",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "A mark is not a delete",
+              "body": "Some readers should not see a step. You do not delete the step. You **mark** it.\n\nToday you set two marks: **audience=\"expert\"** on a step, **platform=\"print\"** on a paragraph. Author can paint marked text in color. Turn that on. If you cannot see the mark, you will forget it is there.\n\nA mark you cannot explain will become a filter someone else trusts. Do not invent a joke value.\n\nThe step is still in the file. A switch file tomorrow will act on the mark."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Condition** (also called profiling) :  a mark such as audience or platform that says who a chunk is for. It does not hide anything until a switch file says so."
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "CgBbPW3mJzw",
+              "title": "Profiling and Reuse",
+              "watchFor": [
+                "Color of marked text in Author",
+                "Where audience and platform are set"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Two marks, two meanings",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: A mark has no sentence in the meanings file, or you marked the whole how-to when you meant one step, or colors never turned on.\n\nExpected: Two marks, two written meanings. Colors visible. Files open clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Open prime-the-pump.dita. The sample may already mark one step audience=\"expert\" (the gauge step). If not, set audience=\"expert\" on that step."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "In what-is-kitepump.dita, set platform=\"print\" on one paragraph you would drop from a screen copy."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Turn on profiling colors in Author (Profiling / Conditional Text :  if the label differs, write the label you see). Expert and print should look different."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Write oxygen-bootcamp-work/week5/condition-meanings.txt: audience=expert means ____. platform=print means ____. Do not invent a third mark today."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not set a joke value. Do not mark the whole how-to when you meant one step."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Save. No red error. Completeness still clean."
+                }
+              ],
+              "summary": "Two marks, two written meanings. Colors visible. Files open clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "You marked a step audience=expert. You have not hidden it yet. Is the step still in the file?",
+              "options": [
+                "Yes :  a mark is a label. It does not delete the step",
+                "No :  the mark deletes the step",
+                "Only if completeness is clean"
+              ],
+              "answer": 0,
+              "why": "The mark labels the step. It does not delete the step. You still see it in Text."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "The whole how-to is marked audience=expert. What did you probably want?",
+              "options": [
+                "A separate how-to, or one step marked :  not a hidden chapter with no booklet signal",
+                "platform=print on the booklet",
+                "A warning pointer on the title"
+              ],
+              "answer": 0,
+              "why": "Hiding a whole how-to with one mark is how a chapter disappears. Prefer a dedicated page, or mark the one step."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Mark one step for experts and one paragraph for print, turn on the colors in Author, and write what each mark means on this desk.",
+    "nextDayHook": "Tomorrow a switch file shows, hides, or flags those marks on purpose."
+  }
+}

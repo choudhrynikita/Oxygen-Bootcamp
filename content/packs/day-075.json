@@ -1,0 +1,246 @@
+{
+  "day": 75,
+  "cover": {
+    "kicker": "Day 75 of 90 · Week 11 · week check",
+    "title": "Week 11 check",
+    "overview": "Given four jobs, pick Page Editor, Document Authoring, Content Fragment, or Oxygen :  and keep the DITA how-to off the AEM list.",
+    "durationMin": 90,
+    "audience": "You already met these moves. Today you prove you can name them."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Given four jobs, pick Page Editor, Document Authoring, Content Fragment, or Oxygen :  and keep the DITA how-to off the AEM list"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Four jobs"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: You failed this check. Does week 12 open anyway"
+    },
+    {
+      "id": "lo4",
+      "bloom": "evaluate",
+      "text": "Say what each error meant, in plain words"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "This week’s check",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Given four jobs, pick Page Editor, Document Authoring, Content Fragment, or Oxygen :  and keep the DITA how-to off the AEM list."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A check, not a show",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-1",
+              "heading": "Proof",
+              "body": "1. Three AEM names still distinct.\n2. Content Fragment is fields, not a layout strip.\n3. Job D stays in the handbook."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "Labeled mock of the four jobs. Caption: *Mock. The how-to row is Oxygen.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "A check, not a show",
+                  "body": "This is the week boss. Four jobs. Four methods. You already met them.\n\n- Templated page with blocks → **Page Editor**\n- Marketers in Google Docs → **Document Authoring**\n- Fields for an app → **Content Fragment**\n- DITA how-to → **Oxygen** (Guides is next week)\n\nIf you put the how-to in Document Authoring because both say document, start the four rows again.\n\nFail the quiz and **week 12 stays locked**. Retry is free. The warmup does not open the week.\n\nYou may not have AEM. The table in the field log is the evidence."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Page Editor",
+                  "back": "Marketers in Google Docs → **Document Authoring**"
+                },
+                {
+                  "front": "Content Fragment",
+                  "back": "DITA how-to → **Oxygen** (Guides is next week)"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "VcMI0zWIKdg",
+              "title": "How to Build a Global Site in AEM Sites",
+              "watchFor": [
+                "The methods in one sitting"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Four jobs",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Job D is assigned to Page Editor or Document Authoring.\n\nExpected: Four correct assignments. Job D stays DITA. Mock labeled."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Write oxygen-bootcamp-work/week11/field-log-75.txt with four assignments."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Job A: hero plus teaser on a templated site page → Page Editor."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Job B: marketers in Google Docs → Document Authoring."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Job C: product fields for an app → Content Fragment."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Job D: a 12-step pump prime with reused warnings → Oxygen (or Guides next week), not Sites."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Labeled mock: the four jobs. Caption: mock."
+                },
+                {
+                  "title": "Step 7",
+                  "body": "Pass the quiz. Week 12 stays locked until this day is finished (lab + quiz + a short note)."
+                }
+              ],
+              "summary": "Four correct assignments. Job D stays DITA. Mock labeled."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "You failed this check. Does week 12 open anyway?",
+              "options": [
+                "Yes, Friday’s table is enough",
+                "No. Finish this day’s lab, quiz, and note. You can retry the quiz.",
+                "Yes, if the 5-minute warmup is done"
+              ],
+              "answer": 1,
+              "why": "The handoff week waits until you can match the four jobs. Retry is free."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Job D is a 12-step pump prime with reused warnings. Where does it live?",
+              "options": [
+                "Document Authoring, because it is a document",
+                "Oxygen (or Guides next week)",
+                "A Content Fragment named steps"
+              ],
+              "answer": 1,
+              "why": "A DITA how-to with reuse is handbook work. Not a Sites method."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "Product fields an app will read. Which of these?",
+              "options": [
+                "Page Editor",
+                "Content Fragment",
+                "A DITA map"
+              ],
+              "answer": 1,
+              "why": "Fields for an app are a Content Fragment."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Given four jobs, pick Page Editor, Document Authoring, Content Fragment, or Oxygen :  and keep the DITA how-to off the AEM list.",
+    "nextDayHook": "Week 12: Guides in the browser, Oxygen on the desktop, and who edits where."
+  }
+}

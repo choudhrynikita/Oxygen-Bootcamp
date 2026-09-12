@@ -1,0 +1,225 @@
+{
+  "day": 4,
+  "cover": {
+    "kicker": "Day 4 of 90 · Week 1",
+    "title": "Make a new page and save it in a folder",
+    "overview": "Create a new page from a template, give it a simple file name, and save it in a folder :  not on the desktop.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Create a new page from a template, give it a simple file name, and save it in a folder :  not on the desktop"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: A new page in a real folder"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Why File > New instead of a blank notepad file"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Create a new page from a template, give it a simple file name, and save it in a folder :  not on the desktop."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "New page, real folder",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "New page, real folder",
+              "body": "**File > New.** Pick a **DITA Concept** template. A concept is a page that explains what something is. You will meet the other two kinds of pages next week.\n\nSave as `hello-concept.dita` in `oxygen-bootcamp-work/week1/`.\n\nNot the desktop. A file on the desktop gets lost the first time someone looks for `topics/hello-concept.dita`."
+            },
+            {
+              "type": "text",
+              "id": "t-1",
+              "heading": "Names",
+              "body": "Lowercase. Hyphens. No spaces. `hello-concept.dita` is a good name. `Hello Concept FINAL (2).dita` is how files get lost."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Template** :  a starter page Oxygen already knows how to edit. File > New attaches the right toolbar. A blank notepad file does not."
+                },
+                {
+                  "title": "Optional",
+                  "body": "**Help > Install new add-ons** has official Live Tutorials inside Oxygen. Nice extra. Not required to finish today."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Template",
+                  "back": "a starter page Oxygen already knows how to edit. File > New attaches the right toolbar. A blank notepad file does not"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "LuAVmn1j7f0",
+              "title": "Getting Started with DITA Using Oxygen XML Editor",
+              "watchFor": [
+                "File > New",
+                "A DITA topic template"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "A new page in a real folder",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The file is Hello Concept.dita on the desktop, or the title is empty, or the file will not save.\n\nExpected: hello-concept.dita sits in week1/, has a title and a paragraph, and opens again after save."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Create a folder oxygen-bootcamp-work/week1/ if it does not exist."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "In Oxygen: File > New. Choose a DITA Concept template. (Concept just means “a page that explains what something is.”)"
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Title: Hello concept. File name: hello-concept.dita :  all lowercase, with a hyphen, not a space."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Save under oxygen-bootcamp-work/week1/, not the desktop."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Under the title, add one short line that says what the page is about. Then add one paragraph in the body."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Confirm Author, Text, and Grid still open this same file."
+                }
+              ],
+              "summary": "hello-concept.dita sits in week1/, has a title and a paragraph, and opens again after save."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Why File > New instead of a blank notepad file?",
+              "options": [
+                "The template sets the page up so the writing toolbar works",
+                "Notepad cannot save",
+                "File > New publishes the page to the web"
+              ],
+              "answer": 0,
+              "why": "A template gives Oxygen the right kind of page. A random .txt file will not get the DITA toolbar."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Which file name will be easier for the rest of the course?",
+              "options": [
+                "Hello Concept FINAL (2).dita",
+                "hello-concept.dita",
+                "Document.dita"
+              ],
+              "answer": 1,
+              "why": "Lowercase, hyphens, no spaces. Other people and later booklets can find it."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Create a new page from a template, give it a simple file name, and save it in a folder :  not on the desktop.",
+    "nextDayHook": "Tomorrow you paste a list and fix one red error on purpose."
+  }
+}

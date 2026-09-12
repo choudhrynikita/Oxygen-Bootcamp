@@ -1,0 +1,238 @@
+{
+  "day": 59,
+  "cover": {
+    "kicker": "Day 59 of 90 · Week 9",
+    "title": "Edit and Preview are not Publish",
+    "overview": "Describe Edit (handles on the page) vs Preview (visitor-like) and write that neither one sends the page live.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Describe Edit (handles on the page) vs Preview (visitor-like) and write that neither one sends the page live"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Field log: Edit vs Preview"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Preview in Page Editor sends the page live. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Describe Edit (handles on the page) vs Preview (visitor-like) and write that neither one sends the page live."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Three verbs",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Three verbs",
+              "body": "**Edit** :  handles on the pieces of the page, dialogs, insert.\n\n**Preview** :  read the page without the handles.\n\n**Publish** :  copy the page to the live environment. Not today as a click. Tomorrow-plus. Today you only keep Preview apart from Publish.\n\nOxygen **Author** is a different product’s page view. Do not borrow the word. Say **Edit** in Page Editor."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "Labeled mock: toggle Edit | Preview. Caption: *Mock. Not a transform scenario. Not Oxygen Author view.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Page Editor** :  the AEM canvas where you edit a web page. Edit and Preview live here. Publish does not."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Edit",
+                  "back": "handles on the pieces of the page, dialogs, insert"
+                },
+                {
+                  "front": "Preview",
+                  "back": "read the page without the handles"
+                },
+                {
+                  "front": "Publish",
+                  "back": "copy the page to the live environment. Not today as a click. Tomorrow-plus. Today you only keep Preview apart from Publish"
+                },
+                {
+                  "front": "Page Editor",
+                  "back": "the AEM canvas where you edit a web page. Edit and Preview live here. Publish does not"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "idByz7WrhbQ",
+              "title": "AEM from Headful to Headless (Adobe for Business)",
+              "watchFor": [
+                "An editing canvas if shown",
+                "Preview as a distinct mode if shown"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Field log: Edit vs Preview",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The log says Preview publishes the page, or Page Editor is called Oxygen Author mode, or you skip the mock label.\n\nExpected: Edit vs Preview vs Publish as three verbs. Mock labeled. Naming rule present."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Write oxygen-bootcamp-work/week9/field-log-59.txt: Edit shows handles on the pieces of the page. Preview hides them so you can read the page. Preview does not send the page live."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Add: Oxygen Author view is the page view for XML. Page Editor Edit is the canvas for AEM pages. Do not call Page Editor ‘Author mode’."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "List one thing you can only do in Edit (open a piece’s dialog) and one thing Preview is for (read the layout)."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Labeled mock: same page, two states, Edit | Preview. Caption: mock."
+                }
+              ],
+              "summary": "Edit vs Preview vs Publish as three verbs. Mock labeled. Naming rule present."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Preview in Page Editor sends the page live. True or not?",
+              "options": [
+                "True :  Preview means publish",
+                "Not true. Preview is a view. Publish is a later action that copies the page to the live environment",
+                "True if the page looks fine in Edit"
+              ],
+              "answer": 1,
+              "why": "Three verbs. Edit. Preview. Publish. Preview does not copy anything to visitors."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Why not call Page Editor ‘Author mode’?",
+              "options": [
+                "Adobe never uses the word author",
+                "Author mode already names Oxygen’s page view :  colliding names smash two products",
+                "Page Editor has no editing"
+              ],
+              "answer": 1,
+              "why": "Keep the desks distinct. Say Edit in Page Editor. Say Author in Oxygen."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "You need to change the page title in properties. Are you on the Edit canvas?",
+              "options": [
+                "Always :  titles only live on the canvas",
+                "Often Page Properties from the console or an editor menu :  not the same as typing on the canvas",
+                "In Maps Manager"
+              ],
+              "answer": 1,
+              "why": "Properties vs the canvas. Both exist. The title in properties is not a sentence you typed in Edit."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Describe Edit (handles on the page) vs Preview (visitor-like) and write that neither one sends the page live.",
+    "nextDayHook": "Tomorrow a page is a stack of blocks, not a DITA topic."
+  }
+}

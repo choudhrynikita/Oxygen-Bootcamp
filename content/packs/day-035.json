@@ -1,0 +1,224 @@
+{
+  "day": 35,
+  "cover": {
+    "kicker": "Day 35 of 90 · Week 5 · week check",
+    "title": "Week 5 check",
+    "overview": "Explain one switch file, show suggested-edit hygiene, prove Hints are on, and pass the mark list.",
+    "durationMin": 110,
+    "audience": "You already met these moves. Today you prove you can name them."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Explain one switch file, show suggested-edit hygiene, prove Hints are on, and pass the mark list"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Filter, review, Hints"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A yellow bulb offers to fix a mark. When do you click it"
+    },
+    {
+      "id": "lo4",
+      "bloom": "evaluate",
+      "text": "Say what each error meant, in plain words"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "This week’s check",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Explain one switch file, show suggested-edit hygiene, prove Hints are on, and pass the mark list."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A check, not a show",
+          "durationMin": 35,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "A check, not a show",
+                  "body": "This is the week boss. You already met these tools.\n\n1. **Exclude** hides a step in the view; Text still has it.\n2. **Track Changes** off; leftover dummy rejected.\n3. **Hints** on; Enter completes a step.\n4. **The list** has no mystery marks.\n\nFail the quiz and **week 6 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week."
+                },
+                {
+                  "title": "Word today",
+                  "body": "No new word. Use **ditaval**, **exclude**, **flag**, **Track Changes**, and **Hints** in the note you write."
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "CgBbPW3mJzw",
+              "title": "Profiling and Reuse",
+              "watchFor": [
+                "Exclude vs flag recap"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Filter, review, Hints",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The expert step was deleted from source, or Track Changes is still recording junk, or a mark has no meaning, or Hints were never opened.\n\nExpected: Check copy clean. Switch file explained in one sentence. Review clean. Hints on. Completeness clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Copy kitepump to oxygen-bootcamp-work/week5-check/ so you do not wreck the original."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Apply novice.ditaval in Author. Show that the expert step is filtered. Switch off. Source still has the step."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Track Changes: make a dummy edit, reject it. Leave tracking off when you stop."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Hints on. Press Enter in a how-to. Write the first three offers."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "The mark list still matches the check copy. No unexplained marks."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Run completeness on the check copy."
+                },
+                {
+                  "title": "Step 7",
+                  "body": "Pass the quiz. Week 6 stays locked until this day is finished (lab + quiz + a short note)."
+                }
+              ],
+              "summary": "Check copy clean. Switch file explained in one sentence. Review clean. Hints on. Completeness clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A yellow bulb offers to fix a mark. When do you click it?",
+              "options": [
+                "Always :  bulbs are official",
+                "Only when you can say what it will change",
+                "Never in Author"
+              ],
+              "answer": 1,
+              "why": "Some fixes reshape the page. Read first. Same rule as week 1."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You failed this check. Does week 6 open?",
+              "options": [
+                "Yes, Friday’s replace is enough",
+                "No. Week 6 stays locked until this day is finished. Retry the quiz if you need to.",
+                "Yes, if the 5-minute warmup is done"
+              ],
+              "answer": 1,
+              "why": "Lab, quiz, and a short note. Retry is free. The warmup does not open the week."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "The novice switch file is explained as ‘makes it pretty’. Ship it?",
+              "options": [
+                "Yes if Author looks nicer",
+                "No :  you must say include, exclude, or flag in plain words",
+                "Yes if Hints are on"
+              ],
+              "answer": 1,
+              "why": "A switch file is an action list, not a vibe."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Explain one switch file, show suggested-edit hygiene, prove Hints are on, and pass the mark list.",
+    "nextDayHook": "Week 6: turn the booklet into a site or a PDF. You will read the log even when it works."
+  }
+}

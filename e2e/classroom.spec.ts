@@ -10,24 +10,26 @@ test.describe("Oxygen Bootcamp classroom", () => {
     await expect(page.getByText(/exciting journey/i)).toHaveCount(0);
   });
 
-  test("day 1 has lab, check, session blocks, source box", async ({ page }) => {
+  test("day 1 has lab, check, course pack link, source box", async ({ page }) => {
     await page.goto("/day/1");
     await expect(page.getByRole("heading", { level: 1 })).toContainText("Day 1");
-    await expect(page.getByRole("heading", { name: /Lab/i })).toBeVisible();
+    await expect(page.getByRole("heading", { name: /Lab:/i })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Check" })).toBeVisible();
     await expect(page.getByText("Source box")).toBeVisible();
-    await expect(page.getByText("Block A")).toBeVisible();
-    await expect(page.getByRole("button", { name: "Pause" }).or(page.getByRole("button", { name: "Start timer" }))).toBeVisible();
+    await expect(page.getByRole("link", { name: /Open course pack/i })).toBeVisible();
+    await expect(page.getByText("Block A")).toHaveCount(0);
   });
 
-  test("hourly session shows one block at a time", async ({ page }) => {
+  test("course pack opens on cover, then Welcome", async ({ page }) => {
     await page.goto("/session/1");
-    await expect(page.getByRole("heading", { level: 1 })).toContainText("Day 1");
-    await expect(page.getByText("Block A")).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Learn" })).toBeVisible();
-    await expect(page.getByRole("button", { name: "Next block" })).toBeVisible();
-    await page.getByRole("button", { name: "Next block" }).click();
-    await expect(page.getByRole("heading", { name: /Lab/i })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1 })).toContainText("Install Oxygen");
+    await expect(page.getByRole("button", { name: /Start course|Resume course/i })).toBeVisible();
+    await expect(page.getByText("Block A")).toHaveCount(0);
+    await page.getByRole("button", { name: /Start course|Resume course/i }).click();
+    await expect(page.getByRole("heading", { name: /Welcome/i })).toBeVisible();
+    await expect(page.getByRole("button", { name: /^Continue$/i })).toBeVisible();
+    await page.getByRole("button", { name: /^Continue$/i }).click();
+    await expect(page.getByRole("heading", { name: /What is Oxygen/i })).toBeVisible();
   });
 
   test("daily burst can be answered and does not complete the day", async ({ page }) => {
@@ -37,7 +39,7 @@ test.describe("Oxygen Bootcamp classroom", () => {
       await page.locator("section[aria-labelledby='burst-h'] button").first().click();
       await lock.click();
     }
-    await expect(page.getByText(/does not complete a curriculum day/i)).toBeVisible();
+    await expect(page.getByText(/does not finish (the day’s|today’s|the day's|today's) lesson/i)).toBeVisible();
     await page.goto("/progress");
     await expect(page.getByText("0 / 90 days with a lab")).toBeVisible();
   });

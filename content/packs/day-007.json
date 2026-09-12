@@ -1,0 +1,242 @@
+{
+  "day": 7,
+  "cover": {
+    "kicker": "Day 7 of 90 · Week 1 · week check",
+    "title": "Week 1 check",
+    "overview": "Fix three simple breaks, say what each error meant, and pass the quiz so week 2 can open.",
+    "durationMin": 90,
+    "audience": "You already met these moves. Today you prove you can name them."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Fix three simple breaks, say what each error meant, and pass the quiz so week 2 can open"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Three breaks, three repairs"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: You deleted a closing tag. The app says the file is not well-formed. First move"
+    },
+    {
+      "id": "lo4",
+      "bloom": "evaluate",
+      "text": "Say what each error meant, in plain words"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "This week’s check",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Fix three simple breaks, say what each error meant, and pass the quiz so week 2 can open."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A check, not a show",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "A check, not a show",
+                  "body": "This is the week boss. You already met these errors. You are only proving you can name them.\n\n1. **Tags do not match** :  you deleted a closing tag in Text.\n2. **Lost file** :  it lived on the desktop.\n3. **Empty title** :  the page has no name.\n\nFail the quiz and **week 2 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week."
+                },
+                {
+                  "title": "One line about later",
+                  "body": "Adobe has a website tool used by another team. You will open that in **week 9**. Not now. Do not mix it with Oxygen in your notes."
+                },
+                {
+                  "title": "Tone",
+                  "body": "Red errors are normal. Repair them. Then go home."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Tags do not match",
+                  "back": "you deleted a closing tag in Text"
+                },
+                {
+                  "front": "Lost file",
+                  "back": "it lived on the desktop"
+                },
+                {
+                  "front": "Empty title",
+                  "back": "the page has no name"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "Vglmv_lDg7Y",
+              "title": "Interactive Tutorials in Oxygen",
+              "watchFor": [
+                "Where the in-app tutorials sit if you installed them"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Three breaks, three repairs",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You cannot say what one of the three errors meant, or you leave the check copy broken.\n\nExpected: Check copy opens clean. Three one-line notes about the three breaks."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Copy your week1 folder to oxygen-bootcamp-work/week1-check/ so you do not wreck the original."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Break 1: delete a closing tag in Text. Read the red error. Undo."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Break 2: put the file on the desktop in your head :  actually move a copy to the desktop, then move it back into the folder. Write why the desktop is a bad home."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Break 3: clear the title, save, read the error or the empty tab, put the title back."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "The page must open with no red error when you stop."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Pass the quiz. You can retry it. Week 2 stays locked until this day is finished (lab + quiz + a short note)."
+                }
+              ],
+              "summary": "Check copy opens clean. Three one-line notes about the three breaks."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "You deleted a closing tag. The app says the file is not well-formed. First move?",
+              "options": [
+                "Undo, then read the message you just saw",
+                "Install a new app",
+                "Ignore red lines"
+              ],
+              "answer": 0,
+              "why": "Undo is the whole move. Then you know what the message looks like next time."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Why not keep help pages on the desktop?",
+              "options": [
+                "They are harder to find later, and later booklets look for a folder",
+                "Desktops cannot store .dita files",
+                "Oxygen will delete them overnight"
+              ],
+              "answer": 0,
+              "why": "A folder you chose is a home. The desktop is a hallway."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "You failed this check. Does week 2 open anyway?",
+              "options": [
+                "Yes, the Friday page is enough",
+                "No. Finish this day’s lab, quiz, and note. You can retry the quiz.",
+                "Yes, if you do the 5-minute warmup"
+              ],
+              "answer": 1,
+              "why": "Next week waits until you can save a clean page and say what a red error meant. Retry is free."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Fix three simple breaks, say what each error meant, and pass the quiz so week 2 can open.",
+    "nextDayHook": "Week 2: three kinds of pages :  what it is, how to do it, and facts you look up. Still no booklet."
+  }
+}

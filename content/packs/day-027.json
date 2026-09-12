@@ -1,0 +1,211 @@
+{
+  "day": 27,
+  "cover": {
+    "kicker": "Day 27 of 90 · Week 4",
+    "title": "When it is better to copy",
+    "overview": "Find one reused warning that should be a local sentence, replace the pointer, and write the rule you used.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Find one reused warning that should be a local sentence, replace the pointer, and write the rule you used"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Retire one weak reuse"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A sentence is reused on one page and will not appear anywhere else. Keep the pointer"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Find one reused warning that should be a local sentence, replace the pointer, and write the rule you used."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Reuse is a tool",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Reuse is a tool",
+              "body": "A pointer that saves twenty identical warnings is useful. A pointer that saves one sentence is extra work. A pointer that shares a half-wrong warning is a defect.\n\nReuse **small**, **stable**, **true in every place it appears**. Copy when the sentence will drift, or appears once, or is product-specific safety text.\n\nNever edit the pulled copy on the how-to. Change the source, or write a local note."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Local note** :  a warning that lives only on this page, not in the library."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Local note",
+                  "back": "a warning that lives only on this page, not in the library"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "j7LMcO_euJU",
+              "title": "DITA Support in oXygen Webinar (Part 1)",
+              "watchFor": [
+                "A reuse example that stays small",
+                "Any mention of reuse getting hard to follow"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Retire one weak reuse",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You retired nothing, or you deleted a still-shared warning without replacing it, or the rule file is slogans with no example.\n\nExpected: One fewer library id, or one converted local note. A three-bullet rule file. Pack still clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Look at the three library notes. Pick the weakest: too specific, too vague, or used only once with no second home."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Replace that pointer with a local note on the how-to. Delete the library id if nothing else uses it."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write oxygen-bootcamp-work/week4/reuse-worse.txt with three bullets: (1) what you retired, (2) why a local sentence won, (3) what you still reuse."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Do not retire pinch-hazard if it is still used twice and still true. Pick a real weak one, or add a bad reuse (a whole marketing paragraph) and then retire that."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Completeness clean. The how-to still opens with no red error."
+                }
+              ],
+              "summary": "One fewer library id, or one converted local note. A three-bullet rule file. Pack still clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A sentence is reused on one page and will not appear anywhere else. Keep the pointer?",
+              "options": [
+                "Yes :  a pointer is always cleaner",
+                "No :  you paid for a pointer that helps no one",
+                "Yes if the id looks stable"
+              ],
+              "answer": 1,
+              "why": "Single-use reuse is extra machinery. A local sentence is cheaper."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Two products need opposite warnings. One library note tries to cover both with vague wording. What do you do?",
+              "options": [
+                "Make the sentence even vaguer",
+                "Write two notes, or two local notes :  do not share a sentence that is half wrong",
+                "Hide the note by changing Author colors"
+              ],
+              "answer": 1,
+              "why": "A shared sentence that is half wrong is a defect. Reuse is not a prize."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Find one reused warning that should be a local sentence, replace the pointer, and write the rule you used.",
+    "nextDayHook": "Tomorrow is the week check. Passing it opens week 5."
+  }
+}

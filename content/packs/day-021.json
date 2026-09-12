@@ -1,0 +1,199 @@
+{
+  "day": 21,
+  "cover": {
+    "kicker": "Day 21 of 90 · Week 3 · week check",
+    "title": "Week 3 check",
+    "overview": "Repair a broken booklet, explain three errors in plain words, and pass the quiz so week 4 can open.",
+    "durationMin": 90,
+    "audience": "You already met these moves. Today you prove you can name them."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Repair a broken booklet, explain three errors in plain words, and pass the quiz so week 4 can open"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Three booklet breaks"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Completeness is clean but a page is still red. What is true"
+    },
+    {
+      "id": "lo4",
+      "bloom": "evaluate",
+      "text": "Say what each error meant, in plain words"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "This week’s check",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Repair a broken booklet, explain three errors in plain words, and pass the quiz so week 4 can open."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Check",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Check",
+              "body": "You now know the apple of a booklet: pointers, a tree, a completeness row.\n\nFail the quiz and **week 4 stays locked**. Retry is free."
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "JkPeWea3Y3U",
+              "title": "DITA Map Completeness Check",
+              "watchFor": [
+                "Missing file vs broken tags"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Three booklet breaks",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You cannot explain one error, or you leave the check copy broken.\n\nExpected: Check copy completeness clean. Three one-line repairs."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Copy flower-docs to oxygen-bootcamp-work/week3-check/ so you do not wreck the sample."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Break 1: rename a page file without updating the booklet. Run completeness. Repair."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Break 2: delete a closing tag on one page. Read the well-formed error. Undo."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Break 3: add a pointer to a file you never created. Read the row. Remove the pointer or add the file."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Check copy completeness is clean."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Pass the quiz. Week 4 stays locked until this day is finished."
+                }
+              ],
+              "summary": "Check copy completeness clean. Three one-line repairs."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Completeness is clean but a page is still red. What is true?",
+              "options": [
+                "Impossible",
+                "Possible :  completeness is the booklet; the red line is that page’s tags",
+                "Then the root map is wrong"
+              ],
+              "answer": 1,
+              "why": "Two checks. Booklet pointers, and page skeleton. You need both."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You failed this check. Does week 4 open?",
+              "options": [
+                "Yes, Friday’s handbook is enough",
+                "No. Finish lab, quiz, and note. Retry the quiz if you need to.",
+                "Yes, if the warmup is done"
+              ],
+              "answer": 1,
+              "why": "Reuse week waits until you can repair a booklet."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Repair a broken booklet, explain three errors in plain words, and pass the quiz so week 4 can open.",
+    "nextDayHook": "Week 4: one product name, used everywhere :  instead of typing it forty times."
+  }
+}

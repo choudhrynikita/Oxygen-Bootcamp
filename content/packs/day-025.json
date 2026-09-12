@@ -1,0 +1,215 @@
+{
+  "day": 25,
+  "cover": {
+    "kicker": "Day 25 of 90 · Week 4",
+    "title": "A booklet inside a booklet",
+    "overview": "Put the same product name on two nested booklets with different values, and write which value each page shows.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Put the same product name on two nested booklets with different values, and write which value each page shows"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Two nested booklets, one name"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Two nested booklets both set product-name, and you did not label the branches. What happens"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Put the same product name on two nested booklets with different values, and write which value each page shows."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "One book, two inner books",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "One book, two inner books",
+              "body": "A map can point at another map. That inner file is still a table of contents. Call it a **nested booklet**.\n\nA **keyscope** is a label on that nested booklet’s line. Inside that branch, `product-name` means this product. A sibling branch may reuse the same name for a different product.\n\nOne extra level. Draw it. If you cannot draw it, do not add more.\n\nWithout the label, two `keydef keys=\"product-name\"` collide. One wins. A page can show the wrong pump."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**keyscope** :  a label on a nested booklet so the same name can mean two different things."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "keyscope",
+                  "back": "a label on a nested booklet so the same name can mean two different things"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "qepRkQxhTXQ",
+              "title": "DITA intro (Oxygen webinar)",
+              "watchFor": [
+                "Maps that define names",
+                "Two products that need the same name with different values"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Two nested booklets, one name",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Both products show the same name because the nested labels are missing, or you added extra nested levels you cannot explain.\n\nExpected: Two nested booklets. Two different product-name values. The note says what each page showed."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Create maps/kp2.ditamap and maps/kp1.ditamap as nested booklets. Each one sets keys=\"product-name\" to a different string (KP-2 vs KP-1)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "From the root booklet, point at each nested booklet. Set keyscope on each of those lines (for example keyscope=\"kp2\" and keyscope=\"kp1\"). If the label differs, write the label you see."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Put a small explaining page in each nested booklet that uses product-name. Open each with the root map set."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Write oxygen-bootcamp-work/week4/scope-note.txt: which value each page shows."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not add a third nested level. Do not merge this into flower-docs."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Run completeness on the root map."
+                }
+              ],
+              "summary": "Two nested booklets. Two different product-name values. The note says what each page showed."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Two nested booklets both set product-name, and you did not label the branches. What happens?",
+              "options": [
+                "The two strings join into one",
+                "One value wins. You may not notice in Author that the other product is wrong",
+                "Oxygen deletes the second nested booklet"
+              ],
+              "answer": 1,
+              "why": "Without a branch label, one name can only mean one thing. The other binding is lost."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Inside a labeled nested booklet, how do you write the product name on a page?",
+              "options": [
+                "Just the name (product-name) :  the branch already applies",
+                "You must type the folder path every time",
+                "You cannot use a name inside a nested booklet"
+              ],
+              "answer": 0,
+              "why": "Inside that branch, the short name is enough."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Put the same product name on two nested booklets with different values, and write which value each page shows.",
+    "nextDayHook": "Tomorrow you build a small warning library and use every chunk."
+  }
+}

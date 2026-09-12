@@ -1,0 +1,215 @@
+{
+  "day": 32,
+  "cover": {
+    "kicker": "Day 32 of 90 · Week 5",
+    "title": "Comments and suggested edits",
+    "overview": "Turn on suggested edits, change a paragraph, add a comment, accept one change and reject another.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Turn on suggested edits, change a paragraph, add a comment, accept one change and reject another"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Accept one, reject one"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Track Changes is on and you tidy a warning pointer by typing the sentence. What did you do"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Turn on suggested edits, change a paragraph, add a comment, accept one change and reject another."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Suggested edits",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Suggested edits",
+              "body": "**Track Changes** is a mode that records insertions and deletions so you can accept or reject them. **Review view** lists those edits and your **comments**.\n\nTurn it on. Edit. Comment. Accept or reject with intent. Then turn it off.\n\nThis desk uses this panel. One file, one place for comments.\n\nIf you type over a reused warning while tracking is on, you may replace a pointer with a copy. Check Text if the “edit” looks too smooth."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Track Changes** :  a mode that records suggested edits. **Comment** :  a note on a chunk for a teammate."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Track Changes",
+                  "back": "a mode that records suggested edits. **Comment** :  a note on a chunk for a teammate"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "bnQwJZD58wY",
+              "title": "WYSIWYG XML Editing",
+              "watchFor": [
+                "Comments in Author",
+                "Review extras if they appear"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Accept one, reject one",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Track Changes was off so the edit vanished into the source, or you accepted everything without reading, or you replaced a warning pointer with a copied sentence.\n\nExpected: Review view shows the leftover comment (or a resolved thread you recorded). One accept, one reject. File clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Open prime-the-pump.dita. Turn on Track Changes (Review toolbar :  verify the label)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Edit one step (an insertion). Delete a word in the context line (a deletion). Add a comment on the warning: confirm the pinch warning still belongs."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Open Review view. You should see insertion, deletion, and comment."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Accept the insertion. Reject the deletion. Leave the comment for a teammate :  or resolve it if your version uses resolve. Write which you did."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Turn Track Changes off before you tidy anything else."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Do not type the warning sentence over a name pointer and call it an edit."
+                }
+              ],
+              "summary": "Review view shows the leftover comment (or a resolved thread you recorded). One accept, one reject. File clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Track Changes is on and you tidy a warning pointer by typing the sentence. What did you do?",
+              "options": [
+                "A useful accept",
+                "You may have replaced a pointer with a copy, and the suggested edit hides that",
+                "Nothing :  a pointer cannot be edited"
+              ],
+              "answer": 1,
+              "why": "Glance at Text if a change looks like ordinary typing on reused content."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Review view records insertions, deletions, and comments. Where is that view?",
+              "options": [
+                "Help > About",
+                "Oxygen’s Review view (right side or Window menu :  verify the label)",
+                "The completeness report"
+              ],
+              "answer": 1,
+              "why": "Suggested edits live in Review view, not in the version dialog and not in completeness."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Turn on suggested edits, change a paragraph, add a comment, accept one change and reject another.",
+    "nextDayHook": "Tomorrow you turn on Hints :  labels that appear while you type."
+  }
+}

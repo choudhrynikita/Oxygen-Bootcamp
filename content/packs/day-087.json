@@ -1,0 +1,192 @@
+{
+  "day": 87,
+  "cover": {
+    "kicker": "Day 87 of 90 · Week 12",
+    "title": "Hand in the work",
+    "overview": "List what a lead would open first: the map, then the comparison sheet. Keep the zip small :  no giant output folders.",
+    "durationMin": 75,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "List what a lead would open first: the map, then the comparison sheet. Keep the zip small :  no giant output folders"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Delivery list"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: The lead should open the WebHelp skin CSS first. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "List what a lead would open first: the map, then the comparison sheet. Keep the zip small :  no giant output folders."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 75 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Hand it over",
+          "durationMin": 18,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Hand it over",
+              "body": "Small zip. Short list. No skins, no library dumps, no `node_modules`.\n\nA lead opens:\n\n1. The **map**\n2. The **comparison sheet** (`two-surfaces.md`)\n\nThen the field logs, then a transform snippet. That order.\n\nIf you built WebHelp, keep a note that it is a draft. Do not ship a 5 GB output tree."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "A short list on a page. Caption: *Map first. Comparison second.*"
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "ozFZz6YZMCY",
+              "title": "DITA Maps Manager View in Oxygen XML Editor 19",
+              "watchFor": [
+                "The map as the first file"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Delivery list",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The zip includes huge binaries or a full WebHelp skin tree.\n\nExpected: A short delivery list. First file named."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Write oxygen-bootcamp-work/week12/delivery.txt."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "List: map path, topic list, ditaval if any, transform log snippet, field-log files, two-surfaces.md."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Do not zip node_modules or a huge WebHelp output folder."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Write the first file a lead should open (the map, then the comparison sheet)."
+                }
+              ],
+              "summary": "A short delivery list. First file named."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "The lead should open the WebHelp skin CSS first. True or not?",
+              "options": [
+                "True :  pretty is proof",
+                "Not true :  the map, then the comparison sheet",
+                "True if the CSS is short"
+              ],
+              "answer": 1,
+              "why": "The book, then the story across desks."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Why leave the huge WebHelp folder out of the zip?",
+              "options": [
+                "Leads cannot open HTML",
+                "The list plus the map is the handoff. The giant output is a draft you can rebuild",
+                "Git requires skins"
+              ],
+              "answer": 1,
+              "why": "Small zip. Rebuild the draft if someone needs it."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "List what a lead would open first: the map, then the comparison sheet. Keep the zip small :  no giant output folders.",
+    "nextDayHook": "Tomorrow: a talk-through sheet. Ten answers, out loud if you can."
+  }
+}

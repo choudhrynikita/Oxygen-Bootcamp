@@ -1,0 +1,236 @@
+{
+  "day": 56,
+  "cover": {
+    "kicker": "Day 56 of 90 · Week 9",
+    "title": "Another team writes web pages in Adobe",
+    "overview": "Write what AEM is, what Oxygen still is, and why they are not the same product.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Write what AEM is, what Oxygen still is, and why they are not the same product"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Field log: two desks"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: What is AEM, in one line"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Write what AEM is, what Oxygen still is, and why they are not the same product."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A different desk",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "A different desk",
+              "body": "You have been writing help pages in **Oxygen**, the Syncro Soft writing app, since week 1.\n\nAnother team writes web pages in a tool called **AEM** (Adobe Experience Manager). Adobe makes it. It is a website tool. Landing pages, marketing pages, the public site.\n\nOxygen is still your writing app. AEM is still their website tool. They are not the same product. There is no product called “AEM Oxygen XML Editor.” If a search hit or a coworker’s note uses that mash-up, it is still wrong. Write the two names on two lines in your notes."
+            },
+            {
+              "type": "text",
+              "id": "t-1",
+              "heading": "Author vs publish",
+              "body": "**Author** is the editing environment :  where the website team changes a page.\n\n**Publish** is the live copy a visitor hits.\n\nThat pair is not last week’s WebHelp folder. You are not running DITA-OT. You are not making a PDF.\n\nYou will hear extra words in the video (headless, cloud). Skip them today. You only need: another team, another app, author vs publish."
+            },
+            {
+              "type": "text",
+              "id": "t-3",
+              "heading": "Figure",
+              "body": "Labeled mock: two boxes, Author | Publish. Caption: *Mock. Not a screenshot of a customer instance.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**AEM** :  Adobe’s website tool. Not Oxygen. Not your booklet."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "AEM",
+                  "back": "Adobe’s website tool. Not Oxygen. Not your booklet"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "idByz7WrhbQ",
+              "title": "AEM from Headful to Headless (Adobe for Business)",
+              "watchFor": [
+                "That Adobe has a website tool with an editing side",
+                "You are only looking :  you will not build a headless site today"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Field log: two desks",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The log names AEM Oxygen XML Editor as a real product, or treats publish as last week’s PDF button, or has no mock caption.\n\nExpected: Four factual sentences. Mock labeled. Landing-page rule present."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "You may not have an AEM login. That is expected. Use the official video, the labeled mock in the pack, and this field log."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Create oxygen-bootcamp-work/week9/field-log-56.txt with four sentences: (1) Author is where the website team edits pages. (2) Publish is what a site visitor hits. (3) Oxygen is the Syncro Soft writing app you have used since week 1. (4) There is no product named AEM Oxygen XML Editor."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Add: a campaign landing page belongs on the website team’s desk first, not in your DITA booklet."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Sketch or paste a labeled mock: two boxes, Author | Publish. Caption: mock."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not install AEM on your laptop as this lab. Do not treat a developer tutorial as an authoring exercise."
+                }
+              ],
+              "summary": "Four factual sentences. Mock labeled. Landing-page rule present."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "What is AEM, in one line?",
+              "options": [
+                "Adobe’s website tool. Another team writes web pages in it",
+                "The Syncro Soft writing app you installed in week 1",
+                "A PDF engine"
+              ],
+              "answer": 0,
+              "why": "AEM is Adobe Experience Manager. It is a different desk. You still write help pages in Oxygen."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Oxygen and AEM are the same product. True or not?",
+              "options": [
+                "True :  the name is AEM Oxygen XML Editor",
+                "Not true. Oxygen is Syncro Soft. AEM is Adobe. There is no product called AEM Oxygen XML Editor",
+                "True :  they both save files, so they are one app"
+              ],
+              "answer": 1,
+              "why": "Two companies. Two apps. They can hand work to each other later. They are not one editor."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "Author vs publish: what is the difference?",
+              "options": [
+                "Author is where they edit. Publish is the live copy a visitor hits",
+                "Author is Oxygen. Publish is a DITA map",
+                "They are two names for last week’s WebHelp folder"
+              ],
+              "answer": 0,
+              "why": "Two environments. Edit on author. Visitors see publish. This is not a transform scenario."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Write what AEM is, what Oxygen still is, and why they are not the same product.",
+    "nextDayHook": "Tomorrow the Sites tree :  where their pages live. It is not your booklet."
+  }
+}

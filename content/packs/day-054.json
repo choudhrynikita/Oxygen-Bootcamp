@@ -1,0 +1,207 @@
+{
+  "day": 54,
+  "cover": {
+    "kicker": "Day 54 of 90 · Week 8",
+    "title": "House rules that catch the same mistake twice",
+    "overview": "Read one house rule as a Schematron assert (or write a pretend one) and say what it flags.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Read one house rule as a Schematron assert (or write a pretend one) and say what it flags"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: One house rule, in your words"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A page is well-formed and valid, but the short line under the title starts with ‘This topic’. Who can flag that"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Read one house rule as a Schematron assert (or write a pretend one) and say what it flags."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "The same mistake, twice",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "The same mistake, twice",
+              "body": "Grammar tells you a how-to may not want an explaining-page body. It does not tell you that the short line under the title should not start with “This topic”.\n\n**Schematron** is a rules file that flags the same mistake. A shop writes the rule once. Oxygen shows it every time. That is a house rule, compiled.\n\nIf you have no file yet, write a pretend one and label it pretend. Do not paste a stranger’s 200-line file into git.\n\nA **Quick Fix** can rewrite the page to match the rule. Click it only when you can say what will change."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Schematron** :  a rules file that flags the same mistake. Not grammar. Not spelling. Shop wording."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Schematron",
+                  "back": "a rules file that flags the same mistake. Not grammar. Not spelling. Shop wording"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "w4jtBsSIiyw",
+              "title": "Schematron rules and Quick Fixes",
+              "watchFor": [
+                "An assert message as a house rule",
+                "A Quick Fix as a structured rewrite :  only if you can say what it will change"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "One house rule, in your words",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You copy a long rules file from a forum as ‘the rule’, or you skip writing the rule in your own words.\n\nExpected: One assert in your words, real or pretend. Pretend is labeled pretend."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "If you have a Schematron file at work, open one rule. Write what it flags, in plain words, in oxygen-bootcamp-work/week8/house-rule.txt."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "If you do not have one, write a pretend rule and label it pretend: the short line under the title must not start with ‘This topic’."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write one sentence: Schematron is a rules file that flags the same mistake. Grammar will not catch ‘This topic’. This file can."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Do not paste a long rules file from a forum into your folder and call it the shop rule."
+                }
+              ],
+              "summary": "One assert in your words, real or pretend. Pretend is labeled pretend."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A page is well-formed and valid, but the short line under the title starts with ‘This topic’. Who can flag that?",
+              "options": [
+                "The grammar of the page type :  it already blocks those words",
+                "A house rules file (Schematron). Grammar will not catch wording. This file can",
+                "Help > About"
+              ],
+              "answer": 1,
+              "why": "Well-formed is the skeleton. Valid is the page type. House rules are extra. That is the point."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "A yellow bulb offers a Quick Fix on a house rule. When do you click it?",
+              "options": [
+                "Always :  bulbs are official",
+                "Only when you can say what it will change",
+                "Never, in any view"
+              ],
+              "answer": 1,
+              "why": "Some fixes are fine. Some rewrite the page. If you cannot say what will change, Undo is cheaper."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Read one house rule as a Schematron assert (or write a pretend one) and say what it flags.",
+    "nextDayHook": "Tomorrow is the week 8 check: make pages people can actually use. Week 9 stays locked until that day is finished."
+  }
+}

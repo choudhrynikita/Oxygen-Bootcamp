@@ -1,0 +1,223 @@
+{
+  "day": 11,
+  "cover": {
+    "kicker": "Day 11 of 90 · Week 2",
+    "title": "Lists and notes",
+    "overview": "Put a bullet list, a numbered list, and one note on the right kind of page.",
+    "durationMin": 85,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Put a bullet list, a numbered list, and one note on the right kind of page"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: One list, one note, the right page"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Flower parts (stem, bloom) on an explaining page should be…"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Put a bullet list, a numbered list, and one note on the right kind of page."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 85 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Lists are not decoration",
+          "durationMin": 23,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Lists are not decoration",
+              "body": "- **Bullets** :  a set of things, no order.\n- **Numbers** :  only when the order is the work. On a task, use real steps.\n- **A note** :  a tip or a warning beside the work. Not a fourth step.\n\nIf you use numbers because they “look serious,” you are decorating. Stop."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Note** :  a tip or warning beside a step or a paragraph."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Bullets",
+                  "back": "a set of things, no order"
+                },
+                {
+                  "front": "Numbers",
+                  "back": "only when the order is the work. On a task, use real steps"
+                },
+                {
+                  "front": "A note",
+                  "back": "a tip or a warning beside the work. Not a fourth step"
+                },
+                {
+                  "front": "Note",
+                  "back": "a tip or warning beside a step or a paragraph"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "t2cG3Xe1TXY",
+              "title": "DITA Editing",
+              "watchFor": [
+                "Insert a list",
+                "Insert a note"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "One list, one note, the right page",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The explaining page has numbered steps, or the how-to’s steps became bullets, or the note is a fake extra step.\n\nExpected: Bullets on the explaining page. Real steps plus one note on the how-to. Both clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Open your explaining page (what-a-cut-flower.dita). Add a bullet list of two flower parts. Not numbered :  these are not steps."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Open your how-to (change-the-water.dita). Confirm the steps are still real steps, not a bullet list."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "On the how-to, insert a Note under step 1: Recut over a bin so stems do not slip."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Do not turn the note into another step. Do not put the note on the hours table."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Save both files. No red error."
+                }
+              ],
+              "summary": "Bullets on the explaining page. Real steps plus one note on the how-to. Both clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Flower parts (stem, bloom) on an explaining page should be…",
+              "options": [
+                "A bullet list",
+                "Numbered steps",
+                "A second title"
+              ],
+              "answer": 0,
+              "why": "Parts are not a procedure. Bullets are fine. Numbers would look like a how-to."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "A note on a how-to is for…",
+              "options": [
+                "A warning or a tip beside a step",
+                "Replacing the steps",
+                "The hours table"
+              ],
+              "answer": 0,
+              "why": "A note is a tip beside the work. It is not a fourth step and not a lookup table."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Put a bullet list, a numbered list, and one note on the right kind of page.",
+    "nextDayHook": "Tomorrow a small table and a picture with alt text."
+  }
+}

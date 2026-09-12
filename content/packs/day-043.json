@@ -1,0 +1,211 @@
+{
+  "day": 43,
+  "cover": {
+    "kicker": "Day 43 of 90 · Week 7",
+    "title": "Oxygen in a web browser",
+    "overview": "Open Web Author (or a labeled mock) and write three things it shares with the desktop app, and three things it does not.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Open Web Author (or a labeled mock) and write three things it shares with the desktop app, and three things it does not"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Three shares, three gaps"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: What is Web Author"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Open Web Author (or a labeled mock) and write three things it shares with the desktop app, and three things it does not."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Same company, thinner desk",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Same company, thinner desk",
+              "body": "**Web Author** is Oxygen in a browser tab. Same company as the desktop app (Syncro Soft). You still see a page view. You can still type. You can still see a red error.\n\nIt is not the full desk. Do not expect every add-on, every publish button, or a completeness check that matches last week.\n\nUse it when you are away from the licensed desktop, or when someone only needs to read a page and leave a comment. Do not send a writer into a browser tab and then ask them for a local WebHelp folder."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Web Author** :  Oxygen in a browser. Same writing app. Fewer tools."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Web Author",
+                  "back": "Oxygen in a browser. Same writing app. Fewer tools"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "PiCWAIiKx78",
+              "title": "Getting Started with Oxygen XML Editor",
+              "watchFor": [
+                "The desktop window when the app first opens",
+                "Menus and side panels you may not see in a browser tab"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Three shares, three gaps",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You never opened the desktop app or the mock, or you wrote that the browser tab can do every desktop job.\n\nExpected: Six factual lines. Web Author is Oxygen in a browser. The desktop app is still the full desk."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Open kitepump.ditamap on the desktop app so you have a baseline. Look at Author view on one page."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Read the official Web Author page from the Source box (or the video catalog). If your shop has a Web Author URL, open it. If not, use the labeled mock in this lesson."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write three things the browser app still has: a page view, a way to see errors, a writing toolbar. Check the labels. Write “verify” next to any label you guessed."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Write three things the desktop app still does that the browser tab may not: the booklet view with a completeness check, local publish, work with no internet."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Save the six lines in oxygen-bootcamp-work/week7/web-author-gap.txt."
+                }
+              ],
+              "summary": "Six factual lines. Web Author is Oxygen in a browser. The desktop app is still the full desk."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "What is Web Author?",
+              "options": [
+                "Oxygen in a browser tab, from the same company as the desktop app",
+                "A second booklet file",
+                "The PDF you published last week"
+              ],
+              "answer": 0,
+              "why": "Web Author is still Oxygen. It lives in a browser. It is a thinner desk, not a different kind of page."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You need to run a completeness check on the booklet and read a local publish log. Where do you work?",
+              "options": [
+                "Only in a browser tab :  it can do every desktop job",
+                "On the desktop app",
+                "In a notes app"
+              ],
+              "answer": 1,
+              "why": "The browser cousin is for writing and light review. Completeness and local publish still live on the desktop."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Open Web Author (or a labeled mock) and write three things it shares with the desktop app, and three things it does not.",
+    "nextDayHook": "Tomorrow you prove three desktop moves on the booklet in your hand."
+  }
+}

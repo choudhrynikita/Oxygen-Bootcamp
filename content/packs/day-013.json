@@ -1,0 +1,196 @@
+{
+  "day": 13,
+  "cover": {
+    "kicker": "Day 13 of 90 · Week 2",
+    "title": "Three pages that belong together",
+    "overview": "Keep one explaining page, one how-to, and one lookup page in the same folder. All three open clean.",
+    "durationMin": 100,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Keep one explaining page, one how-to, and one lookup page in the same folder. All three open clean"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: The week 2 folder"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Why three files instead of one long page"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Keep one explaining page, one how-to, and one lookup page in the same folder. All three open clean."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 100 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "The week’s apple",
+          "durationMin": 30,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "The week’s apple",
+              "body": "Three pages. Three jobs. One folder.\n\nYou still do **not** make a booklet. A booklet is a table of contents that points at files. That is week 3. Stay in the folder. Do not hunt for extra views."
+            },
+            {
+              "type": "text",
+              "id": "t-1",
+              "heading": "INDEX.txt",
+              "body": "A three-line list in a text file. That is your memory, not the published book."
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "LuAVmn1j7f0",
+              "title": "Getting Started with DITA Using Oxygen XML Editor",
+              "watchFor": [
+                "Three topic types in one project"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "The week 2 folder",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: A file is missing, a file is the wrong type, or a red error remains.\n\nExpected: Three clean files and a three-line INDEX.txt."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Put these three files in oxygen-bootcamp-work/week2/ (copy from flower-docs if you drifted): what-a-cut-flower.dita, change-the-water.dita, studio-hours.dita."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Open each one. No red error. Each still matches its type: explaining, how-to, lookup."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write a three-line index in oxygen-bootcamp-work/week2/INDEX.txt: file name :  kind of page :  one-line summary."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Do not build a table of contents in Oxygen yet. The text index is enough. The booklet is week 3."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "If a page is the wrong type, make a new file from the right template and move the words. Do not pretend."
+                }
+              ],
+              "summary": "Three clean files and a three-line INDEX.txt."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Why three files instead of one long page?",
+              "options": [
+                "Because later you can mix and reuse them in a booklet",
+                "Because Oxygen cannot open long files",
+                "Because Help > About requires it"
+              ],
+              "answer": 0,
+              "why": "Small pages are easier to fix and, next week, easier to list in a table of contents."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Your INDEX.txt is…",
+              "options": [
+                "The booklet Oxygen will publish",
+                "A simple list so you know what you have before week 3",
+                "A website"
+              ],
+              "answer": 1,
+              "why": "Next week you will make a real table of contents in Oxygen. Today, a text list is the apple."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Keep one explaining page, one how-to, and one lookup page in the same folder. All three open clean.",
+    "nextDayHook": "Tomorrow is the week check. You must pass it to open the booklet week."
+  }
+}

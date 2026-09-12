@@ -123,6 +123,69 @@ else {
   }
 }
 
+const emdash = /—/;
+
+const packDir = join(root, "content/packs");
+if (!existsSync(packDir)) fail("content/packs missing");
+const packFiles = existsSync(packDir)
+  ? readdirSync(packDir).filter((f) => /^day-\d{3}\.json$/.test(f))
+  : [];
+if (packFiles.length !== 90) fail(`Need 90 course packs, found ${packFiles.length}`);
+
+for (let n = 1; n <= 90; n++) {
+  const name = `day-${String(n).padStart(3, "0")}.json`;
+  const path = join(packDir, name);
+  if (!existsSync(path)) {
+    fail(`Missing pack ${name}`);
+    continue;
+  }
+  const raw = readFileSync(path, "utf8");
+  if (emdash.test(raw)) fail(`${name} contains an em-dash`);
+  if (banned.test(raw)) fail(`${name} contains banned placeholder text`);
+  for (const re of slop) {
+    if (re.test(raw)) fail(`${name} has AI-slop phrasing (${re})`);
+  }
+  if (n <= 7 && earlyAem.test(raw) && !/week 9/i.test(raw)) {
+    fail(`${name} teaches AEM before week 9`);
+  }
+  if (n <= 14 && earlyMap.test(raw)) fail(`${name} teaches maps before week 3`);
+  if (n <= 21 && earlyKey.test(raw)) fail(`${name} teaches reuse terms before week 4`);
+
+  let pack;
+  try {
+    pack = JSON.parse(raw);
+  } catch {
+    fail(`${name} is not JSON`);
+    continue;
+  }
+  if (pack.day !== n) fail(`${name} day field is ${pack.day}`);
+  if (!pack.cover?.title || !pack.cover?.overview) fail(`${name} missing cover`);
+  if (!Array.isArray(pack.objectives) || pack.objectives.length < 2) fail(`${name} needs Bloom objectives`);
+  for (const lo of pack.objectives) {
+    if (!lo.bloom || !lo.text) fail(`${name} objective missing bloom or text`);
+    if (!/^(remember|understand|apply|analyze|evaluate|create)$/.test(lo.bloom)) {
+      fail(`${name} bad bloom level ${lo.bloom}`);
+    }
+  }
+  const lessons = (pack.sections ?? []).flatMap((s) => s.lessons ?? []);
+  if (lessons.length < 3) fail(`${name} needs at least 3 lessons`);
+  if (!pack.summary?.heading) fail(`${name} missing summary heading`);
+  if (!/you should now be able to/i.test(pack.summary.heading)) {
+    fail(`${name} summary heading must be “You should now be able to”`);
+  }
+  const hasContinue = lessons.some((l) => (l.blocks ?? []).some((b) => b.type === "continue"));
+  if (!hasContinue) fail(`${name} has no continue blocks`);
+}
+
+if (existsSync(join(packDir, "day-001.json"))) {
+  const d1 = JSON.parse(readFileSync(join(packDir, "day-001.json"), "utf8"));
+  const titles = (d1.sections ?? []).flatMap((s) => s.lessons ?? []).map((l) => l.title.toLowerCase());
+  for (const need of ["welcome", "oxygen", "install", "homepage", "project"]) {
+    if (!titles.some((t) => t.includes(need))) fail(`day-001.json missing lesson about ${need}`);
+  }
+  if (d1.objectives.length !== 5) fail("day-001.json should have 5 learning objectives");
+}
+
 mkdirSync(join(root, "content/media-manifest"), { recursive: true });
 writeFileSync(
   join(root, "content/media-manifest/youtube.json"),
@@ -133,4 +196,4 @@ if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);
 }
-console.log("content:audit ok — 90 days, no placeholders, badges and v1 ids resolve");
+console.log("content:audit ok — 90 days, 90 packs, no placeholders, badges and v1 ids resolve");

@@ -132,6 +132,10 @@
     overflow-x: auto;
     max-width: 100%;
   }
+
+  .rise-player {
+    min-height: calc(100dvh - 52px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

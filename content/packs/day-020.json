@@ -1,0 +1,195 @@
+{
+  "day": 20,
+  "cover": {
+    "kicker": "Day 20 of 90 · Week 3",
+    "title": "A small handbook",
+    "overview": "Ship a tiny booklet: the sample map, your pages, completeness clean. Do not publish a website yet.",
+    "durationMin": 110,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Ship a tiny booklet: the sample map, your pages, completeness clean. Do not publish a website yet"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Flower studio handbook, on the desk"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Why not publish a website today"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Ship a tiny booklet: the sample map, your pages, completeness clean. Do not publish a website yet."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 110 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "The week’s apple",
+          "durationMin": 35,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "The week’s apple",
+              "body": "A **handbook** on this desk means:\n\n- A map (table of contents)\n- Pages it points at\n- Completeness clean\n\nNo website. No PDF. The sample shop’s flower-docs pack is the bench. Keep it."
+            },
+            {
+              "type": "text",
+              "id": "t-1",
+              "heading": "Figure",
+              "body": "A tree mock:\n\n1. Getting started → explaining page\n2. Care → how-to\n3. Studio hours → lookup\n\nCaption: *Maps Manager after you add your pages. Not the folder list.*"
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "ozFZz6YZMCY",
+              "title": "DITA Maps Manager View in Oxygen XML Editor 19",
+              "watchFor": [
+                "The tree after your pages are in it"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Flower studio handbook, on the desk",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: A week-2 page is missing from the tree, or completeness reports a missing file.\n\nExpected: Tree lists at least three pages. Completeness clean. Count written down."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Open flowers.ditamap in Maps Manager. Set it as the root map."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "The booklet should list at least: an explaining page, a how-to, and a lookup page. Add any that are missing from week 2."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "If the sample has a product name that shows on a page, leave it. Do not fight it."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Run completeness. Zero missing files."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not publish a website or a PDF. Write how many pages the tree lists in oxygen-bootcamp-work/week3/day-20-count.txt."
+                }
+              ],
+              "summary": "Tree lists at least three pages. Completeness clean. Count written down."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Why not publish a website today?",
+              "options": [
+                "A clean booklet is the apple. Publishing is a later week",
+                "Oxygen cannot publish",
+                "Publishing deletes the map"
+              ],
+              "answer": 0,
+              "why": "Week 6 is publish. Today is “the book’s table of contents works.”"
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "The how-to is on disk but not in the tree. Are you done?",
+              "options": [
+                "Yes",
+                "No :  add the pointer, then run completeness"
+              ],
+              "answer": 1,
+              "why": "The handbook is the tree, not the folder."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Ship a tiny booklet: the sample map, your pages, completeness clean. Do not publish a website yet.",
+    "nextDayHook": "Tomorrow is the week check. Passing it opens reuse (one product name, used everywhere)."
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "day": 86,
+  "cover": {
+    "kicker": "Day 86 of 90 · Week 12",
+    "title": "Capstone review",
+    "overview": "Re-run completeness on the DITA half and re-read the AEM field log. Fix one issue on each desk.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Re-run completeness on the DITA half and re-read the AEM field log. Fix one issue on each desk"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: One fix per desk"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Review means watching the videos again. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Re-run completeness on the DITA half and re-read the AEM field log. Fix one issue on each desk."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Review is evidence",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Review is evidence",
+              "body": "Completeness output. Field log. Two sentences for a teammate. One per desk.\n\nIf completeness is already clean, quote the zero. If an alt is missing, write it. Do not skip a desk because it felt finished yesterday."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "A completeness report next to a field log. Caption: *Both desks. Both pieces of evidence.*"
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "JkPeWea3Y3U",
+              "title": "DITA Map Completeness Check",
+              "watchFor": [
+                "Last completeness read"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "One fix per desk",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You skip one desk.\n\nExpected: Quoted completeness. One AEM fix. Two teammate sentences."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Completeness on the capstone map. Quote the report (zero missing links is a valid quote)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Field log: fix one missing payload or alt."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write what you would tell a teammate in two sentences :  one per desk."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Save oxygen-bootcamp-work/week12/field-log-86.txt."
+                }
+              ],
+              "summary": "Quoted completeness. One AEM fix. Two teammate sentences."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Review means watching the videos again. True or not?",
+              "options": [
+                "True :  rewatch is the badge",
+                "Not true :  review means the completeness report and the field log",
+                "True if you take notes"
+              ],
+              "answer": 1,
+              "why": "Evidence. Not a rewatch."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Completeness reports zero missing links. What do you write?",
+              "options": [
+                "Nothing :  zero does not count",
+                "Quote the zero. That is a valid quote",
+                "Run a language copy instead"
+              ],
+              "answer": 1,
+              "why": "Zero is a result. Write it down."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Re-run completeness on the DITA half and re-read the AEM field log. Fix one issue on each desk.",
+    "nextDayHook": "Tomorrow: hand in the work. Small zip. First file a lead should open."
+  }
+}

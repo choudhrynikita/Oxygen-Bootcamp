@@ -1,0 +1,216 @@
+{
+  "day": 74,
+  "cover": {
+    "kicker": "Day 74 of 90 · Week 11",
+    "title": "Language copies, awareness only",
+    "overview": "Explain a language copy as an AEM copy of a page tree for another language, not a DITA ditaval, and write who owns translation.",
+    "durationMin": 75,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Explain a language copy as an AEM copy of a page tree for another language, not a DITA ditaval, and write who owns translation"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Language copy vs ditaval"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A ditaval is how AEM copies English pages into French. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Explain a language copy as an AEM copy of a page tree for another language, not a DITA ditaval, and write who owns translation."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 75 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Awareness only",
+          "durationMin": 18,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Awareness only",
+              "body": "A **language copy** is an AEM copy of a page tree for another language. English pages in one folder. French pages in another. People then translate. Verify the current menu name :  it moves.\n\nA **ditaval** filters a DITA book (show the novice steps, hide the expert ones). You already used that. It is not a language copy.\n\nToday you explain the idea. You write who owns translation, or you write ‘unknown’. You do not click the action on a live tree you do not own."
+            },
+            {
+              "type": "text",
+              "id": "t-3",
+              "heading": "Figure",
+              "body": "Labeled mock: two folders, EN and FR. Caption: *Mock. Awareness. No live copy.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Language copy** :  a copy of an AEM page tree started for another language."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Language copy",
+                  "back": "a copy of an AEM page tree started for another language"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "VcMI0zWIKdg",
+              "title": "How to Build a Global Site in AEM Sites",
+              "watchFor": [
+                "Language and translation as a workflow, if shown"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Language copy vs ditaval",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You run a language copy on a live site as a lab stunt.\n\nExpected: Two distinctions plus an owner line. No production copy. Mock labeled."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Write oxygen-bootcamp-work/week11/field-log-74.txt: a language copy copies a page tree for another language. Verify the current menu name in the docs."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Write: a ditaval filters a DITA book. It is not a language copy."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write who owns translation: a team name, or ‘unknown :  awareness only’."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Do not create a language copy on a production tree you do not own."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Labeled mock: English tree and French tree as two folders. Caption: mock."
+                }
+              ],
+              "summary": "Two distinctions plus an owner line. No production copy. Mock labeled."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A ditaval is how AEM copies English pages into French. True or not?",
+              "options": [
+                "True :  filter equals translate",
+                "Not true :  a ditaval filters a DITA book. A language copy is an AEM page-tree copy",
+                "True if the ditaval is named fr"
+              ],
+              "answer": 1,
+              "why": "You used ditavals in the handbook. Language copies are Sites. Different desks."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Today’s lab asks you to create a language copy on a live site. True or not?",
+              "options": [
+                "True :  that is the badge",
+                "Not true :  awareness only. Do not touch a live tree you do not own",
+                "True on a mock site only, then push it live"
+              ],
+              "answer": 1,
+              "why": "You can explain the idea. You do not perform it on someone else’s live tree."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Explain a language copy as an AEM copy of a page tree for another language, not a DITA ditaval, and write who owns translation.",
+    "nextDayHook": "Tomorrow is the week check: four jobs, four methods. The how-to stays in Oxygen."
+  }
+}

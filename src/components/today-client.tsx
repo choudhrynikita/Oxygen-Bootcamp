@@ -85,7 +85,7 @@ export function TodayClient({ catalog, day1 }: { catalog: Summary[]; day1: DayDo
             href={`/session/${dayNum}`}
             className="rounded-full bg-accent px-4 py-2 font-[family-name:var(--font-sans)] text-sm font-medium text-accent-fg no-underline"
           >
-            Start session
+            Start course
           </Link>
           <Link
             href={`/day/${dayNum}`}

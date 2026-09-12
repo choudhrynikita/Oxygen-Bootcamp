@@ -1,0 +1,206 @@
+{
+  "day": 47,
+  "cover": {
+    "kicker": "Day 47 of 90 · Week 7",
+    "title": "Hand off a clean folder",
+    "overview": "Pack the booklet and its pages into a small folder a reviewer can open, plus a one-page note, without sending your whole disk.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Pack the booklet and its pages into a small folder a reviewer can open, plus a one-page note, without sending your whole disk"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Reviewer folder plus cover note"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A reviewer without Oxygen should receive only the one topic file. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Pack the booklet and its pages into a small folder a reviewer can open, plus a one-page note, without sending your whole disk."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "The pack is a book",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "The pack is a book",
+              "body": "Send the **map** plus the **pages** it points at. Say what to comment on. Say do not rename files. A renamed file is a broken pointer.\n\nDo not send `out/` publish folders. Do not send your whole `oxygen-bootcamp-work/` tree. Git can wait until the reviewer has a repo."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Reviewer pack** :  a small folder (or zip) with the booklet, its pages, and a cover note. Not your whole disk."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Reviewer pack",
+                  "back": "a small folder (or zip) with the booklet, its pages, and a cover note. Not your whole disk"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "LuAVmn1j7f0",
+              "title": "Getting Started with DITA Using Oxygen XML Editor",
+              "watchFor": [
+                "The map as the thing you send, not random pages"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Reviewer folder plus cover note",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You send the whole oxygen-bootcamp-work tree, or you omit the map, or you include a publish out/ folder.\n\nExpected: A small pack with the map, the pages, and a cover note a non-writer can follow."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Copy kitepump.ditamap and its topics into oxygen-bootcamp-work/week7/reviewer-pack/."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Add README-reviewer.txt: open the map in Maps Manager; comment only on prime-the-pump.dita; do not rename files."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "List every file in the pack in oxygen-bootcamp-work/week7/reviewer-list.txt. Do not include out/ publish folders."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "If you use Git at work, write one line: this week the pack is a folder (or a zip) because the reviewer has no repo."
+                }
+              ],
+              "summary": "A small pack with the map, the pages, and a cover note a non-writer can follow."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A reviewer without Oxygen should receive only the one topic file. True or not?",
+              "options": [
+                "True :  one file is simpler",
+                "Not true :  keys and sibling pages break without the map. Send the tiny book, or use a browser review tool",
+                "True if the file name is FINAL"
+              ],
+              "answer": 1,
+              "why": "The booklet holds the pointers. One loose page loses its neighbors and its product name key."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "What stays out of a reviewer pack?",
+              "options": [
+                "The map",
+                "The cover note",
+                "Publish output folders (out/) and the rest of your disk"
+              ],
+              "answer": 2,
+              "why": "Send the book. Do not send last week’s HTML, and do not send every file you have ever saved."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Pack the booklet and its pages into a small folder a reviewer can open, plus a one-page note, without sending your whole disk.",
+    "nextDayHook": "Tomorrow you pick one place the files live :  a folder or Git, not both by accident."
+  }
+}

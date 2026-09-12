@@ -1,0 +1,222 @@
+{
+  "day": 85,
+  "cover": {
+    "kicker": "Day 85 of 90 · Week 12",
+    "title": "Two desks, one product story",
+    "overview": "Write a one-page comparison: how the DITA book and the AEM family tell the same Kitepump story, and where they must differ.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Write a one-page comparison: how the DITA book and the AEM family tell the same Kitepump story, and where they must differ"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Comparison sheet"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: One product story means one CMS. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Write a one-page comparison: how the DITA book and the AEM family tell the same Kitepump story, and where they must differ."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "One story",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "One story",
+              "body": "Kitepump on the beach. The book explains how. The site sells the beach card. They share a name, not a file format.\n\nWrite four rows:\n\n1. **Product name** :  key vs page title\n2. **Procedure** :  task vs a short page that points at help\n3. **Warning** :  reused DITA vs a short Text line\n4. **Publish** :  transform or baseline vs Quick Publish\n\nThe two publish buttons are not the same button. If the sheet says they are, rewrite the row."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "A four-row table. Caption: *Same pump. Two desks.*"
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Product name",
+                  "back": "key vs page title"
+                },
+                {
+                  "front": "Procedure",
+                  "back": "task vs a short page that points at help"
+                },
+                {
+                  "front": "Warning",
+                  "back": "reused DITA vs a short Text line"
+                },
+                {
+                  "front": "Publish",
+                  "back": "transform or baseline vs Quick Publish"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "idByz7WrhbQ",
+              "title": "AEM from Headful to Headless (Adobe for Business)",
+              "watchFor": [
+                "A laid-out page vs structured content"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Comparison sheet",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The sheet claims the two publishes are the same button.\n\nExpected: Four rows saved."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Save oxygen-bootcamp-work/week12/two-surfaces.md."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Row: product name :  key in DITA vs title on the page."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Row: procedure :  task vs a short page that points at help (not a fake how-to in Text)."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Row: warning :  reused DITA warning vs a short Text warning (not a reused DITA id)."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Row: publish :  transform or baseline vs Quick Publish."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Do not claim the two publish buttons are the same button."
+                }
+              ],
+              "summary": "Four rows saved."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "One product story means one CMS. True or not?",
+              "options": [
+                "True :  pick Oxygen or AEM and delete the other",
+                "Not true :  one product story, two desks of tools",
+                "True after the capstone zip"
+              ],
+              "answer": 1,
+              "why": "That is the point of the capstone. Same pump. Two desks."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Which row is a key in the map on one desk, and a page title on the other?",
+              "options": [
+                "Publish",
+                "Product name",
+                "Language copy"
+              ],
+              "answer": 1,
+              "why": "The name is a key in DITA and a title on the page. Same story, different pointer."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Write a one-page comparison: how the DITA book and the AEM family tell the same Kitepump story, and where they must differ.",
+    "nextDayHook": "Tomorrow: re-run completeness and re-read the AEM log. Fix one thing on each desk."
+  }
+}

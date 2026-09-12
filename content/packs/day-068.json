@@ -1,0 +1,228 @@
+{
+  "day": 68,
+  "cover": {
+    "kicker": "Day 68 of 90 · Week 10",
+    "title": "Notes, versions, restore",
+    "overview": "Log annotate, version, and restore on an AEM page, and write that this is not Git and not Oxygen Track Changes.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Log annotate, version, and restore on an AEM page, and write that this is not Git and not Oxygen Track Changes"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Three verbs on the page"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: You restored a page version. Did that publish the page"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Log annotate, version, and restore on an AEM page, and write that this is not Git and not Oxygen Track Changes."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Notes, snapshots, restore",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Notes, snapshots, restore",
+              "body": "An **annotation** is a note stuck on the AEM page for a teammate. A **version** is a snapshot of the page. **Restore** puts an old snapshot back on author.\n\nThis is not Git. This is not Track Changes in Oxygen. If the landing page lives in AEM, leave the notes in AEM.\n\nTake a version before a campaign swap. After a restore, check whether you still need to publish. Restore does not always mean live."
+            },
+            {
+              "type": "text",
+              "id": "t-3",
+              "heading": "Figure",
+              "body": "Labeled mock: version list with Restore. Caption: *Mock. Check the label in your version of AEM.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Annotation** :  a note on the AEM page.\n\n**Version** :  a snapshot of the page you can go back to.\n\n**Restore** :  put that snapshot back on author."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Annotation",
+                  "back": "a note on the AEM page"
+                },
+                {
+                  "front": "Version",
+                  "back": "a snapshot of the page you can go back to"
+                },
+                {
+                  "front": "Restore",
+                  "back": "put that snapshot back on author"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "VcMI0zWIKdg",
+              "title": "How to Build a Global Site in AEM Sites",
+              "watchFor": [
+                "A live site that still needs a review path"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Three verbs on the page",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The log says restore is Git, or annotations are DITA comments, or you mix three review tools on the same landing page.\n\nExpected: Three verbs with menu names (or verify notes). One channel for the page. Mock labeled."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Read Experience League on annotations and page versions (authoring). Write oxygen-bootcamp-work/week10/field-log-68.txt with the menu names you saw. If a label differs, write ‘verify in your version’."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Three verbs: annotate (leave a note on the page), version (take a snapshot), restore (put an old snapshot back)."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write: this is not Git. This is not Oxygen Track Changes. If the landing page is in AEM, review it in AEM."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Kitepump: take a version before a campaign swap, not after a panic."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Write a question in the log: after restore, do I still need to publish? (Usually yes :  restore is on author.)"
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Labeled mock: a list of versions. Caption: mock."
+                }
+              ],
+              "summary": "Three verbs with menu names (or verify notes). One channel for the page. Mock labeled."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "You restored a page version. Did that publish the page?",
+              "options": [
+                "Always",
+                "Not always :  restore is on the author side. You may still need to publish",
+                "Restore is the same as Publish"
+              ],
+              "answer": 1,
+              "why": "Author vs publish still applies. Restore puts the old page back on author."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Why take a version before you swap the teaser?",
+              "options": [
+                "AEM requires a version every hour",
+                "Restore needs a snapshot. Panic has none",
+                "Versions replace the asset library"
+              ],
+              "answer": 1,
+              "why": "A snapshot is insurance on the author side."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Log annotate, version, and restore on an AEM page, and write that this is not Git and not Oxygen Track Changes.",
+    "nextDayHook": "Tomorrow is the week check: name the blocks and one way to ship the page."
+  }
+}

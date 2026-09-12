@@ -1,0 +1,220 @@
+{
+  "day": 73,
+  "cover": {
+    "kicker": "Day 73 of 90 · Week 11",
+    "title": "Upload a file to the asset library",
+    "overview": "Upload or mock one picture, set a title and a description, and write the folder path :  without putting the file in git.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Upload or mock one picture, set a title and a description, and write the folder path :  without putting the file in git"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: One file, title, description, path"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Should you put the library file into this course’s git repo"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Upload or mock one picture, set a title and a description, and write the folder path :  without putting the file in git."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Upload a file",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Upload a file",
+              "body": "Last week **Assets** was ‘the library the Image block points at’. Today you put a file in that library.\n\nUpload. Give it a **title** (a name in the library) and a **description**. Move it into a folder you are allowed to use. Write the path.\n\nA typical path looks like `/content/dam/kitepump/beach-card.jpg`. That is not a DITA `href`. Do not mix the two pointers.\n\nDo not dump the photo into this git repo. The library is AEM, not the course folder.\n\nIf you have no AEM, write the path you would use and label the mock."
+            },
+            {
+              "type": "text",
+              "id": "t-3",
+              "heading": "Figure",
+              "body": "Labeled mock: one file card in a folder. Caption: *Mock. Path written in the log.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Assets console** :  the screen where you upload, move, and name files in AEM’s library."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Assets console",
+                  "back": "the screen where you upload, move, and name files in AEM’s library"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "7-Lcw5PejhI",
+              "title": "Go live faster with quick site creation in AEM",
+              "watchFor": [
+                "Authoring next to pictures, if shown"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "One file, title, description, path",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You commit a huge photo to git, or you paste a copyrighted Adobe screenshot, or the path is missing.\n\nExpected: Path plus title plus description. Git stays small. Mock labeled if no instance."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "If you have AEM: Assets, upload a small photo you own or a public-domain picture. Title. Description. Do not steal a vendor screenshot."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Move it to a folder you are allowed to use. Write the path in oxygen-bootcamp-work/week11/field-log-73.txt."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "If you do not have AEM: write the path you would use, for example /content/dam/kitepump/beach-card.jpg, and label it mock."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Write: this path is not a DITA image href. Guides may store DITA pictures in this library later. Still a different pointer."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not put a large photo in this git repo. The library lives in AEM."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Labeled mock: Assets folder with one file card. Caption: mock."
+                }
+              ],
+              "summary": "Path plus title plus description. Git stays small. Mock labeled if no instance."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Should you put the library file into this course’s git repo?",
+              "options": [
+                "Yes :  so the picture travels with the lesson",
+                "No :  the file lives in AEM’s library, not in this git tree",
+                "Yes, if it is under 20 MB"
+              ],
+              "answer": 1,
+              "why": "Assets live in AEM. This repo stays small."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You set a title on the file in Assets. Is that the same as the Title block on a page?",
+              "options": [
+                "Yes :  one title everywhere",
+                "No :  one is metadata on the file, the other is a heading block on a page",
+                "Yes on Cloud only"
+              ],
+              "answer": 1,
+              "why": "Same English word. File title lives in the library. Page Title is a block."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Upload or mock one picture, set a title and a description, and write the folder path :  without putting the file in git.",
+    "nextDayHook": "Tomorrow: language copies, awareness only. You will not run one on a live tree."
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "day": 10,
+  "cover": {
+    "kicker": "Day 10 of 90 · Week 2",
+    "title": "A page for looking things up",
+    "overview": "Write a lookup page with a title and a small table of facts. Not a lecture.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Write a lookup page with a title and a small table of facts. Not a lecture"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Studio hours"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Studio opening hours belong on…"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Write a lookup page with a title and a small table of facts. Not a lecture."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Facts you look up",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Facts you look up",
+              "body": "Oxygen calls this a **reference**. Hours, names, sizes, part numbers. A table or a tight list. Not a speech.\n\nYou now have all three apples of the week:\n\n1. **Concept** :  what it is\n2. **Task** :  how to do it\n3. **Reference** :  facts you look up\n\nStill no booklet. Three files in a folder is enough."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Reference** :  a page of facts a person scans, often a table."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Concept",
+                  "back": "what it is"
+                },
+                {
+                  "front": "Task",
+                  "back": "how to do it"
+                },
+                {
+                  "front": "Reference",
+                  "back": "facts you look up"
+                },
+                {
+                  "front": "Reference",
+                  "back": "a page of facts a person scans, often a table"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "t2cG3Xe1TXY",
+              "title": "DITA Editing",
+              "watchFor": [
+                "A reference template",
+                "A simple table"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Studio hours",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: There is no table, or the page is a lecture with no facts to look up, or you used a Task template.\n\nExpected: A reference file with a small table. Clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "File > New > DITA Reference. Title: Studio hours. File: oxygen-bootcamp-work/week2/studio-hours.dita."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Add one short line under the title."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Insert a two-column table: Day / Hours. Four rows is enough (Mon-Thu, or similar)."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Do not write a story about why the studio closes on Sunday. Facts only."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Save. No red error."
+                }
+              ],
+              "summary": "A reference file with a small table. Clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Studio opening hours belong on…",
+              "options": [
+                "A how-to page",
+                "A lookup page with a table",
+                "Help > About"
+              ],
+              "answer": 1,
+              "why": "Hours are facts you look up. That is a reference."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "A lookup page should read like…",
+              "options": [
+                "A speech",
+                "A small table or list a person can scan",
+                "A numbered procedure"
+              ],
+              "answer": 1,
+              "why": "If you need a speech, you wanted a concept. If you need steps, you wanted a task."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Write a lookup page with a title and a small table of facts. Not a lecture.",
+    "nextDayHook": "Tomorrow you pick the right list and the right note :  without decorating the page."
+  }
+}

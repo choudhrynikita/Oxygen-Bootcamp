@@ -1,0 +1,231 @@
+{
+  "day": 3,
+  "cover": {
+    "kicker": "Day 3 of 90 · Week 1",
+    "title": "Two views of the same file",
+    "overview": "Look at the same sentence in the page view and in the tags view, then glance at Grid.",
+    "durationMin": 85,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Look at the same sentence in the page view and in the tags view, then glance at Grid"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Same sentence, two views"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Author view is for…"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Look at the same sentence in the page view and in the tags view, then glance at Grid."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 85 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "One file, two views",
+          "durationMin": 23,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "One file, two views",
+              "body": "The tabs under the page are **Author**, **Text**, and **Grid**.\n\n- **Author** :  looks like a page. This is where you write on most days.\n- **Text** :  the same page with **tags** (those angle brackets). The tags are the skeleton of the file.\n- **Grid** :  looks a bit like a spreadsheet. You will almost never live here this week. Glance and leave.\n\nAuthor is not Microsoft Word. If a button on the toolbar is grey, the page type does not allow that thing in that spot. You will feel this later. Today, just switch tabs."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Tag** :  a label in angle brackets, like `<p>` around a paragraph. You do not need to memorise a list. You only need to see that Text view is the same file."
+                },
+                {
+                  "title": "Do not",
+                  "body": "Do not delete a closing tag “to see what happens” unless you are ready to Undo. Tomorrow is soon enough for a safe broken file."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Author",
+                  "back": "looks like a page. This is where you write on most days"
+                },
+                {
+                  "front": "Text",
+                  "back": "the same page with **tags** (those angle brackets). The tags are the skeleton of the file"
+                },
+                {
+                  "front": "Grid",
+                  "back": "looks a bit like a spreadsheet. You will almost never live here this week. Glance and leave"
+                },
+                {
+                  "front": "Tag",
+                  "back": "a label in angle brackets, like `<p>` around a paragraph. You do not need to memorise a list. You only need to see that Text view is the same file"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "bnQwJZD58wY",
+              "title": "WYSIWYG XML Editing",
+              "watchFor": [
+                "The Author canvas",
+                "The tabs under the editor"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Same sentence, two views",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You never left Author, or you deleted a tag in Text and left it broken.\n\nExpected: You saw the sentence in Author and in Text. The file still opens."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Open hello-concept.dita again."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Find the tabs under the big writing area. They are named Text, Grid, and Author (the order can vary)."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Stay in Author. That is the page view. Confirm your sentence from yesterday is still readable as a normal sentence."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Switch to Text. You should see angle brackets around the same words. Do not delete a bracket."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Switch to Grid. It looks a bit like a spreadsheet. Glance, then switch back to Author."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "In oxygen-bootcamp-work/day-03-views.txt write one line: Author looks like a page. Text shows tags."
+                }
+              ],
+              "summary": "You saw the sentence in Author and in Text. The file still opens."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Author view is for…",
+              "options": [
+                "Daily writing that looks like a page",
+                "Drawing a website layout",
+                "Only reading Help > About"
+              ],
+              "answer": 0,
+              "why": "Author is the page view. You will write here most days."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Text view shows…",
+              "options": [
+                "A spreadsheet of the shop’s prices",
+                "The same page with tags around the words",
+                "A second copy of the file on the desktop"
+              ],
+              "answer": 1,
+              "why": "Text is the same file. The tags are the skeleton. One file, two views."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Look at the same sentence in the page view and in the tags view, then glance at Grid.",
+    "nextDayHook": "Tomorrow you make a new page from a template and save it in a folder."
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "day": 8,
+  "cover": {
+    "kicker": "Day 8 of 90 · Week 2",
+    "title": "A page that explains what something is",
+    "overview": "Write a page that explains a thing. Title, short line, two paragraphs. No how-to steps.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Write a page that explains a thing. Title, short line, two paragraphs. No how-to steps"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: What a cut flower is"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Someone asks “what does ‘conditioned stems’ mean?” Which page type"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Write a page that explains a thing. Title, short line, two paragraphs. No how-to steps."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Three kinds of pages",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Three kinds of pages",
+              "body": "This week you write three kinds of help pages. You still do not make a booklet. Each page is its own file in `oxygen-bootcamp-work/week2/`.\n\nToday is the **explaining page**. Oxygen calls this a **concept**.\n\n- Title\n- Short line under the title\n- Paragraphs that say what the thing is\n- No numbered how-to\n\nIf you catch yourself writing “First, … Then, …” you are on the wrong page. Save those verbs for tomorrow."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Concept** :  a page that explains what something is."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Concept",
+                  "back": "a page that explains what something is"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "t2cG3Xe1TXY",
+              "title": "DITA Editing",
+              "watchFor": [
+                "A concept template",
+                "The short line under the title"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "What a cut flower is",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The page has numbered how-to steps, or the short line copies the title, or a red error remains.\n\nExpected: A clean explaining page. Distinct short line. No steps."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "File > New > DITA Concept. Title: What a cut flower is. File: oxygen-bootcamp-work/week2/what-a-cut-flower.dita."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Short line under the title: one sentence a search hit could show. Do not copy the title."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Two paragraphs in the body: what a cut flower is, and what you will not cover (growing from seed)."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Do not add numbered steps. If you need steps, that is tomorrow."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Save. No red error."
+                }
+              ],
+              "summary": "A clean explaining page. Distinct short line. No steps."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Someone asks “what does ‘conditioned stems’ mean?” Which page type?",
+              "options": [
+                "A how-to page :  any term is a procedure",
+                "An explaining page :  a term and what it means",
+                "A table of contents :  definitions live only there"
+              ],
+              "answer": 1,
+              "why": "An explaining page (a concept) holds what a thing is. A how-to holds steps. You have not made a table of contents yet."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You need three actions to recut stems. Where do they go today?",
+              "options": [
+                "A numbered list on this explaining page",
+                "A new how-to page tomorrow :  this page stays a definition",
+                "Help > About"
+              ],
+              "answer": 1,
+              "why": "What it is, and how to do it, are two different pages. Mixing them makes both worse."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Write a page that explains a thing. Title, short line, two paragraphs. No how-to steps.",
+    "nextDayHook": "Tomorrow you write a how-to: numbered steps and a result."
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "day": 34,
+  "cover": {
+    "kicker": "Day 34 of 90 · Week 5",
+    "title": "Find and replace without breaking files",
+    "overview": "Replace a product string in a scoped folder without touching the library warning or the booklet’s stored name by accident.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Replace a product string in a scoped folder without touching the library warning or the booklet’s stored name by accident"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: A scoped replace, then completeness"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Replace All on the whole workspace for note → caution. What blows up"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Replace a product string in a scoped folder without touching the library warning or the booklet’s stored name by accident."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Folder first",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Folder first",
+              "body": "Find in Files is an audit. Replace is a sharp tool. Set **folder**, **file filter**, and if you have it, **preview**.\n\nNever Replace All on the whole workspace. Never replace a tag name as if it were English.\n\nIf the string is the product name, the repair is a **keyref** (a name pointer), not a replace that also hits the booklet’s stored name."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Scope** :  the folder and file type you search in, so you do not change the whole workspace."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Scope",
+                  "back": "the folder and file type you search in, so you do not change the whole workspace"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "Vglmv_lDg7Y",
+              "title": "Interactive Tutorials in Oxygen",
+              "watchFor": [
+                "Where Find/Replace in Files lives if shown"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "A scoped replace, then completeness",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Replace All ran on the whole workspace, or the booklet’s stored name was emptied, or warnings.dita lost a sentence you did not intend.\n\nExpected: Replace log written. The booklet still holds the product name. Completeness clean. No workspace-wide replace."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Find in Files: KP-2a (or your product string) across the kitepump folder. Count the hits. Note which are the stored name in the booklet, which are pointers, and which are leftover typed text."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "If topics still have a typed product string, replace them in topics/ only :  not in maps/, not in ditaval/, not in warnings.dita unless you mean to."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Use Find/Replace in Files with a file filter (*.dita) and a folder scope. Preview replacements if your version has Preview. Do not Replace All on the whole workspace."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "After replace: confirm open files have no red error, then run completeness on the root map."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Write oxygen-bootcamp-work/week5/replace-log.txt: scope, filter, how many replacements, what you left untouched."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "If the booklet’s stored name changed by accident, undo, then write that you needed undo."
+                }
+              ],
+              "summary": "Replace log written. The booklet still holds the product name. Completeness clean. No workspace-wide replace."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Replace All on the whole workspace for note → caution. What blows up?",
+              "options": [
+                "Nothing :  words are words",
+                "Tag names, comments, and unmatched sentences",
+                "Only the completeness report"
+              ],
+              "answer": 1,
+              "why": "You will rename tags. Folder plus file filter exist because of this class of mistake."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "The product name lives in the booklet. A page still has a typed copy. First repair?",
+              "options": [
+                "Replace All including the booklet",
+                "Replace the page copy with a name pointer; leave the booklet as the source",
+                "Delete the name in the booklet so there is one copy on the page"
+              ],
+              "answer": 1,
+              "why": "The booklet owns the name. Replace on pages is toward a key, not toward deleting the key."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Replace a product string in a scoped folder without touching the library warning or the booklet’s stored name by accident.",
+    "nextDayHook": "Tomorrow is the week check. Passing it opens week 6."
+  }
+}

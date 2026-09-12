@@ -1,0 +1,211 @@
+{
+  "day": 18,
+  "cover": {
+    "kicker": "Day 18 of 90 · Week 3",
+    "title": "Check that every link still works",
+    "overview": "Run the completeness check on the booklet and repair one broken pointer you caused on purpose.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Run the completeness check on the booklet and repair one broken pointer you caused on purpose"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Break a pointer, then fix it"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A page can be clean while the booklet is broken. How"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Run the completeness check on the booklet and repair one broken pointer you caused on purpose."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Do the pointers work?",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Do the pointers work?",
+              "body": "**Validate and Check for Completeness** (from Maps Manager) asks: does every pointer still find a file, a picture, a name?\n\nA page can be fine on its own and still missing from the book :  or named in the book and missing on disk."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Completeness** :  a booklet check that the pointers still work."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Completeness",
+                  "back": "a booklet check that the pointers still work"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "JkPeWea3Y3U",
+              "title": "DITA Map Completeness Check",
+              "watchFor": [
+                "The completeness report",
+                "A missing file row"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Break a pointer, then fix it",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You never ran completeness, or you left a broken pointer, or you only validated one topic.\n\nExpected: You saw a missing-file row and repaired it. Completeness is clean again."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "With flowers.ditamap as the root map, run Validate and Check for Completeness from Maps Manager."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Write how many problems it reported in oxygen-bootcamp-work/week3/day-18-before.txt."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "On purpose: change one pointer to a file name that does not exist. Run completeness again. Read the row."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Put the real file name back. Run completeness again. It should be clean (or back to the same count as before)."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not only validate the one page. The booklet check is the apple."
+                }
+              ],
+              "summary": "You saw a missing-file row and repaired it. Completeness is clean again."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A page can be clean while the booklet is broken. How?",
+              "options": [
+                "The page’s tags match, but the booklet still points at a missing file",
+                "Impossible",
+                "Only if you publish"
+              ],
+              "answer": 0,
+              "why": "Page check = this file. Booklet check = do the pointers work. You need both."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Where do you run the booklet check?",
+              "options": [
+                "Maps Manager, on the map",
+                "Help > About",
+                "Only on the current paragraph"
+              ],
+              "answer": 0,
+              "why": "Completeness lives on the booklet."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Run the completeness check on the booklet and repair one broken pointer you caused on purpose.",
+    "nextDayHook": "Tomorrow you name files so moving them does not go silent."
+  }
+}

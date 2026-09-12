@@ -1,0 +1,238 @@
+{
+  "day": 82,
+  "cover": {
+    "kicker": "Day 82 of 90 · Week 12 · week check",
+    "title": "Week 12 check :  who edits where",
+    "overview": "Decide, for three objects, who edits in Oxygen, who edits in Guides, and who edits in Sites.",
+    "durationMin": 90,
+    "audience": "You already met these moves. Today you prove you can name them."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Decide, for three objects, who edits in Oxygen, who edits in Guides, and who edits in Sites"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Three objects"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A campaign landing page with a hero belongs in Oxygen. True or not"
+    },
+    {
+      "id": "lo4",
+      "bloom": "evaluate",
+      "text": "Say what each error meant, in plain words"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "This week’s check",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Decide, for three objects, who edits in Oxygen, who edits in Guides, and who edits in Sites."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A check, not a show",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-1",
+              "heading": "Proof",
+              "body": "1. Two handbook desks (Guides and Oxygen), one website desk (Sites).\n2. No fake product name.\n3. Checkout is a lock, not a preview."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "Labeled mock: three objects, three desks. Caption: *Mock. Who edits where.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "A check, not a show",
+                  "body": "This is the week boss. Three objects. Three desks.\n\n- Rebuild the booklet → **Oxygen**\n- A reviewer flags a step → **Guides**\n- A campaign landing page → **Sites**\n\nIf the map goes to Sites, or the landing page goes to Oxygen, you are not done. Retry is free.\n\nThe capstone starts tomorrow. It needs this split in your bones."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Oxygen",
+                  "back": "A reviewer flags a step → **Guides**"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "idByz7WrhbQ",
+              "title": "AEM from Headful to Headless (Adobe for Business)",
+              "watchFor": [
+                "Pages and fragments :  keep them off the DITA table"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Three objects",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The landing page is assigned to Oxygen, or the map is assigned to Sites.\n\nExpected: Three correct desks. Mock labeled."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Write oxygen-bootcamp-work/week12/field-log-82.txt."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Object 1: kitepump.ditamap restructure → Oxygen."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Object 2: a subject-matter expert comments on a step → Guides."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Object 3: a beach campaign landing page → Sites."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Labeled mock: three objects, three desks. Caption: mock."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Pass the quiz. Retry is free. The capstone starts tomorrow; finish this check first."
+                }
+              ],
+              "summary": "Three correct desks. Mock labeled."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A campaign landing page with a hero belongs in Oxygen. True or not?",
+              "options": [
+                "True :  one CMS for everything",
+                "Not true :  landing pages belong in Sites",
+                "True if you wrap it in a map"
+              ],
+              "answer": 1,
+              "why": "You wrote this in week 9. It is still true. Sites for the campaign page."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Who rebuilds the booklet when the chapters move?",
+              "options": [
+                "Sites Page Editor",
+                "Oxygen",
+                "Document Authoring"
+              ],
+              "answer": 1,
+              "why": "Maps, completeness, keys: desktop Oxygen."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "A reviewer flags one step. Where should they comment?",
+              "options": [
+                "Guides in the browser",
+                "A sticky note on the Sites hero",
+                "A new language copy"
+              ],
+              "answer": 0,
+              "why": "Subject-matter experts live in Guides."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Decide, for three objects, who edits in Oxygen, who edits in Guides, and who edits in Sites.",
+    "nextDayHook": "Capstone starts: a DITA handbook in Oxygen for the same product."
+  }
+}

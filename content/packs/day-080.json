@@ -1,0 +1,216 @@
+{
+  "day": 80,
+  "cover": {
+    "kicker": "Day 80 of 90 · Week 12",
+    "title": "Publish from Guides",
+    "overview": "Contrast a local Oxygen WebHelp draft with a Guides server publish, and keep Sites Quick Publish off the DITA output list.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Contrast a local Oxygen WebHelp draft with a Guides server publish, and keep Sites Quick Publish off the DITA output list"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Draft vs release"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A local WebHelp from Oxygen is the release of record on a Guides shop. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Contrast a local Oxygen WebHelp draft with a Guides server publish, and keep Sites Quick Publish off the DITA output list."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Draft vs release",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Draft vs release",
+              "body": "Oxygen can still build WebHelp or PDF on your laptop. That is a **draft**. You used that in week 6.\n\nOn a Guides shop, **Guides publish** is the release. It uses a **baseline** :  a named snapshot of the book :  so everyone knows which version shipped. Verify the wording on your desk.\n\nSites **Quick Publish** activates a web page. It is not a DITA output. Do not put it on this list.\n\nIf you have no Guides, write ‘mock’ and do not invent a button."
+            },
+            {
+              "type": "text",
+              "id": "t-3",
+              "heading": "Figure",
+              "body": "Labeled mock: laptop draft | server release. Caption: *Mock. Two publish buttons, two desks.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Baseline** :  a named snapshot of the handbook that Guides can publish."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "baseline",
+                  "back": "a named snapshot of the book :  so everyone knows which version shipped. Verify the wording on your desk"
+                },
+                {
+                  "front": "Baseline",
+                  "back": "a named snapshot of the handbook that Guides can publish"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "zNmXfKWXwO8",
+              "title": "Creating a Publishing Template to Customize WebHelp and PDF using CSS",
+              "watchFor": [
+                "Local WebHelp as a draft analog"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Draft vs release",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Quick Publish is listed as a DITA output.\n\nExpected: Draft vs release written. Sites kept out."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Write oxygen-bootcamp-work/week12/field-log-80.txt: local Oxygen PDF or WebHelp is a draft."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Write: Guides publish uses a server **baseline** (a named snapshot of the book) as the release. Verify the wording in your shop."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "If you have Guides, note one output type you saw. If not, write ‘mock :  the Guides docs list outputs; I did not invent a button’."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Do not call Sites Quick Publish a DITA output."
+                }
+              ],
+              "summary": "Draft vs release written. Sites kept out."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A local WebHelp from Oxygen is the release of record on a Guides shop. True or not?",
+              "options": [
+                "True :  if the HTML opened, it shipped",
+                "Not true :  the server baseline is the release. Local is a draft",
+                "True if you named the folder FINAL"
+              ],
+              "answer": 1,
+              "why": "You learned local WebHelp in week 6. On a Guides shop, that build is a draft."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Sites Quick Publish is a DITA output. True or not?",
+              "options": [
+                "True :  publish is publish",
+                "Not true :  Quick Publish activates an AEM web page. Guides publish ships the handbook",
+                "True on Cloud only"
+              ],
+              "answer": 1,
+              "why": "Two desks. Two publish buttons. Do not mix them."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Contrast a local Oxygen WebHelp draft with a Guides server publish, and keep Sites Quick Publish off the DITA output list.",
+    "nextDayHook": "Tomorrow: one full loop on paper :  checkout, edit, check in, ask to publish."
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "day": 89,
+  "cover": {
+    "kicker": "Day 89 of 90 · Week 12",
+    "title": "Written scenarios and error repair",
+    "overview": "Solve three scenarios in writing (broken map, wrong desk, failed transform), then repair the broken map copy.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Solve three scenarios in writing (broken map, wrong desk, failed transform), then repair the broken map copy"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Three scenarios"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A failed PDF transform: first place you look is the Sites console. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Solve three scenarios in writing (broken map, wrong desk, failed transform), then repair the broken map copy."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Three first moves",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Three first moves",
+              "body": "A. Completeness names a missing link. Open the map. Fix the href (or drop the row). Run completeness again.\n\nB. A project manager wants the landing page as a DITA map. Say no. The landing page is Sites. The handbook is DITA.\n\nC. A PDF transform failed. Open the transformation log. Quote the first real error. Do not reinstall Oxygen. Do not Quick Publish the map.\n\nThen repair the broken map copy. Completeness clean when you stop."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "A completeness report with one missing href. Caption: *Fix the link. Do not reinstall.*"
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "JkPeWea3Y3U",
+              "title": "DITA Map Completeness Check",
+              "watchFor": [
+                "A missing link"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Three scenarios",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Any first move is ‘reinstall Oxygen’ or ‘Quick Publish the map’.\n\nExpected: Three first moves. Broken map copy clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Write oxygen-bootcamp-work/week12/field-log-89.txt."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Scenario A: completeness names a missing href. First move?"
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Scenario B: a project manager wants the landing page written as a DITA map. What do you say?"
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Scenario C: a PDF transform failed. First place you look?"
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Then repair the broken map copy in the pack (work on a copy). Completeness clean when you stop."
+                }
+              ],
+              "summary": "Three first moves. Broken map copy clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A failed PDF transform: first place you look is the Sites console. True or not?",
+              "options": [
+                "True :  publish lives in Sites",
+                "Not true :  open the transformation log and read the first real error",
+                "True if the PDF is for the landing page"
+              ],
+              "answer": 1,
+              "why": "Week 6: the log is the oracle. Sites is the other desk."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "A project manager wants the landing page written as a DITA map. What do you say?",
+              "options": [
+                "Yes :  one CMS",
+                "No :  the landing page is Sites. The handbook is DITA. They share a product story, not a file format",
+                "Yes, then Quick Publish the map"
+              ],
+              "answer": 1,
+              "why": "Scenario B. You have been saying this since week 9."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Solve three scenarios in writing (broken map, wrong desk, failed transform), then repair the broken map copy.",
+    "nextDayHook": "Last day: what you can do now, what this course did not teach, and what is next."
+  }
+}

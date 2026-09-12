@@ -1,0 +1,208 @@
+{
+  "day": 14,
+  "cover": {
+    "kicker": "Day 14 of 90 · Week 2 · week check",
+    "title": "Week 2 check",
+    "overview": "Given a messy draft, pick the right page type three times, and pass the quiz so week 3 can open.",
+    "durationMin": 90,
+    "audience": "You already met these moves. Today you prove you can name them."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Given a messy draft, pick the right page type three times, and pass the quiz so week 3 can open"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Sort the messy draft"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: “What a vase is” belongs on…"
+    },
+    {
+      "id": "lo4",
+      "bloom": "evaluate",
+      "text": "Say what each error meant, in plain words"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "This week’s check",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Given a messy draft, pick the right page type three times, and pass the quiz so week 3 can open."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Check",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Check",
+              "body": "If you cannot say which page is which, you are not ready to stitch them into a booklet.\n\nFail the quiz and **week 3 stays locked**. Retry is free. The warmup does not open the week."
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "t2cG3Xe1TXY",
+              "title": "DITA Editing",
+              "watchFor": [
+                "Concept vs task vs reference in one sitting"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Sort the messy draft",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You still have steps on the explaining page, or a file is broken, or you cannot say which type is which.\n\nExpected: Three clean files, each the right type. Quiz passed."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Read these three jobs: (1) what a vase is, (2) how to recut stems, (3) vase sizes in centimetres."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Say which existing file (or new file) each job belongs in: concept, task, or reference."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "If you put steps on the explaining page during the week, move them to the how-to now."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "All three week2 files open clean."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Pass the quiz. Week 3 stays locked until this day is finished."
+                }
+              ],
+              "summary": "Three clean files, each the right type. Quiz passed."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "“What a vase is” belongs on…",
+              "options": [
+                "A concept (explaining page)",
+                "A task (how-to)",
+                "A reference (lookup)"
+              ],
+              "answer": 0,
+              "why": "What it is = concept."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "“How to recut stems” belongs on…",
+              "options": [
+                "A concept",
+                "A task",
+                "A reference"
+              ],
+              "answer": 1,
+              "why": "How to do it = task."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "You failed this check. Does week 3 open?",
+              "options": [
+                "Yes, Friday’s folder is enough",
+                "No. Finish lab, quiz, and note. Retry the quiz if you need to.",
+                "Yes, if the warmup is done"
+              ],
+              "answer": 1,
+              "why": "The booklet week waits until you can sort the three page types."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Given a messy draft, pick the right page type three times, and pass the quiz so week 3 can open.",
+    "nextDayHook": "Week 3: a table of contents that points at these files. That is a booklet."
+  }
+}

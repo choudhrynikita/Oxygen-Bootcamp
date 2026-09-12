@@ -1,0 +1,233 @@
+{
+  "day": 70,
+  "cover": {
+    "kicker": "Day 70 of 90 · Week 11",
+    "title": "Three ways to write in AEM, names first",
+    "overview": "Name Page Editor, Universal Editor, and Document Authoring in one line each, and keep Oxygen off that list.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Name Page Editor, Universal Editor, and Document Authoring in one line each, and keep Oxygen off that list"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Three names, three one-liners"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Document Authoring is how you edit a DITA how-to in Oxygen. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Name Page Editor, Universal Editor, and Document Authoring in one line each, and keep Oxygen off that list."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Three names first",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Three names first",
+              "body": "AEM has more than one way to write a page. Today you only learn the names. You do not pick a favourite.\n\n**Page Editor** is the canvas you used last week. You drop blocks onto a template.\n\n**Universal Editor** is a visual editor for pages that are wired for it. Some of those pages are not the classic Page Editor template.\n\n**Document Authoring** is writing an AEM page from Word or Google Docs. A helper in the browser sends the doc into AEM. Verify the current name in the official article :  product labels move.\n\nOxygen is not a fourth item on this list. Oxygen is the DITA app on your desktop (and in a browser, earlier in the course). Different desk."
+            },
+            {
+              "type": "text",
+              "id": "t-4",
+              "heading": "Figure",
+              "body": "Labeled mock: three boxes. Caption: *Mock. Three names, not one blur.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Page Editor** :  the classic AEM canvas of blocks.\n\n**Universal Editor** :  a visual editor for pages wired for it.\n\n**Document Authoring** :  an AEM page written from Word or Google Docs."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Page Editor",
+                  "back": "the classic AEM canvas of blocks"
+                },
+                {
+                  "front": "Universal Editor",
+                  "back": "a visual editor for pages wired for it"
+                },
+                {
+                  "front": "Document Authoring",
+                  "back": "an AEM page written from Word or Google Docs"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "VcMI0zWIKdg",
+              "title": "How to Build a Global Site in AEM Sites",
+              "watchFor": [
+                "Document-based authoring, if shown",
+                "A visual editor that is not the classic page canvas"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Three names, three one-liners",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You merge all three into one editor, or you put Oxygen on the list.\n\nExpected: Three one-liners. Three names. Mock labeled."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "You may not have AEM. Use the official article, the video, and a field log."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Write oxygen-bootcamp-work/week11/field-log-70.txt with three names and one line each."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Page Editor: the canvas you used in week 10. You drop Title, Text, Image, Teaser onto a template."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Universal Editor: a visual editor for pages that are wired for it, including pages that are not the classic Page Editor."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Document Authoring: writing an AEM page from Word or Google Docs, with a helper in the browser. Verify the current product name in the article."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Do not merge the three into ‘the AEM editor’. Do not add Oxygen to the list."
+                },
+                {
+                  "title": "Step 7",
+                  "body": "Labeled mock: three boxes, one name each. Caption: mock."
+                }
+              ],
+              "summary": "Three one-liners. Three names. Mock labeled."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Document Authoring is how you edit a DITA how-to in Oxygen. True or not?",
+              "options": [
+                "True :  both use the word document",
+                "Not true :  Document Authoring is an AEM way to write a web page from Word or Google Docs",
+                "True if you have Guides"
+              ],
+              "answer": 1,
+              "why": "Same English word. Different tools. Oxygen is the DITA app. Document Authoring is AEM."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "The canvas you used last week to drop Title and Text is…",
+              "options": [
+                "Page Editor",
+                "Document Authoring",
+                "Oxygen Author view"
+              ],
+              "answer": 0,
+              "why": "Page Editor is the classic AEM canvas. Oxygen Author view is a different product."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Name Page Editor, Universal Editor, and Document Authoring in one line each, and keep Oxygen off that list.",
+    "nextDayHook": "Tomorrow: when to use each way :  and when none of them is the job."
+  }
+}

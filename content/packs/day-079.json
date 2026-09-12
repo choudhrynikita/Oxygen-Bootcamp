@@ -1,0 +1,212 @@
+{
+  "day": 79,
+  "cover": {
+    "kicker": "Day 79 of 90 · Week 12",
+    "title": "Booklets and pages living in AEM",
+    "overview": "Explain that Guides stores the DITA booklet in AEM’s library, and a desktop path is a working copy after checkout.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Explain that Guides stores the DITA booklet in AEM’s library, and a desktop path is a working copy after checkout"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Library vs working copy"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Once DITA lives in AEM, completeness in Oxygen no longer matters. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Explain that Guides stores the DITA booklet in AEM’s library, and a desktop path is a working copy after checkout."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "The booklet still exists",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "The booklet still exists",
+              "body": "In Guides, the map is a file in AEM’s **library** (Assets). It is not a desktop-only file.\n\n**Edit in Oxygen** makes a **working copy** on your laptop :  a copy you edit while the library holds the book. Check in puts it back.\n\nOpen `kitepump.ditamap` locally as the analog of that working copy. Completeness still applies. Missing links still matter. Storage moved. The booklet did not retire.\n\nDo not treat this git repo as the AEM library. Do not upload the sample into a real library as a stunt."
+            },
+            {
+              "type": "text",
+              "id": "t-3",
+              "heading": "Figure",
+              "body": "Labeled mock: library box and laptop box, one arrow each way. Caption: *Mock. Borrow and return.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Working copy** :  the file on your laptop after checkout. Check in returns it."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Working copy",
+                  "back": "the file on your laptop after checkout. Check in returns it"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "ozFZz6YZMCY",
+              "title": "DITA Maps Manager View in Oxygen XML Editor 19",
+              "watchFor": [
+                "The booklet is still a table of contents, wherever it lives"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Library vs working copy",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You treat this git repo as the AEM library.\n\nExpected: Library vs working copy written. Local completeness still clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Write oxygen-bootcamp-work/week12/field-log-79.txt: in Guides, the map is a file in AEM’s library (Assets), not a desktop-only file."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Write: Edit in Oxygen makes a working copy. Check in puts it back."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Open kitepump.ditamap locally as the analog of that working copy. Run completeness. The links should still work."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Do not upload the sample into a real library as a stunt."
+                }
+              ],
+              "summary": "Library vs working copy written. Local completeness still clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Once DITA lives in AEM, completeness in Oxygen no longer matters. True or not?",
+              "options": [
+                "True :  the server fixes links",
+                "Not true :  the booklet can still miss files. Completeness still names them",
+                "True after the first check-in"
+              ],
+              "answer": 1,
+              "why": "Storage moved. The booklet is still a booklet. Broken links still break."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "After checkout, the file on your laptop is…",
+              "options": [
+                "The only copy that exists",
+                "A working copy. Check in puts it back in the library",
+                "A Sites page"
+              ],
+              "answer": 1,
+              "why": "Borrow, edit, return. The library keeps the book."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Explain that Guides stores the DITA booklet in AEM’s library, and a desktop path is a working copy after checkout.",
+    "nextDayHook": "Tomorrow: publish from Guides vs a local Oxygen draft."
+  }
+}

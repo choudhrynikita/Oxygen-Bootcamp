@@ -32,6 +32,16 @@ A total fresher has never opened Oxygen. They do not know XML, DITA, maps, keys,
 | 11 | 70–75 | Other ways they write in AEM | Fragments, assets, language copies. |
 | 12 | 76–90 | Hand work between the two desks | Guides + Oxygen, then a portfolio. |
 
+## How a day plays
+
+Each day is one course pack, in this order:
+
+1. **Cover.** Title, time, what today is. Start course.
+2. **Lessons.** Stacked blocks (text, accordion, tabs, process, labeled graphic, flashcards, sorting, scenario, knowledge check). A **Continue** button holds the next block until the step above is done.
+3. **Summary.** “You should now be able to” lists the same Bloom objectives as lesson 1. Then a short note and Exit.
+
+Learning objectives use Bloom verbs (remember, understand, apply, analyze, evaluate, create). The summary must match them. Block A/B/C/D is not the lesson.
+
 ## Gates
 
 - Day 1 is open.

@@ -1,0 +1,215 @@
+{
+  "day": 50,
+  "cover": {
+    "kicker": "Day 50 of 90 · Week 8",
+    "title": "Keep the same words for the same things",
+    "overview": "List the audience values kitepump already uses, reject one invented value, and say why a shared list matters.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "List the audience values kitepump already uses, reject one invented value, and say why a shared list matters"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Write the allowed audience values"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: audience=\"expert\" is already on one step in the how-to. Why not type audience=\"ninja\" on another"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "List the audience values kitepump already uses, reject one invented value, and say why a shared list matters."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Same mark, same word",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Same mark, same word",
+              "body": "Week 5 you marked a step `audience=\"expert\"`. That word only works if everyone types **expert**. Not ninja. Not guru. Not adv.\n\nA **subject scheme** is a list that says which words you may use for a mark like audience. If expert is on the list, type expert. The list rejects ninja.\n\nYou will not design the company list today. You will stop typing random strings."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Subject scheme** :  a list of allowed words for marks like audience. Same thing, same word."
+                },
+                {
+                  "title": "Do not",
+                  "body": "Do not add a new audience value to kitepump.ditamap. The pack already has the apple."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Subject scheme",
+                  "back": "a list of allowed words for marks like audience. Same thing, same word"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "YRi9XPK6CcY",
+              "title": "Advanced Profiling Using Conditional Processing Attribute Groups",
+              "watchFor": [
+                "Conditional marks as a system, not decoration",
+                "Where audience sits on a step"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Write the allowed audience values",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You invent a long word-list, or you skip the existing expert step, or you add ninja to the live map.\n\nExpected: A short allowed-values list plus one rejected invention. Expert is on the list."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Open prime-the-pump.dita. Find the step that already has audience=\"expert\". Write that value down."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "List every audience value your kitepump map actually uses today in oxygen-bootcamp-work/week8/allowed-values.txt."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write one invented value you will not add (for example ninja) and one sentence why a shared list would reject it."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Read the DITA overview page on subject scheme from the Source box. Quote at most two lines, then write your own: a subject scheme is a list that says which words you may type for a mark like audience."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not build a full company word-list today. Do not add a new audience value to the shipping map."
+                }
+              ],
+              "summary": "A short allowed-values list plus one rejected invention. Expert is on the list."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "audience=\"expert\" is already on one step in the how-to. Why not type audience=\"ninja\" on another?",
+              "options": [
+                "A shared list (a subject scheme) keeps the same word for the same kind of reader. Ninja is not on that list",
+                "Ninja is illegal XML",
+                "Expert steps cannot share a page with other steps"
+              ],
+              "answer": 0,
+              "why": "If every writer invents a word, no filter can find the expert steps. Same mark, same word."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "A subject scheme exists so writers type any string they like in audience. True or not?",
+              "options": [
+                "True :  values are free",
+                "Not true :  it constrains values. You are not building the company list today. You are stopping random words",
+                "True if the color is pretty"
+              ],
+              "answer": 1,
+              "why": "The list is a fence. Awareness this week. You are not the person who owns the company list."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "List the audience values kitepump already uses, reject one invented value, and say why a shared list matters.",
+    "nextDayHook": "Tomorrow: big booklets that feel slow, and what you will not turn on in Author."
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "day": 84,
+  "cover": {
+    "kicker": "Day 84 of 90 · Week 12",
+    "title": "Capstone: a small family of AEM pages",
+    "overview": "Create or mock a small page family that tells the same Kitepump story: one parent, two children, Title / Text / Image / Teaser, no DITA dumped into Text.",
+    "durationMin": 110,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Create or mock a small page family that tells the same Kitepump story: one parent, two children, Title / Text / Image / Teaser, no DITA dumped into Text"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Sites half of the capstone"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Pasting the DITA how-to into Text keeps the capstone as one story. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Create or mock a small page family that tells the same Kitepump story: one parent, two children, Title / Text / Image / Teaser, no DITA dumped into Text."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 110 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "The Sites half",
+          "durationMin": 35,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "The Sites half",
+              "body": "Same product. Different model. Pages, not topicrefs.\n\n- One **parent**\n- Two **children**\n- **Title, Text, Image, Teaser**\n- A real **alt** phrase\n- No handbook XML in Text\n\nYou may not have AEM. A labeled mock plus a field log is the lab. Quick Publish on a real instance if you have one.\n\nThe page sells the beach card. The book explains how. They share a name, not a file format."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "Labeled mock: parent plus two children. Caption: *Mock. A family of pages, not a map.*"
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "parent",
+                  "back": "Two **children**"
+                },
+                {
+                  "front": "Title, Text, Image, Teaser",
+                  "back": "A real **alt** phrase"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "7-Lcw5PejhI",
+              "title": "Go live faster with quick site creation in AEM",
+              "watchFor": [
+                "Pages as a family"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Sites half of the capstone",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You paste a DITA how-to into the Text block, or the family has one orphan page with no parent.\n\nExpected: Three pages (or mocks). Blocks used as taught. Payload written."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Parent page: Kitepump (title). Child: Beach use. Child: Where to buy (or mock names)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Blocks: Title, Text, Image with a real alt phrase, Teaser linking parent to child."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Quick Publish or mock the payload. Fill oxygen-bootcamp-work/week12/field-log-84.txt."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "No DITA XML pasted into Text. Rewrite for the page. Link to the help if you must."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Labeled mock: three pages in a tree. Caption: mock."
+                }
+              ],
+              "summary": "Three pages (or mocks). Blocks used as taught. Payload written."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Pasting the DITA how-to into Text keeps the capstone as one story. True or not?",
+              "options": [
+                "True :  one story means one file",
+                "Not true :  same product, two desks. Rewrite for the page. Link to the help if you must",
+                "True if you hide the tags"
+              ],
+              "answer": 1,
+              "why": "One product story. Two models. Do not dump the handbook into the hero."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "How do you connect parent to child on the web page?",
+              "options": [
+                "A topicref in a map",
+                "A Teaser (or another real link) on the parent, pointing at the child",
+                "A ditaval"
+              ],
+              "answer": 1,
+              "why": "Pages point with links and teasers. Maps point with topicrefs. Different desks."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Create or mock a small page family that tells the same Kitepump story: one parent, two children, Title / Text / Image / Teaser, no DITA dumped into Text.",
+    "nextDayHook": "Tomorrow: one product story on both desks :  a comparison sheet."
+  }
+}

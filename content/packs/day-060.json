@@ -1,0 +1,229 @@
+{
+  "day": 60,
+  "cover": {
+    "kicker": "Day 60 of 90 · Week 9",
+    "title": "A page is a stack of blocks, not a DITA topic",
+    "overview": "Name page vs block, and write why a Text block is not an explaining page.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Name page vs block, and write why a Text block is not an explaining page"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Field log: page vs block"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A Text block on a landing page is where you should paste the prime-the-pump how-to. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Name page vs block, and write why a Text block is not an explaining page."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Pages and blocks",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Pages and blocks",
+              "body": "An AEM **page** has a template and a stack of **blocks**. Adobe’s ready-made blocks are called **Core Components** :  Title, Text, Image, Teaser, and more. You insert them. You do not build them this week.\n\nA **DITA topic** is a whole file with a type (explaining page, how-to, lookup). It is not a block. Do not paste a how-to into a Text block and call the landing page the handbook."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "Labeled mock: page with Title, Image, Text stacked. Caption: *Mock. Not Oxygen Author view.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Component** :  a block on an AEM page. Title, Text, Image. Not a DITA topic."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Core Components",
+                  "back": "Title, Text, Image, Teaser, and more. You insert them. You do not build them this week"
+                },
+                {
+                  "front": "Component",
+                  "back": "a block on an AEM page. Title, Text, Image. Not a DITA topic"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "7-Lcw5PejhI",
+              "title": "Go live faster with quick site creation in AEM",
+              "watchFor": [
+                "A page made of stacked pieces, if shown"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Field log: page vs block",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The log calls Text a DITA concept, or the mock is unlabeled, or you skip the four block names.\n\nExpected: Page vs block vs topic distinguished. Four names listed. Mock labeled."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Write oxygen-bootcamp-work/week9/field-log-60.txt: A page is a stack of blocks on a template. A DITA topic is a typed XML file. A Text block is not a concept. A Teaser is not the short line under a DITA title."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "List four ready-made blocks you will meet next week: Text, Image, Teaser, Title :  names only today."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Draw a labeled mock: page skeleton with three block boxes. Caption: mock."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Write one sentence: you would not paste the prime-the-pump how-to into a Text block on a landing page."
+                }
+              ],
+              "summary": "Page vs block vs topic distinguished. Four names listed. Mock labeled."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A Text block on a landing page is where you should paste the prime-the-pump how-to. True or not?",
+              "options": [
+                "True :  faster",
+                "Not true. How-to pages belong in Oxygen. A landing page can tease the product. It does not become the handbook",
+                "True if the block is named Task"
+              ],
+              "answer": 1,
+              "why": "Two desks. A block is a piece of a web page. A topic is a whole help file."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "What is a component in AEM, in one line?",
+              "options": [
+                "A DITA map",
+                "A block on the page :  Title, Text, Image. Adobe ships a ready-made set of these blocks",
+                "A completeness row"
+              ],
+              "answer": 1,
+              "why": "Component means block. The page is a stack of them on a template."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "Are you building a new block type today?",
+              "options": [
+                "Yes :  write code",
+                "No :  authors insert ready-made blocks. Developers build new types",
+                "Yes :  a Schematron file"
+              ],
+              "answer": 1,
+              "why": "Author week. Next week you place Text, Image, Teaser as an author. You do not implement them."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Name page vs block, and write why a Text block is not an explaining page.",
+    "nextDayHook": "Tomorrow you send a page live, and take it down. Still a mock if you have no login."
+  }
+}

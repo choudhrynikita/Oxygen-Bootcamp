@@ -1,0 +1,207 @@
+{
+  "day": 51,
+  "cover": {
+    "kicker": "Day 51 of 90 · Week 8",
+    "title": "Big booklets that feel slow",
+    "overview": "Write three things that make Author crawl on a big booklet, and use Maps Manager on kitepump instead of opening every page at once.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Write three things that make Author crawl on a big booklet, and use Maps Manager on kitepump instead of opening every page at once"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Three slowness causes, one small book"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A 2,000-page booklet feels slow in Author. First move"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Write three things that make Author crawl on a big booklet, and use Maps Manager on kitepump instead of opening every page at once."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Slow is usually self-inflicted",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Slow is usually self-inflicted",
+              "body": "kitepump is two pages. It will not crawl. A real shop book will, if you treat Author like a place to hold the whole company.\n\nDo not open a huge booklet in Author with every tag showing. Do not validate the world on every keystroke. Do not leave every color mark and every panel on from last week.\n\nUse **Maps Manager** for the book. Open one page when you write."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Slow booklet** :  a big table of contents that crawls when you open too much of it in the page view."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Slow booklet",
+                  "back": "a big table of contents that crawls when you open too much of it in the page view"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "CgBbPW3mJzw",
+              "title": "Profiling and Reuse",
+              "watchFor": [
+                "Extra color marks on a page",
+                "A filter on a booklet vs a mark on one step"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Three slowness causes, one small book",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You skip the three causes, or you try to prove slowness by copying a giant book into the pack.\n\nExpected: Three slowness causes in your words. Maps Manager used. Pack still small."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Open kitepump.ditamap in Maps Manager. Do not open both topics in Author at the same time unless you need them."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Write three slowness causes in oxygen-bootcamp-work/week8/slow-author.txt: (1) a huge booklet opened as one Author page with every tag showing, (2) live checking of every file on every keystroke, (3) extra color marks and extra panels left on from last week."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "On this small pack, turn profiling colors on, then off again. Write one line: kitepump is small, so it stays snappy. A 400-page book with the same panels would not."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Do not paste a second copy of the whole company book into this folder to ‘feel’ slowness."
+                }
+              ],
+              "summary": "Three slowness causes in your words. Maps Manager used. Pack still small."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A 2,000-page booklet feels slow in Author. First move?",
+              "options": [
+                "Open the whole book in Author with every tag showing, so you can see everything",
+                "Use Maps Manager. Open one page when you need it. Turn off live check-everything if it is on",
+                "Add more color marks"
+              ],
+              "answer": 1,
+              "why": "Author is a page view. Maps Manager is the book. Slow is usually too much book in the page view."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "kitepump only has two pages. Why write slowness causes today?",
+              "options": [
+                "So you do not do those three things on a real shop book next month",
+                "Because this pack is already slow",
+                "Because completeness requires it"
+              ],
+              "answer": 0,
+              "why": "The pack is the apple. The three causes are the lesson. You do not need a giant book to name them."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Write three things that make Author crawl on a big booklet, and use Maps Manager on kitepump instead of opening every page at once.",
+    "nextDayHook": "Tomorrow: switches you should not turn on at work yet. Look. Do not flip them on the live map."
+  }
+}

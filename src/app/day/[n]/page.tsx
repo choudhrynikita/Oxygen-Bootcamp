@@ -6,7 +6,6 @@ import { SourceBox } from "@/components/source-box";
 import { YoutubeEmbed } from "@/components/youtube-embed";
 import { LabPanel } from "@/components/lab-panel";
 import { Quiz } from "@/components/quiz";
-import { SessionStrip } from "@/components/session-strip";
 import { FieldNote } from "@/components/field-note";
 import { DayPager } from "@/components/day-pager";
 
@@ -33,8 +32,15 @@ export default async function DayPage({ params }: { params: Promise<{ n: string 
         {day.timeboxMinutes} min · {day.skills.join(" · ")}
       </p>
       <p>{day.objective}</p>
+      <p className="mt-4">
+        <Link
+          href={`/session/${day.day}`}
+          className="inline-flex min-h-12 items-center rounded-full bg-accent px-5 py-2 font-[family-name:var(--font-sans)] text-sm font-semibold text-accent-fg no-underline"
+        >
+          Open course pack
+        </Link>
+      </p>
       <DayPager day={day.day} />
-      <SessionStrip day={day} />
       <SourceBox sources={day.sources} youtube={day.youtube} />
       <MarkdownBody source={day.body} />
       {day.youtube.map((v) => (

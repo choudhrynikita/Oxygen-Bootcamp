@@ -1,0 +1,224 @@
+{
+  "day": 42,
+  "cover": {
+    "kicker": "Day 42 of 90 · Week 6 · week check",
+    "title": "Week 6 check",
+    "overview": "Produce a site SUCCESS, a PDF tool note, and a quoted FAILED-then-fixed error on the check copy.",
+    "durationMin": 110,
+    "audience": "You already met these moves. Today you prove you can name them."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Produce a site SUCCESS, a PDF tool note, and a quoted FAILED-then-fixed error on the check copy"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Site, paper, red, green"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: You failed this check. Does week 7 open"
+    },
+    {
+      "id": "lo4",
+      "bloom": "evaluate",
+      "text": "Say what each error meant, in plain words"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "This week’s check",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Produce a site SUCCESS, a PDF tool note, and a quoted FAILED-then-fixed error on the check copy."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A check, not a show",
+          "durationMin": 35,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "A check, not a show",
+                  "body": "This is the week boss: a clickable site, a PDF note, and a **required FAILED log**.\n\n1. HTML you can click.\n2. Tool name or missing-tool line.\n3. FAILED first error + repair + SUCCESS.\n\nFail the quiz and **week 7 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week."
+                },
+                {
+                  "title": "Word today",
+                  "body": "No new word. Use **publish**, **WebHelp**, **PDF**, **log**, **SUCCESS**, and **FAILED** in the two lines you paste."
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "zNmXfKWXwO8",
+              "title": "Creating a Publishing Template to Customize WebHelp and PDF using CSS",
+              "watchFor": [
+                "Template vs recipe recap"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Site, paper, red, green",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: No FAILED quote, or output lives in topics/, or you cannot name the PDF tool or skip reason, or the site never succeeded.\n\nExpected: WebHelp SUCCESS path. PDF tool note. failed-first-error.txt complete. Completeness clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "On the week6-failed copy (or a fresh copy), start from a known-good booklet."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Run WebHelp to SUCCESS. Note the output folder."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Run or record the PDF tool name (or missing-tool message)."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Break one booklet path. Run WebHelp to FAILED. Quote the first real error. Repair. SUCCESS."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Confirm output is still outside source. Confirm the novice switch file in the site matches your explanation."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Run completeness, then a transform."
+                },
+                {
+                  "title": "Step 7",
+                  "body": "Pass the quiz. Week 7 stays locked until this day is finished (lab + quiz + a short note)."
+                }
+              ],
+              "summary": "WebHelp SUCCESS path. PDF tool note. failed-first-error.txt complete. Completeness clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "You failed this check. Does week 7 open?",
+              "options": [
+                "Yes, Friday’s look-and-close is enough",
+                "No. Week 7 stays locked until this day is finished. Retry the quiz if you need to.",
+                "Yes, if the 5-minute warmup is done"
+              ],
+              "answer": 1,
+              "why": "Lab, quiz, and a short note. Retry is free. The warmup does not open the week."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "The first log line is INFO Loading plugins. Is that the quote for this check?",
+              "options": [
+                "Yes :  any line",
+                "No :  quote the first real error that names the break",
+                "Yes if it is red"
+              ],
+              "answer": 1,
+              "why": "The badge is log reader, not log pasting."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "A missing booklet target: completeness red, transform FAILED. Which do you run first next time?",
+              "options": [
+                "Transform only :  faster",
+                "Completeness on the booklet, then transform",
+                "PDF only"
+              ],
+              "answer": 1,
+              "why": "Completeness is cheaper and names missing files before the engine starts."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Produce a site SUCCESS, a PDF tool note, and a quoted FAILED-then-fixed error on the check copy.",
+    "nextDayHook": "Week 7: work with other people. The writing app in a browser, and what the desktop still does better."
+  }
+}

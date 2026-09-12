@@ -1,0 +1,214 @@
+{
+  "day": 39,
+  "cover": {
+    "kicker": "Day 39 of 90 · Week 6",
+    "title": "Read the log even when it works",
+    "overview": "Open a SUCCESS log, copy three lines (start, a warning if any, finish), and say what you would ignore.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Open a SUCCESS log, copy three lines (start, a warning if any, finish), and say what you would ignore"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Three lines from a SUCCESS log"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: BUILD SUCCESSFUL with a WARN: missing image. Ship it"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Open a SUCCESS log, copy three lines (start, a warning if any, finish), and say what you would ignore."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "The log is a document",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "The log is a document",
+              "body": "Transformation view is not only a green bar. Open the **log**. Read the first unexpected line.\n\nSUCCESS plus a missing image is a defect. SUCCESS plus an INFO about a default parameter is noise.\n\nStart. First interesting WARN. Finish. That is the note. The rest waits."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Log** :  the text the engine writes while it works. **SUCCESS** still needs a glance."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Log",
+                  "back": "the text the engine writes while it works. **SUCCESS** still needs a glance"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "t2cG3Xe1TXY",
+              "title": "DITA Editing",
+              "watchFor": [
+                "Any mention of publishing output or logs if present"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Three lines from a SUCCESS log",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The excerpt has no SUCCESS line, or you ignored a missing-file WARN, or you pasted the entire log.\n\nExpected: Three-line excerpt. Ignore / never-ignore sentence. Real WARNs fixed or explained."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Rerun the site recipe or the PDF recipe so you have a fresh log in Transformation view."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Open the log (the view usually has a log document or console :  verify)."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Copy into oxygen-bootcamp-work/week6/success-log-excerpt.txt: (1) the command or recipe name, (2) one WARN or INFO that is not fatal, (3) the BUILD SUCCESSFUL / SUCCESS line."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "If there is a WARN about a missing image or a broken name, that is not SUCCESS in spirit :  go fix it. Do not write around a real miss."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Write one line: I will ignore ____ (example: a default-parameter INFO) and I will never ignore ____ (FAILED, missing file, broken name)."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Do not paste a 4000-line log into the field note."
+                }
+              ],
+              "summary": "Three-line excerpt. Ignore / never-ignore sentence. Real WARNs fixed or explained."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "BUILD SUCCESSFUL with a WARN: missing image. Ship it?",
+              "options": [
+                "Yes :  SUCCESS means ship",
+                "No :  treat a missing image as a defect; completeness should have caught it too",
+                "Yes if the PDF has enough pages"
+              ],
+              "answer": 1,
+              "why": "The engine can succeed and still omit a figure. Completeness plus the log together."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "HTML looks empty but the log says SUCCESS. First place you look?",
+              "options": [
+                "The output folder path you configured (did you open an old out/?)",
+                "Help > About",
+                "The Styles dropdown"
+              ],
+              "answer": 0,
+              "why": "Wrong folder is the classic ‘success but empty’ bug."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Open a SUCCESS log, copy three lines (start, a warning if any, finish), and say what you would ignore.",
+    "nextDayHook": "Tomorrow you will cause a FAILED run on purpose and read the first real error."
+  }
+}

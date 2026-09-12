@@ -1,0 +1,246 @@
+{
+  "day": 69,
+  "cover": {
+    "kicker": "Day 69 of 90 · Week 10 · week check",
+    "title": "Week 10 check",
+    "overview": "Name Title, Text, Image, Teaser, Container, and Experience Fragment on a landing skeleton, plus one way to ship the page.",
+    "durationMin": 110,
+    "audience": "You already met these moves. Today you prove you can name them."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Name Title, Text, Image, Teaser, Container, and Experience Fragment on a landing skeleton, plus one way to ship the page"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Landing skeleton plus a ship path"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: You failed this check. Does week 11 open anyway"
+    },
+    {
+      "id": "lo4",
+      "bloom": "evaluate",
+      "text": "Say what each error meant, in plain words"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "This week’s check",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Name Title, Text, Image, Teaser, Container, and Experience Fragment on a landing skeleton, plus one way to ship the page."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A check, not a show",
+          "durationMin": 35,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Proof",
+              "body": "1. Landing skeleton without handbook paste.\n2. Alt phrases.\n3. No extra nested boxes.\n4. One ship path."
+            },
+            {
+              "type": "text",
+              "id": "t-3",
+              "heading": "Figure",
+              "body": "Labeled mock of the landing. Caption: *Mock. Same product story as the handbook, different desk.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "A check, not a show",
+                  "body": "This is the week boss. You already met these blocks. You are proving you can name them.\n\n- **Title, Text, Image, Teaser, Container**\n- **Experience Fragment** as a layout strip, not a DITA reuse\n- One **workflow** (a named path to ask for publish) or **Quick Publish** if that is the path your desk uses\n\nFail the quiz and **week 11 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week.\n\nYou may not have AEM. The evidence is the field log, the labeled mock, and the official video. That is enough."
+                },
+                {
+                  "title": "Word today",
+                  "body": "**Workflow** :  a named path that asks for publish. Quick Publish is the short path. Some desks want the longer named path. Write the one you would click."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Title, Text, Image, Teaser, Container",
+                  "back": "**Experience Fragment** as a layout strip, not a DITA reuse"
+                },
+                {
+                  "front": "Workflow",
+                  "back": "a named path that asks for publish. Quick Publish is the short path. Some desks want the longer named path. Write the one you would click"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "idByz7WrhbQ",
+              "title": "AEM from Headful to Headless (Adobe for Business)",
+              "watchFor": [
+                "Blocks on a page, recap"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Landing skeleton plus a ship path",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Skeleton missing a block you claimed, or the ship path is unnamed, or mixed names remain, or mocks have no caption.\n\nExpected: Skeleton plus a workflow name or Quick Publish. Names clean. Mock labeled."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Gather field-log-63 through 68. Add field-log-69.txt: Kitepump landing skeleton (Title, Image with alt, Text, Container of Teasers, optional Experience Fragment promo). Two ‘will not’ lines (no handbook paste, no nested-box hobby)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Read a page-workflow topic on Experience League (request activation, or the path your docs show). Write the name and who starts it. If your desk uses only Quick Publish, write that."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "A **workflow** is a named path that asks someone (or the system) to publish. Quick Publish is the short path you met last week. Name the one you would actually click."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Check the week10 folder: no sentence that calls an Experience Fragment a conref. No sentence that calls Page Editor ‘Author mode’."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Labeled mock: the landing skeleton. Caption: mock."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Pass the quiz. Week 11 stays locked until this day is finished (lab + quiz + a short note)."
+                }
+              ],
+              "summary": "Skeleton plus a workflow name or Quick Publish. Names clean. Mock labeled."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "You failed this check. Does week 11 open anyway?",
+              "options": [
+                "Yes, Friday’s log is enough",
+                "No. Finish this day’s lab, quiz, and note. You can retry the quiz.",
+                "Yes, if you do the 5-minute warmup"
+              ],
+              "answer": 1,
+              "why": "Next week waits until you can name the blocks and one way to ship. Retry is free."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "The core-components-desk badge means you wrote the code behind Title and Text. True or not?",
+              "options": [
+                "True :  authors write the code",
+                "Not true :  you can name and use the blocks. Developers build them",
+                "True on Cloud only"
+              ],
+              "answer": 1,
+              "why": "This week is author work. You insert the blocks. You do not implement them."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "You restore an old hero, then Quick Publish without looking. What can go wrong?",
+              "options": [
+                "Nothing :  restore is always safe",
+                "You may ship an old picture, or a picture that was never published",
+                "AEM blocks it every time"
+              ],
+              "answer": 1,
+              "why": "Restore is on author. Publish is a second step. Check the picture too."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Name Title, Text, Image, Teaser, Container, and Experience Fragment on a landing skeleton, plus one way to ship the page.",
+    "nextDayHook": "Week 11: three ways people write in AEM. Names first."
+  }
+}

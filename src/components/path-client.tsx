@@ -50,7 +50,7 @@ export function PathClient({ catalog }: { catalog: Row[] }) {
                       <div className="rounded-xl border border-line bg-track/40 p-3 text-muted">{inner}</div>
                     ) : (
                       <Link
-                        href={`/day/${d.day}`}
+                        href={`/session/${d.day}`}
                         className="block rounded-xl border border-line bg-card p-3 no-underline hover:border-accent"
                       >
                         {inner}

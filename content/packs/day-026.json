@@ -1,0 +1,215 @@
+{
+  "day": 26,
+  "cover": {
+    "kicker": "Day 26 of 90 · Week 4",
+    "title": "Build a small warning library",
+    "overview": "Hold three reusable notes in one library file and point at each from the right how-to. No unused chunks.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Hold three reusable notes in one library file and point at each from the right how-to. No unused chunks"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Three warnings, three homes"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Which chunk is a bad first reuse"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Hold three reusable notes in one library file and point at each from the right how-to. No unused chunks."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Three notes, three homes",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Three notes, three homes",
+              "body": "If you cannot name the how-to that uses a chunk, delete the chunk.\n\nChange the sentence in the library. The how-tos should follow. Do not type into the pulled warning on the how-to. Change the source, or stop reusing it."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Library topic** :  a page that holds reusable chunks. It is not a chapter in the booklet."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Library topic",
+                  "back": "a page that holds reusable chunks. It is not a chapter in the booklet"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "K_fjZn285Wo",
+              "title": "Working with DITA Reusable Components View",
+              "watchFor": [
+                "More than one reusable chunk in the view",
+                "Insert without copying the sentence"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Three warnings, three homes",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: A library note is unused, or a how-to copies the sentence, or a fourth warning exists with no home.\n\nExpected: Three notes, three pointers, three how-tos. No unused chunks. Completeness clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "In warnings.dita, keep pinch-hazard. Add a caution note id=\"eye-protection\" and a warning note id=\"burst-risk\"."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Point eye-protection into bleed-the-valve.dita (create that how-to if needed: three steps). Point burst-risk into a new how-to topics/read-the-gauge.dita (three steps)."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "pinch-hazard stays on prime-the-pump (or inflate-the-kite if that is where you put it yesterday)."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Every library note is used at least once. Do not add a fourth “just in case”."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Open Text on a how-to: you should see the name pointer, not the sentence."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Completeness clean. Library still not a chapter."
+                }
+              ],
+              "summary": "Three notes, three pointers, three how-tos. No unused chunks. Completeness clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Which chunk is a bad first reuse?",
+              "options": [
+                "A one-sentence pinch warning",
+                "A whole chapter of the booklet",
+                "The product name (that is a key, and you already did it)"
+              ],
+              "answer": 1,
+              "why": "A chapter is a booklet problem. A product name is a key. Warnings are the small stable chunk."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "A library note is never pointed at. What is it?",
+              "options": [
+                "A spare you should keep forever",
+                "A sentence nobody will update, still sitting in the library file",
+                "A keydef"
+              ],
+              "answer": 1,
+              "why": "Unused reuse is inventory you will not maintain. Use it or delete it."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Hold three reusable notes in one library file and point at each from the right how-to. No unused chunks.",
+    "nextDayHook": "Tomorrow you practice the other craft: when a local copy is better."
+  }
+}

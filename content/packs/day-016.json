@@ -1,0 +1,215 @@
+{
+  "day": 16,
+  "cover": {
+    "kicker": "Day 16 of 90 · Week 3",
+    "title": "The booklet view",
+    "overview": "Open Maps Manager, set the sample map as the root booklet, and explain how that tree is not the folder list.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Open Maps Manager, set the sample map as the root booklet, and explain how that tree is not the folder list"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Maps Manager, on purpose"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Maps Manager shows…"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Open Maps Manager, set the sample map as the root booklet, and explain how that tree is not the folder list."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "The tree is the booklet",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "The tree is the booklet",
+              "body": "**DITA Maps Manager** is the booklet view. The folder list (Project view) is just files on disk.\n\nA page can sit on disk and still be missing from the booklet. That is like a chapter printed and left in a drawer.\n\n**Root map** :  the booklet Oxygen should use as the main table of contents. Set it. Later, names defined in the booklet will work."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Maps Manager** :  the side tree that shows the booklet, not the folders."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Root map",
+                  "back": "the booklet Oxygen should use as the main table of contents. Set it. Later, names defined in the booklet will work"
+                },
+                {
+                  "front": "Maps Manager",
+                  "back": "the side tree that shows the booklet, not the folders"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "ozFZz6YZMCY",
+              "title": "DITA Maps Manager View in Oxygen XML Editor 19",
+              "watchFor": [
+                "Maps Manager tree",
+                "Root map control on the toolbar"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Maps Manager, on purpose",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You only opened the map as tags, or you cannot say tree vs folder list.\n\nExpected: Maps Manager shows the sample booklet. Root map is set. Two-line note saved."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Switch to the DITA perspective if you have it, so Maps Manager docks on the side."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Open flowers.ditamap in Maps Manager (the tree), not only as tags."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Set this map as the root map. The control is on the toolbar :  if the label differs, write the label you see."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "In oxygen-bootcamp-work/week3/day-16-views.txt write two lines: Maps Manager = the booklet. Project view = the files on disk."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not add a page yet."
+                }
+              ],
+              "summary": "Maps Manager shows the sample booklet. Root map is set. Two-line note saved."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Maps Manager shows…",
+              "options": [
+                "The booklet (what the reader will follow)",
+                "Every file on your whole computer",
+                "Help > About"
+              ],
+              "answer": 0,
+              "why": "The tree is publication structure. The folder list is files on disk. They are not the same."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Why set a root map?",
+              "options": [
+                "So names defined in the booklet can resolve on the pages",
+                "So Oxygen can delete unused files",
+                "So the desktop stays empty"
+              ],
+              "answer": 0,
+              "why": "The sample booklet already defines a product name. Without a root map, that name may not show."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Open Maps Manager, set the sample map as the root booklet, and explain how that tree is not the folder list.",
+    "nextDayHook": "Tomorrow you add one of your pages to the booklet."
+  }
+}

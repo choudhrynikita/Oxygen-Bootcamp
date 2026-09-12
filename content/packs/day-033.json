@@ -1,0 +1,215 @@
+{
+  "day": 33,
+  "cover": {
+    "kicker": "Day 33 of 90 · Week 5",
+    "title": "Hints that appear while you type",
+    "overview": "Turn on Hints, use the list that appears when you press Enter, and leave the look of Author alone.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Turn on Hints, use the list that appears when you press Enter, and leave the look of Author alone"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Hints on"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A framework packages page rules, look, toolbars, and templates. Who owns that package on a team desk"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Turn on Hints, use the list that appears when you press Enter, and leave the look of Author alone."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Labels while you type",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Labels while you type",
+              "body": "**Hints** are labels in Author that show the name of the piece you are in (step, command, result) while you type.\n\nYou may toggle **Hints**, **Inline actions**, and **Full tags**. You may not ship a private Author look that only your login can see.\n\n**Enter** opens a list of next legal pieces. The parent piece decides the list. If a toolbar button is grey, this kind of page does not allow that thing in that spot.\n\nOutline is the tree. Click to jump."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Framework** :  a package that tells Oxygen how this kind of page works: rules, look, toolbar, templates. **Hints** are one layer you may turn on."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Framework",
+                  "back": "a package that tells Oxygen how this kind of page works: rules, look, toolbar, templates. **Hints** are one layer you may turn on"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "N5cNgWfQAdQ",
+              "title": "Customizing the DITA editing experience",
+              "watchFor": [
+                "A framework as a package",
+                "Hints and inline actions :  not a private look first"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Hints on",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You added a private Author look as the lab, or you never opened the Enter list, or Hints stayed off.\n\nExpected: Hints on. Three labels listed. Enter used for the list. Framework note written. No private look."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "In Author, find the Styles dropdown (default / Hints / Inline actions / Full tags :  verify labels)."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Turn on Hints. Write three hint labels you see on a how-to (for example cmd, info, result)."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Place the caret in the steps. Press Enter. The list should offer a step, not a free paragraph at all costs."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Open Outline. Click result to jump. Click cmd to jump."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not add a private look in Options to make headings a new color. If you already did, remove it and write that you did."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Write oxygen-bootcamp-work/week5/framework-note.txt: a framework packages the page rules, the look, the toolbar, and the templates. I may turn on Hints. I do not ship a private look."
+                }
+              ],
+              "summary": "Hints on. Three labels listed. Enter used for the list. Framework note written. No private look."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A framework packages page rules, look, toolbars, and templates. Who owns that package on a team desk?",
+              "options": [
+                "Each writer in Options",
+                "The lead, shared with the install",
+                "Whoever last changed the heading color"
+              ],
+              "answer": 1,
+              "why": "You may turn on Hints. You do not each invent a private look."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Enter in Author opens a list of next pieces. You press Enter twice to ‘make space’. What goes wrong?",
+              "options": [
+                "Nothing :  like a normal word processor",
+                "You may insert extra pieces this kind of page did not ask for",
+                "Oxygen converts the file to a notepad file"
+              ],
+              "answer": 1,
+              "why": "Enter is a smart insert. Space is not a design tool."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Turn on Hints, use the list that appears when you press Enter, and leave the look of Author alone.",
+    "nextDayHook": "Tomorrow you find and replace in a folder :  without breaking the booklet."
+  }
+}

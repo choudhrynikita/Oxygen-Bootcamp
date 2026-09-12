@@ -1,0 +1,225 @@
+{
+  "day": 63,
+  "cover": {
+    "kicker": "Day 63 of 90 · Week 10",
+    "title": "Type on the page (Title and Text)",
+    "overview": "Put a heading and two short sentences on a web page using Title and Text, and keep the handbook steps out of the body.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Put a heading and two short sentences on a web page using Title and Text, and keep the handbook steps out of the body"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Title and two sentences"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: The page already has a Title set as the main heading. You also make a main heading inside Text. What is the problem"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Put a heading and two short sentences on a web page using Title and Text, and keep the handbook steps out of the body."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Type on the page",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Type on the page",
+              "body": "Last week you made a page in AEM :  Adobe’s website tool :  and looked at Edit, Preview, and Publish. Today you put words on that page.\n\nA page is built from **components**. A component is a block you drop onto the page. Adobe ships a set of ready-made blocks called **Core Components**. Today you use two of them.\n\n**Title** is the heading block. You pick a heading size (h1, h2, and so on) in a small form. Use the size the template already planned. **Text** is the body. You can bold and make a list there.\n\nDo not paste the handbook how-to into Text. The handbook stays in Oxygen. This page is a short web page."
+            },
+            {
+              "type": "text",
+              "id": "t-4",
+              "heading": "Figure",
+              "body": "Labeled mock: Title over Text. Caption: *Mock. Page Editor, Edit. Not a customer screenshot.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Title** :  the heading block on an AEM page.\n\n**Text** :  the body block. It is not a DITA how-to."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Title",
+                  "back": "the heading block on an AEM page"
+                },
+                {
+                  "front": "Text",
+                  "back": "the body block. It is not a DITA how-to"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "idByz7WrhbQ",
+              "title": "AEM from Headful to Headless (Adobe for Business)",
+              "watchFor": [
+                "A page made of blocks, not one blob of text",
+                "A heading and a body on the canvas"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Title and two sentences",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You paste handbook steps into Text, or you skip heading size, or the mock has no caption.\n\nExpected: Log names Title vs Text. Kitepump copy is two short sentences. Mock labeled."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "You may not have AEM. That is expected. Use the official video, a labeled mock, and a field log."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Read the Core Components pages for Title and Text (skim). Write oxygen-bootcamp-work/week10/field-log-63.txt."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "In the log: Title is the heading block. You pick a heading size (h1, h2, and so on) that the page template allows. Text is the body block."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Kitepump landing: one Title (Kitepump HP-40) and one Text with two short marketing sentences. Do not paste inflate-the-tire steps."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Write what Text lets you do (bold, a list). Write that this is not a DITA how-to."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Labeled mock: Title over Text. Caption: mock."
+                }
+              ],
+              "summary": "Log names Title vs Text. Kitepump copy is two short sentences. Mock labeled."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "The page already has a Title set as the main heading. You also make a main heading inside Text. What is the problem?",
+              "options": [
+                "Nothing :  extra main headings always help",
+                "You now have two main headings on one page",
+                "AEM deletes the page"
+              ],
+              "answer": 1,
+              "why": "Title owns the heading. Do not fake a second main heading inside Text."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Where do the inflate-the-tire steps live?",
+              "options": [
+                "In the Text block on the web page",
+                "In the handbook page in Oxygen",
+                "In page properties"
+              ],
+              "answer": 1,
+              "why": "The web page is short. The how-to stays in the handbook."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Put a heading and two short sentences on a web page using Title and Text, and keep the handbook steps out of the body.",
+    "nextDayHook": "Tomorrow you put a picture on the page and write a short phrase for it."
+  }
+}

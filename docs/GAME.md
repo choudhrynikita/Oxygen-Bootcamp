@@ -2,7 +2,7 @@
 
 This is a craft game. Points follow proof of work. Watching a video is never enough to earn a badge.
 
-Curriculum version this document describes: `2026.09.2`.
+Curriculum version this document describes: `2026.09.3`.
 
 ## What is stored
 

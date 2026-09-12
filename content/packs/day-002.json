@@ -1,0 +1,215 @@
+{
+  "day": 2,
+  "cover": {
+    "kicker": "Day 2 of 90 · Week 1",
+    "title": "Open a sample and type a sentence",
+    "overview": "Open the sample page, type one sentence, and save the file.",
+    "durationMin": 80,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Open the sample page, type one sentence, and save the file"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: One sentence in the sample"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: How do you open a page that already exists"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Open the sample page, type one sentence, and save the file."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 80 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A page is a file",
+          "durationMin": 20,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "A page is a file",
+              "body": "Yesterday you opened the app. Today you open a **page**. A page is just a file. This course ships a tiny sample shop called flower-docs. You will write into it, not into a blank desktop file.\n\n**File > Open** → `samples/flower-docs/topics/hello-concept.dita`.\n\nThe big middle area is where you type. Add one sentence. **Save**. Close. Open it again. If the sentence is still there, you did the job."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Topic** :  one help page in its own file. Today you edited a topic. You do not need other kinds of pages yet."
+                },
+                {
+                  "title": "If the file will not open",
+                  "body": "Use File > Open, not drag-onto-Slack. The file name should end in `.dita`. If Oxygen asks which type it is, pick a DITA topic."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Topic",
+                  "back": "one help page in its own file. Today you edited a topic. You do not need other kinds of pages yet"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "PiCWAIiKx78",
+              "title": "Getting Started with Oxygen XML Editor",
+              "watchFor": [
+                "File > Open",
+                "How a page looks in the big middle area"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "One sentence in the sample",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You typed in a notes app instead of Oxygen, or you did not save, or the sentence is gone after reopen.\n\nExpected: The sample file opens, the extra sentence is there after save and reopen, and you wrote the path down."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "In Oxygen: File > Open. Open samples/flower-docs/topics/hello-concept.dita from this course."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Click in the big writing area. Add this sentence under the first paragraph: The desk copy is a sample, not a live catalog."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Save (Ctrl+S or Cmd+S). Confirm the file name in the tab still ends with .dita."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Close the file. Open it again. Your sentence should still be there."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Write the full path of the file in oxygen-bootcamp-work/day-02-path.txt."
+                }
+              ],
+              "summary": "The sample file opens, the extra sentence is there after save and reopen, and you wrote the path down."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "How do you open a page that already exists?",
+              "options": [
+                "File > Open",
+                "Help > About",
+                "Close the app and hope"
+              ],
+              "answer": 0,
+              "why": "File > Open picks a file on disk. Help > About is only the version."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You typed a sentence and the tab still shows the file name. What should you do before you quit?",
+              "options": [
+                "Nothing :  typing is enough",
+                "Save, then open the file again to check",
+                "Rename it to FINAL"
+              ],
+              "answer": 1,
+              "why": "If it is not saved, it is not in the file. Reopen is how you prove it."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Open the sample page, type one sentence, and save the file.",
+    "nextDayHook": "Tomorrow you look at the same file two ways: as a page, and as tags."
+  }
+}

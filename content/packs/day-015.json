@@ -1,0 +1,207 @@
+{
+  "day": 15,
+  "cover": {
+    "kicker": "Day 15 of 90 · Week 3",
+    "title": "A table of contents for your pages",
+    "overview": "Open the sample booklet and see that it is a list of pointers to files, not the files themselves.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Open the sample booklet and see that it is a list of pointers to files, not the files themselves"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Look at the sample booklet"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A .ditamap file is…"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Open the sample booklet and see that it is a list of pointers to files, not the files themselves."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A booklet is a list",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "A booklet is a list",
+              "body": "Last week you wrote three pages. A **map** is a table of contents that **points at** those pages. The file ends in `.ditamap`.\n\nIt is not a copy of the words. It is a list of pointers.\n\nThe sample shop already has `samples/flower-docs/flowers.ditamap`. Open it. Look. Count. Do not add anything yet."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Map** :  a table of contents file that points at your pages."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Map",
+                  "back": "a table of contents file that points at your pages"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "ozFZz6YZMCY",
+              "title": "DITA Maps Manager View in Oxygen XML Editor 19",
+              "watchFor": [
+                "The tree on the left",
+                "A line that points at a page"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Look at the sample booklet",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You only opened a topic file and never opened the .ditamap, or you cannot say the booklet is a list of pointers.\n\nExpected: You opened flowers.ditamap, counted the pages it points at, and opened one page from the tree."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "In Oxygen, open samples/flower-docs/flowers.ditamap. If it opens as a wall of tags, look for a booklet view (DITA Maps Manager) and open it there too."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Count how many pages the booklet points at. Write the number in oxygen-bootcamp-work/week3/day-15-count.txt."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Click one line in the tree so the page opens. Confirm it is one of the topic files, not the booklet file itself."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Do not add a page yet. Today you only look."
+                }
+              ],
+              "summary": "You opened flowers.ditamap, counted the pages it points at, and opened one page from the tree."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A .ditamap file is…",
+              "options": [
+                "A table of contents that points at page files",
+                "A picture",
+                "The same thing as a how-to page"
+              ],
+              "answer": 0,
+              "why": "The map is the booklet. The topics are the pages. Two kinds of files."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "If you delete a page file but leave it in the booklet, what happens?",
+              "options": [
+                "Nothing :  the booklet has a copy of the words",
+                "The pointer breaks. The booklet still names a file that is gone",
+                "Oxygen reprints the page from memory"
+              ],
+              "answer": 1,
+              "why": "The booklet stores a pointer (a path), not a second copy of the page."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Open the sample booklet and see that it is a list of pointers to files, not the files themselves.",
+    "nextDayHook": "Tomorrow you use the booklet view (Maps Manager) on purpose."
+  }
+}

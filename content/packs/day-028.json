@@ -1,0 +1,250 @@
+{
+  "day": 28,
+  "cover": {
+    "kicker": "Day 28 of 90 · Week 4 · week check",
+    "title": "Week 4 check",
+    "overview": "Show a product name in the booklet, a reused warning, one retired weak reuse, and completeness clean. Explain each pointer in one sentence.",
+    "durationMin": 110,
+    "audience": "You already met these moves. Today you prove you can name them."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Show a product name in the booklet, a reused warning, one retired weak reuse, and completeness clean. Explain each pointer in one sentence"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Three proofs on a check copy"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A product name looks broken in Author. First place you look"
+    },
+    {
+      "id": "lo4",
+      "bloom": "evaluate",
+      "text": "Say what each error meant, in plain words"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "This week’s check",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Show a product name in the booklet, a reused warning, one retired weak reuse, and completeness clean. Explain each pointer in one sentence."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A check, not a show",
+          "durationMin": 35,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "A check, not a show",
+                  "body": "This is the week boss. You already met these pointers. You are only proving you can name them.\n\n1. **Product name** :  change it in the booklet; two pages follow.\n2. **Warning pointer** :  change the library; two how-tos follow.\n3. **A sentence you copied** :  because a pointer would have been the wrong tool.\n\nFail the quiz and **week 5 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week."
+                },
+                {
+                  "title": "Word today",
+                  "body": "No new word. Use **key**, **conref**, **conkeyref**, and **local note** in the three sentences you write."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Product name",
+                  "back": "change it in the booklet; two pages follow"
+                },
+                {
+                  "front": "Warning pointer",
+                  "back": "change the library; two how-tos follow"
+                },
+                {
+                  "front": "A sentence you copied",
+                  "back": "because a pointer would have been the wrong tool"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "K_fjZn285Wo",
+              "title": "Working with DITA Reusable Components View",
+              "watchFor": [
+                "Reusable Components view as a checklist"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Three proofs on a check copy",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: A warning sentence exists twice, or the product name only works on one page, or you cannot explain a pointer, or completeness is red.\n\nExpected: Check copy clean. Two pages use the product name. At least one shared warning pointer. Three explanation sentences."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Copy kitepump to oxygen-bootcamp-work/week4-check/ so you do not wreck the original."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Prove the product name: change it in the booklet; two pages follow."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Prove one reused warning: change the library sentence; two how-tos follow."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Break 1: unset the root map. Write what the names looked like. Restore."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Break 2: typo the warning pointer. Write what you saw. Repair."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Break 3: put a path pointer back next to the name pointer on the same note. Delete the path form."
+                },
+                {
+                  "title": "Step 7",
+                  "body": "Write three sentences: what the product name owns, what the warning pointer owns, which sentence you copied on purpose."
+                },
+                {
+                  "title": "Step 8",
+                  "body": "Completeness clean on the check copy."
+                },
+                {
+                  "title": "Step 9",
+                  "body": "Pass the quiz. Week 5 stays locked until this day is finished (lab + quiz + a short note)."
+                }
+              ],
+              "summary": "Check copy clean. Two pages use the product name. At least one shared warning pointer. Three explanation sentences."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A product name looks broken in Author. First place you look?",
+              "options": [
+                "The root map and the name in the booklet",
+                "Help > About",
+                "The color of Author view"
+              ],
+              "answer": 0,
+              "why": "Names live in the booklet. Root map plus the name line. Not a version number."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You failed this check. Does week 5 open?",
+              "options": [
+                "Yes, Friday’s pages are enough",
+                "No. Week 5 stays locked until this day is finished. Retry the quiz if you need to.",
+                "Yes, if the 5-minute warmup is done"
+              ],
+              "answer": 1,
+              "why": "Lab, quiz, and a short note. Retry is free. The warmup does not open the week."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "A path pointer and a name pointer both sit on the same warning. What do you do?",
+              "options": [
+                "Keep both, in case one breaks",
+                "Keep the name pointer and delete the path",
+                "Delete both and type the sentence twice"
+              ],
+              "answer": 1,
+              "why": "Two pointers will drift. The better form is the name in the booklet."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Show a product name in the booklet, a reused warning, one retired weak reuse, and completeness clean. Explain each pointer in one sentence.",
+    "nextDayHook": "Week 5: tools on the desk :  hide a step from some readers, comments, and find and replace."
+  }
+}

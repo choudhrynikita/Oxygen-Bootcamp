@@ -1,0 +1,215 @@
+{
+  "day": 24,
+  "cover": {
+    "kicker": "Day 24 of 90 · Week 4",
+    "title": "Point at the library by name, not by path",
+    "overview": "Give the library a name in the booklet, switch the warning pointer to that name, then move the file and confirm the how-to still works.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Give the library a name in the booklet, switch the warning pointer to that name, then move the file and confirm the how-to still works"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Same warning, now a name"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Why point at the library by a name in the booklet, not by a file path"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Give the library a name in the booklet, switch the warning pointer to that name, then move the file and confirm the how-to still works."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Same chunk, better pointer",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Same chunk, better pointer",
+              "body": "A **conkeyref** is a pointer that pulls a chunk by a **name in the booklet**, not by a file path. It looks like `name/id`.\n\nGive the library line `keys=\"warnings-lib\"`. The how-to stores that name. Move the file. Update one booklet path. The how-tos sleep through it.\n\nIf a sentence still exists twice, you are not done."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**conkeyref** :  a pointer that reuses a chunk by a name from the booklet, plus an id."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "conkeyref",
+                  "back": "a pointer that reuses a chunk by a name from the booklet, plus an id"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "K_fjZn285Wo",
+              "title": "Working with DITA Reusable Components View",
+              "watchFor": [
+                "A reusable chunk inserted with a name",
+                "The pointer in Text after you switch it"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Same warning, now a name",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The how-to still uses a path pointer, or you copied the sentence, or the name is missing from the booklet.\n\nExpected: Name pointers in both how-tos. The booklet holds keys=\"warnings-lib\". Moving the file did not mean editing the how-tos. Completeness clean."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "On the library page’s line in the booklet, set keys=\"warnings-lib\"."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "In prime-the-pump.dita, change the warning from a path pointer (conref) to a name pointer: conkeyref=\"warnings-lib/pinch-hazard\". Remove the path form."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Move warnings.dita into topics/library/ if it is not already there. Update only the booklet line’s path. The how-to should still resolve through the name."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Unset the root map. Confirm the warning looks broken. Set the root map again."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Add the same name pointer to a second how-to (create topics/inflate-the-kite.dita if needed: three steps plus the warning)."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Completeness clean. Two how-tos, one library sentence."
+                }
+              ],
+              "summary": "Name pointers in both how-tos. The booklet holds keys=\"warnings-lib\". Moving the file did not mean editing the how-tos. Completeness clean."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Why point at the library by a name in the booklet, not by a file path?",
+              "options": [
+                "The booklet can retarget the library without editing every how-to",
+                "Paths are not allowed on notes",
+                "A name is shorter to type, and that is the only reason"
+              ],
+              "answer": 0,
+              "why": "Move the library, update one booklet line. The how-tos keep the name."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "The pointer says warnings-lib/pinch-hazard. What is pinch-hazard?",
+              "options": [
+                "A file name",
+                "The id of the note inside the library page that name points at",
+                "The product name in the booklet"
+              ],
+              "answer": 1,
+              "why": "The name finds the page. The id finds the note."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Give the library a name in the booklet, switch the warning pointer to that name, then move the file and confirm the how-to still works.",
+    "nextDayHook": "Tomorrow you put one booklet inside another, so the same name can mean two products."
+  }
+}

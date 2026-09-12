@@ -1,0 +1,224 @@
+{
+  "day": 77,
+  "cover": {
+    "kicker": "Day 77 of 90 · Week 12",
+    "title": "Checkout and check-in, like borrowing a book",
+    "overview": "Write the cycle: checkout, edit, check in :  and what goes wrong if two people skip the lock.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Write the cycle: checkout, edit, check in :  and what goes wrong if two people skip the lock"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Cycle card"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Checkout in Guides is the same as Preview in the Page Editor. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Write the cycle: checkout, edit, check in :  and what goes wrong if two people skip the lock."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Borrow, write, return",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Borrow, write, return",
+              "body": "**Checkout** locks the topic so a teammate cannot overwrite you. Like borrowing a library book. **Check-in** gives the book back and stores a version in Guides.\n\nIn between, you edit. In Guides in the browser, or :  if the desk allows it :  in Oxygen on the desktop.\n\nYou do not need a live Guides box to learn the words. You do need the words right. Checkout is not Preview. Checkout is not Quick Publish.\n\nSkip the lock and two people write the same file. Last save wins, or a conflict you cannot explain."
+            },
+            {
+              "type": "text",
+              "id": "t-3",
+              "heading": "Figure",
+              "body": "Labeled mock: Checkout → Edit → Check in. Caption: *Mock. A lock, not a publish.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Checkout** :  borrow the topic. It is locked for you.\n\n**Check-in** :  give it back. Guides stores a version."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Checkout",
+                  "back": "borrow the topic. It is locked for you"
+                },
+                {
+                  "front": "Check-in",
+                  "back": "give it back. Guides stores a version"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "JkPeWea3Y3U",
+              "title": "DITA Map Completeness Check",
+              "watchFor": [
+                "A book still needs a lock so two people do not overwrite the same page"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Cycle card",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You describe checkout as AEM Sites Quick Publish.\n\nExpected: Four sentences. Mock labeled if no instance."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Write oxygen-bootcamp-work/week12/field-log-77.txt with four sentences."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Checkout locks the topic so a teammate cannot overwrite you. Like borrowing a library book."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Edit in Guides, or :  if the desk allows it :  Edit in Oxygen."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Check in returns the lock and stores a version of the topic in Guides."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Skip checkout: two writers, last save wins, or a conflict you cannot explain."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "If you have Guides, complete one real cycle. If not, label this mock and still write the cycle."
+                }
+              ],
+              "summary": "Four sentences. Mock labeled if no instance."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Checkout in Guides is the same as Preview in the Page Editor. True or not?",
+              "options": [
+                "True :  both are a look-before-you-leap",
+                "Not true :  checkout is a lock on a DITA topic. Preview is a Sites view",
+                "True on Cloud only"
+              ],
+              "answer": 1,
+              "why": "A lock is not a preview. Different desks."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Two writers edit the same topic with no checkout. What often happens?",
+              "options": [
+                "Guides merges every sentence automatically",
+                "Last save wins, or a conflict nobody can explain",
+                "The topic publishes itself"
+              ],
+              "answer": 1,
+              "why": "Borrow the book. Write. Return it."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Write the cycle: checkout, edit, check in :  and what goes wrong if two people skip the lock.",
+    "nextDayHook": "Tomorrow: the Edit in Oxygen button :  what it means, and who turns it on."
+  }
+}

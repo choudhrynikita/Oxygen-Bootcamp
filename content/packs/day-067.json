@@ -1,0 +1,213 @@
+{
+  "day": 67,
+  "cover": {
+    "kicker": "Day 67 of 90 · Week 10",
+    "title": "Reuse a layout (not the same as Oxygen reuse)",
+    "overview": "Explain an Experience Fragment as a reusable layout strip, and keep the handbook warning in DITA.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Explain an Experience Fragment as a reusable layout strip, and keep the handbook warning in DITA"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: A promo strip, not a warning library"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: You want the pinch warning on two AEM pages. Do you put it in an Experience Fragment"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Explain an Experience Fragment as a reusable layout strip, and keep the handbook warning in DITA."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Reuse a layout",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Reuse a layout",
+              "body": "An **Experience Fragment** is a reusable chunk of page layout. A promo strip. A footer. Something you would otherwise copy from page to page.\n\nIt is not a **conref**. A conref reuses a piece of XML in Oxygen. You did that in week 4. Different desk, different file.\n\nIt is not a **Content Fragment**. That is a fill-in form of fields. You will meet it next week. Do not mix the names.\n\nUse an Experience Fragment for ‘Shop HP-40’ on two pages. Do not store the handbook there. Do not store a procedure there."
+            },
+            {
+              "type": "text",
+              "id": "t-3",
+              "heading": "Figure",
+              "body": "Labeled mock: shared promo strip. Caption: *Mock. Layout reuse, not XML reuse.*"
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Experience Fragment** :  a reusable strip of page layout in AEM."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Experience Fragment",
+                  "back": "a reusable strip of page layout in AEM"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "idByz7WrhbQ",
+              "title": "AEM from Headful to Headless (Adobe for Business)",
+              "watchFor": [
+                "Fragments in the AEM family, if mentioned",
+                "A layout chunk vs a page of fields"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "A promo strip, not a warning library",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The log says an Experience Fragment is a conref, or a procedure is stored in the fragment as the handbook.\n\nExpected: Three-way distinction written. One Kitepump promo idea. One ‘would not’. Mock labeled."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Write oxygen-bootcamp-work/week10/field-log-67.txt: Experience Fragment = a reusable page layout (header promo, footer strip). Next week you will meet Content Fragments, which are fill-in forms. A DITA conref is XML reuse in Oxygen. Three different things."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Kitepump: a promo strip ‘Shop HP-40’ could appear on two pages. The pinch warning stays a DITA reuse in the handbook."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write when you would not use an Experience Fragment: a one-off sentence, or a procedure."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Labeled mock: two pages sharing a promo strip. Caption: mock. Not a conref arrow."
+                }
+              ],
+              "summary": "Three-way distinction written. One Kitepump promo idea. One ‘would not’. Mock labeled."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "You want the pinch warning on two AEM pages. Do you put it in an Experience Fragment?",
+              "options": [
+                "Yes :  an Experience Fragment is a conref",
+                "No :  that sentence is DITA. Link to the handbook, or paraphrase. Do not pretend the fragment is the warning library",
+                "Yes :  also add a keyref"
+              ],
+              "answer": 1,
+              "why": "Safety lines stay in the handbook. An Experience Fragment is layout."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "A header used on 40 pages. Copy-paste the blocks each time, or reuse a layout strip?",
+              "options": [
+                "Copy-paste",
+                "Reuse a layout strip (Experience Fragment or the template) :  that is the point",
+                "A DITA map"
+              ],
+              "answer": 1,
+              "why": "Layout you would otherwise copy from page to page is the job."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Explain an Experience Fragment as a reusable layout strip, and keep the handbook warning in DITA.",
+    "nextDayHook": "Tomorrow: notes on the page, snapshots, and restore."
+  }
+}

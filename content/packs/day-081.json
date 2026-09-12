@@ -1,0 +1,200 @@
+{
+  "day": 81,
+  "cover": {
+    "kicker": "Day 81 of 90 · Week 12",
+    "title": "One full loop on paper (or mock)",
+    "overview": "Write a checkout → edit → check-in → request publish cycle for one topic, with no Sites Create Page in it.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Write a checkout → edit → check-in → request publish cycle for one topic, with no Sites Create Page in it"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Cycle on paper, or for real"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: The Guides cycle includes Create Page in Sites. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Write a checkout → edit → check-in → request publish cycle for one topic, with no Sites Create Page in it."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "One object, one loop",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "One object, one loop",
+              "body": "Pick a how-to. Walk it.\n\n1. **Checkout**\n2. **Edit** (Guides, or Edit in Oxygen)\n3. **Check in**\n4. **Request publish** (Guides, not Sites Quick Publish)\n\nNo Create Page. No landing-page hero. No Page Editor. Those are the other desk.\n\nIf you have Guides, do it once. If not, write the loop and label the mock. Completeness on the local analog stays clean."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "Labeled mock: four arrows in a row. Caption: *Mock. Handbook loop only.*"
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "t2cG3Xe1TXY",
+              "title": "DITA Editing",
+              "watchFor": [
+                "The topic you would actually edit"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Cycle on paper, or for real",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The cycle includes Sites Create Page as a step.\n\nExpected: A four-step cycle with no Sites page in it. Mock labeled if needed."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Pick prime-the-pump.dita as the object."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Write oxygen-bootcamp-work/week12/field-log-81.txt with four steps: checkout, edit (Guides or Edit in Oxygen), check in, request publish."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Use control names you verified, or write ‘verify this label in your version’ plus the official article."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "If you have Guides, do the cycle once. If not, label mock and still write it."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Completeness on the local analog remains clean."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Do not add Sites Create Page as a step."
+                }
+              ],
+              "summary": "A four-step cycle with no Sites page in it. Mock labeled if needed."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "The Guides cycle includes Create Page in Sites. True or not?",
+              "options": [
+                "True :  every publish starts with a new page",
+                "Not true :  this loop is handbook work. Create Page is the other desk",
+                "True if the topic is a landing page"
+              ],
+              "answer": 1,
+              "why": "One object. One loop. Stay on the handbook desk."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Which step holds the lock?",
+              "options": [
+                "Preview",
+                "Checkout",
+                "Quick Publish"
+              ],
+              "answer": 1,
+              "why": "Checkout borrows the topic. That is the lock."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Write a checkout → edit → check-in → request publish cycle for one topic, with no Sites Create Page in it.",
+    "nextDayHook": "Tomorrow is the week check: who edits where :  map, SME comment, landing page."
+  }
+}

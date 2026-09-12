@@ -1,0 +1,214 @@
+{
+  "day": 71,
+  "cover": {
+    "kicker": "Day 71 of 90 · Week 11",
+    "title": "When to use each way",
+    "overview": "Match four jobs to a method: Page Editor, Universal Editor, Document Authoring, or Oxygen :  and keep a DITA how-to off the AEM list.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Match four jobs to a method: Page Editor, Universal Editor, Document Authoring, or Oxygen :  and keep a DITA how-to off the AEM list"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Job to method table"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A marketer wants to write a campaign page in Google Docs. Which AEM method"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Match four jobs to a method: Page Editor, Universal Editor, Document Authoring, or Oxygen :  and keep a DITA how-to off the AEM list."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Match the job",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Match the job",
+              "body": "Yesterday you named three AEM ways to write. Today you match a job to a way.\n\n- A templated site page with Core Components → **Page Editor**\n- A page or app wired for visual editing beyond that canvas → **Universal Editor**\n- Marketers already in Word or Google Docs → **Document Authoring**\n- A DITA how-to → **Oxygen** (Guides next week)\n\nIf you only remember one thing: a DITA how-to does not become Document Authoring because both use the word document.\n\nYou do not have to pick a favourite. You have to pick the matching row."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "Labeled mock: four jobs, four methods. Caption: *Mock. The how-to row is Oxygen.*"
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Page Editor",
+                  "back": "A page or app wired for visual editing beyond that canvas → **Universal Editor**"
+                },
+                {
+                  "front": "Document Authoring",
+                  "back": "A DITA how-to → **Oxygen** (Guides next week)"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "VcMI0zWIKdg",
+              "title": "How to Build a Global Site in AEM Sites",
+              "watchFor": [
+                "When a Word-like flow is the point"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Job to method table",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The DITA how-to is assigned to Document Authoring because both say document.\n\nExpected: Four rows. The how-to stays off the AEM page methods."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Write oxygen-bootcamp-work/week11/field-log-71.txt as a four-row table."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Job: a WKND-style page with Title, Text, Teaser on a template → Page Editor."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Job: a page or app that Universal Editor is wired for → Universal Editor."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Job: marketers already writing in Word or Google Docs → Document Authoring."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Job: a 12-step pump prime in DITA → Oxygen (or Adobe Guides, which you open next week). Not the three AEM page methods."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Labeled mock: the four-row table. Caption: mock."
+                }
+              ],
+              "summary": "Four rows. The how-to stays off the AEM page methods."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A marketer wants to write a campaign page in Google Docs. Which AEM method?",
+              "options": [
+                "Page Editor",
+                "Document Authoring",
+                "Oxygen File > New"
+              ],
+              "answer": 1,
+              "why": "Document Authoring is the Word / Google Docs path into AEM."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "A 12-step how-to already lives as a DITA task. Which method today?",
+              "options": [
+                "Document Authoring :  it says document",
+                "Oxygen :  it is a DITA how-to",
+                "Universal Editor :  visual is always better"
+              ],
+              "answer": 1,
+              "why": "A DITA how-to is not an AEM page method. Keep it in Oxygen this week."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Match four jobs to a method: Page Editor, Universal Editor, Document Authoring, or Oxygen :  and keep a DITA how-to off the AEM list.",
+    "nextDayHook": "Tomorrow a form-like page: fields, not a layout."
+  }
+}

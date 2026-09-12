@@ -1,0 +1,210 @@
+{
+  "day": 48,
+  "cover": {
+    "kicker": "Day 48 of 90 · Week 7",
+    "title": "Pick one place the files live",
+    "overview": "Write the one place kitepump lives this week, rename one page without breaking the pointer, and name the failure if two places both claim to be home.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Write the one place kitepump lives this week, rename one page without breaking the pointer, and name the failure if two places both claim to be home"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: One home for the files"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: Master Files in Oxygen exist to update pointers when you rename a file. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Write the one place kitepump lives this week, rename one page without breaking the pointer, and name the failure if two places both claim to be home."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Pick one",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Pick one",
+              "body": "A **shared folder**, or **Git** (Git is a history tool for files). Not both by accident.\n\n**Master Files** tell Oxygen which booklet owns the pages, so a rename can update pointers. If you have no Master Files, you fix the pointer by hand and you run completeness.\n\nTwo desktops, two copies, two people who both think they are home: that is how a page disappears."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Source of truth** :  the one place the real files live. Everyone else has a copy, or a share, not a second home."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Source of truth",
+                  "back": "the one place the real files live. Everyone else has a copy, or a share, not a second home"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "JkPeWea3Y3U",
+              "title": "DITA Map Completeness Check",
+              "watchFor": [
+                "A broken pointer after a casual rename"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "One home for the files",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You claim two homes with no bridge, or completeness still shows a missing file after the rename.\n\nExpected: One home written down. Completeness clean after rename. Failure mode written."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Copy kitepump-dita to oxygen-bootcamp-work/week7/one-home/ so you do not wreck the sample."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Write in oxygen-bootcamp-work/week7/source-of-truth.txt: this week the files live in ____ (a folder, or Git). Pick one."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "If you picked a folder: rename one topic file, then fix the pointer in the map by hand. Run completeness."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "If you picked Git: enable Master Files on the map in Oxygen (verify the label) and rename a topic. Confirm the pointer updates. Run completeness."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Write the failure mode of two people editing two copies and both calling their copy the home."
+                }
+              ],
+              "summary": "One home written down. Completeness clean after rename. Failure mode written."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "Master Files in Oxygen exist to update pointers when you rename a file. True or not?",
+              "options": [
+                "True :  that is the point. Without them, a rename is a silent broken link",
+                "Not true :  Master Files publish the PDF",
+                "Not true :  rename never breaks a booklet"
+              ],
+              "answer": 0,
+              "why": "The booklet stores a path. Rename the file and the path is a lie until something updates it."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You and a teammate each have a full copy of kitepump on two desktops, and neither copy is Git. What fails first?",
+              "options": [
+                "Nothing :  two homes are safer",
+                "One of you overwrites the other’s page, and nobody can say which copy is real",
+                "Oxygen cannot store two copies"
+              ],
+              "answer": 1,
+              "why": "Pick one place the files live. Two homes are how pages vanish."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Write the one place kitepump lives this week, rename one page without breaking the pointer, and name the failure if two places both claim to be home.",
+    "nextDayHook": "Tomorrow is the week 7 check. You will repair a messy handoff. Week 8 stays locked until that day is finished."
+  }
+}

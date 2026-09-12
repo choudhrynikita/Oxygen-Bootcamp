@@ -1,0 +1,224 @@
+{
+  "day": 88,
+  "cover": {
+    "kicker": "Day 88 of 90 · Week 12",
+    "title": "Talk-through sheet",
+    "overview": "Answer out loud (or in writing if you are alone) ten questions a hiring lead would actually ask.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Answer out loud (or in writing if you are alone) ten questions a hiring lead would actually ask"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Ten answers"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: There is a product called AEM Oxygen XML Editor. True or not"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Answer out loud (or in writing if you are alone) ten questions a hiring lead would actually ask."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Out loud",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Out loud",
+              "body": "Ten short answers. Concrete verbs. No slogans.\n\nYou have met every word on this list. If one is fuzzy, open that week’s field log and rewrite the line.\n\nNumber 10 is not a trick. There is no product called AEM Oxygen XML Editor."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "A numbered list of ten. Caption: *Short answers. Number 10 is no.*"
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "PiCWAIiKx78",
+              "title": "Getting Started with Oxygen XML Editor",
+              "watchFor": [
+                "Modes you must still be able to name"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Ten answers",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: Any answer mixes the two desks, or #10 treats the fake product name as real.\n\nExpected: Ten short answers. #10 is a hard no on the fake product name."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Write oxygen-bootcamp-work/week12/talk-through.txt."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "1. Author vs Text vs Grid in Oxygen."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "2. Well-formed vs valid."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "3. Map vs topic."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "4. keyref vs href."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "5. Completeness vs schema."
+                },
+                {
+                  "title": "Step 7",
+                  "body": "6. Local WebHelp vs Guides baseline."
+                },
+                {
+                  "title": "Step 8",
+                  "body": "7. Author vs publish in AEM."
+                },
+                {
+                  "title": "Step 9",
+                  "body": "8. Page Editor vs Universal Editor vs Document Authoring."
+                },
+                {
+                  "title": "Step 10",
+                  "body": "9. Guides vs Oxygen."
+                },
+                {
+                  "title": "Step 11",
+                  "body": "10. Why there is no AEM Oxygen XML Editor."
+                },
+                {
+                  "title": "Step 12",
+                  "body": "Write short answers. Speak them if you can."
+                }
+              ],
+              "summary": "Ten short answers. #10 is a hard no on the fake product name."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "There is a product called AEM Oxygen XML Editor. True or not?",
+              "options": [
+                "True :  that is the connector",
+                "Not true :  Guides can open Oxygen. They are not one product",
+                "True after an admin enables the button"
+              ],
+              "answer": 1,
+              "why": "If you miss this on day 88, go back to day 76 (and day 56)."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Local WebHelp and a Guides baseline are the same publish. True or not?",
+              "options": [
+                "True",
+                "Not true :  local is a draft, the baseline is the release on a Guides shop",
+                "True if both made HTML"
+              ],
+              "answer": 1,
+              "why": "Question 6 on the sheet. Draft vs release."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Answer out loud (or in writing if you are alone) ten questions a hiring lead would actually ask.",
+    "nextDayHook": "Tomorrow: three written scenarios and a broken map to repair."
+  }
+}

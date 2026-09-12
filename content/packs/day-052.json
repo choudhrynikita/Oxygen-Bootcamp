@@ -1,0 +1,211 @@
+{
+  "day": 52,
+  "cover": {
+    "kicker": "Day 52 of 90 · Week 8",
+    "title": "Switches you should not turn on at work yet",
+    "overview": "Write the Oxygen version, list any experimental switches you can see, and leave the shipping map alone.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Write the Oxygen version, list any experimental switches you can see, and leave the shipping map alone"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: The do-not-enable card"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: An experimental switch exists in Options. When do you turn it on for a customer booklet"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Write the Oxygen version, list any experimental switches you can see, and leave the shipping map alone."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Look. Do not flip.",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Look. Do not flip.",
+              "body": "Oxygen can hide experimental switches under Options. A newer DITA version, a per-chapter filter, a draft tool that writes a command for you.\n\nThose switches exist so vendors can test. They are not a work instruction.\n\nA **branch filter** is a filter on one chapter of a booklet, different from the rest. Powerful. Easy to make undebuggable. You can explain it. You do not add it to the only copy of kitepump.\n\nIf a draft tool writes a step, you rewrite the command. Confirm shop policy."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Experimental switch** :  an Options flag the vendor is still testing. Off on a customer map."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Experimental switch",
+                  "back": "an Options flag the vendor is still testing. Off on a customer map"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "N5cNgWfQAdQ",
+              "title": "Customizing the DITA editing experience",
+              "watchFor": [
+                "A safer custom setup vs a mystery switch",
+                "That frameworks are a desk setting, not a flag to flip on a customer map"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "The do-not-enable card",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You enable an experimental switch on kitepump.ditamap and leave it on, or you skip the version number.\n\nExpected: Version recorded. Do-not-enable sentence. Any AI draft rewritten by you, or a not-licensed line."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Help > About. Write the Oxygen version in oxygen-bootcamp-work/week8/do-not-enable.txt."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Open Options and find DITA or experimental features (verify labels). Write the names you see, or write ‘not present in this version’."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write: I will not turn on an experimental switch on a customer map. I will not add a per-chapter filter (a branch filter) to the only copy of kitepump.ditamap."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "If your copy of Oxygen can draft a step for you, draft one command then rewrite every word yourself. If not, write ‘not licensed :  I still own the command’."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not leave an experimental flag on. Do not save a changed Options set as the shop default."
+                }
+              ],
+              "summary": "Version recorded. Do-not-enable sentence. Any AI draft rewritten by you, or a not-licensed line."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "An experimental switch exists in Options. When do you turn it on for a customer booklet?",
+              "options": [
+                "This afternoon, if a lead asks",
+                "You do not. Experimental means the vendor is testing. It is not a work instruction",
+                "Always :  new is better"
+              ],
+              "answer": 1,
+              "why": "Look. Write the name. Leave it off. A customer map is not a test bed."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "Oxygen drafts a command for you. The file has no red error. Who owns the step?",
+              "options": [
+                "The draft tool, because the file opens",
+                "You. Valid XML can still be the wrong procedure. Rewrite every command you would ship",
+                "Help > About"
+              ],
+              "answer": 1,
+              "why": "A clean file can still tell a person to do the wrong thing. You own the words."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Write the Oxygen version, list any experimental switches you can see, and leave the shipping map alone.",
+    "nextDayHook": "Tomorrow you fix a broken booklet. One error at a time. The pack is supposed to fail."
+  }
+}

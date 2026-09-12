@@ -1,0 +1,214 @@
+{
+  "day": 46,
+  "cover": {
+    "kicker": "Day 46 of 90 · Week 7",
+    "title": "Work with someone who does not live in Oxygen",
+    "overview": "Explain Content Fusion as a way to share a change with a reviewer who may only have a browser :  not as a second home for the files.",
+    "durationMin": 75,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Explain Content Fusion as a way to share a change with a reviewer who may only have a browser :  not as a second home for the files"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Share tool, four lines"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: A reviewer will not install Oxygen. One Syncro Soft answer is Content Fusion. What is it for"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Explain Content Fusion as a way to share a change with a reviewer who may only have a browser :  not as a second home for the files."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 75 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A reviewer with no desktop app",
+          "durationMin": 18,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "A reviewer with no desktop app",
+              "body": "Some people will not install Oxygen. They still need a way to read a change and leave a comment.\n\n**Content Fusion** is one Syncro Soft answer: you share a change set. They open it in a browser. That is the whole apple today.\n\nIt is not a second home for the files. The booklet and the pages still live in the folder you already use (or in Git, tomorrow). If your shop has no Fusion, you still write the four lines. A labeled mock counts."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Content Fusion** :  Oxygen’s share tool. A reviewer comments in a browser. Your files do not move house."
+                },
+                {
+                  "title": "Do not",
+                  "body": "Do not run Fusion comments and desktop Track Changes on the same file at once. Two piles hide status."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Content Fusion",
+                  "back": "Oxygen’s share tool. A reviewer comments in a browser. Your files do not move house"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "Vglmv_lDg7Y",
+              "title": "Interactive Tutorials in Oxygen",
+              "watchFor": [
+                "In-app lessons vs a shared review with another person"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Share tool, four lines",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: You describe Fusion as the home of the files, or you skip the four lines because you have no login.\n\nExpected: Four lines. Fusion stays a share around Oxygen files. Mock labeled if you used one."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Read the official Content Fusion description from Oxygen’s documentation hub. Quote at most two lines, then write your own."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Write: what Fusion is for (share a change set with a reviewer who may not install the desktop app)."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write: what it is not (not the one place the files live, not a second booklet)."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Write who should ignore Fusion this week (anyone who already reviews in the desktop Review view on the same file)."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "If you have Fusion at work, try a share on a copy. If not, caption a labeled mock as a mock and still write the four lines in oxygen-bootcamp-work/week7/fusion-four-lines.txt."
+                }
+              ],
+              "summary": "Four lines. Fusion stays a share around Oxygen files. Mock labeled if you used one."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "A reviewer will not install Oxygen. One Syncro Soft answer is Content Fusion. What is it for?",
+              "options": [
+                "Share a change so they can comment in a browser",
+                "Replace the booklet with a new file type",
+                "Publish WebHelp to your laptop"
+              ],
+              "answer": 0,
+              "why": "Fusion is a share around the files you already have. It is not a second desk and not last week’s publish button."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "You already have Track Changes comments on a file, and you start a Fusion share on the same file without finishing the first pile. What goes wrong?",
+              "options": [
+                "Nothing :  two piles are clearer",
+                "Status hides. Nobody knows which comment is the real one",
+                "Oxygen deletes the file"
+              ],
+              "answer": 1,
+              "why": "One review pile per file. Finish or drop the first before you start a second."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Explain Content Fusion as a way to share a change with a reviewer who may only have a browser :  not as a second home for the files.",
+    "nextDayHook": "Tomorrow you hand off a clean folder: map plus pages, plus a cover note."
+  }
+}

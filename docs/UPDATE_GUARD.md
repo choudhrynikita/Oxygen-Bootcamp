@@ -4,7 +4,7 @@ New `curriculumVersion` values must never silently rewrite completed days or ear
 
 ## When it fires
 
-On load, if stored `curriculumVersion` !== the catalog version (currently `2026.09.2`), show **one** screen before Today:
+On load, if stored `curriculumVersion` !== the catalog version (currently `2026.09.3`), show **one** screen before Today:
 
 1. What changed (day titles, quest ids, badge ids).
 2. Which of the learner's completed days or quests are affected.

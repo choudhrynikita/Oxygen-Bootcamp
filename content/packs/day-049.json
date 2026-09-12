@@ -1,0 +1,246 @@
+{
+  "day": 49,
+  "cover": {
+    "kicker": "Day 49 of 90 · Week 7 · week check",
+    "title": "Week 7 check",
+    "overview": "Repair a messy handoff: a pack with no map, leftover Track Changes, and a note that claims two homes. Pass the quiz so week 8 can open.",
+    "durationMin": 90,
+    "audience": "You already met these moves. Today you prove you can name them."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Repair a messy handoff: a pack with no map, leftover Track Changes, and a note that claims two homes. Pass the quiz so week 8 can open"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Three handoff faults"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: You failed this check. Does week 8 open anyway"
+    },
+    {
+      "id": "lo4",
+      "bloom": "evaluate",
+      "text": "Say what each error meant, in plain words"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "This week’s check",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Repair a messy handoff: a pack with no map, leftover Track Changes, and a note that claims two homes. Pass the quiz so week 8 can open."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "A check, not a show",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "A check, not a show",
+                  "body": "This is the week boss. You already met these faults. You are only proving you can name them.\n\n1. **No map in the pack** :  you sent pages and no booklet.\n2. **Leftover Track Changes** :  the review was not finished.\n3. **Two homes** :  a desktop copy and a zip both claimed to be the real files.\n\nFail the quiz and **week 8 stays locked**. Retry as many times as you want. The 5-minute warmup does not open the week."
+                },
+                {
+                  "title": "Word today",
+                  "body": "**Handoff** :  giving someone else a pack they can open. Map, pages, cover note, one home."
+                },
+                {
+                  "title": "Tone",
+                  "body": "Messy packs are normal the first time. Repair them. Then go home."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "No map in the pack",
+                  "back": "you sent pages and no booklet"
+                },
+                {
+                  "front": "Leftover Track Changes",
+                  "back": "the review was not finished"
+                },
+                {
+                  "front": "Two homes",
+                  "back": "a desktop copy and a zip both claimed to be the real files"
+                },
+                {
+                  "front": "Handoff",
+                  "back": "giving someone else a pack they can open. Map, pages, cover note, one home"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "ozFZz6YZMCY",
+              "title": "DITA Maps Manager View in Oxygen XML Editor 19",
+              "watchFor": [
+                "The map as the unit you hand off"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Three handoff faults",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The check copy still has no map, or leftover insertions are still in the page, or the note still claims two homes.\n\nExpected: Map present. Review clean enough to send. One-home sentence. Send list written."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Copy kitepump to oxygen-bootcamp-work/week7-check/ so you do not wreck the original."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Fault 1: make a pack with topics and no map, then add the map back. Run completeness."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Fault 2: turn on Track Changes, leave two leftover insertions, then accept or reject with intent. File opens clean."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "Fault 3: a note that says ‘the files live on my desktop and in the zip and both are home’. Rewrite it to one home."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "List the files you would send a reviewer, in 60 seconds, in oxygen-bootcamp-work/week7-check/send-list.txt."
+                },
+                {
+                  "title": "Step 6",
+                  "body": "Pass the quiz. You can retry it. Week 8 stays locked until this day is finished (lab + quiz + a short note)."
+                }
+              ],
+              "summary": "Map present. Review clean enough to send. One-home sentence. Send list written."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "You failed this check. Does week 8 open anyway?",
+              "options": [
+                "Yes, the Friday page is enough",
+                "No. Finish this day’s lab, quiz, and note. You can retry the quiz.",
+                "Yes, if you do the 5-minute warmup"
+              ],
+              "answer": 1,
+              "why": "Next week waits until you can hand off a book with one home and a finished review. Retry is free."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "A reviewer pack is missing the map. What breaks?",
+              "options": [
+                "Nothing :  each page is a full book",
+                "Pointers, keys, and neighbor pages. The reviewer cannot see the booklet",
+                "Help > About"
+              ],
+              "answer": 1,
+              "why": "The pack is a book. The map is the table of contents. No map, no book."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "Web Author is the same thing as the desktop app, just in a browser. What is still true?",
+              "options": [
+                "Every desktop button is in the browser tab",
+                "Same company and same kind of page. Fewer tools. Completeness and local publish still live on the desktop",
+                "The browser tab stores the only copy of the files"
+              ],
+              "answer": 1,
+              "why": "Thinner desk. Same writing app. You still pick one place the files live."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Repair a messy handoff: a pack with no map, leftover Track Changes, and a note that claims two homes. Pass the quiz so week 8 can open.",
+    "nextDayHook": "Week 8: when things break. Same words, slow booklets, a broken map you can repair. Still Oxygen."
+  }
+}

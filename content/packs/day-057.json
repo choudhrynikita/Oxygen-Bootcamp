@@ -1,0 +1,234 @@
+{
+  "day": 57,
+  "cover": {
+    "kicker": "Day 57 of 90 · Week 9",
+    "title": "The Sites tree is not your booklet",
+    "overview": "Name the Sites console, list three things you can do there, and write why that tree is not a DITA map.",
+    "durationMin": 90,
+    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+  },
+  "objectives": [
+    {
+      "id": "lo1",
+      "bloom": "apply",
+      "text": "Name the Sites console, list three things you can do there, and write why that tree is not a DITA map"
+    },
+    {
+      "id": "lo2",
+      "bloom": "apply",
+      "text": "Carry out the lab: Field log: Sites console"
+    },
+    {
+      "id": "lo3",
+      "bloom": "remember",
+      "text": "Choose the right answer for: You need to find the Kitepump landing page on the website team’s desk. First surface"
+    }
+  ],
+  "sections": [
+    {
+      "id": "today",
+      "title": "Today",
+      "lessons": [
+        {
+          "id": "welcome",
+          "title": "Welcome",
+          "durationMin": 8,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "statement",
+              "id": "w-stmt",
+              "body": "Name the Sites console, list three things you can do there, and write why that tree is not a DITA map."
+            },
+            {
+              "type": "text",
+              "id": "w-body",
+              "heading": "What today is",
+              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+            },
+            {
+              "type": "objectives",
+              "id": "w-lo"
+            },
+            {
+              "type": "continue",
+              "id": "w-go",
+              "rule": "none",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Sites console",
+          "durationMin": 25,
+          "questId": "a",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "t-0",
+              "heading": "Sites console",
+              "body": "The **Sites** console is where the website team’s page tree lives. Create, copy, move, properties. Official docs call the literacy **Basic Handling** :  how you move around, select, and open.\n\nIt is not Maps Manager. Do not look for a topicref, a key, or completeness here.\n\nKitepump is still your training product. Their landing page for it would live in this tree. Your handbook still lives in Oxygen."
+            },
+            {
+              "type": "text",
+              "id": "t-2",
+              "heading": "Figure",
+              "body": "Labeled mock: Sites card view with a Kitepump folder. Caption: *Mock. Kitepump is the training product story, not a live Adobe demo.* Open `samples/aem-author-field-log/mocks/sites-console.txt`."
+            },
+            {
+              "type": "accordion",
+              "id": "learn-extra",
+              "items": [
+                {
+                  "title": "Word today",
+                  "body": "**Sites** :  the AEM console that holds web pages as a tree. Not your booklet."
+                }
+              ]
+            },
+            {
+              "type": "flashcards",
+              "id": "learn-cards",
+              "cards": [
+                {
+                  "front": "Basic Handling",
+                  "back": "how you move around, select, and open"
+                },
+                {
+                  "front": "Sites",
+                  "back": "the AEM console that holds web pages as a tree. Not your booklet"
+                }
+              ]
+            },
+            {
+              "type": "media",
+              "id": "learn-vid",
+              "youtubeId": "7-Lcw5PejhI",
+              "title": "Go live faster with quick site creation in AEM",
+              "watchFor": [
+                "Where pages appear as a tree",
+                "The console around that tree"
+              ]
+            },
+            {
+              "type": "continue",
+              "id": "learn-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "lab",
+          "title": "Field log: Sites console",
+          "durationMin": 25,
+          "questId": "b",
+          "blocks": [
+            {
+              "type": "text",
+              "id": "lab-lead",
+              "heading": "Do the work",
+              "body": "This lab can fail. Fail when: The log calls the Sites tree a ditamap, or the mock includes Oxygen toolbars, or there are zero official-video notes.\n\nExpected: Three control names from the video. Tree vs booklet sentence. Mock labeled."
+            },
+            {
+              "type": "process",
+              "id": "lab-process",
+              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "steps": [
+                {
+                  "title": "Step 1",
+                  "body": "Watch the official Quick site creation video. Pause on the Sites console (or the closest view). Write three control names you can see."
+                },
+                {
+                  "title": "Step 2",
+                  "body": "Open samples/aem-author-field-log/mocks/sites-console.txt. It is a labeled mock, not a screenshot of Adobe UI."
+                },
+                {
+                  "title": "Step 3",
+                  "body": "Write oxygen-bootcamp-work/week9/field-log-57.txt: Sites console is a page tree. A DITA map is a booklet of topics. They do not share a toolbar."
+                },
+                {
+                  "title": "Step 4",
+                  "body": "List three jobs: go to a folder, open a page’s properties, open a page for edit. Write ‘verify in your version’ next to any guessed label."
+                },
+                {
+                  "title": "Step 5",
+                  "body": "Do not draw Oxygen Maps Manager inside the mock."
+                }
+              ],
+              "summary": "Three control names from the video. Tree vs booklet sentence. Mock labeled."
+            },
+            {
+              "type": "lab",
+              "id": "lab-block"
+            },
+            {
+              "type": "continue",
+              "id": "lab-go",
+              "rule": "complete-block-above",
+              "label": "Continue"
+            }
+          ]
+        },
+        {
+          "id": "check",
+          "title": "Check",
+          "durationMin": 12,
+          "questId": "c",
+          "blocks": [
+            {
+              "type": "knowledge-check",
+              "id": "kc-0",
+              "kind": "mc",
+              "q": "You need to find the Kitepump landing page on the website team’s desk. First surface?",
+              "options": [
+                "DITA Maps Manager in Oxygen",
+                "The Sites console in AEM",
+                "Help > About"
+              ],
+              "answer": 1,
+              "why": "Pages live in Sites. Booklets live in Oxygen. Two trees. Two apps."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-1",
+              "kind": "mc",
+              "q": "The Sites tree and your booklet both look like lists. Why not treat them as the same thing?",
+              "options": [
+                "They are the same thing",
+                "Sites holds web pages. A map holds pointers to help-page files. Different files, different toolbar",
+                "Sites is a completeness check"
+              ],
+              "answer": 1,
+              "why": "A tree is a tree. The thing in it is not. Do not look for topicref here."
+            },
+            {
+              "type": "knowledge-check",
+              "id": "kc-2",
+              "kind": "mc",
+              "q": "Card view, column view, list view. Why care?",
+              "options": [
+                "They are DITA page types",
+                "They are ways to see the same page tree :  pick one and still know it is not your booklet",
+                "They change author vs publish"
+              ],
+              "answer": 1,
+              "why": "Views are views. The tree is still Sites."
+            },
+            {
+              "type": "continue",
+              "id": "check-go",
+              "rule": "complete-all-above",
+              "label": "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "heading": "You should now be able to",
+    "recap": "Name the Sites console, list three things you can do there, and write why that tree is not a DITA map.",
+    "nextDayHook": "Tomorrow you make a page (or walk the create-page wizard on a labeled mock) and write title vs name."
+  }
+}
