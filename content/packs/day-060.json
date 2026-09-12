@@ -5,7 +5,7 @@
     "title": "A page is a stack of blocks, not a DITA topic",
     "overview": "Name page vs block, and write why a Text block is not an explaining page.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Pages and blocks, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Pages and blocks. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Pages and blocks",
               "body": "An AEM **page** has a template and a stack of **blocks**. Adobe’s ready-made blocks are called **Core Components** :  Title, Text, Image, Teaser, and more. You insert them. You do not build them this week.\n\nA **DITA topic** is a whole file with a type (explaining page, how-to, lookup). It is not a block. Do not paste a how-to into a Text block and call the landing page the handbook."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -89,6 +104,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Core Components",
@@ -127,20 +143,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: The log calls Text a DITA concept, or the mock is unlabeled, or you skip the four block names.\n\nExpected: Page vs block vs topic distinguished. Four names listed. Mock labeled."
+              "body": "You just met the idea. Now do the lab: Field log: page vs block.\n\nThis lab can fail. Fail when: The log calls Text a DITA concept, or the mock is unlabeled, or you skip the four block names.\n\nExpected: Page vs block vs topic distinguished. Four names listed. Mock labeled."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Field log: page vs block.",
+              "intro": "How to Field log: page vs block. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Field log: page vs block",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Write oxygen-bootcamp-work/week9/field-log-60.txt: A page is a stack of blocks on a template. A DITA topic is a typed XML file. A Text block is not a concept. A Teaser is not the short line under a DITA title."
                 },
                 {
                   "title": "Step 2",
-                  "body": "List four ready-made blocks you will meet next week: Text, Image, Teaser, Title :  names only today."
+                  "body": "List four ready-made blocks you will meet next week: Text, Image, Teaser, Title :  names only today.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -172,8 +200,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A Text block on a landing page is where you should paste the prime-the-pump how-to. True or not?",
               "options": [
@@ -187,6 +221,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "What is a component in AEM, in one line?",
               "options": [
@@ -200,6 +235,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-2",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Are you building a new block type today?",
               "options": [

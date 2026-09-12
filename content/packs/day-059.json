@@ -5,7 +5,7 @@
     "title": "Edit and Preview are not Publish",
     "overview": "Describe Edit (handles on the page) vs Preview (visitor-like) and write that neither one sends the page live.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Three verbs, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Three verbs. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Three verbs",
               "body": "**Edit** :  handles on the pieces of the page, dialogs, insert.\n\n**Preview** :  read the page without the handles.\n\n**Publish** :  copy the page to the live environment. Not today as a click. Tomorrow-plus. Today you only keep Preview apart from Publish.\n\nOxygen **Author** is a different product’s page view. Do not borrow the word. Say **Edit** in Page Editor."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/author_mode_button.png",
+              "alt": "Author mode button on the Oxygen editor tab",
+              "caption": "Author is the word-processor view. The button sits on the file tab.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -89,6 +104,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Edit",
@@ -136,20 +152,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: The log says Preview publishes the page, or Page Editor is called Oxygen Author mode, or you skip the mock label.\n\nExpected: Edit vs Preview vs Publish as three verbs. Mock labeled. Naming rule present."
+              "body": "You just met the idea. Now do the lab: Field log: Edit vs Preview.\n\nThis lab can fail. Fail when: The log says Preview publishes the page, or Page Editor is called Oxygen Author mode, or you skip the mock label.\n\nExpected: Edit vs Preview vs Publish as three verbs. Mock labeled. Naming rule present."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Field log: Edit vs Preview.",
+              "intro": "How to Field log: Edit vs Preview. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Field log: Edit vs Preview",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Write oxygen-bootcamp-work/week9/field-log-59.txt: Edit shows handles on the pieces of the page. Preview hides them so you can read the page. Preview does not send the page live."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Add: Oxygen Author view is the page view for XML. Page Editor Edit is the canvas for AEM pages. Do not call Page Editor ‘Author mode’."
+                  "body": "Add: Oxygen Author view is the page view for XML. Page Editor Edit is the canvas for AEM pages. Do not call Page Editor ‘Author mode’.",
+                  "image": {
+                    "src": "/media/oxygen/author_mode_button.png",
+                    "alt": "Author mode button on the Oxygen editor tab",
+                    "caption": "Author is the word-processor view. The button sits on the file tab.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -181,8 +209,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Preview in Page Editor sends the page live. True or not?",
               "options": [
@@ -196,6 +230,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Why not call Page Editor ‘Author mode’?",
               "options": [
@@ -209,6 +244,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-2",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You need to change the page title in properties. Are you on the Edit canvas?",
               "options": [

@@ -8,6 +8,7 @@ import type {
   ButtonsBlock,
   CalloutBlock,
   CoursePack,
+  FigureBlock,
   KnowledgeCheckBlock,
   LabeledGraphicBlock,
   ListBlock,
@@ -25,6 +26,7 @@ import { LabPanel } from "@/components/lab-panel";
 import { FieldNote } from "@/components/field-note";
 import { FirstWindowGraphic, WorkbenchGraphic } from "@/components/rise/graphics";
 import { FlashB, ProcessB, SortB } from "@/components/rise/interactions";
+import { CourseFigure, LeadLine } from "@/components/rise/figure";
 import { useBootcamp } from "@/lib/bootcamp/store";
 
 type DoneProps = { onComplete: () => void; complete: boolean };
@@ -61,6 +63,8 @@ export function RiseBlock({
       return <CalloutB block={block} />;
     case "media":
       return <MediaB block={block} />;
+    case "figure":
+      return <FigureB block={block} />;
     case "accordion":
       return <AccordionB block={block} complete={complete} onComplete={onComplete} />;
     case "tabs":
@@ -147,6 +151,18 @@ function CalloutB({ block }: { block: CalloutBlock }) {
   );
 }
 
+function FigureB({ block }: { block: FigureBlock }) {
+  return (
+    <CourseFigure
+      src={block.src}
+      alt={block.alt}
+      caption={block.caption}
+      credit={block.credit}
+      href={block.href}
+    />
+  );
+}
+
 function MediaB({ block }: { block: MediaBlock }) {
   return (
     <div className="rise-enter my-6">
@@ -170,7 +186,9 @@ function AccordionB({ block, onComplete }: { block: AccordionBlock } & DoneProps
   }, [seen, block.items.length, onComplete]);
 
   return (
-    <div className="rise-enter my-8 divide-y divide-line overflow-hidden rounded-xl border border-line bg-card">
+    <div>
+      <LeadLine text={block.lead} />
+      <div className="rise-enter my-8 divide-y divide-line overflow-hidden rounded-xl border border-line bg-card">
       {block.items.map((item, i) => {
         const isOpen = !!open[i];
         return (
@@ -200,6 +218,7 @@ function AccordionB({ block, onComplete }: { block: AccordionBlock } & DoneProps
         );
       })}
     </div>
+    </div>
   );
 }
 
@@ -214,6 +233,7 @@ function TabsB({ block, onComplete }: { block: TabsBlock } & DoneProps) {
   const current = block.items[tab];
   return (
     <div className="rise-enter my-8">
+      <LeadLine text={block.lead} />
       <div role="tablist" aria-label="Tabs" className="flex flex-wrap gap-0 border-b border-line">
         {block.items.map((item, i) => (
           <button
@@ -258,7 +278,32 @@ function LabeledB({ block, onComplete }: { block: LabeledGraphicBlock } & DonePr
 
   return (
     <div className="rise-enter my-8">
-      <Graphic activeId={active} onPick={pick} labels={block.labels} />
+      <LeadLine text={block.lead} />
+      {block.src ? (
+        <div className="relative overflow-hidden rounded-xl border border-line bg-card shadow-[var(--shadow-soft)]">
+          <img src={block.src} alt={block.alt ?? "Oxygen window"} className="block h-auto w-full" />
+          {block.labels.map((label, i) =>
+            label.x != null && label.y != null ? (
+              <button
+                key={label.id}
+                type="button"
+                className={`rise-hotspot absolute grid h-8 w-8 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-2 font-[family-name:var(--font-sans)] text-xs font-bold ${
+                  active === label.id
+                    ? "border-accent-fg bg-accent text-accent-fg"
+                    : "border-accent-fg bg-accent text-accent-fg"
+                }`}
+                style={{ left: `${label.x}%`, top: `${label.y}%` }}
+                aria-label={label.title}
+                onClick={() => pick(label.id)}
+              >
+                {i + 1}
+              </button>
+            ) : null,
+          )}
+        </div>
+      ) : (
+        <Graphic activeId={active} onPick={pick} labels={block.labels} />
+      )}
       {current ? (
         <div className="rise-enter mt-3 rounded-xl border border-line bg-card px-4 py-3">
           <p className="m-0 font-[family-name:var(--font-sans)] text-sm font-bold text-navy">{current.title}</p>
@@ -267,6 +312,18 @@ function LabeledB({ block, onComplete }: { block: LabeledGraphicBlock } & DonePr
       ) : (
         <p className="mt-2 mb-0 font-[family-name:var(--font-sans)] text-sm text-muted">Click each number.</p>
       )}
+      {block.caption ? <p className="mt-2 text-sm text-muted">{block.caption}</p> : null}
+      {block.credit ? (
+        <p className="mt-1 mb-0 font-[family-name:var(--font-sans)] text-xs text-muted">
+          {block.href ? (
+            <a href={block.href} target="_blank" rel="noopener noreferrer">
+              {block.credit}
+            </a>
+          ) : (
+            block.credit
+          )}
+        </p>
+      ) : null}
     </div>
   );
 }
@@ -279,6 +336,7 @@ function ScenarioB({ block, onComplete }: { block: ScenarioBlock } & DoneProps) 
 
   return (
     <div className="rise-enter my-8 rounded-xl border border-line bg-card p-6">
+      <LeadLine text={block.lead} />
       <p className="mt-0 font-[family-name:var(--font-sans)] text-xs tracking-[0.16em] text-muted uppercase">Scenario</p>
       <p className="text-lg">{block.situation}</p>
       <div className="mt-4 flex flex-col gap-3">
@@ -331,6 +389,7 @@ function KcB({
 
   return (
     <div className="rise-enter my-8 rounded-xl bg-card p-6 shadow-[var(--shadow-soft)] md:p-8">
+      <LeadLine text={block.lead} />
       <p className="m-0 font-[family-name:var(--font-sans)] text-xs tracking-[0.16em] text-muted uppercase">
         Knowledge check
       </p>

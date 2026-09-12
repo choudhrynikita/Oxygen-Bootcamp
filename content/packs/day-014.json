@@ -49,7 +49,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want.\n\nNext: a short recap, then the lab, then the check."
             },
             {
               "type": "objectives",
@@ -71,9 +71,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You already met these moves this week. Now you prove you can name them."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Check",
               "body": "If you cannot say which page is which, you are not ready to stitch them into a booklet.\n\nFail the quiz and **week 3 stays locked**. Retry is free. The warmup does not open the week."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "media",
@@ -102,20 +116,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You still have steps on the explaining page, or a file is broken, or you cannot say which type is which.\n\nExpected: Three clean files, each the right type. Quiz passed."
+              "body": "You just met the idea. Now do the lab: Sort the messy draft.\n\nThis lab can fail. Fail when: You still have steps on the explaining page, or a file is broken, or you cannot say which type is which.\n\nExpected: Three clean files, each the right type. Quiz passed."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Sort the messy draft.",
+              "intro": "How to Sort the messy draft. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Sort the messy draft",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Read these three jobs: (1) what a vase is, (2) how to recut stems, (3) vase sizes in centimetres."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Say which existing file (or new file) each job belongs in: concept, task, or reference."
+                  "body": "Say which existing file (or new file) each job belongs in: concept, task, or reference.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -151,8 +177,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "“What a vase is” belongs on…",
               "options": [
@@ -166,6 +198,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "“How to recut stems” belongs on…",
               "options": [
@@ -179,6 +212,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-2",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You failed this check. Does week 3 open?",
               "options": [

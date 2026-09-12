@@ -5,7 +5,7 @@
     "title": "Hand off a clean folder",
     "overview": "Pack the booklet and its pages into a small folder a reviewer can open, plus a one-page note, without sending your whole disk.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn The pack is a book, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: The pack is a book. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "The pack is a book",
               "body": "Send the **map** plus the **pages** it points at. Say what to comment on. Say do not rename files. A renamed file is a broken pointer.\n\nDo not send `out/` publish folders. Do not send your whole `oxygen-bootcamp-work/` tree. Git can wait until the reviewer has a repo."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/New-Project-dialog.png",
+              "alt": "New Project dialog in Oxygen XML Editor",
+              "caption": "File > New Project. This dialog is how a blank project gets a name and a folder.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Reviewer pack",
@@ -117,20 +133,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You send the whole oxygen-bootcamp-work tree, or you omit the map, or you include a publish out/ folder.\n\nExpected: A small pack with the map, the pages, and a cover note a non-writer can follow."
+              "body": "You just met the idea. Now do the lab: Reviewer folder plus cover note.\n\nThis lab can fail. Fail when: You send the whole oxygen-bootcamp-work tree, or you omit the map, or you include a publish out/ folder.\n\nExpected: A small pack with the map, the pages, and a cover note a non-writer can follow."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Reviewer folder plus cover note.",
+              "intro": "How to Reviewer folder plus cover note. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Reviewer folder plus cover note",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Copy kitepump.ditamap and its topics into oxygen-bootcamp-work/week7/reviewer-pack/."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Add README-reviewer.txt: open the map in Maps Manager; comment only on prime-the-pump.dita; do not rename files."
+                  "body": "Add README-reviewer.txt: open the map in Maps Manager; comment only on prime-the-pump.dita; do not rename files.",
+                  "image": {
+                    "src": "/media/oxygen/New-Project-dialog.png",
+                    "alt": "New Project dialog in Oxygen XML Editor",
+                    "caption": "File > New Project. This dialog is how a blank project gets a name and a folder.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -162,8 +190,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A reviewer without Oxygen should receive only the one topic file. True or not?",
               "options": [
@@ -177,6 +211,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "What stays out of a reviewer pack?",
               "options": [

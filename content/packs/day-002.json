@@ -5,7 +5,7 @@
     "title": "Open a sample and type a sentence",
     "overview": "Open the sample page, type one sentence, and save the file.",
     "durationMin": 80,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 80 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 80 minutes. Next you will learn A page is a file, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: A page is a file. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "A page is a file",
               "body": "Yesterday you opened the app. Today you open a **page**. A page is just a file. This course ships a tiny sample shop called flower-docs. You will write into it, not into a blank desktop file.\n\n**File > Open** → `samples/flower-docs/topics/hello-concept.dita`.\n\nThe big middle area is where you type. Add one sentence. **Save**. Close. Open it again. If the sentence is still there, you did the job."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -87,6 +102,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Topic",
@@ -122,20 +138,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You typed in a notes app instead of Oxygen, or you did not save, or the sentence is gone after reopen.\n\nExpected: The sample file opens, the extra sentence is there after save and reopen, and you wrote the path down."
+              "body": "You just met the idea. Now do the lab: One sentence in the sample.\n\nThis lab can fail. Fail when: You typed in a notes app instead of Oxygen, or you did not save, or the sentence is gone after reopen.\n\nExpected: The sample file opens, the extra sentence is there after save and reopen, and you wrote the path down."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to One sentence in the sample.",
+              "intro": "How to One sentence in the sample. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "One sentence in the sample",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "In Oxygen: File > Open. Open samples/flower-docs/topics/hello-concept.dita from this course."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Click in the big writing area. Add this sentence under the first paragraph: The desk copy is a sample, not a live catalog."
+                  "body": "Click in the big writing area. Add this sentence under the first paragraph: The desk copy is a sample, not a live catalog.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -171,8 +199,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "How do you open a page that already exists?",
               "options": [
@@ -186,6 +220,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You typed a sentence and the tab still shows the file name. What should you do before you quit?",
               "options": [

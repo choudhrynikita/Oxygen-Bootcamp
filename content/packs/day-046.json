@@ -5,7 +5,7 @@
     "title": "Work with someone who does not live in Oxygen",
     "overview": "Explain Content Fusion as a way to share a change with a reviewer who may only have a browser :  not as a second home for the files.",
     "durationMin": 75,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 75 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 75 minutes. Next you will learn A reviewer with no desktop app, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: A reviewer with no desktop app. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "A reviewer with no desktop app",
               "body": "Some people will not install Oxygen. They still need a way to read a change and leave a comment.\n\n**Content Fusion** is one Syncro Soft answer: you share a change set. They open it in a browser. That is the whole apple today.\n\nIt is not a second home for the files. The booklet and the pages still live in the folder you already use (or in Git, tomorrow). If your shop has no Fusion, you still write the four lines. A labeled mock counts."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -87,6 +102,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Content Fusion",
@@ -121,20 +137,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You describe Fusion as the home of the files, or you skip the four lines because you have no login.\n\nExpected: Four lines. Fusion stays a share around Oxygen files. Mock labeled if you used one."
+              "body": "You just met the idea. Now do the lab: Share tool, four lines.\n\nThis lab can fail. Fail when: You describe Fusion as the home of the files, or you skip the four lines because you have no login.\n\nExpected: Four lines. Fusion stays a share around Oxygen files. Mock labeled if you used one."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Share tool, four lines.",
+              "intro": "How to Share tool, four lines. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Share tool, four lines",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Read the official Content Fusion description from Oxygen’s documentation hub. Quote at most two lines, then write your own."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Write: what Fusion is for (share a change set with a reviewer who may not install the desktop app)."
+                  "body": "Write: what Fusion is for (share a change set with a reviewer who may not install the desktop app).",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -170,8 +198,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A reviewer will not install Oxygen. One Syncro Soft answer is Content Fusion. What is it for?",
               "options": [
@@ -185,6 +219,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You already have Track Changes comments on a file, and you start a Fusion share on the same file without finishing the first pile. What goes wrong?",
               "options": [

@@ -1,0 +1,219 @@
+{
+  "items": [
+    {
+      "id": "oxygen-ui",
+      "src": "/media/oxygen/oxygen-UI.png",
+      "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+      "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+      "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+      "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html",
+      "tags": [
+        "ui",
+        "window",
+        "install",
+        "look",
+        "menu",
+        "help"
+      ],
+      "fromDay": 1,
+      "bytes": 141430
+    },
+    {
+      "id": "new-project",
+      "src": "/media/oxygen/New-Project-dialog.png",
+      "alt": "New Project dialog in Oxygen XML Editor",
+      "caption": "File > New Project. This dialog is how a blank project gets a name and a folder.",
+      "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+      "href": "https://www.oxygenxml.com/doc/ug-editor/",
+      "tags": [
+        "project",
+        "new",
+        "folder",
+        "install"
+      ],
+      "fromDay": 1,
+      "bytes": 12019
+    },
+    {
+      "id": "new-doc-wizard",
+      "src": "/media/oxygen/New_doc_wizard.png",
+      "alt": "New document wizard in Oxygen XML Editor",
+      "caption": "File > New. Pick a file type here. On day 1 you only need a blank project, not this wizard yet.",
+      "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+      "href": "https://www.oxygenxml.com/doc/ug-editor/",
+      "tags": [
+        "new",
+        "file",
+        "wizard",
+        "blank"
+      ],
+      "fromDay": 1,
+      "bytes": 23855
+    },
+    {
+      "id": "author-mode-button",
+      "src": "/media/oxygen/author_mode_button.png",
+      "alt": "Author mode button on the Oxygen editor tab",
+      "caption": "Author is the word-processor view. The button sits on the file tab.",
+      "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+      "href": "https://www.oxygenxml.com/doc/ug-editor/",
+      "tags": [
+        "author",
+        "view",
+        "text",
+        "tab"
+      ],
+      "fromDay": 2,
+      "bytes": 966
+    },
+    {
+      "id": "author-cc",
+      "src": "/media/oxygen/author_content_completion.png",
+      "alt": "Content completion popup in Author mode",
+      "caption": "Content completion in Author mode. Press Enter and pick the next legal tag.",
+      "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+      "href": "https://www.oxygenxml.com/doc/ug-editor/",
+      "tags": [
+        "author",
+        "completion",
+        "tag",
+        "enter"
+      ],
+      "fromDay": 5,
+      "bytes": 3367
+    },
+    {
+      "id": "maps-manager",
+      "src": "/media/oxygen/sa_dita_maps_manager_view.png",
+      "alt": "DITA Maps Manager view in Oxygen XML Editor",
+      "caption": "DITA Maps Manager. This is the booklet view, not the folder on disk.",
+      "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+      "href": "https://www.oxygenxml.com/doc/ug-editor/topics/dita-maps-manager.html",
+      "tags": [
+        "map",
+        "maps",
+        "booklet",
+        "dita"
+      ],
+      "fromDay": 15,
+      "bytes": 21271
+    },
+    {
+      "id": "dmm-startup",
+      "src": "/media/oxygen/dmm-startup.png",
+      "alt": "DITA Maps Manager start state",
+      "caption": "Maps Manager before a booklet is open. Open a map from here.",
+      "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+      "href": "https://www.oxygenxml.com/doc/ug-editor/topics/dita-maps-manager.html",
+      "tags": [
+        "map",
+        "maps",
+        "open"
+      ],
+      "fromDay": 15,
+      "bytes": 17068
+    },
+    {
+      "id": "reusable",
+      "src": "/media/oxygen/Dita_reusable_components_view.png",
+      "alt": "DITA Reusable Components view",
+      "caption": "Reusable Components view. Shared phrases live here, not as copy-paste.",
+      "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+      "href": "https://www.oxygenxml.com/doc/ug-editor/",
+      "tags": [
+        "reuse",
+        "conref",
+        "key",
+        "component"
+      ],
+      "fromDay": 22,
+      "bytes": 36962
+    },
+    {
+      "id": "new-document-wizard",
+      "src": "/media/oxygen/NewDocumentWizard.png",
+      "alt": "New Document wizard with templates",
+      "caption": "New Document wizard. Topic, task, and concept templates live here.",
+      "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+      "href": "https://www.oxygenxml.com/doc/ug-editor/",
+      "tags": [
+        "topic",
+        "task",
+        "concept",
+        "template",
+        "new"
+      ],
+      "fromDay": 8,
+      "bytes": 38657
+    },
+    {
+      "id": "cf-editing",
+      "src": "/media/oxygen/CF_editing_interface.png",
+      "alt": "Oxygen visual editing interface",
+      "caption": "Visual editing interface. The page looks like a word processor while the file is still XML.",
+      "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+      "href": "https://www.oxygenxml.com/doc/ug-editor/",
+      "tags": [
+        "author",
+        "visual",
+        "edit"
+      ],
+      "fromDay": 3,
+      "bytes": 121983
+    },
+    {
+      "id": "dita-templates",
+      "src": "/media/oxygen/WA-DITA-New-Templates.png",
+      "alt": "New DITA templates list",
+      "caption": "New DITA templates. Topic, task, and concept are three different page types.",
+      "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+      "href": "https://www.oxygenxml.com/doc/ug-editor/",
+      "tags": [
+        "dita",
+        "topic",
+        "task",
+        "concept",
+        "template"
+      ],
+      "fromDay": 8,
+      "bytes": 47287
+    },
+    {
+      "id": "track-changes",
+      "src": "/media/oxygen/author_track_changes.png",
+      "alt": "Track changes in Author mode",
+      "caption": "Track Changes in Author mode. Review happens on the page, not in email.",
+      "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+      "href": "https://www.oxygenxml.com/doc/ug-editor/",
+      "tags": [
+        "review",
+        "track",
+        "comment"
+      ],
+      "fromDay": 36,
+      "bytes": 95140
+    },
+    {
+      "id": "validation-config",
+      "src": "/media/oxygen/Configure-validation-engine.png",
+      "alt": "Configure validation engine dialog",
+      "caption": "Validation engine. Red marks mean the file is not well-formed or not valid yet.",
+      "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+      "href": "https://www.oxygenxml.com/doc/ug-editor/",
+      "tags": [
+        "valid",
+        "error",
+        "red",
+        "check"
+      ],
+      "fromDay": 5,
+      "bytes": 33478
+    }
+  ],
+  "failed": [
+    {
+      "id": "author-top-stripe",
+      "error": "too small 442 image/png https://raw.githubusercontent.com/oxygenxml/userguide/master/DITA/img/author_top_stripe.png"
+    }
+  ]
+}

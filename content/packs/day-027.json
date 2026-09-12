@@ -5,7 +5,7 @@
     "title": "When it is better to copy",
     "overview": "Find one reused warning that should be a local sentence, replace the pointer, and write the rule you used.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Reuse is a tool, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Reuse is a tool. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Reuse is a tool",
               "body": "A pointer that saves twenty identical warnings is useful. A pointer that saves one sentence is extra work. A pointer that shares a half-wrong warning is a defect.\n\nReuse **small**, **stable**, **true in every place it appears**. Copy when the sentence will drift, or appears once, or is product-specific safety text.\n\nNever edit the pulled copy on the how-to. Change the source, or write a local note."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/author_mode_button.png",
+              "alt": "Author mode button on the Oxygen editor tab",
+              "caption": "Author is the word-processor view. The button sits on the file tab.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Local note",
@@ -118,20 +134,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You retired nothing, or you deleted a still-shared warning without replacing it, or the rule file is slogans with no example.\n\nExpected: One fewer library id, or one converted local note. A three-bullet rule file. Pack still clean."
+              "body": "You just met the idea. Now do the lab: Retire one weak reuse.\n\nThis lab can fail. Fail when: You retired nothing, or you deleted a still-shared warning without replacing it, or the rule file is slogans with no example.\n\nExpected: One fewer library id, or one converted local note. A three-bullet rule file. Pack still clean."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Retire one weak reuse.",
+              "intro": "How to Retire one weak reuse. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Retire one weak reuse",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Look at the three library notes. Pick the weakest: too specific, too vague, or used only once with no second home."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Replace that pointer with a local note on the how-to. Delete the library id if nothing else uses it."
+                  "body": "Replace that pointer with a local note on the how-to. Delete the library id if nothing else uses it.",
+                  "image": {
+                    "src": "/media/oxygen/author_mode_button.png",
+                    "alt": "Author mode button on the Oxygen editor tab",
+                    "caption": "Author is the word-processor view. The button sits on the file tab.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -167,8 +195,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A sentence is reused on one page and will not appear anywhere else. Keep the pointer?",
               "options": [
@@ -182,6 +216,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Two products need opposite warnings. One library note tries to cover both with vague wording. What do you do?",
               "options": [

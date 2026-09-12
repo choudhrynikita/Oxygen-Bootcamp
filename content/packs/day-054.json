@@ -5,7 +5,7 @@
     "title": "House rules that catch the same mistake twice",
     "overview": "Read one house rule as a Schematron assert (or write a pretend one) and say what it flags.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn The same mistake, twice, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: The same mistake, twice. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "The same mistake, twice",
               "body": "Grammar tells you a how-to may not want an explaining-page body. It does not tell you that the short line under the title should not start with “This topic”.\n\n**Schematron** is a rules file that flags the same mistake. A shop writes the rule once. Oxygen shows it every time. That is a house rule, compiled.\n\nIf you have no file yet, write a pretend one and label it pretend. Do not paste a stranger’s 200-line file into git.\n\nA **Quick Fix** can rewrite the page to match the rule. Click it only when you can say what will change."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Schematron",
@@ -118,20 +134,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You copy a long rules file from a forum as ‘the rule’, or you skip writing the rule in your own words.\n\nExpected: One assert in your words, real or pretend. Pretend is labeled pretend."
+              "body": "You just met the idea. Now do the lab: One house rule, in your words.\n\nThis lab can fail. Fail when: You copy a long rules file from a forum as ‘the rule’, or you skip writing the rule in your own words.\n\nExpected: One assert in your words, real or pretend. Pretend is labeled pretend."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to One house rule, in your words.",
+              "intro": "How to One house rule, in your words. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "One house rule, in your words",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "If you have a Schematron file at work, open one rule. Write what it flags, in plain words, in oxygen-bootcamp-work/week8/house-rule.txt."
                 },
                 {
                   "title": "Step 2",
-                  "body": "If you do not have one, write a pretend rule and label it pretend: the short line under the title must not start with ‘This topic’."
+                  "body": "If you do not have one, write a pretend rule and label it pretend: the short line under the title must not start with ‘This topic’.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -163,8 +191,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A page is well-formed and valid, but the short line under the title starts with ‘This topic’. Who can flag that?",
               "options": [
@@ -178,6 +212,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A yellow bulb offers a Quick Fix on a house rule. When do you click it?",
               "options": [

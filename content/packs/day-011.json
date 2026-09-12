@@ -5,7 +5,7 @@
     "title": "Lists and notes",
     "overview": "Put a bullet list, a numbered list, and one note on the right kind of page.",
     "durationMin": 85,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 85 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 85 minutes. Next you will learn Lists are not decoration, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Lists are not decoration. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Lists are not decoration",
               "body": "- **Bullets** :  a set of things, no order.\n- **Numbers** :  only when the order is the work. On a task, use real steps.\n- **A note** :  a tip or a warning beside the work. Not a fourth step.\n\nIf you use numbers because they “look serious,” you are decorating. Stop."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Bullets",
@@ -130,20 +146,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: The explaining page has numbered steps, or the how-to’s steps became bullets, or the note is a fake extra step.\n\nExpected: Bullets on the explaining page. Real steps plus one note on the how-to. Both clean."
+              "body": "You just met the idea. Now do the lab: One list, one note, the right page.\n\nThis lab can fail. Fail when: The explaining page has numbered steps, or the how-to’s steps became bullets, or the note is a fake extra step.\n\nExpected: Bullets on the explaining page. Real steps plus one note on the how-to. Both clean."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to One list, one note, the right page.",
+              "intro": "How to One list, one note, the right page. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "One list, one note, the right page",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Open your explaining page (what-a-cut-flower.dita). Add a bullet list of two flower parts. Not numbered :  these are not steps."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Open your how-to (change-the-water.dita). Confirm the steps are still real steps, not a bullet list."
+                  "body": "Open your how-to (change-the-water.dita). Confirm the steps are still real steps, not a bullet list.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -179,8 +207,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Flower parts (stem, bloom) on an explaining page should be…",
               "options": [
@@ -194,6 +228,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A note on a how-to is for…",
               "options": [

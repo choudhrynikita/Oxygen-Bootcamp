@@ -5,7 +5,7 @@
     "title": "Type on the page (Title and Text)",
     "overview": "Put a heading and two short sentences on a web page using Title and Text, and keep the handbook steps out of the body.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Type on the page, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Type on the page. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Type on the page",
               "body": "Last week you made a page in AEM :  Adobe’s website tool :  and looked at Edit, Preview, and Publish. Today you put words on that page.\n\nA page is built from **components**. A component is a block you drop onto the page. Adobe ships a set of ready-made blocks called **Core Components**. Today you use two of them.\n\n**Title** is the heading block. You pick a heading size (h1, h2, and so on) in a small form. Use the size the template already planned. **Text** is the body. You can bold and make a list there.\n\nDo not paste the handbook how-to into Text. The handbook stays in Oxygen. This page is a short web page."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -89,6 +104,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Title",
@@ -128,20 +144,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You paste handbook steps into Text, or you skip heading size, or the mock has no caption.\n\nExpected: Log names Title vs Text. Kitepump copy is two short sentences. Mock labeled."
+              "body": "You just met the idea. Now do the lab: Title and two sentences.\n\nThis lab can fail. Fail when: You paste handbook steps into Text, or you skip heading size, or the mock has no caption.\n\nExpected: Log names Title vs Text. Kitepump copy is two short sentences. Mock labeled."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Title and two sentences.",
+              "intro": "How to Title and two sentences. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Title and two sentences",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "You may not have AEM. That is expected. Use the official video, a labeled mock, and a field log."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Read the Core Components pages for Title and Text (skim). Write oxygen-bootcamp-work/week10/field-log-63.txt."
+                  "body": "Read the Core Components pages for Title and Text (skim). Write oxygen-bootcamp-work/week10/field-log-63.txt.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -181,8 +209,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The page already has a Title set as the main heading. You also make a main heading inside Text. What is the problem?",
               "options": [
@@ -196,6 +230,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Where do the inflate-the-tire steps live?",
               "options": [

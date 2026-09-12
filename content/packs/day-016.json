@@ -5,7 +5,7 @@
     "title": "The booklet view",
     "overview": "Open Maps Manager, set the sample map as the root booklet, and explain how that tree is not the folder list.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn The tree is the booklet, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: The tree is the booklet. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "The tree is the booklet",
               "body": "**DITA Maps Manager** is the booklet view. The folder list (Project view) is just files on disk.\n\nA page can sit on disk and still be missing from the booklet. That is like a chapter printed and left in a drawer.\n\n**Root map** :  the booklet Oxygen should use as the main table of contents. Set it. Later, names defined in the booklet will work."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/New-Project-dialog.png",
+              "alt": "New Project dialog in Oxygen XML Editor",
+              "caption": "File > New Project. This dialog is how a blank project gets a name and a folder.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Root map",
@@ -122,20 +138,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You only opened the map as tags, or you cannot say tree vs folder list.\n\nExpected: Maps Manager shows the sample booklet. Root map is set. Two-line note saved."
+              "body": "You just met the idea. Now do the lab: Maps Manager, on purpose.\n\nThis lab can fail. Fail when: You only opened the map as tags, or you cannot say tree vs folder list.\n\nExpected: Maps Manager shows the sample booklet. Root map is set. Two-line note saved."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Maps Manager, on purpose.",
+              "intro": "How to Maps Manager, on purpose. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Maps Manager, on purpose",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Switch to the DITA perspective if you have it, so Maps Manager docks on the side."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Open flowers.ditamap in Maps Manager (the tree), not only as tags."
+                  "body": "Open flowers.ditamap in Maps Manager (the tree), not only as tags.",
+                  "image": {
+                    "src": "/media/oxygen/New-Project-dialog.png",
+                    "alt": "New Project dialog in Oxygen XML Editor",
+                    "caption": "File > New Project. This dialog is how a blank project gets a name and a folder.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -171,8 +199,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Maps Manager shows…",
               "options": [
@@ -186,6 +220,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Why set a root map?",
               "options": [

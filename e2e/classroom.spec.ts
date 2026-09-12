@@ -3,9 +3,10 @@ import { test, expect } from "@playwright/test";
 test.describe("Oxygen Bootcamp classroom", () => {
   test("home is Today, not a marketing hero", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByRole("heading", { level: 1 })).toContainText("Day");
+    await expect(page.getByText(/Day \d+ of 90/)).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
     await expect(page.getByRole("heading", { name: /Today’s warmup|Today's warmup|Daily Burst/i })).toBeVisible();
-    await expect(page.getByText("Next unfinished lab")).toBeVisible();
+    await expect(page.getByText("Lab today:")).toBeVisible();
     await expect(page.getByPlaceholder(/Install, how-to|Maps, conref/i)).toBeVisible();
     await expect(page.getByText(/exciting journey/i)).toHaveCount(0);
   });
@@ -41,7 +42,7 @@ test.describe("Oxygen Bootcamp classroom", () => {
     }
     await expect(page.getByText(/does not finish (the day’s|today’s|the day's|today's) lesson/i)).toBeVisible();
     await page.goto("/progress");
-    await expect(page.getByText("0 / 90 days with a lab")).toBeVisible();
+    await expect(page.getByText(/0 \/ 90 days/)).toBeVisible();
   });
 
   test("quiz scores from options, not stems", async ({ page }) => {

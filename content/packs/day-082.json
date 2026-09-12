@@ -49,7 +49,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want.\n\nNext: a short recap, then the lab, then the check."
             },
             {
               "type": "objectives",
@@ -71,9 +71,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You already met these moves this week. Now you prove you can name them."
+            },
+            {
+              "type": "text",
               "id": "t-1",
               "heading": "Proof",
               "body": "1. Two handbook desks (Guides and Oxygen), one website desk (Sites).\n2. No fake product name.\n3. Checkout is a lock, not a preview."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -84,6 +98,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "A check, not a show",
@@ -94,6 +109,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Oxygen",
@@ -128,20 +144,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: The landing page is assigned to Oxygen, or the map is assigned to Sites.\n\nExpected: Three correct desks. Mock labeled."
+              "body": "You just met the idea. Now do the lab: Three objects.\n\nThis lab can fail. Fail when: The landing page is assigned to Oxygen, or the map is assigned to Sites.\n\nExpected: Three correct desks. Mock labeled."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Three objects.",
+              "intro": "How to Three objects. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Three objects",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Write oxygen-bootcamp-work/week12/field-log-82.txt."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Object 1: kitepump.ditamap restructure → Oxygen."
+                  "body": "Object 1: kitepump.ditamap restructure → Oxygen.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -181,8 +209,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A campaign landing page with a hero belongs in Oxygen. True or not?",
               "options": [
@@ -196,6 +230,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Who rebuilds the booklet when the chapters move?",
               "options": [
@@ -209,6 +244,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-2",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A reviewer flags one step. Where should they comment?",
               "options": [

@@ -5,7 +5,7 @@
     "title": "Hints that appear while you type",
     "overview": "Turn on Hints, use the list that appears when you press Enter, and leave the look of Author alone.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Labels while you type, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Labels while you type. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Labels while you type",
               "body": "**Hints** are labels in Author that show the name of the piece you are in (step, command, result) while you type.\n\nYou may toggle **Hints**, **Inline actions**, and **Full tags**. You may not ship a private Author look that only your login can see.\n\n**Enter** opens a list of next legal pieces. The parent piece decides the list. If a toolbar button is grey, this kind of page does not allow that thing in that spot.\n\nOutline is the tree. Click to jump."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Framework",
@@ -118,20 +134,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You added a private Author look as the lab, or you never opened the Enter list, or Hints stayed off.\n\nExpected: Hints on. Three labels listed. Enter used for the list. Framework note written. No private look."
+              "body": "You just met the idea. Now do the lab: Hints on.\n\nThis lab can fail. Fail when: You added a private Author look as the lab, or you never opened the Enter list, or Hints stayed off.\n\nExpected: Hints on. Three labels listed. Enter used for the list. Framework note written. No private look."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Hints on.",
+              "intro": "How to Hints on. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Hints on",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "In Author, find the Styles dropdown (default / Hints / Inline actions / Full tags :  verify labels)."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Turn on Hints. Write three hint labels you see on a how-to (for example cmd, info, result)."
+                  "body": "Turn on Hints. Write three hint labels you see on a how-to (for example cmd, info, result).",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -171,8 +199,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A framework packages page rules, look, toolbars, and templates. Who owns that package on a team desk?",
               "options": [
@@ -186,6 +220,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Enter in Author opens a list of next pieces. You press Enter twice to ‘make space’. What goes wrong?",
               "options": [

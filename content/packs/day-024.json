@@ -5,7 +5,7 @@
     "title": "Point at the library by name, not by path",
     "overview": "Give the library a name in the booklet, switch the warning pointer to that name, then move the file and confirm the how-to still works.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Same chunk, better pointer, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Same chunk, better pointer. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Same chunk, better pointer",
               "body": "A **conkeyref** is a pointer that pulls a chunk by a **name in the booklet**, not by a file path. It looks like `name/id`.\n\nGive the library line `keys=\"warnings-lib\"`. The how-to stores that name. Move the file. Update one booklet path. The how-tos sleep through it.\n\nIf a sentence still exists twice, you are not done."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "conkeyref",
@@ -118,20 +134,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: The how-to still uses a path pointer, or you copied the sentence, or the name is missing from the booklet.\n\nExpected: Name pointers in both how-tos. The booklet holds keys=\"warnings-lib\". Moving the file did not mean editing the how-tos. Completeness clean."
+              "body": "You just met the idea. Now do the lab: Same warning, now a name.\n\nThis lab can fail. Fail when: The how-to still uses a path pointer, or you copied the sentence, or the name is missing from the booklet.\n\nExpected: Name pointers in both how-tos. The booklet holds keys=\"warnings-lib\". Moving the file did not mean editing the how-tos. Completeness clean."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Same warning, now a name.",
+              "intro": "How to Same warning, now a name. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Same warning, now a name",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "On the library page’s line in the booklet, set keys=\"warnings-lib\"."
                 },
                 {
                   "title": "Step 2",
-                  "body": "In prime-the-pump.dita, change the warning from a path pointer (conref) to a name pointer: conkeyref=\"warnings-lib/pinch-hazard\". Remove the path form."
+                  "body": "In prime-the-pump.dita, change the warning from a path pointer (conref) to a name pointer: conkeyref=\"warnings-lib/pinch-hazard\". Remove the path form.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -171,8 +199,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Why point at the library by a name in the booklet, not by a file path?",
               "options": [
@@ -186,6 +220,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The pointer says warnings-lib/pinch-hazard. What is pinch-hazard?",
               "options": [

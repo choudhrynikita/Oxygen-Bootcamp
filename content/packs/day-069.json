@@ -49,7 +49,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want.\n\nNext: a short recap, then the lab, then the check."
             },
             {
               "type": "objectives",
@@ -71,9 +71,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You already met these moves this week. Now you prove you can name them."
+            },
+            {
+              "type": "text",
               "id": "t-2",
               "heading": "Proof",
               "body": "1. Landing skeleton without handbook paste.\n2. Alt phrases.\n3. No extra nested boxes.\n4. One ship path."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -84,6 +98,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "A check, not a show",
@@ -98,6 +113,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Title, Text, Image, Teaser, Container",
@@ -136,20 +152,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: Skeleton missing a block you claimed, or the ship path is unnamed, or mixed names remain, or mocks have no caption.\n\nExpected: Skeleton plus a workflow name or Quick Publish. Names clean. Mock labeled."
+              "body": "You just met the idea. Now do the lab: Landing skeleton plus a ship path.\n\nThis lab can fail. Fail when: Skeleton missing a block you claimed, or the ship path is unnamed, or mixed names remain, or mocks have no caption.\n\nExpected: Skeleton plus a workflow name or Quick Publish. Names clean. Mock labeled."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Landing skeleton plus a ship path.",
+              "intro": "How to Landing skeleton plus a ship path. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Landing skeleton plus a ship path",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Gather field-log-63 through 68. Add field-log-69.txt: Kitepump landing skeleton (Title, Image with alt, Text, Container of Teasers, optional Experience Fragment promo). Two ‘will not’ lines (no handbook paste, no nested-box hobby)."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Read a page-workflow topic on Experience League (request activation, or the path your docs show). Write the name and who starts it. If your desk uses only Quick Publish, write that."
+                  "body": "Read a page-workflow topic on Experience League (request activation, or the path your docs show). Write the name and who starts it. If your desk uses only Quick Publish, write that.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -189,8 +217,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You failed this check. Does week 11 open anyway?",
               "options": [
@@ -204,6 +238,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The core-components-desk badge means you wrote the code behind Title and Text. True or not?",
               "options": [
@@ -217,6 +252,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-2",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You restore an old hero, then Quick Publish without looking. What can go wrong?",
               "options": [

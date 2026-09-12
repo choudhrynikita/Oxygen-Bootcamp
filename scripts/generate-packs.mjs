@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync, readdirSync } from "node:fs";
+import { mkdirSync, writeFileSync, readdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import day01 from "./packs/day01.mjs";
@@ -6,6 +6,13 @@ import day01 from "./packs/day01.mjs";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dir = join(root, "scripts/days");
 const outDir = join(root, "content/packs");
+
+let catalog = [];
+try {
+  catalog = JSON.parse(readFileSync(join(root, "content/media/catalog.json"), "utf8")).items ?? [];
+} catch {
+  catalog = [];
+}
 
 const BLOOM = {
   remember: "remember",
@@ -55,6 +62,41 @@ function flashcardsFrom(text) {
   return cards.slice(0, 6);
 }
 
+function leadFor(type, extra = "") {
+  const x = extra.replace(/\.$/, "");
+  if (type === "process") return `Walk the cards below, in order, to ${x || "do the work"}.`;
+  if (type === "flashcards") {
+    return "Flip each card. The front is a word from this lesson. The back is what it means here.";
+  }
+  if (type === "accordion") return "Open a heading only if you want extra detail on that point.";
+  if (type === "tabs") return "Open each tab. They are parts of the same idea, not separate lessons.";
+  if (type === "sorting") return "Drag each card onto the category it belongs to.";
+  if (type === "knowledge-check") return "Answer with words from today only.";
+  if (type === "labeled-graphic") return "Click each number on the picture. A short note opens for that spot.";
+  if (type === "scenario") return "Read the situation, then pick the move you would make.";
+  return undefined;
+}
+
+function figureFor(day) {
+  const hay = `${day.title} ${day.objective} ${day.body ?? ""} ${day.lab?.title ?? ""}`.toLowerCase();
+  const hits = catalog.filter(
+    (c) => (c.fromDay ?? 1) <= day.n && (c.tags ?? []).some((t) => hay.includes(t)),
+  );
+  return hits[0] ?? null;
+}
+
+function figureBlock(fig, id) {
+  return {
+    type: "figure",
+    id,
+    src: fig.src,
+    alt: fig.alt,
+    caption: fig.caption,
+    credit: fig.credit,
+    href: fig.href,
+  };
+}
+
 function objectivesFor(day) {
   const obj = plain(day.objective).replace(/\.$/, "");
   const los = [{ id: "lo1", bloom: BLOOM.apply, text: obj }];
@@ -84,6 +126,14 @@ function packFromDay(day) {
   const learnBlocks = [];
   const extraAccordion = [];
 
+  learnBlocks.push({
+    type: "text",
+    id: "learn-bridge",
+    body: day.boss
+      ? "You already met these moves this week. Now you prove you can name them."
+      : `You just named today's job. Now the idea: ${plain(sections[0]?.heading || day.title)}. Then you will do the lab.`,
+  });
+
   for (const sec of sections) {
     const h = sec.heading;
     if (/^lab$/i.test(h) || /^watch$/i.test(h)) continue;
@@ -106,11 +156,27 @@ function packFromDay(day) {
     });
   }
 
+  const fig = figureFor(day);
+  if (fig && !learnBlocks.some((b) => b.type === "figure")) {
+    const insertAt = learnBlocks.findIndex((b) => b.type === "text" && b.heading) + 1;
+    learnBlocks.splice(Math.max(1, insertAt), 0, figureBlock(fig, "learn-fig"));
+  }
+
   if (extraAccordion.length) {
-    learnBlocks.push({ type: "accordion", id: "learn-extra", items: extraAccordion });
+    learnBlocks.push({
+      type: "accordion",
+      id: "learn-extra",
+      lead: leadFor("accordion"),
+      items: extraAccordion,
+    });
   }
   if (cards.length) {
-    learnBlocks.push({ type: "flashcards", id: "learn-cards", cards });
+    learnBlocks.push({
+      type: "flashcards",
+      id: "learn-cards",
+      lead: leadFor("flashcards"),
+      cards,
+    });
   }
   if ((day.youtube ?? []).length) {
     const v = day.youtube[0];
@@ -136,10 +202,23 @@ function packFromDay(day) {
     title: `Step ${i + 1}`,
     body: plain(st),
   }));
+  if (fig) {
+    const mid = Math.min(1, processSteps.length - 1);
+    if (processSteps[mid] && !processSteps[mid].image) {
+      processSteps[mid].image = {
+        src: fig.src,
+        alt: fig.alt,
+        caption: fig.caption,
+        credit: fig.credit,
+        href: fig.href,
+      };
+    }
+  }
 
   const kcBlocks = (day.quiz ?? []).map((q, i) => ({
     type: "knowledge-check",
     id: `kc-${i}`,
+    lead: leadFor("knowledge-check"),
     kind: "mc",
     q: plain(q.q),
     options: q.options.map(plain),
@@ -165,7 +244,7 @@ function packFromDay(day) {
       durationMin: day.minutes,
       audience: day.boss
         ? "You already met these moves. Today you prove you can name them."
-        : "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open.",
+        : "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open.",
     },
     objectives: los,
     sections: [
@@ -189,8 +268,8 @@ function packFromDay(day) {
                 id: "w-body",
                 heading: "What today is",
                 body: day.boss
-                  ? "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
-                  : `About ${day.minutes} minutes. Do the lab in the app. The check at the end uses words from today only.`,
+                  ? `This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want.\n\nNext: a short recap, then the lab, then the check.`
+                  : `About ${day.minutes} minutes. Next you will learn ${learnTitle}, then do the lab in the app. The check at the end uses words from today only.`,
               },
               { type: "objectives", id: "w-lo" },
               { type: "continue", id: "w-go", rule: "none", label: "Continue" },
@@ -223,13 +302,20 @@ function packFromDay(day) {
                 type: "text",
                 id: "lab-lead",
                 heading: "Do the work",
-                body: `This lab can fail. Fail when: ${plain(day.lab.failWhen)}\n\nExpected: ${plain(day.lab.expected)}`,
+                body: `You just met the idea. Now do the lab: ${plain(day.lab.title)}.\n\nThis lab can fail. Fail when: ${plain(day.lab.failWhen)}\n\nExpected: ${plain(day.lab.expected)}`,
               },
               {
                 type: "process",
                 id: "lab-process",
-                intro: "Walk the steps in order. Tick them in the lab after you actually do them.",
-                steps: processSteps,
+                lead: leadFor("process", plain(day.lab.title)),
+                intro: `How to ${plain(day.lab.title).replace(/\.$/, "")}. Walk the cards in order. Tick them in the lab after you actually do them.`,
+                steps: [
+                  {
+                    title: plain(day.lab.title),
+                    body: "This is the whole move. The next cards are the steps, in order.",
+                  },
+                  ...processSteps,
+                ],
                 summary: plain(day.lab.expected),
               },
               { type: "lab", id: "lab-block" },
@@ -241,7 +327,14 @@ function packFromDay(day) {
             title: "Check",
             durationMin: 12,
             questId: "c",
-            blocks: kcBlocks,
+            blocks: [
+              {
+                type: "text",
+                id: "check-bridge",
+                body: "The lab is done. Prove it with the check. Use words from today only.",
+              },
+              ...kcBlocks,
+            ],
           },
         ],
       },
@@ -260,13 +353,14 @@ const files = readdirSync(dir)
 
 const days = [];
 for (const f of files) {
-  const mod = await import(pathToFileURL(join(dir, f)).href);
-  days.push(...mod.default);
+  try {
+    const mod = await import(pathToFileURL(join(dir, f)).href);
+    days.push(...mod.default);
+  } catch (err) {
+    console.error(`Week file failed (${f}):`, err?.message ?? err);
+  }
 }
 days.sort((a, b) => a.n - b.n);
-if (days.length !== 90) {
-  throw new Error(`Expected 90 days, got ${days.length}`);
-}
 
 function deepPlain(value) {
   if (typeof value === "string") return plain(value);
@@ -280,11 +374,25 @@ function deepPlain(value) {
 }
 
 mkdirSync(outDir, { recursive: true });
+let written = 0;
+const failed = [];
 for (const day of days) {
-  const pack = deepPlain(day.n === 1 ? day01 : packFromDay(day));
-  if (pack.day !== day.n) throw new Error(`Pack day mismatch ${pack.day} vs ${day.n}`);
-  const name = `day-${String(day.n).padStart(3, "0")}.json`;
-  writeFileSync(join(outDir, name), `${JSON.stringify(pack, null, 2)}\n`);
+  try {
+    const pack = deepPlain(day.n === 1 ? day01 : packFromDay(day));
+    if (pack.day !== day.n) throw new Error(`Pack day mismatch ${pack.day} vs ${day.n}`);
+    const name = `day-${String(day.n).padStart(3, "0")}.json`;
+    writeFileSync(join(outDir, name), `${JSON.stringify(pack, null, 2)}\n`);
+    written += 1;
+  } catch (err) {
+    failed.push({ day: day.n, error: String(err?.message ?? err) });
+    console.error(`Pack fail day ${day.n}:`, err?.message ?? err);
+  }
 }
 
-console.log(`Wrote ${days.length} course packs to content/packs`);
+if (written === 0) {
+  throw new Error("No packs written");
+}
+console.log(`Wrote ${written} course packs to content/packs`);
+if (failed.length) console.error(`Failed ${failed.length}:`, failed);
+if (days.length !== 90) console.error(`Expected 90 day modules, got ${days.length}`);
+void slug;

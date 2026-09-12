@@ -8,6 +8,14 @@ export type LearningObjective = {
 
 export type ContinueRule = "none" | "complete-block-above" | "complete-all-above";
 
+export type FigureRef = {
+  src: string;
+  alt: string;
+  caption?: string;
+  credit?: string;
+  href?: string;
+};
+
 export type TextBlock = { type: "text"; id: string; heading?: string; body: string };
 export type HeadingBlock = { type: "heading"; id: string; text: string; level?: 2 | 3 };
 export type StatementBlock = { type: "statement"; id: string; body: string };
@@ -20,25 +28,57 @@ export type CalloutBlock = {
   body: string;
 };
 export type MediaBlock = { type: "media"; id: string; youtubeId: string; title: string; watchFor?: string[] };
-export type AccordionBlock = { type: "accordion"; id: string; items: { title: string; body: string }[] };
-export type TabsBlock = { type: "tabs"; id: string; items: { title: string; body: string }[] };
+export type FigureBlock = {
+  type: "figure";
+  id: string;
+  src: string;
+  alt: string;
+  caption: string;
+  credit?: string;
+  href?: string;
+};
+export type AccordionBlock = {
+  type: "accordion";
+  id: string;
+  lead?: string;
+  items: { title: string; body: string }[];
+};
+export type TabsBlock = {
+  type: "tabs";
+  id: string;
+  lead?: string;
+  items: { title: string; body: string }[];
+};
 export type ProcessBlock = {
   type: "process";
   id: string;
+  lead?: string;
   intro?: string;
-  steps: { title: string; body: string }[];
+  steps: { title: string; body: string; image?: FigureRef }[];
   summary?: string;
 };
 export type LabeledGraphicBlock = {
   type: "labeled-graphic";
   id: string;
-  variant: "first-window" | "workbench";
-  labels: { id: string; title: string; body: string }[];
+  lead?: string;
+  variant?: "first-window" | "workbench";
+  src?: string;
+  alt?: string;
+  caption?: string;
+  credit?: string;
+  href?: string;
+  labels: { id: string; title: string; body: string; x?: number; y?: number }[];
 };
-export type FlashcardsBlock = { type: "flashcards"; id: string; cards: { front: string; back: string }[] };
+export type FlashcardsBlock = {
+  type: "flashcards";
+  id: string;
+  lead?: string;
+  cards: { front: string; back: string }[];
+};
 export type SortingBlock = {
   type: "sorting";
   id: string;
+  lead?: string;
   prompt: string;
   bins: string[];
   items: { id: string; text: string; bin: string }[];
@@ -46,12 +86,14 @@ export type SortingBlock = {
 export type ScenarioBlock = {
   type: "scenario";
   id: string;
+  lead?: string;
   situation: string;
   choices: { text: string; feedback: string; correct?: boolean }[];
 };
 export type KnowledgeCheckBlock = {
   type: "knowledge-check";
   id: string;
+  lead?: string;
   kind?: "mc" | "mr" | "tf";
   q: string;
   options: string[];
@@ -73,6 +115,7 @@ export type PackBlock =
   | ListBlock
   | CalloutBlock
   | MediaBlock
+  | FigureBlock
   | AccordionBlock
   | TabsBlock
   | ProcessBlock

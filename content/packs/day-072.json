@@ -5,7 +5,7 @@
     "title": "A form-like page (Content Fragment) in plain words",
     "overview": "Open or mock a Content Fragment, write three fields, and say it is not a laid-out page and not a DITA lookup page.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn A form, not a layout, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: A form, not a layout. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "A form, not a layout",
               "body": "A **Content Fragment** is a fill-in form of fields. Name. Pressure. Valve. An app can read those fields. A page can read them too. There is no tree of Title / Teaser / Container here.\n\nIt is not an **Experience Fragment**. That is a layout strip. Last week.\n\nIt is not a DITA lookup page. That is XML in Oxygen. Week 2.\n\nDo not decorate a Content Fragment like a landing page. You are filling fields, not stacking blocks.\n\nIf you have no AEM, a labeled mock is the lab. Three fields is enough."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -89,6 +104,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Content Fragment",
@@ -124,20 +140,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You treat the fragment as a Sites page layout, or you skip the two ‘is not’ sentences.\n\nExpected: Three fields. Two ‘is not’ sentences. Mock labeled if no instance."
+              "body": "You just met the idea. Now do the lab: Three fields, no page tree.\n\nThis lab can fail. Fail when: You treat the fragment as a Sites page layout, or you skip the two ‘is not’ sentences.\n\nExpected: Three fields. Two ‘is not’ sentences. Mock labeled if no instance."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Three fields, no page tree.",
+              "intro": "How to Three fields, no page tree. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Three fields, no page tree",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "If you have AEM: open a Content Fragment (WKND has them). Write the model name and three fields in oxygen-bootcamp-work/week11/field-log-72.txt."
                 },
                 {
                   "title": "Step 2",
-                  "body": "If you do not: write ‘model: Kitepump spec (mock) / fields: name, pressure, valve’ and label it mock."
+                  "body": "If you do not: write ‘model: Kitepump spec (mock) / fields: name, pressure, valve’ and label it mock.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -177,8 +205,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A Content Fragment is a DITA lookup page stored in AEM. True or not?",
               "options": [
@@ -192,6 +226,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A promo strip reused on forty pages is which of these?",
               "options": [

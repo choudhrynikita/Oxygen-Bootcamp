@@ -5,7 +5,7 @@
     "title": "Your first real page",
     "overview": "Finish one page with a title, a short line under the title, and two short paragraphs. It must open with no red error.",
     "durationMin": 100,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 100 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 100 minutes. Next you will learn This is the week’s apple, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: This is the week’s apple. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "This is the week’s apple",
               "body": "You are not making a booklet yet. You are proving you can finish **one page**.\n\n- A **title**\n- A **short line under the title** (not a copy of the title)\n- Two short **paragraphs**\n- No red error\n- Saved in a folder you can find\n\nNo table of contents this week. No website tools. No how-to steps. If you need steps, write “week 2” in your notes and leave them off this page."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/New-Project-dialog.png",
+              "alt": "New Project dialog in Oxygen XML Editor",
+              "caption": "File > New Project. This dialog is how a blank project gets a name and a folder.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Do not publish",
@@ -89,6 +104,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "title",
@@ -128,20 +144,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: The title is empty, the short line copies the title, there is a numbered how-to, or a red error remains.\n\nExpected: A clean page with a title, a distinct short line, and two paragraphs. Path written down."
+              "body": "You just met the idea. Now do the lab: One page, done.\n\nThis lab can fail. Fail when: The title is empty, the short line copies the title, there is a numbered how-to, or a red error remains.\n\nExpected: A clean page with a title, a distinct short line, and two paragraphs. Path written down."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to One page, done.",
+              "intro": "How to One page, done. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "One page, done",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Open or create topics/what-a-cut-flower.dita (or oxygen-bootcamp-work/week1/what-a-cut-flower.dita)."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Title: What a cut flower is."
+                  "body": "Title: What a cut flower is.",
+                  "image": {
+                    "src": "/media/oxygen/New-Project-dialog.png",
+                    "alt": "New Project dialog in Oxygen XML Editor",
+                    "caption": "File > New Project. This dialog is how a blank project gets a name and a folder.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -181,8 +209,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The short line under the title is for…",
               "options": [
@@ -196,6 +230,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You want three actions to recut a stem. Where do those actions go this week?",
               "options": [

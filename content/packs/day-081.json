@@ -5,7 +5,7 @@
     "title": "One full loop on paper (or mock)",
     "overview": "Write a checkout → edit → check-in → request publish cycle for one topic, with no Sites Create Page in it.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn One object, one loop, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: One object, one loop. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "One object, one loop",
               "body": "Pick a how-to. Walk it.\n\n1. **Checkout**\n2. **Edit** (Guides, or Edit in Oxygen)\n3. **Check in**\n4. **Request publish** (Guides, not Sites Quick Publish)\n\nNo Create Page. No landing-page hero. No Page Editor. Those are the other desk.\n\nIf you have Guides, do it once. If not, write the loop and label the mock. Completeness on the local analog stays clean."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -103,20 +117,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: The cycle includes Sites Create Page as a step.\n\nExpected: A four-step cycle with no Sites page in it. Mock labeled if needed."
+              "body": "You just met the idea. Now do the lab: Cycle on paper, or for real.\n\nThis lab can fail. Fail when: The cycle includes Sites Create Page as a step.\n\nExpected: A four-step cycle with no Sites page in it. Mock labeled if needed."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Cycle on paper, or for real.",
+              "intro": "How to Cycle on paper, or for real. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Cycle on paper, or for real",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Pick prime-the-pump.dita as the object."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Write oxygen-bootcamp-work/week12/field-log-81.txt with four steps: checkout, edit (Guides or Edit in Oxygen), check in, request publish."
+                  "body": "Write oxygen-bootcamp-work/week12/field-log-81.txt with four steps: checkout, edit (Guides or Edit in Oxygen), check in, request publish.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -156,8 +182,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The Guides cycle includes Create Page in Sites. True or not?",
               "options": [
@@ -171,6 +203,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Which step holds the lock?",
               "options": [

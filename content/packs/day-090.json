@@ -5,7 +5,7 @@
     "title": "What you can do now, and what is next",
     "overview": "Export progress, list skills with evidence, and write three things this course does not teach :  plus one next course you would actually take.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Done looks like this, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Done looks like this. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Done looks like this",
               "body": "You can open a DITA booklet in Oxygen, reuse with keys and conrefs, publish WebHelp or PDF, then switch to AEM, create and edit pages, publish, fill a Content Fragment, and say when Guides plus Oxygen is the handbook desk.\n\nYou are not a DITA-OT customizer. You are not an AEM developer. Those paths are listed, not taught.\n\nExport your progress. Keep the evidence. Write one next course you would actually take."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -113,20 +128,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You claim this course made you an AEM developer, or you skip the export.\n\nExpected: JSON export exists. Inventory has evidence. Three not-taught items. One next course."
+              "body": "You just met the idea. Now do the lab: Export plus inventory.\n\nThis lab can fail. Fail when: You claim this course made you an AEM developer, or you skip the export.\n\nExpected: JSON export exists. Inventory has evidence. Three not-taught items. One next course."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Export plus inventory.",
+              "intro": "How to Export plus inventory. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Export plus inventory",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Settings: Export progress and game state. Keep the JSON."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Write oxygen-bootcamp-work/week12/inventory.txt. List each skill with one piece of evidence (day number plus a file)."
+                  "body": "Write oxygen-bootcamp-work/week12/inventory.txt. List each skill with one piece of evidence (day number plus a file).",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -162,8 +189,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "This course taught you to customize DITA-OT plugins. True or not?",
               "options": [
@@ -177,6 +210,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "What is the evidence for a skill on the inventory?",
               "options": [

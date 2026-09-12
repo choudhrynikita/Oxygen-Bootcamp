@@ -5,7 +5,7 @@
     "title": "Reuse a layout (not the same as Oxygen reuse)",
     "overview": "Explain an Experience Fragment as a reusable layout strip, and keep the handbook warning in DITA.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Reuse a layout, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Reuse a layout. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Reuse a layout",
               "body": "An **Experience Fragment** is a reusable chunk of page layout. A promo strip. A footer. Something you would otherwise copy from page to page.\n\nIt is not a **conref**. A conref reuses a piece of XML in Oxygen. You did that in week 4. Different desk, different file.\n\nIt is not a **Content Fragment**. That is a fill-in form of fields. You will meet it next week. Do not mix the names.\n\nUse an Experience Fragment for ‘Shop HP-40’ on two pages. Do not store the handbook there. Do not store a procedure there."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/New_doc_wizard.png",
+              "alt": "New document wizard in Oxygen XML Editor",
+              "caption": "File > New. Pick a file type here. On day 1 you only need a blank project, not this wizard yet.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -89,6 +104,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Experience Fragment",
@@ -124,20 +140,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: The log says an Experience Fragment is a conref, or a procedure is stored in the fragment as the handbook.\n\nExpected: Three-way distinction written. One Kitepump promo idea. One ‘would not’. Mock labeled."
+              "body": "You just met the idea. Now do the lab: A promo strip, not a warning library.\n\nThis lab can fail. Fail when: The log says an Experience Fragment is a conref, or a procedure is stored in the fragment as the handbook.\n\nExpected: Three-way distinction written. One Kitepump promo idea. One ‘would not’. Mock labeled."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to A promo strip, not a warning library.",
+              "intro": "How to A promo strip, not a warning library. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "A promo strip, not a warning library",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Write oxygen-bootcamp-work/week10/field-log-67.txt: Experience Fragment = a reusable page layout (header promo, footer strip). Next week you will meet Content Fragments, which are fill-in forms. A DITA conref is XML reuse in Oxygen. Three different things."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Kitepump: a promo strip ‘Shop HP-40’ could appear on two pages. The pinch warning stays a DITA reuse in the handbook."
+                  "body": "Kitepump: a promo strip ‘Shop HP-40’ could appear on two pages. The pinch warning stays a DITA reuse in the handbook.",
+                  "image": {
+                    "src": "/media/oxygen/New_doc_wizard.png",
+                    "alt": "New document wizard in Oxygen XML Editor",
+                    "caption": "File > New. Pick a file type here. On day 1 you only need a blank project, not this wizard yet.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -169,8 +197,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You want the pinch warning on two AEM pages. Do you put it in an Experience Fragment?",
               "options": [
@@ -184,6 +218,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A header used on 40 pages. Copy-paste the blocks each time, or reuse a layout strip?",
               "options": [

@@ -5,7 +5,7 @@
     "title": "Put a picture on the page",
     "overview": "Place an Image block, write a short alt phrase, and say that the file lives in the asset library :  not on your desktop.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Put a picture on the page, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Put a picture on the page. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Put a picture on the page",
               "body": "The **Image** block points at a file in **Assets**. Assets is the file library inside AEM. You pick the picture there. You do not leave it on the desktop.\n\n**Alt** is a short phrase that describes the picture for someone who cannot see it. Write a phrase. Do not paste the file name.\n\nPublish the picture as well as the page. Last week you saw that a page can go live while its picture stays behind.\n\nIf you crop on the page, that is usually a crop for this page. The file in the library often stays. Check before you panic."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -89,6 +104,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Image",
@@ -128,20 +144,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: Alt is the file name, or the log says pictures live only on your laptop, or Assets is called Maps Manager.\n\nExpected: Alt phrase written. Assets named as the source. Mock labeled."
+              "body": "You just met the idea. Now do the lab: Picture plus alt phrase.\n\nThis lab can fail. Fail when: Alt is the file name, or the log says pictures live only on your laptop, or Assets is called Maps Manager.\n\nExpected: Alt phrase written. Assets named as the source. Mock labeled."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Picture plus alt phrase.",
+              "intro": "How to Picture plus alt phrase. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Picture plus alt phrase",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Read the Image Core Component page and Assets basic operations (skim)."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Write oxygen-bootcamp-work/week10/field-log-64.txt: pick the file from Assets (the library in AEM). Set alt in the Image form. Do not treat a random desktop PNG as the long-term file."
+                  "body": "Write oxygen-bootcamp-work/week10/field-log-64.txt: pick the file from Assets (the library in AEM). Set alt in the Image form. Do not treat a random desktop PNG as the long-term file.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -181,8 +209,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You published the page but not the picture. What does a visitor often see?",
               "options": [
@@ -196,6 +230,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A good alt for the hero picture is…",
               "options": [

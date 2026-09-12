@@ -5,7 +5,7 @@
     "title": "Big booklets that feel slow",
     "overview": "Write three things that make Author crawl on a big booklet, and use Maps Manager on kitepump instead of opening every page at once.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Slow is usually self-inflicted, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Slow is usually self-inflicted. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Slow is usually self-inflicted",
               "body": "kitepump is two pages. It will not crawl. A real shop book will, if you treat Author like a place to hold the whole company.\n\nDo not open a huge booklet in Author with every tag showing. Do not validate the world on every keystroke. Do not leave every color mark and every panel on from last week.\n\nUse **Maps Manager** for the book. Open one page when you write."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/author_mode_button.png",
+              "alt": "Author mode button on the Oxygen editor tab",
+              "caption": "Author is the word-processor view. The button sits on the file tab.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Slow booklet",
@@ -118,20 +134,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You skip the three causes, or you try to prove slowness by copying a giant book into the pack.\n\nExpected: Three slowness causes in your words. Maps Manager used. Pack still small."
+              "body": "You just met the idea. Now do the lab: Three slowness causes, one small book.\n\nThis lab can fail. Fail when: You skip the three causes, or you try to prove slowness by copying a giant book into the pack.\n\nExpected: Three slowness causes in your words. Maps Manager used. Pack still small."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Three slowness causes, one small book.",
+              "intro": "How to Three slowness causes, one small book. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Three slowness causes, one small book",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Open kitepump.ditamap in Maps Manager. Do not open both topics in Author at the same time unless you need them."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Write three slowness causes in oxygen-bootcamp-work/week8/slow-author.txt: (1) a huge booklet opened as one Author page with every tag showing, (2) live checking of every file on every keystroke, (3) extra color marks and extra panels left on from last week."
+                  "body": "Write three slowness causes in oxygen-bootcamp-work/week8/slow-author.txt: (1) a huge booklet opened as one Author page with every tag showing, (2) live checking of every file on every keystroke, (3) extra color marks and extra panels left on from last week.",
+                  "image": {
+                    "src": "/media/oxygen/author_mode_button.png",
+                    "alt": "Author mode button on the Oxygen editor tab",
+                    "caption": "Author is the word-processor view. The button sits on the file tab.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -163,8 +191,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A 2,000-page booklet feels slow in Author. First move?",
               "options": [
@@ -178,6 +212,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "kitepump only has two pages. Why write slowness causes today?",
               "options": [

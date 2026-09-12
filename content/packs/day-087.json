@@ -5,7 +5,7 @@
     "title": "Hand in the work",
     "overview": "List what a lead would open first: the map, then the comparison sheet. Keep the zip small :  no giant output folders.",
     "durationMin": 75,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 75 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 75 minutes. Next you will learn Hand it over, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Hand it over. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Hand it over",
               "body": "Small zip. Short list. No skins, no library dumps, no `node_modules`.\n\nA lead opens:\n\n1. The **map**\n2. The **comparison sheet** (`two-surfaces.md`)\n\nThen the field logs, then a transform snippet. That order.\n\nIf you built WebHelp, keep a note that it is a draft. Do not ship a 5 GB output tree."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -103,20 +117,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: The zip includes huge binaries or a full WebHelp skin tree.\n\nExpected: A short delivery list. First file named."
+              "body": "You just met the idea. Now do the lab: Delivery list.\n\nThis lab can fail. Fail when: The zip includes huge binaries or a full WebHelp skin tree.\n\nExpected: A short delivery list. First file named."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Delivery list.",
+              "intro": "How to Delivery list. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Delivery list",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Write oxygen-bootcamp-work/week12/delivery.txt."
                 },
                 {
                   "title": "Step 2",
-                  "body": "List: map path, topic list, ditaval if any, transform log snippet, field-log files, two-surfaces.md."
+                  "body": "List: map path, topic list, ditaval if any, transform log snippet, field-log files, two-surfaces.md.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -148,8 +174,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The lead should open the WebHelp skin CSS first. True or not?",
               "options": [
@@ -163,6 +195,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Why leave the huge WebHelp folder out of the zip?",
               "options": [

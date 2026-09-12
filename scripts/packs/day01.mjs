@@ -36,7 +36,7 @@ export default {
               type: "text",
               id: "w-hello",
               heading: "Hello",
-              body: "Someone hired you to explain a product in writing. The pages you write are files. **Oxygen** is the app you will open those files in. It comes from a company named Syncro Soft.\n\nToday is day 1. You install the app and look at the window. That is the whole job. You will not write a handbook page. You will not publish a website. You will not meet Adobe.",
+              body: "Someone hired you to explain a product in writing. The pages you write are files. **Oxygen** is the app you will open those files in. It comes from a company named Syncro Soft.\n\nToday is day 1. You install the app and look at the window. That is the whole job. You will not write a handbook page. You will not publish a website. You will not meet Adobe.\n\nNext you will meet the app by name, then who uses it, then you put it on the machine.",
             },
             {
               type: "objectives",
@@ -60,6 +60,11 @@ export default {
           blocks: [
             {
               type: "text",
+              id: "o-bridge",
+              body: "You just heard the job for today: install and look around. First, name the app and who sits in it. Then you will put it on the machine.",
+            },
+            {
+              type: "text",
               id: "o-what",
               heading: "The writing app",
               body: "Oxygen is a writing app you install on your computer. You open a file. You type. You save. The file is still a file, sitting in a folder, the way a spreadsheet file sits in a folder.\n\nIt is not a website. It is not a photo editor. It is the desk.",
@@ -67,6 +72,7 @@ export default {
             {
               type: "tabs",
               id: "o-who",
+              lead: "Open each tab. They are three people around the same desk, not three separate lessons.",
               items: [
                 {
                   title: "You",
@@ -85,6 +91,7 @@ export default {
             {
               type: "accordion",
               id: "o-edition",
+              lead: "Open an edition name only if you need to choose a download.",
               items: [
                 {
                   title: "Oxygen XML Author",
@@ -103,6 +110,7 @@ export default {
             {
               type: "flashcards",
               id: "o-cards",
+              lead: "Flip each card. The front is a name from this lesson. The back is what it means here.",
               cards: [
                 { front: "Oxygen", back: "The writing app from Syncro Soft. You open help-page files in it." },
                 { front: "Help page", back: "A file you write for the people who use a product." },
@@ -112,6 +120,7 @@ export default {
             {
               type: "sorting",
               id: "o-sort",
+              lead: "Drag each card onto the job it belongs to. Wrong cards shake and come back.",
               prompt: "Put each job in the right bin.",
               bins: ["Oxygen does this", "Not Oxygen"],
               items: [
@@ -124,6 +133,7 @@ export default {
             {
               type: "knowledge-check",
               id: "o-kc",
+              lead: "Answer with words from this lesson only.",
               kind: "mc",
               q: "What is Oxygen, in one line?",
               options: [
@@ -147,16 +157,21 @@ export default {
               type: "text",
               id: "i-lead",
               heading: "Get the app open",
-              body: "You need the window in front of you. Download, install, open. Then read the version from Help > About and write it down. If you cannot install today, use the labeled window in the next lesson and write why.",
+              body: "You know what Oxygen is, and who uses it. Now you put it on the machine. Download, install, open. Then read the version from Help > About and write it down. If you cannot install today, use the labeled window in the next lesson and write why.",
             },
             {
               type: "process",
               id: "i-steps",
-              intro: "Five moves. Do them on your machine, or follow along on the mock later.",
+              lead: "Walk the cards below, in order, to install Oxygen and start it.",
+              intro: "How to install Oxygen and start it. Five moves. Do them on your machine, or follow along on the labeled window later.",
               steps: [
                 {
+                  title: "How to install Oxygen",
+                  body: "This is the whole move. The next cards are the steps, in order. Stay with them until the window is open.",
+                },
+                {
                   title: "Open the site",
-                  body: "In a browser, go to oxygenxml.com. That is the official site from Syncro Soft.",
+                  body: "In a browser, go to oxygenxml.com. That is the official site from Syncro Soft. Do not download the app from a random mirror.",
                 },
                 {
                   title: "Download",
@@ -164,7 +179,14 @@ export default {
                 },
                 {
                   title: "Install and open",
-                  body: "Run the installer. Open the app. You should see a window with menus at the top and a big empty area in the middle.",
+                  body: "Run the installer. Open the app. You should see menus at the top and a big empty area in the middle, like the official window below.",
+                  image: {
+                    src: "/media/oxygen/oxygen-UI.png",
+                    alt: "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    caption: "This is the window you want after install. Yours may look a little different. The idea is the same.",
+                    credit: "Oxygen XML Editor User Guide, Syncro Soft",
+                    href: "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html",
+                  },
                 },
                 {
                   title: "Read the version",
@@ -172,10 +194,10 @@ export default {
                 },
                 {
                   title: "Walk the window once",
-                  body: "Top menus. Left side. Bottom edge if anything is showing. You do not have to name every panel yet.",
+                  body: "Top menus. Left side. Bottom edge if anything is showing. You do not have to name every panel yet. The next lesson puts numbers on this same window.",
                 },
               ],
-              summary: "The app is open, or you are ready to use the labeled mock and say why.",
+              summary: "The app is open, or you are ready to use the labeled window and say why.",
             },
             {
               type: "media",
@@ -205,43 +227,59 @@ export default {
               type: "text",
               id: "u-lead",
               heading: "The first window",
-              body: "When Oxygen opens, you get a window. Menus along the top. A big middle. Some side panels that may be empty. That is the desk. Click each number on the picture.",
+              body: "The app is running, or you are looking at the official picture. Now look at the window so later steps have somewhere to point. Menus along the top. A big middle. Some side panels that may be empty. That is the desk.",
             },
             {
               type: "labeled-graphic",
               id: "u-graphic",
-              variant: "first-window",
+              lead: "Click each number on the real Oxygen window. A short note opens for that spot.",
+              src: "/media/oxygen/oxygen-UI.png",
+              alt: "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              caption: "Official screenshot of the Oxygen XML Editor interface. Click the numbers.",
+              credit: "Oxygen XML Editor User Guide, Syncro Soft",
+              href: "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html",
               labels: [
                 {
                   id: "g1",
                   title: "Title bar",
                   body: "The top strip. It shows the app name. Later it will also show the file you have open.",
+                  x: 42,
+                  y: 3,
                 },
                 {
                   id: "g2",
                   title: "Menu bar",
                   body: "File, Edit, Find, and the rest. Help is usually last. About lives under Help.",
+                  x: 22,
+                  y: 8,
                 },
                 {
                   id: "g3",
                   title: "Left side",
                   body: "Often empty on first open. After you make a project, this is where the project name shows.",
+                  x: 14,
+                  y: 42,
                 },
                 {
                   id: "g4",
                   title: "The middle",
                   body: "This is where a page will go. Empty today. Tomorrow you put a sentence here.",
+                  x: 58,
+                  y: 48,
                 },
                 {
                   id: "g5",
                   title: "Help",
                   body: "Last menu on the right of the menu bar. Open it. About is inside. That is the version.",
+                  x: 78,
+                  y: 8,
                 },
               ],
             },
             {
               type: "accordion",
               id: "u-parts",
+              lead: "Open a heading only if you want a second pass on that part of the window.",
               items: [
                 {
                   title: "Menus",
@@ -260,6 +298,7 @@ export default {
             {
               type: "knowledge-check",
               id: "u-kc",
+              lead: "Answer from the window you just clicked.",
               kind: "mc",
               q: "Where do you read the version number?",
               options: ["File > New", "Help > About", "The Recycle Bin"],
@@ -279,16 +318,28 @@ export default {
               type: "text",
               id: "p-lead",
               heading: "A home for files",
-              body: "A **project** is a named home Oxygen remembers. It is not a website. It is not a page. It is a small file that points at a folder of work, so you do not lose things on the desktop.\n\nToday you make a blank one. You do not write a page into it yet. Tomorrow you open a sample page. Later this week you save a page in a real folder.",
+              body: "You can point at the menus. Files still need a home. That home is a **project**. A project is a named home Oxygen remembers. It is not a website. It is not a page. It is a small file that points at a folder of work, so you do not lose things on the desktop.\n\nToday you make a blank one. You do not write a page into it yet. Tomorrow you open a sample page. Later this week you save a page in a real folder.",
             },
             {
               type: "process",
               id: "p-steps",
-              intro: "Make the project. Leave it empty.",
+              lead: "Walk the cards below, in order, to create a blank project.",
+              intro: "How to create a new blank project. Leave it empty.",
               steps: [
                 {
+                  title: "How to create a blank project",
+                  body: "This is the whole move. The next cards are the steps. Stay with them until Oxygen shows the project name.",
+                },
+                {
                   title: "Find New Project",
-                  body: "Look at the top menus. Open Project, then New Project. If you do not see Project, look under File for New Project.",
+                  body: "Look at the top menus. Open Project, then New Project. If you do not see Project, look under File for New Project. The dialog looks like this.",
+                  image: {
+                    src: "/media/oxygen/New-Project-dialog.png",
+                    alt: "New Project dialog in Oxygen XML Editor",
+                    caption: "File or Project > New Project. Name it, then save it in a folder you can find tomorrow.",
+                    credit: "Oxygen XML Editor User Guide, Syncro Soft",
+                    href: "https://www.oxygenxml.com/doc/ug-editor/",
+                  },
                 },
                 {
                   title: "Name it",
@@ -315,6 +366,7 @@ export default {
             {
               type: "scenario",
               id: "p-scene",
+              lead: "Read the situation, then pick the move you would make at this desk.",
               situation:
                 "A teammate saved three help pages on the desktop named Final, Final2, and Document. They cannot find them next week. What do you tell them to do first?",
               choices: [
@@ -338,6 +390,7 @@ export default {
             {
               type: "knowledge-check",
               id: "p-kc",
+              lead: "Answer from the project you just made, or from the dialog you just saw.",
               kind: "mc",
               q: "Why make a blank project on day 1?",
               options: [
@@ -357,6 +410,6 @@ export default {
   summary: {
     heading: "You should now be able to",
     recap: "You met the desk. The app opens. You know who it is for. You have a blank project waiting for pages.",
-    nextDayHook: "Tomorrow you open a sample page and type one sentence.",
+    nextDayHook: "Tomorrow you stay in this same window. You open a sample page and type one sentence into the empty middle you just named.",
   },
 };

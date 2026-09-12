@@ -5,7 +5,7 @@
     "title": "Capstone: a DITA handbook in Oxygen",
     "overview": "Ship a small valid Kitepump (or flower-docs) publication: map, keys, one reuse, completeness clean, and a local WebHelp or a recorded transform attempt.",
     "durationMin": 110,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 110 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 110 minutes. Next you will learn The Oxygen half, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: The Oxygen half. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "The Oxygen half",
               "body": "This is the handbook proof. You already know every piece.\n\n- A **map** with at least six topics\n- A **key** for the product name, used twice\n- One **reused warning**\n- **Completeness** clean\n- A **transform** (WebHelp, or a failure you then repaired)\n\nCopy into `oxygen-bootcamp-work/week12/`. Do not replace the samples in the repo.\n\nLocal WebHelp is a draft if Guides is the release. Say so in the log."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "reused warning",
@@ -113,20 +128,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: Completeness is dirty, or reuse is copy-paste, or you skipped the transform log.\n\nExpected: Clean completeness. Key plus reuse. Transform evidence."
+              "body": "You just met the idea. Now do the lab: DITA half of the capstone.\n\nThis lab can fail. Fail when: Completeness is dirty, or reuse is copy-paste, or you skipped the transform log.\n\nExpected: Clean completeness. Key plus reuse. Transform evidence."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to DITA half of the capstone.",
+              "intro": "How to DITA half of the capstone. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "DITA half of the capstone",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Work in oxygen-bootcamp-work/week12/, not inside samples/. Copy what you need."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Map with at least six topics, or a documented subset of flower-docs plus kitepump. Completeness clean."
+                  "body": "Map with at least six topics, or a documented subset of flower-docs plus kitepump. Completeness clean.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -166,8 +193,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The HTML opened. Completeness still shows a missing link. Are you done?",
               "options": [
@@ -181,6 +214,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The product name is typed by hand in six topics. What should it have been?",
               "options": [

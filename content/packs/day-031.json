@@ -5,7 +5,7 @@
     "title": "Only keep switches you can explain",
     "overview": "Search the pack for every audience, platform, and similar mark, then delete or justify each value in a list.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Search the pack, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Search the pack. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Search the pack",
               "body": "Find in Files is the audit. A mark that is not on your list is not a plan. It is a surprise.\n\nThe video shows grouped marks. Watch for the idea. Do not design groups this week.\n\nA **key** changes the word. A **condition** shows or hides the chunk. Do not mix the jobs."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/New_doc_wizard.png",
+              "alt": "New document wizard in Oxygen XML Editor",
+              "caption": "File > New. Pick a file type here. On day 1 you only need a blank project, not this wizard yet.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Find in Files",
@@ -118,20 +134,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: A mark remains without a list line, or you deleted the expert step’s words while removing a mark, or the list is empty because you skipped Find in Files.\n\nExpected: The list matches the pack. Every remaining mark has a meaning. Files clean."
+              "body": "You just met the idea. Now do the lab: A list of every mark.\n\nThis lab can fail. Fail when: A mark remains without a list line, or you deleted the expert step’s words while removing a mark, or the list is empty because you skipped Find in Files.\n\nExpected: The list matches the pack. Every remaining mark has a meaning. Files clean."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to A list of every mark.",
+              "intro": "How to A list of every mark. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "A list of every mark",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Find in Files for audience= and platform= across the kitepump folder. Also search product=, otherprops=, props=, and rev= :  extra mark fields some files use. If you cannot explain one, it goes on the delete list."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Write oxygen-bootcamp-work/week5/condition-census.txt: each hit, the value, one-line meaning, keep or delete."
+                  "body": "Write oxygen-bootcamp-work/week5/condition-census.txt: each hit, the value, one-line meaning, keep or delete.",
+                  "image": {
+                    "src": "/media/oxygen/New_doc_wizard.png",
+                    "alt": "New document wizard in Oxygen XML Editor",
+                    "caption": "File > New. Pick a file type here. On day 1 you only need a blank project, not this wizard yet.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -171,8 +199,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Find in Files shows audience=\"legacy\". Nobody can say what legacy means. What do you do?",
               "options": [
@@ -186,6 +220,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A product name in the booklet vs a product mark on a step. Which one changes the word in the sentence?",
               "options": [

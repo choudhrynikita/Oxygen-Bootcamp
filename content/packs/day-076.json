@@ -5,7 +5,7 @@
     "title": "Guides in the browser vs Oxygen on the desktop",
     "overview": "Write who lives in Guides and who still opens Oxygen, and cross out the fake product name AEM Oxygen XML Editor.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Two desks, one handbook, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Two desks, one handbook. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Two desks, one handbook",
               "body": "**AEM Guides** is Adobe’s DITA tool in the browser. People write, review, and publish the handbook there. Subject-matter experts should live there.\n\n**Oxygen** is still Syncro Soft on your desktop. You still open it to rebuild a booklet, run house-style checks, and work offline.\n\nGuides can launch Oxygen. They are not one product. There is no product called **AEM Oxygen XML Editor**. You wrote that in week 9. Write it again.\n\nIf you have no Guides, a labeled mock of two desks is the lab."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -89,6 +104,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "AEM Guides",
@@ -123,20 +139,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You use the forbidden product name as if it were real.\n\nExpected: Two homes written. Forbidden name crossed out. Mock labeled if no instance."
+              "body": "You just met the idea. Now do the lab: Who lives where.\n\nThis lab can fail. Fail when: You use the forbidden product name as if it were real.\n\nExpected: Two homes written. Forbidden name crossed out. Mock labeled if no instance."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Who lives where.",
+              "intro": "How to Who lives where. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Who lives where",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Read samples/guides-oxygen-handoff/who-edits-where.md."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Write oxygen-bootcamp-work/week12/field-log-76.txt."
+                  "body": "Write oxygen-bootcamp-work/week12/field-log-76.txt.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -176,8 +204,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "What is AEM Guides, in one line?",
               "options": [
@@ -191,6 +225,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "There is a product called AEM Oxygen XML Editor. True or not?",
               "options": [

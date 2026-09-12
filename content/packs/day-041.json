@@ -5,7 +5,7 @@
     "title": "Leave the look of the site to a designer",
     "overview": "Open the publishing template control far enough to name two things you will not customize this week, then close it.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Look, name, close, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Look, name, close. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Look, name, close",
               "body": "The official video shows **publishing templates** :  controls for how the site and the PDF look. Watch so the names are not foreign.\n\nYou do not leave this day with a brand. You leave with a note: what the control is called, what you will not touch, who would.\n\nDo not restyle warnings to look like body text. Do not set a personal template as the team default."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "publishing templates",
@@ -122,20 +138,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You shipped a personal template as the booklet default, or you cannot name the control, or you restyled safety notes.\n\nExpected: Awareness file with control name, two hands-off settings, and an owner. Default template unchanged."
+              "body": "You just met the idea. Now do the lab: Look, name, close.\n\nThis lab can fail. Fail when: You shipped a personal template as the booklet default, or you cannot name the control, or you restyled safety notes.\n\nExpected: Awareness file with control name, two hands-off settings, and an owner. Default template unchanged."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Look, name, close.",
+              "intro": "How to Look, name, close. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Look, name, close",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "From the WebHelp recipe, open the publishing template / look control your version exposes (verify the label :  it has moved across versions)."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Write oxygen-bootcamp-work/week6/styles-awareness.txt: (1) the control name you found, (2) two settings you must not change on a shared desk (example: deleting a look file, swapping fonts for a joke), (3) who on a real team would own a template change."
+                  "body": "Write oxygen-bootcamp-work/week6/styles-awareness.txt: (1) the control name you found, (2) two settings you must not change on a shared desk (example: deleting a look file, swapping fonts for a joke), (3) who on a real team would own a template change.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -171,8 +199,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Why is this not a designer course?",
               "options": [
@@ -186,6 +220,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You need a larger base font for a review PDF. First move?",
               "options": [

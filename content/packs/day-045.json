@@ -5,7 +5,7 @@
     "title": "Send a file out for review",
     "overview": "Turn on Track Changes, edit one command, add one comment, and accept the edit.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Review view, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Review view. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Review view",
               "body": "**Track Changes** marks insertions and deletions so a second person can see what you did. **Comments** sit on a sentence. Accept or reject like a grown-up. Then save.\n\nDo not mix two review piles on the same file (desktop comments plus a second share tool, both half-done). Pick one pile. Finish it."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/New_doc_wizard.png",
+              "alt": "New document wizard in Oxygen XML Editor",
+              "caption": "File > New. Pick a file type here. On day 1 you only need a blank project, not this wizard yet.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Track Changes",
@@ -118,20 +134,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You edited with Track Changes off and called it a review, or you left the copy broken, or you never wrote which way you closed the comment.\n\nExpected: Review view shows the cycle. One accept. Comment noted. File opens clean."
+              "body": "You just met the idea. Now do the lab: One tracked edit, one comment, one accept.\n\nThis lab can fail. Fail when: You edited with Track Changes off and called it a review, or you left the copy broken, or you never wrote which way you closed the comment.\n\nExpected: Review view shows the cycle. One accept. Comment noted. File opens clean."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to One tracked edit, one comment, one accept.",
+              "intro": "How to One tracked edit, one comment, one accept. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "One tracked edit, one comment, one accept",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Copy prime-the-pump.dita to oxygen-bootcamp-work/week7/prime-the-pump-review.dita so you do not wreck the sample."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Open the copy. Turn on Track Changes (Review view :  verify the label in your version)."
+                  "body": "Open the copy. Turn on Track Changes (Review view :  verify the label in your version).",
+                  "image": {
+                    "src": "/media/oxygen/New_doc_wizard.png",
+                    "alt": "New document wizard in Oxygen XML Editor",
+                    "caption": "File > New. Pick a file type here. On day 1 you only need a blank project, not this wizard yet.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -167,8 +195,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Track Changes is on. You edit a command. What should a reviewer see?",
               "options": [
@@ -182,6 +216,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You left twelve leftover insertions in a page you want to ship. First move?",
               "options": [

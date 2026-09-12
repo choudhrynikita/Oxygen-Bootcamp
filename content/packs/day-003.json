@@ -5,7 +5,7 @@
     "title": "Two views of the same file",
     "overview": "Look at the same sentence in the page view and in the tags view, then glance at Grid.",
     "durationMin": 85,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 85 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 85 minutes. Next you will learn One file, two views, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: One file, two views. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "One file, two views",
               "body": "The tabs under the page are **Author**, **Text**, and **Grid**.\n\n- **Author** :  looks like a page. This is where you write on most days.\n- **Text** :  the same page with **tags** (those angle brackets). The tags are the skeleton of the file.\n- **Grid** :  looks a bit like a spreadsheet. You will almost never live here this week. Glance and leave.\n\nAuthor is not Microsoft Word. If a button on the toolbar is grey, the page type does not allow that thing in that spot. You will feel this later. Today, just switch tabs."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -87,6 +102,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Author",
@@ -134,20 +150,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You never left Author, or you deleted a tag in Text and left it broken.\n\nExpected: You saw the sentence in Author and in Text. The file still opens."
+              "body": "You just met the idea. Now do the lab: Same sentence, two views.\n\nThis lab can fail. Fail when: You never left Author, or you deleted a tag in Text and left it broken.\n\nExpected: You saw the sentence in Author and in Text. The file still opens."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Same sentence, two views.",
+              "intro": "How to Same sentence, two views. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Same sentence, two views",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Open hello-concept.dita again."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Find the tabs under the big writing area. They are named Text, Grid, and Author (the order can vary)."
+                  "body": "Find the tabs under the big writing area. They are named Text, Grid, and Author (the order can vary).",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -187,8 +215,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Author view is for…",
               "options": [
@@ -202,6 +236,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Text view shows…",
               "options": [

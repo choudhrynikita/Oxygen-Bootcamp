@@ -5,7 +5,7 @@
     "title": "Capstone: a small family of AEM pages",
     "overview": "Create or mock a small page family that tells the same Kitepump story: one parent, two children, Title / Text / Image / Teaser, no DITA dumped into Text.",
     "durationMin": 110,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 110 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 110 minutes. Next you will learn The Sites half, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: The Sites half. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "The Sites half",
               "body": "Same product. Different model. Pages, not topicrefs.\n\n- One **parent**\n- Two **children**\n- **Title, Text, Image, Teaser**\n- A real **alt** phrase\n- No handbook XML in Text\n\nYou may not have AEM. A labeled mock plus a field log is the lab. Quick Publish on a real instance if you have one.\n\nThe page sells the beach card. The book explains how. They share a name, not a file format."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "parent",
@@ -117,20 +132,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You paste a DITA how-to into the Text block, or the family has one orphan page with no parent.\n\nExpected: Three pages (or mocks). Blocks used as taught. Payload written."
+              "body": "You just met the idea. Now do the lab: Sites half of the capstone.\n\nThis lab can fail. Fail when: You paste a DITA how-to into the Text block, or the family has one orphan page with no parent.\n\nExpected: Three pages (or mocks). Blocks used as taught. Payload written."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Sites half of the capstone.",
+              "intro": "How to Sites half of the capstone. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Sites half of the capstone",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Parent page: Kitepump (title). Child: Beach use. Child: Where to buy (or mock names)."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Blocks: Title, Text, Image with a real alt phrase, Teaser linking parent to child."
+                  "body": "Blocks: Title, Text, Image with a real alt phrase, Teaser linking parent to child.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -166,8 +193,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Pasting the DITA how-to into Text keeps the capstone as one story. True or not?",
               "options": [
@@ -181,6 +214,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "How do you connect parent to child on the web page?",
               "options": [

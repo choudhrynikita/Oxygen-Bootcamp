@@ -5,7 +5,7 @@
     "title": "A card that points somewhere (Teaser)",
     "overview": "Spec a Teaser with a title, one sentence, a picture, and a real link :  and keep the how-to out of the card.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn A card that points somewhere, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: A card that points somewhere. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "A card that points somewhere",
               "body": "A **Teaser** is a card: picture, title, short text, and a link. It points. It does not hold the procedure.\n\nKitepump’s landing page can tease Care. The steps stay in the handbook.\n\nThe link must go to a published page (a Sites page, or a help URL your shop actually ships). Not a folder on your laptop. Not `out/index.html` from a local Oxygen build.\n\nIf the card looks clickable, it needs a destination. If you have no destination, do not use a Teaser."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -89,6 +104,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Teaser",
@@ -123,20 +139,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: The description holds three how-to steps, or the card has no destination, or the mock has no caption.\n\nExpected: One teaser spec with title, one sentence, link, and alt. Mock labeled."
+              "body": "You just met the idea. Now do the lab: One Kitepump card.\n\nThis lab can fail. Fail when: The description holds three how-to steps, or the card has no destination, or the mock has no caption.\n\nExpected: One teaser spec with title, one sentence, link, and alt. Mock labeled."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to One Kitepump card.",
+              "intro": "How to One Kitepump card. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "One Kitepump card",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Read the Teaser Core Component page (skim)."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Write oxygen-bootcamp-work/week10/field-log-65.txt for one teaser: title Inflate in three steps, description one sentence, link to a how-to page (or write ‘page that does not exist yet’). Image alt phrase."
+                  "body": "Write oxygen-bootcamp-work/week10/field-log-65.txt for one teaser: title Inflate in three steps, description one sentence, link to a how-to page (or write ‘page that does not exist yet’). Image alt phrase.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -172,8 +200,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A Teaser is the same thing as the short line under a DITA title. True or not?",
               "options": [
@@ -187,6 +221,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The card looks clickable but the link is empty. What do you do?",
               "options": [

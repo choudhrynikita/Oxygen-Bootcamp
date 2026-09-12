@@ -5,7 +5,7 @@
     "title": "Find and replace without breaking files",
     "overview": "Replace a product string in a scoped folder without touching the library warning or the booklet’s stored name by accident.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Folder first, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Folder first. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Folder first",
               "body": "Find in Files is an audit. Replace is a sharp tool. Set **folder**, **file filter**, and if you have it, **preview**.\n\nNever Replace All on the whole workspace. Never replace a tag name as if it were English.\n\nIf the string is the product name, the repair is a **keyref** (a name pointer), not a replace that also hits the booklet’s stored name."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/New-Project-dialog.png",
+              "alt": "New Project dialog in Oxygen XML Editor",
+              "caption": "File > New Project. This dialog is how a blank project gets a name and a folder.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Scope",
@@ -117,20 +133,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: Replace All ran on the whole workspace, or the booklet’s stored name was emptied, or warnings.dita lost a sentence you did not intend.\n\nExpected: Replace log written. The booklet still holds the product name. Completeness clean. No workspace-wide replace."
+              "body": "You just met the idea. Now do the lab: A scoped replace, then completeness.\n\nThis lab can fail. Fail when: Replace All ran on the whole workspace, or the booklet’s stored name was emptied, or warnings.dita lost a sentence you did not intend.\n\nExpected: Replace log written. The booklet still holds the product name. Completeness clean. No workspace-wide replace."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to A scoped replace, then completeness.",
+              "intro": "How to A scoped replace, then completeness. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "A scoped replace, then completeness",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Find in Files: KP-2a (or your product string) across the kitepump folder. Count the hits. Note which are the stored name in the booklet, which are pointers, and which are leftover typed text."
                 },
                 {
                   "title": "Step 2",
-                  "body": "If topics still have a typed product string, replace them in topics/ only :  not in maps/, not in ditaval/, not in warnings.dita unless you mean to."
+                  "body": "If topics still have a typed product string, replace them in topics/ only :  not in maps/, not in ditaval/, not in warnings.dita unless you mean to.",
+                  "image": {
+                    "src": "/media/oxygen/New-Project-dialog.png",
+                    "alt": "New Project dialog in Oxygen XML Editor",
+                    "caption": "File > New Project. This dialog is how a blank project gets a name and a folder.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -170,8 +198,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Replace All on the whole workspace for note → caution. What blows up?",
               "options": [
@@ -185,6 +219,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The product name lives in the booklet. A page still has a typed copy. First repair?",
               "options": [

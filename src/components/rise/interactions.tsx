@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Check, ChevronLeft, ChevronRight, RefreshCw } from "lucide-react";
 import { MarkdownBody } from "@/components/markdown-body";
+import { CourseFigure, LeadLine } from "@/components/rise/figure";
 import type { FlashcardsBlock, ProcessBlock, SortingBlock } from "@/lib/bootcamp/pack-types";
 
 type DoneProps = { onComplete: () => void; complete: boolean };
@@ -16,7 +17,9 @@ export function FlashB({ block, onComplete }: { block: FlashcardsBlock } & DoneP
   }, [seen, block.cards.length, onComplete]);
 
   return (
-    <ul className="my-8 grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2">
+    <div>
+      <LeadLine text={block.lead} />
+      <ul className="my-8 grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2">
       {block.cards.map((card, i) => {
         const on = !!flipped[i];
         return (
@@ -54,6 +57,7 @@ export function FlashB({ block, onComplete }: { block: FlashcardsBlock } & DoneP
         );
       })}
     </ul>
+    </div>
   );
 }
 
@@ -128,6 +132,7 @@ export function SortB({ block, onComplete }: { block: SortingBlock } & DoneProps
 
   return (
     <div className="my-8">
+      <LeadLine text={block.lead} />
       <p className="font-[family-name:var(--font-sans)] text-base font-bold text-navy">{block.prompt}</p>
       <p className="mt-1 font-[family-name:var(--font-sans)] text-sm text-muted">Drag each card onto a category.</p>
       <div className="mt-4 flex min-h-16 flex-wrap justify-center gap-3">
@@ -203,86 +208,102 @@ export function ProcessB({ block, onComplete }: { block: ProcessBlock } & DonePr
 
   if (step < 0) {
     return (
-      <div className="rise-enter my-8 rounded-xl bg-pick px-6 py-12 text-center">
-        {block.intro ? <p className="mx-auto mt-0 max-w-lg text-lg">{block.intro}</p> : null}
-        <p className="font-[family-name:var(--font-sans)] text-sm text-muted">{total} steps</p>
-        <button
-          type="button"
-          className="mt-4 min-h-14 min-w-40 rounded-full bg-accent px-8 py-3 font-[family-name:var(--font-sans)] text-sm font-bold text-accent-fg transition-transform duration-150 active:scale-[0.96]"
-          onClick={() => setStep(0)}
-        >
-          Start
-        </button>
+      <div>
+        <LeadLine text={block.lead} />
+        <div className="rise-enter my-8 rounded-xl bg-pick px-6 py-12 text-center">
+          {block.intro ? <p className="mx-auto mt-0 max-w-lg text-lg">{block.intro}</p> : null}
+          <p className="font-[family-name:var(--font-sans)] text-sm text-muted">{total} steps</p>
+          <button
+            type="button"
+            className="mt-4 min-h-14 min-w-40 rounded-full bg-accent px-8 py-3 font-[family-name:var(--font-sans)] text-sm font-bold text-accent-fg transition-transform duration-150 active:scale-[0.96]"
+            onClick={() => setStep(0)}
+          >
+            Start
+          </button>
+        </div>
       </div>
     );
   }
 
   if (finished) {
     return (
-      <div className="rise-enter my-8 rounded-xl bg-good-bg px-6 py-12 text-center">
-        <p className="mt-0 font-[family-name:var(--font-sans)] text-lg font-bold text-good">You finished the steps</p>
-        {block.summary ? <p className="mx-auto mb-0 max-w-lg">{block.summary}</p> : null}
-        <button
-          type="button"
-          className="mt-4 min-h-11 rounded-full border border-line bg-card px-5 py-2 font-[family-name:var(--font-sans)] text-sm"
-          onClick={() => setStep(0)}
-        >
-          Review steps
-        </button>
+      <div>
+        <LeadLine text={block.lead} />
+        <div className="rise-enter my-8 rounded-xl bg-good-bg px-6 py-12 text-center">
+          <p className="mt-0 font-[family-name:var(--font-sans)] text-lg font-bold text-good">You finished the steps</p>
+          {block.summary ? <p className="mx-auto mb-0 max-w-lg">{block.summary}</p> : null}
+          <button
+            type="button"
+            className="mt-4 min-h-11 rounded-full border border-line bg-card px-5 py-2 font-[family-name:var(--font-sans)] text-sm"
+            onClick={() => setStep(0)}
+          >
+            Review steps
+          </button>
+        </div>
       </div>
     );
   }
 
+  const current = block.steps[step];
   return (
-    <div className="my-8 overflow-hidden rounded-xl bg-card shadow-[var(--shadow-soft)]">
-      <div
-        className="flex transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
-        style={{ transform: `translateX(-${step * 100}%)` }}
-      >
-        {block.steps.map((s, i) => (
-          <div key={s.title} className="w-full shrink-0 px-6 py-10 md:px-12">
-            <p className="m-0 text-center font-[family-name:var(--font-sans)] text-xs tracking-[0.16em] text-muted uppercase">
-              Step {i + 1} of {total}
-            </p>
-            <div className="mx-auto mt-4 grid h-12 w-12 place-items-center rounded-full bg-accent font-[family-name:var(--font-sans)] text-lg font-bold text-accent-fg">
-              {i + 1}
-            </div>
-            <h3 className="mt-4 text-center font-[family-name:var(--font-sans)] text-2xl font-bold text-navy">{s.title}</h3>
-            <div className="mx-auto max-w-lg text-center">
-              <MarkdownBody source={s.body} />
-            </div>
+    <div>
+      <LeadLine text={block.lead} />
+      <div className="my-8 overflow-hidden rounded-xl bg-card shadow-[var(--shadow-soft)]">
+        <div className="px-6 py-10 md:px-12">
+          <p className="m-0 text-center font-[family-name:var(--font-sans)] text-xs tracking-[0.16em] text-muted uppercase">
+            Step {step + 1} of {total}
+          </p>
+          <div className="mx-auto mt-4 grid h-12 w-12 place-items-center rounded-full bg-accent font-[family-name:var(--font-sans)] text-lg font-bold text-accent-fg">
+            {step + 1}
           </div>
-        ))}
-      </div>
-      <div className="flex items-center justify-between gap-3 border-t border-line px-4 py-3">
-        <button
-          type="button"
-          className="grid h-12 w-12 place-items-center rounded-full border border-line disabled:opacity-30"
-          disabled={step === 0}
-          aria-label="Previous step"
-          onClick={() => setStep((s) => Math.max(0, s - 1))}
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-        <div className="flex gap-2">
-          {block.steps.map((_, i) => (
-            <button
-              key={i}
-              type="button"
-              aria-label={`Step ${i + 1}`}
-              className={`h-2.5 rounded-full transition-all ${i === step ? "w-6 bg-accent" : "w-2.5 bg-track"}`}
-              onClick={() => setStep(i)}
-            />
-          ))}
+          <h3 className="mt-4 text-center font-[family-name:var(--font-sans)] text-2xl font-bold text-navy">
+            {current.title}
+          </h3>
+          <div className="mx-auto max-w-lg text-center">
+            <MarkdownBody source={current.body} />
+          </div>
+          {current.image ? (
+            <div className="mx-auto mt-4 max-w-2xl">
+              <CourseFigure
+                src={current.image.src}
+                alt={current.image.alt}
+                caption={current.image.caption}
+                credit={current.image.credit}
+                href={current.image.href}
+              />
+            </div>
+          ) : null}
         </div>
-        <button
-          type="button"
-          className="grid h-12 w-12 place-items-center rounded-full bg-accent text-accent-fg"
-          aria-label={step + 1 === total ? "Finish" : "Next step"}
-          onClick={() => setStep((s) => s + 1)}
-        >
-          <ChevronRight className="h-5 w-5" />
-        </button>
+        <div className="flex items-center justify-between gap-3 border-t border-line px-4 py-3">
+          <button
+            type="button"
+            className="grid h-12 w-12 place-items-center rounded-full border border-line disabled:opacity-30"
+            disabled={step === 0}
+            aria-label="Previous step"
+            onClick={() => setStep((s) => Math.max(0, s - 1))}
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <div className="flex gap-2">
+            {block.steps.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Step ${i + 1}`}
+                className={`h-2.5 rounded-full transition-all ${i === step ? "w-6 bg-accent" : "w-2.5 bg-track"}`}
+                onClick={() => setStep(i)}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            className="grid h-12 w-12 place-items-center rounded-full bg-accent text-accent-fg"
+            aria-label={step + 1 === total ? "Finish" : "Next step"}
+            onClick={() => setStep((s) => s + 1)}
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        </div>
       </div>
     </div>
   );

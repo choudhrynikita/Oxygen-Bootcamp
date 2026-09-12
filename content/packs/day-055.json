@@ -49,7 +49,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want.\n\nNext: a short recap, then the lab, then the check."
             },
             {
               "type": "objectives",
@@ -71,13 +71,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You already met these moves this week. Now you prove you can name them."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "The content you write",
               "body": "**Alt text** is the words a screen reader speaks when there is a picture. Write the teaching point. Not `image1.png`.\n\nTables have **header** rows. Titles are titles. The short line under the title is not a second title.\n\nPretty Author view is not the published page. WebHelp will not invent alt you did not write.\n\nThis is the week boss. Fail the quiz and **week 9 stays locked**. Retry as many times as you want."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -92,6 +107,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Alt text",
@@ -126,20 +142,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: Alt is empty or equals the file name, or the table has no header, or you leave the check copy broken.\n\nExpected: Image with teaching-point alt. Table with a header. Limitation written. Check copy opens clean."
+              "body": "You just met the idea. Now do the lab: Alt, title, table header.\n\nThis lab can fail. Fail when: Alt is empty or equals the file name, or the table has no header, or you leave the check copy broken.\n\nExpected: Image with teaching-point alt. Table with a header. Limitation written. Check copy opens clean."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Alt, title, table header.",
+              "intro": "How to Alt, title, table header. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Alt, title, table header",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Copy a kitepump topic to oxygen-bootcamp-work/week8/usable/ so you do not wreck the sample."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Add an image (or a figure with a placeholder) whose alt text states the teaching point, not the file name."
+                  "body": "Add an image (or a figure with a placeholder) whose alt text states the teaching point, not the file name.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -179,8 +207,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Pretty Author view is enough for the published page to be usable. True or not?",
               "options": [
@@ -194,6 +228,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You failed this check. Does week 9 open anyway?",
               "options": [
@@ -207,6 +242,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-2",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The first completeness error yesterday was a missing file. First move this week?",
               "options": [

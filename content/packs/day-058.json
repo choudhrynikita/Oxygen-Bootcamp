@@ -5,7 +5,7 @@
     "title": "Make a page (or walk a labeled mock)",
     "overview": "Log the Create Page wizard (template, title, name) and three page properties you would fill for Kitepump.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Create Page, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Create Page. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Create Page",
               "body": "**Create** → **Page**. Parent folder. **Template**. **Title**. **Name**. Then **Open** or **Done** (verify the button).\n\nA **template** here is the page shape the website team already built. It is not File > New in Oxygen.\n\n**Name** is the URL bit. **Title** is what people read. Lowercase hyphen names look like topic files. They are not. There is no concept template here.\n\nPage **Properties** hold title, tags, times :  fill what an author is asked to fill. Do not hunt developer tabs.\n\nIf you have no instance, the wizard in the video plus a labeled mock is the lab."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -114,20 +129,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You treat the page name as a booklet pointer, or you skip template choice, or you paste a developer setup as the lab.\n\nExpected: Log with parent, template, title, name. Three properties. Mock labeled."
+              "body": "You just met the idea. Now do the lab: Field log: create page.\n\nThis lab can fail. Fail when: You treat the page name as a booklet pointer, or you skip template choice, or you paste a developer setup as the lab.\n\nExpected: Log with parent, template, title, name. Three properties. Mock labeled."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Field log: create page.",
+              "intro": "How to Field log: create page. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Field log: create page",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "From video, instance, or labeled mock: Create Page. Note parent folder, template, title, and name (the URL bit)."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Write oxygen-bootcamp-work/week9/field-log-58.txt with a fillable page: title Kitepump HP-40, name kitepump-hp-40, template (write the template name you saw, or ‘standard page template :  verify’)."
+                  "body": "Write oxygen-bootcamp-work/week9/field-log-58.txt with a fillable page: title Kitepump HP-40, name kitepump-hp-40, template (write the template name you saw, or ‘standard page template :  verify’).",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -163,8 +190,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Page name vs page title. Which one is the URL bit?",
               "options": [
@@ -178,6 +211,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You pick a template at create time. Can you casually swap it later like a DITA page type?",
               "options": [
@@ -191,6 +225,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-2",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A template here is the same as File > New in Oxygen. True or not?",
               "options": [

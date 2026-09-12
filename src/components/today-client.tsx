@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { BurstPanel } from "@/components/burst-panel";
-import { StreakStrip } from "@/components/streak-strip";
 import { useBootcamp } from "@/lib/bootcamp/store";
 import type { DayDoc } from "@/lib/bootcamp/types";
 import { canUnlock } from "@progress/unlocks";
@@ -52,63 +51,38 @@ export function TodayClient({ catalog, day1 }: { catalog: Summary[]; day1: DayDo
   const firstVisit = !days["1"]?.status || days["1"]?.status === "available";
 
   return (
-    <div className="grid gap-4">
+    <div className="mx-auto grid max-w-2xl gap-6">
       <header>
         <p className="m-0 font-[family-name:var(--font-sans)] text-xs tracking-[0.14em] text-accent-dark uppercase">
-          Today
+          Day {dayNum} of 90 · {rank.label}
+          {game.streak.current ? ` · ${game.streak.current}-day streak` : ""}
         </p>
-        <h1 className="mt-1 mb-0 text-3xl">
-          Day {dayNum}: {current?.title ?? day1.title}
-        </h1>
-        <p className="mt-1 text-muted">
-          About {current?.timeboxMinutes ?? 90} minutes · Week {week}: {WEEK_THEMES[week]} · {rank.label}
+        <h1 className="mt-2 mb-2 text-3xl">{current?.title ?? day1.title}</h1>
+        <p className="mt-0 mb-0 text-muted">{current?.objective ?? day1.objective}</p>
+        <p className="mt-2 mb-0 font-[family-name:var(--font-sans)] text-sm text-muted">
+          About {current?.timeboxMinutes ?? 90} min · Week {week}: {WEEK_THEMES[week]}
         </p>
       </header>
 
       {firstVisit && dayNum === 1 ? (
-        <section className="rounded-xl border border-line bg-card p-4">
-          <h2 className="mt-0 font-[family-name:var(--font-sans)] text-base font-semibold">Welcome to the desk</h2>
-          <p className="mb-0">
-            You write help pages. This course puts you in Oxygen, the app writers use. Day 1 is
-            install and look around. That is enough. Adobe’s website tool waits until week 9.
-          </p>
-        </section>
+        <p className="m-0">
+          You write help pages. Day 1 is install and look around. Adobe’s website tool waits until week 9.
+        </p>
       ) : null}
 
-      <StreakStrip />
-
-      <section className="rounded-xl border border-line bg-card p-4">
-        <h2 className="mt-0 font-[family-name:var(--font-sans)] text-base font-semibold">What you will do</h2>
-        <p className="mb-0">{current?.objective ?? day1.objective}</p>
-        <div className="mt-3 flex flex-wrap gap-2">
-          <Link
-            href={`/session/${dayNum}`}
-            className="rounded-full bg-accent px-4 py-2 font-[family-name:var(--font-sans)] text-sm font-medium text-accent-fg no-underline"
-          >
-            Start course
-          </Link>
-          <Link
-            href={`/day/${dayNum}`}
-            className="rounded-full border border-line px-4 py-2 font-[family-name:var(--font-sans)] text-sm no-underline"
-          >
-            Full day
-          </Link>
-          <Link
-            href={`/practice`}
-            className="rounded-full border border-line px-4 py-2 font-[family-name:var(--font-sans)] text-sm no-underline"
-          >
-            Practice files
-          </Link>
-        </div>
-      </section>
-
-      <section className="rounded-xl border border-line bg-card p-4">
-        <h2 className="mt-0 font-[family-name:var(--font-sans)] text-base font-semibold">Next unfinished lab</h2>
-        <p className="mb-2">{current?.labTitle}</p>
-        <p className="m-0 text-sm text-muted">
-          {game.xp} XP · {game.badges.length} badges
+      <div>
+        <Link
+          href={`/session/${dayNum}`}
+          className="inline-flex min-h-12 items-center rounded-full bg-accent px-6 py-3 font-[family-name:var(--font-sans)] text-sm font-bold text-accent-fg no-underline"
+        >
+          Start course
+        </Link>
+        <p className="mt-3 mb-0 font-[family-name:var(--font-sans)] text-sm text-muted">
+          Lab today: {current?.labTitle}
+          {" · "}
+          <Link href={`/day/${dayNum}`}>Full day</Link>
         </p>
-      </section>
+      </div>
 
       <BurstPanel preferredPool={burstPool} currentDay={dayNum} />
 

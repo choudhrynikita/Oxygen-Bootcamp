@@ -5,7 +5,7 @@
     "title": "Three ways to write in AEM, names first",
     "overview": "Name Page Editor, Universal Editor, and Document Authoring in one line each, and keep Oxygen off that list.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Three names first, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Three names first. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Three names first",
               "body": "AEM has more than one way to write a page. Today you only learn the names. You do not pick a favourite.\n\n**Page Editor** is the canvas you used last week. You drop blocks onto a template.\n\n**Universal Editor** is a visual editor for pages that are wired for it. Some of those pages are not the classic Page Editor template.\n\n**Document Authoring** is writing an AEM page from Word or Google Docs. A helper in the browser sends the doc into AEM. Verify the current name in the official article :  product labels move.\n\nOxygen is not a fourth item on this list. Oxygen is the DITA app on your desktop (and in a browser, earlier in the course). Different desk."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -89,6 +104,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Page Editor",
@@ -132,20 +148,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You merge all three into one editor, or you put Oxygen on the list.\n\nExpected: Three one-liners. Three names. Mock labeled."
+              "body": "You just met the idea. Now do the lab: Three names, three one-liners.\n\nThis lab can fail. Fail when: You merge all three into one editor, or you put Oxygen on the list.\n\nExpected: Three one-liners. Three names. Mock labeled."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Three names, three one-liners.",
+              "intro": "How to Three names, three one-liners. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Three names, three one-liners",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "You may not have AEM. Use the official article, the video, and a field log."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Write oxygen-bootcamp-work/week11/field-log-70.txt with three names and one line each."
+                  "body": "Write oxygen-bootcamp-work/week11/field-log-70.txt with three names and one line each.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -189,8 +217,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Document Authoring is how you edit a DITA how-to in Oxygen. True or not?",
               "options": [
@@ -204,6 +238,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The canvas you used last week to drop Title and Text is…",
               "options": [

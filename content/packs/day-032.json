@@ -5,7 +5,7 @@
     "title": "Comments and suggested edits",
     "overview": "Turn on suggested edits, change a paragraph, add a comment, accept one change and reject another.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Suggested edits, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Suggested edits. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Suggested edits",
               "body": "**Track Changes** is a mode that records insertions and deletions so you can accept or reject them. **Review view** lists those edits and your **comments**.\n\nTurn it on. Edit. Comment. Accept or reject with intent. Then turn it off.\n\nThis desk uses this panel. One file, one place for comments.\n\nIf you type over a reused warning while tracking is on, you may replace a pointer with a copy. Check Text if the “edit” looks too smooth."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Track Changes",
@@ -118,20 +134,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: Track Changes was off so the edit vanished into the source, or you accepted everything without reading, or you replaced a warning pointer with a copied sentence.\n\nExpected: Review view shows the leftover comment (or a resolved thread you recorded). One accept, one reject. File clean."
+              "body": "You just met the idea. Now do the lab: Accept one, reject one.\n\nThis lab can fail. Fail when: Track Changes was off so the edit vanished into the source, or you accepted everything without reading, or you replaced a warning pointer with a copied sentence.\n\nExpected: Review view shows the leftover comment (or a resolved thread you recorded). One accept, one reject. File clean."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Accept one, reject one.",
+              "intro": "How to Accept one, reject one. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Accept one, reject one",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Open prime-the-pump.dita. Turn on Track Changes (Review toolbar :  verify the label)."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Edit one step (an insertion). Delete a word in the context line (a deletion). Add a comment on the warning: confirm the pinch warning still belongs."
+                  "body": "Edit one step (an insertion). Delete a word in the context line (a deletion). Add a comment on the warning: confirm the pinch warning still belongs.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -171,8 +199,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Track Changes is on and you tidy a warning pointer by typing the sentence. What did you do?",
               "options": [
@@ -186,6 +220,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Review view records insertions, deletions, and comments. Where is that view?",
               "options": [

@@ -5,7 +5,7 @@
     "title": "Make a new page and save it in a folder",
     "overview": "Create a new page from a template, give it a simple file name, and save it in a folder :  not on the desktop.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn New page, real folder, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: New page, real folder. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "New page, real folder",
               "body": "**File > New.** Pick a **DITA Concept** template. A concept is a page that explains what something is. You will meet the other two kinds of pages next week.\n\nSave as `hello-concept.dita` in `oxygen-bootcamp-work/week1/`.\n\nNot the desktop. A file on the desktop gets lost the first time someone looks for `topics/hello-concept.dita`."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -93,6 +108,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Template",
@@ -128,20 +144,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: The file is Hello Concept.dita on the desktop, or the title is empty, or the file will not save.\n\nExpected: hello-concept.dita sits in week1/, has a title and a paragraph, and opens again after save."
+              "body": "You just met the idea. Now do the lab: A new page in a real folder.\n\nThis lab can fail. Fail when: The file is Hello Concept.dita on the desktop, or the title is empty, or the file will not save.\n\nExpected: hello-concept.dita sits in week1/, has a title and a paragraph, and opens again after save."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to A new page in a real folder.",
+              "intro": "How to A new page in a real folder. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "A new page in a real folder",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Create a folder oxygen-bootcamp-work/week1/ if it does not exist."
                 },
                 {
                   "title": "Step 2",
-                  "body": "In Oxygen: File > New. Choose a DITA Concept template. (Concept just means “a page that explains what something is.”)"
+                  "body": "In Oxygen: File > New. Choose a DITA Concept template. (Concept just means “a page that explains what something is.”)",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -181,8 +209,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Why File > New instead of a blank notepad file?",
               "options": [
@@ -196,6 +230,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Which file name will be easier for the rest of the course?",
               "options": [

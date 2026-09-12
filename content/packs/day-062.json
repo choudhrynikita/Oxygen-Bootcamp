@@ -49,7 +49,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want."
+              "body": "This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want.\n\nNext: a short recap, then the lab, then the check."
             },
             {
               "type": "objectives",
@@ -71,13 +71,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You already met these moves this week. Now you prove you can name them."
+            },
+            {
+              "type": "text",
               "id": "t-2",
               "heading": "Figure",
               "body": "Folder of field logs. Caption: *aem-author-field-log pack. Mocks labeled.*"
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "A check, not a show",
@@ -92,6 +107,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Two desks",
@@ -126,20 +142,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: Logs smash AEM and Oxygen into one app, or Quick Publish is described as DITA-OT, or mocks are unlabeled.\n\nExpected: Check folder complete. Zero fake product names. Two-desk Kitepump plan. Verify-labels present."
+              "body": "You just met the idea. Now do the lab: Field logs 56-61 in one folder.\n\nThis lab can fail. Fail when: Logs smash AEM and Oxygen into one app, or Quick Publish is described as DITA-OT, or mocks are unlabeled.\n\nExpected: Check folder complete. Zero fake product names. Two-desk Kitepump plan. Verify-labels present."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Field logs 56-61 in one folder.",
+              "intro": "How to Field logs 56-61 in one folder. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Field logs 56-61 in one folder",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Gather field-log-56 through 61 into oxygen-bootcamp-work/week9-check/."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Search your notes for the words AEM Oxygen. You should find zero hits. Every figure that is a mock must say mock."
+                  "body": "Search your notes for the words AEM Oxygen. You should find zero hits. Every figure that is a mock must say mock.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -175,8 +203,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You failed this check. Does week 10 open anyway?",
               "options": [
@@ -190,6 +224,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You have no AEM login this week. Can you still finish the labs?",
               "options": [
@@ -203,6 +238,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-2",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "AEM Author is not DITA. Which object is still DITA this week?",
               "options": [
@@ -216,6 +252,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-3",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "There is a product called AEM Oxygen XML Editor. True or not?",
               "options": [

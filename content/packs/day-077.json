@@ -5,7 +5,7 @@
     "title": "Checkout and check-in, like borrowing a book",
     "overview": "Write the cycle: checkout, edit, check in :  and what goes wrong if two people skip the lock.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Borrow, write, return, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Borrow, write, return. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Borrow, write, return",
               "body": "**Checkout** locks the topic so a teammate cannot overwrite you. Like borrowing a library book. **Check-in** gives the book back and stores a version in Guides.\n\nIn between, you edit. In Guides in the browser, or :  if the desk allows it :  in Oxygen on the desktop.\n\nYou do not need a live Guides box to learn the words. You do need the words right. Checkout is not Preview. Checkout is not Quick Publish.\n\nSkip the lock and two people write the same file. Last save wins, or a conflict you cannot explain."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -89,6 +104,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Checkout",
@@ -127,20 +143,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You describe checkout as AEM Sites Quick Publish.\n\nExpected: Four sentences. Mock labeled if no instance."
+              "body": "You just met the idea. Now do the lab: Cycle card.\n\nThis lab can fail. Fail when: You describe checkout as AEM Sites Quick Publish.\n\nExpected: Four sentences. Mock labeled if no instance."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Cycle card.",
+              "intro": "How to Cycle card. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Cycle card",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Write oxygen-bootcamp-work/week12/field-log-77.txt with four sentences."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Checkout locks the topic so a teammate cannot overwrite you. Like borrowing a library book."
+                  "body": "Checkout locks the topic so a teammate cannot overwrite you. Like borrowing a library book.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -180,8 +208,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Checkout in Guides is the same as Preview in the Page Editor. True or not?",
               "options": [
@@ -195,6 +229,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Two writers edit the same topic with no checkout. What often happens?",
               "options": [

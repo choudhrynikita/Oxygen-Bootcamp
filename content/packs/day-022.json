@@ -5,7 +5,7 @@
     "title": "One product name, used everywhere",
     "overview": "Put the product name in the booklet once, point at it from two pages, then change it once and watch both pages follow.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Type it once, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Type it once. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Type it once",
               "body": "Last week the booklet was a table of contents. This week it also holds **names**.\n\nYou have two pages that mention the shop’s product. If you type “Kitepump KP-2” in both, a rename will miss a page. Put the name in the booklet. Point at it from the pages.\n\nOpen `kitepump.ditamap`. Set it as the **root map** :  the main booklet Oxygen should use. Then change the stored name. Both pages should follow."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -89,6 +104,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "root map",
@@ -128,20 +144,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You typed the product string on both pages, or you left the root map unset, or only one page uses the name from the booklet.\n\nExpected: The booklet holds Kitepump KP-2a. Two pages show it. Completeness is clean with the root map set."
+              "body": "You just met the idea. Now do the lab: Change the name once.\n\nThis lab can fail. Fail when: You typed the product string on both pages, or you left the root map unset, or only one page uses the name from the booklet.\n\nExpected: The booklet holds Kitepump KP-2a. Two pages show it. Completeness is clean with the root map set."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Change the name once.",
+              "intro": "How to Change the name once. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Change the name once",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Open samples/kitepump-dita/kitepump.ditamap. Set it as the root map (the main booklet)."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Find the product name in the booklet. The sample already has a name (Kitepump KP-2) stored once. If you cannot see it in the tree, open the booklet in Text and look for keys=\"product\"."
+                  "body": "Find the product name in the booklet. The sample already has a name (Kitepump KP-2) stored once. If you cannot see it in the tree, open the booklet in Text and look for keys=\"product\".",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -181,8 +209,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The product name looks broken in Author. First place you look?",
               "options": [
@@ -196,6 +230,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Why put the product name in the booklet instead of typing it on every page?",
               "options": [

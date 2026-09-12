@@ -5,7 +5,7 @@
     "title": "Reuse a warning instead of copying it",
     "overview": "Write a warning in one library file, pull it into a how-to with a pointer, then break the pointer on purpose and repair it.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Write the warning once, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Write the warning once. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Write the warning once",
               "body": "A **conref** is a pointer that pulls a chunk from another file by **path plus id**.\n\nToday you feel the path form. The library file holds the note. The how-to points at it. Author shows the words. Text shows the pointer.\n\n**Reusable Components** view lists chunks from the root map. Insert from there if you have it. Do not paste the sentence."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/New_doc_wizard.png",
+              "alt": "New document wizard in Oxygen XML Editor",
+              "caption": "File > New. Pick a file type here. On day 1 you only need a blank project, not this wizard yet.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -89,6 +104,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "conref",
@@ -124,20 +140,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: The warning sentence is copied into the how-to, or there is no pointer, or the library page is a chapter in the table of contents.\n\nExpected: One source sentence. The how-to shows it through a pointer. Text has no copy. Completeness is clean after repair."
+              "body": "You just met the idea. Now do the lab: One warning, one pointer.\n\nThis lab can fail. Fail when: The warning sentence is copied into the how-to, or there is no pointer, or the library page is a chapter in the table of contents.\n\nExpected: One source sentence. The how-to shows it through a pointer. Text has no copy. Completeness is clean after repair."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to One warning, one pointer.",
+              "intro": "How to One warning, one pointer. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "One warning, one pointer",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Create topics/library/warnings.dita (an explaining page is fine). One warning note with id=\"pinch-hazard\": pinch hazard at the lever. That sentence lives only in this file."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Add the library page to the booklet. Hide it from the table of contents (toc=\"no\" on the pointer, or the similar control your version shows). Write which setting you used."
+                  "body": "Add the library page to the booklet. Hide it from the table of contents (toc=\"no\" on the pointer, or the similar control your version shows). Write which setting you used.",
+                  "image": {
+                    "src": "/media/oxygen/New_doc_wizard.png",
+                    "alt": "New document wizard in Oxygen XML Editor",
+                    "caption": "File > New. Pick a file type here. On day 1 you only need a blank project, not this wizard yet.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -177,8 +205,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A warning pointer uses a path plus an id. What is the id on?",
               "options": [
@@ -192,6 +226,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Reusable Components view is empty. First place you look?",
               "options": [

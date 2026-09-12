@@ -5,7 +5,7 @@
     "title": "A small handbook",
     "overview": "Ship a tiny booklet: the sample map, your pages, completeness clean. Do not publish a website yet.",
     "durationMin": 110,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 110 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 110 minutes. Next you will learn The week’s apple, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: The week’s apple. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "The week’s apple",
               "body": "A **handbook** on this desk means:\n\n- A map (table of contents)\n- Pages it points at\n- Completeness clean\n\nNo website. No PDF. The sample shop’s flower-docs pack is the bench. Keep it."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -103,20 +117,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: A week-2 page is missing from the tree, or completeness reports a missing file.\n\nExpected: Tree lists at least three pages. Completeness clean. Count written down."
+              "body": "You just met the idea. Now do the lab: Flower studio handbook, on the desk.\n\nThis lab can fail. Fail when: A week-2 page is missing from the tree, or completeness reports a missing file.\n\nExpected: Tree lists at least three pages. Completeness clean. Count written down."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Flower studio handbook, on the desk.",
+              "intro": "How to Flower studio handbook, on the desk. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Flower studio handbook, on the desk",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Open flowers.ditamap in Maps Manager. Set it as the root map."
                 },
                 {
                   "title": "Step 2",
-                  "body": "The booklet should list at least: an explaining page, a how-to, and a lookup page. Add any that are missing from week 2."
+                  "body": "The booklet should list at least: an explaining page, a how-to, and a lookup page. Add any that are missing from week 2.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -152,8 +178,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Why not publish a website today?",
               "options": [
@@ -167,6 +199,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "The how-to is on disk but not in the tree. Are you done?",
               "options": [

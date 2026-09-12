@@ -5,7 +5,7 @@
     "title": "Talk-through sheet",
     "overview": "Answer out loud (or in writing if you are alone) ten questions a hiring lead would actually ask.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Out loud, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Out loud. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Out loud",
               "body": "Ten short answers. Concrete verbs. No slogans.\n\nYou have met every word on this list. If one is fuzzy, open that week’s field log and rewrite the line.\n\nNumber 10 is not a trick. There is no product called AEM Oxygen XML Editor."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/dmm-startup.png",
+              "alt": "DITA Maps Manager start state",
+              "caption": "Maps Manager before a booklet is open. Open a map from here.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/dita-maps-manager.html"
             },
             {
               "type": "text",
@@ -103,20 +117,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: Any answer mixes the two desks, or #10 treats the fake product name as real.\n\nExpected: Ten short answers. #10 is a hard no on the fake product name."
+              "body": "You just met the idea. Now do the lab: Ten answers.\n\nThis lab can fail. Fail when: Any answer mixes the two desks, or #10 treats the fake product name as real.\n\nExpected: Ten short answers. #10 is a hard no on the fake product name."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Ten answers.",
+              "intro": "How to Ten answers. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Ten answers",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Write oxygen-bootcamp-work/week12/talk-through.txt."
                 },
                 {
                   "title": "Step 2",
-                  "body": "1. Author vs Text vs Grid in Oxygen."
+                  "body": "1. Author vs Text vs Grid in Oxygen.",
+                  "image": {
+                    "src": "/media/oxygen/dmm-startup.png",
+                    "alt": "DITA Maps Manager start state",
+                    "caption": "Maps Manager before a booklet is open. Open a map from here.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/dita-maps-manager.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -180,8 +206,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "There is a product called AEM Oxygen XML Editor. True or not?",
               "options": [
@@ -195,6 +227,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "Local WebHelp and a Guides baseline are the same publish. True or not?",
               "options": [

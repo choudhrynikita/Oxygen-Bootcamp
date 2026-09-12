@@ -5,7 +5,7 @@
     "title": "When to use each way",
     "overview": "Match four jobs to a method: Page Editor, Universal Editor, Document Authoring, or Oxygen :  and keep a DITA how-to off the AEM list.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Match the job, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,9 +66,23 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Match the job. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Match the job",
               "body": "Yesterday you named three AEM ways to write. Today you match a job to a way.\n\n- A templated site page with Core Components → **Page Editor**\n- A page or app wired for visual editing beyond that canvas → **Universal Editor**\n- Marketers already in Word or Google Docs → **Document Authoring**\n- A DITA how-to → **Oxygen** (Guides next week)\n\nIf you only remember one thing: a DITA how-to does not become Document Authoring because both use the word document.\n\nYou do not have to pick a favourite. You have to pick the matching row."
+            },
+            {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
             },
             {
               "type": "text",
@@ -79,6 +93,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Page Editor",
@@ -117,20 +132,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: The DITA how-to is assigned to Document Authoring because both say document.\n\nExpected: Four rows. The how-to stays off the AEM page methods."
+              "body": "You just met the idea. Now do the lab: Job to method table.\n\nThis lab can fail. Fail when: The DITA how-to is assigned to Document Authoring because both say document.\n\nExpected: Four rows. The how-to stays off the AEM page methods."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Job to method table.",
+              "intro": "How to Job to method table. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Job to method table",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Write oxygen-bootcamp-work/week11/field-log-71.txt as a four-row table."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Job: a WKND-style page with Title, Text, Teaser on a template → Page Editor."
+                  "body": "Job: a WKND-style page with Title, Text, Teaser on a template → Page Editor.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -170,8 +197,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A marketer wants to write a campaign page in Google Docs. Which AEM method?",
               "options": [
@@ -185,6 +218,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "A 12-step how-to already lives as a DITA task. Which method today?",
               "options": [

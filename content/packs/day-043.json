@@ -5,7 +5,7 @@
     "title": "Oxygen in a web browser",
     "overview": "Open Web Author (or a labeled mock) and write three things it shares with the desktop app, and three things it does not.",
     "durationMin": 90,
-    "audience": "New writers. Do the work in Oxygen, or on the labeled mock if the app cannot open."
+    "audience": "New writers. Do the work in Oxygen, or on the labeled window if the app cannot open."
   },
   "objectives": [
     {
@@ -44,7 +44,7 @@
               "type": "text",
               "id": "w-body",
               "heading": "What today is",
-              "body": "About 90 minutes. Do the lab in the app. The check at the end uses words from today only."
+              "body": "About 90 minutes. Next you will learn Same company, thinner desk, then do the lab in the app. The check at the end uses words from today only."
             },
             {
               "type": "objectives",
@@ -66,13 +66,28 @@
           "blocks": [
             {
               "type": "text",
+              "id": "learn-bridge",
+              "body": "You just named today's job. Now the idea: Same company, thinner desk. Then you will do the lab."
+            },
+            {
+              "type": "text",
               "id": "t-0",
               "heading": "Same company, thinner desk",
               "body": "**Web Author** is Oxygen in a browser tab. Same company as the desktop app (Syncro Soft). You still see a page view. You can still type. You can still see a red error.\n\nIt is not the full desk. Do not expect every add-on, every publish button, or a completeness check that matches last week.\n\nUse it when you are away from the licensed desktop, or when someone only needs to read a page and leave a comment. Do not send a writer into a browser tab and then ask them for a local WebHelp folder."
             },
             {
+              "type": "figure",
+              "id": "learn-fig",
+              "src": "/media/oxygen/oxygen-UI.png",
+              "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+              "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+              "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+              "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+            },
+            {
               "type": "accordion",
               "id": "learn-extra",
+              "lead": "Open a heading only if you want extra detail on that point.",
               "items": [
                 {
                   "title": "Word today",
@@ -83,6 +98,7 @@
             {
               "type": "flashcards",
               "id": "learn-cards",
+              "lead": "Flip each card. The front is a word from this lesson. The back is what it means here.",
               "cards": [
                 {
                   "front": "Web Author",
@@ -118,20 +134,32 @@
               "type": "text",
               "id": "lab-lead",
               "heading": "Do the work",
-              "body": "This lab can fail. Fail when: You never opened the desktop app or the mock, or you wrote that the browser tab can do every desktop job.\n\nExpected: Six factual lines. Web Author is Oxygen in a browser. The desktop app is still the full desk."
+              "body": "You just met the idea. Now do the lab: Three shares, three gaps.\n\nThis lab can fail. Fail when: You never opened the desktop app or the mock, or you wrote that the browser tab can do every desktop job.\n\nExpected: Six factual lines. Web Author is Oxygen in a browser. The desktop app is still the full desk."
             },
             {
               "type": "process",
               "id": "lab-process",
-              "intro": "Walk the steps in order. Tick them in the lab after you actually do them.",
+              "lead": "Walk the cards below, in order, to Three shares, three gaps.",
+              "intro": "How to Three shares, three gaps. Walk the cards in order. Tick them in the lab after you actually do them.",
               "steps": [
+                {
+                  "title": "Three shares, three gaps",
+                  "body": "This is the whole move. The next cards are the steps, in order."
+                },
                 {
                   "title": "Step 1",
                   "body": "Open kitepump.ditamap on the desktop app so you have a baseline. Look at Author view on one page."
                 },
                 {
                   "title": "Step 2",
-                  "body": "Read the official Web Author page from the Source box (or the video catalog). If your shop has a Web Author URL, open it. If not, use the labeled mock in this lesson."
+                  "body": "Read the official Web Author page from the Source box (or the video catalog). If your shop has a Web Author URL, open it. If not, use the labeled mock in this lesson.",
+                  "image": {
+                    "src": "/media/oxygen/oxygen-UI.png",
+                    "alt": "Default Oxygen XML Editor window with menus, side views, and the empty editor in the middle",
+                    "caption": "The first Oxygen window. Menus at the top, helper views at the sides, empty editor in the middle.",
+                    "credit": "Oxygen XML Editor User Guide, Syncro Soft",
+                    "href": "https://www.oxygenxml.com/doc/ug-editor/topics/getting-familiar-2.html"
+                  }
                 },
                 {
                   "title": "Step 3",
@@ -167,8 +195,14 @@
           "questId": "c",
           "blocks": [
             {
+              "type": "text",
+              "id": "check-bridge",
+              "body": "The lab is done. Prove it with the check. Use words from today only."
+            },
+            {
               "type": "knowledge-check",
               "id": "kc-0",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "What is Web Author?",
               "options": [
@@ -182,6 +216,7 @@
             {
               "type": "knowledge-check",
               "id": "kc-1",
+              "lead": "Answer with words from today only.",
               "kind": "mc",
               "q": "You need to run a completeness check on the booklet and read a local publish log. Where do you work?",
               "options": [
