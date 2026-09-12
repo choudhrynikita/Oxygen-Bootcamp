@@ -1,7 +1,7 @@
 {
   "day": 66,
   "cover": {
-    "kicker": "Day 66 of 90 · Week 10",
+    "kicker": "Day 66 of 90",
     "title": "A box that holds other blocks",
     "overview": "Use Container as a box that holds Title, Image, Text, and Teasers, and skip extra nested boxes.",
     "durationMin": 90,

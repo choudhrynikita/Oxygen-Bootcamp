@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useBootcamp } from "@/lib/bootcamp/store";
 import { canUnlock } from "@progress/unlocks";
-import { WEEK_THEMES } from "@/lib/bootcamp/weeks";
+import { UNITS, unitForDay } from "@/lib/bootcamp/weeks";
 
 type Row = {
   day: number;
@@ -15,42 +15,43 @@ type Row = {
 
 export function PathClient({ catalog }: { catalog: Row[] }) {
   const state = useBootcamp();
-  const weeks = Array.from({ length: 12 }, (_, i) => i + 1);
 
-  const currentWeek = useMemo(() => {
+  const currentDay = useMemo(() => {
     const open = catalog.find((d) => {
       const st = state.days[String(d.day)]?.status;
       return st === "started" || st === "available" || st === "lab_done" || st === "checked";
     });
-    return open?.week ?? 1;
+    return open?.day ?? 1;
   }, [catalog, state.days]);
 
-  const [openWeek, setOpenWeek] = useState(currentWeek);
+  const [openUnit, setOpenUnit] = useState(unitForDay(currentDay).id);
 
   return (
     <div className="mx-auto max-w-2xl">
       <h1 className="text-3xl">Path</h1>
-      <p className="text-muted">One week at a time. Finish Sunday’s check to open the next week.</p>
-      {weeks.map((w) => {
-        const days = catalog.filter((d) => d.week === w);
-        const isOpen = openWeek === w;
+      <p className="text-muted">
+        Self-paced. Finish a day’s lab to open the next. Do as many days as you want in one sitting.
+      </p>
+      {UNITS.map((unit) => {
+        const days = catalog.filter((d) => d.day >= unit.from && d.day <= unit.to);
+        const isOpen = openUnit === unit.id;
         const done = days.filter((d) => {
           const st = state.days[String(d.day)]?.status;
           return st === "complete" || st === "checked";
         }).length;
         return (
-          <section key={w} className="mt-3 border-b border-line">
+          <section key={unit.id} className="mt-3 border-b border-line">
             <button
               type="button"
               className="flex min-h-12 w-full items-center justify-between gap-3 py-3 text-left"
               aria-expanded={isOpen}
-              onClick={() => setOpenWeek(isOpen ? 0 : w)}
+              onClick={() => setOpenUnit(isOpen ? 0 : unit.id)}
             >
               <span className="font-[family-name:var(--font-sans)] text-base font-bold text-navy">
-                Week {w} · {WEEK_THEMES[w]}
+                {unit.title}
               </span>
               <span className="font-[family-name:var(--font-sans)] text-sm text-muted">
-                {done}/{days.length}
+                Days {unit.from}–{unit.to} · {done}/{days.length}
               </span>
             </button>
             {isOpen ? (
@@ -63,7 +64,7 @@ export function PathClient({ catalog }: { catalog: Row[] }) {
                     <>
                       <span className="font-[family-name:var(--font-sans)] text-xs text-muted">
                         Day {d.day}
-                        {d.boss ? " · week check" : ""}
+                        {d.boss ? " · checkpoint" : ""}
                       </span>
                       <span className="block">{d.title}</span>
                     </>

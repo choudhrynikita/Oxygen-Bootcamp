@@ -1,7 +1,7 @@
 {
   "day": 48,
   "cover": {
-    "kicker": "Day 48 of 90 · Week 7",
+    "kicker": "Day 48 of 90",
     "title": "Pick one place the files live",
     "overview": "Write the one place kitepump lives this week, rename one page without breaking the pointer, and name the failure if two places both claim to be home.",
     "durationMin": 90,

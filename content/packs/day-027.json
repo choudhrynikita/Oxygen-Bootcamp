@@ -1,7 +1,7 @@
 {
   "day": 27,
   "cover": {
-    "kicker": "Day 27 of 90 · Week 4",
+    "kicker": "Day 27 of 90",
     "title": "When it is better to copy",
     "overview": "Find one reused warning that should be a local sentence, replace the pointer, and write the rule you used.",
     "durationMin": 90,

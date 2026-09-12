@@ -1,7 +1,7 @@
 {
   "day": 25,
   "cover": {
-    "kicker": "Day 25 of 90 · Week 4",
+    "kicker": "Day 25 of 90",
     "title": "A booklet inside a booklet",
     "overview": "Put the same product name on two nested booklets with different values, and write which value each page shows.",
     "durationMin": 90,

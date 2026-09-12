@@ -13,11 +13,13 @@ A total fresher has never opened Oxygen. They do not know XML, DITA, maps, keys,
 5. Three kinds of pages: what it is, how to do it, facts you look up.
 6. A booklet is a table of contents that points at those files.
 7. Then reuse, tools, publish, teammates.
-8. Adobe’s website tool (AEM) is a different job. It starts in week 9. Not day 1.
+8. Adobe’s website tool (AEM) is a different job. It starts at day 56. Not day 1.
 
-## Weeks
+## Units (self-paced)
 
-| Week | Days | Theme | The apple this week |
+There is no weekly calendar. Finish a day’s lab to open the next. Do as many days as you want in one sitting.
+
+| Unit | Days | Theme | The apple here |
 |---|---|---|---|
 | 1 | 1–7 | Sit down and write | The app opens. A page saves. A red error can be fixed. |
 | 2 | 8–14 | Three kinds of pages | Concept, task, reference — as files, not as a booklet yet. |

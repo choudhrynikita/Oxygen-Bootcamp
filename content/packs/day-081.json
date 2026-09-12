@@ -1,7 +1,7 @@
 {
   "day": 81,
   "cover": {
-    "kicker": "Day 81 of 90 · Week 12",
+    "kicker": "Day 81 of 90",
     "title": "One full loop on paper (or mock)",
     "overview": "Write a checkout → edit → check-in → request publish cycle for one topic, with no Sites Create Page in it.",
     "durationMin": 90,

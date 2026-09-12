@@ -8,6 +8,7 @@ import { LabPanel } from "@/components/lab-panel";
 import { Quiz } from "@/components/quiz";
 import { FieldNote } from "@/components/field-note";
 import { DayPager } from "@/components/day-pager";
+import { unitForDay } from "@/lib/bootcamp/weeks";
 
 export function generateStaticParams() {
   return listDayNumbers().map((n) => ({ n: String(n) }));
@@ -18,12 +19,13 @@ export default async function DayPage({ params }: { params: Promise<{ n: string 
   const dayNum = Number(n);
   if (!Number.isInteger(dayNum) || dayNum < 1 || dayNum > 90) notFound();
   const day = loadDay(dayNum);
+  const unit = unitForDay(day.day);
 
   return (
     <article>
       <p className="m-0 font-[family-name:var(--font-sans)] text-xs tracking-[0.14em] text-accent-dark uppercase">
-        Week {day.week}
-        {day.boss ? " · week boss" : ""}
+        Day {day.day} of 90 · {unit.title}
+        {day.boss ? " · checkpoint" : ""}
       </p>
       <h1 className="mt-1 text-3xl">
         Day {day.day}: {day.title}

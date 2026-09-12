@@ -1,7 +1,7 @@
 {
   "day": 77,
   "cover": {
-    "kicker": "Day 77 of 90 · Week 12",
+    "kicker": "Day 77 of 90",
     "title": "Checkout and check-in, like borrowing a book",
     "overview": "Write the cycle: checkout, edit, check in :  and what goes wrong if two people skip the lock.",
     "durationMin": 90,

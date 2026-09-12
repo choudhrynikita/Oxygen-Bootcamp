@@ -1,5 +1,5 @@
 export const SCHEMA_VERSION = 1 as const;
-export const CURRICULUM_VERSION = "2026.09.3";
+export const CURRICULUM_VERSION = "2026.09.4";
 export const STORAGE_KEY = "oxygen-bootcamp-state-v1";
 export const LEGACY_STORAGE_KEY = "oxygen-bootcamp-progress-v1";
 

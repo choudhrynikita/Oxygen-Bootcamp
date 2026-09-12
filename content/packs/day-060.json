@@ -1,7 +1,7 @@
 {
   "day": 60,
   "cover": {
-    "kicker": "Day 60 of 90 · Week 9",
+    "kicker": "Day 60 of 90",
     "title": "A page is a stack of blocks, not a DITA topic",
     "overview": "Name page vs block, and write why a Text block is not an explaining page.",
     "durationMin": 90,

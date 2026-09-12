@@ -1,7 +1,7 @@
 {
   "day": 34,
   "cover": {
-    "kicker": "Day 34 of 90 · Week 5",
+    "kicker": "Day 34 of 90",
     "title": "Find and replace without breaking files",
     "overview": "Replace a product string in a scoped folder without touching the library warning or the booklet’s stored name by accident.",
     "durationMin": 90,

@@ -1,7 +1,7 @@
 {
   "day": 23,
   "cover": {
-    "kicker": "Day 23 of 90 · Week 4",
+    "kicker": "Day 23 of 90",
     "title": "Reuse a warning instead of copying it",
     "overview": "Write a warning in one library file, pull it into a how-to with a pointer, then break the pointer on purpose and repair it.",
     "durationMin": 90,

@@ -1,7 +1,7 @@
 {
   "day": 18,
   "cover": {
-    "kicker": "Day 18 of 90 · Week 3",
+    "kicker": "Day 18 of 90",
     "title": "Check that every link still works",
     "overview": "Run the completeness check on the booklet and repair one broken pointer you caused on purpose.",
     "durationMin": 90,

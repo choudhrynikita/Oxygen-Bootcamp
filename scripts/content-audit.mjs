@@ -58,7 +58,7 @@ for (let n = 1; n <= 90; n++) {
     if (re.test(raw)) fail(`${name} has AI-slop phrasing (${re})`);
   }
   if (n <= 7 && earlyAem.test(raw) && !/week 9/i.test(raw)) {
-    fail(`${name} teaches AEM before week 9`);
+    fail(`${name} teaches AEM before the AEM unit`);
   }
   if (n <= 14 && earlyMap.test(raw)) fail(`${name} teaches maps before week 3`);
   if (n <= 21 && earlyKey.test(raw)) fail(`${name} teaches reuse terms before week 4`);
@@ -146,7 +146,7 @@ for (let n = 1; n <= 90; n++) {
     if (re.test(raw)) fail(`${name} has AI-slop phrasing (${re})`);
   }
   if (n <= 7 && earlyAem.test(raw) && !/week 9/i.test(raw)) {
-    fail(`${name} teaches AEM before week 9`);
+    fail(`${name} teaches AEM before the AEM unit`);
   }
   if (n <= 14 && earlyMap.test(raw)) fail(`${name} teaches maps before week 3`);
   if (n <= 21 && earlyKey.test(raw)) fail(`${name} teaches reuse terms before week 4`);

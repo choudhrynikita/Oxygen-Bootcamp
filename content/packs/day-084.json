@@ -1,7 +1,7 @@
 {
   "day": 84,
   "cover": {
-    "kicker": "Day 84 of 90 · Week 12",
+    "kicker": "Day 84 of 90",
     "title": "Capstone: a small family of AEM pages",
     "overview": "Create or mock a small page family that tells the same Kitepump story: one parent, two children, Title / Text / Image / Teaser, no DITA dumped into Text.",
     "durationMin": 110,

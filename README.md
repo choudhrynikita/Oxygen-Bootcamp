@@ -1,8 +1,8 @@
 # Oxygen Bootcamp
 
-90-day desk for a new help writer. Weeks 1–8 are **Oxygen XML Author / Editor** (Syncro Soft). Weeks 9–12 add **AEM authoring** and **AEM Guides**. There is no product called “AEM Oxygen XML Editor.”
+90-day desk for a new help writer. Self-paced: finish a day’s lab to open the next. Days 1–55 are **Oxygen XML Author / Editor** (Syncro Soft). Days 56–90 add **AEM authoring** and **AEM Guides**. There is no product called “AEM Oxygen XML Editor.”
 
-You install the app on day 1. You do not get a quiz about Adobe’s website tool until week 9.
+You install the app on day 1. You do not get a quiz about Adobe’s website tool until the AEM unit (day 56).
 
 **Live classroom is Vercel**, not GitHub Pages. Pages is a footnote for the old static shell.
 
@@ -22,9 +22,9 @@ Node 20 or 22 (`.nvmrc` is 22). No secrets required to build.
 
 ## How to study
 
-Home is Today: what you will do, a 5-minute warmup, the next practice, search. Pedagogy: [docs/PEDAGOGY.md](docs/PEDAGOGY.md). Voice: [docs/VOICE.md](docs/VOICE.md).
+Home is Today: the current day, a 5-minute warmup, then Start course. There is no weekly quota. Pedagogy: [docs/PEDAGOGY.md](docs/PEDAGOGY.md). Voice: [docs/VOICE.md](docs/VOICE.md).
 
-A weekday day is 75–110 minutes in four pauseable blocks. XP follows labs, quizzes, and quests — not page views. Badges wait for a lab that can fail.
+A day is 75–110 minutes. Do one, or several, in a sitting. XP follows labs, quizzes, and quests — not page views. Badges wait for a lab that can fail.
 
 Game rules: [docs/GAME.md](docs/GAME.md). Update guard: [docs/UPDATE_GUARD.md](docs/UPDATE_GUARD.md).
 

@@ -1,7 +1,7 @@
 {
   "day": 67,
   "cover": {
-    "kicker": "Day 67 of 90 · Week 10",
+    "kicker": "Day 67 of 90",
     "title": "Reuse a layout (not the same as Oxygen reuse)",
     "overview": "Explain an Experience Fragment as a reusable layout strip, and keep the handbook warning in DITA.",
     "durationMin": 90,

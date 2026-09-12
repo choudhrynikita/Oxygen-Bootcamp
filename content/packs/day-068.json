@@ -1,7 +1,7 @@
 {
   "day": 68,
   "cover": {
-    "kicker": "Day 68 of 90 · Week 10",
+    "kicker": "Day 68 of 90",
     "title": "Notes, versions, restore",
     "overview": "Log annotate, version, and restore on an AEM page, and write that this is not Git and not Oxygen Track Changes.",
     "durationMin": 90,

@@ -26,8 +26,8 @@ export function SessionClient({ day }: { day: DayDoc }) {
   return (
     <article>
       <p className="m-0 font-[family-name:var(--font-sans)] text-xs tracking-[0.14em] text-accent-dark uppercase">
-        Session · Week {day.week}
-        {day.boss ? " · week boss" : ""}
+        Session · Day {day.day} of 90
+        {day.boss ? " · checkpoint" : ""}
       </p>
       <h1 className="mt-1 text-3xl">
         Day {day.day}: {day.title}

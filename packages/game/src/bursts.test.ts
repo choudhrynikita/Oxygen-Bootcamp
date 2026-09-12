@@ -3,14 +3,14 @@ import { describe, it } from "node:test";
 import { burstPoolForDay, pickBurstType } from "./bursts";
 
 describe("burst rotation", () => {
-  it("week 1 only uses install-safe types", () => {
+  it("first seven days only use install-safe types", () => {
     for (let d = 1; d <= 7; d++) {
       const pool = burstPoolForDay(d);
       assert.deepEqual(pool, ["warmup-match", "menu-path-race"]);
     }
   });
 
-  it("week 1 does not ask about maps or AEM types", () => {
+  it("first days do not ask about maps or AEM types", () => {
     const pool = burstPoolForDay(1);
     assert.equal(pool.includes("glossary-lightning"), false);
     assert.equal(pool.includes("output-oracle"), false);

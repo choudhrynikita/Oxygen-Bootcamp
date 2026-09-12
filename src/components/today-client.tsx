@@ -7,7 +7,7 @@ import { useBootcamp } from "@/lib/bootcamp/store";
 import type { DayDoc } from "@/lib/bootcamp/types";
 import { canUnlock } from "@progress/unlocks";
 import { rankFor } from "@game/xp";
-import { WEEK_THEMES } from "@/lib/bootcamp/weeks";
+import { unitForDay } from "@/lib/bootcamp/weeks";
 
 type Summary = {
   day: number;
@@ -47,26 +47,26 @@ export function TodayClient({ catalog, day1 }: { catalog: Summary[]; day1: DayDo
 
   const burstPool = current?.dailyBurstPool ?? day1.dailyBurstPool;
   const dayNum = current?.day ?? 1;
-  const week = current?.week ?? 1;
+  const unit = unitForDay(dayNum);
   const firstVisit = !days["1"]?.status || days["1"]?.status === "available";
 
   return (
     <div className="mx-auto grid max-w-2xl gap-6">
       <header>
         <p className="m-0 font-[family-name:var(--font-sans)] text-xs tracking-[0.14em] text-accent-dark uppercase">
-          Day {dayNum} of 90 · {rank.label}
+          Day {dayNum} of 90 · self-paced · {rank.label}
           {game.streak.current ? ` · ${game.streak.current}-day streak` : ""}
         </p>
         <h1 className="mt-2 mb-2 text-3xl">{current?.title ?? day1.title}</h1>
         <p className="mt-0 mb-0 text-muted">{current?.objective ?? day1.objective}</p>
         <p className="mt-2 mb-0 font-[family-name:var(--font-sans)] text-sm text-muted">
-          About {current?.timeboxMinutes ?? 90} min · Week {week}: {WEEK_THEMES[week]}
+          About {current?.timeboxMinutes ?? 90} min · {unit.title}
         </p>
       </header>
 
       {firstVisit && dayNum === 1 ? (
         <p className="m-0">
-          You write help pages. Day 1 is install and look around. Adobe’s website tool waits until week 9.
+          You write help pages. Day 1 is install and look around. Adobe’s website tool waits until the AEM unit.
         </p>
       ) : null}
 
@@ -78,7 +78,7 @@ export function TodayClient({ catalog, day1 }: { catalog: Summary[]; day1: DayDo
           Start course
         </Link>
         <p className="mt-3 mb-0 font-[family-name:var(--font-sans)] text-sm text-muted">
-          Lab today: {current?.labTitle}
+          Lab today: {current?.labTitle}. Finish it to open the next day. Do as many as you want.
           {" · "}
           <Link href={`/day/${dayNum}`}>Full day</Link>
         </p>

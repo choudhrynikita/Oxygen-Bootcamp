@@ -2,7 +2,7 @@
   { "id": "well-formed", "name": "Well-formed", "earn": "Cause one red error on purpose, read it, and undo until the page opens clean.", "day": 5 },
   { "id": "first-valid-task", "name": "First saved page", "earn": "Create a page from File > New and save it in a folder with a simple name.", "day": 4 },
   { "id": "map-is-a-book", "name": "Booklet", "earn": "Add a page to a table of contents and keep every link working.", "day": 20 },
-  { "id": "completeness-clean", "name": "Links work", "earn": "Pass the week 3 check with a booklet whose links all work.", "day": 21 },
+  { "id": "completeness-clean", "name": "Links work", "earn": "Pass the booklet checkpoint with a table of contents whose links all work.", "day": 21 },
   { "id": "first-conref", "name": "First conref", "earn": "Reuse a warning with conkeyref, not a copy-paste.", "day": 23 },
   { "id": "key-not-path", "name": "Key, not path", "earn": "Define a product-name key and reference it twice.", "day": 24 },
   { "id": "ditaval-explained", "name": "Ditaval explained", "earn": "Profile one step and filter it with a ditaval you can explain.", "day": 29 },

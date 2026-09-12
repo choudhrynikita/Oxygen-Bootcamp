@@ -1,7 +1,7 @@
 {
   "day": 83,
   "cover": {
-    "kicker": "Day 83 of 90 · Week 12",
+    "kicker": "Day 83 of 90",
     "title": "Capstone: a DITA handbook in Oxygen",
     "overview": "Ship a small valid Kitepump (or flower-docs) publication: map, keys, one reuse, completeness clean, and a local WebHelp or a recorded transform attempt.",
     "durationMin": 110,

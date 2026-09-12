@@ -18,7 +18,7 @@ export default function LibraryPage() {
             AEM Guides overview
           </a>
           <span className="block font-[family-name:var(--font-sans)] text-sm text-muted">
-            Adobe waits until week 9.
+            Adobe waits until the AEM unit.
           </span>
         </li>
         <li>

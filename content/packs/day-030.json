@@ -1,7 +1,7 @@
 {
   "day": 30,
   "cover": {
-    "kicker": "Day 30 of 90 · Week 5",
+    "kicker": "Day 30 of 90",
     "title": "A switch file for those readers",
     "overview": "Write a switch file that hides expert steps and a second one that flags print paragraphs, then apply each in Author so you can see the difference.",
     "durationMin": 90,

@@ -1,7 +1,7 @@
 {
   "day": 73,
   "cover": {
-    "kicker": "Day 73 of 90 · Week 11",
+    "kicker": "Day 73 of 90",
     "title": "Upload a file to the asset library",
     "overview": "Upload or mock one picture, set a title and a description, and write the folder path :  without putting the file in git.",
     "durationMin": 90,

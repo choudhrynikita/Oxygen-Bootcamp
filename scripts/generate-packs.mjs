@@ -232,13 +232,13 @@ function packFromDay(day) {
     label: "Continue",
   });
 
-  const welcomeTitle = day.boss ? "This week’s check" : "Welcome";
+  const welcomeTitle = day.boss ? "Checkpoint" : "Welcome";
   const learnTitle = sections[0]?.heading || "The idea";
 
   return {
     day: day.n,
     cover: {
-      kicker: `Day ${day.n} of 90 · Week ${day.week}${day.boss ? " · week check" : ""}`,
+      kicker: `Day ${day.n} of 90${day.boss ? " · checkpoint" : ""}`,
       title: plain(day.title),
       overview: plain(day.objective),
       durationMin: day.minutes,
@@ -268,7 +268,7 @@ function packFromDay(day) {
                 id: "w-body",
                 heading: "What today is",
                 body: day.boss
-                  ? `This is the week check. You already met these errors. You are only proving you can name them. Fail the quiz and the next week stays locked. Retry as many times as you want.\n\nNext: a short recap, then the lab, then the check.`
+                  ? `This is a checkpoint. You already met these errors. You are only proving you can name them. Fail the quiz if you need to. Retry as many times as you want. The next day still opens when this lab is done.\n\nNext: a short recap, then the lab, then the check.`
                   : `About ${day.minutes} minutes. Next you will learn ${learnTitle}, then do the lab in the app. The check at the end uses words from today only.`,
               },
               { type: "objectives", id: "w-lo" },

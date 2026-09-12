@@ -1,8 +1,9 @@
 import type { DayRecord, DayStatus, LearnerState } from "./schema";
 import { emptyDay } from "./schema";
 
-export const BOSS_DAYS = [7, 14, 21, 28, 35, 42, 49, 55, 62, 69, 75, 82];
-export const FRIDAY_DAYS = [6, 13, 20, 27, 34, 41, 48, 54, 61, 68, 74, 81];
+/** Checkpoint days (former Sunday checks). Same unlock rule as every other day. */
+export const CHECKPOINT_DAYS = [7, 14, 21, 28, 35, 42, 49, 55, 62, 69, 75, 82];
+export const BOSS_DAYS = CHECKPOINT_DAYS;
 
 const OPEN_STATUSES: DayStatus[] = [
   "available",
@@ -25,18 +26,13 @@ export function dayRecord(state: LearnerState, day: number): DayRecord {
 }
 
 /**
- * Day 1 is open.
- * Day N opens when day N−1 is lab_done / checked / complete — except the day
- * after a week boss, which waits until that boss is complete (lab + quiz + note).
- * Friday lab alone does not open next week. Warmup never unlocks a day.
+ * Self-paced. Day 1 is open.
+ * Day N opens when day N-1 has a finished lab (or check, or complete).
+ * Warmup never unlocks a day. There is no weekly gate.
  */
 export function canUnlock(state: LearnerState, day: number): boolean {
   if (day <= 1) return true;
-  const prev = dayRecord(state, day - 1);
-  if (BOSS_DAYS.includes(day - 1)) {
-    return prev.status === "complete";
-  }
-  return isProgressed(prev.status);
+  return isProgressed(dayRecord(state, day - 1).status);
 }
 
 export function syncLocks(state: LearnerState, totalDays = 90): LearnerState {

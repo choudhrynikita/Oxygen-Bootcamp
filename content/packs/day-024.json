@@ -1,7 +1,7 @@
 {
   "day": 24,
   "cover": {
-    "kicker": "Day 24 of 90 · Week 4",
+    "kicker": "Day 24 of 90",
     "title": "Point at the library by name, not by path",
     "overview": "Give the library a name in the booklet, switch the warning pointer to that name, then move the file and confirm the how-to still works.",
     "durationMin": 90,

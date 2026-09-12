@@ -1,7 +1,7 @@
 {
   "day": 54,
   "cover": {
-    "kicker": "Day 54 of 90 · Week 8",
+    "kicker": "Day 54 of 90",
     "title": "House rules that catch the same mistake twice",
     "overview": "Read one house rule as a Schematron assert (or write a pretend one) and say what it flags.",
     "durationMin": 90,

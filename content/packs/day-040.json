@@ -1,7 +1,7 @@
 {
   "day": 40,
   "cover": {
-    "kicker": "Day 40 of 90 · Week 6",
+    "kicker": "Day 40 of 90",
     "title": "When publish fails, read the first real error",
     "overview": "Cause a FAILED run on purpose, quote the first real error, repair it, and rerun to SUCCESS.",
     "durationMin": 110,

@@ -1,7 +1,7 @@
 {
   "day": 37,
   "cover": {
-    "kicker": "Day 37 of 90 · Week 6",
+    "kicker": "Day 37 of 90",
     "title": "Make a clickable draft site",
     "overview": "Publish kitepump.ditamap to a draft site and open the output index.html, then match three table-of-contents entries to page titles.",
     "durationMin": 90,

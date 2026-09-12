@@ -1,7 +1,7 @@
 {
   "day": 80,
   "cover": {
-    "kicker": "Day 80 of 90 · Week 12",
+    "kicker": "Day 80 of 90",
     "title": "Publish from Guides",
     "overview": "Contrast a local Oxygen WebHelp draft with a Guides server publish, and keep Sites Quick Publish off the DITA output list.",
     "durationMin": 90,
